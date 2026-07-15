@@ -67,5 +67,7 @@ The workbench will not provide:
 ## Related Documents
 
 - Product Vision
+- Product Goals
 - Product Principles
-- 
+- Open Questions
+  - docs/planning/open-questions.md (DOM-001)

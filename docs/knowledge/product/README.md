@@ -70,7 +70,7 @@ These activities belong to **Product Delivery**, which is intentionally outside 
 
 ---
 
-## Expected Structure
+## Current Structure
 
 As the project evolves, this directory is expected to contain dedicated subdirectories for different categories of product artifacts.
 
