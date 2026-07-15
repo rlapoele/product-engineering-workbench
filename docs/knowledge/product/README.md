@@ -72,9 +72,7 @@ These activities belong to **Product Delivery**, which is intentionally outside 
 
 ## Current Structure
 
-As the project evolves, this directory is expected to contain dedicated subdirectories for different categories of product artifacts.
-
-For example:
+As the project evolves, this directory now contains dedicated subdirectories for different categories of product artifacts.
 
 ```text
 product/
