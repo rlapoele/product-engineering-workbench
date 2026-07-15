@@ -2,7 +2,7 @@
 
 This directory contains the **product definition**.
 
-It represents the implementation-ready knowledge describing **what the product is**, **why it exists**, **who it serves**, and **how it should behave**.
+It represents the product knowledge contributing to implementation readiness describing **what the product is**, **why it exists**, **who it serves**, and **how it should behave**.
 
 The Product Engineering Workbench considers these artifacts to be first-class product knowledge rather than implementation or delivery artifacts.
 
@@ -46,7 +46,7 @@ Traditional documents such as:
 - Functional Requirements Documents (FRDs/FRSs)
 - Product Requirement Documents (PRDs)
 
-are considered **views** over the underlying product knowledge.
+are considered **generated representations** over the underlying product knowledge.
 
 The workbench's primary responsibility is to maintain accurate product knowledge.
 
@@ -70,7 +70,7 @@ These activities belong to **Product Delivery**, which is intentionally outside 
 
 ---
 
-## Expected Structure
+## Illustrative Structure
 
 As the project evolves, this directory is expected to contain dedicated subdirectories for different categories of product artifacts.
 

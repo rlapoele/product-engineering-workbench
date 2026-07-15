@@ -58,6 +58,14 @@ Ideas are expected to evolve through discussions before being formalized into pr
 
 ---
 
+## About This Repository
+
+The engineering process used to develop this repository is independent from the product-engineering workflow templates that the Product Engineering Workbench may eventually support.
+
+This repository documents and implements the product; it should not be interpreted as a reference instance of any single workflow offered by the product.
+
+---
+
 ## Current Status
 
 This repository is currently in the **knowledge discovery and specification phase**.

@@ -62,7 +62,7 @@ Contains stable information such as:
 
 - Vision
 - Principles
-- Specifications
+- Product
 - Architecture
 - Data Model
 - AI
@@ -223,10 +223,11 @@ Before contributing to this repository, contributors should become familiar with
 
 1. README.md
 2. docs/glossary/glossary.md
-3. docs/knowledge/vision/
-4. docs/knowledge/principles/
-5. docs/planning/current-focus.md
-6. docs/planning/open-questions.md
+3. docs/knowledge/vision/product-vision.md
+4. docs/knowledge/vision/product-goals.md
+5. docs/knowledge/principles/product-principles.md
+6. docs/planning/current-focus.md
+7. docs/planning/open-questions.md
 
 These documents provide the minimum context required before proposing significant changes.
 

@@ -8,7 +8,7 @@ Typical contents include:
 
 - Product vision
 - Principles
-- Specifications
+- Product definition and product knowledge
 - Architecture
 - Data model
 - UX

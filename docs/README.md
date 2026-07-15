@@ -2,7 +2,7 @@
 
 This directory contains the long-term memory and working memory of the project.
 
-The documentation is organized into three complementary areas:
+The documentation is organized into four complementary areas:
 
 - **knowledge/** — Stable knowledge describing the product.
 - **planning/** — Living documents describing current intentions and priorities.
