@@ -68,5 +68,4 @@ The workbench will not provide:
 
 - Product Vision
 - Product Principles
-- Business Requirements
 - 

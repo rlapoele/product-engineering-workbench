@@ -46,7 +46,7 @@ Do not jump directly to implementation when important knowledge is still missing
 
 # Repository Organization
 
-The repository is organized into three complementary areas.
+The repository is organized into four complementary areas.
 
 ## Knowledge
 
