@@ -215,3 +215,167 @@ Continue using **Product Engineering** as the working terminology for:
 Revisit the naming decision after the product vision, scope, artifact model, and user experience have matured further.
 
 No final decision has yet been recorded.
+
+---
+
+# DATA-001 — What is the minimum required artifact set?
+
+**Category:** Data Model
+
+**Status:** 🟡 Exploring
+
+## Context
+
+The Project Model proposes a small initial set of Product Artifacts so the workbench can represent a product from initial intent to implementation-ready specification without becoming too complex too early. Product Artifact is the canonical term; Artifact may be used as a short form after first use.
+
+## Current Candidate
+
+- Vision
+- Goal
+- User Need
+- Feature
+- User Story
+- Acceptance Criteria
+- Risk
+- Decision
+- Open Question
+
+## Question
+
+Which artifact types are required for the first coherent version of the workbench?
+
+---
+
+# DATA-002 — What are the required common fields for every artifact?
+
+**Category:** Data Model
+
+**Status:** 🟡 Exploring
+
+## Context
+
+Product Artifacts need enough common structure to support review, traceability, AI assistance, export, provenance and revision history while remaining understandable to human users.
+
+## Question
+
+Which fields must every artifact share to support review, traceability, AI assistance and export?
+
+---
+
+# DATA-003 — Which artifact relationship types are required initially?
+
+**Category:** Data Model
+
+**Status:** 🟡 Exploring
+
+## Context
+
+Artifact Relationships form the Product Knowledge Graph and allow the workbench to reason across product knowledge, including traceability, validation, impact analysis and AI context assembly.
+
+## Current Candidate
+
+- supports
+- addresses
+- belongs_to
+- validates
+- depends_on
+- affects
+- explains
+- blocks
+- relates_to
+
+## Question
+
+Which relationship types are necessary for the first version of the Product Knowledge Graph?
+
+---
+
+# DATA-004 — What lifecycle states should artifacts support?
+
+**Category:** Data Model
+
+**Status:** 🟡 Exploring
+
+## Context
+
+Artifacts need lifecycle states so users and contributors can understand whether knowledge is draft, ready for review, currently valid, stale or preserved for history.
+
+## Current Candidate
+
+- Draft
+- Needs Review
+- Validated
+- Stale
+- Archived
+
+## Question
+
+Which statuses are required initially?
+
+---
+
+# UX-001 — Is the document a canonical object or a view over artifacts?
+
+**Category:** User Experience
+
+**Status:** 🟡 Exploring
+
+## Context
+
+The Project Model currently treats the document-first user experience as a view over structured Product Artifacts and Artifact Relationships rather than as the canonical source of truth itself.
+
+## Current Direction
+
+The document should be a view over structured product artifacts, not the canonical source of truth itself.
+
+## Question
+
+How should the document-first experience behave if the canonical product knowledge is composed of artifacts and relationships?
+
+---
+
+# AI-001 — What context should AI contributors receive for each action?
+
+**Category:** Artificial Intelligence
+
+**Status:** 🟡 Exploring
+
+## Context
+
+The Project Model distinguishes Context from Provenance and expects AI contributors to operate on structured context rather than isolated text whenever possible.
+
+## Question
+
+How should context be selected, limited and explained when AI contributors generate, review or analyze artifacts?
+
+---
+
+# ARCH-001 — Should the canonical product state be stored as a document graph?
+
+**Category:** Architecture
+
+**Status:** 🟡 Exploring
+
+## Context
+
+The emerging model treats canonical product knowledge as structured artifacts and relationships, while the document-first experience presents that knowledge as an editable document view.
+
+## Question
+
+Should the canonical product state be stored as a document graph, another graph-like structure or a different representation?
+
+---
+
+# PROC-001 — How should conversations crystallize into stable knowledge?
+
+**Category:** Process and Methodology
+
+**Status:** 🟡 Exploring
+
+## Context
+
+Discussions are working memory, but important conclusions should eventually become stable product knowledge such as artifacts, decisions, updates or open questions.
+
+## Question
+
+What rules or signals should help users decide when a discussion should become an artifact, decision, update or open question?
