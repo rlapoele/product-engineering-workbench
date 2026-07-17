@@ -2,7 +2,7 @@
 
 **Status:** Active
 
-**Last Updated:** 2026-07-15
+**Last Updated:** 2026-07-17
 
 ---
 
@@ -24,6 +24,8 @@ Initial foundation work has defined the product vision, core principles, reposit
 
 Current work focuses on resolving the open model questions needed to make the foundation coherent enough for specification work.
 
+Recent clarification established the first target user as an AI-assisted developer and strengthened the MVP direction around a document-first, template-driven specification experience.
+
 ---
 
 # Completed Foundation Work
@@ -36,6 +38,10 @@ Current work focuses on resolving the open model questions needed to make the fo
 - Product Artifact has been established as canonical terminology.
 - Initial concepts for relationships, workflow templates, contributors, decisions, reviews, revisions, provenance, context and readiness have been documented.
 - Open questions from the Project Model have been moved into the planning register.
+- The first target user has been clarified as an AI-assisted developer.
+- Specification Document Template has been introduced as the user-facing term for project-start templates.
+- The MVP direction has been clarified as document-first, template-driven and implementation-handoff oriented.
+- Capability-based collaboration with human and AI contributors has been clarified as a core product concept.
 
 ---
 
@@ -48,6 +54,9 @@ Current work focuses on resolving the open model questions needed to make the fo
 - Clarify the document-first UX as a view over structured product knowledge.
 - Clarify AI context assembly for generation, review and analysis.
 - Clarify how discussions crystallize into stable product knowledge.
+- Validate the first Specification Document Template section set.
+- Clarify the MVP export package structure for implementation handoff.
+- Detail the resolved asynchronous Collaboration Request and Contribution Response flow for human and AI contributors.
 - Use the Project Model to inform the next UX, AI and architecture documents.
 
 ---
@@ -114,7 +123,10 @@ The following areas are expected to receive significant attention next:
 
 - Document-First UX
 - Workflow Templates
+- Specification Document Templates
 - AI Context Assembly
+- Capability-Based Collaboration
+- Implementation Handoff Package
 - Knowledge Provenance
 - Product Knowledge Graph
 - Readiness Evaluation

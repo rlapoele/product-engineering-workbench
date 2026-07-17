@@ -343,6 +343,14 @@ It may define:
 
 The workbench should support different workflow templates without forcing a single product methodology.
 
+## User-facing template terminology
+
+In the user experience, the template selected during project creation should usually be called a Specification Document Template.
+
+Specification Document Template is more concrete for users because it describes what they are choosing: the structure of the specification document they intend to produce.
+
+Workflow Template may remain useful as an internal or conceptual term when discussing sequencing, required artifacts, validation rules, contributor assistance and export behavior.
+
 ## Example workflow templates
 
 - Product Discovery
@@ -366,6 +374,8 @@ The document-first user experience should be understood as a view over structure
 The canonical product knowledge should be composed of artifacts and relationships.
 
 The document view presents that knowledge as a coherent editable product document.
+
+For the MVP, users should be able to create a project from a Specification Document Template, customize the selected sections and work on the resulting specification as if it were one large coherent document.
 
 This means the document is not merely static text.
 
@@ -396,6 +406,10 @@ A contributor may:
 Contributors may be human users or AI contributors.
 
 The model should not assume that all contributors are human.
+
+The project owner should be able to request assistance from contributors based on the capabilities required for the requested action.
+
+For the MVP, human collaboration should be asynchronous and transactional rather than real-time. Contributors should respond to scoped requests instead of directly editing canonical project knowledge.
 
 ---
 
@@ -429,6 +443,8 @@ The workbench could ask:
 
 “Request a UX Review and Requirements Analysis for this feature.”
 
+Capabilities should support collaboration on different scopes, including a whole specification, a document section, a Product Artifact or selected content.
+
 ---
 
 # 15. Contribution
@@ -450,6 +466,25 @@ Examples include:
 - AI analysis.
 
 Contributions should be traceable so that users can understand how product knowledge evolved.
+
+For the MVP, many contributions should originate from Collaboration Requests.
+
+A Collaboration Request should identify:
+
+- the requestor;
+- the requested contributor or required capability;
+- the requested action;
+- the scope of the request;
+- the context needed to respond;
+- the request status.
+
+A Contribution Response is the contributor's submitted input for a Collaboration Request.
+
+Contribution Responses may include comments, review results, suggested edits, proposed artifacts or proposed decisions.
+
+Contributors should not directly alter canonical project knowledge through a Collaboration Request. Material changes should be applied only after the project owner or authorized requestor accepts or acts on the response.
+
+When an accepted contribution changes product knowledge, the saved change should be recorded as a Revision.
 
 ---
 

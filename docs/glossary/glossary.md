@@ -10,6 +10,20 @@ Unless explicitly stated otherwise, the definitions contained in this glossary t
 
 # A
 
+## AI Contributor
+
+An AI Contributor is an artificial intelligence contributor that can participate in a project by providing capabilities such as generation, review, analysis, summarization or implementation-readiness evaluation.
+
+AI Contributors are contributors. Their contributions should remain visible to users and should not silently replace human judgment.
+
+## AI Implementation Environment
+
+An AI Implementation Environment is an external environment that can consume implementation-ready product knowledge and use AI agents or AI-assisted tooling to implement the specified software product.
+
+AI Implementation Environments are distinct from AI Contributors inside the workbench.
+
+AI Contributors help create, review or refine product knowledge. AI Implementation Environments consume exported product knowledge to support software implementation.
+
 ## Product Artifact
 
 A Product Artifact is a structured piece of product knowledge produced during a product engineering workflow.
@@ -49,6 +63,16 @@ Capabilities are used to route contribution requests.
 
 ---
 
+## Collaboration Request
+
+A Collaboration Request is a scoped request for assistance sent to a human or AI contributor.
+
+A Collaboration Request identifies the requested action, relevant scope, requested contributor or capability and context needed to respond.
+
+In the MVP, Collaboration Requests support asynchronous and transactional collaboration rather than real-time co-editing.
+
+---
+
 ## Context
 
 The relevant surrounding knowledge needed to understand or act on a Product Artifact, project area or contribution.
@@ -76,6 +100,16 @@ A meaningful action performed by a Contributor.
 Examples include comments, questions, answers, reviews, suggestions, proposals, decisions, Product Artifact creation, Product Artifact updates, AI generation and AI analysis.
 
 A Contribution records participation in the product engineering process. It is distinct from a Revision, which records a saved change to product knowledge, and from Provenance, which explains the origin of product knowledge.
+
+---
+
+## Contribution Response
+
+A Contribution Response is a contributor's submitted input for a Collaboration Request.
+
+A Contribution Response may contain comments, review results, suggested edits, proposed artifacts, proposed decisions or other requested input.
+
+Contribution Responses do not directly alter canonical project knowledge unless accepted or acted upon by the project owner or authorized requestor.
 
 ---
 
@@ -130,6 +164,12 @@ A discussion may or may not evolve into a decision.
 ## Implementation-ready Knowledge
 
 Product knowledge that provides sufficient clarity, completeness and consistency for implementation by either humans or AI implementation agents.
+
+## Implementation Handoff Package
+
+An Implementation Handoff Package is an exported representation of product knowledge intended to be consumed by humans, AI-assisted developers, AI implementation environments or delivery tools.
+
+It may contain structured files, document sections, implementation guidance, acceptance criteria, risks, open questions and other context required to implement the specified product.
 
 ---
 
@@ -236,6 +276,12 @@ Product knowledge is composed of interconnected Product Artifacts.
 
 ---
 
+## Project Owner
+
+A Project Owner is the contributor responsible for controlling a project's product knowledge and deciding whether requested or received contributions should be accepted, rejected or acted upon.
+
+---
+
 ## Provenance
 
 An explanation of where a piece of product knowledge came from.
@@ -297,6 +343,16 @@ Sessions represent the project's working memory and may produce updates to long-
 A structured description of one or more aspects of a product.
 
 Specifications describe what should be built rather than how implementation work should be organized.
+
+---
+
+## Specification Document Template
+
+A Specification Document Template is a user-facing template that defines the expected structure of a product specification document.
+
+It helps users start a project by selecting and optionally customizing the sections they intend to complete.
+
+A Specification Document Template may be backed by an internal Workflow Template that defines artifact types, sequencing, validation rules, AI assistance strategies or export behavior.
 
 ---
 

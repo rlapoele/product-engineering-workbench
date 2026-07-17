@@ -328,6 +328,8 @@ The Project Model currently treats the document-first user experience as a view 
 
 The document should be a view over structured product artifacts, not the canonical source of truth itself.
 
+For the MVP, users should experience the specification as one coherent document created from a Specification Document Template. The underlying representation may be an artifact tree, graph or another structured model.
+
 ## Question
 
 How should the document-first experience behave if the canonical product knowledge is composed of artifacts and relationships?
@@ -347,6 +349,115 @@ The Project Model distinguishes Context from Provenance and expects AI contribut
 ## Question
 
 How should context be selected, limited and explained when AI contributors generate, review or analyze artifacts?
+
+---
+
+# UX-002 — What should the first Specification Document Template contain?
+
+**Category:** User Experience
+
+**Status:** 🟡 Exploring
+
+## Context
+
+The MVP should allow users to create projects from a Specification Document Template. The first target user is an AI-assisted developer who wants to produce specifications that can be implemented by humans, AI-assisted humans or AI implementation environments.
+
+## Current Candidate
+
+- Product Overview
+- Problem or Opportunity
+- Goals and Success Criteria
+- Non-Goals
+- Target Users or Personas
+- User Needs
+- Scope
+- Core Features
+- User Stories or Use Cases
+- Acceptance Criteria
+- Functional Requirements
+- Non-Functional Requirements
+- Data or Domain Model
+- UX Requirements and Interaction Notes
+- Technical Constraints and Preferences
+- External Integrations
+- AI or Automation Expectations
+- Risks, Assumptions and Open Questions
+- Implementation Guidance
+- Validation and Testing Guidance
+- Export and Handoff Instructions
+
+## Question
+
+Which sections are required for the first implementation-ready Specification Document Template?
+
+---
+
+# UX-003 — What should the MVP implementation handoff package contain?
+
+**Category:** User Experience
+
+**Status:** 🟡 Exploring
+
+## Context
+
+The MVP should allow users to export specifications, likely as a zip file containing a directory structure and multiple files representing the specification content.
+
+The export should be usable by humans, AI-assisted developers and AI implementation environments.
+
+## Question
+
+What file structure, formats and metadata should the first Implementation Handoff Package contain?
+
+---
+
+# COLL-001 — How should capability-based collaboration work?
+
+**Category:** Collaboration
+
+**Status:** 🟢 Resolved
+
+## Context
+
+The workbench should support optional collaboration by allowing project owners to request assistance from human or AI contributors based on capabilities.
+
+Assistance may apply to the whole specification, a document section, a Product Artifact or selected content.
+
+## Question
+
+How should project owners request assistance, match contributors by capability and accept or reject resulting contributions?
+
+## Decision
+
+MVP collaboration will be asynchronous and transactional.
+
+Project owners will create scoped Collaboration Requests for contributors. Requests may target the whole specification, a document section, a Product Artifact, selected content or another explicit scope.
+
+Contributors will respond asynchronously by submitting Contribution Responses. Responses may include comments, review results, suggested edits, proposed artifacts or proposed decisions.
+
+Contributors will not directly alter canonical project knowledge through a Collaboration Request. The project owner or authorized requestor will review submitted responses and decide whether to accept, reject, comment on or otherwise act on them.
+
+If an accepted contribution changes product knowledge, the resulting saved change will be recorded as a Revision.
+
+## Consequences
+
+The MVP does not need to support:
+
+- real-time co-editing;
+- shared cursors;
+- live presence;
+- simultaneous editing conflict resolution;
+- project chat as a core collaboration mechanism.
+
+The MVP does need to support:
+
+- user accounts;
+- collaboration invitations or requests;
+- pending request lists;
+- scoped requests;
+- requested capabilities or actions;
+- submitted contribution responses;
+- contribution response statuses;
+- requestor review and acceptance or rejection.
 
 ---
 

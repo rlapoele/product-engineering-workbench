@@ -1,0 +1,141 @@
+# AI Orchestration
+
+This document describes how artificial intelligence should participate in the Product Engineering Workbench.
+
+The objective is to define AI as an optional contributor to product knowledge, not as the foundation of the product.
+
+---
+
+# 1. Purpose
+
+Artificial intelligence should help users produce clearer, more complete and more implementation-ready product specifications.
+
+AI should assist with thinking, drafting, reviewing, analysis and handoff preparation while leaving the user in control.
+
+AI assistance should operate on structured context whenever possible rather than isolated text.
+
+---
+
+# 2. AI Contributor
+
+An AI Contributor is an artificial intelligence participant that can contribute to a project.
+
+AI Contributors may:
+
+- ask clarifying questions;
+- generate draft content;
+- review Product Artifacts;
+- identify inconsistencies;
+- propose missing requirements;
+- analyze risks;
+- check implementation readiness;
+- suggest acceptance criteria;
+- summarize discussions;
+- help prepare export or handoff materials.
+
+AI-generated contributions should usually begin as drafts, suggestions or reviews until accepted by a human project owner or authorized contributor.
+
+---
+
+# 3. Capability-Based Assistance
+
+AI assistance should be modeled through capabilities.
+
+A capability describes the kind of contribution a human or AI contributor can provide.
+
+This allows the project owner to request help based on the action they want to perform rather than based only on a fixed role.
+
+Example AI capabilities include:
+
+- Requirements Generation
+- Requirements Review
+- UX Review
+- Architecture Review
+- Security Review
+- Accessibility Review
+- QA Review
+- Risk Analysis
+- Consistency Analysis
+- Implementation Readiness Review
+- Export Preparation
+
+The same capability model should apply to both human contributors and AI contributors wherever possible.
+
+---
+
+# 4. Assistance Scope
+
+The project owner should be able to request AI assistance at different scopes.
+
+Possible scopes include:
+
+- entire project;
+- entire specification document;
+- document section;
+- Product Artifact;
+- selected content;
+- open question;
+- export package.
+
+The requested scope should determine which context is assembled for the AI Contributor.
+
+---
+
+# 5. Context Assembly
+
+AI Contributors should receive context that is relevant to the requested action.
+
+For example, an AI Contributor reviewing a User Story may need:
+
+- the User Story;
+- related Acceptance Criteria;
+- parent Feature;
+- related User Needs;
+- related Goals;
+- relevant Decisions;
+- related Risks;
+- unresolved Open Questions;
+- prior review comments or discussions.
+
+The system should be able to explain which context was provided so that users can understand and trust AI contributions.
+
+The exact context selection rules remain an open question.
+
+---
+
+# 6. AI Implementation Environments
+
+The workbench should distinguish AI Contributors from AI Implementation Environments.
+
+An AI Contributor participates inside the workbench to help create, review or refine product knowledge.
+
+An AI Implementation Environment consumes exported product knowledge outside the workbench in order to implement the specified software product.
+
+Examples of AI Implementation Environments may include coding-agent environments, AI-assisted IDEs or autonomous implementation tools.
+
+The workbench does not initially implement software delivery itself. Instead, it should prepare implementation-ready knowledge that external environments can consume.
+
+---
+
+# 7. Implementation Handoff
+
+The exported specification should be usable as an implementation handoff package.
+
+This package should provide enough context for:
+
+- a human developer;
+- an AI-assisted developer;
+- an AI implementation agent;
+- a combination of humans and AI agents.
+
+The package should make the intended product, constraints, acceptance criteria, risks, open questions and implementation guidance explicit.
+
+Future AI orchestration decisions should consider how exported specifications are consumed by external implementation environments.
+
+---
+
+# 8. Current Direction
+
+AI should be optional, capability-based and context-aware.
+
+The MVP should support AI assistance as contributions to the specification process while also producing exports that can be consumed by external AI implementation environments.
