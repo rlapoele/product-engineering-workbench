@@ -79,9 +79,23 @@ Implementation Handoff Package describes an exported specification package inten
 
 ## Initial Specification Document Template Candidate
 
+The MVP should start with one initial Specification Document Template: `Implementation-Ready Web App Specification`.
+
+This template should be backed by a reusable Section Catalog and should support multiple Project Presets rather than separate small, medium and complex templates.
+
+Initial presets:
+
+- Simple Web Presence
+- Standard Web App
+- Complex Product App
+
+Each preset should select and classify sections as Required, Recommended or Optional.
+
 The first template should contain enough information for a human developer, AI-assisted developer or AI implementation environment to execute on the specification.
 
-Candidate sections:
+The first Section Catalog and Project Preset classification were accepted as a first pass.
+
+Section Catalog:
 
 - Product Overview
 - Problem or Opportunity
@@ -91,7 +105,7 @@ Candidate sections:
 - User Needs
 - Scope
 - Core Features
-- User Stories or Use Cases
+- User Stories and Use Cases
 - Acceptance Criteria
 - Functional Requirements
 - Non-Functional Requirements
@@ -104,6 +118,39 @@ Candidate sections:
 - Implementation Guidance
 - Validation and Testing Guidance
 - Export and Handoff Instructions
+
+The `User Stories and Use Cases` section contains items typed as either User Story or Use Case.
+
+Initial Project Preset classification:
+
+| Section | Simple Web Presence | Standard Web App | Complex Product App |
+|---|---|---|---|
+| Product Overview | Required | Required | Required |
+| Problem or Opportunity | Recommended | Required | Required |
+| Goals and Success Criteria | Required | Required | Required |
+| Non-Goals | Recommended | Recommended | Required |
+| Target Users or Personas | Required | Required | Required |
+| User Needs | Optional | Required | Required |
+| Scope | Required | Required | Required |
+| Core Features | Required | Required | Required |
+| User Stories and Use Cases | Optional | Recommended | Required |
+| Acceptance Criteria | Required | Required | Required |
+| Functional Requirements | Required | Required | Required |
+| Non-Functional Requirements | Optional | Recommended | Required |
+| Data or Domain Model | Optional | Required | Required |
+| UX Requirements and Interaction Notes | Required | Required | Required |
+| Technical Constraints and Preferences | Recommended | Recommended | Required |
+| External Integrations | Optional | Optional | Recommended |
+| AI or Automation Expectations | Optional | Optional | Recommended |
+| Risks, Assumptions and Open Questions | Recommended | Required | Required |
+| Implementation Guidance | Recommended | Recommended | Required |
+| Validation and Testing Guidance | Required | Required | Required |
+| Export and Handoff Instructions | Optional | Recommended | Required |
+
+Core Features and Functional Requirements are distinct:
+
+- a Core Feature is a user-visible capability or product area;
+- a Functional Requirement is a specific behavior or obligation the system must satisfy.
 
 ---
 

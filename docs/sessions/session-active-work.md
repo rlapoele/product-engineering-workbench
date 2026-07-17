@@ -108,6 +108,72 @@ In all cases, it is important to remember that a user, once he/she/it has select
 We might consider that certain sections of the template are mandatory and cannot be unselected.
 We also need to remember that even if a section is unselected at the time of project creation, the user will be able to re-select it later on and at any time and vice-et-versa.
 
+Decision after discussion:
+
+The MVP should start with one initial Specification Document Template: `Implementation-Ready Web App Specification`.
+
+This template should be backed by a reusable Section Catalog and should support multiple presets rather than separate small, medium and complex templates.
+
+Initial presets:
+
+- Simple Web Presence
+- Standard Web App
+- Complex Product App
+
+Each preset should select and classify sections as:
+
+- Required
+- Recommended
+- Optional
+
+Small, medium and complex project choices should be presets inside the initial web app template, not separate templates.
+
+Later, the product may support additional templates when the structure or purpose of the specification is meaningfully different, such as API services, mobile apps, design systems, AI features or migration projects.
+
+Additional decision after discussion:
+
+The first Section Catalog and Project Preset classification are accepted as a first pass.
+
+The section previously described as `User Stories or Use Cases` should be named `User Stories and Use Cases`.
+
+This will be one section containing multiple items. Each item must have a type:
+
+- User Story
+- Use Case
+
+User Stories and Use Cases are distinct artifact types with different structures, but they belong in one section because both describe user-facing behavior and interaction intent.
+
+Initial Project Preset classification:
+
+| Section | Simple Web Presence | Standard Web App | Complex Product App |
+|---|---|---|---|
+| Product Overview | Required | Required | Required |
+| Problem or Opportunity | Recommended | Required | Required |
+| Goals and Success Criteria | Required | Required | Required |
+| Non-Goals | Recommended | Recommended | Required |
+| Target Users or Personas | Required | Required | Required |
+| User Needs | Optional | Required | Required |
+| Scope | Required | Required | Required |
+| Core Features | Required | Required | Required |
+| User Stories and Use Cases | Optional | Recommended | Required |
+| Acceptance Criteria | Required | Required | Required |
+| Functional Requirements | Required | Required | Required |
+| Non-Functional Requirements | Optional | Recommended | Required |
+| Data or Domain Model | Optional | Required | Required |
+| UX Requirements and Interaction Notes | Required | Required | Required |
+| Technical Constraints and Preferences | Recommended | Recommended | Required |
+| External Integrations | Optional | Optional | Recommended |
+| AI or Automation Expectations | Optional | Optional | Recommended |
+| Risks, Assumptions and Open Questions | Recommended | Required | Required |
+| Implementation Guidance | Recommended | Recommended | Required |
+| Validation and Testing Guidance | Required | Required | Required |
+| Export and Handoff Instructions | Optional | Recommended | Required |
+
+Core Feature vs Functional Requirement:
+
+- A Core Feature is a user-visible capability or product area. It answers what major thing the product lets users do.
+- A Functional Requirement is a specific behavioral rule or obligation the system must satisfy. It answers what exactly the system must do.
+
 ### 2.2
 
 Which sections are mandatory vs optional?
@@ -153,7 +219,75 @@ What should the exported zip contain?
 
 **Answer:**
 
-The exported zip should contain a root folder (mayby called "docs" or "specifications"?) and a folder for each section of the specification. Additionally, each (filled out) section should contain one or more file corresponding to the content of the artifact(s).
+The exported zip should contain a root folder (maybe called "docs" or "specifications"?) and a folder for each section of the specification. Additionally, each (filled out) section should contain one or more file corresponding to the content of the artifact(s).
+
+Decision after discussion:
+
+The intended target Implementation Handoff Package should be a complete structured export containing human-readable specification files, artifact-level files, metadata and an implementation brief.
+
+Target package structure:
+
+```text
+implementation-handoff/
+  README.md
+  IMPLEMENTATION_BRIEF.md
+  manifest.json
+  specification/
+    SPECIFICATION.md
+    01-product-overview.md
+    02-problem-or-opportunity.md
+    03-goals-and-success-criteria.md
+    ...
+  artifacts/
+    features/
+      FEAT-001.md
+    functional-requirements/
+      FR-001.md
+    user-stories/
+      US-001.md
+    use-cases/
+      UC-001.md
+    risks/
+      RISK-001.md
+    decisions/
+      DEC-001.md
+    open-questions/
+      OQ-001.md
+  metadata/
+    project.json
+    artifact-index.json
+    relationship-index.json
+    export.json
+```
+
+MVP implementation may start with a smaller export and treat the `artifacts/` and expanded `metadata/` folders as stretch items.
+
+MVP minimum package:
+
+```text
+implementation-handoff/
+  README.md
+  IMPLEMENTATION_BRIEF.md
+  manifest.json
+  specification/
+    SPECIFICATION.md
+    01-product-overview.md
+    02-problem-or-opportunity.md
+    03-goals-and-success-criteria.md
+    ...
+```
+
+Rules:
+
+- `SPECIFICATION.md` is a complete combined version of the specification.
+- Each included section also has its own Markdown file.
+- Stable artifact IDs should be embedded in `SPECIFICATION.md` and in section Markdown files.
+- `IMPLEMENTATION_BRIEF.md` should be generated by default.
+- `manifest.json` should be generated by default and treated as the minimal required metadata file.
+- The expanded `metadata/` folder is a stretch item.
+- The `artifacts/` folder is a stretch item.
+- The package should include unresolved open questions and known risks.
+- Open questions should not block export by default, but the package should clearly indicate when implementation may be blocked or risky because unresolved questions remain.
 
 ### 3.2
 
@@ -161,7 +295,11 @@ Should each section become one Markdown file?
 
 **Answer:**
 
-Initially why not unless there is a compelling reason to choose a different format.
+Yes.
+
+Each included section should become one Markdown file inside the `specification/` folder.
+
+The package should also include `specification/SPECIFICATION.md`, a complete combined version of the full specification.
 
 ### 3.3
 
@@ -169,8 +307,11 @@ Should there be a `manifest.json` describing the spec structure?
 
 **Answer:**
 
-While I am not sure what this would be used for later on, why not.
-Maybe this is something we could let users choose/configure for an export action or at a project level or both.
+Yes.
+
+`manifest.json` should be generated by default and treated as the minimal required metadata file for the MVP export.
+
+It should describe the project, template, preset, included sections, artifact IDs, export timestamp and export format version.
 
 ### 3.4
 
@@ -178,8 +319,11 @@ Should artifacts have stable IDs in the export?
 
 **Answer:**
 
-I am tempted to say yes but I don't know the implications of this.
+Yes.
 
+Stable artifact IDs should be included in the export.
+
+They should be embedded in `SPECIFICATION.md`, in section Markdown files and in `manifest.json`.
 
 ### 3.5
 
@@ -187,7 +331,11 @@ Should the export include unresolved open questions and known risks?
 
 **Answer:**
 
-Yes, especially for required sections which have not yet been completed.
+Yes.
+
+The export should include unresolved open questions and known risks.
+
+Open questions should not block export by default, but the package should clearly indicate when unresolved questions may block or increase the risk of implementation.
 
 
 ### 3.6
@@ -196,7 +344,9 @@ Should there be a top-level `IMPLEMENTATION_BRIEF.md` optimized for tools like C
 
 **Answer:**
 
-I think I would answer yes with the same expectations as for the "manifest.json" file; in other words, the app should support the production/generation of this type of file but let the user decide (at export time or project config level) if it is needed.
+Yes.
+
+`IMPLEMENTATION_BRIEF.md` should be generated by default and optimized for human developers, AI-assisted developers and AI implementation environments.
 
 ---
 

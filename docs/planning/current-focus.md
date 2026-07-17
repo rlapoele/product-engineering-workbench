@@ -40,6 +40,8 @@ Recent clarification established the first target user as an AI-assisted develop
 - Open questions from the Project Model have been moved into the planning register.
 - The first target user has been clarified as an AI-assisted developer.
 - Specification Document Template has been introduced as the user-facing term for project-start templates.
+- The MVP has been clarified to start with one `Implementation-Ready Web App Specification` template backed by a reusable Section Catalog and multiple Project Presets.
+- The first Section Catalog and initial Project Preset classification have been accepted as a first pass.
 - The MVP direction has been clarified as document-first, template-driven and implementation-handoff oriented.
 - Capability-based collaboration with human and AI contributors has been clarified as a core product concept.
 
@@ -54,7 +56,7 @@ Recent clarification established the first target user as an AI-assisted develop
 - Clarify the document-first UX as a view over structured product knowledge.
 - Clarify AI context assembly for generation, review and analysis.
 - Clarify how discussions crystallize into stable product knowledge.
-- Validate the first Specification Document Template section set.
+- Validate the first Section Catalog and Project Preset classification through concrete specification exercises.
 - Clarify the MVP export package structure for implementation handoff.
 - Detail the resolved asynchronous Collaboration Request and Contribution Response flow for human and AI contributors.
 - Use the Project Model to inform the next UX, AI and architecture documents.

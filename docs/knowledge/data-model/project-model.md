@@ -145,6 +145,7 @@ Artifacts should be structured enough to support review, traceability, AI assist
 - Epic
 - Feature
 - User Story
+- Use Case
 - Acceptance Criteria
 - Functional Requirement
 - Non-Functional Requirement
@@ -163,12 +164,21 @@ The initial minimum artifact set should probably include:
 - User Need
 - Feature
 - User Story
+- Use Case
 - Acceptance Criteria
+- Functional Requirement
+- Non-Functional Requirement
 - Risk
 - Decision
 - Open Question
 
 This set is small enough to remain manageable, but broad enough to represent a product from initial intent to implementation-ready specification.
+
+User Story and Use Case are distinct artifact types.
+
+They may appear together in a single `User Stories and Use Cases` document section because both describe user-facing behavior and interaction intent.
+
+Functional Requirement and Non-Functional Requirement should be included in the minimum artifact set because the first Specification Document Template needs to produce implementation-ready specifications.
 
 ---
 
@@ -210,6 +220,23 @@ A User Story may include:
 - actor;
 - need;
 - expected value;
+- acceptance criteria.
+
+A Use Case may include:
+
+- primary actor;
+- trigger;
+- preconditions;
+- main flow;
+- alternate flows;
+- postconditions;
+- exceptions.
+
+A Functional Requirement may include:
+
+- related feature;
+- required behavior;
+- business rule or system obligation;
 - acceptance criteria.
 
 A Risk may include:
@@ -350,6 +377,27 @@ In the user experience, the template selected during project creation should usu
 Specification Document Template is more concrete for users because it describes what they are choosing: the structure of the specification document they intend to produce.
 
 Workflow Template may remain useful as an internal or conceptual term when discussing sequencing, required artifacts, validation rules, contributor assistance and export behavior.
+
+For the MVP, the product should provide one initial Specification Document Template: `Implementation-Ready Web App Specification`.
+
+This template should be composed from a reusable Section Catalog and support presets such as:
+
+- Simple Web Presence
+- Standard Web App
+- Complex Product App
+
+Presets should select and classify sections as Required, Recommended or Optional for a given project type or complexity.
+
+Small, medium and complex project choices should initially be modeled as presets within the first template, not as separate templates.
+
+Additional Specification Document Templates may be added later when the structure or purpose of the specification is meaningfully different.
+
+The first Section Catalog includes `User Stories and Use Cases` as one section. This section may contain both User Story and Use Case artifacts.
+
+Core Features and Functional Requirements are distinct:
+
+- a Core Feature is a user-visible capability or product area;
+- a Functional Requirement is a specific behavior or obligation the system must satisfy.
 
 ## Example workflow templates
 
@@ -751,7 +799,27 @@ Functional requirements should therefore be derived from the conceptual model ra
 
 ---
 
-# 26. Initial Model Summary
+# 26. Export Representation
+
+The Implementation Handoff Package is an exported representation of Product Knowledge.
+
+The MVP export should preserve stable artifact identifiers in human-readable Markdown files.
+
+Stable IDs should appear in:
+
+- `specification/SPECIFICATION.md`;
+- section-level Markdown files;
+- `manifest.json`.
+
+The target export model may also include artifact-level files and expanded metadata.
+
+The MVP may defer the `artifacts/` folder and expanded `metadata/` folder as stretch items, but should still generate `manifest.json` as the minimal required metadata file.
+
+The manifest should identify the project, template, preset, included sections, artifact IDs, export timestamp and export format version.
+
+---
+
+# 27. Initial Model Summary
 
 The initial Project Model can be summarized as follows:
 
@@ -785,7 +853,7 @@ Context identifies what knowledge is needed to act intelligently.
 
 ---
 
-# 27. Open Questions
+# 28. Open Questions
 
 Open questions related to the Project Model are tracked in:
 

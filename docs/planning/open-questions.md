@@ -132,7 +132,7 @@ Integration with Product Delivery will instead be supported through structured e
 
 **Category:** Product Domains and Concepts
 
-**Status:** 🟡 Exploring
+**Status:** 🟢 Resolved
 
 ## Context
 
@@ -235,10 +235,19 @@ The Project Model proposes a small initial set of Product Artifacts so the workb
 - User Need
 - Feature
 - User Story
+- Use Case
 - Acceptance Criteria
+- Functional Requirement
+- Non-Functional Requirement
 - Risk
 - Decision
 - Open Question
+
+## Current Direction
+
+The initial Section Catalog requires User Story, Use Case, Functional Requirement and Non-Functional Requirement to be represented as Product Artifact types.
+
+User Story and Use Case are distinct artifact types but may appear together in the `User Stories and Use Cases` section.
 
 ## Question
 
@@ -362,7 +371,25 @@ How should context be selected, limited and explained when AI contributors gener
 
 The MVP should allow users to create projects from a Specification Document Template. The first target user is an AI-assisted developer who wants to produce specifications that can be implemented by humans, AI-assisted humans or AI implementation environments.
 
-## Current Candidate
+## Current Direction
+
+The MVP should start with one initial Specification Document Template: `Implementation-Ready Web App Specification`.
+
+This template should be backed by a reusable Section Catalog and should support multiple Project Presets rather than separate small, medium and complex templates.
+
+Initial presets:
+
+- Simple Web Presence
+- Standard Web App
+- Complex Product App
+
+Each preset should classify sections as Required, Recommended or Optional.
+
+Additional Specification Document Templates may be added later when the structure or purpose of the specification is meaningfully different, such as API services, mobile apps, design systems, AI features or migration projects.
+
+## Decision
+
+The MVP will use the following initial Section Catalog:
 
 - Product Overview
 - Problem or Opportunity
@@ -372,7 +399,7 @@ The MVP should allow users to create projects from a Specification Document Temp
 - User Needs
 - Scope
 - Core Features
-- User Stories or Use Cases
+- User Stories and Use Cases
 - Acceptance Criteria
 - Functional Requirements
 - Non-Functional Requirements
@@ -386,9 +413,43 @@ The MVP should allow users to create projects from a Specification Document Temp
 - Validation and Testing Guidance
 - Export and Handoff Instructions
 
-## Question
+The `User Stories and Use Cases` section will contain items typed as either User Story or Use Case.
 
-Which sections are required for the first implementation-ready Specification Document Template?
+The first Project Presets will classify sections as follows:
+
+| Section | Simple Web Presence | Standard Web App | Complex Product App |
+|---|---|---|---|
+| Product Overview | Required | Required | Required |
+| Problem or Opportunity | Recommended | Required | Required |
+| Goals and Success Criteria | Required | Required | Required |
+| Non-Goals | Recommended | Recommended | Required |
+| Target Users or Personas | Required | Required | Required |
+| User Needs | Optional | Required | Required |
+| Scope | Required | Required | Required |
+| Core Features | Required | Required | Required |
+| User Stories and Use Cases | Optional | Recommended | Required |
+| Acceptance Criteria | Required | Required | Required |
+| Functional Requirements | Required | Required | Required |
+| Non-Functional Requirements | Optional | Recommended | Required |
+| Data or Domain Model | Optional | Required | Required |
+| UX Requirements and Interaction Notes | Required | Required | Required |
+| Technical Constraints and Preferences | Recommended | Recommended | Required |
+| External Integrations | Optional | Optional | Recommended |
+| AI or Automation Expectations | Optional | Optional | Recommended |
+| Risks, Assumptions and Open Questions | Recommended | Required | Required |
+| Implementation Guidance | Recommended | Recommended | Required |
+| Validation and Testing Guidance | Required | Required | Required |
+| Export and Handoff Instructions | Optional | Recommended | Required |
+
+## Consequences
+
+Core Features and Functional Requirements are distinct specification sections.
+
+A Core Feature describes a user-visible capability or product area.
+
+A Functional Requirement describes a specific behavior or obligation the system must satisfy.
+
+The preset classification is a first pass and may be revised after future specification exercises.
 
 ---
 
@@ -396,7 +457,7 @@ Which sections are required for the first implementation-ready Specification Doc
 
 **Category:** User Experience
 
-**Status:** 🟡 Exploring
+**Status:** 🟢 Resolved
 
 ## Context
 
@@ -407,6 +468,76 @@ The export should be usable by humans, AI-assisted developers and AI implementat
 ## Question
 
 What file structure, formats and metadata should the first Implementation Handoff Package contain?
+
+## Decision
+
+The intended target Implementation Handoff Package should be a complete structured export containing human-readable specification files, artifact-level files, metadata and an implementation brief.
+
+Target package structure:
+
+```text
+implementation-handoff/
+  README.md
+  IMPLEMENTATION_BRIEF.md
+  manifest.json
+  specification/
+    SPECIFICATION.md
+    01-product-overview.md
+    02-problem-or-opportunity.md
+    03-goals-and-success-criteria.md
+    ...
+  artifacts/
+    features/
+      FEAT-001.md
+    functional-requirements/
+      FR-001.md
+    user-stories/
+      US-001.md
+    use-cases/
+      UC-001.md
+    risks/
+      RISK-001.md
+    decisions/
+      DEC-001.md
+    open-questions/
+      OQ-001.md
+  metadata/
+    project.json
+    artifact-index.json
+    relationship-index.json
+    export.json
+```
+
+The MVP may initially defer the `artifacts/` folder and expanded `metadata/` folder as stretch items.
+
+MVP minimum package:
+
+```text
+implementation-handoff/
+  README.md
+  IMPLEMENTATION_BRIEF.md
+  manifest.json
+  specification/
+    SPECIFICATION.md
+    01-product-overview.md
+    02-problem-or-opportunity.md
+    03-goals-and-success-criteria.md
+    ...
+```
+
+## Consequences
+
+The MVP should generate:
+
+- a complete combined `specification/SPECIFICATION.md` file;
+- one Markdown file per included specification section;
+- stable artifact IDs embedded in combined and section Markdown;
+- a top-level `IMPLEMENTATION_BRIEF.md`;
+- a top-level `manifest.json`.
+
+The MVP should include unresolved open questions and known risks in the export.
+
+Open questions should not block export by default, but the package should clearly indicate when unresolved questions may block or increase the risk of implementation.
 
 ---
 

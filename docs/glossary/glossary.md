@@ -93,6 +93,16 @@ Context References are distinct from Provenance: Context References identify wha
 
 ---
 
+## Core Feature
+
+A Core Feature is a user-visible capability or product area.
+
+Core Features describe the major things a product lets users do.
+
+A Core Feature may be refined by Functional Requirements and validated by Acceptance Criteria.
+
+---
+
 ## Contribution
 
 A meaningful action performed by a Contributor.
@@ -159,6 +169,18 @@ A discussion may or may not evolve into a decision.
 
 ---
 
+# F
+
+## Functional Requirement
+
+A Functional Requirement is a specific behavior, rule or obligation the system must satisfy.
+
+Functional Requirements describe what the system must do in enough detail to support implementation and validation.
+
+Functional Requirements are distinct from Core Features: a Core Feature describes a user-visible capability, while a Functional Requirement describes specific expected system behavior.
+
+---
+
 # I
 
 ## Implementation-ready Knowledge
@@ -170,6 +192,8 @@ Product knowledge that provides sufficient clarity, completeness and consistency
 An Implementation Handoff Package is an exported representation of product knowledge intended to be consumed by humans, AI-assisted developers, AI implementation environments or delivery tools.
 
 It may contain structured files, document sections, implementation guidance, acceptance criteria, risks, open questions and other context required to implement the specified product.
+
+The MVP package should include a combined specification file, section-level Markdown files, an implementation brief and a manifest file. Artifact-level files and expanded metadata may be added as stretch items.
 
 ---
 
@@ -282,6 +306,16 @@ A Project Owner is the contributor responsible for controlling a project's produ
 
 ---
 
+## Project Preset
+
+A Project Preset is a predefined configuration within a Specification Document Template.
+
+It selects and classifies template sections for a particular project type, size or complexity.
+
+For the MVP, presets may classify sections as Required, Recommended or Optional.
+
+---
+
 ## Provenance
 
 An explanation of where a piece of product knowledge came from.
@@ -330,6 +364,14 @@ Revision is distinct from Contribution and Provenance: Contribution records part
 
 # S
 
+## Section Catalog
+
+A Section Catalog is the reusable collection of specification sections that can be composed into Specification Document Templates and Project Presets.
+
+The Section Catalog allows multiple templates or presets to reuse common sections without duplicating their definitions.
+
+---
+
 ## Session
 
 A summary of an exploratory working conversation.
@@ -353,6 +395,28 @@ A Specification Document Template is a user-facing template that defines the exp
 It helps users start a project by selecting and optionally customizing the sections they intend to complete.
 
 A Specification Document Template may be backed by an internal Workflow Template that defines artifact types, sequencing, validation rules, AI assistance strategies or export behavior.
+
+---
+
+# U
+
+## Use Case
+
+A Use Case is a structured description of an interaction between an actor and the system.
+
+Use Cases typically describe a trigger, preconditions, main flow, alternate flows, postconditions and exceptions.
+
+Use Cases are distinct from User Stories, though both describe user-facing behavior and interaction intent.
+
+---
+
+## User Story
+
+A User Story is a compact, value-oriented description of something a user wants to achieve.
+
+User Stories typically identify an actor, a need and an expected benefit.
+
+User Stories are distinct from Use Cases, though both may appear in the `User Stories and Use Cases` section of a specification.
 
 ---
 
