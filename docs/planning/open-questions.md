@@ -365,7 +365,7 @@ How should context be selected, limited and explained when AI contributors gener
 
 **Category:** User Experience
 
-**Status:** 🟡 Exploring
+**Status:** 🟢 Resolved
 
 ## Context
 
