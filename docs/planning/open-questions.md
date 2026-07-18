@@ -672,7 +672,7 @@ Open questions should not block export by default, but the package should clearl
 
 **Category:** User Experience
 
-**Status:** 🟡 Exploring
+**Status:** 🟢 Resolved
 
 ## Context
 
@@ -682,15 +682,41 @@ The Implementation Handoff Package may be consumed by humans, AI-assisted develo
 
 Different consumers may need different guidance files, summaries, emphasis, metadata and verification instructions.
 
-## Current Direction
+## Decision
 
-Implementation Handoff Packages should eventually be generated through Handoff Profiles.
+The MVP should support one default Handoff Profile: `Implementation Handoff`.
+
+The default profile should be human-readable and AI-useful. It should serve human developers, AI-assisted developers and AI implementation environments without forcing the MVP to maintain separate profile variants.
 
 A Handoff Profile defines the intended consumer of the package and shapes the generated files, guidance, emphasis and format.
 
 Handoff Profiles are not AI-specific. They should support both human and AI consumers.
 
-Potential profiles include:
+The default `Implementation Handoff` profile should generate:
+
+- `README.md`;
+- `IMPLEMENTATION_BRIEF.md`;
+- `VERIFICATION_CHECKLIST.md`;
+- `manifest.json`;
+- `specification/SPECIFICATION.md`;
+- section-level Markdown files under `specification/`.
+
+`IMPLEMENTATION_BRIEF.md` should include:
+
+- product summary;
+- target implementation consumer;
+- scope;
+- non-goals;
+- key features;
+- technical constraints;
+- known risks and open questions;
+- suggested implementation sequence;
+- verification guidance;
+- references to relevant specification files and artifact IDs.
+
+Specialized profiles should be deferred until after the MVP.
+
+Potential future profiles include:
 
 - Generic Human Developer
 - AI-Assisted Developer
@@ -701,7 +727,7 @@ Potential profiles include:
 - Agency / Client Handoff
 - QA / Review Handoff
 
-A Handoff Profile may control:
+Future Handoff Profiles may control:
 
 - which files are generated;
 - wording and emphasis of `IMPLEMENTATION_BRIEF.md`;
@@ -711,10 +737,6 @@ A Handoff Profile may control:
 - whether verification checklists are included;
 - how prominently unresolved open questions and risks are presented;
 - whether artifact-level files or expanded metadata are included.
-
-## Question
-
-Which Handoff Profiles should the MVP support, and what should each profile generate?
 
 ---
 

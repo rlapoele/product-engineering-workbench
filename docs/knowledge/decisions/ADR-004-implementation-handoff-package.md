@@ -98,6 +98,23 @@ A Handoff Profile defines the intended consumer of the package and shapes the ge
 
 Handoff Profiles are not AI-specific. They should support both human and AI consumers.
 
+For the MVP, the workbench should support one default Handoff Profile: `Implementation Handoff`.
+
+The default profile should be human-readable and AI-useful. It should serve human developers, AI-assisted developers and AI implementation environments without forcing separate profile variants in the MVP.
+
+The default `Implementation Handoff` profile should generate:
+
+- `README.md`;
+- `IMPLEMENTATION_BRIEF.md`;
+- `VERIFICATION_CHECKLIST.md`;
+- `manifest.json`;
+- `specification/SPECIFICATION.md`;
+- section-level Markdown files under `specification/`.
+
+`IMPLEMENTATION_BRIEF.md` should include a suggested implementation sequence, not a delivery roadmap, backlog or sprint plan.
+
+Specialized Handoff Profiles such as Codex, Claude Code, Gemini, Cursor, Agency / Client Handoff or QA / Review Handoff should be deferred until after the MVP.
+
 ---
 
 ## Rationale
@@ -124,6 +141,7 @@ The workbench must support generation of:
 - section-level Markdown;
 - stable artifact IDs;
 - an implementation brief;
+- a verification checklist;
 - a manifest file;
 - warnings or indicators for unresolved Open Questions and known Risks.
 
@@ -136,7 +154,7 @@ The MVP can postpone:
 
 Future export work should evolve toward the target package structure without breaking the MVP export contract.
 
-Future export work should also define which Handoff Profiles the MVP supports and what each profile generates.
+Future export work should evolve specialized Handoff Profiles without breaking the default MVP `Implementation Handoff` profile.
 
 ---
 

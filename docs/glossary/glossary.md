@@ -227,6 +227,8 @@ Handoff Profiles may target humans, AI-assisted developers, AI implementation en
 
 A Handoff Profile may control generated files, implementation guidance, tool-specific instructions, context depth, verification checklists, metadata and how risks or unresolved open questions are presented.
 
+The MVP default Handoff Profile is `Implementation Handoff`, intended to be human-readable and AI-useful.
+
 ---
 
 # K

@@ -183,11 +183,16 @@ A Handoff Profile defines the intended consumer of an Implementation Handoff Pac
 
 Handoff Profiles are not AI-specific. They should support both human and AI consumers.
 
+The MVP default Handoff Profile was clarified as `Implementation Handoff`.
+
+The default profile should be human-readable and AI-useful. It should serve human developers, AI-assisted developers and AI implementation environments through the same generated package.
+
+`IMPLEMENTATION_BRIEF.md` should include a suggested implementation sequence rather than a delivery roadmap, backlog or sprint plan.
+
 ---
 
 ## Recommended Next Step
 
 Continue with:
 
-- UX-004 — MVP Handoff Profiles; or
 - AI-001 — AI context assembly.
