@@ -217,6 +217,61 @@ Example capabilities include:
 
 The project owner remains responsible for accepting, rejecting or acting on contributions.
 
+## Assistance Request Types
+
+The MVP should expose a compact set of user-facing Assistance Request Types.
+
+The goal is to help users ask for meaningful help without overwhelming them with many similar actions. More specific behavior can be handled internally through capabilities, prompts, response formats and context rules.
+
+Initial Assistance Request Types:
+
+| Request Type | User Intent |
+|---|---|
+| Draft | Create a first version. |
+| Improve | Make this clearer, stronger or more precise without changing the basic intent. |
+| Request Feedback | Tell me what you think, what feels unclear and what may be worth improving. |
+| Review | Check this carefully against a specific lens or standard. |
+| Find Gaps | Identify what is missing or underdeveloped. |
+| Find Inconsistencies | Identify conflicts or contradictions with other product knowledge. |
+| Analyze Impact | Explain what this affects, depends on or may influence. |
+| Suggest Alternatives | Propose other viable options or approaches. |
+| Validate Readiness | Determine whether this is ready for the next step or implementation handoff. |
+| Ask Question | Help answer a specific question or think through a topic. |
+| Prepare Handoff | Generate or refine implementation handoff materials. |
+
+Request Feedback and Review should remain distinct.
+
+Request Feedback is open-ended, judgment-based and conversational. It asks a contributor to react, comment and suggest improvements.
+
+Review is structured, deliberate and criteria-based. It asks a contributor to evaluate the target against a specific capability, lens or standard.
+
+Not every Assistance Request Type should be available everywhere. The available options should depend on the current scope, artifact type, artifact maturity, contributor availability and eligible capabilities.
+
+Some Assistance Request Types should be available at the entire specification level, not only on individual sections or artifacts.
+
+First-pass contextual availability matrix:
+
+| Scope | Likely Assistance Request Types |
+|---|---|
+| Entire Specification | Improve, Request Feedback, Review, Find Gaps, Find Inconsistencies, Analyze Impact, Suggest Alternatives, Validate Readiness, Ask Question, Prepare Handoff |
+| Product Overview | Draft, Improve, Request Feedback, Review, Find Gaps, Ask Question |
+| Goals and Success Criteria | Draft, Improve, Request Feedback, Review, Find Gaps, Find Inconsistencies, Validate Readiness, Ask Question |
+| User Needs | Draft, Improve, Request Feedback, Review, Find Gaps, Find Inconsistencies, Suggest Alternatives, Ask Question |
+| Core Feature | Draft, Improve, Request Feedback, Review, Find Gaps, Analyze Impact, Suggest Alternatives, Ask Question |
+| User Story | Draft, Improve, Request Feedback, Review, Find Gaps, Find Inconsistencies, Validate Readiness, Ask Question |
+| Use Case | Draft, Improve, Request Feedback, Review, Find Gaps, Analyze Impact, Validate Readiness, Ask Question |
+| Acceptance Criteria | Draft, Improve, Request Feedback, Review, Find Gaps, Validate Readiness, Ask Question |
+| Functional Requirement | Draft, Improve, Request Feedback, Review, Find Gaps, Find Inconsistencies, Analyze Impact, Validate Readiness, Ask Question |
+| Non-Functional Requirement | Draft, Improve, Request Feedback, Review, Find Gaps, Validate Readiness, Ask Question |
+| Screen / View or UX Requirement | Draft, Improve, Request Feedback, Review, Find Gaps, Analyze Impact, Validate Readiness, Ask Question |
+| Risk | Draft, Improve, Request Feedback, Review, Analyze Impact, Suggest Alternatives, Ask Question |
+| Assumption | Improve, Request Feedback, Review, Analyze Impact, Suggest Alternatives, Validate Readiness, Ask Question |
+| Decision | Improve, Request Feedback, Review, Analyze Impact, Suggest Alternatives, Ask Question |
+| Open Question | Improve, Request Feedback, Analyze Impact, Suggest Alternatives, Ask Question |
+| Selected Content | Improve, Request Feedback, Review, Find Gaps, Find Inconsistencies, Ask Question |
+
+The matrix is a first pass. It should be validated through concrete specification exercises before being treated as final.
+
 ## MVP Collaboration Mode
 
 MVP collaboration should be asynchronous and transactional.

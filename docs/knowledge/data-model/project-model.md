@@ -690,10 +690,40 @@ Contributions should be traceable so that users can understand how product knowl
 
 For the MVP, many contributions should originate from Collaboration Requests.
 
+A Collaboration Request should include an Assistance Request Type.
+
+An Assistance Request Type describes what kind of help the requestor wants. It is distinct from Capability:
+
+- Assistance Request Type answers: "What kind of help is being requested?"
+- Capability answers: "Who or what is qualified to provide that help?"
+
+Initial MVP Assistance Request Types:
+
+- Draft
+- Improve
+- Request Feedback
+- Review
+- Find Gaps
+- Find Inconsistencies
+- Analyze Impact
+- Suggest Alternatives
+- Validate Readiness
+- Ask Question
+- Prepare Handoff
+
+The available Assistance Request Types should depend on request scope, artifact type, artifact maturity, contributor availability and eligible capabilities.
+
+Request Feedback and Review should remain distinct.
+
+Request Feedback is open-ended and comment-oriented. It asks a contributor to react, identify concerns, ask clarifying questions and suggest improvements.
+
+Review is structured and criteria-oriented. It asks a contributor to evaluate the target against a specific lens, standard or capability.
+
 A Collaboration Request should identify:
 
 - the requestor;
 - the requested contributor or required capability;
+- the Assistance Request Type;
 - the requested action;
 - the scope of the request;
 - the context needed to respond;

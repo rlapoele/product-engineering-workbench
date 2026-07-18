@@ -32,6 +32,24 @@ MVP collaboration will be asynchronous and transactional.
 
 Project owners will create scoped Collaboration Requests for contributors.
 
+Each Collaboration Request should have an Assistance Request Type that describes the kind of help being requested.
+
+Initial MVP Assistance Request Types include:
+
+- Draft;
+- Improve;
+- Request Feedback;
+- Review;
+- Find Gaps;
+- Find Inconsistencies;
+- Analyze Impact;
+- Suggest Alternatives;
+- Validate Readiness;
+- Ask Question;
+- Prepare Handoff.
+
+Request Feedback and Review are distinct. Request Feedback is open-ended and comment-oriented, while Review is structured and criteria-oriented.
+
 A Collaboration Request may target:
 
 - the whole specification;
@@ -74,6 +92,7 @@ This decision:
 - aligns with the existing distinction between Contribution, Revision and Provenance;
 - supports both human and AI contributors through the same capability-based model;
 - allows contributor selection to account for both capability and availability;
+- keeps the user-facing assistance model compact enough to avoid overwhelming users;
 - avoids simultaneous editing conflict resolution in the MVP;
 - allows collaboration to work as a clear request/response workflow.
 
@@ -97,6 +116,7 @@ The MVP does need to support:
 - collaboration invitations or requests;
 - pending request lists;
 - scoped requests;
+- Assistance Request Types;
 - requested capabilities or actions;
 - contributor availability rules;
 - submitted Contribution Responses;
@@ -104,6 +124,8 @@ The MVP does need to support:
 - requestor review and acceptance or rejection.
 
 The model should remain extensible enough to support richer collaboration later if needed.
+
+If the MVP includes a general AI Assistant, it should remain distinct from scoped Collaboration Requests. It may help users think, navigate and choose the right request type, but it should not silently edit canonical product knowledge.
 
 ---
 

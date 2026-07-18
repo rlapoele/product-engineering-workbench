@@ -10,6 +10,16 @@ Unless explicitly stated otherwise, the definitions contained in this glossary t
 
 # A
 
+## Assistance Request Type
+
+An Assistance Request Type describes the kind of help a user is asking for when creating a scoped Collaboration Request or requesting AI assistance.
+
+Examples include Draft, Improve, Request Feedback, Review, Find Gaps, Find Inconsistencies, Analyze Impact, Suggest Alternatives, Validate Readiness, Ask Question and Prepare Handoff.
+
+Assistance Request Types are user-facing. They should remain compact and understandable so users are not overwhelmed by many similar choices.
+
+Assistance Request Types are distinct from Capabilities. An Assistance Request Type describes what the user wants done, while a Capability describes who or what is qualified to do it.
+
 ## AI Contributor
 
 An AI Contributor is an artificial intelligence contributor that can participate in a project by providing capabilities such as generation, review, analysis, summarization or implementation-readiness evaluation.
@@ -25,6 +35,12 @@ An AI Implementation Environment is an external environment that can consume imp
 AI Implementation Environments are distinct from AI Contributors inside the workbench.
 
 AI Contributors help create, review or refine product knowledge. AI Implementation Environments consume exported product knowledge to support software implementation.
+
+## AI Assistant
+
+An AI Assistant is a general AI support surface available inside the workbench to help users think, navigate, understand terminology, ask questions and decide what to do next.
+
+The AI Assistant is distinct from scoped assistance requests. It may help the user choose or initiate an Assistance Request Type, but it should not silently alter canonical product knowledge.
 
 ## Artifact Template
 

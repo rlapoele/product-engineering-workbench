@@ -48,6 +48,7 @@ Recent clarification established the first target user as an AI-assisted develop
 - The MVP direction has been clarified as document-first, template-driven and implementation-handoff oriented.
 - Capability-based collaboration with human and AI contributors has been clarified as a core product concept.
 - Contributor availability has been clarified for the MVP: human collaborators are invitation-gated, while application-provided AI collaborators are available by default when their capabilities are enabled and usable.
+- The initial MVP Assistance Request Type set has been clarified as a compact user-facing set, including Request Feedback and Review as distinct interaction intents.
 
 ---
 
@@ -60,6 +61,7 @@ Recent clarification established the first target user as an AI-assisted develop
 - Clarify the MVP export package structure for implementation handoff.
 - Detail the resolved asynchronous Collaboration Request and Contribution Response flow for human and AI contributors.
 - Detail contributor selection using both capability and availability.
+- Validate the first-pass Assistance Request Type matrix through concrete specification exercises.
 - Use the Project Model to inform the next UX, AI and architecture documents.
 
 ---
@@ -129,6 +131,7 @@ The following areas are expected to receive significant attention next:
 - Specification Document Templates
 - AI Context Assembly
 - Capability-Based Collaboration
+- Assistance Request Types
 - Implementation Handoff Package
 - Knowledge Provenance
 - Product Knowledge Graph

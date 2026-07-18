@@ -87,7 +87,53 @@ AI assistance may feel more immediate than human collaboration, but it should re
 
 ---
 
-# 5. Context Assembly
+# 5. Assistance Request Types
+
+AI assistance should support the same compact set of user-facing Assistance Request Types used for human collaboration where possible.
+
+Initial MVP Assistance Request Types:
+
+- Draft
+- Improve
+- Request Feedback
+- Review
+- Find Gaps
+- Find Inconsistencies
+- Analyze Impact
+- Suggest Alternatives
+- Validate Readiness
+- Ask Question
+- Prepare Handoff
+
+The selected Assistance Request Type should help determine:
+
+- which AI capability is needed;
+- which scope is relevant;
+- which context should be assembled;
+- which response format is expected;
+- whether the result should be presented as comments, findings, suggested edits, proposed artifacts, proposed decisions or handoff material.
+
+Request Feedback should produce open-ended observations, comments, questions and suggestions.
+
+Review should produce a more structured evaluation against a specific lens or standard, such as requirements quality, UX quality, accessibility, security, testability or implementation readiness.
+
+---
+
+# 6. General AI Assistant
+
+The MVP may include a lightweight general AI Assistant in addition to scoped assistance requests.
+
+The general AI Assistant should help users think, navigate the application, understand terminology, ask questions and decide what to do next.
+
+The general AI Assistant should be clearly distinct from scoped Assistance Request Types.
+
+It may help the user choose or initiate a scoped assistance request. For example, after a user asks about missing requirements, the assistant might suggest running a Find Gaps request on the current section.
+
+The general AI Assistant should not become the primary product model and should not silently edit canonical product knowledge.
+
+---
+
+# 7. Context Assembly
 
 AI Contributors should receive context that is relevant to the requested action.
 
@@ -109,7 +155,7 @@ The exact context selection rules remain an open question.
 
 ---
 
-# 6. AI Implementation Environments
+# 8. AI Implementation Environments
 
 The workbench should distinguish AI Contributors from AI Implementation Environments.
 
@@ -123,7 +169,7 @@ The workbench does not initially implement software delivery itself. Instead, it
 
 ---
 
-# 7. Implementation Handoff
+# 9. Implementation Handoff
 
 The exported specification should be usable as an implementation handoff package.
 

@@ -762,6 +762,16 @@ MVP collaboration will be asynchronous and transactional.
 
 Project owners will create scoped Collaboration Requests for contributors. Requests may target the whole specification, a document section, a Product Artifact, selected content or another explicit scope.
 
+Each Collaboration Request should include an Assistance Request Type that describes the kind of help being requested.
+
+Initial MVP Assistance Request Types are Draft, Improve, Request Feedback, Review, Find Gaps, Find Inconsistencies, Analyze Impact, Suggest Alternatives, Validate Readiness, Ask Question and Prepare Handoff.
+
+Request Feedback is open-ended and comment-oriented. Review is structured and criteria-oriented.
+
+Contributor matching should consider requested capability and contributor availability.
+
+For human contributors, MVP availability is invitation-gated. For application-provided AI Contributors, MVP availability means the relevant capability is enabled and usable.
+
 Contributors will respond asynchronously by submitting Contribution Responses. Responses may include comments, review results, suggested edits, proposed artifacts or proposed decisions.
 
 Contributors will not directly alter canonical project knowledge through a Collaboration Request. The project owner or authorized requestor will review submitted responses and decide whether to accept, reject, comment on or otherwise act on them.
@@ -784,7 +794,9 @@ The MVP does need to support:
 - collaboration invitations or requests;
 - pending request lists;
 - scoped requests;
+- Assistance Request Types;
 - requested capabilities or actions;
+- contributor availability rules;
 - submitted contribution responses;
 - contribution response statuses;
 - requestor review and acceptance or rejection.

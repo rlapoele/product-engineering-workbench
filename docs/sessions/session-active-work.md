@@ -423,6 +423,66 @@ What are the first capabilities the system should support?
 
 **Answer:**
 
+Before defining specific capabilities, the MVP should define a compact set of user-facing Assistance Request Types.
+
+The user should not be overwhelmed by many similar request types. The interface should offer a small, understandable set of ways to ask for help, then use capabilities, scope, context and contributor availability behind the scenes.
+
+Initial Assistance Request Types:
+
+- Draft
+- Improve
+- Request Feedback
+- Review
+- Find Gaps
+- Find Inconsistencies
+- Analyze Impact
+- Suggest Alternatives
+- Validate Readiness
+- Ask Question
+- Prepare Handoff
+
+Request Feedback and Review should both exist because they express different user intents.
+
+Request Feedback means: "Please tell me what you think of this."
+
+It is open-ended, judgment-based and conversational. It should usually produce comments, observations, questions and suggestions.
+
+Review means: "Please check this carefully against a specific lens or standard."
+
+It is structured, deliberate and criteria-based. It should usually produce findings, issues, severity or priority, pass/fail indicators, readiness judgment or suggested fixes.
+
+Some Assistance Request Types should be available at the whole-document level, not only at section or artifact level.
+
+First-pass contextual availability matrix:
+
+| Scope | Likely Assistance Request Types |
+|---|---|
+| Entire Specification | Improve, Request Feedback, Review, Find Gaps, Find Inconsistencies, Analyze Impact, Suggest Alternatives, Validate Readiness, Ask Question, Prepare Handoff |
+| Product Overview | Draft, Improve, Request Feedback, Review, Find Gaps, Ask Question |
+| Goals and Success Criteria | Draft, Improve, Request Feedback, Review, Find Gaps, Find Inconsistencies, Validate Readiness, Ask Question |
+| User Needs | Draft, Improve, Request Feedback, Review, Find Gaps, Find Inconsistencies, Suggest Alternatives, Ask Question |
+| Core Feature | Draft, Improve, Request Feedback, Review, Find Gaps, Analyze Impact, Suggest Alternatives, Ask Question |
+| User Story | Draft, Improve, Request Feedback, Review, Find Gaps, Find Inconsistencies, Validate Readiness, Ask Question |
+| Use Case | Draft, Improve, Request Feedback, Review, Find Gaps, Analyze Impact, Validate Readiness, Ask Question |
+| Acceptance Criteria | Draft, Improve, Request Feedback, Review, Find Gaps, Validate Readiness, Ask Question |
+| Functional Requirement | Draft, Improve, Request Feedback, Review, Find Gaps, Find Inconsistencies, Analyze Impact, Validate Readiness, Ask Question |
+| Non-Functional Requirement | Draft, Improve, Request Feedback, Review, Find Gaps, Validate Readiness, Ask Question |
+| Screen / View or UX Requirement | Draft, Improve, Request Feedback, Review, Find Gaps, Analyze Impact, Validate Readiness, Ask Question |
+| Risk | Draft, Improve, Request Feedback, Review, Analyze Impact, Suggest Alternatives, Ask Question |
+| Assumption | Improve, Request Feedback, Review, Analyze Impact, Suggest Alternatives, Validate Readiness, Ask Question |
+| Decision | Improve, Request Feedback, Review, Analyze Impact, Suggest Alternatives, Ask Question |
+| Open Question | Improve, Request Feedback, Analyze Impact, Suggest Alternatives, Ask Question |
+| Selected Content | Improve, Request Feedback, Review, Find Gaps, Find Inconsistencies, Ask Question |
+
+The matrix is a first pass and should be validated through concrete specification exercises.
+
+AI support may also include a lightweight general AI Assistant.
+
+The general AI Assistant is not the same thing as a scoped assistance request. It should help the user think, navigate the application, understand terminology, ask questions and decide what to do next.
+
+The general AI Assistant may suggest or initiate a scoped Assistance Request Type when the user's conversation becomes actionable.
+
+The general AI Assistant should not silently modify canonical product knowledge.
 
 ### 4.2
 
@@ -448,6 +508,16 @@ How does a project owner request help?
 
 Generically speaking, by inviting a user to collaborate. Having said that, if a user requests assistance to "Reword" a section, then the type of contribution is "Reword". 
 So the generic mechanism is "by invitation" but it will be by invitation for a specific thing to do.
+
+Refinement after discussion:
+
+The user requests help by choosing a scope and an Assistance Request Type.
+
+The scope may be the entire specification, a section, a Product Artifact, selected content or another explicit project scope.
+
+The Assistance Request Type describes the user's intent, such as Request Feedback, Review, Find Gaps or Validate Readiness.
+
+The system should then use the request type, scope, required capabilities and contributor availability to determine which human or AI contributors are eligible.
 
 ### 4.4
 
