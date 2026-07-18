@@ -340,7 +340,7 @@ Structured fields do not automatically become Product Artifacts. A field should 
 
 **Category:** Data Model
 
-**Status:** 🟡 Exploring
+**Status:** 🟢 Resolved
 
 ## Context
 
@@ -350,17 +350,43 @@ Artifact Relationships form the Product Knowledge Graph and allow the workbench 
 
 - supports
 - addresses
-- belongs_to
+- part_of
 - validates
 - depends_on
 - affects
 - explains
 - blocks
+- derived_from
 - relates_to
 
 ## Question
 
 Which relationship types are necessary for the first version of the Product Knowledge Graph?
+
+## Decision
+
+The MVP relationship types are:
+
+- `supports`
+- `addresses`
+- `part_of`
+- `validates`
+- `depends_on`
+- `affects`
+- `explains`
+- `blocks`
+- `derived_from`
+- `relates_to`
+
+`belongs_to` is not included. `part_of` is preferred because it is clearer for artifact hierarchy and composition.
+
+`derived_from` is included because derivation matters for provenance, AI generation, refinement and implementation handoff traceability.
+
+## Consequences
+
+The relationship set supports traceability, validation, dependency reasoning, impact analysis, rationale, blocking conditions and derivation.
+
+`relates_to` remains available as a weak generic relationship when no stronger relationship type applies.
 
 ---
 
@@ -368,7 +394,7 @@ Which relationship types are necessary for the first version of the Product Know
 
 **Category:** Data Model
 
-**Status:** 🟡 Exploring
+**Status:** 🟢 Resolved
 
 ## Context
 
@@ -385,6 +411,34 @@ Artifacts need lifecycle states so users and contributors can understand whether
 ## Question
 
 Which statuses are required initially?
+
+## Decision
+
+The MVP artifact lifecycle states are:
+
+- Draft
+- Needs Review
+- Validated
+- Stale
+- Archived
+
+## State Meanings
+
+Draft means the artifact exists but has not yet been verified or accepted.
+
+Needs Review means the artifact requires verification before it can be considered reliable.
+
+Validated means the artifact has been verified and accepted as currently accurate.
+
+Stale means the artifact may no longer be accurate because related upstream knowledge changed.
+
+Archived means the artifact is no longer active but is preserved for history and traceability.
+
+## Consequences
+
+Review does not need to be human-only. Verification may be performed by a human contributor, AI contributor or capability-specific reviewer when that is appropriate.
+
+Rejected is not an MVP artifact lifecycle state. Rejection belongs to contribution responses, suggestions or proposed changes. An artifact that should no longer be active can be archived.
 
 ---
 

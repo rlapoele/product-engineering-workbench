@@ -306,19 +306,19 @@ A minimum lifecycle could include:
 
 ## Draft
 
-The artifact exists but has not yet been reviewed or accepted.
+The artifact exists but has not yet been verified or accepted.
 
 AI-generated artifacts should usually begin as Draft unless explicitly accepted by the user.
 
 ## Needs Review
 
-The artifact requires human attention.
+The artifact requires verification before it can be considered reliable.
 
 This may happen after generation, modification, dependency changes or detected inconsistency.
 
 ## Validated
 
-The artifact has been reviewed and accepted as currently accurate.
+The artifact has been verified and accepted as currently accurate.
 
 Validated does not mean permanent.
 
@@ -349,11 +349,12 @@ Relationships are what allow the workbench to reason across the product knowledg
 - A Goal supports a Vision.
 - A User Need supports a Goal.
 - A Feature addresses a User Need.
-- A User Story belongs to a Feature.
+- A User Story is part of a Feature.
 - Acceptance Criteria validate a User Story.
 - A Risk affects a Feature.
 - A Decision explains why a direction was chosen.
 - An Open Question blocks validation of an artifact.
+- Acceptance Criteria may be derived from a Functional Requirement.
 
 ## Minimum relationship types
 
@@ -361,15 +362,56 @@ The initial relationship model should include:
 
 - supports
 - addresses
-- belongs_to
+- part_of
 - validates
 - depends_on
 - affects
 - explains
 - blocks
+- derived_from
 - relates_to
 
 These relationship types should remain understandable to users and useful for product reasoning.
+
+## Relationship type meanings
+
+`supports` means an artifact contributes to or supports another artifact.
+
+Example: a Goal supports a Vision.
+
+`addresses` means an artifact responds to a need, problem or opportunity.
+
+Example: a Feature addresses a User Need.
+
+`part_of` means an artifact is part of a larger artifact or grouping.
+
+Example: a User Story is part of a Feature.
+
+`validates` means an artifact defines validation for another artifact.
+
+Example: Acceptance Criteria validate a Functional Requirement.
+
+`depends_on` means an artifact depends on another artifact being true, available, resolved or decided.
+
+Example: a Feature depends on an integration decision.
+
+`affects` means an artifact may influence, constrain or impact another artifact.
+
+Example: a Risk affects a Feature.
+
+`explains` means an artifact provides rationale for another artifact.
+
+Example: a Decision explains a Technical Constraint.
+
+`blocks` means an artifact prevents another artifact from being validated, completed or implemented.
+
+Example: an Open Question blocks a Feature.
+
+`derived_from` means an artifact was generated, refined or derived from another artifact.
+
+Example: Acceptance Criteria are derived from a Functional Requirement.
+
+`relates_to` is a weak generic relationship used when no stronger relationship type applies.
 
 ---
 

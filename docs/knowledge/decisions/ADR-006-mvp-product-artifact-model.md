@@ -126,6 +126,29 @@ The MVP does not require:
 
 Artifact lifecycle states and relationship types remain separate open questions.
 
+Follow-up clarification:
+
+The MVP relationship types are:
+
+- `supports`
+- `addresses`
+- `part_of`
+- `validates`
+- `depends_on`
+- `affects`
+- `explains`
+- `blocks`
+- `derived_from`
+- `relates_to`
+
+The MVP artifact lifecycle states are:
+
+- Draft
+- Needs Review
+- Validated
+- Stale
+- Archived
+
 ---
 
 ## Alternatives Considered

@@ -547,6 +547,27 @@ Are the current statuses enough: Draft, Needs Review, Validated, Stale, Archived
 
 **Answer:**
 
+Yes.
+
+The MVP artifact lifecycle states are:
+
+- Draft
+- Needs Review
+- Validated
+- Stale
+- Archived
+
+State meanings:
+
+- Draft: artifact exists but has not yet been verified or accepted.
+- Needs Review: artifact requires verification before it can be considered reliable.
+- Validated: artifact has been verified and accepted as currently accurate.
+- Stale: artifact may no longer be accurate because related upstream knowledge changed.
+- Archived: artifact is no longer active but is preserved for history and traceability.
+
+Review does not need to be human-only. Verification may be performed by a human contributor, AI contributor or capability-specific reviewer when that is appropriate.
+
+Rejected is not an MVP artifact lifecycle state. Rejection belongs to contribution responses, suggestions or proposed changes.
 
 ### 5.6
 
@@ -556,16 +577,46 @@ Current candidate:
 
 - supports
 - addresses
-- belongs_to
+- part_of
 - validates
 - depends_on
 - affects
 - explains
 - blocks
+- derived_from
 - relates_to
 
 **Answer:**
 
+The MVP relationship types are:
+
+- `supports`
+- `addresses`
+- `part_of`
+- `validates`
+- `depends_on`
+- `affects`
+- `explains`
+- `blocks`
+- `derived_from`
+- `relates_to`
+
+`belongs_to` is replaced by `part_of` because `part_of` is clearer for artifact hierarchy and composition.
+
+`derived_from` is included because derivation matters for provenance, AI generation, refinement and implementation handoff traceability.
+
+Relationship meanings:
+
+- `supports`: an artifact contributes to or supports another artifact.
+- `addresses`: an artifact responds to a need, problem or opportunity.
+- `part_of`: an artifact is part of a larger artifact or grouping.
+- `validates`: an artifact defines validation for another artifact.
+- `depends_on`: an artifact depends on another artifact being true, available, resolved or decided.
+- `affects`: an artifact may influence, constrain or impact another artifact.
+- `explains`: an artifact provides rationale for another artifact.
+- `blocks`: an artifact prevents another artifact from being validated, completed or implemented.
+- `derived_from`: an artifact was generated, refined or derived from another artifact.
+- `relates_to`: a weak generic relationship used when no stronger relationship type applies.
 
 ---
 

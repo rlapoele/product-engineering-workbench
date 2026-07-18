@@ -121,8 +121,41 @@ An Artifact Template is a user-facing representation of the artifact schema, not
 
 The following remain open:
 
-- DATA-003 — Which artifact relationship types are required initially?
-- DATA-004 — What lifecycle states should artifacts support?
+- DATA-003 — Which artifact relationship types are required initially? Resolved after follow-up discussion.
+- DATA-004 — What lifecycle states should artifacts support? Resolved after follow-up discussion.
+
+---
+
+## Follow-Up Decisions
+
+The MVP relationship types are:
+
+- `supports`
+- `addresses`
+- `part_of`
+- `validates`
+- `depends_on`
+- `affects`
+- `explains`
+- `blocks`
+- `derived_from`
+- `relates_to`
+
+`belongs_to` was replaced by `part_of` because `part_of` is clearer for artifact hierarchy and composition.
+
+`derived_from` was added because derivation matters for provenance, AI generation, refinement and implementation handoff traceability.
+
+The MVP artifact lifecycle states are:
+
+- Draft
+- Needs Review
+- Validated
+- Stale
+- Archived
+
+Needs Review means the artifact requires verification before it can be considered reliable.
+
+Review does not need to be human-only. Verification may be performed by a human contributor, AI contributor or capability-specific reviewer when appropriate.
 
 ---
 
@@ -130,5 +163,5 @@ The following remain open:
 
 Continue with either:
 
-- DATA-003 — Initial artifact relationship types; or
-- DATA-004 — Artifact lifecycle states.
+- ARCH-001 — Canonical product state representation; or
+- AI-001 — AI context assembly.
