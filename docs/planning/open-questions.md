@@ -239,6 +239,9 @@ The Project Model proposes a small initial set of Product Artifacts so the workb
 - Acceptance Criteria
 - Functional Requirement
 - Non-Functional Requirement
+- Screen / View
+- User Flow
+- UI Requirement
 - Risk
 - Assumption
 - Decision
@@ -251,6 +254,8 @@ The initial Section Catalog requires User Story, Use Case, Functional Requiremen
 User Story and Use Case are distinct artifact types but may appear together in the `User Stories and Use Cases` section.
 
 Assumption is included because the first Section Catalog includes `Risks, Assumptions and Open Questions`, and assumptions provide important implementation handoff context.
+
+Screen / View, User Flow and UI Requirement are included because implementation-ready web app specifications need enough UX/UI structure to describe screens, flows, interactions, visual expectations, states, responsive behavior and accessibility expectations.
 
 ## Question
 
@@ -269,6 +274,9 @@ The MVP minimum Product Artifact set is:
 - Acceptance Criteria
 - Functional Requirement
 - Non-Functional Requirement
+- Screen / View
+- User Flow
+- UI Requirement
 - Risk
 - Assumption
 - Decision

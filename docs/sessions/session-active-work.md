@@ -440,6 +440,9 @@ Current candidate:
 - Acceptance Criteria
 - Functional Requirement
 - Non-Functional Requirement
+- Screen / View
+- User Flow
+- UI Requirement
 - Risk
 - Assumption
 - Decision
@@ -458,6 +461,9 @@ The MVP minimum Product Artifact set is:
 - Acceptance Criteria
 - Functional Requirement
 - Non-Functional Requirement
+- Screen / View
+- User Flow
+- UI Requirement
 - Risk
 - Assumption
 - Decision
@@ -468,6 +474,10 @@ This set supports the first Section Catalog without requiring every section to m
 Some sections are artifact-heavy. Other sections may be primarily section content or views over related artifacts.
 
 Assumption is included because the Section Catalog contains `Risks, Assumptions and Open Questions`, and assumptions provide important implementation handoff context.
+
+Screen / View, User Flow and UI Requirement are included because implementation-ready web app specifications need enough UX/UI structure to describe screens, flows, interactions, visual expectations, states, responsive behavior and accessibility expectations.
+
+The MVP should not introduce lower-level design-system artifact types such as Design Token, Color, Typography, UI Component, Wireframe or Prototype.
 
 ### 5.2
 

@@ -414,6 +414,14 @@ Internally, a Specification may be a document-like composition or view over stru
 
 ---
 
+## Screen / View
+
+A Screen / View is a Product Artifact describing a user-facing screen, page, modal, panel or major interface view.
+
+Screen / View artifacts help specify what users see and interact with.
+
+---
+
 ## Specification Document Template
 
 A Specification Document Template is a user-facing template that defines the expected structure of a product specification document.
@@ -434,6 +442,14 @@ Specification Sections organize and present Product Artifacts, but they are not 
 
 # U
 
+## UI Requirement
+
+A UI Requirement is a Product Artifact describing a specific visual, interaction, state, responsive or accessibility expectation.
+
+UI Requirements help make UX/UI expectations implementation-ready without requiring low-level design-system artifact types in the MVP.
+
+---
+
 ## Use Case
 
 A Use Case is a structured description of an interaction between an actor and the system.
@@ -451,6 +467,14 @@ A User Story is a compact, value-oriented description of something a user wants 
 User Stories typically identify an actor, a need and an expected benefit.
 
 User Stories are distinct from Use Cases, though both may appear in the `User Stories and Use Cases` section of a specification.
+
+---
+
+## User Flow
+
+A User Flow is a Product Artifact describing a sequence of user steps, interactions or screens needed to achieve an outcome.
+
+User Flows help specify how users move through the product.
 
 ---
 

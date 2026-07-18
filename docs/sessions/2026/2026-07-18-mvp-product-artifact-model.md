@@ -29,6 +29,9 @@ The MVP minimum Product Artifact set is:
 - Acceptance Criteria
 - Functional Requirement
 - Non-Functional Requirement
+- Screen / View
+- User Flow
+- UI Requirement
 - Risk
 - Assumption
 - Decision

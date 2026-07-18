@@ -39,6 +39,9 @@ The MVP minimum Product Artifact set is:
 - Acceptance Criteria
 - Functional Requirement
 - Non-Functional Requirement
+- Screen / View
+- User Flow
+- UI Requirement
 - Risk
 - Assumption
 - Decision
@@ -97,6 +100,7 @@ This decision:
 - supports the first Section Catalog without requiring one artifact type per section;
 - keeps the artifact model broad enough for implementation-ready specifications;
 - includes Assumption because assumptions are part of the `Risks, Assumptions and Open Questions` section and matter during implementation handoff;
+- includes Screen / View, User Flow and UI Requirement because implementation-ready web app specifications need enough UX/UI structure to describe screens, flows, interactions, visual expectations, states, responsive behavior and accessibility expectations;
 - preserves document-first UX while maintaining structured product knowledge;
 - avoids over-fragmenting User Story and Use Case fields into separate artifacts;
 - supports future localization by separating app-controlled template text from user-authored specification content;
@@ -122,6 +126,7 @@ The MVP does not require:
 - artifact-level localization fields;
 - Specification Section as a Product Artifact type;
 - separate Product Artifacts for every structured field inside User Stories or Use Cases;
+- lower-level design-system artifact types such as Design Token, Color, Typography, UI Component, Wireframe or Prototype;
 - common fields such as priority, owner, tags, comments or readiness score.
 
 Artifact lifecycle states and relationship types remain separate open questions.

@@ -183,6 +183,9 @@ Artifacts should be structured enough to support review, traceability, AI assist
 - Acceptance Criteria
 - Functional Requirement
 - Non-Functional Requirement
+- Screen / View
+- User Flow
+- UI Requirement
 - Risk
 - Decision, when recorded as structured product knowledge
 - Assumption
@@ -202,6 +205,9 @@ The initial minimum artifact set should probably include:
 - Acceptance Criteria
 - Functional Requirement
 - Non-Functional Requirement
+- Screen / View
+- User Flow
+- UI Requirement
 - Risk
 - Decision
 - Assumption
@@ -216,6 +222,10 @@ They may appear together in a single `User Stories and Use Cases` document secti
 Functional Requirement and Non-Functional Requirement should be included in the minimum artifact set because the first Specification Document Template needs to produce implementation-ready specifications.
 
 Assumption should be included because the first Section Catalog includes `Risks, Assumptions and Open Questions`, and assumptions are important context for implementation handoff.
+
+Screen / View, User Flow and UI Requirement should be included because implementation-ready web app specifications need enough UX/UI structure to describe user-facing surfaces, interaction sequences, visual expectations, states, responsive behavior and accessibility expectations.
+
+The MVP should not introduce lower-level design-system artifact types such as Design Token, Color, Typography, UI Component, Wireframe or Prototype.
 
 ---
 
@@ -280,6 +290,36 @@ A Functional Requirement may include:
 - related feature;
 - required behavior;
 - business rule or system obligation;
+- acceptance criteria.
+
+A Screen / View may include:
+
+- purpose;
+- primary users;
+- related features;
+- visible content or controls;
+- states;
+- related flows;
+- related requirements.
+
+A User Flow may include:
+
+- entry point;
+- steps;
+- alternate paths;
+- success outcome;
+- error or empty states;
+- related screens;
+- related requirements.
+
+A UI Requirement may include:
+
+- related screen or flow;
+- interaction behavior;
+- visual expectation;
+- state behavior;
+- responsive behavior;
+- accessibility expectation;
 - acceptance criteria.
 
 A Risk may include:
