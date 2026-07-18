@@ -63,6 +63,37 @@ This model should remain small enough to be understandable, but complete enough 
 
 ---
 
+# 3.1 Project State
+
+Project State is the canonical structured state of a Project.
+
+It should contain both document/specification composition and artifact relationship records.
+
+Conceptually, Project State may include:
+
+- project metadata;
+- Specification;
+- Specification Sections;
+- Product Artifacts;
+- Artifact Relationships;
+- Contributors;
+- Contributions;
+- Discussions;
+- Reviews;
+- Revisions;
+- Provenance;
+- Context References.
+
+The Product Knowledge Graph is an interpretation of the Product Artifacts and Artifact Relationships inside Project State.
+
+The graph does not need to be stored as a separate canonical graph object or graph database in the MVP.
+
+Specification Sections should organize artifact references and section content rather than exclusively owning artifacts.
+
+This preserves document-first UX while keeping artifact identity and graph reasoning available.
+
+---
+
 # 4. Project
 
 A Project represents a product engineering workspace.
@@ -343,6 +374,18 @@ Artifacts should not exist in isolation.
 Artifact Relationships describe how product knowledge elements depend on, support, refine or explain one another.
 
 Relationships are what allow the workbench to reason across the product knowledge model.
+
+Artifact Relationships should be first-class records.
+
+An Artifact Relationship should be able to carry metadata, including source or provenance metadata.
+
+Possible relationship sources include:
+
+- manually created;
+- AI-suggested;
+- inferred from document structure;
+- imported;
+- derived from another artifact or template.
 
 ## Example relationships
 

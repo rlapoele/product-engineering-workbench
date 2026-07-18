@@ -634,6 +634,28 @@ Is the canonical state an artifact graph, a document tree, or both?
 
 **Answer:**
 
+The canonical state should be a structured Project State object.
+
+It should contain both document/specification composition and artifact relationship records.
+
+The Product Knowledge Graph is an interpretation of the artifact and relationship records inside Project State, not necessarily a separate canonical graph object or graph database for the MVP.
+
+The Project State object may include:
+
+- project metadata;
+- Specification;
+- Specification Sections;
+- Product Artifacts;
+- Artifact Relationships;
+- Contributors;
+- Contributions;
+- Discussions;
+- Reviews;
+- Revisions;
+- Provenance;
+- Context References.
+
+This preserves document-first UX while supporting artifact identity, graph reasoning, export generation and AI context assembly.
 
 ### 6.2
 
@@ -641,6 +663,9 @@ Can a document section be a view over multiple artifacts?
 
 **Answer:**
 
+Yes.
+
+Specification Sections should organize artifact references and section content rather than exclusively owning artifacts.
 
 ### 6.3
 
@@ -648,6 +673,9 @@ Can one artifact appear in multiple document views?
 
 **Answer:**
 
+Yes, conceptually.
+
+Because sections should organize artifact references rather than exclusively owning artifacts, one artifact may later appear in multiple specifications, document views or exports.
 
 ### 6.4
 
@@ -655,6 +683,13 @@ What happens when the user edits prose that corresponds to structured artifacts?
 
 **Answer:**
 
+The editor should write back to the structured Project State.
+
+If prose corresponds to an artifact field, the artifact should be updated.
+
+If prose is section-level content, the section composition/content should be updated.
+
+The exact editing mechanics remain a future UX and implementation detail.
 
 ### 6.5
 
@@ -662,6 +697,19 @@ How much structure is needed for MVP before it becomes too heavy?
 
 **Answer:**
 
+Enough structure to preserve artifact identity, section composition, relationships, provenance, revisions, review state and export generation.
+
+The MVP does not need to decide storage technology or implement a separate graph database.
+
+Artifact Relationships should be first-class records with metadata, including source or provenance metadata.
+
+Possible relationship sources include:
+
+- manually created;
+- AI-suggested;
+- inferred from document structure;
+- imported;
+- derived from another artifact or template.
 
 ---
 

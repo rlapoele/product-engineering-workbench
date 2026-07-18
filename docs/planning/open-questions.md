@@ -715,7 +715,7 @@ The MVP does need to support:
 
 **Category:** Architecture
 
-**Status:** 🟡 Exploring
+**Status:** 🟢 Resolved
 
 ## Context
 
@@ -724,6 +724,27 @@ The emerging model treats canonical product knowledge as structured artifacts an
 ## Question
 
 Should the canonical product state be stored as a document graph, another graph-like structure or a different representation?
+
+## Decision
+
+The canonical product state should be a structured Project State object.
+
+The Project State object should contain both:
+
+- document/specification composition;
+- artifact and relationship records.
+
+The Product Knowledge Graph is an interpretation of the artifact and relationship records inside the Project State object. It does not need to be stored as a separate canonical graph object or graph database in the MVP.
+
+Specification Sections should organize artifact references and section content rather than exclusively owning artifacts.
+
+Artifact Relationships should be first-class records with their own metadata, including source or provenance metadata.
+
+## Consequences
+
+The MVP can support document-first editing, artifact identity, graph reasoning, export generation and AI context assembly from one structured state model.
+
+Storage technology remains undecided. This decision does not require a relational database, document database or graph database.
 
 ---
 

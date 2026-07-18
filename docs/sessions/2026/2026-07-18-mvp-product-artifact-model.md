@@ -123,6 +123,7 @@ The following remain open:
 
 - DATA-003 — Which artifact relationship types are required initially? Resolved after follow-up discussion.
 - DATA-004 — What lifecycle states should artifacts support? Resolved after follow-up discussion.
+- ARCH-001 — Should the canonical product state be stored as a document graph? Resolved after follow-up discussion.
 
 ---
 
@@ -157,11 +158,25 @@ Needs Review means the artifact requires verification before it can be considere
 
 Review does not need to be human-only. Verification may be performed by a human contributor, AI contributor or capability-specific reviewer when appropriate.
 
+The canonical product state should be a structured Project State object.
+
+Project State should contain both:
+
+- document/specification composition;
+- artifact and relationship records.
+
+The Product Knowledge Graph is an interpretation of the Product Artifacts and Artifact Relationships inside Project State.
+
+The graph does not need to be stored as a separate canonical graph object or graph database in the MVP.
+
+Specification Sections should organize artifact references and section content rather than exclusively owning artifacts.
+
+Artifact Relationships should be first-class records with their own metadata, including source or provenance metadata.
+
 ---
 
 ## Recommended Next Step
 
-Continue with either:
+Continue with:
 
-- ARCH-001 — Canonical product state representation; or
 - AI-001 — AI context assembly.
