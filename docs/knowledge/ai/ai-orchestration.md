@@ -61,6 +61,10 @@ Example AI capabilities include:
 
 The same capability model should apply to both human contributors and AI contributors wherever possible.
 
+For the MVP, AI Contributors provided by the application should be available by default when their capabilities are enabled and usable. Unlike human collaborators, built-in AI Contributors do not need to be invited into a project before the user can request assistance from them.
+
+AI Contributor availability should still respect project settings, permissions and enabled capabilities.
+
 ---
 
 # 4. Assistance Scope
@@ -78,6 +82,8 @@ Possible scopes include:
 - export package.
 
 The requested scope should determine which context is assembled for the AI Contributor.
+
+AI assistance may feel more immediate than human collaboration, but it should remain scoped and request-driven. AI Contributors should not silently change canonical product knowledge without the project owner or authorized contributor accepting or acting on the contribution.
 
 ---
 

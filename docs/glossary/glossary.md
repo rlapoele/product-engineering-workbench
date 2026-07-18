@@ -16,6 +16,8 @@ An AI Contributor is an artificial intelligence contributor that can participate
 
 AI Contributors are contributors. Their contributions should remain visible to users and should not silently replace human judgment.
 
+In the MVP, AI Contributors provided by the application are available by default when their capabilities are enabled.
+
 ## AI Implementation Environment
 
 An AI Implementation Environment is an external environment that can consume implementation-ready product knowledge and use AI agents or AI-assisted tooling to implement the specified software product.
@@ -74,6 +76,16 @@ Examples include:
 - Risk Analysis
 
 Capabilities are used to route contribution requests.
+
+---
+
+## Contributor Availability
+
+Contributor Availability describes whether a contributor can receive or respond to a Collaboration Request for a given project, scope and requested capability.
+
+For human contributors in the MVP, availability is invitation-gated: a human contributor becomes available after being invited, onboarded if needed and accepting the invitation.
+
+For AI Contributors provided by the application in the MVP, availability means the relevant AI capability is enabled and usable.
 
 ---
 

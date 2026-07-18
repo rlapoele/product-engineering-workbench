@@ -196,6 +196,12 @@ Assistance may be requested from human contributors or AI contributors.
 
 Contributor matching should be based on capabilities rather than only fixed roles.
 
+Contributor availability should shape which collaborators the user can request help from.
+
+For human contributors in the MVP, availability depends on invitation and acceptance. A project owner may invite a human collaborator at project creation time or later. The invited person may need to complete onboarding before accepting the invitation and becoming available for scoped Collaboration Requests.
+
+For AI Contributors provided by the application in the MVP, availability is different. Built-in AI assistance should be available by default when the relevant AI capability is enabled and usable. The user does not invite built-in AI Contributors in the same way they invite human collaborators.
+
 Example capabilities include:
 
 - Requirements Review
@@ -218,6 +224,8 @@ MVP collaboration should be asynchronous and transactional.
 The MVP should not support real-time co-editing, shared cursors, live presence or simultaneous editing conflict resolution.
 
 Instead, a project owner should create a scoped Collaboration Request for a contributor. The contributor should be able to open the request, review the relevant context, submit a Contribution Response and leave the requestor to review it later.
+
+Human collaborators should participate through this asynchronous request and response flow. AI Contributors may return responses more immediately, but their contributions should still be treated as scoped assistance that the project owner can review before canonical product knowledge changes.
 
 The project owner should be able to see submitted responses, then accept, reject, comment on or otherwise act on them.
 

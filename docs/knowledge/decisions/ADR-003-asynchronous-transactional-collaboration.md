@@ -40,6 +40,12 @@ A Collaboration Request may target:
 - selected content;
 - another explicit project scope.
 
+Human and AI contributors share the same abstract Contributor and Capability model, but they become available differently in the MVP.
+
+Human collaborators are invitation-gated. A human becomes available to contribute to a project after being invited, completing onboarding if needed and accepting the invitation.
+
+AI Contributors provided by the application are available by default when their capabilities are enabled and usable. They do not require the same invitation and acceptance flow as human collaborators.
+
 Contributors will respond asynchronously by submitting Contribution Responses.
 
 Contribution Responses may include:
@@ -67,6 +73,7 @@ This decision:
 - preserves project-owner control over canonical product knowledge;
 - aligns with the existing distinction between Contribution, Revision and Provenance;
 - supports both human and AI contributors through the same capability-based model;
+- allows contributor selection to account for both capability and availability;
 - avoids simultaneous editing conflict resolution in the MVP;
 - allows collaboration to work as a clear request/response workflow.
 
@@ -91,6 +98,7 @@ The MVP does need to support:
 - pending request lists;
 - scoped requests;
 - requested capabilities or actions;
+- contributor availability rules;
 - submitted Contribution Responses;
 - contribution response statuses;
 - requestor review and acceptance or rejection.

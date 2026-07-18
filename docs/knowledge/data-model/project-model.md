@@ -626,6 +626,12 @@ The project owner should be able to request assistance from contributors based o
 
 For the MVP, human collaboration should be asynchronous and transactional rather than real-time. Contributors should respond to scoped requests instead of directly editing canonical project knowledge.
 
+Contributor availability should be interpreted differently for human and AI contributors.
+
+For human contributors in the MVP, availability is invitation-gated. A human contributor becomes available for project collaboration only after being invited, completing onboarding if needed and accepting the invitation.
+
+For AI Contributors provided by the application in the MVP, availability means that the relevant AI capability is enabled and usable. Built-in AI Contributors do not require the same invitation and acceptance flow as human collaborators.
+
 ---
 
 # 14. Capability
@@ -646,7 +652,7 @@ For example, a contributor may have capabilities such as:
 - AI Draft Generation
 - Consistency Analysis
 
-Capabilities can be used to route requests to the right contributor, whether human or AI.
+Capabilities can be used to route requests to the right available contributor, whether human or AI.
 
 ## Example
 
@@ -691,6 +697,7 @@ A Collaboration Request should identify:
 - the requested action;
 - the scope of the request;
 - the context needed to respond;
+- the applicable availability or eligibility condition;
 - the request status.
 
 A Contribution Response is the contributor's submitted input for a Collaboration Request.

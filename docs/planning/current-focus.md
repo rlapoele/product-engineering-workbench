@@ -47,6 +47,7 @@ Recent clarification established the first target user as an AI-assisted develop
 - The MVP default Handoff Profile has been clarified as `Implementation Handoff`, a human-readable and AI-useful export profile.
 - The MVP direction has been clarified as document-first, template-driven and implementation-handoff oriented.
 - Capability-based collaboration with human and AI contributors has been clarified as a core product concept.
+- Contributor availability has been clarified for the MVP: human collaborators are invitation-gated, while application-provided AI collaborators are available by default when their capabilities are enabled and usable.
 
 ---
 
@@ -58,6 +59,7 @@ Recent clarification established the first target user as an AI-assisted develop
 - Validate the first Section Catalog and Project Preset classification through concrete specification exercises.
 - Clarify the MVP export package structure for implementation handoff.
 - Detail the resolved asynchronous Collaboration Request and Contribution Response flow for human and AI contributors.
+- Detail contributor selection using both capability and availability.
 - Use the Project Model to inform the next UX, AI and architecture documents.
 
 ---

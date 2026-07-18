@@ -83,6 +83,16 @@ The MVP should allow:
 
 The MVP should not include real-time co-editing, shared cursors, live presence or simultaneous editing conflict resolution.
 
+Additional clarification:
+
+Contributor availability differs between human and AI collaborators.
+
+Human collaborators are invitation-gated. A human collaborator becomes available after being invited, completing onboarding if needed and accepting the invitation.
+
+AI collaborators provided by the application are available by default when their capabilities are enabled and usable. They do not need to be invited in the same way as human collaborators.
+
+Both human and AI collaborators should still participate through scoped assistance requests, and canonical product knowledge should change only after the project owner or authorized requestor accepts or acts on the resulting contribution.
+
 ---
 
 # 2. First Specification Document Template
@@ -422,6 +432,12 @@ Are capabilities attached to users, AI contributors, or both?
 
 Capabilities are attached to both.
 One could imagine the concept of role where a contributor (user or AI) being assigned a role would be able to perform the set of capabilities associated with the assigned role.
+
+For the MVP, capabilities should be combined with availability when deciding which collaborators can receive a request.
+
+Human collaborator availability depends on invitation and acceptance.
+
+AI collaborator availability depends on whether the application-provided AI capability is enabled and usable.
 
 
 ### 4.3
