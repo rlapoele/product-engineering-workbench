@@ -219,6 +219,16 @@ The MVP package should include a combined specification file, section-level Mark
 
 ---
 
+## Handoff Profile
+
+A Handoff Profile is a configuration that shapes an Implementation Handoff Package for a specific intended consumer.
+
+Handoff Profiles may target humans, AI-assisted developers, AI implementation environments, agencies, clients, QA reviewers or other downstream users.
+
+A Handoff Profile may control generated files, implementation guidance, tool-specific instructions, context depth, verification checklists, metadata and how risks or unresolved open questions are presented.
+
+---
+
 # K
 
 ## Knowledge

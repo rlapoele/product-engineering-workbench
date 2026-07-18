@@ -92,6 +92,12 @@ The export should include unresolved Open Questions and known Risks.
 
 Open Questions should not block export by default, but the package should clearly indicate when unresolved questions may block or increase the risk of implementation.
 
+Implementation Handoff Packages should eventually be generated through Handoff Profiles.
+
+A Handoff Profile defines the intended consumer of the package and shapes the generated files, guidance, emphasis and format.
+
+Handoff Profiles are not AI-specific. They should support both human and AI consumers.
+
 ---
 
 ## Rationale
@@ -129,6 +135,8 @@ The MVP can postpone:
 - re-import from handoff package.
 
 Future export work should evolve toward the target package structure without breaking the MVP export contract.
+
+Future export work should also define which Handoff Profiles the MVP supports and what each profile generates.
 
 ---
 

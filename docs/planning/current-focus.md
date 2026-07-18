@@ -2,7 +2,7 @@
 
 **Status:** Active
 
-**Last Updated:** 2026-07-17
+**Last Updated:** 2026-07-18
 
 ---
 
@@ -44,6 +44,7 @@ Recent clarification established the first target user as an AI-assisted develop
 - The first Section Catalog and initial Project Preset classification have been accepted as a first pass.
 - The MVP minimum Product Artifact set and common artifact fields have been accepted.
 - The initial artifact relationship types and artifact lifecycle states have been accepted.
+- Handoff Profiles have been introduced as a future export concept for shaping implementation packages for human and AI consumers.
 - The MVP direction has been clarified as document-first, template-driven and implementation-handoff oriented.
 - Capability-based collaboration with human and AI contributors has been clarified as a core product concept.
 
@@ -56,6 +57,7 @@ Recent clarification established the first target user as an AI-assisted develop
 - Clarify how discussions crystallize into stable product knowledge.
 - Validate the first Section Catalog and Project Preset classification through concrete specification exercises.
 - Clarify the MVP export package structure for implementation handoff.
+- Clarify MVP Handoff Profiles for human and AI implementation consumers.
 - Detail the resolved asynchronous Collaboration Request and Contribution Response flow for human and AI contributors.
 - Use the Project Model to inform the next UX, AI and architecture documents.
 

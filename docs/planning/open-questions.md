@@ -668,6 +668,56 @@ Open questions should not block export by default, but the package should clearl
 
 ---
 
+# UX-004 — What Handoff Profiles should the MVP support?
+
+**Category:** User Experience
+
+**Status:** 🟡 Exploring
+
+## Context
+
+Implementation-ready does not only mean product-complete. It also means context-ready for the intended implementation consumer.
+
+The Implementation Handoff Package may be consumed by humans, AI-assisted developers, AI implementation environments, agencies, clients, QA reviewers or other downstream users.
+
+Different consumers may need different guidance files, summaries, emphasis, metadata and verification instructions.
+
+## Current Direction
+
+Implementation Handoff Packages should eventually be generated through Handoff Profiles.
+
+A Handoff Profile defines the intended consumer of the package and shapes the generated files, guidance, emphasis and format.
+
+Handoff Profiles are not AI-specific. They should support both human and AI consumers.
+
+Potential profiles include:
+
+- Generic Human Developer
+- AI-Assisted Developer
+- Codex
+- Claude Code
+- Gemini
+- Cursor
+- Agency / Client Handoff
+- QA / Review Handoff
+
+A Handoff Profile may control:
+
+- which files are generated;
+- wording and emphasis of `IMPLEMENTATION_BRIEF.md`;
+- whether tool-specific guidance files such as `AGENTS.md`, `CLAUDE.md` or `GEMINI.md` are generated;
+- how much context is included;
+- whether stack-specific guidance is included;
+- whether verification checklists are included;
+- how prominently unresolved open questions and risks are presented;
+- whether artifact-level files or expanded metadata are included.
+
+## Question
+
+Which Handoff Profiles should the MVP support, and what should each profile generate?
+
+---
+
 # COLL-001 — How should capability-based collaboration work?
 
 **Category:** Collaboration

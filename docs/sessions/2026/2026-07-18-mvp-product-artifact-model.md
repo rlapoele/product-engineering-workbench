@@ -127,6 +127,7 @@ The following remain open:
 - DATA-003 — Which artifact relationship types are required initially? Resolved after follow-up discussion.
 - DATA-004 — What lifecycle states should artifacts support? Resolved after follow-up discussion.
 - ARCH-001 — Should the canonical product state be stored as a document graph? Resolved after follow-up discussion.
+- UX-004 — What Handoff Profiles should the MVP support? Created after follow-up discussion.
 
 ---
 
@@ -176,10 +177,17 @@ Specification Sections should organize artifact references and section content r
 
 Artifact Relationships should be first-class records with their own metadata, including source or provenance metadata.
 
+Handoff Profiles were introduced as a future export concept.
+
+A Handoff Profile defines the intended consumer of an Implementation Handoff Package and shapes the generated files, guidance, emphasis and format.
+
+Handoff Profiles are not AI-specific. They should support both human and AI consumers.
+
 ---
 
 ## Recommended Next Step
 
 Continue with:
 
+- UX-004 — MVP Handoff Profiles; or
 - AI-001 — AI context assembly.

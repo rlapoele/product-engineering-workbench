@@ -154,3 +154,5 @@ The export should also include a top-level `manifest.json` as the minimal requir
 AI should be optional, capability-based and context-aware.
 
 The MVP should support AI assistance as contributions to the specification process while also producing exports that can be consumed by external AI implementation environments.
+
+Handoff Profiles may include AI-oriented consumers such as Codex, Claude Code, Gemini or Cursor, but the Handoff Profile concept itself is not AI-specific. It should also support human, agency, client and QA handoff needs.
