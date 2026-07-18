@@ -42,6 +42,7 @@ Recent clarification established the first target user as an AI-assisted develop
 - Specification Document Template has been introduced as the user-facing term for project-start templates.
 - The MVP has been clarified to start with one `Implementation-Ready Web App Specification` template backed by a reusable Section Catalog and multiple Project Presets.
 - The first Section Catalog and initial Project Preset classification have been accepted as a first pass.
+- The MVP minimum Product Artifact set and common artifact fields have been accepted.
 - The MVP direction has been clarified as document-first, template-driven and implementation-handoff oriented.
 - Capability-based collaboration with human and AI contributors has been clarified as a core product concept.
 
@@ -49,8 +50,6 @@ Recent clarification established the first target user as an AI-assisted develop
 
 # Current Activities
 
-- Validate the minimum Product Artifact set.
-- Validate common artifact fields.
 - Validate initial artifact relationship types.
 - Validate artifact lifecycle states.
 - Clarify the document-first UX as a view over structured product knowledge.

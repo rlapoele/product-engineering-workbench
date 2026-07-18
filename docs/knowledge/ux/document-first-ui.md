@@ -48,6 +48,8 @@ Project creation should include:
 
 The user should be able to customize which template sections are included before beginning specification work.
 
+User-authored specification content should use a Project or Specification-level `contentLocale`.
+
 ---
 
 # 4. Specification Document Template
@@ -65,6 +67,8 @@ The MVP should start with one initial Specification Document Template: `Implemen
 This template should contain enough information for a human developer, an AI-assisted developer or an AI implementation environment to implement the specified product.
 
 The initial template should be backed by a reusable Section Catalog.
+
+Section Catalog entries should be localization-ready because section labels, descriptions and guidance are app-controlled content. Catalog entries should use stable section identifiers and localization keys such as `labelKey`, `descriptionKey` and `guidanceKey`.
 
 The initial template should support multiple presets rather than separate small, medium and complex templates.
 

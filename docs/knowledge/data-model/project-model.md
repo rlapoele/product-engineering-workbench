@@ -85,6 +85,7 @@ A Project contains the product knowledge needed to reason about that scope.
 - a description;
 - a status;
 - a workflow template;
+- a content locale;
 - a body of product knowledge;
 - contributors;
 - discussions;
@@ -122,6 +123,8 @@ It describes:
 Product Knowledge is the primary asset managed by the workbench.
 
 Documents, exports and AI prompts are generated representations or uses of this underlying knowledge.
+
+The user-facing Specification is the complete project documentation the user works on. Internally, a Specification should be understood as a document-like composition or view over structured Product Artifacts and related product knowledge.
 
 ---
 
@@ -170,6 +173,7 @@ The initial minimum artifact set should probably include:
 - Non-Functional Requirement
 - Risk
 - Decision
+- Assumption
 - Open Question
 
 This set is small enough to remain manageable, but broad enough to represent a product from initial intent to implementation-ready specification.
@@ -179,6 +183,8 @@ User Story and Use Case are distinct artifact types.
 They may appear together in a single `User Stories and Use Cases` document section because both describe user-facing behavior and interaction intent.
 
 Functional Requirement and Non-Functional Requirement should be included in the minimum artifact set because the first Specification Document Template needs to produce implementation-ready specifications.
+
+Assumption should be included because the first Section Catalog includes `Risks, Assumptions and Open Questions`, and assumptions are important context for implementation handoff.
 
 ---
 
@@ -195,13 +201,18 @@ Each artifact should have:
 - a title;
 - a short description or body;
 - a status;
-- an owner or creator;
-- creation metadata;
-- update metadata;
+- creation timestamp;
+- update timestamp;
+- creator;
+- last updater;
 - relationships to other artifacts;
-- revision history;
 - provenance information;
-- review state.
+- review state;
+- current revision or revision history.
+
+Artifact `title` is user-authored content. Artifact `type` is system-defined.
+
+Product Artifacts do not need artifact-level localization fields for the MVP. User-authored artifact content should inherit the Project or Specification content locale.
 
 ## Artifact-specific fields
 
@@ -225,6 +236,7 @@ A User Story may include:
 A Use Case may include:
 
 - primary actor;
+- secondary actors;
 - trigger;
 - preconditions;
 - main flow;
@@ -247,6 +259,36 @@ A Risk may include:
 - affected artifacts.
 
 The common structure ensures consistency, while artifact-specific fields allow each artifact type to express its own meaning.
+
+## Artifact fields and artifacts
+
+Structured fields do not automatically become Product Artifacts.
+
+A field should become a Product Artifact only when it needs an independent lifecycle, review state, reuse, relationships, provenance or collaboration.
+
+For the MVP, User Story and Use Case internals should remain structured fields rather than separate artifacts.
+
+## Artifact-specific schemas
+
+The MVP should support artifact-specific schemas, but these schemas should remain lightweight.
+
+User Story and Use Case should be the most structured artifact types because their structure is part of their meaning.
+
+Other artifact types may use a smaller number of optional structured fields plus flexible content.
+
+## Artifact templates
+
+Structured artifacts may be edited or rendered through artifact templates.
+
+An artifact template is a user-facing representation of an artifact schema. It may present structured fields as placeholders or document-like text.
+
+For example, a User Story artifact may be rendered as:
+
+```text
+As a [actor], I want to [need], so that [benefit].
+```
+
+The template does not replace the artifact schema. It provides a friendly editing or rendering surface over structured artifact data.
 
 ---
 

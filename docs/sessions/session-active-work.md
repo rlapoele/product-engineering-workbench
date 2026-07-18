@@ -436,13 +436,38 @@ Current candidate:
 - User Need
 - Feature
 - User Story
+- Use Case
 - Acceptance Criteria
+- Functional Requirement
+- Non-Functional Requirement
 - Risk
+- Assumption
 - Decision
 - Open Question
 
 **Answer:**
 
+The MVP minimum Product Artifact set is:
+
+- Vision
+- Goal
+- User Need
+- Feature
+- User Story
+- Use Case
+- Acceptance Criteria
+- Functional Requirement
+- Non-Functional Requirement
+- Risk
+- Assumption
+- Decision
+- Open Question
+
+This set supports the first Section Catalog without requiring every section to map directly to a Product Artifact type.
+
+Some sections are artifact-heavy. Other sections may be primarily section content or views over related artifacts.
+
+Assumption is included because the Section Catalog contains `Risks, Assumptions and Open Questions`, and assumptions provide important implementation handoff context.
 
 ### 5.2
 
@@ -450,6 +475,13 @@ Should `Specification Section` itself be an artifact type?
 
 **Answer:**
 
+No, not for the MVP.
+
+From the user experience standpoint, the Specification is the complete project documentation the user works on.
+
+Internally, a Specification is a document-like composition or view over structured Product Artifacts and related product knowledge.
+
+A Specification Section is a document/container structure within a Specification. It organizes and presents Product Artifacts but is not itself a Product Artifact type initially.
 
 ### 5.3
 
@@ -457,6 +489,9 @@ Should `Functional Requirement` and `Non-Functional Requirement` be added to the
 
 **Answer:**
 
+Yes.
+
+Functional Requirement and Non-Functional Requirement should be included in the MVP minimum artifact set because the first Specification Document Template needs to produce implementation-ready specifications.
 
 ### 5.4
 
@@ -464,6 +499,47 @@ What fields does every artifact need?
 
 **Answer:**
 
+Every MVP Product Artifact should include:
+
+- `id`
+- `type`
+- `title`
+- `content`
+- `status`
+- `createdAt`
+- `updatedAt`
+- `createdBy`
+- `updatedBy`
+- `relationships`
+- `provenance`
+- `reviewState`
+- `currentRevision` or `revisionHistory`
+
+Clarifications:
+
+- `title` is user-authored content.
+- `type` is system-defined.
+- Artifact fields do not need localization fields for the MVP.
+- User-authored specification content should have one Project or Specification-level `contentLocale`.
+- Section Catalog and template-controlled text should be localization-ready through keys such as `labelKey`, `descriptionKey` and `guidanceKey`.
+
+Fields such as `priority`, `owner`, `tags`, `comments`, `readinessScore` and artifact-level `contentLocale` are not common MVP fields.
+
+Artifact-specific schemas may define additional fields.
+
+Structured fields do not automatically become Product Artifacts.
+
+A field should become a Product Artifact only when it needs independent lifecycle, review, reuse, relationships, provenance or collaboration.
+
+For MVP, User Story and Use Case internals can remain structured fields rather than separate artifacts.
+
+The MVP should support artifact-specific schemas, but keep them lightweight.
+
+User Story and Use Case should be the most structured artifact types.
+
+Use Case should include optional `secondaryActors`.
+
+Structured artifacts may be edited or rendered through artifact templates. An artifact template is a user-facing representation of the artifact schema, not a replacement for the schema.
 
 ### 5.5
 

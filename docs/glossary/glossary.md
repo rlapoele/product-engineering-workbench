@@ -24,6 +24,20 @@ AI Implementation Environments are distinct from AI Contributors inside the work
 
 AI Contributors help create, review or refine product knowledge. AI Implementation Environments consume exported product knowledge to support software implementation.
 
+## Artifact Template
+
+An Artifact Template is a user-facing editing or rendering representation of a Product Artifact schema.
+
+Artifact Templates may present structured artifact fields as placeholders, document-like text or form-like controls.
+
+Artifact Templates do not replace artifact schemas. They provide a friendly way to edit or render structured artifact data.
+
+## Assumption
+
+An Assumption is a belief treated as true for the purpose of current product reasoning, specification or implementation planning.
+
+Assumptions should remain visible because they may affect implementation decisions, risks, open questions or future validation.
+
 ## Product Artifact
 
 A Product Artifact is a structured piece of product knowledge produced during a product engineering workflow.
@@ -60,6 +74,14 @@ Examples include:
 - Risk Analysis
 
 Capabilities are used to route contribution requests.
+
+---
+
+## Content Locale
+
+Content Locale identifies the locale of user-authored specification content for a Project or Specification.
+
+For the MVP, Product Artifacts inherit the Project or Specification content locale rather than storing artifact-level localization fields.
 
 ---
 
@@ -386,6 +408,10 @@ A structured description of one or more aspects of a product.
 
 Specifications describe what should be built rather than how implementation work should be organized.
 
+From the user experience standpoint, the Specification is the complete project documentation the user works on.
+
+Internally, a Specification may be a document-like composition or view over structured Product Artifacts and related product knowledge.
+
 ---
 
 ## Specification Document Template
@@ -395,6 +421,14 @@ A Specification Document Template is a user-facing template that defines the exp
 It helps users start a project by selecting and optionally customizing the sections they intend to complete.
 
 A Specification Document Template may be backed by an internal Workflow Template that defines artifact types, sequencing, validation rules, AI assistance strategies or export behavior.
+
+---
+
+## Specification Section
+
+A Specification Section is a document/container structure within a Specification.
+
+Specification Sections organize and present Product Artifacts, but they are not Product Artifact types in the MVP.
 
 ---
 

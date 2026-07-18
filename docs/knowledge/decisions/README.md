@@ -25,3 +25,4 @@ When in doubt, prefer updating an existing document rather than creating a new o
 | ADR-003 | Asynchronous Transactional Collaboration | Accepted | 2026-07-17 |
 | ADR-004 | Implementation Handoff Package | Accepted | 2026-07-17 |
 | ADR-005 | Product Knowledge Model | Accepted | 2026-07-15 |
+| ADR-006 | MVP Product Artifact Model | Accepted | 2026-07-18 |

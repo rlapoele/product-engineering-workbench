@@ -222,7 +222,7 @@ No final decision has yet been recorded.
 
 **Category:** Data Model
 
-**Status:** 🟡 Exploring
+**Status:** 🟢 Resolved
 
 ## Context
 
@@ -240,6 +240,7 @@ The Project Model proposes a small initial set of Product Artifacts so the workb
 - Functional Requirement
 - Non-Functional Requirement
 - Risk
+- Assumption
 - Decision
 - Open Question
 
@@ -249,9 +250,37 @@ The initial Section Catalog requires User Story, Use Case, Functional Requiremen
 
 User Story and Use Case are distinct artifact types but may appear together in the `User Stories and Use Cases` section.
 
+Assumption is included because the first Section Catalog includes `Risks, Assumptions and Open Questions`, and assumptions provide important implementation handoff context.
+
 ## Question
 
 Which artifact types are required for the first coherent version of the workbench?
+
+## Decision
+
+The MVP minimum Product Artifact set is:
+
+- Vision
+- Goal
+- User Need
+- Feature
+- User Story
+- Use Case
+- Acceptance Criteria
+- Functional Requirement
+- Non-Functional Requirement
+- Risk
+- Assumption
+- Decision
+- Open Question
+
+Specification Section is not a Product Artifact type for the MVP. It is a document/container structure within a Specification, used to organize and present Product Artifacts.
+
+## Consequences
+
+The first Section Catalog can be supported without requiring every section to map directly to a Product Artifact type.
+
+Some sections are artifact-heavy. Other sections may be primarily section content or views over related artifacts.
 
 ---
 
@@ -259,7 +288,7 @@ Which artifact types are required for the first coherent version of the workbenc
 
 **Category:** Data Model
 
-**Status:** 🟡 Exploring
+**Status:** 🟢 Resolved
 
 ## Context
 
@@ -268,6 +297,42 @@ Product Artifacts need enough common structure to support review, traceability, 
 ## Question
 
 Which fields must every artifact share to support review, traceability, AI assistance and export?
+
+## Decision
+
+Every MVP Product Artifact should include:
+
+- `id`
+- `type`
+- `title`
+- `content`
+- `status`
+- `createdAt`
+- `updatedAt`
+- `createdBy`
+- `updatedBy`
+- `relationships`
+- `provenance`
+- `reviewState`
+- `currentRevision` or `revisionHistory`
+
+Artifact `title` is user-authored content. Artifact `type` is system-defined.
+
+Artifact fields do not need localization fields for the MVP.
+
+User-authored specification content should have one Project or Specification-level `contentLocale`.
+
+Section Catalog and template-controlled text should be localization-ready through keys such as `labelKey`, `descriptionKey` and `guidanceKey`.
+
+## Consequences
+
+Artifacts have enough common structure to support identification, editing, review, traceability, provenance, relationships and export.
+
+Fields such as `priority`, `owner`, `tags`, `comments`, `readinessScore` and artifact-level `contentLocale` are not common MVP fields.
+
+Artifact-specific schemas may define additional fields.
+
+Structured fields do not automatically become Product Artifacts. A field should become a Product Artifact only when it needs independent lifecycle, review, reuse, relationships, provenance or collaboration.
 
 ---
 
