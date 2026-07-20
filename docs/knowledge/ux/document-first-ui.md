@@ -328,6 +328,22 @@ The project owner should be able to see submitted responses, then accept, reject
 
 If an accepted contribution changes canonical product knowledge, the resulting change should be recorded as a Revision.
 
+## Stale Artifact Review
+
+When a user updates or archives an artifact, the workbench should be able to identify downstream artifacts that may have been impacted.
+
+Potentially impacted downstream artifacts should be marked Stale and shown to the user with an explanation of why they need attention.
+
+The explanation should identify the changed or archived artifact, the relevant relationship path when available and the triggering Revision.
+
+The user should be able to review each Stale artifact and choose whether to update it, confirm it remains valid, leave it Stale, archive it or create a follow-up Open Question.
+
+The Stale state should not imply that an artifact is wrong. It should communicate that the artifact may need review because related upstream knowledge changed.
+
+The interface may offer contextual AI assistance on Stale artifacts, such as requesting recommendations for possible updates.
+
+This should be presented as a contextual action rather than a new primary Assistance Request Type for the MVP.
+
 ## AI Assistance Visibility And Governance
 
 AI assistance should remain visible without dominating the document-first experience.

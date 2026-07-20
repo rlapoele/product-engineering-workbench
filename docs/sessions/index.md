@@ -11,3 +11,4 @@
 | 2026-07-20-02 | 2026-07-20 | 2 | Context Assembly Model | Crystallized | Requested scope, Candidate Context, Context Relevance, Context Sufficiency, Context Explanation, initial validated examples |
 | 2026-07-20-03 | 2026-07-20 | 3 | AI assistance visibility and governance | Crystallized | Known AI assistance visibility, governance limits, external AI disclosure stance |
 | 2026-07-20-04 | 2026-07-20 | 4 | Analyze Impact Context Assembly | Crystallized | Upstream and downstream context for Analyze Impact on a Requirement |
+| 2026-07-20-05 | 2026-07-20 | 5 | Artifact Change Impact Propagation | Crystallized | Deterministic downstream stale marking after artifact update or archive |

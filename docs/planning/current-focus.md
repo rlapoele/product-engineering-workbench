@@ -54,6 +54,7 @@ Recent clarification established the first target user as an AI-assisted develop
 - The first-pass conceptual Context Assembly model has been clarified: context starts from requested scope, expands through structural, explicit and inferred context, filters by request intent and remains explainable.
 - The Context Assembly model has been validated against initial examples for Improve selected text, Find Gaps on a User Story, Find Inconsistencies on a Feature, Analyze Impact on a Requirement and Validate Readiness on the whole Specification.
 - AI assistance visibility and governance have been clarified: known in-product AI assistance should be visible, reviewable and governable, while undisclosed external AI use by human collaborators cannot be reliably prevented or proven by the workbench.
+- Artifact change impact propagation has been clarified: when an upstream artifact is updated or archived, deterministic system logic should mark potentially impacted downstream artifacts as Stale and may offer contextual AI assistance afterward.
 
 ---
 
@@ -71,6 +72,7 @@ Recent clarification established the first target user as an AI-assisted develop
 - Validate additional Context Relevance and Context Sufficiency rules through concrete assistance request examples.
 - Use the clarified AI assistance governance stance when refining provenance, contribution review and export visibility.
 - Revisit whether AI assistance disclosure should be required, optional, policy-driven or omitted from the product experience.
+- Refine the exact propagation rules for which relationship types should mark downstream artifacts Stale.
 - Use the Project Model to inform the next UX, AI and architecture documents.
 
 ---

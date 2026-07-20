@@ -442,6 +442,14 @@ Stale means the artifact may no longer be accurate because related upstream know
 
 Archived means the artifact is no longer active but is preserved for history and traceability.
 
+When an artifact is updated or archived, deterministic system logic should use Artifact Relationships to identify potentially impacted downstream artifacts and mark them Stale.
+
+The Stale state means review is needed because upstream knowledge changed. It does not mean the downstream artifact is definitely incorrect.
+
+The system should record why each downstream artifact was marked Stale, including the triggering artifact, triggering Revision and relationship path when available.
+
+AI assistance may be offered afterward as a contextual action on Stale artifacts, but AI should not be required to identify the initial impact set.
+
 ## Consequences
 
 Review does not need to be human-only. Verification may be performed by a human contributor, AI contributor or capability-specific reviewer when that is appropriate.

@@ -1038,3 +1038,19 @@ Follow-up question:
 Because document owners and human contributors can use external AI assistance outside the product and then copy or rewrite the result into the workbench, future work should evaluate whether AI assistance disclosure is needed at all.
 
 If disclosure is useful, the product should decide whether it should be required, optional, policy-driven or simply recorded when voluntarily provided.
+
+## Artifact Change Impact Propagation
+
+When an artifact is updated or archived, the initial impact propagation should be deterministic system behavior over the Product Knowledge Graph.
+
+The system should use Artifact Relationships to identify downstream artifacts that may have been impacted and mark them Stale.
+
+Stale means the artifact may need review because upstream knowledge changed. It does not mean the artifact is definitely wrong.
+
+The system should record why each artifact was marked Stale, including the triggering artifact, triggering Revision and relationship path when available.
+
+After propagation, the user should be able to review a Stale artifact and update it, confirm it remains valid, leave it Stale, archive it or create a follow-up Open Question.
+
+AI assistance may be offered afterward as a contextual action on Stale artifacts, such as requesting recommendations for what may need to change.
+
+This should use existing Assistance Request Types and Response Shapes rather than introducing a new top-level Assistance Request Type for the MVP.

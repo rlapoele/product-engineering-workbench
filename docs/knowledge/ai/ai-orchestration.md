@@ -255,6 +255,14 @@ For Analyze Impact on a Requirement, the request should inspect both upstream an
 
 If a Requirement has few or no relationships, impact analysis may still produce a limited response based on the requirement text and containing section, but the Context Explanation should state that relationship-based impact could not be fully assessed. Missing relationships may become Findings or Proposed Relationships.
 
+When an artifact update or archive marks downstream artifacts as Stale, the initial impact propagation should be deterministic system behavior over the Product Knowledge Graph.
+
+AI should not be required to identify the initial set of potentially impacted artifacts.
+
+AI assistance may be offered afterward as a contextual action on Stale artifacts. For example, the user may request recommendations, suggested edits, findings, proposed relationships, proposed artifacts, questions or summaries to help resolve the stale state.
+
+This should use existing Assistance Request Types such as Analyze Impact, Review, Improve or Suggest Alternatives rather than adding a new MVP Assistance Request Type.
+
 ---
 
 # 8. AI Implementation Environments

@@ -58,6 +58,14 @@ Artifact Templates may present structured artifact fields as placeholders, docum
 
 Artifact Templates do not replace artifact schemas. They provide a friendly way to edit or render structured artifact data.
 
+## Artifact Change Impact Propagation
+
+Artifact Change Impact Propagation is the deterministic system process that identifies downstream Product Artifacts that may be impacted when an upstream Product Artifact is updated or archived.
+
+The process uses Artifact Relationships in the Product Knowledge Graph to mark potentially impacted downstream artifacts as Stale and record why they need attention.
+
+AI assistance may help users understand or resolve Stale artifacts after propagation, but AI is not required to identify the initial impact set.
+
 ## Assumption
 
 An Assumption is a belief treated as true for the purpose of current product reasoning, specification or implementation planning.
@@ -508,6 +516,12 @@ Examples include Requirements Quality, UX Quality, Accessibility, Security, Test
 The degree to which a Product Artifact, feature, project area or export is mature enough to support implementation or downstream use.
 
 Readiness may depend on required Product Artifacts, required relationships, resolved open questions, identified risks, testable acceptance criteria, completed reviews and stale knowledge being updated.
+
+## Stale
+
+Stale is an artifact lifecycle state indicating that a Product Artifact may no longer be accurate because related upstream knowledge changed.
+
+Stale does not mean the artifact is definitely incorrect. It means the artifact should be reviewed, updated or confirmed as still valid.
 
 ---
 

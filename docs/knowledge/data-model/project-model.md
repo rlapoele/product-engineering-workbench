@@ -401,6 +401,10 @@ The artifact may no longer be accurate because related upstream knowledge change
 
 For example, if a Goal changes, related Features or User Stories may become stale.
 
+Stale is the appropriate lifecycle state for downstream artifacts that may be impacted when an upstream artifact is updated or archived.
+
+Stale does not mean the downstream artifact is wrong. It means the artifact requires review because related source knowledge changed.
+
 ## Archived
 
 The artifact is no longer active, but is preserved for history and traceability.
@@ -517,6 +521,49 @@ The graph does not need to be visually represented at first.
 It is first a conceptual model.
 
 Later, it may support visualizations, impact analysis, traceability views, document generation and AI context assembly.
+
+---
+
+# 10.1 Artifact Change Impact Propagation
+
+When a Product Artifact is updated or archived, the system should deterministically evaluate whether downstream artifacts may have been impacted.
+
+This should be handled through ordinary system logic over the Product Knowledge Graph, not by AI as the primary authority.
+
+The system should:
+
+- record the artifact change as a Revision;
+- traverse relevant Artifact Relationships from the changed or archived artifact;
+- identify downstream artifacts that may depend on, validate, derive from, belong to, or otherwise be affected by the changed artifact;
+- mark potentially impacted downstream artifacts as Stale;
+- record why each artifact was marked Stale, including the triggering artifact, triggering Revision and relevant relationship path when available;
+- avoid infinite loops or repeated markings when relationships are cyclic or overlapping;
+- preserve archived artifacts for history and traceability rather than deleting dependency context silently.
+
+Impact propagation is a caution mechanism, not a semantic judgment.
+
+Marking an artifact Stale means:
+
+"Something upstream changed, so this artifact may need review."
+
+It does not mean:
+
+"This artifact is definitely incorrect."
+
+After reviewing a Stale artifact, the user should be able to:
+
+- update it;
+- confirm that it remains valid;
+- leave it Stale;
+- archive it;
+- create or update related Product Artifacts;
+- create an Open Question when the impact cannot yet be resolved.
+
+AI assistance may be offered as a contextual action on Stale artifacts, such as requesting recommendations for what may need to change.
+
+This should use existing Assistance Request Types and Response Shapes rather than introducing a new top-level Assistance Request Type in the MVP.
+
+For example, the user may request AI recommendations that internally use Analyze Impact, Review, Improve or Suggest Alternatives and return Suggested Edits, Findings, Proposed Relationships, Proposed Artifacts, Questions or Summaries.
 
 ---
 

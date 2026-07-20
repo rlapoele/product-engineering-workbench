@@ -48,6 +48,8 @@ Graph reasoning should use Product Artifacts and Artifact Relationships.
 
 Export generation should use both the document composition and the underlying artifact records.
 
+When Product Artifacts are updated or archived, deterministic system logic should use Product Artifacts and Artifact Relationships to identify potentially impacted downstream artifacts and mark them Stale.
+
 AI context assembly should use the requested scope, relevant artifacts, relationships, provenance, discussions, reviews and context references.
 
 Artifact Relationships should be first-class records with their own metadata, including source or provenance metadata.
@@ -63,6 +65,12 @@ The architecture should distinguish:
 - Inferred Context suggested by analysis or AI assistance but not yet accepted as canonical.
 
 The system should be able to assess Context Sufficiency and produce a Context Explanation for the user.
+
+Artifact change impact propagation should run before optional AI assistance.
+
+The deterministic propagation step identifies potentially impacted artifacts and records why they were marked Stale.
+
+AI may then be offered as a contextual action to help users understand or resolve Stale artifacts, but AI should not be required to identify the initial impact set.
 
 This decision does not require a specific database technology.
 
