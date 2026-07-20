@@ -35,6 +35,19 @@ AI Contributors may:
 
 AI-generated contributions should usually begin as drafts, suggestions or reviews until accepted by a human project owner or authorized contributor.
 
+AI assistance inside the workbench should be visible and governable.
+
+When an AI Contributor participates through a scoped request, users should be able to see:
+
+- that the contribution came from an AI Contributor;
+- the Assistance Request Type and scope;
+- the capability or Review Lens used;
+- the assembled context when available;
+- whether the response has been accepted, rejected, ignored or superseded;
+- any resulting Revision or Provenance update.
+
+The workbench should not silently convert AI output into canonical product knowledge.
+
 ---
 
 # 3. Capability-Based Assistance
@@ -231,11 +244,16 @@ Validated example context patterns:
 | Improve selected text | selected text, containing artifact or section | product name, product vision, goals, target users, glossary terms | Suggested Edit, Comment |
 | Find Gaps on User Story | User Story, parent Feature, existing Acceptance Criteria | related User Needs, Functional Requirements, Non-Functional Requirements, Screen/View or User Flow | Finding, Proposed Artifact, Question |
 | Find Inconsistencies on Feature | Feature, directly related Requirements, Decisions, Acceptance Criteria | Goals, Non-Goals, constraints, related sections, Open Questions, Risks | Finding, Question, Proposed Decision, Suggested Edit |
+| Analyze Impact on Requirement | selected Requirement, directly related artifacts, parent Feature, affected Acceptance Criteria, affected Screen/View or User Flow, dependencies and known constraints | Goals, User Needs, Non-Goals, Decisions, Risks, Open Questions, data/domain model, external integrations, implementation guidance, previous Reviews | Summary, Finding, Proposed Relationship, Proposed Artifact, Proposed Decision, Question |
 | Validate Readiness on whole Specification | included sections, required artifacts, artifact statuses, Acceptance Criteria, Functional and Non-Functional Requirements, Risks, Open Questions, technical constraints, validation/testing guidance | Goals, Non-Goals, Target Users, Decisions, Assumptions, UX Requirements, data/domain model, implementation guidance, previous Reviews | Readiness Result, Finding, Summary, Proposed Artifact, Question |
 
 For Find Gaps, missing related artifacts may be useful output rather than a reason to block the request.
 
 For Find Inconsistencies, the request needs comparison targets. If no related context is available, the system may still review internal wording, but the Context Explanation should state that no comparable related context was available.
+
+For Analyze Impact on a Requirement, the request should inspect both upstream and downstream context. Upstream context explains why the requirement exists, such as Goals, User Needs, parent Features or Decisions. Downstream context identifies what the requirement affects, such as Acceptance Criteria, UI Requirements, User Flows, Screen/Views, related Requirements, Risks, Open Questions, integrations or implementation guidance.
+
+If a Requirement has few or no relationships, impact analysis may still produce a limited response based on the requirement text and containing section, but the Context Explanation should state that relationship-based impact could not be fully assessed. Missing relationships may become Findings or Proposed Relationships.
 
 ---
 
@@ -285,7 +303,39 @@ The export should also include a top-level `manifest.json` as the minimal requir
 
 ---
 
-# 8. Current Direction
+# 10. AI Assistance Visibility And Governance
+
+The workbench should make known AI participation visible, reviewable and governable.
+
+Governance should focus on actions the product can actually control:
+
+- whether built-in AI capabilities are enabled for a project;
+- which scopes can receive AI assistance;
+- which Assistance Request Types are available;
+- which context is assembled for the request;
+- whether AI responses can directly change canonical product knowledge;
+- how AI-generated or AI-assisted content is represented in Contribution, Revision and Provenance records;
+- how AI involvement is surfaced in exports when relevant.
+
+The workbench can govern AI assistance that occurs inside the product.
+
+It cannot reliably prevent a human contributor from using external AI tools outside the workbench and submitting the result without disclosure.
+
+The product should therefore avoid claims that it can prove content was or was not externally AI-assisted.
+
+Instead, the MVP should support:
+
+- explicit disclosure when a contributor marks their contribution as AI-assisted;
+- visible Provenance when AI-generated or AI-assisted content is accepted;
+- contribution review before canonical product knowledge changes;
+- project settings that define whether built-in AI assistance is enabled;
+- export metadata or notes that identify known AI-assisted knowledge when useful.
+
+Unknown external AI use should be treated as a governance and trust policy issue rather than a technical prevention problem.
+
+---
+
+# 11. Current Direction
 
 AI should be optional, capability-based and context-aware.
 
@@ -296,3 +346,7 @@ For the MVP, the default `Implementation Handoff` profile should be human-readab
 `IMPLEMENTATION_BRIEF.md` should include a suggested implementation sequence to help human and AI consumers choose an implementation order from the specification.
 
 Future Handoff Profiles may include AI-oriented consumers such as Codex, Claude Code, Gemini or Cursor, but the Handoff Profile concept itself is not AI-specific. It should also support human, agency, client and QA handoff needs.
+
+Known AI assistance should be visible through Contributions, Revisions, Provenance and exports when relevant.
+
+External AI assistance used privately by human collaborators cannot be reliably prevented or proven by the workbench, so it should be handled through disclosure, review and project governance expectations.

@@ -996,6 +996,7 @@ Validated example patterns:
 | Improve selected text | selected text, containing artifact or section | product name, product vision, goals, target users, glossary terms | Suggested Edit, Comment |
 | Find Gaps on User Story | User Story, parent Feature, existing Acceptance Criteria | related User Needs, Functional Requirements, Non-Functional Requirements, Screen/View or User Flow | Finding, Proposed Artifact, Question |
 | Find Inconsistencies on Feature | Feature, directly related Requirements, Decisions, Acceptance Criteria | Goals, Non-Goals, constraints, related sections, Open Questions, Risks | Finding, Question, Proposed Decision, Suggested Edit |
+| Analyze Impact on Requirement | selected Requirement, directly related artifacts, parent Feature, affected Acceptance Criteria, affected Screen/View or User Flow, dependencies and known constraints | Goals, User Needs, Non-Goals, Decisions, Risks, Open Questions, data/domain model, external integrations, implementation guidance, previous Reviews | Summary, Finding, Proposed Relationship, Proposed Artifact, Proposed Decision, Question |
 | Validate Readiness on whole Specification | included sections, required artifacts, artifact statuses, Acceptance Criteria, Functional and Non-Functional Requirements, Risks, Open Questions, technical constraints, validation/testing guidance | Goals, Non-Goals, Target Users, Decisions, Assumptions, UX Requirements, data/domain model, implementation guidance, previous Reviews | Readiness Result, Finding, Summary, Proposed Artifact, Question |
 
 Primary Context is the context required to make the central judgment for the selected Assistance Request Type and lens.
@@ -1007,3 +1008,33 @@ For the MVP, the default lens for Validate Readiness should be Implementation Ha
 For Find Gaps, missing related artifacts may be useful output rather than a reason to block the request.
 
 For Find Inconsistencies, the request needs comparison targets. If no related context is available, the system may still review internal wording, but the Context Explanation should state that no comparable related context was available.
+
+For Analyze Impact on a Requirement, the system should inspect both upstream context explaining why the Requirement exists and downstream context identifying what the Requirement affects.
+
+Upstream context may include Goals, User Needs, parent Features, Decisions, Assumptions and constraints.
+
+Downstream context may include Acceptance Criteria, Functional Requirements, Non-Functional Requirements, UI Requirements, Screen/Views, User Flows, Risks, Open Questions, integrations, implementation guidance and validation/testing guidance.
+
+If the Requirement has few or no relationships, impact analysis may still proceed with limited context, but the Context Explanation should make that limitation visible. Missing relationships may become Findings or Proposed Relationships.
+
+## AI Assistance Visibility And Governance
+
+Known AI assistance should be visible, reviewable and governable.
+
+Inside the workbench, AI participation should be visible through scoped Assistance Requests, AI Contributor identity, requested capability or Review Lens, Contribution Responses, Context Explanations, acceptance status, resulting Revisions and Provenance.
+
+AI-generated or AI-assisted material should not silently become canonical product knowledge.
+
+The project owner or another authorized contributor should decide whether to accept, reject, edit or otherwise act on the contribution.
+
+The workbench can govern AI assistance that occurs inside the product, including built-in AI Contributors and disclosed AI-assisted human submissions.
+
+The workbench cannot reliably prevent or prove undisclosed external AI use by a human collaborator.
+
+The product should therefore support disclosure, provenance, review and project governance expectations rather than claiming full AI-use prevention or detection.
+
+Follow-up question:
+
+Because document owners and human contributors can use external AI assistance outside the product and then copy or rewrite the result into the workbench, future work should evaluate whether AI assistance disclosure is needed at all.
+
+If disclosure is useful, the product should decide whether it should be required, optional, policy-driven or simply recorded when voluntarily provided.

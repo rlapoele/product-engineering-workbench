@@ -129,6 +129,20 @@ Where appropriate, it should integrate with delivery platforms, implementation e
 
 ---
 
+# P-013 — Make AI Assistance Visible And Governable
+
+AI assistance should be visible when it participates in the workbench.
+
+The product should help users understand when AI contributed, what the AI was asked to do, what context was used and whether the resulting contribution has been accepted into canonical product knowledge.
+
+The workbench should make AI assistance governable through project settings, enabled capabilities, scoped requests, contribution review, provenance, revision history and export visibility.
+
+The workbench cannot reliably prevent a human collaborator from using external AI tools outside the system and then submitting the result as their own contribution.
+
+The product should not claim to detect or prevent all external AI use. Instead, it should support honest disclosure, visible provenance for known AI-assisted work, reviewable contributions and project-level governance expectations.
+
+---
+
 # Summary
 
 The Product Engineering Workbench exists to help individuals and teams produce better products by improving the quality of their product knowledge.
@@ -143,4 +157,4 @@ Every significant product decision should reinforce one or more of the following
 - Preserve knowledge.
 - Prefer clarity over complexity.
 - Focus on Product Engineering.
-
+- Make AI assistance visible and governable.

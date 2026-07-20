@@ -112,6 +112,7 @@ The first-pass model was validated against several concrete assistance request e
 | Improve selected text | selected text, containing artifact or section | product name, product vision, goals, target users, glossary terms | Suggested Edit, Comment |
 | Find Gaps on User Story | User Story, parent Feature, existing Acceptance Criteria | related User Needs, Functional Requirements, Non-Functional Requirements, Screen/View or User Flow | Finding, Proposed Artifact, Question |
 | Find Inconsistencies on Feature | Feature, directly related Requirements, Decisions, Acceptance Criteria | Goals, Non-Goals, constraints, related sections, Open Questions, Risks | Finding, Question, Proposed Decision, Suggested Edit |
+| Analyze Impact on Requirement | selected Requirement, directly related artifacts, parent Feature, affected Acceptance Criteria, affected Screen/View or User Flow, dependencies and known constraints | Goals, User Needs, Non-Goals, Decisions, Risks, Open Questions, data/domain model, external integrations, implementation guidance, previous Reviews | Summary, Finding, Proposed Relationship, Proposed Artifact, Proposed Decision, Question |
 | Validate Readiness on whole Specification | included sections, required artifacts, artifact statuses, Acceptance Criteria, Functional and Non-Functional Requirements, Risks, Open Questions, technical constraints, validation/testing guidance | Goals, Non-Goals, Target Users, Decisions, Assumptions, UX Requirements, data/domain model, implementation guidance, previous Reviews | Readiness Result, Finding, Summary, Proposed Artifact, Question |
 
 Primary Context is the context required to make the central judgment for the selected Assistance Request Type and lens.
@@ -126,6 +127,10 @@ For Find Gaps, missing related artifacts may be useful output rather than a reas
 
 For Find Inconsistencies, the request needs comparison targets. If no related context is available, the system may still review internal wording, but the Context Explanation should state that no comparable related context was available.
 
+For Analyze Impact on a Requirement, the system should inspect both upstream context explaining why the Requirement exists and downstream context identifying what the Requirement affects.
+
+If the Requirement has few or no relationships, impact analysis may still proceed with limited context, but the Context Explanation should make that limitation visible. Missing relationships may become Findings or Proposed Relationships.
+
 ---
 
 ## Future Work
@@ -134,7 +139,6 @@ Detailed relevance rules for additional Assistance Request Types remain future v
 
 Future work should validate additional context assembly examples, such as:
 
-- Analyze Impact on a Requirement.
 - Prepare Handoff.
 
 ---

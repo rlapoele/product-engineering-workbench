@@ -27,3 +27,4 @@ When in doubt, prefer updating an existing document rather than creating a new o
 | ADR-005 | Product Knowledge Model | Accepted | 2026-07-15 |
 | ADR-006 | MVP Product Artifact Model | Accepted | 2026-07-18 |
 | ADR-007 | Canonical Project State | Accepted | 2026-07-18 |
+| ADR-008 | AI Assistance Visibility And Governance | Accepted | 2026-07-20 |

@@ -9,3 +9,5 @@
 | 2026-07-18-01 | 2026-07-18 | 1 | MVP Product Artifact Model | Crystallized | Minimum artifact set, common artifact fields, relationship types, lifecycle states, canonical Project State |
 | 2026-07-20-01 | 2026-07-20 | 1 | Assistance requests and response shapes | Crystallized | Review as composite request, Check Types, Finding Types, Contribution Response Shapes |
 | 2026-07-20-02 | 2026-07-20 | 2 | Context Assembly Model | Crystallized | Requested scope, Candidate Context, Context Relevance, Context Sufficiency, Context Explanation, initial validated examples |
+| 2026-07-20-03 | 2026-07-20 | 3 | AI assistance visibility and governance | Crystallized | Known AI assistance visibility, governance limits, external AI disclosure stance |
+| 2026-07-20-04 | 2026-07-20 | 4 | Analyze Impact Context Assembly | Crystallized | Upstream and downstream context for Analyze Impact on a Requirement |

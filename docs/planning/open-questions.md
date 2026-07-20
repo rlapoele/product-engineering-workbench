@@ -524,6 +524,7 @@ Initial validated examples include:
 - Improve selected text;
 - Find Gaps on a User Story;
 - Find Inconsistencies on a Feature;
+- Analyze Impact on a Requirement;
 - Validate Readiness on the whole Specification.
 
 Primary Context is the context required to make the central judgment for the selected Assistance Request Type and lens.
@@ -535,6 +536,8 @@ For the MVP, the default lens for Validate Readiness should be Implementation Ha
 For Find Gaps, missing related artifacts may be useful output rather than a reason to block the request.
 
 For Find Inconsistencies, the request needs comparison targets. If no related context is available, the system may still review internal wording, but the Context Explanation should state that no comparable related context was available.
+
+For Analyze Impact on a Requirement, the system should inspect both upstream context explaining why the Requirement exists and downstream context identifying what the Requirement affects. If few or no relationships are available, the request may still proceed with limited context, but the Context Explanation should make that limitation visible and missing links may become Findings or Proposed Relationships.
 
 ## Consequences
 
@@ -840,6 +843,14 @@ Contributors will not directly alter canonical project knowledge through a Colla
 
 If an accepted contribution changes product knowledge, the resulting saved change will be recorded as a Revision.
 
+Known AI assistance should remain visible and governable through Contribution records, accepted Revisions, Provenance, Context Explanations, project settings and export metadata when relevant.
+
+The workbench can govern AI assistance that occurs inside the product, including built-in AI Contributors and AI-assisted Contribution Responses disclosed by human contributors.
+
+The workbench cannot reliably prevent or prove undisclosed external AI use by a human collaborator.
+
+The MVP should therefore support disclosure, review and provenance for known AI-assisted work rather than claiming full AI-use prevention or detection.
+
 ## Consequences
 
 The MVP does not need to support:
@@ -863,7 +874,53 @@ The MVP does need to support:
 - Finding Types;
 - submitted contribution responses;
 - contribution response statuses;
-- requestor review and acceptance or rejection.
+- requestor review and acceptance or rejection;
+- known AI assistance visibility and provenance.
+
+---
+
+# COLL-002 — Should the workbench require disclosure of AI assistance?
+
+**Category:** Collaboration
+
+**Status:** 🟡 Exploring
+
+## Context
+
+The workbench can make known in-product AI assistance visible and governable.
+
+However, the workbench cannot reliably prevent a document owner or human contributor from using external AI assistance outside the product and then copying or rewriting that output into the workbench.
+
+This limitation raises a separate product question: if external AI use cannot be reliably prevented or proven, should the product require, request, encourage or avoid AI-use disclosure?
+
+## Question
+
+Should the workbench require contributors to disclose AI assistance, or should AI usage disclosure remain optional, policy-driven or omitted from the product experience?
+
+## Current Direction
+
+Do not assume that all AI usage must be disclosed as a universal product rule.
+
+The current stable decision is narrower: known AI assistance should not be hidden when it occurs inside the workbench or when a contributor explicitly discloses it.
+
+Future work should evaluate whether disclosure provides enough trust, governance or compliance value to justify its UX and collaboration cost.
+
+## Considerations
+
+Potential reasons to disclose AI assistance:
+
+- transparency;
+- review trust;
+- provenance quality;
+- compliance or organizational policy;
+- export confidence for downstream implementation consumers.
+
+Potential reasons not to require disclosure:
+
+- external AI use cannot be reliably detected;
+- required disclosure may create false confidence;
+- users may experience disclosure as friction or surveillance;
+- the important review question may be quality and accountability rather than whether AI was used.
 
 ---
 

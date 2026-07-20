@@ -328,6 +328,18 @@ The project owner should be able to see submitted responses, then accept, reject
 
 If an accepted contribution changes canonical product knowledge, the resulting change should be recorded as a Revision.
 
+## AI Assistance Visibility And Governance
+
+AI assistance should remain visible without dominating the document-first experience.
+
+When AI contributes through the workbench, the user should be able to inspect the request, scope, response, status, relevant context explanation and resulting provenance or revision history.
+
+AI-generated or AI-assisted material should not silently become canonical product knowledge. It should enter the product knowledge through accepted Contribution Responses, explicit user action or another authorized workflow.
+
+The user experience may support project-level governance settings for built-in AI capabilities, such as enabling or disabling AI assistance or limiting where specific AI capabilities can be used.
+
+The workbench should not claim to prevent all external AI use by human collaborators. A human contributor may use an outside AI tool before submitting work. The product can support disclosure, provenance notes and review workflows for known AI-assisted work, but cannot reliably prove that a human contribution was not externally AI-assisted.
+
 ---
 
 # 7. Export Experience
