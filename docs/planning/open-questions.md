@@ -462,6 +462,20 @@ Strong automatic Stale propagation should apply when the changed artifact is the
 
 `supports`, `explains` and `blocks` should use more conservative rules because the correct result depends on artifact type, relationship direction and whether the changed artifact provides rationale, aggregation or a blocking condition.
 
+The first-pass rules have been validated against concrete scenarios:
+
+- Goal changes may mark downstream User Needs, Features, User Stories, Requirements or Acceptance Criteria Stale when their purpose or success meaning depends on the changed Goal.
+- Requirement changes should mark validating, derived or dependent downstream artifacts Stale.
+- Acceptance Criteria archival should usually create a coverage/readiness warning on the Requirement rather than marking the Requirement Stale.
+- User Story changes should mark dependent downstream artifacts Stale and mark the parent Feature Stale only when the Feature content aggregates or depends on the changed story.
+- User Story archival should usually create coverage/readiness warnings for the parent Feature and possibly upstream User Need or Goal rather than automatically marking those upstream artifacts Stale.
+- Decision changes should mark explained or dependent artifacts Stale when their rationale, constraint or behavior may have changed.
+- Open Question resolution should mark blocked artifacts Needs Review or Stale depending on whether existing content relied on an assumption changed by the answer.
+
+Child artifact changes or archival may create upstream coverage impact.
+
+The system should prefer coverage/readiness warnings for upstream artifacts unless the upstream artifact's own content aggregates, summarizes or depends on the changed child artifact.
+
 ## Consequences
 
 Review does not need to be human-only. Verification may be performed by a human contributor, AI contributor or capability-specific reviewer when that is appropriate.

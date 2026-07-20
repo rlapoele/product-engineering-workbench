@@ -13,3 +13,5 @@
 | 2026-07-20-04 | 2026-07-20 | 4 | Analyze Impact Context Assembly | Crystallized | Upstream and downstream context for Analyze Impact on a Requirement |
 | 2026-07-20-05 | 2026-07-20 | 5 | Artifact Change Impact Propagation | Crystallized | Deterministic downstream stale marking after artifact update or archive |
 | 2026-07-20-06 | 2026-07-20 | 6 | Exact Propagation Rules | Crystallized | First-pass relationship propagation matrix and coverage/readiness warning distinction |
+| 2026-07-20-07 | 2026-07-20 | 7 | Propagation Scenario Validation | Crystallized | Concrete validation of Stale propagation versus coverage/readiness warnings |
+| 2026-07-21-01 | 2026-07-21 | 1 | Upstream Coverage Impact | Crystallized | Child artifact changes and archival may create upstream coverage/readiness warnings |
