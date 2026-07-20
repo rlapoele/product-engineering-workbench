@@ -450,6 +450,18 @@ The system should record why each downstream artifact was marked Stale, includin
 
 AI assistance may be offered afterward as a contextual action on Stale artifacts, but AI should not be required to identify the initial impact set.
 
+First-pass propagation rules should distinguish Stale propagation from coverage or readiness warnings.
+
+Stale propagation means the downstream artifact may no longer be accurate.
+
+Coverage or readiness warning means an artifact may now be under-supported, unvalidated, unaddressed or blocked without necessarily being inaccurate.
+
+Strong automatic Stale propagation should apply when the changed artifact is the target of `depends_on`, `derived_from`, `validates`, `addresses` or child-to-parent `part_of` relationships, and when the changed artifact is the source of an `affects` relationship.
+
+`relates_to` should not automatically propagate Stale.
+
+`supports`, `explains` and `blocks` should use more conservative rules because the correct result depends on artifact type, relationship direction and whether the changed artifact provides rationale, aggregation or a blocking condition.
+
 ## Consequences
 
 Review does not need to be human-only. Verification may be performed by a human contributor, AI contributor or capability-specific reviewer when that is appropriate.

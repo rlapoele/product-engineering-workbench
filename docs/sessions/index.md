@@ -12,3 +12,4 @@
 | 2026-07-20-03 | 2026-07-20 | 3 | AI assistance visibility and governance | Crystallized | Known AI assistance visibility, governance limits, external AI disclosure stance |
 | 2026-07-20-04 | 2026-07-20 | 4 | Analyze Impact Context Assembly | Crystallized | Upstream and downstream context for Analyze Impact on a Requirement |
 | 2026-07-20-05 | 2026-07-20 | 5 | Artifact Change Impact Propagation | Crystallized | Deterministic downstream stale marking after artifact update or archive |
+| 2026-07-20-06 | 2026-07-20 | 6 | Exact Propagation Rules | Crystallized | First-pass relationship propagation matrix and coverage/readiness warning distinction |

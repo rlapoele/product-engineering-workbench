@@ -565,6 +565,45 @@ This should use existing Assistance Request Types and Response Shapes rather tha
 
 For example, the user may request AI recommendations that internally use Analyze Impact, Review, Improve or Suggest Alternatives and return Suggested Edits, Findings, Proposed Relationships, Proposed Artifacts, Questions or Summaries.
 
+## First-pass propagation rules
+
+The MVP should distinguish two deterministic outputs:
+
+- Stale propagation, meaning an artifact may no longer be accurate because upstream knowledge changed.
+- Coverage or readiness warning, meaning an artifact may now be under-supported, unvalidated, unaddressed or blocked without necessarily being inaccurate.
+
+First-pass relationship propagation rules:
+
+| Relationship | Example | If Source Changes | If Target Changes |
+|---|---|---|---|
+| `supports` | Goal supports Vision | Maybe mark target Stale when target content aggregates or depends on the support. | Mark source Stale. |
+| `addresses` | Feature addresses User Need | Usually create coverage/readiness warning rather than marking target Stale. | Mark source Stale. |
+| `part_of` | User Story part_of Feature | Maybe mark parent Stale when parent content aggregates child content. | Mark source Stale. |
+| `validates` | Acceptance Criteria validates Requirement | Usually create coverage/readiness warning rather than marking target Stale. | Mark source Stale. |
+| `depends_on` | Feature depends_on Integration Decision | Usually no Stale propagation from dependent to dependency. | Mark source Stale. |
+| `affects` | Risk affects Feature | Mark target Stale. | Maybe mark source Stale. |
+| `explains` | Decision explains Requirement | Mark target Stale. | Maybe mark source Stale. |
+| `blocks` | Open Question blocks Feature | Mark target Stale or Needs Review. | Usually no Stale propagation. |
+| `derived_from` | Acceptance Criteria derived_from Requirement | Usually no Stale propagation from derived artifact to source. | Mark source Stale. |
+| `relates_to` | weak generic link | No automatic Stale propagation. | No automatic Stale propagation. |
+
+The strongest automatic Stale propagation rules are:
+
+- when an artifact changes, mark artifacts that `depend_on` it as Stale;
+- when an artifact changes, mark artifacts `derived_from` it as Stale;
+- when an artifact changes, mark artifacts that `validate` it as Stale;
+- when an artifact changes, mark artifacts that `address` it as Stale;
+- when an artifact changes, mark child artifacts that are `part_of` it as Stale;
+- when an artifact changes, mark artifacts it `affects` as Stale.
+
+The system should be more conservative for `supports`, `explains` and `blocks` because the correct result may depend on artifact type, relationship direction and whether the changed artifact provides rationale, aggregation or a blocking condition.
+
+The system should not automatically propagate Stale through `relates_to`.
+
+When a supporting or validating artifact is archived, the upstream artifact may remain accurate but become less complete or less ready.
+
+For example, if Acceptance Criteria that validate a Requirement are archived, the Requirement may still be accurate but may now need a coverage or readiness warning because it is no longer validated.
+
 ---
 
 # 11. Workflow Template

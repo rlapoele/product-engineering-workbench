@@ -1054,3 +1054,14 @@ After propagation, the user should be able to review a Stale artifact and update
 AI assistance may be offered afterward as a contextual action on Stale artifacts, such as requesting recommendations for what may need to change.
 
 This should use existing Assistance Request Types and Response Shapes rather than introducing a new top-level Assistance Request Type for the MVP.
+
+First-pass propagation rules should distinguish:
+
+- Stale propagation, meaning an artifact may no longer be accurate because upstream knowledge changed.
+- Coverage or readiness warning, meaning an artifact may now be under-supported, unvalidated, unaddressed or blocked without necessarily being inaccurate.
+
+Strong automatic Stale propagation should apply when the changed artifact is the target of `depends_on`, `derived_from`, `validates`, `addresses` or child-to-parent `part_of` relationships, and when the changed artifact is the source of an `affects` relationship.
+
+`relates_to` should not automatically propagate Stale.
+
+`supports`, `explains` and `blocks` should use more conservative rules because the correct result depends on artifact type, relationship direction and whether the changed artifact provides rationale, aggregation or a blocking condition.

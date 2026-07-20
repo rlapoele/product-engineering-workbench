@@ -72,7 +72,7 @@ Recent clarification established the first target user as an AI-assisted develop
 - Validate additional Context Relevance and Context Sufficiency rules through concrete assistance request examples.
 - Use the clarified AI assistance governance stance when refining provenance, contribution review and export visibility.
 - Revisit whether AI assistance disclosure should be required, optional, policy-driven or omitted from the product experience.
-- Refine the exact propagation rules for which relationship types should mark downstream artifacts Stale.
+- Continue validating the first-pass propagation rules against concrete artifact-change scenarios.
 - Use the Project Model to inform the next UX, AI and architecture documents.
 
 ---
