@@ -942,6 +942,63 @@ Context is especially important for AI assistance.
 
 AI contributors should not operate on isolated text when structured context is available.
 
+Context Assembly is the process of selecting, filtering, prioritizing and explaining the context provided to a human or AI contributor for a specific request.
+
+Context Assembly should start from the requested scope, then expand through relationships before filtering by user intent.
+
+The requested scope may be:
+
+- selected content;
+- a Product Artifact;
+- a Specification Section;
+- a set of Product Artifacts;
+- the entire Specification;
+- another explicit project scope.
+
+The system should first collect Candidate Context from multiple sources:
+
+- Structural Context implied by the Specification Document Template, document structure, section composition, artifact type expectations or artifact hierarchy;
+- Explicit Context from manually created, imported or accepted Artifact Relationships and Context References;
+- Inferred Context suggested by analysis, AI assistance or system inference;
+- supporting knowledge such as Decisions, Risks, Assumptions, Open Questions, Reviews, Discussions, Provenance and project metadata.
+
+Candidate Context should then be filtered and weighted according to:
+
+- the Assistance Request Type;
+- the requested scope;
+- relevant Artifact Relationships;
+- the expected Response Shape;
+- the contributor capability or Review Lens;
+- contributor permissions and availability;
+- known context limits.
+
+For the MVP, Context Relevance may be represented conceptually as:
+
+- primary;
+- supporting;
+- optional;
+- excluded.
+
+The system should assess Context Sufficiency before fulfilling the request.
+
+Possible Context Sufficiency states:
+
+- sufficient;
+- partial;
+- insufficient.
+
+Insufficient context should not always block a request. The system may:
+
+- submit the request normally when context is sufficient;
+- submit the request with a visible warning when context is partial;
+- ask a clarifying question when context is insufficient;
+- suggest creating or linking missing artifacts;
+- allow the user to proceed with limited context when appropriate.
+
+The system should provide a Context Explanation that identifies what context was included and why.
+
+For example, a Context Explanation might say that a request used the selected User Story, its parent Feature, related Acceptance Criteria, linked Functional Requirements, unresolved Open Questions and blocking Risks.
+
 ---
 
 # 22. Context References

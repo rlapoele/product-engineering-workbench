@@ -933,3 +933,58 @@ Possible relationship sources include:
 # Notes
 
 Use this section for additional thoughts that do not fit neatly into the questions above.
+
+## Context Assembly
+
+Context Assembly should be relationship-aware rather than based only on nearby document text.
+
+The system should start from the requested scope, gather Candidate Context through relationships and supporting knowledge, filter by request intent and explain what was used.
+
+Requested scope may be:
+
+- selected content;
+- a Product Artifact;
+- a Specification Section;
+- a set of Product Artifacts;
+- the entire Specification;
+- another explicit project scope.
+
+Candidate Context may include:
+
+- Structural Context implied by the Specification Document Template, document structure, section composition, artifact type expectations or artifact hierarchy;
+- Explicit Context from manually created, imported or accepted Artifact Relationships and Context References;
+- Inferred Context suggested by analysis, AI assistance or system inference;
+- supporting knowledge such as Decisions, Risks, Assumptions, Open Questions, Reviews, Discussions, Provenance and project metadata.
+
+Candidate Context should be filtered and weighted according to:
+
+- Assistance Request Type;
+- requested scope;
+- relevant Artifact Relationships;
+- expected Response Shape;
+- contributor capability or Review Lens;
+- contributor permissions and availability;
+- known context limits.
+
+For the MVP, Context Relevance may be represented as:
+
+- primary;
+- supporting;
+- optional;
+- excluded.
+
+Context Sufficiency may be:
+
+- sufficient;
+- partial;
+- insufficient.
+
+Insufficient context should not always block a request. The system may submit with a warning, ask a clarifying question, suggest creating or linking missing artifacts or allow the user to proceed with limited context.
+
+The system should provide a Context Explanation that identifies what context was included and why.
+
+Example:
+
+"This request used the selected User Story, its parent Feature, related Acceptance Criteria, linked Functional Requirements, unresolved Open Questions and blocking Risks."
+
+Detailed relevance rules per Assistance Request Type remain future validation work.

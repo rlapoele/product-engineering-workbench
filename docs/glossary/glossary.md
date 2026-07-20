@@ -95,6 +95,14 @@ Capabilities are used to route contribution requests.
 
 ---
 
+## Candidate Context
+
+Candidate Context is the set of potentially relevant product knowledge gathered before filtering for a specific assistance request or contribution.
+
+Candidate Context may include Structural Context, Explicit Context, Inferred Context, discussions, decisions, risks, assumptions, reviews, provenance and project metadata.
+
+---
+
 ## Check Type
 
 A Check Type is a focused evaluative activity that can be run on product knowledge.
@@ -143,6 +151,30 @@ Context answers: “What knowledge is needed to understand or work on this?”
 
 ---
 
+## Context Assembly
+
+Context Assembly is the process of selecting, filtering, prioritizing and explaining the context provided to a human or AI contributor for a specific request.
+
+Context Assembly starts from the requested scope, expands through relevant relationships and then filters candidate context according to the Assistance Request Type, expected Response Shape and contributor needs.
+
+---
+
+## Context Explanation
+
+A Context Explanation is a user-visible explanation of what context was included, excluded or treated as limited when fulfilling a request.
+
+Context Explanations help users understand and trust human or AI contributions.
+
+---
+
+## Context Relevance
+
+Context Relevance describes how useful a candidate context item is for a specific request.
+
+For the MVP, relevance may be represented conceptually as primary, supporting, optional or excluded.
+
+---
+
 ## Context References
 
 Explicit links that identify which Product Artifacts or knowledge items should be considered when performing a task.
@@ -150,6 +182,14 @@ Explicit links that identify which Product Artifacts or knowledge items should b
 Context References help assemble the right information for review, AI assistance, consistency checks, impact analysis, export generation or document rendering.
 
 Context References are distinct from Provenance: Context References identify what knowledge is needed now, while Provenance explains where knowledge came from.
+
+---
+
+## Context Sufficiency
+
+Context Sufficiency describes whether the assembled context is rich enough to support a reliable contribution.
+
+Insufficient context should not always block a request, but it should be visible to the user and may result in a warning, clarifying question or limited-confidence response.
 
 ---
 
@@ -229,6 +269,16 @@ A discussion may or may not evolve into a decision.
 
 ---
 
+# E
+
+## Explicit Context
+
+Explicit Context is context gathered through manually created, imported or accepted artifact relationships and context references.
+
+Explicit Context represents project-specific knowledge links that contributors have made visible.
+
+---
+
 # F
 
 ## Finding Type
@@ -248,7 +298,6 @@ Functional Requirements describe what the system must do in enough detail to sup
 Functional Requirements are distinct from Core Features: a Core Feature describes a user-visible capability, while a Functional Requirement describes specific expected system behavior.
 
 ---
-
 # I
 
 ## Implementation-ready Knowledge
@@ -274,6 +323,14 @@ Handoff Profiles may target humans, AI-assisted developers, AI implementation en
 A Handoff Profile may control generated files, implementation guidance, tool-specific instructions, context depth, verification checklists, metadata and how risks or unresolved open questions are presented.
 
 The MVP default Handoff Profile is `Implementation Handoff`, intended to be human-readable and AI-useful.
+
+---
+
+## Inferred Context
+
+Inferred Context is context suggested by analysis, AI assistance or system inference rather than by accepted structural or explicit relationships.
+
+Inferred Context may help identify useful context, but it should not be treated as canonical until accepted or otherwise confirmed.
 
 ---
 
@@ -513,6 +570,14 @@ A Specification Document Template may be backed by an internal Workflow Template
 A Specification Section is a document/container structure within a Specification.
 
 Specification Sections organize and present Product Artifacts, but they are not Product Artifact types in the MVP.
+
+---
+
+## Structural Context
+
+Structural Context is context implied by the Specification Document Template, document structure, section composition, artifact type expectations or artifact hierarchy.
+
+For example, a User Story's parent Feature or related Acceptance Criteria may be Structural Context when those relationships are implied by the selected specification model.
 
 ---
 

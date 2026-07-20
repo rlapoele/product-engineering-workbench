@@ -185,6 +185,23 @@ The general AI Assistant should not become the primary product model and should 
 
 AI Contributors should receive context that is relevant to the requested action.
 
+Context Assembly should be relationship-aware rather than based only on nearby document text.
+
+The system should start from the requested scope and gather Candidate Context from:
+
+- Structural Context implied by the Specification Document Template, document structure, section composition, artifact type expectations or artifact hierarchy;
+- Explicit Context from manually created, imported or accepted Artifact Relationships and Context References;
+- Inferred Context suggested by analysis, AI assistance or system inference;
+- supporting knowledge such as Decisions, Risks, Assumptions, Open Questions, Reviews, Discussions, Provenance and project metadata.
+
+Candidate Context should then be filtered and weighted according to the Assistance Request Type, requested scope, expected Response Shape, contributor capability, Review Lens and known context limits.
+
+For the MVP, context can be treated as primary, supporting, optional or excluded.
+
+The system should assess whether context is sufficient, partial or insufficient before fulfilling an AI assistance request.
+
+Insufficient context should not always block the request. The system may ask a clarifying question, warn that the response will be limited, suggest linking or creating missing artifacts or allow the user to proceed with limited context.
+
 For example, an AI Contributor reviewing a User Story may need:
 
 - the User Story;
@@ -199,7 +216,16 @@ For example, an AI Contributor reviewing a User Story may need:
 
 The system should be able to explain which context was provided so that users can understand and trust AI contributions.
 
-The exact context selection rules remain an open question.
+Example context patterns:
+
+| Request | Primary Context | Supporting Context |
+|---|---|---|
+| Improve selected text | selected text, containing artifact or section | terminology, related goals, local style |
+| Find Gaps on User Story | User Story, parent Feature, Acceptance Criteria | User Needs, Functional Requirements, Open Questions |
+| Find Inconsistencies on Feature | Feature, related User Stories, Requirements, Decisions | Risks, Assumptions, sibling Features |
+| Analyze Impact on Requirement | Requirement, dependencies, affected artifacts | Decisions, Risks, Implementation Guidance |
+| Validate Readiness on whole Specification | required sections and artifacts, statuses, risks, open questions, acceptance criteria | Reviews, Provenance, Handoff Profile |
+| Prepare Handoff | full Specification, risks, open questions, constraints, validation guidance | implementation sequence, metadata, manifest needs |
 
 ---
 

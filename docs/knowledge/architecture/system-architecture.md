@@ -52,6 +52,18 @@ AI context assembly should use the requested scope, relevant artifacts, relation
 
 Artifact Relationships should be first-class records with their own metadata, including source or provenance metadata.
 
+Context Assembly should operate over Project State.
+
+The system should start from the requested scope, expand through structural relationships, explicit Artifact Relationships and Context References, then filter and weight candidate context according to the Assistance Request Type, expected Response Shape, contributor capability and Review Lens.
+
+The architecture should distinguish:
+
+- Structural Context implied by document composition, templates, sections and artifact type expectations;
+- Explicit Context from accepted Artifact Relationships and Context References;
+- Inferred Context suggested by analysis or AI assistance but not yet accepted as canonical.
+
+The system should be able to assess Context Sufficiency and produce a Context Explanation for the user.
+
 This decision does not require a specific database technology.
 
 Storage technology remains intentionally undecided.

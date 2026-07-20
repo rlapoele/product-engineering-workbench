@@ -476,7 +476,7 @@ How should the document-first experience behave if the canonical product knowled
 
 **Category:** Artificial Intelligence
 
-**Status:** 🟡 Exploring
+**Status:** 🟢 Resolved
 
 ## Context
 
@@ -485,6 +485,45 @@ The Project Model distinguishes Context from Provenance and expects AI contribut
 ## Question
 
 How should context be selected, limited and explained when AI contributors generate, review or analyze artifacts?
+
+## Decision
+
+The MVP should use a first-pass conceptual Context Assembly model.
+
+Context Assembly starts from the requested scope, expands through relationships and then filters candidate context by request intent.
+
+The requested scope may be selected content, a Product Artifact, a Specification Section, a set of Product Artifacts, the entire Specification or another explicit project scope.
+
+Candidate Context may include:
+
+- Structural Context implied by the Specification Document Template, document structure, section composition, artifact type expectations or artifact hierarchy;
+- Explicit Context from manually created, imported or accepted Artifact Relationships and Context References;
+- Inferred Context suggested by analysis, AI assistance or system inference;
+- supporting knowledge such as Decisions, Risks, Assumptions, Open Questions, Reviews, Discussions, Provenance and project metadata.
+
+Candidate Context should be filtered and weighted according to:
+
+- the Assistance Request Type;
+- the requested scope;
+- relevant Artifact Relationships;
+- the expected Response Shape;
+- the contributor capability or Review Lens;
+- contributor permissions and availability;
+- known context limits.
+
+For the MVP, Context Relevance may be represented conceptually as primary, supporting, optional or excluded.
+
+The system should assess Context Sufficiency as sufficient, partial or insufficient.
+
+Insufficient context should not always block a request. The system may submit with a warning, ask a clarifying question, suggest creating or linking missing artifacts or allow the user to proceed with limited context when appropriate.
+
+The system should provide a Context Explanation that identifies what context was included and why.
+
+## Consequences
+
+Context Assembly becomes relationship-aware rather than based only on nearby document text.
+
+Detailed relevance rules per Assistance Request Type remain future validation work.
 
 ---
 
