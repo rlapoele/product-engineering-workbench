@@ -979,6 +979,20 @@ For the MVP, Context Relevance may be represented conceptually as:
 - optional;
 - excluded.
 
+Primary Context is the context required to make the central judgment for the selected Assistance Request Type and lens.
+
+Supporting Context explains, constrains or validates that judgment.
+
+Optional Context may improve the response but should not dominate the request.
+
+Excluded Context is related knowledge that is not useful for the current request.
+
+The same artifact type may be primary in one request and supporting in another.
+
+For example, Functional Requirements and Acceptance Criteria are primary for an Implementation Handoff Readiness review, while Goals and Target Users may be supporting context. For a Product Strategy review, Goals and Target Users may become primary.
+
+For the MVP, the default lens for Validate Readiness should be Implementation Handoff Readiness.
+
 The system should assess Context Sufficiency before fulfilling the request.
 
 Possible Context Sufficiency states:
@@ -998,6 +1012,19 @@ Insufficient context should not always block a request. The system may:
 The system should provide a Context Explanation that identifies what context was included and why.
 
 For example, a Context Explanation might say that a request used the selected User Story, its parent Feature, related Acceptance Criteria, linked Functional Requirements, unresolved Open Questions and blocking Risks.
+
+Validated example patterns:
+
+| Request | Primary Context | Supporting Context | Typical Response Shapes |
+|---|---|---|---|
+| Improve selected text | selected text, containing artifact or section | product name, product vision, goals, target users, glossary terms | Suggested Edit, Comment |
+| Find Gaps on User Story | User Story, parent Feature, existing Acceptance Criteria | related User Needs, Functional Requirements, Non-Functional Requirements, Screen/View or User Flow | Finding, Proposed Artifact, Question |
+| Find Inconsistencies on Feature | Feature, directly related Requirements, Decisions, Acceptance Criteria | Goals, Non-Goals, constraints, related sections, Open Questions, Risks | Finding, Question, Proposed Decision, Suggested Edit |
+| Validate Readiness on whole Specification | included sections, required artifacts, artifact statuses, Acceptance Criteria, Functional and Non-Functional Requirements, Risks, Open Questions, technical constraints, validation/testing guidance | Goals, Non-Goals, Target Users, Decisions, Assumptions, UX Requirements, data/domain model, implementation guidance, previous Reviews | Readiness Result, Finding, Summary, Proposed Artifact, Question |
+
+For Find Gaps, missing related artifacts may be useful output rather than a reason to block the request. For example, missing Acceptance Criteria may make context partial, while also becoming a gap finding.
+
+For Find Inconsistencies, the request needs comparison targets. If no related context is available, the system may still review internal wording, but the Context Explanation should state that no comparable related context was available.
 
 ---
 

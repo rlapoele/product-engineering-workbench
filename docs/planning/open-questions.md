@@ -519,11 +519,28 @@ Insufficient context should not always block a request. The system may submit wi
 
 The system should provide a Context Explanation that identifies what context was included and why.
 
+Initial validated examples include:
+
+- Improve selected text;
+- Find Gaps on a User Story;
+- Find Inconsistencies on a Feature;
+- Validate Readiness on the whole Specification.
+
+Primary Context is the context required to make the central judgment for the selected Assistance Request Type and lens.
+
+Supporting Context explains, constrains or validates that judgment.
+
+For the MVP, the default lens for Validate Readiness should be Implementation Handoff Readiness.
+
+For Find Gaps, missing related artifacts may be useful output rather than a reason to block the request.
+
+For Find Inconsistencies, the request needs comparison targets. If no related context is available, the system may still review internal wording, but the Context Explanation should state that no comparable related context was available.
+
 ## Consequences
 
 Context Assembly becomes relationship-aware rather than based only on nearby document text.
 
-Detailed relevance rules per Assistance Request Type remain future validation work.
+Detailed relevance rules for additional Assistance Request Types remain future validation work.
 
 ---
 

@@ -103,17 +103,38 @@ Example:
 
 ---
 
+## Validated Example Patterns
+
+The first-pass model was validated against several concrete assistance request examples.
+
+| Request | Primary Context | Supporting Context | Typical Response Shapes |
+|---|---|---|---|
+| Improve selected text | selected text, containing artifact or section | product name, product vision, goals, target users, glossary terms | Suggested Edit, Comment |
+| Find Gaps on User Story | User Story, parent Feature, existing Acceptance Criteria | related User Needs, Functional Requirements, Non-Functional Requirements, Screen/View or User Flow | Finding, Proposed Artifact, Question |
+| Find Inconsistencies on Feature | Feature, directly related Requirements, Decisions, Acceptance Criteria | Goals, Non-Goals, constraints, related sections, Open Questions, Risks | Finding, Question, Proposed Decision, Suggested Edit |
+| Validate Readiness on whole Specification | included sections, required artifacts, artifact statuses, Acceptance Criteria, Functional and Non-Functional Requirements, Risks, Open Questions, technical constraints, validation/testing guidance | Goals, Non-Goals, Target Users, Decisions, Assumptions, UX Requirements, data/domain model, implementation guidance, previous Reviews | Readiness Result, Finding, Summary, Proposed Artifact, Question |
+
+Primary Context is the context required to make the central judgment for the selected Assistance Request Type and lens.
+
+Supporting Context explains, constrains or validates that judgment.
+
+The same artifact type may be primary in one request and supporting in another.
+
+For the MVP, the default lens for Validate Readiness should be Implementation Handoff Readiness.
+
+For Find Gaps, missing related artifacts may be useful output rather than a reason to block the request.
+
+For Find Inconsistencies, the request needs comparison targets. If no related context is available, the system may still review internal wording, but the Context Explanation should state that no comparable related context was available.
+
+---
+
 ## Future Work
 
-Detailed relevance rules per Assistance Request Type remain future validation work.
+Detailed relevance rules for additional Assistance Request Types remain future validation work.
 
-Future work should validate context assembly through concrete assistance request examples, such as:
+Future work should validate additional context assembly examples, such as:
 
-- Improve selected content.
-- Find Gaps on a User Story.
-- Find Inconsistencies on a Feature.
 - Analyze Impact on a Requirement.
-- Validate Readiness on the whole Specification.
 - Prepare Handoff.
 
 ---

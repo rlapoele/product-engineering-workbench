@@ -198,6 +198,14 @@ Candidate Context should then be filtered and weighted according to the Assistan
 
 For the MVP, context can be treated as primary, supporting, optional or excluded.
 
+Primary Context is the context required to make the central judgment for the selected Assistance Request Type and lens.
+
+Supporting Context explains, constrains or validates that judgment.
+
+The same artifact type may be primary for one request and supporting for another. For example, Goals and Target Users may support an Implementation Handoff Readiness review but become primary for a Product Strategy review.
+
+For the MVP, the default lens for Validate Readiness should be Implementation Handoff Readiness.
+
 The system should assess whether context is sufficient, partial or insufficient before fulfilling an AI assistance request.
 
 Insufficient context should not always block the request. The system may ask a clarifying question, warn that the response will be limited, suggest linking or creating missing artifacts or allow the user to proceed with limited context.
@@ -216,16 +224,18 @@ For example, an AI Contributor reviewing a User Story may need:
 
 The system should be able to explain which context was provided so that users can understand and trust AI contributions.
 
-Example context patterns:
+Validated example context patterns:
 
-| Request | Primary Context | Supporting Context |
-|---|---|---|
-| Improve selected text | selected text, containing artifact or section | terminology, related goals, local style |
-| Find Gaps on User Story | User Story, parent Feature, Acceptance Criteria | User Needs, Functional Requirements, Open Questions |
-| Find Inconsistencies on Feature | Feature, related User Stories, Requirements, Decisions | Risks, Assumptions, sibling Features |
-| Analyze Impact on Requirement | Requirement, dependencies, affected artifacts | Decisions, Risks, Implementation Guidance |
-| Validate Readiness on whole Specification | required sections and artifacts, statuses, risks, open questions, acceptance criteria | Reviews, Provenance, Handoff Profile |
-| Prepare Handoff | full Specification, risks, open questions, constraints, validation guidance | implementation sequence, metadata, manifest needs |
+| Request | Primary Context | Supporting Context | Typical Response Shapes |
+|---|---|---|---|
+| Improve selected text | selected text, containing artifact or section | product name, product vision, goals, target users, glossary terms | Suggested Edit, Comment |
+| Find Gaps on User Story | User Story, parent Feature, existing Acceptance Criteria | related User Needs, Functional Requirements, Non-Functional Requirements, Screen/View or User Flow | Finding, Proposed Artifact, Question |
+| Find Inconsistencies on Feature | Feature, directly related Requirements, Decisions, Acceptance Criteria | Goals, Non-Goals, constraints, related sections, Open Questions, Risks | Finding, Question, Proposed Decision, Suggested Edit |
+| Validate Readiness on whole Specification | included sections, required artifacts, artifact statuses, Acceptance Criteria, Functional and Non-Functional Requirements, Risks, Open Questions, technical constraints, validation/testing guidance | Goals, Non-Goals, Target Users, Decisions, Assumptions, UX Requirements, data/domain model, implementation guidance, previous Reviews | Readiness Result, Finding, Summary, Proposed Artifact, Question |
+
+For Find Gaps, missing related artifacts may be useful output rather than a reason to block the request.
+
+For Find Inconsistencies, the request needs comparison targets. If no related context is available, the system may still review internal wording, but the Context Explanation should state that no comparable related context was available.
 
 ---
 

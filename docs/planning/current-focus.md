@@ -52,6 +52,7 @@ Recent clarification established the first target user as an AI-assisted develop
 - Review has been clarified as a composite Assistance Request Type that may include multiple checks, while focused request types may expose individual checks directly.
 - Initial MVP Contribution Response Shapes and Finding Types have been clarified.
 - The first-pass conceptual Context Assembly model has been clarified: context starts from requested scope, expands through structural, explicit and inferred context, filters by request intent and remains explainable.
+- The Context Assembly model has been validated against initial examples for Improve selected text, Find Gaps on a User Story, Find Inconsistencies on a Feature and Validate Readiness on the whole Specification.
 
 ---
 
@@ -66,7 +67,7 @@ Recent clarification established the first target user as an AI-assisted develop
 - Detail contributor selection using both capability and availability.
 - Validate the first-pass Assistance Request Type matrix through concrete specification exercises.
 - Validate the initial Response Shape and Finding Type model through concrete review and feedback examples.
-- Validate Context Relevance and Context Sufficiency rules through concrete assistance request examples.
+- Validate additional Context Relevance and Context Sufficiency rules through concrete assistance request examples.
 - Use the Project Model to inform the next UX, AI and architecture documents.
 
 ---
