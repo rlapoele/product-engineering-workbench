@@ -245,6 +245,14 @@ Request Feedback is open-ended, judgment-based and conversational. It asks a con
 
 Review is structured, deliberate and criteria-based. It asks a contributor to evaluate the target against a specific capability, lens or standard.
 
+Review should be treated as a composite assistance activity.
+
+A Review may run multiple checks, such as gap checks, inconsistency checks, ambiguity checks, testability checks, feasibility checks, alignment checks, risk checks and readiness checks.
+
+Focused Assistance Request Types can expose some of those checks directly. For example, Find Gaps can run a focused gap check, while a broader Review can include gap checking alongside other checks.
+
+This lets the user choose between narrow assistance and a fuller review without turning every internal check into a separate prominent UI action.
+
 Not every Assistance Request Type should be available everywhere. The available options should depend on the current scope, artifact type, artifact maturity, contributor availability and eligible capabilities.
 
 Some Assistance Request Types should be available at the entire specification level, not only on individual sections or artifacts.
@@ -271,6 +279,40 @@ First-pass contextual availability matrix:
 | Selected Content | Improve, Request Feedback, Review, Find Gaps, Find Inconsistencies, Ask Question |
 
 The matrix is a first pass. It should be validated through concrete specification exercises before being treated as final.
+
+## Contribution Response Shapes
+
+The result of an assistance request should be presented according to its Response Shape.
+
+The Response Shape determines what the user receives and what actions are available.
+
+Initial MVP Response Shapes:
+
+| Response Shape | What The User Receives | Likely Actions |
+|---|---|---|
+| Comment | A general note, observation or reaction. | Resolve, reply, ignore or turn into another action. |
+| Question | A clarification request. | Answer, discuss or convert to an Open Question. |
+| Finding | A structured issue or observation from a review or check. | Accept, dismiss, create a follow-up artifact or request changes. |
+| Suggested Edit | Proposed replacement or modification for existing content. | Accept, reject or edit before accepting. |
+| Proposed Artifact | A suggested new Product Artifact. | Accept, reject or edit before accepting. |
+| Proposed Relationship | A suggested relationship between artifacts. | Accept, reject or adjust. |
+| Proposed Decision | A suggested decision, option or recommendation. | Accept as Decision, reject or discuss further. |
+| Readiness Result | A readiness judgment with blockers, warnings or next actions. | Accept, act on blockers, defer or export with warnings. |
+| Summary | A condensed explanation of content, context or results. | Use as reference or insert if accepted. |
+| Handoff Material | Generated or refined handoff content. | Accept into the export package, edit or reject. |
+
+Review findings should be grouped by Finding Type where useful.
+
+Example Finding Types:
+
+- Gap
+- Inconsistency
+- Ambiguity
+- Risk
+- Blocker
+- Dependency
+- Recommendation
+- Readiness Warning
 
 ## MVP Collaboration Mode
 

@@ -768,11 +768,17 @@ Initial MVP Assistance Request Types are Draft, Improve, Request Feedback, Revie
 
 Request Feedback is open-ended and comment-oriented. Review is structured and criteria-oriented.
 
+Review is a composite Assistance Request Type. It may include multiple Check Types, while focused Assistance Request Types such as Find Gaps or Find Inconsistencies may expose individual checks directly.
+
 Contributor matching should consider requested capability and contributor availability.
 
 For human contributors, MVP availability is invitation-gated. For application-provided AI Contributors, MVP availability means the relevant capability is enabled and usable.
 
-Contributors will respond asynchronously by submitting Contribution Responses. Responses may include comments, review results, suggested edits, proposed artifacts or proposed decisions.
+Contributors will respond asynchronously by submitting Contribution Responses.
+
+Initial MVP Response Shapes are Comment, Question, Finding, Suggested Edit, Proposed Artifact, Proposed Relationship, Proposed Decision, Readiness Result, Summary and Handoff Material.
+
+Findings may use Finding Types such as Gap, Inconsistency, Ambiguity, Risk, Blocker, Dependency, Recommendation and Readiness Warning.
 
 Contributors will not directly alter canonical project knowledge through a Collaboration Request. The project owner or authorized requestor will review submitted responses and decide whether to accept, reject, comment on or otherwise act on them.
 
@@ -797,6 +803,8 @@ The MVP does need to support:
 - Assistance Request Types;
 - requested capabilities or actions;
 - contributor availability rules;
+- Response Shapes;
+- Finding Types;
 - submitted contribution responses;
 - contribution response statuses;
 - requestor review and acceptance or rejection.

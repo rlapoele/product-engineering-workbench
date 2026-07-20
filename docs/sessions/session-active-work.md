@@ -451,6 +451,44 @@ Review means: "Please check this carefully against a specific lens or standard."
 
 It is structured, deliberate and criteria-based. It should usually produce findings, issues, severity or priority, pass/fail indicators, readiness judgment or suggested fixes.
 
+Review should be understood as a composite Assistance Request Type.
+
+Some focused Assistance Request Types, such as Find Gaps and Find Inconsistencies, can also operate as checks inside a broader Review.
+
+Useful hierarchy:
+
+- Assistance Request Type: what the user asks for.
+- Review Lens: the perspective or standard used.
+- Check Type: the focused activity performed.
+- Finding Type: the kind of issue or result produced.
+- Response Shape: how the contribution comes back.
+
+Example Review composition:
+
+```text
+Review
+  includes checks:
+    - Gap Check
+    - Inconsistency Check
+    - Ambiguity Check
+    - Testability Check
+    - Feasibility Check
+    - Alignment Check
+    - Risk Check
+    - Readiness Check
+```
+
+Focused Assistance Request Types can map to specific checks:
+
+- Find Gaps -> Gap Check
+- Find Inconsistencies -> Inconsistency Check
+- Analyze Impact -> Impact Analysis
+- Validate Readiness -> Readiness Check
+
+This supports both narrow assistance and fuller review/check activities without overwhelming the user-facing request menu.
+
+Review may eventually run checks in sequence or in parallel. Some checks may be independent, while others may depend on previous findings. For example, a readiness judgment may depend on gaps, inconsistencies, blockers, unresolved open questions and risks.
+
 Some Assistance Request Types should be available at the whole-document level, not only at section or artifact level.
 
 First-pass contextual availability matrix:
@@ -529,6 +567,40 @@ A contribution will probably produce comments, suggested edits, review results, 
 Certain types of contribution will however require the acceptance (or rejection) of the contribution by the requestor; based on that acceptance/rejection, suggested edits will be persisted, new artifacts will be created, action(s) will be taken based on a decision.
 Comments and review results will probably not require acceptance.
 One thing to understand here is that contributors cannot directly alter a project. They can only provide feedback/review results/comment or suggest changes, which may or may not be accepted by the project owner.
+
+Refinement after discussion:
+
+Contribution Responses should have Response Shapes.
+
+Initial MVP Response Shapes:
+
+| Response Shape | Meaning | User Action |
+|---|---|---|
+| Comment | General note, observation or reaction. | Resolve, reply, ignore or convert into another action. |
+| Question | Clarification needed from the requestor. | Answer, discuss or convert to an Open Question. |
+| Finding | Structured issue, observation or result from a review or check. | Accept, dismiss, create a follow-up artifact or request changes. |
+| Suggested Edit | Proposed change to existing content. | Accept, reject or modify before accepting. |
+| Proposed Artifact | Suggested new Product Artifact. | Accept, reject or edit before accepting. |
+| Proposed Relationship | Suggested relationship between Product Artifacts. | Accept, reject or adjust. |
+| Proposed Decision | Suggested decision, option or recommendation. | Accept as Decision, reject or discuss further. |
+| Readiness Result | Assessment of readiness, blockers, warnings and next actions. | Accept, act on blockers, defer or export with warnings. |
+| Summary | Condensed explanation of content, context or results. | Use as reference or insert into project knowledge if accepted. |
+| Handoff Material | Generated or refined implementation handoff content. | Accept into the export package, edit or reject. |
+
+Findings may have Finding Types.
+
+Initial Finding Types:
+
+- Gap
+- Inconsistency
+- Ambiguity
+- Risk
+- Blocker
+- Dependency
+- Recommendation
+- Readiness Warning
+
+Response Shapes should help the UI decide which actions are available to the requestor.
 
 ### 4.5
 

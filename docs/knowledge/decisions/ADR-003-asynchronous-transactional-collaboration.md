@@ -50,6 +50,10 @@ Initial MVP Assistance Request Types include:
 
 Request Feedback and Review are distinct. Request Feedback is open-ended and comment-oriented, while Review is structured and criteria-oriented.
 
+Review is a composite Assistance Request Type. It may include multiple Check Types, such as gap checks, inconsistency checks, ambiguity checks, testability checks, feasibility checks, alignment checks, risk checks and readiness checks.
+
+Focused Assistance Request Types may expose individual checks directly. For example, Find Gaps may run a Gap Check, while a broader Review may include that check alongside others.
+
 A Collaboration Request may target:
 
 - the whole specification;
@@ -69,11 +73,21 @@ Contributors will respond asynchronously by submitting Contribution Responses.
 Contribution Responses may include:
 
 - comments;
+- questions;
 - review results;
+- findings;
 - suggested edits;
 - proposed artifacts;
+- proposed relationships;
 - proposed decisions;
+- readiness results;
+- summaries;
+- handoff material;
 - other requested input.
+
+The MVP should recognize Response Shapes so the requestor can act appropriately on each response. Initial Response Shapes include Comment, Question, Finding, Suggested Edit, Proposed Artifact, Proposed Relationship, Proposed Decision, Readiness Result, Summary and Handoff Material.
+
+Findings may use Finding Types such as Gap, Inconsistency, Ambiguity, Risk, Blocker, Dependency, Recommendation and Readiness Warning.
 
 Contributors will not directly alter canonical project knowledge through a Collaboration Request.
 
@@ -93,6 +107,7 @@ This decision:
 - supports both human and AI contributors through the same capability-based model;
 - allows contributor selection to account for both capability and availability;
 - keeps the user-facing assistance model compact enough to avoid overwhelming users;
+- supports both narrow checks and broader composite reviews;
 - avoids simultaneous editing conflict resolution in the MVP;
 - allows collaboration to work as a clear request/response workflow.
 

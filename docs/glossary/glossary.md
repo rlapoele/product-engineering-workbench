@@ -95,6 +95,16 @@ Capabilities are used to route contribution requests.
 
 ---
 
+## Check Type
+
+A Check Type is a focused evaluative activity that can be run on product knowledge.
+
+Examples include Gap Check, Inconsistency Check, Ambiguity Check, Testability Check, Feasibility Check, Alignment Check, Risk Check and Readiness Check.
+
+A Check Type may be exposed as a focused Assistance Request Type or used internally as part of a broader Review.
+
+---
+
 ## Contributor Availability
 
 Contributor Availability describes whether a contributor can receive or respond to a Collaboration Request for a given project, scope and requested capability.
@@ -220,6 +230,14 @@ A discussion may or may not evolve into a decision.
 ---
 
 # F
+
+## Finding Type
+
+A Finding Type describes the kind of issue, observation or result produced by a review or check.
+
+Examples include Gap, Inconsistency, Ambiguity, Risk, Blocker, Dependency, Recommendation and Readiness Warning.
+
+---
 
 ## Functional Requirement
 
@@ -404,6 +422,16 @@ A contribution whose objective is to evaluate, improve or validate existing prod
 
 A review may be performed by either a human or an AI contributor.
 
+Review is a composite Assistance Request Type. It may include multiple Check Types, such as gap checks, inconsistency checks, ambiguity checks, testability checks, feasibility checks, alignment checks, risk checks and readiness checks.
+
+---
+
+## Review Lens
+
+A Review Lens is the perspective, standard or quality dimension used when performing a Review.
+
+Examples include Requirements Quality, UX Quality, Accessibility, Security, Testability and Implementation Readiness.
+
 ---
 
 ## Readiness
@@ -411,6 +439,14 @@ A review may be performed by either a human or an AI contributor.
 The degree to which a Product Artifact, feature, project area or export is mature enough to support implementation or downstream use.
 
 Readiness may depend on required Product Artifacts, required relationships, resolved open questions, identified risks, testable acceptance criteria, completed reviews and stale knowledge being updated.
+
+---
+
+## Response Shape
+
+A Response Shape describes the form of a Contribution Response.
+
+Examples include Comment, Question, Finding, Suggested Edit, Proposed Artifact, Proposed Relationship, Proposed Decision, Readiness Result, Summary and Handoff Material.
 
 ---
 

@@ -49,6 +49,8 @@ Recent clarification established the first target user as an AI-assisted develop
 - Capability-based collaboration with human and AI contributors has been clarified as a core product concept.
 - Contributor availability has been clarified for the MVP: human collaborators are invitation-gated, while application-provided AI collaborators are available by default when their capabilities are enabled and usable.
 - The initial MVP Assistance Request Type set has been clarified as a compact user-facing set, including Request Feedback and Review as distinct interaction intents.
+- Review has been clarified as a composite Assistance Request Type that may include multiple checks, while focused request types may expose individual checks directly.
+- Initial MVP Contribution Response Shapes and Finding Types have been clarified.
 
 ---
 
@@ -62,6 +64,7 @@ Recent clarification established the first target user as an AI-assisted develop
 - Detail the resolved asynchronous Collaboration Request and Contribution Response flow for human and AI contributors.
 - Detail contributor selection using both capability and availability.
 - Validate the first-pass Assistance Request Type matrix through concrete specification exercises.
+- Validate the initial Response Shape and Finding Type model through concrete review and feedback examples.
 - Use the Project Model to inform the next UX, AI and architecture documents.
 
 ---
@@ -132,6 +135,7 @@ The following areas are expected to receive significant attention next:
 - AI Context Assembly
 - Capability-Based Collaboration
 - Assistance Request Types
+- Contribution Response Shapes
 - Implementation Handoff Package
 - Knowledge Provenance
 - Product Knowledge Graph

@@ -719,6 +719,32 @@ Request Feedback is open-ended and comment-oriented. It asks a contributor to re
 
 Review is structured and criteria-oriented. It asks a contributor to evaluate the target against a specific lens, standard or capability.
 
+Review should be treated as a composite Assistance Request Type.
+
+A Review may include multiple Check Types. A Check Type is a focused evaluative activity, such as:
+
+- Gap Check
+- Inconsistency Check
+- Ambiguity Check
+- Testability Check
+- Feasibility Check
+- Alignment Check
+- Risk Check
+- Readiness Check
+
+Some focused Assistance Request Types may correspond directly to Check Types.
+
+For example:
+
+- Find Gaps may run a Gap Check.
+- Find Inconsistencies may run an Inconsistency Check.
+- Analyze Impact may run an Impact Analysis.
+- Validate Readiness may run a Readiness Check.
+
+This allows users to request narrow assistance when they know what they need, while still allowing a broader Review to orchestrate multiple checks.
+
+A Review may also have a Review Lens, such as Requirements Quality, UX Quality, Accessibility, Security, Testability or Implementation Readiness.
+
 A Collaboration Request should identify:
 
 - the requestor;
@@ -732,7 +758,26 @@ A Collaboration Request should identify:
 
 A Contribution Response is the contributor's submitted input for a Collaboration Request.
 
-Contribution Responses may include comments, review results, suggested edits, proposed artifacts or proposed decisions.
+Contribution Responses may include comments, questions, findings, suggested edits, proposed artifacts, proposed relationships, proposed decisions, readiness results, summaries or handoff material.
+
+These are Response Shapes. A Response Shape describes the form of the submitted response and helps determine what the requestor can do with it.
+
+Initial MVP Response Shapes:
+
+| Response Shape | Meaning | Typical Requestor Action |
+|---|---|---|
+| Comment | General note, observation or reaction. | Resolve, reply, ignore or convert into another action. |
+| Question | Clarification requested from the requestor. | Answer, discuss or convert to an Open Question. |
+| Finding | Structured issue, observation or result from a review or check. | Accept, dismiss, create a follow-up artifact or request changes. |
+| Suggested Edit | Proposed change to existing content. | Accept, reject or modify before accepting. |
+| Proposed Artifact | Suggested new Product Artifact. | Accept, reject or edit before accepting. |
+| Proposed Relationship | Suggested relationship between Product Artifacts. | Accept, reject or adjust. |
+| Proposed Decision | Suggested decision, option or recommendation. | Accept as Decision, reject or discuss further. |
+| Readiness Result | Assessment of readiness, blockers, warnings and next actions. | Accept, act on blockers, defer or export with warnings. |
+| Summary | Condensed explanation of content, context or results. | Use as reference or insert into project knowledge if accepted. |
+| Handoff Material | Generated or refined implementation handoff content. | Accept into the export package, edit or reject. |
+
+Findings may have Finding Types, such as Gap, Inconsistency, Ambiguity, Risk, Blocker, Dependency, Recommendation or Readiness Warning.
 
 Contributors should not directly alter canonical project knowledge through a Collaboration Request. Material changes should be applied only after the project owner or authorized requestor accepts or acts on the response.
 

@@ -117,6 +117,54 @@ Request Feedback should produce open-ended observations, comments, questions and
 
 Review should produce a more structured evaluation against a specific lens or standard, such as requirements quality, UX quality, accessibility, security, testability or implementation readiness.
 
+Review should be treated as a composite Assistance Request Type.
+
+An AI Review may orchestrate multiple Check Types, such as:
+
+- Gap Check
+- Inconsistency Check
+- Ambiguity Check
+- Testability Check
+- Feasibility Check
+- Alignment Check
+- Risk Check
+- Readiness Check
+
+Focused request types may run one check directly, while Review may run several checks together.
+
+For example, Find Gaps may run a Gap Check, while a Requirements Quality Review may include gap, inconsistency, ambiguity and testability checks.
+
+Some checks may be safely run in parallel, while others may depend on earlier results. For example, a readiness judgment may depend on gaps, inconsistencies, risks, blockers and unresolved open questions.
+
+An AI Review workflow may eventually:
+
+1. assemble relevant context;
+2. choose the review lens;
+3. run relevant checks;
+4. consolidate findings;
+5. deduplicate overlapping results;
+6. summarize the review result;
+7. suggest next actions.
+
+Review orchestration may use one AI Contributor or multiple AI agents in the future, but the MVP should not require multi-agent orchestration.
+
+Initial MVP Response Shapes:
+
+| Response Shape | Expected Use |
+|---|---|
+| Comment | General observation or reaction. |
+| Question | Clarification needed from the requestor. |
+| Finding | Structured result from a review or check. |
+| Suggested Edit | Proposed change to existing content. |
+| Proposed Artifact | Suggested new Product Artifact. |
+| Proposed Relationship | Suggested relationship between Product Artifacts. |
+| Proposed Decision | Suggested decision or option. |
+| Readiness Result | Readiness judgment with blockers, warnings or next actions. |
+| Summary | Condensed explanation of content, context or results. |
+| Handoff Material | Generated or refined implementation handoff content. |
+
+Findings may use Finding Types such as Gap, Inconsistency, Ambiguity, Risk, Blocker, Dependency, Recommendation and Readiness Warning.
+
 ---
 
 # 6. General AI Assistant
