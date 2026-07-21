@@ -476,6 +476,17 @@ Child artifact changes or archival may create upstream coverage impact.
 
 The system should prefer coverage/readiness warnings for upstream artifacts unless the upstream artifact's own content aggregates, summarizes or depends on the changed child artifact.
 
+Validated propagation edge-case rules:
+
+- Propagation follows relationship-specific semantics at each hop. An intermediate Stale artifact does not create a generic new propagation rule.
+- Reachability governs scope; there is no arbitrary depth limit. Path length may lower review priority or confidence, but it does not weaken a result required by relationship semantics.
+- `relates_to` must not create an automatic impact result or act as a traversal bridge. It remains available for navigation, human review and AI context assembly.
+- Archived artifacts remain historical evidence, but are ignored as active impact targets and traversal intermediaries. The archival event itself may still trigger propagation from the archived source.
+- For each triggering Revision, cyclic re-propagation must stop. The system resolves one relationship-specific impact outcome per active artifact while retaining the distinct non-cyclic causal paths that explain it.
+- When several paths reach one artifact, Stale takes precedence over a coverage/readiness warning.
+- A Requirement change that makes Acceptance Criteria Stale should ordinarily create a coverage/readiness warning, rather than Stale status, on a parent User Story. The User Story becomes Stale only when another path indicates that its own content may be inaccurate.
+- Confirming a Stale artifact as valid clears Stale only on the reviewed artifact. The system may suggest revalidation of active artifacts whose recorded impact paths pass through it, but must not automatically clear their states.
+
 ## Consequences
 
 Review does not need to be human-only. Verification may be performed by a human contributor, AI contributor or capability-specific reviewer when that is appropriate.

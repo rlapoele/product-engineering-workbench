@@ -2,7 +2,7 @@
 
 **Status:** Active
 
-**Last Updated:** 2026-07-20
+**Last Updated:** 2026-07-21
 
 ---
 
@@ -56,6 +56,7 @@ Recent clarification established the first target user as an AI-assisted develop
 - AI assistance visibility and governance have been clarified: known in-product AI assistance should be visible, reviewable and governable, while undisclosed external AI use by human collaborators cannot be reliably prevented or proven by the workbench.
 - Artifact change impact propagation has been clarified: when an upstream artifact is updated or archived, deterministic system logic should mark potentially impacted downstream artifacts as Stale and may offer contextual AI assistance afterward.
 - The first-pass propagation rules have been validated against concrete scenarios for Goal changes, Requirement changes, Acceptance Criteria archival, User Story changes and archival, Decision changes and Open Question resolution.
+- Propagation edge cases have been clarified: semantic multi-hop traversal, cycles, multiple causal paths, archived artifacts, `relates_to`, distance-based review priority and conservative revalidation behavior.
 
 ---
 
@@ -73,7 +74,7 @@ Recent clarification established the first target user as an AI-assisted develop
 - Validate additional Context Relevance and Context Sufficiency rules through concrete assistance request examples.
 - Use the clarified AI assistance governance stance when refining provenance, contribution review and export visibility.
 - Revisit whether AI assistance disclosure should be required, optional, policy-driven or omitted from the product experience.
-- Continue validating edge cases for propagation rules, especially relationship cycles, multi-hop propagation, upstream coverage impact and artifact-type-specific exceptions.
+- Define remaining artifact-type-specific propagation exceptions and future implementation constraints for the deterministic propagation engine.
 - Use the Project Model to inform the next UX, AI and architecture documents.
 
 ---

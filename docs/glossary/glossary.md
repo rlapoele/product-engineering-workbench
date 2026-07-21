@@ -60,9 +60,9 @@ Artifact Templates do not replace artifact schemas. They provide a friendly way 
 
 ## Artifact Change Impact Propagation
 
-Artifact Change Impact Propagation is the deterministic system process that identifies downstream Product Artifacts that may be impacted when an upstream Product Artifact is updated or archived.
+Artifact Change Impact Propagation is the deterministic system process that identifies active Product Artifacts that may be impacted when an upstream Product Artifact is updated or archived.
 
-The process uses Artifact Relationships in the Product Knowledge Graph to mark potentially impacted downstream artifacts as Stale and record why they need attention.
+The process uses semantically eligible Artifact Relationships in the Product Knowledge Graph to resolve either Stale status or coverage/readiness warnings and record the causal paths that explain why attention is needed. It does not propagate through `relates_to` or archived artifacts.
 
 AI assistance may help users understand or resolve Stale artifacts after propagation, but AI is not required to identify the initial impact set.
 

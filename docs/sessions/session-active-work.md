@@ -1085,3 +1085,19 @@ For example, modifying or archiving a User Story can affect whether its parent F
 This should not automatically mark every upstream artifact Stale.
 
 The system should prefer coverage/readiness warnings for upstream artifacts unless the upstream artifact's own content aggregates, summarizes or depends on the changed child artifact.
+
+## Propagation Edge Cases And Revalidation
+
+Propagation should follow relationship-specific semantics at every hop; an intermediate Stale artifact does not itself create a generic propagation rule.
+
+Reachability governs scope without an arbitrary depth limit. Distance may lower review priority or confidence, but it does not weaken an impact result required by the semantics of the relationship path.
+
+`relates_to` must not create an automatic impact result or be used as a bridge to further automatic propagation. It remains useful for navigation, human review and AI context assembly.
+
+Archived artifacts remain historical evidence, but should be ignored as active impact targets and traversal intermediaries. The archival event itself can still trigger the evaluation.
+
+For one triggering Revision, the system should prevent cyclic re-propagation, resolve one relationship-specific outcome per active artifact and retain distinct non-cyclic causal paths. Stale takes precedence over a coverage/readiness warning when several paths reach the same artifact.
+
+For the ordinary Requirement -> Acceptance Criteria -> parent User Story path, the User Story receives a coverage/readiness warning. It becomes Stale only when another relationship path shows its own content may be inaccurate.
+
+Confirming a Stale artifact as valid clears only that artifact's Stale status. The system may suggest review or revalidation of active artifacts whose recorded impact paths passed through it, but must not automatically clear their states.

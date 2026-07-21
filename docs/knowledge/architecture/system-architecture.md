@@ -48,7 +48,7 @@ Graph reasoning should use Product Artifacts and Artifact Relationships.
 
 Export generation should use both the document composition and the underlying artifact records.
 
-When Product Artifacts are updated or archived, deterministic system logic should use Product Artifacts and Artifact Relationships to identify potentially impacted downstream artifacts and mark them Stale.
+When Product Artifacts are updated or archived, deterministic system logic should use Product Artifacts and Artifact Relationships to identify potentially impacted active artifacts and resolve either Stale status or coverage/readiness warnings.
 
 AI context assembly should use the requested scope, relevant artifacts, relationships, provenance, discussions, reviews and context references.
 
@@ -68,7 +68,11 @@ The system should be able to assess Context Sufficiency and produce a Context Ex
 
 Artifact change impact propagation should run before optional AI assistance.
 
-The deterministic propagation step identifies potentially impacted artifacts and records why they were marked Stale.
+The deterministic propagation step should follow only semantically eligible relationship paths, with no arbitrary depth limit. It must ignore archived artifacts as active targets or traversal intermediaries, and must not use `relates_to` as an automatic propagation bridge.
+
+For each triggering Revision, the system should prevent cyclic re-propagation, resolve one relationship-specific impact outcome per artifact and retain the causal paths that explain it. When it competes with a coverage/readiness warning, Stale takes precedence; path distance may inform review priority but does not override relationship semantics.
+
+Confirming a Stale artifact as valid clears that artifact's Stale status only. The system may suggest review of artifacts whose recorded impact paths passed through it, but must not automatically clear their states.
 
 AI may then be offered as a contextual action to help users understand or resolve Stale artifacts, but AI should not be required to identify the initial impact set.
 

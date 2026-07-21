@@ -533,11 +533,11 @@ This should be handled through ordinary system logic over the Product Knowledge 
 The system should:
 
 - record the artifact change as a Revision;
-- traverse relevant Artifact Relationships from the changed or archived artifact;
+- traverse active, semantically relevant Artifact Relationships from the changed or archived artifact;
 - identify downstream artifacts that may depend on, validate, derive from, belong to, or otherwise be affected by the changed artifact;
-- mark potentially impacted downstream artifacts as Stale;
-- record why each artifact was marked Stale, including the triggering artifact, triggering Revision and relevant relationship path when available;
-- avoid infinite loops or repeated markings when relationships are cyclic or overlapping;
+- resolve either a Stale result or a coverage/readiness warning according to the relationship-specific propagation rules;
+- record why each artifact received an impact result, including the triggering artifact, triggering Revision and relevant relationship path when available;
+- avoid infinite loops or repeated automatic outcomes when relationships are cyclic or overlapping, while retaining the distinct causal paths that explain an outcome;
 - preserve archived artifacts for history and traceability rather than deleting dependency context silently.
 
 Impact propagation is a caution mechanism, not a semantic judgment.
@@ -564,6 +564,22 @@ AI assistance may be offered as a contextual action on Stale artifacts, such as 
 This should use existing Assistance Request Types and Response Shapes rather than introducing a new top-level Assistance Request Type in the MVP.
 
 For example, the user may request AI recommendations that internally use Analyze Impact, Review, Improve or Suggest Alternatives and return Suggested Edits, Findings, Proposed Relationships, Proposed Artifacts, Questions or Summaries.
+
+## Propagation traversal boundaries
+
+Propagation starts from the triggering Revision and follows relationship-specific rules at each hop. An artifact becoming Stale does not, by itself, create a new generic propagation rule.
+
+The system should allow reachability to govern the propagation scope rather than imposing an arbitrary depth limit. Every traversed relationship must still be semantically eligible for propagation.
+
+`relates_to` is not an eligible propagation relationship. It may remain visible for navigation, human review and AI context assembly, but it must not create an automatic impact result or serve as a bridge to further automatic propagation.
+
+Archived artifacts remain available as historical evidence. Other than the archival event that triggered the evaluation, archived artifacts should be ignored by propagation: they should not receive a new impact result and should not be traversed as active intermediaries.
+
+For a single triggering Revision, the system should resolve one impact result for each active artifact. It should retain each distinct non-cyclic causal path discovered for that result, but it must not re-propagate through an artifact already evaluated for that Revision. This prevents cycles from creating repeated work while preserving the evidence needed to explain an outcome.
+
+When multiple paths reach the same artifact, the system should resolve the applicable relationship-specific outcome once. When the competing outcomes are Stale and a coverage/readiness warning, Stale takes precedence, while the recorded evidence retains every causal path. This rule does not redefine the separate relationship-specific choice between Stale and Needs Review.
+
+Path length may inform review priority or confidence. Direct impacts will usually deserve earlier attention than more distant impacts, but distance must not weaken a result that the relationship semantics require. A multi-hop path composed of strong propagation relationships may still make an artifact Stale.
 
 ## First-pass propagation rules
 
@@ -598,7 +614,7 @@ The strongest automatic Stale propagation rules are:
 
 The system should be more conservative for `supports`, `explains` and `blocks` because the correct result may depend on artifact type, relationship direction and whether the changed artifact provides rationale, aggregation or a blocking condition.
 
-The system should not automatically propagate Stale through `relates_to`.
+The system should not automatically propagate Stale through `relates_to` or use it as a traversal bridge.
 
 When a supporting or validating artifact is archived, the upstream artifact may remain accurate but become less complete or less ready.
 
@@ -631,6 +647,16 @@ For example, modifying or archiving a User Story can affect whether its parent F
 This should not automatically mark every upstream artifact Stale.
 
 The system should prefer coverage/readiness warnings for upstream artifacts unless the upstream artifact's own content aggregates, summarizes or depends on the changed child artifact.
+
+## Multi-hop propagation and revalidation
+
+Multi-hop outcomes should be determined by the meaning of each relationship in the path, not by a generic cascade from every artifact already marked Stale.
+
+For example, when a Requirement changes, related Acceptance Criteria may become Stale. If those Acceptance Criteria are part of a User Story, the User Story should ordinarily receive a coverage/readiness warning: its validation coverage may need review, but the User Story itself is not necessarily inaccurate. The User Story should become Stale only when a separate relationship path indicates that its own content depends on, derives from or aggregates the changed knowledge.
+
+When a user reviews a Stale artifact and confirms it is valid, the system should clear Stale only on that reviewed artifact. It must not automatically clear related artifacts or their impact results.
+
+The system may instead suggest that users review or revalidate active artifacts whose recorded impact paths pass through the newly validated artifact. This is a contextual action, not an automatic state transition: validating one artifact does not prove that every related artifact remains valid.
 
 ---
 
