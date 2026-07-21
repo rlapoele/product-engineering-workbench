@@ -764,6 +764,14 @@ For the first pass, the derivation uses only explicit information: the current u
 
 Guidance must identify its underlying basis, remain optional and never create, assign or apply work automatically. It should not infer semantic gaps or missing relationships without an explicit template or validation rule.
 
+## Handoff preparation and readiness
+
+A Handoff Preparation Preference is user-specific application state remembered per user, Project/Specification and Handoff Profile. It may include the last selected handoff scope, whether to validate readiness before preparation, and whether to include the resulting readiness report in the package. It is not shared Project Knowledge and does not alter canonical Project State.
+
+When enabled for Prepare Handoff, Implementation Handoff Readiness is a deterministic assessment of the selected scope and its direct external dependencies. Its outcome is `Ready`, `Ready with Caveats` or `Not Ready`, based on explicit Project State rather than an AI judgment. The package preparation result remains separate: a meaningful scope may still produce `Prepared` or `Prepared with Caveats` when readiness is Not Ready.
+
+An optional Readiness Report is an exported snapshot of that assessment. It is not a Product Artifact or lifecycle state.
+
 ---
 
 # 13. Contributor

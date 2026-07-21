@@ -92,6 +92,8 @@ An edit-in-progress draft is private to its editor and remains separate from can
 
 The document also offers optional, user-invoked deterministic `What next?` guidance. It is a derived view over Project State, not a task list, workflow gate or AI request. Its first-pass priority order is: the current user's Edit-in-progress Drafts, explicit Open Question blockers, active impact outcomes, then empty required selected sections. Each guidance item explains its basis and opens the relevant document scope or its normal contextual action menu.
 
+Prepare Handoff uses the selected scope by default and offers deterministic readiness validation as an enabled-by-default but optional preflight. The selected scope and validation preferences are remembered per user, Project/Specification and Handoff Profile. A readiness outcome informs the handoff but does not automatically block preparation of meaningful caveated packages.
+
 ---
 
 ## Rationale
@@ -124,6 +126,7 @@ The workbench must support:
 - inline Product Artifact editing with persistent edit-in-progress drafts separate from lifecycle state and canonical Revisions;
 - non-modal impact feedback after a committed Revision, with persistent document and outline indicators that distinguish Stale from coverage/readiness warnings.
 - optional deterministic next-step guidance that does not create delivery-management behavior or require AI.
+- scope-aware, deterministic readiness validation as an optional default preflight for Prepare Handoff.
 
 The first template and preset classification are accepted as a first pass and should be validated through concrete specification exercises.
 

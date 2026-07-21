@@ -28,3 +28,4 @@
 | 2026-07-21-12 | 2026-07-21 | 12 | Document Editing and Impact Feedback Flow | Crystallized | Contextual document actions, inline artifact editing, edit-in-progress drafts, explicit revision commits and impact feedback |
 | 2026-07-21-13 | 2026-07-21 | 13 | Deterministic Next-step Guidance | Crystallized | Optional user-invoked guidance from drafts, blockers, impact outcomes and required-section coverage |
 | 2026-07-21-14 | 2026-07-21 | 14 | Deterministic Next-step Guidance Priority Validation | Crystallized | Draft, blocker, impact and required-coverage priority ordering validated through a competing-state scenario |
+| 2026-07-21-15 | 2026-07-21 | 15 | Readiness-Aware Handoff Flow | Crystallized | Default optional readiness validation, personal scope preferences, standalone report and deterministic readiness outcomes |

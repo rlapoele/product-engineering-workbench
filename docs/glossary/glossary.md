@@ -379,7 +379,7 @@ An Implementation Handoff Package is an exported representation of product knowl
 
 It may contain structured files, document sections, implementation guidance, acceptance criteria, risks, open questions and other context required to implement the specified product.
 
-The MVP package should include a combined specification file, section-level Markdown files, an implementation brief and a manifest file. Artifact-level files and expanded metadata may be added as stretch items.
+The MVP package should include a combined specification file, section-level Markdown files, an implementation brief and a manifest file. It may also include a standalone Readiness Report when readiness validation and report inclusion are selected. Artifact-level files and expanded metadata may be added as stretch items.
 
 ---
 
@@ -392,6 +392,14 @@ Handoff Profiles may target humans, AI-assisted developers, AI implementation en
 A Handoff Profile may control generated files, implementation guidance, tool-specific instructions, context depth, verification checklists, metadata and how risks or unresolved open questions are presented.
 
 The MVP default Handoff Profile is `Implementation Handoff`, intended to be human-readable and AI-useful.
+
+---
+
+## Handoff Preparation Preference
+
+A Handoff Preparation Preference is personal application state remembered per user, Project/Specification and Handoff Profile.
+
+It may include the last selected handoff scope, whether readiness validation runs before preparation and whether the resulting Readiness Report is included in the package. It is not shared Project Knowledge or a project-wide default.
 
 ---
 
@@ -585,6 +593,18 @@ It assesses the quality of specification knowledge. It does not alter the requir
 The degree to which a Product Artifact, feature, project area or export is mature enough to support implementation or downstream use.
 
 Readiness may depend on required Product Artifacts, required relationships, resolved open questions, identified risks, testable acceptance criteria, completed reviews and stale knowledge being updated.
+
+For deterministic Implementation Handoff Readiness, a selected scope is `Ready`, `Ready with Caveats` or `Not Ready` according to explicit Project State. This outcome is distinct from the `Prepared` or `Prepared with Caveats` result of a handoff package.
+
+---
+
+## Readiness Report
+
+A Readiness Report is an optional standalone `READINESS_REPORT.md` file in an Implementation Handoff Package.
+
+It records the deterministic readiness outcome for the selected scope, its basis, external dependencies and recommended follow-up actions. It is generated only when readiness validation and report inclusion are selected.
+
+---
 
 ## Stale
 

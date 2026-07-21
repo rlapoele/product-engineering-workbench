@@ -311,9 +311,13 @@ The expected Response Shapes are Finding, Question, Suggested Edit, Proposed Art
 
 Prepare Handoff is distinct from Validate Readiness. Validate Readiness judges whether product knowledge is ready for implementation. Prepare Handoff composes the best available implementation package for the requested export scope and Handoff Profile.
 
+When Validate Readiness is enabled as part of Prepare Handoff, the MVP should use deterministic Implementation Handoff Readiness rules over explicit Project State rather than requiring an AI judgment. AI may later provide a clearly identified optional interpretation, but it must not replace the deterministic readiness outcome.
+
 For the MVP, Prepare Handoff should use the default `Implementation Handoff` profile when no profile is selected. It should generate caveated Handoff Material whenever there is meaningful product definition, even when artifacts are Stale or Risks, Assumptions, Open Questions, blockers or missing UX/UI design guidance remain.
 
 The resulting package should make those caveats prominent in the implementation brief and verification guidance. It should include or reference direct active dependencies outside the requested export scope, clearly labeling them as external dependencies. It must not silently omit limitations or create false confidence.
+
+The readiness check applies only to the requested export scope and its direct external dependencies. It can produce `Ready`, `Ready with Caveats` or `Not Ready`; this result is distinct from the package result. A meaningful scope may still produce `Prepared` or `Prepared with Caveats` when its readiness outcome is Not Ready.
 
 The request should be blocked or ask a clarifying question only when the export scope is not meaningful or there is too little product definition to prepare a responsible package. A preparation outcome such as `Prepared` or `Prepared with Caveats` describes the package, not the lifecycle state of any Product Artifact.
 

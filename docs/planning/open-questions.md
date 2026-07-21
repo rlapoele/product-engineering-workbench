@@ -812,6 +812,12 @@ Prepare Handoff should generate the best available package for a meaningful sele
 
 The caveat summary should include relevant Stale artifacts, Risks, Assumptions, Open Questions, blockers, missing or external UX/UI design guidance, and direct active dependencies outside the selected scope. Dependencies outside the scope should be labeled as external dependencies.
 
+Prepare Handoff should enable `Validate Readiness` by default, while allowing the user to disable it for a direct handoff. When enabled, readiness validation is deterministic and applies only to the selected handoff scope plus direct external dependencies. It produces `Ready`, `Ready with Caveats` or `Not Ready` from explicit Project State. This outcome does not block preparation of a meaningful caveated package.
+
+The first handoff for a Project/Specification and Handoff Profile should select the entire Specification. The user may modify the outline-based scope, and the last choice should be remembered per user, Project/Specification and Handoff Profile. Selecting a section selects its active contained content by default, while individual artifacts may be deselected. This preference is personal and does not alter shared Project Knowledge.
+
+Including a standalone `READINESS_REPORT.md` in the handoff is enabled by default when readiness validation is enabled and is unavailable when validation is disabled. The preference is remembered using the same key. The report should include the readiness outcome, scope, Handoff Profile, evaluation time, blockers, Stale artifacts, coverage/readiness warnings, Risks, Assumptions, Open Questions, direct external dependencies and deterministic recommended follow-up actions.
+
 ---
 
 # UX-004 — What Handoff Profiles should the MVP support?
@@ -843,6 +849,7 @@ The default `Implementation Handoff` profile should generate:
 - `README.md`;
 - `IMPLEMENTATION_BRIEF.md`;
 - `VERIFICATION_CHECKLIST.md`;
+- `READINESS_REPORT.md` when readiness validation and report inclusion are selected;
 - `manifest.json`;
 - `specification/SPECIFICATION.md`;
 - section-level Markdown files under `specification/`.
