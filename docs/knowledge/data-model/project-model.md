@@ -756,6 +756,14 @@ Leaving the editing surface must preserve the working draft without creating a R
 
 This boundary prevents ordinary typing, scrolling or temporary navigation from creating history entries or triggering Artifact Change Impact Propagation.
 
+## Deterministic next-step guidance
+
+The workbench may derive user-invoked next-step guidance from Project State. A Guidance Item is a derived view, not a persisted Product Artifact, task, workflow state or AI Contribution.
+
+For the first pass, the derivation uses only explicit information: the current user's Edit-in-progress Drafts; active `blocks` relationships from Open Questions; active Stale and coverage/readiness impact outcomes; and required selected sections with neither section content nor active contained Product Artifacts.
+
+Guidance must identify its underlying basis, remain optional and never create, assign or apply work automatically. It should not infer semantic gaps or missing relationships without an explicit template or validation rule.
+
 ---
 
 # 13. Contributor

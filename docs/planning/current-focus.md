@@ -67,12 +67,14 @@ Recent clarification established the first target user as an AI-assisted develop
 - The first-pass propagation rules have been validated against concrete scenarios for Goal changes, Requirement changes, Acceptance Criteria archival, User Story changes and archival, Decision changes and Open Question resolution.
 - Propagation edge cases have been clarified: semantic multi-hop traversal, cycles, multiple causal paths, archived artifacts, `relates_to`, distance-based review priority and conservative revalidation behavior.
 - The first-pass document editing and impact-feedback flow has been clarified: contextual section and artifact action menus, inline artifact editing, persistent private edit-in-progress drafts, explicit `Done editing` revisions, and non-modal impact feedback with persistent document and outline cues.
+- The first-pass `What next?` guidance model has been clarified as deterministic, user-invoked and optional, prioritizing the user's unfinished drafts, explicit blockers, active impact outcomes and empty required selected sections.
 
 ---
 
 # Current Activities
 
 - Validate the first-pass document editing and impact-feedback flow through prototypes and concrete specification exercises.
+- Validate deterministic next-step guidance through prototypes and concrete specification exercises.
 - Validate detailed context assembly rules for remaining generation and feedback examples.
 - Clarify how discussions crystallize into stable product knowledge.
 - Validate the first Section Catalog and Project Preset classification through concrete specification exercises.

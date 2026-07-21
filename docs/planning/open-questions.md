@@ -517,6 +517,8 @@ An edit-in-progress draft is persistent and private to its editor. It is separat
 
 After a committed Revision, the workbench applies the change immediately and shows a transient, non-modal impact disclosure anchored to the edited artifact. Persistent document and outline cues remain on affected artifacts and their sections, and distinguish Stale from coverage/readiness warnings.
 
+The document also provides optional, user-invoked deterministic `What next?` guidance. It is a derived view, not a task list, AI request or workflow gate. The first-pass priority order is the current user's Edit-in-progress Drafts, explicit Open Question blockers, active impact outcomes and empty required selected sections. Every item explains its basis and only navigates the user to the relevant scope or opens its ordinary contextual action menu.
+
 ## Consequences
 
 The document-first experience remains readable while retaining explicit artifact identity, scope-aware actions, revision boundaries and impact visibility.

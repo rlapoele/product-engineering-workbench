@@ -24,6 +24,8 @@ What is the exact end-to-end MVP flow from "create project" to "export implement
 
 The full end-to-end flow remains to be detailed. Its initial document-authoring slice has been crystallized in `2026-07-21-document-editing-and-impact-feedback-flow.md`.
 
+The document should also offer optional, user-invoked deterministic `What next?` guidance. It does not force workflow order or create tasks. The first-pass priority order is: the user's Edit-in-progress Drafts, explicit Open Question blockers, active Stale or coverage/readiness impact outcomes, and empty required selected sections. See `2026-07-21-deterministic-next-step-guidance.md`.
+
 
 ### 1.2
 

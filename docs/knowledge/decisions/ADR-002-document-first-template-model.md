@@ -90,6 +90,8 @@ New Product Artifacts are created and edited inline in the document. When not se
 
 An edit-in-progress draft is private to its editor and remains separate from canonical Product Knowledge. Only `Done editing` creates a Revision. The saved Revision applies immediately, then exposes non-blocking impact feedback while durable Stale and coverage/readiness cues remain on the affected artifacts and their containing sections in the document outline.
 
+The document also offers optional, user-invoked deterministic `What next?` guidance. It is a derived view over Project State, not a task list, workflow gate or AI request. Its first-pass priority order is: the current user's Edit-in-progress Drafts, explicit Open Question blockers, active impact outcomes, then empty required selected sections. Each guidance item explains its basis and opens the relevant document scope or its normal contextual action menu.
+
 ---
 
 ## Rationale
@@ -121,6 +123,7 @@ The workbench must support:
 - contextual action menus for sections and Product Artifacts across desktop and touch interaction;
 - inline Product Artifact editing with persistent edit-in-progress drafts separate from lifecycle state and canonical Revisions;
 - non-modal impact feedback after a committed Revision, with persistent document and outline indicators that distinguish Stale from coverage/readiness warnings.
+- optional deterministic next-step guidance that does not create delivery-management behavior or require AI.
 
 The first template and preset classification are accepted as a first pass and should be validated through concrete specification exercises.
 

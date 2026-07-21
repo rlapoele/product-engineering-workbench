@@ -229,6 +229,27 @@ The affected artifacts retain persistent, accessible cues in the document for as
 
 These interaction rules are a first pass and should be validated through later prototypes and concrete specification exercises.
 
+### Deterministic next-step guidance
+
+The document should offer an optional, user-invoked `What next?` control near the document outline. It presents deterministic guidance derived from the current Project State; it is not a task list, Product Artifact, workflow gate or AI request.
+
+The control should show up to three highest-priority items and allow the user to open the full list. Each item must state its scope, a plain-language reason and an action to navigate to that scope or open its normal contextual action menu. Guidance must not automatically apply a change or force the user to act in a prescribed order.
+
+The initial deterministic guidance categories and priority order are:
+
+| Priority | Guidance item | Deterministic rule |
+|---:|---|---|
+| 1 | Continue draft | The current user owns an Edit-in-progress Draft. |
+| 2 | Resolve blocker | An active Open Question explicitly `blocks` an active artifact. |
+| 3 | Review impact | Active artifacts are Stale or have coverage/readiness warnings; Stale ranks above a warning. |
+| 4 | Complete required coverage | A required selected section has no non-whitespace section content and no active contained Product Artifacts. |
+
+When several items have the same priority, the system should prefer the user's current scope, then direct relationship or impact paths, then broader document scope. Optional sections must not be presented as missing or problematic. The system must not claim semantic gaps or missing relationships unless a future explicit template or validation rule defines them.
+
+If no deterministic guidance applies, the control should say that no immediate follow-up has been identified and leave the user free to continue wherever is useful.
+
+AI may later offer a distinct, clearly labeled optional suggestion layer, but it is not required for this core guidance mechanism.
+
 ---
 
 # 6. Collaboration In The Document

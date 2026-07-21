@@ -303,6 +303,14 @@ Decisions may update project knowledge and may optionally be formalized through 
 
 ---
 
+## Deterministic Next-step Guidance
+
+Deterministic Next-step Guidance is an optional, user-invoked derived view that identifies relevant follow-up work from explicit Project State.
+
+It is not a task list, workflow gate, Product Artifact or AI request. The initial guidance rules use the current user's Edit-in-progress Drafts, explicit Open Question blockers, active impact outcomes and empty required selected sections.
+
+---
+
 ## Discussion
 
 A focused exchange related to a specific artifact, contribution or question.
@@ -348,6 +356,17 @@ Functional Requirements describe what the system must do in enough detail to sup
 Functional Requirements are distinct from Core Features: a Core Feature describes a user-visible capability, while a Functional Requirement describes specific expected system behavior.
 
 ---
+
+# G
+
+## Guidance Item
+
+A Guidance Item is one optional, deterministic follow-up suggestion in the `What next?` view.
+
+It identifies its Project State basis and lets the user navigate to the relevant scope or open that scope's ordinary contextual action menu. It does not create, assign or apply work automatically.
+
+---
+
 # I
 
 ## Implementation-ready Knowledge
