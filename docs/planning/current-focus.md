@@ -70,6 +70,7 @@ Recent clarification established the first target user as an AI-assisted develop
 - The first-pass `What next?` guidance model has been clarified as deterministic, user-invoked and optional, prioritizing the user's unfinished drafts, explicit blockers, active impact outcomes and empty required selected sections.
 - The initial deterministic guidance priority order has been validated against a competing-state scenario: an Edit-in-progress Draft ranks ahead of an explicit blocker, which ranks ahead of active Stale artifacts; required-but-empty sections remain available in the full guidance list.
 - The readiness-aware handoff flow has been clarified: deterministic scope-level validation is enabled by default but optional; personal handoff preferences are remembered; and an optional default `READINESS_REPORT.md` makes the readiness result available to implementation consumers.
+- The initial readiness outcome rules have been validated: a partial scope with Stale knowledge and a non-blocking external dependency is Ready with Caveats; an explicitly blocking external dependency is Not Ready; and an included required-but-empty section is Not Ready. Meaningful scopes still produce caveated handoffs when not ready.
 
 ---
 
@@ -77,7 +78,7 @@ Recent clarification established the first target user as an AI-assisted develop
 
 - Validate the first-pass document editing and impact-feedback flow through prototypes and concrete specification exercises.
 - Validate deterministic next-step guidance through prototypes and concrete specification exercises.
-- Validate readiness-aware handoff preparation through concrete specification exercises.
+- Validate additional readiness-aware handoff edge cases through concrete specification exercises.
 - Validate detailed context assembly rules for remaining generation and feedback examples.
 - Clarify how discussions crystallize into stable product knowledge.
 - Validate the first Section Catalog and Project Preset classification through concrete specification exercises.

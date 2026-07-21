@@ -425,6 +425,14 @@ Readiness-aware handoff decision:
 - When included, `READINESS_REPORT.md` is a standalone handoff file, not part of the implementation brief.
 - Readiness outcomes are deterministic: Ready, Ready with Caveats or Not Ready. A Not Ready outcome does not prevent preparation of a meaningful caveated handoff.
 
+Validated readiness scenarios:
+
+- A partial handoff for a Feature and its Requirements, with a non-blocking direct external dependency and one Stale Acceptance Criterion, is Ready with Caveats. Intentionally excluded required sections do not count against the selected scope.
+- A direct external dependency explicitly blocked by an unresolved Open Question makes the selected scope Not Ready, while a meaningful caveated handoff is still prepared.
+- An included required `Goals and Success Criteria` section with no section content and no active contained artifacts makes the selected scope Not Ready even when other selected content is complete.
+
+See `2026-07-22-readiness-aware-handoff-outcome-validation.md`.
+
 ---
 
 # 4. Capability-Based Collaboration
