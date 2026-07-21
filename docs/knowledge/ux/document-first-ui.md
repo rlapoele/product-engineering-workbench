@@ -255,6 +255,8 @@ For Product Overview, Request Feedback should assemble the overview and any stat
 
 Draft on a Product Overview should use the stated prompt or source material, existing overview content and the section or template guidance as primary context. It may return a limited draft when strategic anchors are missing, but must make assumptions and open questions visible rather than inventing product facts or presenting generated content as validated.
 
+Suggest Alternatives on a Core Feature should optimize for its linked User Need and Goal, rather than preserving the feature by default. It may propose a feature variant, outcome-preserving substitute, deferment or other scope/timing change, or a reframing that questions whether the feature addresses the right need or goal. Each Alternative Proposal should expose its rationale, trade-offs, assumptions, open questions and likely affected knowledge. It remains a proposal for the user to decide on; when outcome context is missing, strategic alternatives must be visibly labeled as constrained.
+
 Review is structured, deliberate and criteria-based. It asks a contributor to evaluate the target against a specific capability, lens or standard.
 
 Review should be treated as a composite assistance activity.

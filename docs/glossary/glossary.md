@@ -20,6 +20,12 @@ Assistance Request Types are user-facing. They should remain compact and underst
 
 Assistance Request Types are distinct from Capabilities. An Assistance Request Type describes what the user wants done, while a Capability describes who or what is qualified to do it.
 
+## Alternative Proposal
+
+An Alternative Proposal is a non-canonical response to a Suggest Alternatives request that describes a viable way to meet or reassess an intended product outcome.
+
+An Alternative Proposal may be a feature variant, an outcome-preserving substitute, a scope or timing change such as deferring the feature, or a reframing that questions whether the feature addresses the right User Need or Goal. It does not change canonical Product Knowledge unless an authorized contributor accepts or acts on it.
+
 ## AI Contributor
 
 An AI Contributor is an artificial intelligence contributor that can participate in a project by providing capabilities such as generation, review, analysis, summarization or implementation-readiness evaluation.

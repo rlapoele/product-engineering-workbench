@@ -573,6 +573,7 @@ Initial validated examples include:
 - Validate Readiness on the whole Specification;
 - Request Feedback on Product Overview;
 - Draft Product Overview;
+- Suggest Alternatives on a Core Feature;
 - Review UI Requirement with Accessibility Lens.
 
 Primary Context is the context required to make the central judgment for the selected Assistance Request Type and lens.
@@ -592,6 +593,8 @@ For Review UI Requirement with Accessibility Lens, the primary context should in
 For Request Feedback on Product Overview, the primary context should include the overview itself and any stated feedback focus. Problem or Opportunity, Target Users or Personas, Goals and Success Criteria, Scope and Non-Goals provide the usual strategic orientation; User Needs and Core Features should be supporting only when they clarify the overview. The request may proceed with caveated comments and questions when some strategic anchors are missing, but should ask a clarifying question when the overview contains too little substantive product definition to support a responsible reaction. It must not present an open-ended feedback response as a structured Review or readiness conclusion.
 
 For Draft Product Overview, the primary context should include the stated drafting prompt or source material, existing overview content, product name and section or template guidance. Problem or Opportunity, Target Users or Personas, Goals, Scope and Non-Goals anchor the draft; User Needs, Core Features, Decisions, Constraints, Risks, Assumptions and Open Questions should support it only when they materially shape the intended product summary. A partial-context request may return a limited draft that identifies assumptions and open questions. When no substantive input or drafting prompt exists, it should ask clarifying questions rather than fabricate product claims or imply the resulting content is validated.
+
+For Suggest Alternatives on a Core Feature, the primary context should include the selected feature, the User Needs and Goals it addresses, the stated alternatives prompt or decision focus, applicable constraints, Scope and Non-Goals. The request should optimize for the intended outcome rather than preserve the feature by default. It may propose a feature variant, outcome-preserving substitute, scope or timing change such as deferment, or reframing that questions whether the feature addresses the right need or goal. A partial-context request may suggest local variants, but must identify strategic alternatives as constrained when outcome links or boundaries are missing. Each Alternative Proposal remains non-canonical until accepted or acted on.
 
 ## Consequences
 

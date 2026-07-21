@@ -1147,3 +1147,18 @@ Primary context includes the stated drafting prompt or source material, any exis
 The expected Response Shapes are Suggested Edit, Question, Summary and Proposed Artifact. The proposed content should distinguish accepted knowledge from assumptions, questions and suggestions. It must not silently add new product facts to canonical knowledge or imply that generated text is validated.
 
 Context is sufficient when it contains meaningful product intent, audience or problem plus enough scope or outcome information to draft a bounded overview. It is partial when one or more of those anchors are absent; the contributor may still produce a limited draft while making assumptions and open questions visible. It is insufficient when there is no substantive product input or drafting prompt; the contributor should ask clarifying questions rather than fabricate content. The Context Explanation should identify source material and template guidance used, along with missing anchors that constrained the draft.
+
+## Suggest Alternatives On A Core Feature
+
+Suggest Alternatives on a Core Feature should optimize for the intended User Need and Goal rather than preserve the current feature by default. It may return four kinds of Alternative Proposal:
+
+- feature variant: a different way to implement the current feature;
+- outcome-preserving substitute: a different feature or approach that meets the same User Need;
+- scope or timing change: defer, phase, simplify or remove the feature; or
+- reframing: question whether the feature addresses the right User Need or Goal.
+
+Primary context includes the selected Core Feature, the User Needs and Goals it addresses, the stated alternatives prompt or decision focus, applicable constraints, Scope and Non-Goals. Supporting context includes Target Users or Personas, related Features, User Stories, Use Cases, Requirements, Acceptance Criteria and dependencies, Decisions, technical constraints, Risks, Assumptions, Open Questions and prior feedback or Reviews.
+
+Each Alternative Proposal should identify the intended outcome it supports or reassesses, its rationale, benefits and trade-offs, assumptions and Open Questions, and likely affected product knowledge when known. The expected Response Shapes are Proposed Decision, Proposed Artifact, Suggested Edit, Summary and Question. A proposal may express a recommendation with its conditions, but must not make a decision or change canonical product knowledge.
+
+Context is sufficient when the feature, its intended outcome and relevant boundaries or constraints are available. It is partial when outcome links or constraints are incomplete; the contributor may still suggest local variants, but must label strategic alternatives such as deferment or substitution as constrained by the missing outcome context. It is insufficient when the selected feature has too little substantive definition and no meaningful source material or prompt exists. The Context Explanation should identify the outcome links, constraints and boundaries used, along with missing context that limits the alternatives.
