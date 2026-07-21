@@ -1137,3 +1137,13 @@ Unrelated detailed requirements, screens, implementation guidance and historical
 The expected Response Shapes are Comment, Question, Suggested Edit, Summary, Proposed Artifact and Proposed Decision. Feedback may identify concerns, uncertainties and improvement opportunities, but should not present an implementation-readiness result or structured Review conclusion unless separately requested.
 
 Context is sufficient when the overview and enough strategic orientation are available to support a meaningful reaction. It is partial when one or more of the Problem or Opportunity, Target Users or Personas, Goals, Scope or Non-Goals are unavailable; the request may proceed with caveated comments and questions. It is insufficient only when the overview contains too little substantive product definition to support a responsible reaction. The Context Explanation should identify the strategic anchors used and any missing anchors that limited feedback.
+
+## Draft Product Overview
+
+Draft Product Overview is generative assistance for creating or refining an initial Product Overview. It is not a completeness, readiness or validation result.
+
+Primary context includes the stated drafting prompt or source material, any existing overview content, product name, and the Product Overview section or Specification Document Template guidance. Supporting context includes the Problem or Opportunity, Target Users or Personas, Goals and Success Criteria, Scope, Non-Goals, and User Needs or Core Features when available. Decisions, constraints, Risks, Assumptions and Open Questions should be included only when they materially shape the intended summary.
+
+The expected Response Shapes are Suggested Edit, Question, Summary and Proposed Artifact. The proposed content should distinguish accepted knowledge from assumptions, questions and suggestions. It must not silently add new product facts to canonical knowledge or imply that generated text is validated.
+
+Context is sufficient when it contains meaningful product intent, audience or problem plus enough scope or outcome information to draft a bounded overview. It is partial when one or more of those anchors are absent; the contributor may still produce a limited draft while making assumptions and open questions visible. It is insufficient when there is no substantive product input or drafting prompt; the contributor should ask clarifying questions rather than fabricate content. The Context Explanation should identify source material and template guidance used, along with missing anchors that constrained the draft.

@@ -572,6 +572,7 @@ Initial validated examples include:
 - Analyze Impact on a Requirement;
 - Validate Readiness on the whole Specification;
 - Request Feedback on Product Overview;
+- Draft Product Overview;
 - Review UI Requirement with Accessibility Lens.
 
 Primary Context is the context required to make the central judgment for the selected Assistance Request Type and lens.
@@ -589,6 +590,8 @@ For Analyze Impact on a Requirement, the system should inspect both upstream con
 For Review UI Requirement with Accessibility Lens, the primary context should include the selected UI Requirement, related Screen/View and User Flow, interaction and state behavior, linked Functional Requirements and Acceptance Criteria, applicable UX/UI design guidance, explicit accessibility expectations and any declared accessibility target. The review should assess specification coverage, risks and testability rather than claim accessibility conformance. Without a declared target, the Context Explanation should say that the review applied general accessibility principles and cannot certify conformance.
 
 For Request Feedback on Product Overview, the primary context should include the overview itself and any stated feedback focus. Problem or Opportunity, Target Users or Personas, Goals and Success Criteria, Scope and Non-Goals provide the usual strategic orientation; User Needs and Core Features should be supporting only when they clarify the overview. The request may proceed with caveated comments and questions when some strategic anchors are missing, but should ask a clarifying question when the overview contains too little substantive product definition to support a responsible reaction. It must not present an open-ended feedback response as a structured Review or readiness conclusion.
+
+For Draft Product Overview, the primary context should include the stated drafting prompt or source material, existing overview content, product name and section or template guidance. Problem or Opportunity, Target Users or Personas, Goals, Scope and Non-Goals anchor the draft; User Needs, Core Features, Decisions, Constraints, Risks, Assumptions and Open Questions should support it only when they materially shape the intended product summary. A partial-context request may return a limited draft that identifies assumptions and open questions. When no substantive input or drafting prompt exists, it should ask clarifying questions rather than fabricate product claims or imply the resulting content is validated.
 
 ## Consequences
 
