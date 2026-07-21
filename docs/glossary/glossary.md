@@ -313,6 +313,14 @@ A discussion may or may not evolve into a decision.
 
 # E
 
+## Edit-in-progress Draft
+
+An Edit-in-progress Draft is a persistent, user-owned working copy of a Product Artifact that has not yet become canonical Product Knowledge.
+
+It is not an Artifact lifecycle state or a Revision. It may be kept, discarded or completed through `Done editing`; only Done editing creates a new Revision and may trigger Artifact Change Impact Propagation.
+
+---
+
 ## Explicit Context
 
 Explicit Context is context gathered through manually created, imported or accepted artifact relationships and context references.
@@ -365,6 +373,14 @@ Handoff Profiles may target humans, AI-assisted developers, AI implementation en
 A Handoff Profile may control generated files, implementation guidance, tool-specific instructions, context depth, verification checklists, metadata and how risks or unresolved open questions are presented.
 
 The MVP default Handoff Profile is `Implementation Handoff`, intended to be human-readable and AI-useful.
+
+---
+
+## Impact Disclosure
+
+An Impact Disclosure is a transient, non-modal summary shown after a committed Revision identifies impacted Product Artifacts.
+
+It is anchored to the edited artifact, is collapsed by default and may expand to a compact navigable list. It complements, but does not replace, the persistent Stale and coverage/readiness cues on affected artifacts and sections.
 
 ---
 
@@ -574,6 +590,8 @@ A saved change to a Product Artifact or other project knowledge item.
 Revisions preserve change history by recording what changed, when it changed, who or what changed it and why it changed when that is known.
 
 Revision is distinct from Contribution and Provenance: Contribution records participation, Revision records saved change history and Provenance records origin or derivation.
+
+For an interactive artifact edit, a Revision is created only when the user selects `Done editing`, not while an Edit-in-progress Draft is being written or preserved.
 
 ---
 

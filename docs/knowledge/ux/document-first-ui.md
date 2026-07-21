@@ -187,6 +187,48 @@ The document view should support:
 - preserving relationships, provenance and context;
 - exporting the specification as an implementation handoff package.
 
+## Initial Document Interaction And Editing Flow
+
+After project creation, the user should see the selected Specification Document Template as an empty document outline: selected section titles are visible, but no substantive content or Product Artifacts exist yet.
+
+The document should be an actionable canvas without permanently displaying controls throughout the specification.
+
+On desktop, hovering an actionable section area or Product Artifact should reveal one neutral contextual-action control. Selecting that control opens the actions valid for that scope; it must not apply an action immediately. On mobile, where hover is unavailable, a tap or equivalent touch gesture should invoke the same contextual action menu before the user chooses an action. This keeps action discovery consistent across device types while avoiding persistent visual clutter.
+
+The available actions must be explicit and scope-aware. For example, the action menu for an empty `Goals and Success Criteria` section may offer `Add Goal`; `Add Goal` is a menu choice, not a permanently displayed direct control. The action menu for an existing Goal exposes actions appropriate to that Goal, including `Edit`.
+
+Blank space within a section invokes the section's action menu. Selecting an existing artifact invokes that artifact's action menu. This distinction lets a document section contain its own prose and multiple Product Artifacts without confusing their scopes.
+
+### Inline artifact creation and rendering
+
+Choosing an action such as `Add Goal` should insert the new Product Artifact directly into its natural document location and enter editing immediately. The initial inline editing surface should present the artifact's essential fields, such as its title and content, while complex type-specific information, relationships, provenance and review history remain progressively available through the artifact's contextual actions.
+
+When not selected, an artifact should render primarily as normal specification prose with subtle, accessible artifact cues. The UI must not rely on color alone to communicate artifact identity or status. Selecting the rendered prose opens the artifact action menu; it does not start editing automatically. Selecting `Edit` then exposes the inline editing surface.
+
+This creates three user-visible interaction states:
+
+- reading, where the specification reads as coherent prose;
+- selected, where the artifact's scope and contextual actions are visible; and
+- editing, where the artifact's editable fields are available inline.
+
+### Edit-in-progress drafts and revisions
+
+An edit-in-progress draft is a persistent working copy owned by the user editing the artifact. It is not a Product Artifact lifecycle state, does not replace the current canonical Revision and is not exposed as accepted Product Knowledge to other contributors.
+
+The user may leave an inline editing surface to read elsewhere in the document or navigate elsewhere in the application. The workbench must preserve the edit-in-progress draft without automatically completing it or interrupting the user with a leave prompt. When the user later selects the artifact to act on it, its action menu should offer `Keep editing draft`, `Discard changes` and `Done editing` instead of the ordinary `Edit` action.
+
+`Done editing` is the sole explicit commit point for the working draft. It creates the new Revision, updates canonical Product Knowledge and then evaluates deterministic artifact-change impact propagation when applicable. In-progress typing and a preserved edit-in-progress draft must not create Revisions or mark related artifacts Stale.
+
+### Impact feedback after a committed edit
+
+After `Done editing`, the saved Revision should apply immediately. The workbench should then provide a non-blocking, artifact-anchored impact disclosure. It is collapsed by default, may show a compact affected-artifact count and can expand to a short navigable list of the affected artifacts.
+
+The transient disclosure should disappear when the user acts outside the edited artifact or navigates to another page. It should not use a modal or otherwise interrupt document work.
+
+The affected artifacts retain persistent, accessible cues in the document for as long as their impact result remains active. The document outline should also surface aggregate indicators on affected section titles, distinguishing Stale artifacts from coverage/readiness warnings rather than showing only one generic affected-item count.
+
+These interaction rules are a first pass and should be validated through later prototypes and concrete specification exercises.
+
 ---
 
 # 6. Collaboration In The Document

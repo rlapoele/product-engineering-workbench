@@ -22,13 +22,15 @@ What is the exact end-to-end MVP flow from "create project" to "export implement
 
 **Answer:**
 
+The full end-to-end flow remains to be detailed. Its initial document-authoring slice has been crystallized in `2026-07-21-document-editing-and-impact-feedback-flow.md`.
+
 
 ### 1.2
 
 What does the user see immediately after creating a project?
 
 **Answer:**
-An "document" showing the outline of the specification; in other words, the user sees the title of each section/sub-section/etc... but no content in it yet.
+An empty document showing the selected specification outline: the user sees the titles of selected sections and subsections, but no substantive content or Product Artifacts exist yet.
 
 ### 1.3
 
@@ -36,10 +38,11 @@ Does the user work section-by-section, artifact-by-artifact, or directly in a si
 
 **Answer:**
 
-From a user experience standpoint, the user sees one single continuous document however, the user can choose to work on/in a specific section or a specific artifact.
-If we consider that a section is, in fact, a composite artifact (so an artifact made of other artifacts), then the user can work on/in a specific artifact.
-If that is the case, then the user will probably and behind the scene, work artifact-by-artifact?!...
-An important thing to note or remember here is that the user will not be forced to work in a specific order; for example, a user may have some ideas about a specific use case that they want to work on first.
+From the user experience standpoint, the user sees one continuous document and may act on a specific section or a specific Product Artifact without being forced into a particular order.
+
+Specification Sections are document/container structures, not Product Artifacts. They may contain section-level prose and multiple Product Artifacts. Blank section space invokes section actions; selecting an existing artifact invokes artifact actions.
+
+New artifacts are inserted and edited inline, then render primarily as normal prose with subtle accessible cues until selected again. Edit-in-progress drafts are persistent but separate from canonical Product Knowledge; only `Done editing` creates a Revision and evaluates impact.
 
 ### 1.4
 

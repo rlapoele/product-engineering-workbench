@@ -748,6 +748,14 @@ It is a human-friendly representation of the underlying product knowledge model.
 
 Users should feel like they are editing a coherent document, while the system preserves structured artifacts, relationships, statuses, discussions and provenance behind the scenes.
 
+## Document editing and working drafts
+
+An artifact may have an edit-in-progress draft while its current canonical Revision remains the version presented as Product Knowledge. An edit-in-progress draft is persistent and owned by the user working on it; it is not an Artifact lifecycle state and is not visible to other contributors as accepted knowledge.
+
+Leaving the editing surface must preserve the working draft without creating a Revision. The user may later keep editing it, discard it or explicitly complete it. Only `Done editing` promotes the working draft to a new Revision and makes it canonical Product Knowledge.
+
+This boundary prevents ordinary typing, scrolling or temporary navigation from creating history entries or triggering Artifact Change Impact Propagation.
+
 ---
 
 # 13. Contributor
@@ -1039,6 +1047,8 @@ A Revision is distinct from a Contribution and from Provenance.
 A Contribution records that a contributor performed a meaningful action.
 
 A Revision records the saved change produced by an action.
+
+For an interactive artifact edit, `Done editing` is the saved-change action that creates the Revision. Edit-in-progress drafts are not Revisions. Once the Revision is saved, the system immediately evaluates deterministic Artifact Change Impact Propagation and records the resulting impact outcomes.
 
 Provenance explains where the resulting knowledge came from or how it was derived.
 

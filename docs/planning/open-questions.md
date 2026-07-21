@@ -499,21 +499,29 @@ Rejected is not an MVP artifact lifecycle state. Rejection belongs to contributi
 
 **Category:** User Experience
 
-**Status:** 🟡 Exploring
+**Status:** 🟢 Resolved
 
 ## Context
 
 The Project Model currently treats the document-first user experience as a view over structured Product Artifacts and Artifact Relationships rather than as the canonical source of truth itself.
 
-## Current Direction
+## Decision
 
-The document should be a view over structured product artifacts, not the canonical source of truth itself.
+The document is a view over structured Product Artifacts and Artifact Relationships, not the canonical source of truth itself. For the MVP, users experience the Specification as one coherent document created from a Specification Document Template.
 
-For the MVP, users should experience the specification as one coherent document created from a Specification Document Template. The underlying representation may be an artifact tree, graph or another structured model.
+An empty Specification begins as a selected section outline. Contextual action menus let users act at the appropriate scope without permanently filling the document with controls: blank section space invokes section actions, while an existing artifact invokes artifact actions. Actions are explicit in the menu, such as `Add Goal` in an empty goals section.
 
-## Question
+New Product Artifacts are inserted and edited inline. In reading mode, they render primarily as normal prose with subtle accessible cues. Selecting rendered artifact prose opens its action menu; selecting `Edit` enters editing rather than editing beginning implicitly.
 
-How should the document-first experience behave if the canonical product knowledge is composed of artifacts and relationships?
+An edit-in-progress draft is persistent and private to its editor. It is separate from Artifact lifecycle state, the current canonical Revision and shared Product Knowledge. Only `Done editing` creates a Revision, updates canonical knowledge and triggers deterministic impact evaluation. The user can otherwise preserve or discard the draft when returning to the artifact.
+
+After a committed Revision, the workbench applies the change immediately and shows a transient, non-modal impact disclosure anchored to the edited artifact. Persistent document and outline cues remain on affected artifacts and their sections, and distinguish Stale from coverage/readiness warnings.
+
+## Consequences
+
+The document-first experience remains readable while retaining explicit artifact identity, scope-aware actions, revision boundaries and impact visibility.
+
+The interaction model is a first pass and should be validated through prototypes and concrete specification exercises. It does not determine storage technology or final visual design.
 
 ---
 
