@@ -574,6 +574,7 @@ Initial validated examples include:
 - Request Feedback on Product Overview;
 - Draft Product Overview;
 - Suggest Alternatives on a Core Feature;
+- Ask Question on an Open Question;
 - Review UI Requirement with Accessibility Lens.
 
 Primary Context is the context required to make the central judgment for the selected Assistance Request Type and lens.
@@ -594,7 +595,11 @@ For Request Feedback on Product Overview, the primary context should include the
 
 For Draft Product Overview, the primary context should include the stated drafting prompt or source material, existing overview content, product name and section or template guidance. Problem or Opportunity, Target Users or Personas, Goals, Scope and Non-Goals anchor the draft; User Needs, Core Features, Decisions, Constraints, Risks, Assumptions and Open Questions should support it only when they materially shape the intended product summary. A partial-context request may return a limited draft that identifies assumptions and open questions. When no substantive input or drafting prompt exists, it should ask clarifying questions rather than fabricate product claims or imply the resulting content is validated.
 
-For Suggest Alternatives on a Core Feature, the primary context should include the selected feature, the User Needs and Goals it addresses, the stated alternatives prompt or decision focus, applicable constraints, Scope and Non-Goals. The request should optimize for the intended outcome rather than preserve the feature by default. It may propose a feature variant, outcome-preserving substitute, scope or timing change such as deferment, or reframing that questions whether the feature addresses the right need or goal. A partial-context request may suggest local variants, but must identify strategic alternatives as constrained when outcome links or boundaries are missing. Each Alternative Proposal remains non-canonical until accepted or acted on.
+For Suggest Alternatives on a Core Feature, the primary context should include the selected feature, the User Needs and Goals it addresses, the stated alternatives prompt or decision focus, applicable constraints, Scope and Non-Goals. The request should optimize for the intended outcome rather than preserve the feature by default. It may propose a feature variant, outcome-preserving substitute, scope or timing change such as deferment, or reframing that questions whether the feature addresses the right need or goal. A partial-context request may suggest local variants, but must identify strategic alternatives as constrained when outcome links or boundaries are missing. Each Alternative Proposal remains non-canonical unless an authorized requestor separately changes Product Knowledge after considering it.
+
+For Ask Question on an Open Question, the primary context should include the selected Open Question, the requestor's stated question or framing prompt, the question's rationale and scope, and artifacts it blocks or directly relates to. Supporting context may include related Goals, User Needs, Features, Requirements, Constraints, Decisions, Assumptions, Risks, other Open Questions, Discussions and known evidence in the Project State. The expected Response Shapes are Answer, Question, Finding, Proposed Decision and Summary. An Answer is a conversational Contribution Response: it does not automatically resolve the Open Question or change Product Knowledge.
+
+Contribution Responses should use separate statuses. A response is Submitted when sent, then may be manually marked Acknowledged when read and Acted On when the requestor has dealt with its content. These statuses have no direct effect on the specification, do not require a linked Revision or note, and must not trigger automation.
 
 ## Consequences
 
@@ -898,13 +903,13 @@ For human contributors, MVP availability is invitation-gated. For application-pr
 
 Contributors will respond asynchronously by submitting Contribution Responses.
 
-Initial MVP Response Shapes are Comment, Question, Finding, Suggested Edit, Proposed Artifact, Proposed Relationship, Proposed Decision, Readiness Result, Summary and Handoff Material.
+Initial MVP Response Shapes are Answer, Comment, Question, Finding, Suggested Edit, Proposed Artifact, Proposed Relationship, Proposed Decision, Readiness Result, Summary and Handoff Material.
 
 Findings may use Finding Types such as Gap, Inconsistency, Ambiguity, Risk, Blocker, Dependency, Recommendation and Readiness Warning.
 
-Contributors will not directly alter canonical project knowledge through a Collaboration Request. The project owner or authorized requestor will review submitted responses and decide whether to accept, reject, comment on or otherwise act on them.
+Contributors will not directly alter canonical Product Knowledge through a Collaboration Request. The project owner or authorized requestor will manually review responses and may acknowledge them, mark them acted on, or separately update product knowledge after considering them.
 
-If an accepted contribution changes product knowledge, the resulting saved change will be recorded as a Revision.
+If a manual action informed by a Contribution Response changes product knowledge, the resulting saved change will be recorded as a Revision.
 
 Known AI assistance should remain visible and governable through Contribution records, accepted Revisions, Provenance, Context Explanations, project settings and export metadata when relevant.
 
@@ -937,7 +942,7 @@ The MVP does need to support:
 - Finding Types;
 - submitted contribution responses;
 - contribution response statuses;
-- requestor review and acceptance or rejection;
+- requestor acknowledgment and acted-on response statuses;
 - known AI assistance visibility and provenance.
 
 ---

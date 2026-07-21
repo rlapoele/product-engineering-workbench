@@ -72,6 +72,7 @@ Contributors will respond asynchronously by submitting Contribution Responses.
 
 Contribution Responses may include:
 
+- answers;
 - comments;
 - questions;
 - review results;
@@ -85,15 +86,15 @@ Contribution Responses may include:
 - handoff material;
 - other requested input.
 
-The MVP should recognize Response Shapes so the requestor can act appropriately on each response. Initial Response Shapes include Comment, Question, Finding, Suggested Edit, Proposed Artifact, Proposed Relationship, Proposed Decision, Readiness Result, Summary and Handoff Material.
+The MVP should recognize Response Shapes so the requestor can act appropriately on each response. Initial Response Shapes include Answer, Comment, Question, Finding, Suggested Edit, Proposed Artifact, Proposed Relationship, Proposed Decision, Readiness Result, Summary and Handoff Material.
 
 Findings may use Finding Types such as Gap, Inconsistency, Ambiguity, Risk, Blocker, Dependency, Recommendation and Readiness Warning.
 
 Contributors will not directly alter canonical project knowledge through a Collaboration Request.
 
-The project owner or authorized requestor will review submitted responses and decide whether to accept, reject, comment on or otherwise act on them.
+The project owner or authorized requestor will review submitted responses. Each response is Submitted when sent and may be manually marked Acknowledged when read and Acted On when the requestor has dealt with its content. These statuses are conversational and do not apply, accept, validate or otherwise change Product Knowledge.
 
-If an accepted contribution changes product knowledge, the resulting saved change will be recorded as a Revision.
+If a requestor separately changes product knowledge after considering a response, the resulting saved change will be recorded as a Revision. No Contribution Response, including an Answer, directly alters product knowledge or triggers automation.
 
 ---
 
@@ -136,7 +137,7 @@ The MVP does need to support:
 - contributor availability rules;
 - submitted Contribution Responses;
 - contribution response statuses;
-- requestor review and acceptance or rejection.
+- requestor acknowledgment and acted-on response statuses.
 
 The model should remain extensible enough to support richer collaboration later if needed.
 

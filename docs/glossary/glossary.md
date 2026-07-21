@@ -20,6 +20,12 @@ Assistance Request Types are user-facing. They should remain compact and underst
 
 Assistance Request Types are distinct from Capabilities. An Assistance Request Type describes what the user wants done, while a Capability describes who or what is qualified to do it.
 
+## Answer
+
+An Answer is a Contribution Response that directly responds to a question posed in a Collaboration Request.
+
+An Answer may explain its basis, assumptions, limits and unresolved dependencies. It remains part of the request's conversation record and does not directly alter canonical Product Knowledge.
+
 ## Alternative Proposal
 
 An Alternative Proposal is a non-canonical response to a Suggest Alternatives request that describes a viable way to meet or reassess an intended product outcome.
@@ -245,9 +251,17 @@ A Contribution records participation in the product engineering process. It is d
 
 A Contribution Response is a contributor's submitted input for a Collaboration Request.
 
-A Contribution Response may contain comments, review results, suggested edits, proposed artifacts, proposed decisions or other requested input.
+A Contribution Response may contain answers, comments, review results, suggested edits, proposed artifacts, proposed decisions or other requested input.
 
-Contribution Responses do not directly alter canonical project knowledge unless accepted or acted upon by the project owner or authorized requestor.
+Contribution Responses do not directly alter canonical Product Knowledge. A project owner or authorized requestor may manually act on a response by updating or creating product knowledge through a separate action, which records the resulting Revision when applicable.
+
+## Contribution Response Status
+
+Contribution Response Status describes the requestor's handling of an individual Contribution Response.
+
+For the MVP, a response is Submitted when the contributor sends it. The requestor may manually mark it Acknowledged to indicate that it has been read, and may later mark it Acted On to indicate that they have dealt with its content.
+
+Acknowledged and Acted On are collaboration statuses only. They do not accept, apply, validate or otherwise change Product Knowledge, and Acted On does not require the requestor to link a Revision or record a note.
 
 ---
 
@@ -541,7 +555,7 @@ Stale does not mean the artifact is definitely incorrect. It means the artifact 
 
 A Response Shape describes the form of a Contribution Response.
 
-Examples include Comment, Question, Finding, Suggested Edit, Proposed Artifact, Proposed Relationship, Proposed Decision, Readiness Result, Summary and Handoff Material.
+Examples include Answer, Comment, Question, Finding, Suggested Edit, Proposed Artifact, Proposed Relationship, Proposed Decision, Readiness Result, Summary and Handoff Material.
 
 ---
 

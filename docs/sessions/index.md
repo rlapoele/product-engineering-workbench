@@ -21,3 +21,4 @@
 | 2026-07-21-05 | 2026-07-21 | 5 | Product Overview Feedback Context Assembly | Crystallized | Strategic context, caveated open-ended feedback and separation from structured review |
 | 2026-07-21-06 | 2026-07-21 | 6 | Product Overview Draft Context Assembly | Crystallized | Grounded first drafts, visible assumptions and separation from validation |
 | 2026-07-21-07 | 2026-07-21 | 7 | Core Feature Alternatives Context Assembly | Crystallized | Outcome-first alternatives, deferment and non-canonical proposals |
+| 2026-07-21-08 | 2026-07-21 | 8 | Open Question Ask Context Assembly and Answer Lifecycle | Crystallized | Answer response shape, manual acknowledgment and acted-on statuses |

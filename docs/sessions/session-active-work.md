@@ -576,6 +576,7 @@ Initial MVP Response Shapes:
 
 | Response Shape | Meaning | User Action |
 |---|---|---|
+| Answer | Direct response to a question in the request, including known basis and limits. | Acknowledge, act on manually or ask a follow-up. |
 | Comment | General note, observation or reaction. | Resolve, reply, ignore or convert into another action. |
 | Question | Clarification needed from the requestor. | Answer, discuss or convert to an Open Question. |
 | Finding | Structured issue, observation or result from a review or check. | Accept, dismiss, create a follow-up artifact or request changes. |
@@ -609,6 +610,16 @@ What does "accepting" a contribution mean?
 **Answer:**
 
 I'm assuming here that by "accepting" a contribution, it means that the requestor will accept the contribution and take action based on it. This could involve persisting suggested edits, creating new artifacts, or taking specific actions based on a decision.
+
+Further refinement:
+
+Contribution Responses, including Answers, remain part of the request conversation and never directly alter the specification. Response handling is tracked independently through three per-response statuses:
+
+- Submitted: the contributor sent the response;
+- Acknowledged: the requestor explicitly indicates it has been read; and
+- Acted On: the requestor explicitly indicates they have dealt with its content.
+
+Acknowledged and Acted On have no direct effect on product knowledge. Acted On does not require a linked Revision or note and must not trigger automation. If the requestor updates the specification after considering a response, that is a separate manual action with its own Revision when applicable.
 
 ### 4.6
 
@@ -1025,7 +1036,7 @@ Inside the workbench, AI participation should be visible through scoped Assistan
 
 AI-generated or AI-assisted material should not silently become canonical product knowledge.
 
-The project owner or another authorized contributor should decide whether to accept, reject, edit or otherwise act on the contribution.
+The project owner or another authorized contributor should manually review the response, then may acknowledge it, mark it acted on or separately update Product Knowledge after considering it.
 
 The workbench can govern AI assistance that occurs inside the product, including built-in AI Contributors and disclosed AI-assisted human submissions.
 
@@ -1162,3 +1173,13 @@ Primary context includes the selected Core Feature, the User Needs and Goals it 
 Each Alternative Proposal should identify the intended outcome it supports or reassesses, its rationale, benefits and trade-offs, assumptions and Open Questions, and likely affected product knowledge when known. The expected Response Shapes are Proposed Decision, Proposed Artifact, Suggested Edit, Summary and Question. A proposal may express a recommendation with its conditions, but must not make a decision or change canonical product knowledge.
 
 Context is sufficient when the feature, its intended outcome and relevant boundaries or constraints are available. It is partial when outcome links or constraints are incomplete; the contributor may still suggest local variants, but must label strategic alternatives such as deferment or substitution as constrained by the missing outcome context. It is insufficient when the selected feature has too little substantive definition and no meaningful source material or prompt exists. The Context Explanation should identify the outcome links, constraints and boundaries used, along with missing context that limits the alternatives.
+
+## Ask Question On An Open Question
+
+Ask Question on an Open Question helps the requestor formulate, understand or seek a response to the selected question. It does not automatically resolve the Open Question or make a decision.
+
+Primary context includes the selected Open Question, the requestor's question or framing prompt, the question's rationale and scope, and artifacts it blocks or directly relates to. Supporting context includes related Goals, User Needs, Features, Requirements, Constraints, Decisions, Assumptions, Risks, Open Questions, Discussions and known evidence in the Project State.
+
+The expected Response Shapes are Answer, Question, Finding, Proposed Decision and Summary. An Answer should distinguish known product knowledge from assumptions, limits and unresolved dependencies. It remains a conversation record and must not alter Product Knowledge or trigger automation.
+
+Context is sufficient when the Open Question is clear and bounded and relevant context is available to reason about it. It is partial when related knowledge or constraints are missing; the contributor may still answer from available context while making limits visible. It is insufficient when the Open Question or requestor prompt is too ambiguous to understand. The Context Explanation should identify the question, linked and blocked artifacts, relevant knowledge used and missing context that limited the response.

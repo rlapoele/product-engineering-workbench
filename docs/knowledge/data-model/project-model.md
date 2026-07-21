@@ -910,7 +910,7 @@ A Collaboration Request should identify:
 
 A Contribution Response is the contributor's submitted input for a Collaboration Request.
 
-Contribution Responses may include comments, questions, findings, suggested edits, proposed artifacts, proposed relationships, proposed decisions, readiness results, summaries or handoff material.
+Contribution Responses may include answers, comments, questions, findings, suggested edits, proposed artifacts, proposed relationships, proposed decisions, readiness results, summaries or handoff material.
 
 These are Response Shapes. A Response Shape describes the form of the submitted response and helps determine what the requestor can do with it.
 
@@ -918,6 +918,7 @@ Initial MVP Response Shapes:
 
 | Response Shape | Meaning | Typical Requestor Action |
 |---|---|---|
+| Answer | Direct response to a question in the request, including known basis and limits. | Acknowledge, act on manually or ask a follow-up. |
 | Comment | General note, observation or reaction. | Resolve, reply, ignore or convert into another action. |
 | Question | Clarification requested from the requestor. | Answer, discuss or convert to an Open Question. |
 | Finding | Structured issue, observation or result from a review or check. | Accept, dismiss, create a follow-up artifact or request changes. |
@@ -931,9 +932,11 @@ Initial MVP Response Shapes:
 
 Findings may have Finding Types, such as Gap, Inconsistency, Ambiguity, Risk, Blocker, Dependency, Recommendation or Readiness Warning.
 
-Contributors should not directly alter canonical project knowledge through a Collaboration Request. Material changes should be applied only after the project owner or authorized requestor accepts or acts on the response.
+Contributors should not directly alter canonical Product Knowledge through a Collaboration Request. The project owner or authorized requestor may manually update or create product knowledge after considering a response; the response itself is not applied to the Project State.
 
-When an accepted contribution changes product knowledge, the saved change should be recorded as a Revision.
+When a manual action informed by a Contribution Response changes product knowledge, the saved change should be recorded as a Revision.
+
+Contribution Response Status is tracked separately from Product Artifact lifecycle state. A response is Submitted when the contributor sends it. The requestor may mark it Acknowledged to indicate it has been read and may mark it Acted On to indicate they have dealt with its content. These statuses do not apply, accept, validate or otherwise change product knowledge, and Acted On does not require a linked Revision or note.
 
 ---
 
@@ -1189,6 +1192,7 @@ Validated example patterns:
 | Request Feedback on Product Overview | selected Product Overview; stated feedback prompt or focus when provided; product name and current overview content | Problem or Opportunity; Target Users or Personas; Goals and Success Criteria; Scope and Non-Goals; User Needs and Core Features when they clarify the overview; relevant Decisions, Risks, Assumptions, Open Questions and prior feedback | Comment, Question, Suggested Edit, Summary, Proposed Artifact, Proposed Decision |
 | Draft Product Overview | stated drafting prompt or source material; selected Product Overview when it contains existing content; section and template guidance; product name | Problem or Opportunity; Target Users or Personas; Goals and Success Criteria; Scope and Non-Goals; User Needs and Core Features when available; relevant Decisions, Constraints, Risks, Assumptions and Open Questions | Suggested Edit, Question, Summary, Proposed Artifact |
 | Suggest Alternatives on Core Feature | selected Core Feature; linked User Needs and Goals; stated alternatives prompt, decision focus and constraints; Scope and Non-Goals | Target Users or Personas; related Features, User Stories, Use Cases, Requirements and Acceptance Criteria; dependencies; Decisions; technical constraints; Risks, Assumptions, Open Questions and prior feedback or Reviews | Proposed Decision, Proposed Artifact, Suggested Edit, Summary, Question |
+| Ask Question on an Open Question | selected Open Question; requestor's question or framing prompt; the question's rationale, scope, linked and blocked artifacts | related Goals, User Needs, Features, Requirements, Constraints, Decisions, Assumptions, Risks, Open Questions, Discussions and known evidence in the Project State | Answer, Question, Finding, Proposed Decision, Summary |
 
 For Find Gaps, missing related artifacts may be useful output rather than a reason to block the request. For example, missing Acceptance Criteria may make context partial, while also becoming a gap finding.
 
@@ -1213,6 +1217,10 @@ The request is sufficient when it contains meaningful product intent, audience o
 Suggest Alternatives on a Core Feature should optimize for the intended User Need and Goal rather than preserve the current feature by default. Its primary context includes the selected Core Feature, the User Needs and Goals it addresses, the stated alternatives prompt or decision focus, applicable constraints, Scope and Non-Goals. It may produce a feature variant, outcome-preserving substitute, scope or timing change such as deferment, or reframing that questions whether the feature addresses the right need or goal.
 
 Each Alternative Proposal should identify its intended outcome, rationale, benefits and trade-offs, assumptions and Open Questions, and likely affected product knowledge when known. It may make a conditional recommendation, but does not make a decision or change canonical knowledge. The request is sufficient when the feature, intended outcome and relevant boundaries or constraints are available. It is partial when outcome links or constraints are incomplete: it may still suggest local variants, but must label strategic alternatives such as deferment or substitution as constrained by missing outcome context. It is insufficient when the selected feature has too little substantive definition and no meaningful source material or prompt exists. The Context Explanation should identify used outcome links, constraints and boundaries, as well as missing context that limits the alternatives.
+
+Ask Question on an Open Question should help the requestor formulate, understand or seek a response to the selected question without treating the contributor's response as a decision. Its primary context includes the selected Open Question, the requestor's question or framing prompt, the question's rationale and scope, and artifacts it blocks or directly relates to. An Answer should distinguish known product knowledge from assumptions, limits and unresolved dependencies.
+
+The request is sufficient when the Open Question is clear and bounded and relevant context is available to reason about it. It is partial when related knowledge or constraints are missing; the contributor may still answer from the available context while making limits visible. It is insufficient when the Open Question or requestor prompt is too ambiguous to understand. An Answer remains part of the Contribution Response record and cannot automatically resolve the Open Question or change Product Knowledge.
 
 For Prepare Handoff, the default Handoff Profile is `Implementation Handoff`. The request should compose the best available package even when context is partial, artifacts are Stale or implementation caveats remain. It should not silently omit these limitations or present the package as more certain than the available product knowledge supports.
 

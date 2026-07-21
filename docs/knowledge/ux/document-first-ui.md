@@ -314,6 +314,7 @@ Initial MVP Response Shapes:
 
 | Response Shape | What The User Receives | Likely Actions |
 |---|---|---|
+| Answer | A direct response to a question, including known basis and limits. | Acknowledge, act on manually or ask a follow-up. |
 | Comment | A general note, observation or reaction. | Resolve, reply, ignore or turn into another action. |
 | Question | A clarification request. | Answer, discuss or convert to an Open Question. |
 | Finding | A structured issue or observation from a review or check. | Accept, dismiss, create a follow-up artifact or request changes. |
@@ -348,9 +349,9 @@ Instead, a project owner should create a scoped Collaboration Request for a cont
 
 Human collaborators should participate through this asynchronous request and response flow. AI Contributors may return responses more immediately, but their contributions should still be treated as scoped assistance that the project owner can review before canonical product knowledge changes.
 
-The project owner should be able to see submitted responses, then accept, reject, comment on or otherwise act on them.
+The project owner should be able to see submitted responses and manually mark each one Acknowledged after reading it and Acted On after dealing with its content. An acknowledged response should remain visibly read but not acted on until the requestor marks it Acted On.
 
-If an accepted contribution changes canonical product knowledge, the resulting change should be recorded as a Revision.
+These response statuses do not apply, accept, validate or otherwise change canonical product knowledge. If the requestor separately updates or creates product knowledge after considering a response, the resulting change should be recorded as a Revision.
 
 ## Stale Artifact Review
 
@@ -374,7 +375,7 @@ AI assistance should remain visible without dominating the document-first experi
 
 When AI contributes through the workbench, the user should be able to inspect the request, scope, response, status, relevant context explanation and resulting provenance or revision history.
 
-AI-generated or AI-assisted material should not silently become canonical product knowledge. It should enter the product knowledge through accepted Contribution Responses, explicit user action or another authorized workflow.
+AI-generated or AI-assisted material should not silently become canonical product knowledge. A Contribution Response remains conversational input; it can influence product knowledge only through a separate, explicit user action or another authorized workflow.
 
 The user experience may support project-level governance settings for built-in AI capabilities, such as enabling or disabling AI assistance or limiting where specific AI capabilities can be used.
 

@@ -165,6 +165,7 @@ Initial MVP Response Shapes:
 
 | Response Shape | Expected Use |
 |---|---|
+| Answer | Direct response to a question in the request, including known basis and limits. |
 | Comment | General observation or reaction. |
 | Question | Clarification needed from the requestor. |
 | Finding | Structured result from a review or check. |
@@ -251,6 +252,7 @@ Validated example context patterns:
 | Request Feedback on Product Overview | selected Product Overview; stated feedback prompt or focus when provided; product name and current overview content | Problem or Opportunity; Target Users or Personas; Goals and Success Criteria; Scope and Non-Goals; User Needs and Core Features when they clarify the overview; relevant Decisions, Risks, Assumptions, Open Questions and prior feedback | Comment, Question, Suggested Edit, Summary, Proposed Artifact, Proposed Decision |
 | Draft Product Overview | stated drafting prompt or source material; selected Product Overview when it contains existing content; section and template guidance; product name | Problem or Opportunity; Target Users or Personas; Goals and Success Criteria; Scope and Non-Goals; User Needs and Core Features when available; relevant Decisions, Constraints, Risks, Assumptions and Open Questions | Suggested Edit, Question, Summary, Proposed Artifact |
 | Suggest Alternatives on Core Feature | selected Core Feature; linked User Needs and Goals; stated alternatives prompt, decision focus and constraints; Scope and Non-Goals | Target Users or Personas; related Features, User Stories, Use Cases, Requirements and Acceptance Criteria; dependencies; Decisions; technical constraints; Risks, Assumptions, Open Questions and prior feedback or Reviews | Proposed Decision, Proposed Artifact, Suggested Edit, Summary, Question |
+| Ask Question on an Open Question | selected Open Question; requestor's question or framing prompt; the question's rationale, scope, linked and blocked artifacts | related Goals, User Needs, Features, Requirements, Constraints, Decisions, Assumptions, Risks, Open Questions, Discussions and known evidence in the Project State | Answer, Question, Finding, Proposed Decision, Summary |
 
 For Find Gaps, missing related artifacts may be useful output rather than a reason to block the request.
 
@@ -277,6 +279,12 @@ Suggest Alternatives on a Core Feature should optimize for the intended User Nee
 Each Alternative Proposal should identify the intended outcome it supports or reassesses, its rationale, benefits and trade-offs, assumptions and Open Questions, and likely affected product knowledge when known. It may express a recommendation with its conditions, but must not make a decision or change canonical knowledge. The expected Response Shapes are Proposed Decision, Proposed Artifact, Suggested Edit, Summary and Question.
 
 The request has sufficient context when the feature, its intended outcome and relevant boundaries or constraints are available. It has partial context when outcome links or constraints are incomplete; it may still suggest local feature variants, but must label strategic alternatives such as deferment or substitution as constrained by the missing outcome context. It is insufficient when the selected feature has too little substantive definition and no meaningful source material or prompt exists. The Context Explanation should identify the outcome links, constraints and boundaries used, together with missing context that limits the alternatives.
+
+Ask Question on an Open Question should help the requestor formulate, understand or seek a response to the selected question without treating the contributor's response as a decision. Its primary context includes the selected Open Question, the requestor's stated question or framing prompt, the question's rationale and scope, and artifacts it blocks or directly relates to. The expected Response Shapes are Answer, Question, Finding, Proposed Decision and Summary.
+
+An Answer should distinguish known product knowledge from assumptions, limits and unresolved dependencies. The request has sufficient context when the Open Question is clear and bounded and relevant context is available to reason about it. It has partial context when related knowledge or constraints are missing; the contributor may still answer from the available context while making those limits visible. It is insufficient when the Open Question or requestor prompt is too ambiguous to understand. A contributor must not present an Answer as an automatic resolution or modify product knowledge.
+
+Contribution Responses are conversation records. When a contributor submits an Answer, it is Submitted. The requestor may mark it Acknowledged to confirm that it has been read and later mark it Acted On to indicate that they have dealt with its content. These statuses have no direct effect on product knowledge, do not apply the Answer and do not require a linked Revision or note. Any subsequent update, Decision or other product-knowledge change remains a separate, manual action by the requestor.
 
 Prepare Handoff is distinct from Validate Readiness. Validate Readiness judges whether product knowledge is ready for implementation. Prepare Handoff composes the best available implementation package for the requested export scope and Handoff Profile.
 
