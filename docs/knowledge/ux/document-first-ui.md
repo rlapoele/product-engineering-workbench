@@ -251,6 +251,8 @@ Request Feedback and Review should remain distinct.
 
 Request Feedback is open-ended, judgment-based and conversational. It asks a contributor to react, comment and suggest improvements.
 
+For Product Overview, Request Feedback should assemble the overview and any stated feedback focus as primary context. Problem or Opportunity, Target Users or Personas, Goals and Success Criteria, Scope and Non-Goals should provide the usual strategic orientation; User Needs and Core Features should be included only when they clarify the overview. The response should be a caveated Comment, Question, Suggested Edit, Summary, Proposed Artifact or Proposed Decision rather than a structured Review or readiness result. When strategic anchors are missing, the Context Explanation should say what limited the feedback.
+
 Review is structured, deliberate and criteria-based. It asks a contributor to evaluate the target against a specific capability, lens or standard.
 
 Review should be treated as a composite assistance activity.

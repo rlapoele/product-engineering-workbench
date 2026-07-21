@@ -571,6 +571,7 @@ Initial validated examples include:
 - Find Inconsistencies on a Feature;
 - Analyze Impact on a Requirement;
 - Validate Readiness on the whole Specification;
+- Request Feedback on Product Overview;
 - Review UI Requirement with Accessibility Lens.
 
 Primary Context is the context required to make the central judgment for the selected Assistance Request Type and lens.
@@ -586,6 +587,8 @@ For Find Inconsistencies, the request needs comparison targets. If no related co
 For Analyze Impact on a Requirement, the system should inspect both upstream context explaining why the Requirement exists and downstream context identifying what the Requirement affects. If few or no relationships are available, the request may still proceed with limited context, but the Context Explanation should make that limitation visible and missing links may become Findings or Proposed Relationships.
 
 For Review UI Requirement with Accessibility Lens, the primary context should include the selected UI Requirement, related Screen/View and User Flow, interaction and state behavior, linked Functional Requirements and Acceptance Criteria, applicable UX/UI design guidance, explicit accessibility expectations and any declared accessibility target. The review should assess specification coverage, risks and testability rather than claim accessibility conformance. Without a declared target, the Context Explanation should say that the review applied general accessibility principles and cannot certify conformance.
+
+For Request Feedback on Product Overview, the primary context should include the overview itself and any stated feedback focus. Problem or Opportunity, Target Users or Personas, Goals and Success Criteria, Scope and Non-Goals provide the usual strategic orientation; User Needs and Core Features should be supporting only when they clarify the overview. The request may proceed with caveated comments and questions when some strategic anchors are missing, but should ask a clarifying question when the overview contains too little substantive product definition to support a responsible reaction. It must not present an open-ended feedback response as a structured Review or readiness conclusion.
 
 ## Consequences
 

@@ -1125,3 +1125,15 @@ The review may examine keyboard and focus behavior, assistive-technology expecta
 The default lens is standards-informed but must not claim accessibility conformance. When a target such as WCAG 2.2 AA is declared, it becomes primary review context. Without a declared target, the Context Explanation should state that general accessibility principles were applied and that conformance cannot be certified.
 
 The result should conclude that accessibility specification coverage appears sufficient, that gaps or risks were found, or that accessibility cannot yet be assessed from the available specification. These are specification-readiness conclusions, not claims about an implemented application.
+
+## Request Feedback On Product Overview
+
+Request Feedback on Product Overview is open-ended, comment-oriented assistance. It is not a structured Review, a gap check or a readiness judgment.
+
+Primary context includes the selected Product Overview, its current content, the product name and any feedback prompt or focus supplied by the requestor. Supporting context includes the Problem or Opportunity, Target Users or Personas, Goals and Success Criteria, Scope, Non-Goals, and User Needs or Core Features only when they clarify the overview. Relevant Decisions, Risks, Assumptions, Open Questions and prior feedback may support the response when they bear on the stated feedback focus.
+
+Unrelated detailed requirements, screens, implementation guidance and historical material should be excluded unless they directly clarify the overview or feedback focus.
+
+The expected Response Shapes are Comment, Question, Suggested Edit, Summary, Proposed Artifact and Proposed Decision. Feedback may identify concerns, uncertainties and improvement opportunities, but should not present an implementation-readiness result or structured Review conclusion unless separately requested.
+
+Context is sufficient when the overview and enough strategic orientation are available to support a meaningful reaction. It is partial when one or more of the Problem or Opportunity, Target Users or Personas, Goals, Scope or Non-Goals are unavailable; the request may proceed with caveated comments and questions. It is insufficient only when the overview contains too little substantive product definition to support a responsible reaction. The Context Explanation should identify the strategic anchors used and any missing anchors that limited feedback.
