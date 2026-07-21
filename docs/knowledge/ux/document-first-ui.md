@@ -306,6 +306,14 @@ The default lens is standards-informed but does not claim conformance. A declare
 
 The review should conclude that specification coverage appears sufficient, that gaps or risks were found, or that accessibility cannot yet be assessed from the available specification. It should return Findings, Suggested Edits, Questions, Proposed Artifacts or a Summary; it should not silently alter canonical product knowledge.
 
+## Requirements Quality Review
+
+A Review on a Functional Requirement should use the Requirements Quality Lens by default. It should assess clarity and ambiguity, completeness of actor, trigger, behavior and outcome, consistency with linked knowledge, testability and Acceptance Criteria coverage, traceability, dependencies, assumptions, constraints and unsupported implementation prescription.
+
+The review should include the Functional Requirement, directly related Feature or User Need, direct Acceptance Criteria and any stated review focus. User Stories, Use Cases, Screen/Views or User Flows, related Requirements, Non-Functional Requirements, technical constraints, Decisions, integrations, Risks, Assumptions, Open Questions and prior Reviews may provide supporting context.
+
+The review should return Findings, Questions, Suggested Edits, Proposed Artifacts, Proposed Relationships or a Summary. It should conclude that requirements-quality coverage appears sufficient for the current scope, that findings were identified, or that quality cannot yet be assessed from the available specification. It does not edit the requirement or certify implementation conformance.
+
 ## Contribution Response Shapes
 
 The result of an assistance request should be presented according to its Response Shape.

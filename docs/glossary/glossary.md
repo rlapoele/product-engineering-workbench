@@ -537,6 +537,14 @@ Examples include Requirements Quality, UX Quality, Accessibility, Security, Test
 
 ---
 
+## Requirements Quality Review
+
+A Requirements Quality Review is a Review using the Requirements Quality Lens to assess whether a requirement is clear, complete, consistent, testable and traceable enough for its current product scope.
+
+It assesses the quality of specification knowledge. It does not alter the requirement, decide product behavior or certify implementation conformance.
+
+---
+
 ## Readiness
 
 The degree to which a Product Artifact, feature, project area or export is mature enough to support implementation or downstream use.

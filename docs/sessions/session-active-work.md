@@ -1193,3 +1193,15 @@ Primary context includes the selected Functional Requirement, any stated improve
 The expected Response Shapes are Suggested Edit, Question, Finding and Summary. If a needed behavior or scope change is identified, the contributor should return a Question or Finding instead of including the change in the Suggested Edit.
 
 Context is sufficient when the Functional Requirement and enough behavioral context are available to preserve intent. It is partial when relationships, validation coverage or constraints are missing; the contributor may still improve wording or structure, but the Context Explanation should state that alignment or testability could not be fully assessed. It is insufficient when the requirement is too vague or empty and no linked scope or behavioral context is available. The contributor should then ask clarifying questions rather than rewrite it.
+
+## Requirements Quality Review On A Functional Requirement
+
+Review a Functional Requirement with Requirements Quality Lens is a structured assessment of specification quality. It is not an editing request or an implementation-conformance claim.
+
+The default Requirements Quality Lens may assess clarity and ambiguity, completeness of actor, trigger, behavior and outcome, consistency with linked knowledge, testability and Acceptance Criteria coverage, traceability, dependencies, assumptions, constraints and unsupported implementation prescription. The requestor may add a narrower focus such as testability or ambiguity.
+
+Primary context includes the selected Functional Requirement, Requirements Quality Lens, any stated review focus, directly related Feature or User Need, and direct Acceptance Criteria. Supporting context includes User Stories, Use Cases, Screen/Views or User Flows, related Requirements, Non-Functional Requirements, technical constraints, Decisions, integrations, Risks, Assumptions, Open Questions and prior Reviews.
+
+The expected Response Shapes are Finding, Question, Suggested Edit, Proposed Artifact, Proposed Relationship and Summary. Missing Acceptance Criteria or relationships should become Findings rather than block the review.
+
+Context is sufficient when the Functional Requirement contains meaningful behavior and enough related knowledge is available for the requested checks. It is partial when alignment, traceability or testability cannot be assessed; the contributor may still assess internal clarity and make limits visible. It is insufficient when the requirement has too little substantive content to assess. The review should conclude that requirements-quality coverage appears sufficient for the current scope, that findings were identified, or that quality cannot yet be assessed from the available specification. These conclusions do not validate the requirement's implementation.

@@ -576,6 +576,7 @@ Initial validated examples include:
 - Suggest Alternatives on a Core Feature;
 - Ask Question on an Open Question;
 - Improve a Functional Requirement;
+- Review a Functional Requirement with Requirements Quality Lens;
 - Review UI Requirement with Accessibility Lens.
 
 Primary Context is the context required to make the central judgment for the selected Assistance Request Type and lens.
@@ -603,6 +604,8 @@ For Ask Question on an Open Question, the primary context should include the sel
 Contribution Responses should use separate statuses. A response is Submitted when sent, then may be manually marked Acknowledged when read and Acted On when the requestor has dealt with its content. These statuses have no direct effect on the specification, do not require a linked Revision or note, and must not trigger automation.
 
 For Improve a Functional Requirement, the primary context should include the selected Functional Requirement, the stated improvement focus, directly related Feature or User Need, and direct Acceptance Criteria. Supporting context may include User Stories, Use Cases, Screen/Views or User Flows, Non-Functional Requirements, technical constraints, Decisions, integrations, Risks, Assumptions, Open Questions and related Requirements. The request should make the requirement clearer, more precise or more testable while preserving its established behavioral intent. A Suggested Edit must not silently introduce behavior, expand scope, resolve an assumption or choose an implementation approach not established in the assembled context. Such changes should be returned as a Question or Finding instead.
+
+For Review a Functional Requirement, Requirements Quality is the default Review Lens. Primary context should include the Functional Requirement, the lens, any stated review focus, directly related Feature or User Need, and direct Acceptance Criteria. Supporting context may include User Stories, Use Cases, Screen/Views or User Flows, related Requirements, Non-Functional Requirements, technical constraints, Decisions, integrations, Risks, Assumptions, Open Questions and prior Reviews. The Review should assess specification clarity, completeness, consistency, testability, traceability, dependencies, assumptions, constraints and unsupported implementation prescription. Missing Acceptance Criteria or relationships should become Findings rather than block the review. The result describes requirements-quality coverage for the current specification scope; it does not edit the requirement or certify implementation conformance.
 
 ## Consequences
 
