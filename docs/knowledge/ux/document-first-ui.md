@@ -314,6 +314,16 @@ The review should include the Functional Requirement, directly related Feature o
 
 The review should return Findings, Questions, Suggested Edits, Proposed Artifacts, Proposed Relationships or a Summary. It should conclude that requirements-quality coverage appears sufficient for the current scope, that findings were identified, or that quality cannot yet be assessed from the available specification. It does not edit the requirement or certify implementation conformance.
 
+## Find Gaps On Acceptance Criteria
+
+Find Gaps on Acceptance Criteria assesses whether a selected Acceptance Criterion, selected set or Acceptance Criteria section supplies the necessary acceptance evidence for known intended behavior. It is a coverage and verifiability check, not a Functional Requirement quality review, test execution or implementation-conformance certification.
+
+The request should include the selected criterion or criteria, the artifact or behavior each validates, and sibling criteria that validate the same behavior. Including siblings even for a single selected criterion helps avoid duplicate proposals. Related requirements, stories, use cases, features, user needs, screens, flows, non-functional requirements, Decisions, constraints, integrations, Risks, Assumptions and Open Questions may provide supporting context.
+
+The contributor should identify only gaps grounded in known product knowledge: a missing trigger, precondition, actor or observable outcome; known behavior with no coverage; an untestable criterion; or a missing validation link. Error, boundary, alternate-state, permission and transition coverage are relevant only when the specification establishes them. A small addition may be a Suggested Edit; a new criterion or relationship must remain a non-canonical proposal.
+
+The response should conclude that acceptance coverage appears sufficient for the current scope, that gaps were found, or that coverage cannot yet be assessed from the available specification. Missing links should normally be reported as Findings, rather than blocking the request.
+
 ## Contribution Response Shapes
 
 The result of an assistance request should be presented according to its Response Shape.

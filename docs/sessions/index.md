@@ -24,3 +24,4 @@
 | 2026-07-21-08 | 2026-07-21 | 8 | Open Question Ask Context Assembly and Answer Lifecycle | Crystallized | Answer response shape, manual acknowledgment and acted-on statuses |
 | 2026-07-21-09 | 2026-07-21 | 9 | Functional Requirement Improvement Context Assembly | Crystallized | Intent-preserving edits, explicit context limits and scope-change escalation |
 | 2026-07-21-10 | 2026-07-21 | 10 | Functional Requirement Requirements Quality Review Context Assembly | Crystallized | Structured quality findings, context limits and non-conformance boundary |
+| 2026-07-21-11 | 2026-07-21 | 11 | Acceptance Criteria Gap Analysis Context Assembly | Crystallized | Grounded acceptance coverage gaps, sibling comparison and non-canonical proposals |

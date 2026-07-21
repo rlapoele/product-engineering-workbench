@@ -577,6 +577,7 @@ Initial validated examples include:
 - Ask Question on an Open Question;
 - Improve a Functional Requirement;
 - Review a Functional Requirement with Requirements Quality Lens;
+- Find Gaps on Acceptance Criteria; and
 - Review UI Requirement with Accessibility Lens.
 
 Primary Context is the context required to make the central judgment for the selected Assistance Request Type and lens.
@@ -606,6 +607,8 @@ Contribution Responses should use separate statuses. A response is Submitted whe
 For Improve a Functional Requirement, the primary context should include the selected Functional Requirement, the stated improvement focus, directly related Feature or User Need, and direct Acceptance Criteria. Supporting context may include User Stories, Use Cases, Screen/Views or User Flows, Non-Functional Requirements, technical constraints, Decisions, integrations, Risks, Assumptions, Open Questions and related Requirements. The request should make the requirement clearer, more precise or more testable while preserving its established behavioral intent. A Suggested Edit must not silently introduce behavior, expand scope, resolve an assumption or choose an implementation approach not established in the assembled context. Such changes should be returned as a Question or Finding instead.
 
 For Review a Functional Requirement, Requirements Quality is the default Review Lens. Primary context should include the Functional Requirement, the lens, any stated review focus, directly related Feature or User Need, and direct Acceptance Criteria. Supporting context may include User Stories, Use Cases, Screen/Views or User Flows, related Requirements, Non-Functional Requirements, technical constraints, Decisions, integrations, Risks, Assumptions, Open Questions and prior Reviews. The Review should assess specification clarity, completeness, consistency, testability, traceability, dependencies, assumptions, constraints and unsupported implementation prescription. Missing Acceptance Criteria or relationships should become Findings rather than block the review. The result describes requirements-quality coverage for the current specification scope; it does not edit the requirement or certify implementation conformance.
+
+For Find Gaps on Acceptance Criteria, primary context should include the selected Acceptance Criterion or Criteria, the artifact or behavior each validates, and sibling Acceptance Criteria that validate the same behavior. Related Functional Requirements, User Stories, Use Cases, Features, User Needs, Screen/Views or User Flows, Non-Functional Requirements, Decisions, constraints, integrations, Risks, Assumptions and Open Questions may provide supporting context. The request should assess coverage and verifiability only against known behavior, not invent generic edge cases. It may report a missing trigger, precondition, actor or observable outcome; known behavior without coverage; an untestable criterion; or a missing validation relationship. New criteria and relationships remain non-canonical proposals. The result should state that acceptance coverage appears sufficient for the current scope, that gaps were found, or that coverage cannot yet be assessed; it does not execute tests or certify implementation conformance.
 
 ## Consequences
 
