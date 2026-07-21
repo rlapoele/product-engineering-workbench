@@ -26,6 +26,8 @@ The full end-to-end flow remains to be detailed. Its initial document-authoring 
 
 The document should also offer optional, user-invoked deterministic `What next?` guidance. It does not force workflow order or create tasks. The first-pass priority order is: the user's Edit-in-progress Drafts, explicit Open Question blockers, active Stale or coverage/readiness impact outcomes, and empty required selected sections. See `2026-07-21-deterministic-next-step-guidance.md`.
 
+The priority order was validated against a competing-state scenario. With an Edit-in-progress Goal draft, an Open Question blocking a Feature, two Stale Requirements and an empty required UX/UI section, the top three items are: continue the Goal draft, resolve the Open Question blocker and review the Stale Requirements. The required-but-empty section remains in the full guidance list. See `2026-07-21-deterministic-next-step-guidance-priority-validation.md`.
+
 
 ### 1.2
 

@@ -68,6 +68,7 @@ Recent clarification established the first target user as an AI-assisted develop
 - Propagation edge cases have been clarified: semantic multi-hop traversal, cycles, multiple causal paths, archived artifacts, `relates_to`, distance-based review priority and conservative revalidation behavior.
 - The first-pass document editing and impact-feedback flow has been clarified: contextual section and artifact action menus, inline artifact editing, persistent private edit-in-progress drafts, explicit `Done editing` revisions, and non-modal impact feedback with persistent document and outline cues.
 - The first-pass `What next?` guidance model has been clarified as deterministic, user-invoked and optional, prioritizing the user's unfinished drafts, explicit blockers, active impact outcomes and empty required selected sections.
+- The initial deterministic guidance priority order has been validated against a competing-state scenario: an Edit-in-progress Draft ranks ahead of an explicit blocker, which ranks ahead of active Stale artifacts; required-but-empty sections remain available in the full guidance list.
 
 ---
 
