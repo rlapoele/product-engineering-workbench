@@ -279,7 +279,7 @@ First-pass contextual availability matrix:
 | Acceptance Criteria | Draft, Improve, Request Feedback, Review, Find Gaps, Validate Readiness, Ask Question |
 | Functional Requirement | Draft, Improve, Request Feedback, Review, Find Gaps, Find Inconsistencies, Analyze Impact, Validate Readiness, Ask Question |
 | Non-Functional Requirement | Draft, Improve, Request Feedback, Review, Find Gaps, Validate Readiness, Ask Question |
-| Screen / View or UX Requirement | Draft, Improve, Request Feedback, Review, Find Gaps, Analyze Impact, Validate Readiness, Ask Question |
+| Screen / View or UI Requirement | Draft, Improve, Request Feedback, Review, Find Gaps, Analyze Impact, Validate Readiness, Ask Question |
 | Risk | Draft, Improve, Request Feedback, Review, Analyze Impact, Suggest Alternatives, Ask Question |
 | Assumption | Improve, Request Feedback, Review, Analyze Impact, Suggest Alternatives, Validate Readiness, Ask Question |
 | Decision | Improve, Request Feedback, Review, Analyze Impact, Suggest Alternatives, Ask Question |
@@ -287,6 +287,16 @@ First-pass contextual availability matrix:
 | Selected Content | Improve, Request Feedback, Review, Find Gaps, Find Inconsistencies, Ask Question |
 
 The matrix is a first pass. It should be validated through concrete specification exercises before being treated as final.
+
+## Accessibility Specification Review
+
+A Review on a UI Requirement may use the Accessibility Lens to assess whether the specification defines accessible outcomes, risks and verification needs clearly enough for implementation and later evaluation.
+
+The review should include the UI Requirement, related Screen/View and User Flow, interaction and state behavior, linked Functional Requirements and Acceptance Criteria, applicable UX/UI design guidance, explicit accessibility expectations and any declared accessibility target. Related User Stories, User Needs, external design references, technical constraints, Decisions, Risks, Assumptions, Open Questions and prior Reviews may provide supporting context.
+
+The default lens is standards-informed but does not claim conformance. A declared target such as WCAG 2.2 AA may guide the review and its findings. Without one, the Context Explanation should say that the review applied general accessibility principles and cannot certify conformance.
+
+The review should conclude that specification coverage appears sufficient, that gaps or risks were found, or that accessibility cannot yet be assessed from the available specification. It should return Findings, Suggested Edits, Questions, Proposed Artifacts or a Summary; it should not silently alter canonical product knowledge.
 
 ## Contribution Response Shapes
 

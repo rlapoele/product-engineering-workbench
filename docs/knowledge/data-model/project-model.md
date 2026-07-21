@@ -322,6 +322,10 @@ A UI Requirement may include:
 - state behavior;
 - responsive behavior;
 - accessibility expectation;
+- keyboard and focus behavior;
+- assistive-technology expectations for names, roles, states or status changes when relevant;
+- accessible error, feedback or notification behavior;
+- accessibility verification guidance;
 - acceptance criteria.
 
 Project-wide visual design guidance may be held in the containing `UX/UI Design Requirements and Interaction Notes` section rather than repeated in each UI Requirement.
@@ -1181,6 +1185,7 @@ Validated example patterns:
 | Analyze Impact on Requirement | selected Requirement, directly related artifacts, parent Feature, affected Acceptance Criteria, affected Screen/View or User Flow, dependencies and known constraints | Goals, User Needs, Non-Goals, Decisions, Risks, Open Questions, data/domain model, external integrations, implementation guidance, previous Reviews | Summary, Finding, Proposed Relationship, Proposed Artifact, Proposed Decision, Question |
 | Validate Readiness on whole Specification | included sections, required artifacts, artifact statuses, Acceptance Criteria, Functional and Non-Functional Requirements, Risks, Open Questions, technical constraints, validation/testing guidance | Goals, Non-Goals, Target Users, Decisions, Assumptions, UX Requirements, data/domain model, implementation guidance, previous Reviews | Readiness Result, Finding, Summary, Proposed Artifact, Question |
 | Prepare Handoff | requested export scope, Handoff Profile, active included sections and artifacts, Functional and Non-Functional Requirements, Acceptance Criteria, UX/UI design guidance, Screen/Views, User Flows, technical constraints, external integrations, implementation and validation guidance, artifact statuses, Decisions, Risks, Assumptions, Open Questions, relationship and dependency information, direct active dependencies outside the scope | Vision, Goals, Non-Goals, Target Users, User Needs, data/domain model, prior readiness results and Reviews, relevant Discussions, known Provenance when required by project policy or Handoff Profile | Handoff Material, Summary, Finding, Question, Readiness Result |
+| Review UI Requirement with Accessibility Lens | selected UI Requirement; related Screen/View and User Flow; interaction and state behavior; linked Functional Requirements and Acceptance Criteria; applicable UX/UI design guidance; explicit accessibility expectations; declared accessibility target when present | related User Story and User Need; external design references; Decisions, Risks, Assumptions and Open Questions; related UI Requirements; technical constraints; prior UX or accessibility Reviews | Finding, Suggested Edit, Question, Proposed Artifact, Summary |
 
 For Find Gaps, missing related artifacts may be useful output rather than a reason to block the request. For example, missing Acceptance Criteria may make context partial, while also becoming a gap finding.
 
@@ -1201,6 +1206,20 @@ The handoff result should present a preparation outcome such as `Prepared` or `P
 Stale active artifacts, Risks, Assumptions, Open Questions, blockers and direct active dependencies outside the requested export scope should be included or referenced as implementation caveats. External dependencies should be clearly labeled as outside the scope rather than being silently treated as exported knowledge.
 
 Prepare Handoff should ask a clarifying question or report insufficient context only when there is no meaningful export scope or too little product definition to prepare a responsible package. Otherwise, it should generate caveated Handoff Material and explain the limits of the assembled context.
+
+Review UI Requirement with Accessibility Lens is an Accessibility Specification Review. It should assess whether the specification defines accessible outcomes, risks and verification needs clearly enough to guide implementation and later evaluation.
+
+The review may use gap, ambiguity, inconsistency, testability and risk checks. It should examine keyboard and focus behavior, semantic and assistive-technology expectations, labels and feedback, error and state handling, non-color cues and contrast where visual values are specified, responsive or reflow behavior, and dynamic-content or media implications when relevant to the selected interaction.
+
+The default Accessibility Lens is standards-informed but must not claim accessibility conformance. When the project declares an accessibility target, such as WCAG 2.2 AA, that target becomes primary review context and findings may identify relevant criteria or missing evidence. Without a declared target, the Context Explanation should state that the review applied general accessibility principles and cannot certify conformance.
+
+The review conclusion should be one of:
+
+- accessibility specification coverage appears sufficient;
+- accessibility specification gaps or risks found;
+- accessibility cannot yet be assessed from the available specification.
+
+These conclusions describe specification readiness, not the accessibility conformance of an implemented application. Conformance evaluation requires evidence from the actual interface and its complete applicable scope.
 
 ---
 

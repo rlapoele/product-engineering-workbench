@@ -50,6 +50,12 @@ It may include enabled AI capabilities, scoped Assistance Request Types, Contrib
 
 AI Assistance Governance applies to AI assistance known to the workbench. It cannot reliably prevent or prove undisclosed external AI use by a human collaborator.
 
+## Accessibility Specification Review
+
+An Accessibility Specification Review is a Review using the Accessibility Lens to assess whether product knowledge defines accessible outcomes, risks and verification needs clearly enough for implementation and later evaluation.
+
+It is standards-informed and may use an explicitly declared target such as WCAG 2.2 AA. It does not certify accessibility conformance, which requires evidence from the implemented interface and its applicable scope.
+
 ## Artifact Template
 
 An Artifact Template is a user-facing editing or rendering representation of a Product Artifact schema.

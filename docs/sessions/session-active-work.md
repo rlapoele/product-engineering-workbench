@@ -505,7 +505,7 @@ First-pass contextual availability matrix:
 | Acceptance Criteria | Draft, Improve, Request Feedback, Review, Find Gaps, Validate Readiness, Ask Question |
 | Functional Requirement | Draft, Improve, Request Feedback, Review, Find Gaps, Find Inconsistencies, Analyze Impact, Validate Readiness, Ask Question |
 | Non-Functional Requirement | Draft, Improve, Request Feedback, Review, Find Gaps, Validate Readiness, Ask Question |
-| Screen / View or UX Requirement | Draft, Improve, Request Feedback, Review, Find Gaps, Analyze Impact, Validate Readiness, Ask Question |
+| Screen / View or UI Requirement | Draft, Improve, Request Feedback, Review, Find Gaps, Analyze Impact, Validate Readiness, Ask Question |
 | Risk | Draft, Improve, Request Feedback, Review, Analyze Impact, Suggest Alternatives, Ask Question |
 | Assumption | Improve, Request Feedback, Review, Analyze Impact, Suggest Alternatives, Validate Readiness, Ask Question |
 | Decision | Improve, Request Feedback, Review, Analyze Impact, Suggest Alternatives, Ask Question |
@@ -1113,3 +1113,15 @@ Primary context includes the selected export scope, active included sections and
 The package should surface Stale artifacts, blockers, missing or external UX/UI design guidance and direct outside-scope dependencies as implementation caveats. It should identify the result as `Prepared` or `Prepared with Caveats`; this is not a Product Artifact lifecycle state.
 
 `UX/UI Design Requirements and Interaction Notes` should allow application-specific visual and interaction guidance, including visual intent, layout, color and typography use, spacing, shapes, elevation, component usage and states, responsive behavior, accessibility expectations and external design-source references. This is not design-system authoring: lower-level design values remain section content, structured fields or external references in the MVP.
+
+## Accessibility Specification Review
+
+Review UI Requirement with Accessibility Lens is an Accessibility Specification Review. It evaluates whether the specification describes accessible outcomes, risks and verification needs clearly enough to guide implementation and later evaluation.
+
+Primary context includes the selected UI Requirement, related Screen/View and User Flow, interaction and state behavior, linked Functional Requirements and Acceptance Criteria, applicable UX/UI design guidance, explicit accessibility expectations and any declared accessibility target. Supporting context includes related User Stories and User Needs, external design references, technical constraints, Decisions, Risks, Assumptions, Open Questions, related UI Requirements and prior Reviews.
+
+The review may examine keyboard and focus behavior, assistive-technology expectations, labels and feedback, error and state handling, non-color cues and contrast where visual values are specified, responsive or reflow behavior, and dynamic-content or media implications.
+
+The default lens is standards-informed but must not claim accessibility conformance. When a target such as WCAG 2.2 AA is declared, it becomes primary review context. Without a declared target, the Context Explanation should state that general accessibility principles were applied and that conformance cannot be certified.
+
+The result should conclude that accessibility specification coverage appears sufficient, that gaps or risks were found, or that accessibility cannot yet be assessed from the available specification. These are specification-readiness conclusions, not claims about an implemented application.

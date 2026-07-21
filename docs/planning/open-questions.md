@@ -570,7 +570,8 @@ Initial validated examples include:
 - Find Gaps on a User Story;
 - Find Inconsistencies on a Feature;
 - Analyze Impact on a Requirement;
-- Validate Readiness on the whole Specification.
+- Validate Readiness on the whole Specification;
+- Review UI Requirement with Accessibility Lens.
 
 Primary Context is the context required to make the central judgment for the selected Assistance Request Type and lens.
 
@@ -584,11 +585,13 @@ For Find Inconsistencies, the request needs comparison targets. If no related co
 
 For Analyze Impact on a Requirement, the system should inspect both upstream context explaining why the Requirement exists and downstream context identifying what the Requirement affects. If few or no relationships are available, the request may still proceed with limited context, but the Context Explanation should make that limitation visible and missing links may become Findings or Proposed Relationships.
 
+For Review UI Requirement with Accessibility Lens, the primary context should include the selected UI Requirement, related Screen/View and User Flow, interaction and state behavior, linked Functional Requirements and Acceptance Criteria, applicable UX/UI design guidance, explicit accessibility expectations and any declared accessibility target. The review should assess specification coverage, risks and testability rather than claim accessibility conformance. Without a declared target, the Context Explanation should say that the review applied general accessibility principles and cannot certify conformance.
+
 ## Consequences
 
 Context Assembly becomes relationship-aware rather than based only on nearby document text.
 
-Detailed relevance rules for additional Assistance Request Types remain future validation work.
+Detailed relevance rules for remaining Assistance Request Types remain future validation work.
 
 ---
 
