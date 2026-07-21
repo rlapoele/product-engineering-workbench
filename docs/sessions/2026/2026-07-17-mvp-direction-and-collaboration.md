@@ -112,7 +112,7 @@ Section Catalog:
 - Functional Requirements
 - Non-Functional Requirements
 - Data or Domain Model
-- UX Requirements and Interaction Notes
+- UX/UI Design Requirements and Interaction Notes
 - Technical Constraints and Preferences
 - External Integrations
 - AI or Automation Expectations
@@ -140,7 +140,7 @@ Initial Project Preset classification:
 | Functional Requirements | Required | Required | Required |
 | Non-Functional Requirements | Optional | Recommended | Required |
 | Data or Domain Model | Optional | Required | Required |
-| UX Requirements and Interaction Notes | Required | Required | Required |
+| UX/UI Design Requirements and Interaction Notes | Required | Required | Required |
 | Technical Constraints and Preferences | Recommended | Recommended | Required |
 | External Integrations | Optional | Optional | Recommended |
 | AI or Automation Expectations | Optional | Optional | Recommended |

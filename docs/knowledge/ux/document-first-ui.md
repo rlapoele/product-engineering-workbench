@@ -107,7 +107,7 @@ The initial Section Catalog for the MVP is:
 - Functional Requirements
 - Non-Functional Requirements
 - Data or Domain Model
-- UX Requirements and Interaction Notes
+- UX/UI Design Requirements and Interaction Notes
 - Technical Constraints and Preferences
 - External Integrations
 - AI or Automation Expectations
@@ -117,6 +117,14 @@ The initial Section Catalog for the MVP is:
 - Export and Handoff Instructions
 
 The `User Stories and Use Cases` section may contain multiple items. Each item should be typed as either a User Story or a Use Case. These are distinct artifact types with different structures, but they belong in one section because both describe user-facing behavior and interaction intent.
+
+## UX/UI Design Requirements And Interaction Notes
+
+This section captures the application-specific UX/UI guidance needed for faithful implementation. It may contain UI Requirements, Screen/View and User Flow references, as well as shared visual design guidance that should not be repeated in each artifact.
+
+Relevant content may include visual intent, layout and spacing conventions, color and typography use, shapes and elevation, component usage and states, responsive behavior, accessibility expectations and references to external design sources such as an existing design system or design files.
+
+The section is not a design-system authoring surface. In the MVP, this guidance remains structured section content, artifact fields or external references rather than separate Design Token, Color, Typography or UI Component Product Artifacts.
 
 ## Initial Preset Classification
 
@@ -137,7 +145,7 @@ The initial Project Presets should classify the first Section Catalog as follows
 | Functional Requirements | Required | Required | Required |
 | Non-Functional Requirements | Optional | Recommended | Required |
 | Data or Domain Model | Optional | Required | Required |
-| UX Requirements and Interaction Notes | Required | Required | Required |
+| UX/UI Design Requirements and Interaction Notes | Required | Required | Required |
 | Technical Constraints and Preferences | Recommended | Recommended | Required |
 | External Integrations | Optional | Optional | Recommended |
 | AI or Automation Expectations | Optional | Optional | Recommended |
@@ -445,6 +453,8 @@ Stable artifact IDs should be embedded in `SPECIFICATION.md` and in section Mark
 
 The package should include unresolved open questions and known risks.
 
+When the `UX/UI Design Requirements and Interaction Notes` section is included, the package should carry its active guidance and external design-source references into the section export and implementation brief. Missing, Stale or externally maintained UX/UI guidance should be identified as an implementation caveat rather than silently omitted.
+
 Open questions should not block export by default, but the package should clearly indicate when implementation may be blocked or risky because unresolved questions remain.
 
 ## Handoff Profiles
@@ -469,6 +479,8 @@ The default `Implementation Handoff` profile should generate:
 - section-level Markdown files under `specification/`.
 
 `IMPLEMENTATION_BRIEF.md` should include a suggested implementation sequence rather than a delivery roadmap, backlog or sprint plan.
+
+Prepare Handoff should generate the best available package for the selected scope even when caveats remain. The package should distinguish `Prepared` from `Prepared with Caveats`, without treating either as a Product Artifact lifecycle state. Direct active dependencies outside the selected scope should be listed as external dependencies.
 
 Potential future profiles include:
 

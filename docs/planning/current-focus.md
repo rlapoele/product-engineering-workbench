@@ -53,6 +53,7 @@ Recent clarification established the first target user as an AI-assisted develop
 - Initial MVP Contribution Response Shapes and Finding Types have been clarified.
 - The first-pass conceptual Context Assembly model has been clarified: context starts from requested scope, expands through structural, explicit and inferred context, filters by request intent and remains explainable.
 - The Context Assembly model has been validated against initial examples for Improve selected text, Find Gaps on a User Story, Find Inconsistencies on a Feature, Analyze Impact on a Requirement and Validate Readiness on the whole Specification.
+- The Context Assembly model has been validated for Prepare Handoff: it composes a caveated package for a meaningful scope, makes direct external dependencies and current knowledge limits visible, and includes available UX/UI design guidance.
 - AI assistance visibility and governance have been clarified: known in-product AI assistance should be visible, reviewable and governable, while undisclosed external AI use by human collaborators cannot be reliably prevented or proven by the workbench.
 - Artifact change impact propagation has been clarified: when an upstream artifact is updated or archived, deterministic system logic should mark potentially impacted downstream artifacts as Stale and may offer contextual AI assistance afterward.
 - The first-pass propagation rules have been validated against concrete scenarios for Goal changes, Requirement changes, Acceptance Criteria archival, User Story changes and archival, Decision changes and Open Question resolution.
@@ -63,7 +64,7 @@ Recent clarification established the first target user as an AI-assisted develop
 # Current Activities
 
 - Clarify the document-first UX as a view over structured product knowledge.
-- Validate detailed context assembly rules for generation, review and analysis.
+- Validate detailed context assembly rules for remaining generation, review and feedback examples.
 - Clarify how discussions crystallize into stable product knowledge.
 - Validate the first Section Catalog and Project Preset classification through concrete specification exercises.
 - Clarify the MVP export package structure for implementation handoff.

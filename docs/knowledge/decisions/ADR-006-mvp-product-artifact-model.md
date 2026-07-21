@@ -108,6 +108,8 @@ This decision:
 
 The rule for promoting a field to a Product Artifact prevents the model from becoming too granular too early.
 
+It does not prevent users from recording implementation-relevant UX/UI design guidance. Shared visual and interaction guidance may remain section content, structured fields or external design-source references until it needs an independent lifecycle, review, reuse, relationships, provenance or collaboration.
+
 ---
 
 ## Consequences

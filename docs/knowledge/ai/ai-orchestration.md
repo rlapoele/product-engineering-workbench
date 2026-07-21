@@ -246,6 +246,7 @@ Validated example context patterns:
 | Find Inconsistencies on Feature | Feature, directly related Requirements, Decisions, Acceptance Criteria | Goals, Non-Goals, constraints, related sections, Open Questions, Risks | Finding, Question, Proposed Decision, Suggested Edit |
 | Analyze Impact on Requirement | selected Requirement, directly related artifacts, parent Feature, affected Acceptance Criteria, affected Screen/View or User Flow, dependencies and known constraints | Goals, User Needs, Non-Goals, Decisions, Risks, Open Questions, data/domain model, external integrations, implementation guidance, previous Reviews | Summary, Finding, Proposed Relationship, Proposed Artifact, Proposed Decision, Question |
 | Validate Readiness on whole Specification | included sections, required artifacts, artifact statuses, Acceptance Criteria, Functional and Non-Functional Requirements, Risks, Open Questions, technical constraints, validation/testing guidance | Goals, Non-Goals, Target Users, Decisions, Assumptions, UX Requirements, data/domain model, implementation guidance, previous Reviews | Readiness Result, Finding, Summary, Proposed Artifact, Question |
+| Prepare Handoff | requested export scope, Handoff Profile, active included sections and artifacts, Functional and Non-Functional Requirements, Acceptance Criteria, UX/UI design guidance, Screen/Views, User Flows, technical constraints, external integrations, implementation and validation guidance, artifact statuses, Decisions, Risks, Assumptions, Open Questions, relationship and dependency information, direct active dependencies outside the scope | Vision, Goals, Non-Goals, Target Users, User Needs, data/domain model, prior readiness results and Reviews, relevant Discussions, known Provenance when required by project policy or Handoff Profile | Handoff Material, Summary, Finding, Question, Readiness Result |
 
 For Find Gaps, missing related artifacts may be useful output rather than a reason to block the request.
 
@@ -254,6 +255,14 @@ For Find Inconsistencies, the request needs comparison targets. If no related co
 For Analyze Impact on a Requirement, the request should inspect both upstream and downstream context. Upstream context explains why the requirement exists, such as Goals, User Needs, parent Features or Decisions. Downstream context identifies what the requirement affects, such as Acceptance Criteria, UI Requirements, User Flows, Screen/Views, related Requirements, Risks, Open Questions, integrations or implementation guidance.
 
 If a Requirement has few or no relationships, impact analysis may still produce a limited response based on the requirement text and containing section, but the Context Explanation should state that relationship-based impact could not be fully assessed. Missing relationships may become Findings or Proposed Relationships.
+
+Prepare Handoff is distinct from Validate Readiness. Validate Readiness judges whether product knowledge is ready for implementation. Prepare Handoff composes the best available implementation package for the requested export scope and Handoff Profile.
+
+For the MVP, Prepare Handoff should use the default `Implementation Handoff` profile when no profile is selected. It should generate caveated Handoff Material whenever there is meaningful product definition, even when artifacts are Stale or Risks, Assumptions, Open Questions, blockers or missing UX/UI design guidance remain.
+
+The resulting package should make those caveats prominent in the implementation brief and verification guidance. It should include or reference direct active dependencies outside the requested export scope, clearly labeling them as external dependencies. It must not silently omit limitations or create false confidence.
+
+The request should be blocked or ask a clarifying question only when the export scope is not meaningful or there is too little product definition to prepare a responsible package. A preparation outcome such as `Prepared` or `Prepared with Caveats` describes the package, not the lifecycle state of any Product Artifact.
 
 When an artifact update or archive marks downstream artifacts as Stale, the initial impact propagation should be deterministic system behavior over the Product Knowledge Graph.
 

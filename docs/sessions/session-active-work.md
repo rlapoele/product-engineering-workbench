@@ -170,7 +170,7 @@ Initial Project Preset classification:
 | Functional Requirements | Required | Required | Required |
 | Non-Functional Requirements | Optional | Recommended | Required |
 | Data or Domain Model | Optional | Required | Required |
-| UX Requirements and Interaction Notes | Required | Required | Required |
+| UX/UI Design Requirements and Interaction Notes | Required | Required | Required |
 | Technical Constraints and Preferences | Recommended | Recommended | Required |
 | External Integrations | Optional | Optional | Recommended |
 | AI or Automation Expectations | Optional | Optional | Recommended |
@@ -1101,3 +1101,15 @@ For one triggering Revision, the system should prevent cyclic re-propagation, re
 For the ordinary Requirement -> Acceptance Criteria -> parent User Story path, the User Story receives a coverage/readiness warning. It becomes Stale only when another relationship path shows its own content may be inaccurate.
 
 Confirming a Stale artifact as valid clears only that artifact's Stale status. The system may suggest review or revalidation of active artifacts whose recorded impact paths passed through it, but must not automatically clear their states.
+
+## Prepare Handoff Context Assembly
+
+Prepare Handoff is distinct from Validate Readiness. Validate Readiness assesses whether product knowledge is ready for implementation; Prepare Handoff composes the best available implementation package for a requested scope and Handoff Profile.
+
+Prepare Handoff should always generate a caveated package when the scope contains meaningful product definition. It should use the default `Implementation Handoff` profile when the user does not choose another profile.
+
+Primary context includes the selected export scope, active included sections and artifacts, requirements, Acceptance Criteria, UX/UI design guidance, Screens/Views, User Flows, constraints, integrations, implementation and validation guidance, status, Decisions, Risks, Assumptions, Open Questions, relationship and dependency information, and direct active dependencies outside the selected scope.
+
+The package should surface Stale artifacts, blockers, missing or external UX/UI design guidance and direct outside-scope dependencies as implementation caveats. It should identify the result as `Prepared` or `Prepared with Caveats`; this is not a Product Artifact lifecycle state.
+
+`UX/UI Design Requirements and Interaction Notes` should allow application-specific visual and interaction guidance, including visual intent, layout, color and typography use, spacing, shapes, elevation, component usage and states, responsive behavior, accessibility expectations and external design-source references. This is not design-system authoring: lower-level design values remain section content, structured fields or external references in the MVP.

@@ -617,6 +617,14 @@ UI Requirements help make UX/UI expectations implementation-ready without requir
 
 ---
 
+## UX/UI Design Requirements and Interaction Notes
+
+UX/UI Design Requirements and Interaction Notes is a Specification Section for the application-specific UX/UI guidance needed for faithful implementation.
+
+It may include shared visual design guidance, interaction patterns, component usage and states, responsive and accessibility expectations, and references to external design sources. It is not a design-system authoring surface; lower-level values may remain section content, structured fields or external references rather than separate Product Artifacts in the MVP.
+
+---
+
 ## Use Case
 
 A Use Case is a structured description of an interaction between an actor and the system.

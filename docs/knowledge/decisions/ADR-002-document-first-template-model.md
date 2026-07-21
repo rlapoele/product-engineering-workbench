@@ -73,7 +73,7 @@ The initial Section Catalog is:
 - Functional Requirements
 - Non-Functional Requirements
 - Data or Domain Model
-- UX Requirements and Interaction Notes
+- UX/UI Design Requirements and Interaction Notes
 - Technical Constraints and Preferences
 - External Integrations
 - AI or Automation Expectations

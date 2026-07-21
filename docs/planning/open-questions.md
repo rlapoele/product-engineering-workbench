@@ -635,7 +635,7 @@ The MVP will use the following initial Section Catalog:
 - Functional Requirements
 - Non-Functional Requirements
 - Data or Domain Model
-- UX Requirements and Interaction Notes
+- UX/UI Design Requirements and Interaction Notes
 - Technical Constraints and Preferences
 - External Integrations
 - AI or Automation Expectations
@@ -645,6 +645,8 @@ The MVP will use the following initial Section Catalog:
 - Export and Handoff Instructions
 
 The `User Stories and Use Cases` section will contain items typed as either User Story or Use Case.
+
+`UX/UI Design Requirements and Interaction Notes` is the place for application-specific visual and interaction guidance needed for faithful implementation. It may include shared visual guidance, component usage and states, responsive and accessibility expectations, and external design-source references without introducing lower-level design-system artifact types into the MVP.
 
 The first Project Presets will classify sections as follows:
 
@@ -663,7 +665,7 @@ The first Project Presets will classify sections as follows:
 | Functional Requirements | Required | Required | Required |
 | Non-Functional Requirements | Optional | Recommended | Required |
 | Data or Domain Model | Optional | Required | Required |
-| UX Requirements and Interaction Notes | Required | Required | Required |
+| UX/UI Design Requirements and Interaction Notes | Required | Required | Required |
 | Technical Constraints and Preferences | Recommended | Recommended | Required |
 | External Integrations | Optional | Optional | Recommended |
 | AI or Automation Expectations | Optional | Optional | Recommended |
@@ -769,6 +771,10 @@ The MVP should generate:
 The MVP should include unresolved open questions and known risks in the export.
 
 Open questions should not block export by default, but the package should clearly indicate when unresolved questions may block or increase the risk of implementation.
+
+Prepare Handoff should generate the best available package for a meaningful selected scope even when active artifacts are Stale or implementation caveats remain. The result should be identified as `Prepared` or `Prepared with Caveats`, which is a package-level result rather than an artifact lifecycle state.
+
+The caveat summary should include relevant Stale artifacts, Risks, Assumptions, Open Questions, blockers, missing or external UX/UI design guidance, and direct active dependencies outside the selected scope. Dependencies outside the scope should be labeled as external dependencies.
 
 ---
 
