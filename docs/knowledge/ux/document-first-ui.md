@@ -257,6 +257,8 @@ Draft on a Product Overview should use the stated prompt or source material, exi
 
 Suggest Alternatives on a Core Feature should optimize for its linked User Need and Goal, rather than preserving the feature by default. It may propose a feature variant, outcome-preserving substitute, deferment or other scope/timing change, or a reframing that questions whether the feature addresses the right need or goal. Each Alternative Proposal should expose its rationale, trade-offs, assumptions, open questions and likely affected knowledge. It remains a proposal for the user to decide on; when outcome context is missing, strategic alternatives must be visibly labeled as constrained.
 
+Improve on a Functional Requirement should make the requirement clearer, more precise or more testable without changing its established behavioral intent. The response should be a Suggested Edit when intent is adequately grounded; otherwise it should use a Question or Finding to surface missing behavior, scope or constraints rather than silently change them.
+
 Review is structured, deliberate and criteria-based. It asks a contributor to evaluate the target against a specific capability, lens or standard.
 
 Review should be treated as a composite assistance activity.

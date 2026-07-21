@@ -1183,3 +1183,13 @@ Primary context includes the selected Open Question, the requestor's question or
 The expected Response Shapes are Answer, Question, Finding, Proposed Decision and Summary. An Answer should distinguish known product knowledge from assumptions, limits and unresolved dependencies. It remains a conversation record and must not alter Product Knowledge or trigger automation.
 
 Context is sufficient when the Open Question is clear and bounded and relevant context is available to reason about it. It is partial when related knowledge or constraints are missing; the contributor may still answer from available context while making limits visible. It is insufficient when the Open Question or requestor prompt is too ambiguous to understand. The Context Explanation should identify the question, linked and blocked artifacts, relevant knowledge used and missing context that limited the response.
+
+## Improve A Functional Requirement
+
+Improve a Functional Requirement should make the requirement clearer, more precise or more testable while preserving its established behavioral intent. It is not a way to silently add behavior, expand scope, resolve an assumption or choose an implementation approach.
+
+Primary context includes the selected Functional Requirement, any stated improvement focus, directly related Feature or User Need, and direct Acceptance Criteria. Supporting context includes User Stories, Use Cases, Screen/Views or User Flows, Non-Functional Requirements, technical constraints, Decisions, integrations, Risks, Assumptions, Open Questions and related Requirements.
+
+The expected Response Shapes are Suggested Edit, Question, Finding and Summary. If a needed behavior or scope change is identified, the contributor should return a Question or Finding instead of including the change in the Suggested Edit.
+
+Context is sufficient when the Functional Requirement and enough behavioral context are available to preserve intent. It is partial when relationships, validation coverage or constraints are missing; the contributor may still improve wording or structure, but the Context Explanation should state that alignment or testability could not be fully assessed. It is insufficient when the requirement is too vague or empty and no linked scope or behavioral context is available. The contributor should then ask clarifying questions rather than rewrite it.

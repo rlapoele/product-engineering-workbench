@@ -575,6 +575,7 @@ Initial validated examples include:
 - Draft Product Overview;
 - Suggest Alternatives on a Core Feature;
 - Ask Question on an Open Question;
+- Improve a Functional Requirement;
 - Review UI Requirement with Accessibility Lens.
 
 Primary Context is the context required to make the central judgment for the selected Assistance Request Type and lens.
@@ -600,6 +601,8 @@ For Suggest Alternatives on a Core Feature, the primary context should include t
 For Ask Question on an Open Question, the primary context should include the selected Open Question, the requestor's stated question or framing prompt, the question's rationale and scope, and artifacts it blocks or directly relates to. Supporting context may include related Goals, User Needs, Features, Requirements, Constraints, Decisions, Assumptions, Risks, other Open Questions, Discussions and known evidence in the Project State. The expected Response Shapes are Answer, Question, Finding, Proposed Decision and Summary. An Answer is a conversational Contribution Response: it does not automatically resolve the Open Question or change Product Knowledge.
 
 Contribution Responses should use separate statuses. A response is Submitted when sent, then may be manually marked Acknowledged when read and Acted On when the requestor has dealt with its content. These statuses have no direct effect on the specification, do not require a linked Revision or note, and must not trigger automation.
+
+For Improve a Functional Requirement, the primary context should include the selected Functional Requirement, the stated improvement focus, directly related Feature or User Need, and direct Acceptance Criteria. Supporting context may include User Stories, Use Cases, Screen/Views or User Flows, Non-Functional Requirements, technical constraints, Decisions, integrations, Risks, Assumptions, Open Questions and related Requirements. The request should make the requirement clearer, more precise or more testable while preserving its established behavioral intent. A Suggested Edit must not silently introduce behavior, expand scope, resolve an assumption or choose an implementation approach not established in the assembled context. Such changes should be returned as a Question or Finding instead.
 
 ## Consequences
 
