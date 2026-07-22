@@ -460,6 +460,7 @@ Validated readiness scenarios:
 - When workbench disclosure is enabled, collaborators see a single project-level `Known AI activity` entry near project information or the document outline. It opens scoped trace information without persistent artifact badges. When workbench disclosure is off or Handoff only, collaborators do not see that automatic entry; the project owner can inspect the trace directly for every setting. A handoff includes disclosure only when its destination includes handoff, uniformly for all recipients including the owner.
 - A handoff disclosure is package-level and caveated. When its destination includes handoff, `README.md` supplies a concise human-readable statement and `manifest.json` is authoritative. It includes only known trace entries whose declared scope is in the package, identifies scope, assistance/declaration type, Assistance Request Type when known, response/status and explicit Provenance or Revision link, and excludes raw prompts, assembled context and raw responses by default. It states the limits of known activity, non-authorship and non-detection; when no known activity is recorded for included scope, it says so with the same caveat.
 - The existing package-boundary preview includes an owner-only `AI disclosure` section when disclosure is destined for handoff. It previews the derived summary, entries and caveat; lets the owner open the scoped trace or change the project setting; and cannot be manually edited. When handoff disclosure is excluded, it states that outcome and the selected destination. This preview does not affect definition checks or readiness and creates no Handoff History event.
+- Each successful Handoff History event retains only a compact immutable AI-disclosure summary: selected destination, whether disclosure was included, disclosed-entry count, whether no known activity was recorded for included scope and the standard trace-limit caveat. It stores neither entry-level trace detail, raw prompts, raw responses nor a live link to current trace state; the manifest snapshot remains authoritative for what the package disclosed.
 
 See `2026-07-22-readiness-aware-handoff-outcome-validation.md`.
 See `2026-07-22-multiple-readiness-blockers-validation.md`.
@@ -492,6 +493,7 @@ See `2026-07-22-ai-use-disclosure-governance-validation.md`.
 See `2026-07-22-ai-disclosure-workbench-presentation-validation.md`.
 See `2026-07-22-ai-disclosure-handoff-representation-validation.md`.
 See `2026-07-22-ai-disclosure-preparation-preview-validation.md`.
+See `2026-07-22-ai-disclosure-handoff-history-validation.md`.
 
 ---
 

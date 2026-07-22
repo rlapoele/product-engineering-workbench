@@ -1056,6 +1056,8 @@ When disclosure includes handoff, `README.md` provides a concise human-readable 
 
 Before preparation, the existing package-boundary preview lets the project owner inspect this derived disclosure, open its scoped trace or navigate to change the disclosure setting. It does not permit manual disclosure editing, alter readiness or meaningful-definition outcomes, or create a Handoff History event.
 
+After successful preparation, Handoff History retains only a compact immutable disclosure summary: selected destination, inclusion state, disclosed-entry count, no-known-activity state and standard trace-limit caveat. It does not retain entry-level trace data, raw prompts, raw responses or a live link to later trace state; the manifest snapshot remains authoritative for what that package disclosed.
+
 ## Consequences
 
 The product supports a compliance or policy need for disclosure without imposing it as a universal judgment on AI use. Project owners retain the governance evidence needed to make an informed setting choice, while the default experience remains focused on product knowledge quality and review.

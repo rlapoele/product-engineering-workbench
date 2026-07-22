@@ -441,7 +441,9 @@ It may include the last selected handoff scope, the Handoff Package Role designa
 
 Handoff History is a compact record of successfully prepared Implementation Handoff Packages. It is distinct from Revision history: Revisions record saved Product Knowledge changes, while Handoff History records durable package-preparation events.
 
-Each event retains an immutable manifest-derived snapshot of the prepared package's time, Handoff Profile, package boundary, readiness outcome, package result and caveat or blocker summary. It does not require the workbench to retain the downloadable package archive.
+Each event retains an immutable manifest-derived snapshot of the prepared package's time, Handoff Profile, package boundary, readiness outcome, package result and caveat or blocker summary. When relevant, it also retains a compact AI-disclosure summary: the selected destination, whether disclosure was included, disclosed-entry count, whether no known activity was recorded for the included scope and the standard trace-limit caveat. It does not require the workbench to retain the downloadable package archive.
+
+The disclosure summary is not an AI Activity Trace browser. It does not retain entry-level trace details, raw prompts, raw responses or a live link to later trace state; the event's immutable manifest snapshot remains authoritative for what the prepared package disclosed.
 
 Handoff History does not provide a built-in package-diff experience for the MVP. Scope-selection changes, previews and failed preparation attempts are not handoff-history events.
 
