@@ -54,3 +54,4 @@
 | 2026-07-22-23 | 2026-07-22 | 23 | Resource Reference Draft Preservation Validation | Crystallized | Transient source selection and explicit start of preserved local drafts |
 | 2026-07-22-24 | 2026-07-22 | 24 | Resource Reference Draft Resumption Validation | Crystallized | Contextual continuation and discard without permanent draft badges |
 | 2026-07-22-25 | 2026-07-22 | 25 | Single Resource Reference Draft Per Target Validation | Crystallized | One active unsaved reference draft per attachment target |
+| 2026-07-22-26 | 2026-07-22 | 26 | Resource Reference Purpose Catalog Validation | Crystallized | Compact MVP Purpose list with custom Other value |

@@ -1347,7 +1347,9 @@ Once a Resource is referenced, its source is effectively immutable. Replacing a 
 
 Adding, removing, replacing or materially changing a Resource Reference is a Revision of its attached Specification, Specification Section or Product Artifact. Any deterministic impact outcome follows the normal relationship-specific propagation rules for that attached target; a Resource Reference does not introduce a new generic propagation rule. Content behind an unchanged external URL may change outside the workbench's control. That is an availability or version caveat, not an inferred Revision; editing the URL follows the new-Resource rule.
 
-Initial Resource Reference purposes may include source material, visual reference, contract, research, example, prototype or other user-described supporting material. For a Screen / View, visual references may include screenshots, mockups, wireframes, prototypes and design-file references.
+For the MVP, Resource Reference Purpose uses a compact prescribed list: `Visual reference`, `Prototype`, `Source material`, `Contract`, `Research`, `Example` and `Other`. Selecting `Other` requires a short user-authored purpose. For a Screen / View, `Visual reference` is the initial Purpose but remains editable. Visual references may include screenshots, mockups, wireframes, prototypes and design-file references.
+
+Administrative roles, metadata-catalog configuration and Purpose-list customization are deferred. They must not be inferred from the MVP's fixed Purpose list.
 
 A Resource becomes a Product Artifact only when it needs independent lifecycle, review state, relationships, provenance or collaboration. A Resource Reference remains distinct from an Artifact Relationship and does not create a Product Knowledge Graph edge by itself.
 
