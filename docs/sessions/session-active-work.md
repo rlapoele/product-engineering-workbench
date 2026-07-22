@@ -442,6 +442,7 @@ Validated readiness scenarios:
 - A concrete MealLoop `Pause subscription` mixed handoff validates the composition: Feature and UX/UI Definition Scopes share explicitly related Functional Requirements and Acceptance Criteria; a Subscription data-model excerpt is Supporting Context; cancellation behavior is directly related but intentionally outside the package; and an Open Question blocking a Stripe direct external dependency makes readiness Not Ready while the meaningful package is Prepared with Caveats.
 - The first-pass scope-selector interaction uses a panel over the document outline. The first handoff defaults to the entire Specification as Definition Scope; customization provides explicit actions to add Definition Scope or Supporting Context, mark directly related knowledge as outside the handoff, or remove it. Direct External Dependencies are derived and read-only. Deterministic checks appear per Definition Scope; shared evidence is labeled; no missing knowledge is auto-added; and a package-boundary preview appears before preparation. Exact controls and visual design remain prototype work.
 - A realistic MealLoop `Pause subscription` journey validates the path from that default to a customized mixed partial handoff. The user explicitly creates separate Feature and UX/UI Definition Scopes, adds a Subscription data-model excerpt as Supporting Context, marks cancellation as directly related out of package, and sees Stripe as a derived external dependency. The shared Functional Requirements and Acceptance Criteria serve both Definition Scopes only through explicit relationships. Both meaningful-definition rule sets pass, while the Open Question blocking Stripe makes readiness Not Ready; Prepare Handoff still produces Prepared with Caveats. Separately displayed, explicitly created Definition Scopes make the per-scope checks understandable without inferring scope membership.
+- A contrasting `Pause subscription` Feature journey validates recovery from insufficient product definition. An eligible Core Features section-rooted selection containing only the Feature fails the related Functional Requirement and acceptance-coverage checks; the panel preserves the partial scope while ordinary document actions let the user include existing knowledge or create and explicitly relate the missing Functional Requirement and Acceptance Criteria. Each saved Revision deterministically re-evaluates the checks. The panel neither auto-creates Product Knowledge or relationships nor turns missing definition into tasks; disabling readiness validation does not bypass the unavailable Prepare Handoff action.
 
 See `2026-07-22-readiness-aware-handoff-outcome-validation.md`.
 See `2026-07-22-multiple-readiness-blockers-validation.md`.
@@ -456,6 +457,7 @@ See `2026-07-22-partial-handoff-package-boundary.md`.
 See `2026-07-22-mixed-partial-handoff-validation.md`.
 See `2026-07-22-handoff-scope-selector-interaction.md`.
 See `2026-07-22-handoff-scope-selector-journey-validation.md`.
+See `2026-07-22-insufficient-handoff-scope-recovery-validation.md`.
 
 ---
 

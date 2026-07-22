@@ -83,6 +83,7 @@ Recent clarification established the first target user as an AI-assisted develop
 - A concrete mixed partial-handoff scenario has validated the combined rules: shared evidence may serve Feature and UX/UI Definition Scopes through explicit relationships; Supporting Context and related omissions remain bounded; and a blocking Direct External Dependency yields Not Ready with a Prepared with Caveats package.
 - The first-pass handoff scope-selector interaction has been clarified: whole-Specification default, explicit contextual role actions, derived read-only external dependencies, per-scope checks and a pre-preparation package-boundary preview.
 - A realistic scope-selector journey has validated the transition from the default whole-Specification handoff to a mixed partial handoff: explicitly created Definition Scopes keep Feature and UX/UI checks understandable, shared evidence remains relationship-grounded, and a meaningful package is prepared with caveats when a direct external dependency is blocked.
+- A contrasting scope-selector journey has validated the no-package recovery flow: an eligible but insufficient Feature scope retains its selection while ordinary document actions add or include explicit missing definition, and saved Revisions deterministically re-evaluate checks without auto-creating knowledge or tasks.
 
 ---
 

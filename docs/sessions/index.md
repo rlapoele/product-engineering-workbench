@@ -42,3 +42,4 @@
 | 2026-07-22-11 | 2026-07-22 | 11 | Mixed Partial Handoff Validation | Crystallized | Combined Definition Scope, Supporting Context, omission and external-blocker behavior validated |
 | 2026-07-22-12 | 2026-07-22 | 12 | Handoff Scope Selector Interaction | Crystallized | Outline-based scope panel, explicit roles, derived dependencies, checks and package preview |
 | 2026-07-22-13 | 2026-07-22 | 13 | Handoff Scope Selector Journey Validation | Crystallized | Default-to-mixed partial handoff journey and explicit Definition Scope selection sets |
+| 2026-07-22-14 | 2026-07-22 | 14 | Insufficient Handoff Scope Recovery Validation | Crystallized | Eligible-but-insufficient scope recovery through ordinary document actions |
