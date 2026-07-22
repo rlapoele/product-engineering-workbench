@@ -1341,7 +1341,11 @@ A Resource is reusable supporting material for a Project. It may be a managed up
 
 A Resource Reference attaches a Resource to a Specification, Specification Section or Product Artifact and explains why it is relevant at that location. It may include a user-authored purpose or type, description or caption, and location-specific metadata such as a represented Screen / View state or viewport.
 
-The MVP should support both managed uploaded files and external links. Users create a Resource Reference directly while working on the Specification, Section or Product Artifact; they do not need to first place an external link in a separate external-links section. A Resource may be reused through multiple Resource References.
+The MVP should support both managed uploaded files and external links. Users create a Resource Reference directly while working on the Specification, Section or Product Artifact; they do not need to first place an external link in a separate external-links section. A Resource may be reused through multiple Resource References. Each reference retains its own target, purpose, description and location-specific metadata.
+
+Once a Resource is referenced, its source is effectively immutable. Replacing a managed file or changing an external URL creates a new Resource and explicitly updates only the Resource References the user selects. It must not silently change every other reference to the original Resource. Removing a Resource Reference detaches only that reference; retention or cleanup of a Resource with no remaining references is an implementation policy and must not silently destroy supporting material.
+
+Adding, removing, replacing or materially changing a Resource Reference is a Revision of its attached Specification, Specification Section or Product Artifact. Any deterministic impact outcome follows the normal relationship-specific propagation rules for that attached target; a Resource Reference does not introduce a new generic propagation rule. Content behind an unchanged external URL may change outside the workbench's control. That is an availability or version caveat, not an inferred Revision; editing the URL follows the new-Resource rule.
 
 Initial Resource Reference purposes may include source material, visual reference, contract, research, example, prototype or other user-described supporting material. For a Screen / View, visual references may include screenshots, mockups, wireframes, prototypes and design-file references.
 
@@ -1444,7 +1448,7 @@ The MVP may defer the `artifacts/` folder and expanded `metadata/` folder as str
 
 The manifest should identify the project, template, preset, included sections, artifact IDs, export timestamp and export format version. For a partial package, it is also the authoritative record of Definition Scope, Supporting Context, Direct External Dependencies and directly related intentionally out-of-package knowledge.
 
-An included Resource Reference travels with the Specification, Section or Product Artifact to which it is attached; a Resource never expands handoff scope by itself. A managed uploaded file referenced by included scope should be copied into the Implementation Handoff Package with its reference metadata. An external Resource remains a labeled link in the package and should be surfaced as a caveat when its availability cannot be established.
+An included Resource Reference travels with the Specification, Section or Product Artifact to which it is attached; a Resource never expands handoff scope by itself. A Specification-level Resource Reference is excluded from a partial handoff unless the user explicitly includes it as Supporting Context. A managed uploaded file referenced by included scope should be copied into the Implementation Handoff Package with its reference metadata. If one included Resource has several included references, its managed source is copied once while every reference and its local purpose remain represented in the package. An external Resource remains a labeled link in the package and should be surfaced as a caveat when its availability cannot be established.
 
 ---
 

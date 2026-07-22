@@ -648,7 +648,7 @@ It records the deterministic readiness outcome for the selected scope, its basis
 
 ## Resource
 
-A Resource is reusable supporting material for a Project. It may be a managed uploaded file or an external URL.
+A Resource is reusable supporting material for a Project. It may be a managed uploaded file or an external URL. One Resource may have several independent Resource References. Once referenced, its source is effectively immutable: replacing its managed file or changing its URL creates a new Resource and updates only explicitly selected references.
 
 A Resource is not a Product Artifact by default. It becomes one only when it needs independent lifecycle, review state, relationships, provenance or collaboration.
 
@@ -656,11 +656,13 @@ A Resource is not a Product Artifact by default. It becomes one only when it nee
 
 ## Resource Reference
 
-A Resource Reference attaches a Resource to a Specification, Specification Section or Product Artifact and explains why it is relevant at that location. It may include a purpose or type, description or caption, and location-specific metadata.
+A Resource Reference attaches a Resource to a Specification, Specification Section or Product Artifact and explains why it is relevant at that location. It may include a purpose or type, description or caption, and location-specific metadata. It has its own target-specific meaning even when it shares a Resource with other references.
 
 Users create Resource References directly where they are working; an external link does not need to first appear in a separate external-links section. A Resource Reference is distinct from a Context Reference and an Artifact Relationship. It does not automatically enter every AI request or expand a handoff scope by itself.
 
-For an included handoff scope, a managed uploaded Resource is copied into the package with its reference metadata. An external Resource remains a labeled link and is a caveat when availability cannot be established.
+Adding, removing, replacing or materially changing a Resource Reference is a Revision of its attached target; ordinary relationship-specific impact rules then apply. A remote change behind an unchanged external URL is an availability or version caveat, not an inferred Revision.
+
+For an included handoff scope, a managed uploaded Resource is copied into the package with its reference metadata. One shared Resource is copied once when several included references use it, while every reference remains represented. An external Resource remains a labeled link and is a caveat when availability cannot be established. A Specification-level Resource Reference is excluded from a partial handoff unless explicitly included as Supporting Context.
 
 ---
 

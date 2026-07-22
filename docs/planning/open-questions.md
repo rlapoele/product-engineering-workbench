@@ -499,7 +499,7 @@ Rejected is not an MVP artifact lifecycle state. Rejection belongs to contributi
 
 **Category:** Data Model
 
-**Status:** 🟡 Exploring
+**Status:** 🟢 Resolved
 
 ## Context
 
@@ -511,19 +511,20 @@ The first decision intentionally defers several lifecycle and scope details that
 
 How should Resource References behave when their attachment target, source or handoff scope changes?
 
-## Open Areas
+## Decision
 
-- Should a Specification-level Resource Reference be excluded from a partial handoff by default unless the user explicitly includes it as Supporting Context, while references on included Sections or Product Artifacts follow their attached target?
-- Does adding, replacing, removing or materially changing a Resource Reference create a Revision on its attached Specification, Section or Product Artifact, and when should that change create deterministic impact outcomes?
-- When one Resource is reused by multiple Resource References, should replacing its managed file or changing its external URL update every reference, create a new Resource, or require explicit per-reference action?
-- How should unavailable external links, access restrictions, preview failures and file-version changes be shown without blocking ordinary document editing or making unsupported availability claims?
+- A Resource may be shared by several independent Resource References. Each reference keeps its own target, purpose, description and location-specific metadata.
+- Once referenced, a Resource source is effectively immutable. Replacing a managed file or changing an external URL creates a new Resource and updates only explicitly selected Resource References; no global replacement occurs.
+- Adding, removing, replacing or materially changing a Resource Reference creates a Revision of its attached Specification, Specification Section or Product Artifact. Ordinary relationship-specific impact propagation applies from that target; Resource References add no generic propagation rule.
+- A Specification-level Resource Reference is excluded from a partial handoff unless explicitly included as Supporting Context. References on included Sections or Product Artifacts follow their attached target.
+- A managed Resource used by multiple included references is copied once into a package, while every included reference and its target-specific meaning remain represented. An external Resource remains a labeled link and becomes a caveat when availability cannot be established.
+- A changed remote document behind an unchanged external URL is an availability or version caveat, not an inferred Revision. Unavailable links, access restrictions or preview failures remain explainable feedback and do not block ordinary editing. Retention or cleanup after a final detachment is implementation policy and must not silently destroy supporting material.
 
-## Current Constraints
+## Consequences
 
-- Resource References must remain direct, contextual actions; users should not need a separate external-links section before attaching a file or link.
-- Resource References must not automatically enter every AI request or handoff package.
-- A managed file and an external URL remain distinct source forms: included managed files are copied into handoff packages, while external links remain labeled references and become caveats when availability cannot be established.
-- Storage limits, malware scanning, fine-grained permissions and preview rendering are implementation and security concerns, but their user-facing consequences must remain explainable.
+The user can reuse a screenshot, contract or other source without turning edits in one location into hidden changes everywhere else. Partial-handoff and AI consumers retain the local meaning of every Resource Reference while avoiding duplicate transfer of the same managed source.
+
+Storage limits, malware scanning, fine-grained permissions, link checking and preview rendering remain implementation and security work. They must preserve the decided visible behaviors rather than redefine the Resource and Resource Reference model.
 
 ---
 

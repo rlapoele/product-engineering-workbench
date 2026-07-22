@@ -211,7 +211,7 @@ The system should start from the requested scope and gather Candidate Context fr
 
 Candidate Context should then be filtered and weighted according to the Assistance Request Type, requested scope, expected Response Shape, contributor capability, Review Lens and known context limits.
 
-Resource References do not automatically enter every AI request. The workbench should include an attached file or external link only when it is relevant to the requested scope and action, available to the contributor, and permitted by project access rules. A Context Explanation should identify included Resource References and any unavailable or excluded material that limits the result.
+Resource References do not automatically enter every AI request. The workbench should include an attached file or external link only when it is relevant to the requested scope and action, available to the contributor, and permitted by project access rules. When the same Resource is relevant through several selected Resource References, its source may be supplied once, but the Context Explanation must retain each included reference's target and purpose. The explanation should also identify unavailable or excluded material that limits the result.
 
 For the MVP, context can be treated as primary, supporting, optional or excluded.
 

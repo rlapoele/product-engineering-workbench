@@ -88,6 +88,7 @@ Recent clarification established the first target user as an AI-assisted develop
 - Handoff history has been scoped deliberately: successful preparations record immutable manifest-derived summaries alongside Product Knowledge Revisions, while MVP excludes built-in package diffs, ambiguous major-action logging and required archive retention.
 - Handoff evolution after preparation has been validated: changing current Supporting Context into a new Integration Definition Scope activates new checks without altering earlier Handoff History; a newly meaningful scope produces a separate preparation event.
 - General Resource and Resource Reference support has been clarified: managed files and external links may be attached directly to a Specification, Section or Product Artifact, while Screen/View visual references are the first specialized use; resources remain distinct from Product Artifacts, Context References and Artifact Relationships.
+- Resource Reference lifecycle and partial-handoff behavior has been resolved: shared Resources have independent target-level references and effectively immutable sources; replacements create new Resources without hidden global updates; target-level reference changes create ordinary Revisions; partial packages exclude Specification-level references by default and de-duplicate shared managed sources while retaining every reference's local meaning.
 
 ---
 
@@ -107,7 +108,6 @@ Recent clarification established the first target user as an AI-assisted develop
 - Validate additional Context Relevance and Context Sufficiency rules through concrete assistance request examples.
 - Use the clarified AI assistance governance stance when refining provenance, contribution review and export visibility.
 - Revisit whether AI assistance disclosure should be required, optional, policy-driven or omitted from the product experience.
-- Resolve Resource Reference lifecycle and partial-handoff behavior, including Specification-level attachment scope, Revision and impact rules, replacement behavior and unavailable-link feedback (`DATA-005`).
 - Define remaining artifact-type-specific propagation exceptions and future implementation constraints for the deterministic propagation engine.
 - Use the Project Model to inform the next UX, AI and architecture documents.
 
