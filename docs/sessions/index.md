@@ -37,9 +37,10 @@
 | 2026-07-22-06 | 2026-07-22 | 6 | UX/UI-Centered Handoff Definition | Crystallized | Minimum Screen/View, User Flow, UI Requirement, Functional Requirement and acceptance coverage bundle |
 | 2026-07-22-07 | 2026-07-22 | 7 | Integration-Centered Handoff Definition | Crystallized | Minimum external-system, integration-behavior, requirement and acceptance-coverage bundle |
 | 2026-07-22-08 | 2026-07-22 | 8 | Data-Model-Centered Handoff Definition | Crystallized | Minimum domain structure, rule or invariant, requirement and acceptance-coverage bundle |
-| 2026-07-22-09 | 2026-07-22 | 9 | Mixed-Scope Handoff Composition | Crystallized | Explicit Definition Scope and Supporting Context roles with conjunctive rule composition |
+| 2026-07-22-09 | 2026-07-22 | 9 | Mixed-Scope Handoff Composition | Crystallized | Explicit Definition Scope and Supporting Context Handoff Package Roles with conjunctive rule composition |
 | 2026-07-22-10 | 2026-07-22 | 10 | Partial Handoff Package Boundary | Crystallized | Explicit boundary representation across package files with manifest as authoritative scope record |
 | 2026-07-22-11 | 2026-07-22 | 11 | Mixed Partial Handoff Validation | Crystallized | Combined Definition Scope, Supporting Context, omission and external-blocker behavior validated |
-| 2026-07-22-12 | 2026-07-22 | 12 | Handoff Scope Selector Interaction | Crystallized | Outline-based scope panel, explicit roles, derived dependencies, checks and package preview |
+| 2026-07-22-12 | 2026-07-22 | 12 | Handoff Scope Selector Interaction | Crystallized | Outline-based scope panel, explicit package roles, derived dependencies, checks and package preview |
 | 2026-07-22-13 | 2026-07-22 | 13 | Handoff Scope Selector Journey Validation | Crystallized | Default-to-mixed partial handoff journey and explicit Definition Scope selection sets |
 | 2026-07-22-14 | 2026-07-22 | 14 | Insufficient Handoff Scope Recovery Validation | Crystallized | Eligible-but-insufficient scope recovery through ordinary document actions |
+| 2026-07-22-15 | 2026-07-22 | 15 | Integration Handoff Package Role Validation | Crystallized | Integration definition versus dependency caveat and package-role terminology |

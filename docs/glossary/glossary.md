@@ -397,6 +397,14 @@ The MVP default Handoff Profile is `Implementation Handoff`, intended to be huma
 
 ---
 
+## Handoff Package Role
+
+A Handoff Package Role describes how selected Product Knowledge participates in one specific Implementation Handoff Package. It is not a user, contributor, permission or organizational role.
+
+The user may explicitly assign selected knowledge one Handoff Package Role: Definition Scope, Supporting Context or directly related knowledge intentionally outside the package. A Direct External Dependency is derived from Definition Scope relationships; it is not an assigned Handoff Package Role and cannot be relabeled as included knowledge.
+
+---
+
 ## Handoff Definition Scope
 
 A Handoff Definition Scope is selected Product Knowledge that the user explicitly designates as knowledge the implementation consumer is being asked to implement.
@@ -419,7 +427,7 @@ Supporting Context does not activate an additional meaningful-product-definition
 
 A Handoff Preparation Preference is personal application state remembered per user, Project/Specification and Handoff Profile.
 
-It may include the last selected handoff scope, the Definition Scope or Supporting Context designation of selected knowledge, whether readiness validation runs before preparation and whether the resulting Readiness Report is included in the package. It is not shared Project Knowledge or a project-wide default.
+It may include the last selected handoff scope, the Handoff Package Role designation of selected knowledge, whether readiness validation runs before preparation and whether the resulting Readiness Report is included in the package. It is not shared Project Knowledge or a project-wide default.
 
 ---
 
