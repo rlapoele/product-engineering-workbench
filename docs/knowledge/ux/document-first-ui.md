@@ -563,6 +563,8 @@ The user may also choose `Include readiness report in handoff`. This option is e
 
 When selected, the package includes a standalone `READINESS_REPORT.md`; it is not embedded in `IMPLEMENTATION_BRIEF.md`. The report should include the readiness outcome, selected scope, Handoff Profile, evaluation time, blockers, Stale artifacts, coverage/readiness warnings, relevant Risks, Assumptions and Open Questions, direct external dependencies, and deterministic recommended follow-up actions.
 
+When multiple blockers apply, the report should group them by their originating unresolved Open Question rather than repeat the same blocker for every affected artifact. Each blocker lists the active selected-scope artifacts or direct external dependencies it blocks. Any explicit blocker makes the readiness outcome Not Ready; the count of blockers does not create a further outcome. Deterministic follow-up actions are one per originating blocker. The report orders selected-scope blockers before blocking direct external dependencies, then uses selected-outline order and stable artifact ID as a tie-breaker. It must not infer a relative importance ranking without explicit Project State that supports one.
+
 The readiness outcome is determined from explicit Project State:
 
 | Outcome | Deterministic conditions |

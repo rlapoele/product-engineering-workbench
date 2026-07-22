@@ -30,3 +30,4 @@
 | 2026-07-21-14 | 2026-07-21 | 14 | Deterministic Next-step Guidance Priority Validation | Crystallized | Draft, blocker, impact and required-coverage priority ordering validated through a competing-state scenario |
 | 2026-07-21-15 | 2026-07-21 | 15 | Readiness-Aware Handoff Flow | Crystallized | Default optional readiness validation, personal scope preferences, standalone report and deterministic readiness outcomes |
 | 2026-07-22-01 | 2026-07-22 | 1 | Readiness-Aware Handoff Outcome Validation | Crystallized | Partial-scope caveats, blocking external dependencies and included required-section coverage validated |
+| 2026-07-22-02 | 2026-07-22 | 2 | Multiple Readiness Blockers Validation | Crystallized | Deterministic aggregation, grouping, ordering and follow-up guidance for simultaneous blockers |

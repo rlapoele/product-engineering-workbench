@@ -430,8 +430,10 @@ Validated readiness scenarios:
 - A partial handoff for a Feature and its Requirements, with a non-blocking direct external dependency and one Stale Acceptance Criterion, is Ready with Caveats. Intentionally excluded required sections do not count against the selected scope.
 - A direct external dependency explicitly blocked by an unresolved Open Question makes the selected scope Not Ready, while a meaningful caveated handoff is still prepared.
 - An included required `Goals and Success Criteria` section with no section content and no active contained artifacts makes the selected scope Not Ready even when other selected content is complete.
+- Multiple simultaneous explicit blockers make the scope Not Ready without creating a further outcome. `READINESS_REPORT.md` groups selected-scope artifacts and direct external dependencies by their originating unresolved Open Question, offers one follow-up action per blocker, and orders selected-scope blockers before external blockers; selected-outline order and stable artifact ID break ties. It must not infer relative blocker importance without explicit Project State.
 
 See `2026-07-22-readiness-aware-handoff-outcome-validation.md`.
+See `2026-07-22-multiple-readiness-blockers-validation.md`.
 
 ---
 
