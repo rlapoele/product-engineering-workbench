@@ -440,6 +440,7 @@ Validated readiness scenarios:
 - For a mixed-scope handoff, the user explicitly designates selected knowledge as Definition Scope or Supporting Context. Every Definition Scope activates its applicable meaningful-product-definition rule, and all active rules compose conjunctively. Supporting Context explains, constrains or caveats Definition Scope without activating another rule. Shared Functional Requirements or Acceptance Criteria satisfy more than one Definition Scope only through explicit relationships. The workbench never infers the designation, silently promotes Supporting Context or auto-adds missing knowledge. The package distinguishes Definition Scope, Supporting Context and Direct External Dependencies.
 - A partial package makes that boundary explicit in every generated representation. `README.md` gives a concise summary; `IMPLEMENTATION_BRIEF.md` explains Definition Scope, intentionally outside scope and caveats; and `manifest.json` is authoritative for Definition Scope, Supporting Context, Direct External Dependencies and directly related intentionally out-of-package knowledge. `specification/SPECIFICATION.md` and section Markdown files contain only selected scope, labeled by role, and do not claim to be the full Project Specification. The package names only directly related omitted knowledge needed to explain the boundary, not the whole Project Specification.
 - A concrete MealLoop `Pause subscription` mixed handoff validates the composition: Feature and UX/UI Definition Scopes share explicitly related Functional Requirements and Acceptance Criteria; a Subscription data-model excerpt is Supporting Context; cancellation behavior is directly related but intentionally outside the package; and an Open Question blocking a Stripe direct external dependency makes readiness Not Ready while the meaningful package is Prepared with Caveats.
+- The first-pass scope-selector interaction uses a panel over the document outline. The first handoff defaults to the entire Specification as Definition Scope; customization provides explicit actions to add Definition Scope or Supporting Context, mark directly related knowledge as outside the handoff, or remove it. Direct External Dependencies are derived and read-only. Deterministic checks appear per Definition Scope; shared evidence is labeled; no missing knowledge is auto-added; and a package-boundary preview appears before preparation. Exact controls and visual design remain prototype work.
 
 See `2026-07-22-readiness-aware-handoff-outcome-validation.md`.
 See `2026-07-22-multiple-readiness-blockers-validation.md`.
@@ -452,6 +453,7 @@ See `2026-07-22-data-model-centered-handoff-definition.md`.
 See `2026-07-22-mixed-scope-handoff-composition.md`.
 See `2026-07-22-partial-handoff-package-boundary.md`.
 See `2026-07-22-mixed-partial-handoff-validation.md`.
+See `2026-07-22-handoff-scope-selector-interaction.md`.
 
 ---
 

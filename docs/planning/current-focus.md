@@ -81,6 +81,7 @@ Recent clarification established the first target user as an AI-assisted develop
 - Mixed-scope handoff composition has been clarified: user-designated Definition Scopes each apply their minimum rule conjunctively, while Supporting Context informs or caveats the package without activating additional rules.
 - Partial handoff package boundaries have been clarified: README and implementation brief explain the boundary for humans, manifest is authoritative for machines, and the specification files contain only labeled included scope rather than claiming to be the whole Project Specification.
 - A concrete mixed partial-handoff scenario has validated the combined rules: shared evidence may serve Feature and UX/UI Definition Scopes through explicit relationships; Supporting Context and related omissions remain bounded; and a blocking Direct External Dependency yields Not Ready with a Prepared with Caveats package.
+- The first-pass handoff scope-selector interaction has been clarified: whole-Specification default, explicit contextual role actions, derived read-only external dependencies, per-scope checks and a pre-preparation package-boundary preview.
 
 ---
 
