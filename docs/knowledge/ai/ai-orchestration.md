@@ -319,7 +319,7 @@ The resulting package should make those caveats prominent in the implementation 
 
 The readiness check applies only to the requested export scope and its direct external dependencies. It can produce `Ready`, `Ready with Caveats` or `Not Ready`; this result is distinct from the package result. A meaningful scope may still produce `Prepared` or `Prepared with Caveats` when its readiness outcome is Not Ready.
 
-The request should be blocked or ask a clarifying question only when the export scope is not meaningful or there is too little product definition to prepare a responsible package. A preparation outcome such as `Prepared` or `Prepared with Caveats` describes the package, not the lifecycle state of any Product Artifact.
+The request should report insufficient product definition and not prepare a package only when the export scope is not meaningful or there is too little product definition to prepare responsibly. This boundary applies even when readiness validation is disabled. A preparation outcome such as `Prepared` or `Prepared with Caveats` describes the package, not the lifecycle state of any Product Artifact.
 
 Review UI Requirement with Accessibility Lens is an Accessibility Specification Review. It evaluates whether the selected product knowledge defines accessible outcomes, risks and verification needs clearly enough to guide implementation and later evaluation.
 

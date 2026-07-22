@@ -73,6 +73,7 @@ Recent clarification established the first target user as an AI-assisted develop
 - The initial readiness outcome rules have been validated: a partial scope with Stale knowledge and a non-blocking external dependency is Ready with Caveats; an explicitly blocking external dependency is Not Ready; and an included required-but-empty section is Not Ready. Meaningful scopes still produce caveated handoffs when not ready.
 - Multiple simultaneous readiness blockers have been validated: any explicit blocker makes the scope Not Ready; the readiness report groups affected artifacts and dependencies by their originating Open Question, provides one follow-up action per blocker and uses deterministic non-semantic ordering.
 - Handoff scope eligibility has been clarified as a deterministic precondition separate from readiness: the MVP `Implementation Handoff` profile requires a whole-Specification or section-rooted scope, while individual artifacts may only narrow a selected section.
+- The no-package boundary has been validated: an eligible scope can still lack enough product definition for responsible handoff; this produces Not Ready when validated and prevents package preparation even when validation is disabled.
 
 ---
 

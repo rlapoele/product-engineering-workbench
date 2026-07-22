@@ -768,7 +768,7 @@ Guidance must identify its underlying basis, remain optional and never create, a
 
 A Handoff Preparation Preference is user-specific application state remembered per user, Project/Specification and Handoff Profile. It may include the last selected handoff scope, whether to validate readiness before preparation, and whether to include the resulting readiness report in the package. It is not shared Project Knowledge and does not alter canonical Project State.
 
-When enabled for Prepare Handoff, Implementation Handoff Readiness is a deterministic assessment of the selected scope and its direct external dependencies. Its outcome is `Ready`, `Ready with Caveats` or `Not Ready`, based on explicit Project State rather than an AI judgment. The package preparation result remains separate: a meaningful scope may still produce `Prepared` or `Prepared with Caveats` when readiness is Not Ready.
+When enabled for Prepare Handoff, Implementation Handoff Readiness is a deterministic assessment of the selected scope and its direct external dependencies. Its outcome is `Ready`, `Ready with Caveats` or `Not Ready`, based on explicit Project State rather than an AI judgment. The package preparation result remains separate: a meaningful scope may still produce `Prepared` or `Prepared with Caveats` when readiness is Not Ready. Insufficient product definition prevents preparation of a responsible package even when the user disables readiness validation.
 
 An optional Readiness Report is an exported snapshot of that assessment. It is not a Product Artifact or lifecycle state.
 
@@ -1275,7 +1275,7 @@ The handoff result should present a preparation outcome such as `Prepared` or `P
 
 Stale active artifacts, Risks, Assumptions, Open Questions, blockers and direct active dependencies outside the requested export scope should be included or referenced as implementation caveats. External dependencies should be clearly labeled as outside the scope rather than being silently treated as exported knowledge.
 
-Prepare Handoff should ask a clarifying question or report insufficient context only when there is no meaningful export scope or too little product definition to prepare a responsible package. Otherwise, it should generate caveated Handoff Material and explain the limits of the assembled context.
+Prepare Handoff should report insufficient product definition and not prepare a package when there is no meaningful export scope or too little product definition to prepare responsibly. This boundary applies even when readiness validation is disabled. Otherwise, it should generate caveated Handoff Material and explain the limits of the assembled context.
 
 Review UI Requirement with Accessibility Lens is an Accessibility Specification Review. It should assess whether the specification defines accessible outcomes, risks and verification needs clearly enough to guide implementation and later evaluation.
 

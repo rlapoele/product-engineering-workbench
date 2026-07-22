@@ -432,10 +432,12 @@ Validated readiness scenarios:
 - An included required `Goals and Success Criteria` section with no section content and no active contained artifacts makes the selected scope Not Ready even when other selected content is complete.
 - Multiple simultaneous explicit blockers make the scope Not Ready without creating a further outcome. `READINESS_REPORT.md` groups selected-scope artifacts and direct external dependencies by their originating unresolved Open Question, offers one follow-up action per blocker, and orders selected-scope blockers before external blockers; selected-outline order and stable artifact ID break ties. It must not infer relative blocker importance without explicit Project State.
 - Handoff scope eligibility is separate from readiness and applies even when readiness validation is disabled. The Handoff Profile owns the eligibility rules; the Specification Document Template provides the sections and containment structure. For the MVP `Implementation Handoff` profile, the entire Specification or at least one selected section with non-whitespace section content or an active contained Product Artifact is an eligible root scope. Individual artifacts can narrow a selected section, but cannot be the sole root; an ineligible selection explains the missing structural context and disables Prepare Handoff until corrected. Direct external dependencies remain external unless explicitly selected.
+- Scope eligibility does not establish meaningful product definition. For the MVP `Implementation Handoff` profile, a selected `Core Features` scope that contains only a high-level Feature statement, with no included behavioral detail or validation coverage, has insufficient product definition. With validation enabled, it is Not Ready and no package is prepared. Disabling validation does not bypass this no-package boundary; the workbench explains the concrete insufficiency and only offers ordinary navigation or contextual actions.
 
 See `2026-07-22-readiness-aware-handoff-outcome-validation.md`.
 See `2026-07-22-multiple-readiness-blockers-validation.md`.
 See `2026-07-22-handoff-scope-eligibility.md`.
+See `2026-07-22-insufficient-product-definition-boundary.md`.
 
 ---
 
