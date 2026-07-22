@@ -91,6 +91,7 @@ Recent clarification established the first target user as an AI-assisted develop
 - Resource Reference lifecycle and partial-handoff behavior has been resolved: shared Resources have independent target-level references and effectively immutable sources; replacements create new Resources without hidden global updates; target-level reference changes create ordinary Revisions; partial packages exclude Specification-level references by default and de-duplicate shared managed sources while retaining every reference's local meaning.
 - The first document-first Resource Reference interaction has been validated: attach from the local contextual actions, describe the target-specific meaning, preview inline when available, and replace through an explicit reuse-or-start-fresh choice for the reference details before saving.
 - Resource Reference controls have been refined as a compact contextual wizard: target-aware first-level actions advance to source selection and then reference details, with the current step replacing the prior controls rather than adding persistent document buttons or nested hover menus.
+- Local non-modal progressive disclosure has been established as the default for contextual document interactions, preserving the user's place while steps replace or expand nearby content with ordinary back navigation.
 
 ---
 
