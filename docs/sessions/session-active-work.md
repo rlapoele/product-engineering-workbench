@@ -456,6 +456,7 @@ Validated readiness scenarios:
 - The MVP permits at most one active unsaved Resource Reference draft per attachment target. The user saves or discards it before adding another reference at that target; drafts at different targets remain independent.
 - The MVP Resource Reference Purpose control is a compact prescribed list: `Visual reference`, `Prototype`, `Source material`, `Contract`, `Research`, `Example` and `Other`. `Other` requires a short custom purpose; Screen / View starts on the editable `Visual reference` choice. Administration roles and metadata-list configuration are deferred rather than implied by this fixed MVP list.
 - A Resource Reference has one canonical Description field, including for visual references. Downstream package or UI representations may render it as a caption, but Caption is not a second field and does not create separate user-authored meaning.
+- Known in-workbench AI assistance and voluntary external-AI declarations are recorded in a project-owner-inspectable AI Activity Trace. This trace records the request, scope, response, Context Explanation, status and any explicit Provenance or Revision link; it does not claim exact final-text authorship after human editing or comprehensive external-AI detection. AI-use disclosure is off by default. When a project owner enables it, one destination is selected: Workbench only (the default enabled destination), Workbench and handoff, or Handoff only. The selected destination controls automatic disclosure, not the project owner's trace access.
 
 See `2026-07-22-readiness-aware-handoff-outcome-validation.md`.
 See `2026-07-22-multiple-readiness-blockers-validation.md`.
@@ -484,6 +485,7 @@ See `2026-07-22-resource-reference-draft-resumption-validation.md`.
 See `2026-07-22-single-resource-reference-draft-per-target-validation.md`.
 See `2026-07-22-resource-reference-purpose-catalog-validation.md`.
 See `2026-07-22-resource-reference-description-field-validation.md`.
+See `2026-07-22-ai-use-disclosure-governance-validation.md`.
 
 ---
 
@@ -1108,9 +1110,9 @@ If the Requirement has few or no relationships, impact analysis may still procee
 
 ## AI Assistance Visibility And Governance
 
-Known AI assistance should be visible, reviewable and governable.
+Known AI assistance should be traceable, reviewable and governable without being universally disclosed.
 
-Inside the workbench, AI participation should be visible through scoped Assistance Requests, AI Contributor identity, requested capability or Review Lens, Contribution Responses, Context Explanations, acceptance status, resulting Revisions and Provenance.
+Inside the workbench, known AI participation should be recorded through scoped Assistance Requests, AI Contributor identity, requested capability or Review Lens, Contribution Responses, Context Explanations, acceptance status, resulting Revisions and Provenance. Automatic disclosure follows the project-owner AI-use disclosure setting.
 
 AI-generated or AI-assisted material should not silently become canonical product knowledge.
 
@@ -1120,13 +1122,11 @@ The workbench can govern AI assistance that occurs inside the product, including
 
 The workbench cannot reliably prevent or prove undisclosed external AI use by a human collaborator.
 
-The product should therefore support disclosure, provenance, review and project governance expectations rather than claiming full AI-use prevention or detection.
+The product should therefore support a project-owner-inspectable known AI activity trace, provenance, review and project governance expectations rather than claiming full AI-use prevention, detection or authorship attribution.
 
-Follow-up question:
+Resolved follow-up:
 
-Because document owners and human contributors can use external AI assistance outside the product and then copy or rewrite the result into the workbench, future work should evaluate whether AI assistance disclosure is needed at all.
-
-If disclosure is useful, the product should decide whether it should be required, optional, policy-driven or simply recorded when voluntarily provided.
+AI-use disclosure is off by default. When a project owner enables it, disclosure is directed to the workbench only, the workbench and handoff, or the handoff only. The trace remains available to the project owner regardless of the disclosure destination.
 
 ## Artifact Change Impact Propagation
 

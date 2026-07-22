@@ -984,13 +984,13 @@ Contributors will not directly alter canonical Product Knowledge through a Colla
 
 If a manual action informed by a Contribution Response changes product knowledge, the resulting saved change will be recorded as a Revision.
 
-Known AI assistance should remain visible and governable through Contribution records, accepted Revisions, Provenance, Context Explanations, project settings and export metadata when relevant.
+Known AI assistance should remain traceable and governable through Contribution records, accepted Revisions, Provenance, Context Explanations and project settings. Its automatic disclosure within the workbench or handoff follows the project-owner AI-use disclosure setting.
 
 The workbench can govern AI assistance that occurs inside the product, including built-in AI Contributors and AI-assisted Contribution Responses disclosed by human contributors.
 
 The workbench cannot reliably prevent or prove undisclosed external AI use by a human collaborator.
 
-The MVP should therefore support disclosure, review and provenance for known AI-assisted work rather than claiming full AI-use prevention or detection.
+The MVP should therefore support a project-owner-inspectable known AI activity trace, review and provenance for known AI-assisted work rather than claiming full AI-use prevention, detection or authorship attribution.
 
 ## Consequences
 
@@ -1024,7 +1024,7 @@ The MVP does need to support:
 
 **Category:** Collaboration
 
-**Status:** 🟡 Exploring
+**Status:** 🟢 Resolved
 
 ## Context
 
@@ -1038,30 +1038,27 @@ This limitation raises a separate product question: if external AI use cannot be
 
 Should the workbench require contributors to disclose AI assistance, or should AI usage disclosure remain optional, policy-driven or omitted from the product experience?
 
-## Current Direction
+## Decision
 
-Do not assume that all AI usage must be disclosed as a universal product rule.
+The workbench must retain a **known AI activity trace** for AI assistance it knows occurred inside the product and for any external AI use a contributor voluntarily discloses. The project owner can inspect this trace to understand the request, scope, response, context explanation, status and any explicit resulting provenance or Revision link.
 
-The current stable decision is narrower: known AI assistance should not be hidden when it occurs inside the workbench or when a contributor explicitly discloses it.
+This trace is not a claim of exact authorship. It can establish that known AI assistance occurred for a scope and what response it produced, but it cannot reliably establish which final words remain from an AI response after human editing, or prove that external AI was or was not used.
 
-Future work should evaluate whether disclosure provides enough trust, governance or compliance value to justify its UX and collaboration cost.
+AI-use disclosure is off by default. When it is off, the workbench does not automatically show AI-use markers in the ordinary workbench experience or generated handoffs; the project owner's ability to inspect the known AI activity trace remains available.
 
-## Considerations
+The project owner may enable AI-use disclosure. When enabled, the owner selects one disclosure destination:
 
-Potential reasons to disclose AI assistance:
+- **Workbench only** — the default enabled destination; known AI assistance is disclosed within the workbench but not in a handoff.
+- **Workbench and handoff** — known AI assistance is disclosed within the workbench and included in the handoff.
+- **Handoff only** — known AI assistance is included in the handoff but is not automatically disclosed to ordinary workbench collaborators.
 
-- transparency;
-- review trust;
-- provenance quality;
-- compliance or organizational policy;
-- export confidence for downstream implementation consumers.
+The exact visual treatment in the workbench and the exact handoff representation remain UX and export-format work. They must preserve the selected destination and the limits of the known AI activity trace.
 
-Potential reasons not to require disclosure:
+## Consequences
 
-- external AI use cannot be reliably detected;
-- required disclosure may create false confidence;
-- users may experience disclosure as friction or surveillance;
-- the important review question may be quality and accountability rather than whether AI was used.
+The product supports a compliance or policy need for disclosure without imposing it as a universal judgment on AI use. Project owners retain the governance evidence needed to make an informed setting choice, while the default experience remains focused on product knowledge quality and review.
+
+The workbench must not claim comprehensive AI-use detection, authorship attribution or proof of non-use. Voluntary external-AI declarations can be represented as known trace information, but undisclosed external use remains outside the workbench's reliable knowledge.
 
 ---
 

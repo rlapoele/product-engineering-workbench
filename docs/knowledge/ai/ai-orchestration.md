@@ -394,7 +394,7 @@ The export should also include a top-level `manifest.json` as the minimal requir
 
 # 10. AI Assistance Visibility And Governance
 
-The workbench should make known AI participation visible, reviewable and governable.
+The workbench should make known AI participation traceable, reviewable and governable without universally disclosing it.
 
 Governance should focus on actions the product can actually control:
 
@@ -403,8 +403,8 @@ Governance should focus on actions the product can actually control:
 - which Assistance Request Types are available;
 - which context is assembled for the request;
 - whether AI responses can directly change canonical product knowledge;
-- how AI-generated or AI-assisted content is represented in Contribution, Revision and Provenance records;
-- how AI involvement is surfaced in exports when relevant.
+- how known AI activity is represented in Contribution, Revision and Provenance records;
+- whether and where AI involvement is disclosed in the workbench or a handoff.
 
 The workbench can govern AI assistance that occurs inside the product.
 
@@ -412,13 +412,13 @@ It cannot reliably prevent a human contributor from using external AI tools outs
 
 The product should therefore avoid claims that it can prove content was or was not externally AI-assisted.
 
-Instead, the MVP should support:
+Instead, the MVP should retain a known AI activity trace for in-product AI assistance and voluntary external-AI declarations. The project owner can inspect its request, scope, response, context explanation, status and any explicit provenance or Revision link.
 
-- explicit disclosure when a contributor marks their contribution as AI-assisted;
-- visible Provenance when AI-generated or AI-assisted content is accepted;
-- contribution review before canonical product knowledge changes;
-- project settings that define whether built-in AI assistance is enabled;
-- export metadata or notes that identify known AI-assisted knowledge when useful.
+The trace does not establish exact final-text authorship after human editing, or prove whether undisclosed external AI was used.
+
+AI-use disclosure is a project-owner setting and is off by default. When enabled, it has one selected destination: Workbench only, Workbench and handoff, or Handoff only. Workbench only is the default enabled destination. Disclosure controls automatic presentation to collaborators and handoff consumers; it does not remove the project owner's access to the known AI activity trace.
+
+Contribution review remains required before canonical product knowledge changes. The exact workbench presentation and handoff encoding of disclosure remain UX and export-format work.
 
 Unknown external AI use should be treated as a governance and trust policy issue rather than a technical prevention problem.
 
@@ -436,6 +436,6 @@ For the MVP, the default `Implementation Handoff` profile should be human-readab
 
 Future Handoff Profiles may include AI-oriented consumers such as Codex, Claude Code, Gemini or Cursor, but the Handoff Profile concept itself is not AI-specific. It should also support human, agency, client and QA handoff needs.
 
-Known AI assistance should be visible through Contributions, Revisions, Provenance and exports when relevant.
+Known AI assistance should remain traceable through Contributions, Revisions and Provenance. Its automatic disclosure within the workbench or an export follows the project-owner disclosure setting.
 
-External AI assistance used privately by human collaborators cannot be reliably prevented or proven by the workbench, so it should be handled through disclosure, review and project governance expectations.
+External AI assistance used privately by human collaborators cannot be reliably prevented or proven by the workbench. Voluntary declarations may be included in the known AI activity trace; undisclosed external use remains a governance and trust limitation rather than a detection claim.

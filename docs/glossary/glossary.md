@@ -56,11 +56,17 @@ The AI Assistant is distinct from scoped assistance requests. It may help the us
 
 ## AI Assistance Governance
 
-AI Assistance Governance is the set of product rules, settings and records that make AI participation visible, reviewable and controllable inside the workbench.
+AI Assistance Governance is the set of product rules, settings and records that make known AI participation traceable, reviewable and controllable inside the workbench.
 
-It may include enabled AI capabilities, scoped Assistance Request Types, Contribution Responses, acceptance workflows, Context Explanations, Revisions, Provenance and export metadata.
+It may include enabled AI capabilities, scoped Assistance Request Types, Contribution Responses, acceptance workflows, Context Explanations, Revisions, Provenance, a known AI activity trace and AI-use disclosure settings.
 
-AI Assistance Governance applies to AI assistance known to the workbench. It cannot reliably prevent or prove undisclosed external AI use by a human collaborator.
+AI Assistance Governance applies to AI assistance known to the workbench. It cannot reliably prevent or prove undisclosed external AI use by a human collaborator. AI-use disclosure is off by default and, when enabled by the project owner, may be directed to the workbench, handoff or both.
+
+## AI Activity Trace
+
+An AI Activity Trace is the project-owner-inspectable record of known in-workbench AI assistance and voluntary external-AI disclosures.
+
+It may record the request, scope, response, Context Explanation, status and an explicit resulting Provenance or Revision link. It records known participation and responses, not a reliable attribution of every final word after human editing or a proof that external AI was not used.
 
 ## Accessibility Specification Review
 

@@ -56,3 +56,4 @@
 | 2026-07-22-25 | 2026-07-22 | 25 | Single Resource Reference Draft Per Target Validation | Crystallized | One active unsaved reference draft per attachment target |
 | 2026-07-22-26 | 2026-07-22 | 26 | Resource Reference Purpose Catalog Validation | Crystallized | Compact MVP Purpose list with custom Other value |
 | 2026-07-22-27 | 2026-07-22 | 27 | Resource Reference Description Field Validation | Crystallized | One canonical description with optional downstream caption rendering |
+| 2026-07-22-28 | 2026-07-22 | 28 | AI Use Disclosure Governance Validation | Crystallized | Owner trace, default-off disclosure and selectable disclosure destinations |

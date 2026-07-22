@@ -129,17 +129,17 @@ Where appropriate, it should integrate with delivery platforms, implementation e
 
 ---
 
-# P-013 — Make AI Assistance Visible And Governable
+# P-013 — Make Known AI Assistance Traceable And Governable
 
-AI assistance should be visible when it participates in the workbench.
+Known AI assistance should be traceable when it participates in the workbench. It should not be universally disclosed by default.
 
-The product should help users understand when AI contributed, what the AI was asked to do, what context was used and whether the resulting contribution has been accepted into canonical product knowledge.
+The product should allow the project owner to understand when known AI contributed, what it was asked to do, what context was used and whether an explicit resulting contribution was accepted into canonical product knowledge.
 
-The workbench should make AI assistance governable through project settings, enabled capabilities, scoped requests, contribution review, provenance, revision history and export visibility.
+The workbench should make AI assistance governable through project settings, enabled capabilities, scoped requests, contribution review, a known AI activity trace, provenance, revision history and policy-controlled disclosure destinations.
 
 The workbench cannot reliably prevent a human collaborator from using external AI tools outside the system and then submitting the result as their own contribution.
 
-The product should not claim to detect or prevent all external AI use. Instead, it should support honest disclosure, visible provenance for known AI-assisted work, reviewable contributions and project-level governance expectations.
+The product should not claim to detect or prevent all external AI use. Instead, it should support voluntary disclosure, traceable provenance for known AI-assisted work, reviewable contributions and project-level governance expectations.
 
 ---
 

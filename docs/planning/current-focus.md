@@ -62,7 +62,7 @@ Recent clarification established the first target user as an AI-assisted develop
 - The Context Assembly model has been validated for Improve a Functional Requirement: it improves clarity, precision and testability without silently changing established behavior or scope.
 - The Context Assembly model has been validated for Review a Functional Requirement with Requirements Quality Lens: it assesses specification quality, gaps and testability without editing the requirement or certifying implementation conformance.
 - The Context Assembly model has been validated for Find Gaps on Acceptance Criteria: it compares criteria with known behavior and sibling coverage, returns grounded non-canonical proposals, and does not manufacture generic edge cases.
-- AI assistance visibility and governance have been clarified: known in-product AI assistance should be visible, reviewable and governable, while undisclosed external AI use by human collaborators cannot be reliably prevented or proven by the workbench.
+- AI assistance traceability and governance have been clarified: a project-owner-inspectable known AI activity trace records in-product assistance and voluntary external-AI declarations; disclosure is off by default and, when enabled, may be directed to the workbench, handoff or both without claiming exact authorship or comprehensive external-AI detection.
 - Artifact change impact propagation has been clarified: when an upstream artifact is updated or archived, deterministic system logic should mark potentially impacted downstream artifacts as Stale and may offer contextual AI assistance afterward.
 - The first-pass propagation rules have been validated against concrete scenarios for Goal changes, Requirement changes, Acceptance Criteria archival, User Story changes and archival, Decision changes and Open Question resolution.
 - Propagation edge cases have been clarified: semantic multi-hop traversal, cycles, multiple causal paths, archived artifacts, `relates_to`, distance-based review priority and conservative revalidation behavior.
@@ -116,7 +116,6 @@ Recent clarification established the first target user as an AI-assisted develop
 - Validate the initial Response Shape and Finding Type model through concrete review and feedback examples.
 - Validate additional Context Relevance and Context Sufficiency rules through concrete assistance request examples.
 - Use the clarified AI assistance governance stance when refining provenance, contribution review and export visibility.
-- Revisit whether AI assistance disclosure should be required, optional, policy-driven or omitted from the product experience.
 - Define remaining artifact-type-specific propagation exceptions and future implementation constraints for the deterministic propagation engine.
 - Use the Project Model to inform the next UX, AI and architecture documents.
 

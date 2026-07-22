@@ -470,15 +470,15 @@ This should be presented as a contextual action rather than a new primary Assist
 
 ## AI Assistance Visibility And Governance
 
-AI assistance should remain visible without dominating the document-first experience.
+Known AI assistance should remain traceable without dominating the document-first experience or being universally disclosed.
 
-When AI contributes through the workbench, the user should be able to inspect the request, scope, response, status, relevant context explanation and resulting provenance or revision history.
+When AI contributes through the workbench, the project owner should be able to inspect the known AI activity trace: request, scope, response, status, relevant Context Explanation and any explicit resulting Provenance or Revision link.
 
 AI-generated or AI-assisted material should not silently become canonical product knowledge. A Contribution Response remains conversational input; it can influence product knowledge only through a separate, explicit user action or another authorized workflow.
 
-The user experience may support project-level governance settings for built-in AI capabilities, such as enabling or disabling AI assistance or limiting where specific AI capabilities can be used.
+The user experience may support project-level governance settings for built-in AI capabilities, such as enabling or disabling AI assistance or limiting where specific AI capabilities can be used. It must also support a project-owner AI-use disclosure setting, off by default. When enabled, the owner selects Workbench only, Workbench and handoff, or Handoff only; Workbench only is the default enabled destination. This setting controls automatic disclosure, not the project owner's ability to inspect known AI activity.
 
-The workbench should not claim to prevent all external AI use by human collaborators. A human contributor may use an outside AI tool before submitting work. The product can support disclosure, provenance notes and review workflows for known AI-assisted work, but cannot reliably prove that a human contribution was not externally AI-assisted.
+The workbench should not claim to prevent all external AI use by human collaborators. A human contributor may use an outside AI tool before submitting work. The product can record voluntary disclosure, provenance notes and review workflows for known AI-assisted work, but cannot reliably prove which final content came from AI or that a human contribution was not externally AI-assisted.
 
 ---
 
