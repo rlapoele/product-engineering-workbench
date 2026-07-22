@@ -45,3 +45,4 @@
 | 2026-07-22-14 | 2026-07-22 | 14 | Insufficient Handoff Scope Recovery Validation | Crystallized | Eligible-but-insufficient scope recovery through ordinary document actions |
 | 2026-07-22-15 | 2026-07-22 | 15 | Integration Handoff Package Role Validation | Crystallized | Integration definition versus dependency caveat and package-role terminology |
 | 2026-07-22-16 | 2026-07-22 | 16 | Handoff History Without Package Diffs | Crystallized | Minimal preparation history, manifest snapshot and no built-in package comparison |
+| 2026-07-22-17 | 2026-07-22 | 17 | Resource References and Screen/View Visuals | Crystallized | General files and links with Screen/View visual-reference specialization |

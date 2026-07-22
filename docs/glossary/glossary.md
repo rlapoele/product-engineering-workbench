@@ -644,6 +644,24 @@ It records the deterministic readiness outcome for the selected scope, its basis
 
 ---
 
+## Resource
+
+A Resource is reusable supporting material for a Project. It may be a managed uploaded file or an external URL.
+
+A Resource is not a Product Artifact by default. It becomes one only when it needs independent lifecycle, review state, relationships, provenance or collaboration.
+
+---
+
+## Resource Reference
+
+A Resource Reference attaches a Resource to a Specification, Specification Section or Product Artifact and explains why it is relevant at that location. It may include a purpose or type, description or caption, and location-specific metadata.
+
+Users create Resource References directly where they are working; an external link does not need to first appear in a separate external-links section. A Resource Reference is distinct from a Context Reference and an Artifact Relationship. It does not automatically enter every AI request or expand a handoff scope by itself.
+
+For an included handoff scope, a managed uploaded Resource is copied into the package with its reference metadata. An external Resource remains a labeled link and is a caveat when availability cannot be established.
+
+---
+
 ## Stale
 
 Stale is an artifact lifecycle state indicating that a Product Artifact may no longer be accurate because related upstream knowledge changed.

@@ -205,10 +205,13 @@ The system should start from the requested scope and gather Candidate Context fr
 
 - Structural Context implied by the Specification Document Template, document structure, section composition, artifact type expectations or artifact hierarchy;
 - Explicit Context from manually created, imported or accepted Artifact Relationships and Context References;
+- available Resource References attached to the requested scope or relevant selected context;
 - Inferred Context suggested by analysis, AI assistance or system inference;
 - supporting knowledge such as Decisions, Risks, Assumptions, Open Questions, Reviews, Discussions, Provenance and project metadata.
 
 Candidate Context should then be filtered and weighted according to the Assistance Request Type, requested scope, expected Response Shape, contributor capability, Review Lens and known context limits.
+
+Resource References do not automatically enter every AI request. The workbench should include an attached file or external link only when it is relevant to the requested scope and action, available to the contributor, and permitted by project access rules. A Context Explanation should identify included Resource References and any unavailable or excluded material that limits the result.
 
 For the MVP, context can be treated as primary, supporting, optional or excluded.
 

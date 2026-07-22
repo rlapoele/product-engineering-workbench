@@ -82,7 +82,9 @@ Conceptually, Project State may include:
 - Reviews;
 - Revisions;
 - Provenance;
-- Context References.
+- Context References;
+- Resources;
+- Resource References.
 
 The Product Knowledge Graph is an interpretation of the Product Artifacts and Artifact Relationships inside Project State.
 
@@ -303,6 +305,8 @@ A Screen / View may include:
 - states;
 - related flows;
 - related requirements.
+- visual Resource References, such as screenshots, mockups, wireframes, prototypes or design-file references;
+- optional visual-reference context, such as represented state or viewport.
 
 A User Flow may include:
 
@@ -354,6 +358,8 @@ The MVP should support artifact-specific schemas, but these schemas should remai
 User Story and Use Case should be the most structured artifact types because their structure is part of their meaning.
 
 Other artifact types may use a smaller number of optional structured fields plus flexible content.
+
+Resources and Resource References are general project records rather than additional fields duplicated across every artifact type. A Resource Reference may be attached to a Specification, Specification Section or Product Artifact; a Screen / View uses it as the first specialized visual-reference case.
 
 ## Artifact templates
 
@@ -1312,6 +1318,8 @@ They help the workbench assemble the right information for:
 
 Context References are not the same as Provenance.
 
+Context References are also distinct from Resource References. A Resource Reference identifies a file or external link attached to a Specification, Section or Product Artifact. It does not by itself cause that resource to be included in every AI request, review, export or rendering operation; Context Assembly decides whether an available Resource Reference is relevant to the requested action.
+
 ## Difference
 
 Provenance answers:
@@ -1321,6 +1329,20 @@ Provenance answers:
 Context answers:
 
 “What knowledge is needed to understand or work on this?”
+
+---
+
+# 22.1 Resources and Resource References
+
+A Resource is reusable supporting material for a Project. It may be a managed uploaded file or an external URL. A Resource is not a Product Artifact by default.
+
+A Resource Reference attaches a Resource to a Specification, Specification Section or Product Artifact and explains why it is relevant at that location. It may include a user-authored purpose or type, description or caption, and location-specific metadata such as a represented Screen / View state or viewport.
+
+The MVP should support both managed uploaded files and external links. Users create a Resource Reference directly while working on the Specification, Section or Product Artifact; they do not need to first place an external link in a separate external-links section. A Resource may be reused through multiple Resource References.
+
+Initial Resource Reference purposes may include source material, visual reference, contract, research, example, prototype or other user-described supporting material. For a Screen / View, visual references may include screenshots, mockups, wireframes, prototypes and design-file references.
+
+A Resource becomes a Product Artifact only when it needs independent lifecycle, review state, relationships, provenance or collaboration. A Resource Reference remains distinct from an Artifact Relationship and does not create a Product Knowledge Graph edge by itself.
 
 ---
 
@@ -1419,6 +1441,8 @@ The MVP may defer the `artifacts/` folder and expanded `metadata/` folder as str
 
 The manifest should identify the project, template, preset, included sections, artifact IDs, export timestamp and export format version. For a partial package, it is also the authoritative record of Definition Scope, Supporting Context, Direct External Dependencies and directly related intentionally out-of-package knowledge.
 
+An included Resource Reference travels with the Specification, Section or Product Artifact to which it is attached; a Resource never expands handoff scope by itself. A managed uploaded file referenced by included scope should be copied into the Implementation Handoff Package with its reference metadata. An external Resource remains a labeled link in the package and should be surfaced as a caveat when its availability cannot be established.
+
 ---
 
 # 27. Initial Model Summary
@@ -1452,6 +1476,8 @@ Revisions preserve history.
 Provenance explains where knowledge came from.
 
 Context identifies what knowledge is needed to act intelligently.
+
+Resources and Resource References provide supporting files and links without making those materials Product Artifacts by default.
 
 ---
 
