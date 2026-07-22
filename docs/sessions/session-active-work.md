@@ -444,6 +444,7 @@ Validated readiness scenarios:
 - A realistic MealLoop `Pause subscription` journey validates the path from that default to a customized mixed partial handoff. The user explicitly creates separate Feature and UX/UI Definition Scopes, adds a Subscription data-model excerpt as Supporting Context, marks cancellation as directly related out of package, and sees Stripe as a derived external dependency. The shared Functional Requirements and Acceptance Criteria serve both Definition Scopes only through explicit relationships. Both meaningful-definition rule sets pass, while the Open Question blocking Stripe makes readiness Not Ready; Prepare Handoff still produces Prepared with Caveats. Separately displayed, explicitly created Definition Scopes make the per-scope checks understandable without inferring scope membership.
 - A contrasting `Pause subscription` Feature journey validates recovery from insufficient product definition. An eligible Core Features section-rooted selection containing only the Feature fails the related Functional Requirement and acceptance-coverage checks; the panel preserves the partial scope while ordinary document actions let the user include existing knowledge or create and explicitly relate the missing Functional Requirement and Acceptance Criteria. Each saved Revision deterministically re-evaluates the checks. The panel neither auto-creates Product Knowledge or relationships nor turns missing definition into tasks; disabling readiness validation does not bypass the unavailable Prepare Handoff action.
 - Handoff Package Role means an item's package-specific participation, not a user, contributor, permission or organizational role. Adding Stripe integration knowledge as a Definition Scope asks the consumer to implement it and activates the integration rule; adding it as Supporting Context for the `Pause subscription` Feature or UX/UI scope does not. Stripe itself remains a derived Direct External Dependency in the latter case and cannot be relabeled as included knowledge.
+- A minimal Handoff History is sufficient for prepared-package visibility. Each successful preparation records an immutable manifest-derived snapshot of preparation time, Handoff Profile, package boundary, readiness outcome, package result and caveat or blocker summary. It complements explicit Product Knowledge Revisions, but does not record every scope-selection action or rely on an ambiguous major-action category. The MVP does not provide a package-diff UI or require archive retention; users can inspect current eligibility, boundary and caveats directly when preparing the next package.
 
 See `2026-07-22-readiness-aware-handoff-outcome-validation.md`.
 See `2026-07-22-multiple-readiness-blockers-validation.md`.
@@ -460,6 +461,7 @@ See `2026-07-22-handoff-scope-selector-interaction.md`.
 See `2026-07-22-handoff-scope-selector-journey-validation.md`.
 See `2026-07-22-insufficient-handoff-scope-recovery-validation.md`.
 See `2026-07-22-integration-handoff-package-role-validation.md`.
+See `2026-07-22-handoff-history-without-package-diffs.md`.
 
 ---
 

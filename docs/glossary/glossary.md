@@ -431,6 +431,16 @@ It may include the last selected handoff scope, the Handoff Package Role designa
 
 ---
 
+## Handoff History
+
+Handoff History is a compact record of successfully prepared Implementation Handoff Packages. It is distinct from Revision history: Revisions record saved Product Knowledge changes, while Handoff History records durable package-preparation events.
+
+Each event retains an immutable manifest-derived snapshot of the prepared package's time, Handoff Profile, package boundary, readiness outcome, package result and caveat or blocker summary. It does not require the workbench to retain the downloadable package archive.
+
+Handoff History does not provide a built-in package-diff experience for the MVP. Scope-selection changes, previews and failed preparation attempts are not handoff-history events.
+
+---
+
 ## Impact Disclosure
 
 An Impact Disclosure is a transient, non-modal summary shown after a committed Revision identifies impacted Product Artifacts.

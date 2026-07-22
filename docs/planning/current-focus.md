@@ -85,6 +85,7 @@ Recent clarification established the first target user as an AI-assisted develop
 - A realistic scope-selector journey has validated the transition from the default whole-Specification handoff to a mixed partial handoff: explicitly created Definition Scopes keep Feature and UX/UI checks understandable, shared evidence remains relationship-grounded, and a meaningful package is prepared with caveats when a direct external dependency is blocked.
 - A contrasting scope-selector journey has validated the no-package recovery flow: an eligible but insufficient Feature scope retains its selection while ordinary document actions add or include explicit missing definition, and saved Revisions deterministically re-evaluate checks without auto-creating knowledge or tasks.
 - Handoff Package Role terminology has been clarified: Definition Scope, Supporting Context and intentionally outside knowledge are user-assigned package roles, while Direct External Dependencies are derived and cannot be assigned or relabeled as included knowledge.
+- Handoff history has been scoped deliberately: successful preparations record immutable manifest-derived summaries alongside Product Knowledge Revisions, while MVP excludes built-in package diffs, ambiguous major-action logging and required archive retention.
 
 ---
 
