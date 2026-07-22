@@ -495,6 +495,38 @@ Rejected is not an MVP artifact lifecycle state. Rejection belongs to contributi
 
 ---
 
+# DATA-005 — How should Resource References evolve and participate in partial handoffs?
+
+**Category:** Data Model
+
+**Status:** 🟡 Exploring
+
+## Context
+
+The MVP Resource and Resource Reference model supports managed uploaded files and external URLs attached directly to a Specification, Specification Section or Product Artifact. Resource References are not Product Artifacts, Context References or Artifact Relationships, and they do not expand handoff scope automatically.
+
+The first decision intentionally defers several lifecycle and scope details that have direct user consequences. They should be resolved before implementation, without turning Resource References into a general activity log or an unbounded file-management product.
+
+## Question
+
+How should Resource References behave when their attachment target, source or handoff scope changes?
+
+## Open Areas
+
+- Should a Specification-level Resource Reference be excluded from a partial handoff by default unless the user explicitly includes it as Supporting Context, while references on included Sections or Product Artifacts follow their attached target?
+- Does adding, replacing, removing or materially changing a Resource Reference create a Revision on its attached Specification, Section or Product Artifact, and when should that change create deterministic impact outcomes?
+- When one Resource is reused by multiple Resource References, should replacing its managed file or changing its external URL update every reference, create a new Resource, or require explicit per-reference action?
+- How should unavailable external links, access restrictions, preview failures and file-version changes be shown without blocking ordinary document editing or making unsupported availability claims?
+
+## Current Constraints
+
+- Resource References must remain direct, contextual actions; users should not need a separate external-links section before attaching a file or link.
+- Resource References must not automatically enter every AI request or handoff package.
+- A managed file and an external URL remain distinct source forms: included managed files are copied into handoff packages, while external links remain labeled references and become caveats when availability cannot be established.
+- Storage limits, malware scanning, fine-grained permissions and preview rendering are implementation and security concerns, but their user-facing consequences must remain explainable.
+
+---
+
 # UX-001 — Is the document a canonical object or a view over artifacts?
 
 **Category:** User Experience

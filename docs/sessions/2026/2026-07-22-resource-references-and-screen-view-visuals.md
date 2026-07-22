@@ -60,4 +60,4 @@ Storage limits, malware scanning, link checking, fine-grained permissions, previ
 
 ## Recommended Next Step
 
-Validate the direct document-first interaction for attaching, describing, previewing and replacing a Resource Reference on a Screen/View, including how an unavailable external link is shown without blocking ordinary editing.
+Resolve `DATA-005` through a direct document-first validation for attaching, describing, previewing and replacing a Resource Reference on a Screen/View. This should determine Specification-level reference behavior in partial handoffs, Revision and impact behavior for reference changes, and how an unavailable external link is shown without blocking ordinary editing.

@@ -106,6 +106,7 @@ Recent clarification established the first target user as an AI-assisted develop
 - Validate additional Context Relevance and Context Sufficiency rules through concrete assistance request examples.
 - Use the clarified AI assistance governance stance when refining provenance, contribution review and export visibility.
 - Revisit whether AI assistance disclosure should be required, optional, policy-driven or omitted from the product experience.
+- Resolve Resource Reference lifecycle and partial-handoff behavior, including Specification-level attachment scope, Revision and impact rules, replacement behavior and unavailable-link feedback (`DATA-005`).
 - Define remaining artifact-type-specific propagation exceptions and future implementation constraints for the deterministic propagation engine.
 - Use the Project Model to inform the next UX, AI and architecture documents.
 
