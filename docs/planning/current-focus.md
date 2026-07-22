@@ -86,6 +86,7 @@ Recent clarification established the first target user as an AI-assisted develop
 - A contrasting scope-selector journey has validated the no-package recovery flow: an eligible but insufficient Feature scope retains its selection while ordinary document actions add or include explicit missing definition, and saved Revisions deterministically re-evaluate checks without auto-creating knowledge or tasks.
 - Handoff Package Role terminology has been clarified: Definition Scope, Supporting Context and intentionally outside knowledge are user-assigned package roles, while Direct External Dependencies are derived and cannot be assigned or relabeled as included knowledge.
 - Handoff history has been scoped deliberately: successful preparations record immutable manifest-derived summaries alongside Product Knowledge Revisions, while MVP excludes built-in package diffs, ambiguous major-action logging and required archive retention.
+- Handoff evolution after preparation has been validated: changing current Supporting Context into a new Integration Definition Scope activates new checks without altering earlier Handoff History; a newly meaningful scope produces a separate preparation event.
 - General Resource and Resource Reference support has been clarified: managed files and external links may be attached directly to a Specification, Section or Product Artifact, while Screen/View visual references are the first specialized use; resources remain distinct from Product Artifacts, Context References and Artifact Relationships.
 
 ---

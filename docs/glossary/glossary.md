@@ -439,6 +439,8 @@ Each event retains an immutable manifest-derived snapshot of the prepared packag
 
 Handoff History does not provide a built-in package-diff experience for the MVP. Scope-selection changes, previews and failed preparation attempts are not handoff-history events.
 
+A later change to the current handoff boundary or Handoff Package Roles does not alter an earlier event. A new event is created only when the changed scope is successfully prepared.
+
 ---
 
 ## Impact Disclosure

@@ -81,6 +81,7 @@ Conceptually, Project State may include:
 - Discussions;
 - Reviews;
 - Revisions;
+- Handoff History;
 - Provenance;
 - Context References;
 - Resources;
@@ -772,11 +773,13 @@ Guidance must identify its underlying basis, remain optional and never create, a
 
 ## Handoff preparation and readiness
 
-A Handoff Preparation Preference is user-specific application state remembered per user, Project/Specification and Handoff Profile. It may include the last selected handoff scope, the Definition Scope or Supporting Context designation of selected knowledge, whether to validate readiness before preparation, and whether to include the resulting readiness report in the package. It is not shared Project Knowledge and does not alter canonical Project State.
+A Handoff Preparation Preference is user-specific application state remembered per user, Project/Specification and Handoff Profile. It may include the last selected handoff scope, the Handoff Package Role designation of selected knowledge, whether to validate readiness before preparation, and whether to include the resulting readiness report in the package. It is not shared Project Knowledge and does not alter canonical Project State.
 
 When enabled for Prepare Handoff, Implementation Handoff Readiness is a deterministic assessment of the selected scope and its direct external dependencies. Its outcome is `Ready`, `Ready with Caveats` or `Not Ready`, based on explicit Project State rather than an AI judgment. The package preparation result remains separate: a meaningful scope may still produce `Prepared` or `Prepared with Caveats` when readiness is Not Ready. Insufficient product definition prevents preparation of a responsible package even when the user disables readiness validation. For the MVP `Implementation Handoff` profile, a meaningful feature-centered scope includes an active Feature, at least one explicitly related active Functional Requirement and one or more active Acceptance Criteria such that every included Functional Requirement is explicitly validated by at least one criterion. A meaningful UX/UI-centered scope includes active Screen/View artifact(s), an active User Flow explicitly including those views, related active UI Requirement(s), and active underlying Functional Requirement(s) with Acceptance Criteria validating each included requirement. A meaningful integration-centered scope includes active External Integrations section content identifying the external system and its purpose, explicit integration behavior, related active Functional Requirement(s), and Acceptance Criteria validating each included requirement. A meaningful data-model-centered scope includes Data or Domain Model section content identifying relevant entities and explicit relationships, at least one domain rule or invariant governing them, related active Functional Requirement(s), and Acceptance Criteria validating each included requirement.
 
 An optional Readiness Report is an exported snapshot of that assessment. It is not a Product Artifact or lifecycle state.
+
+Each successful package preparation creates an immutable Handoff History event. Later scope changes, including moving integration knowledge from Supporting Context into a new Integration Definition Scope, are evaluated as current handoff state and never alter an earlier event. If the newly expanded scope satisfies every applicable meaningful-definition rule, a later preparation creates a new Handoff History event; if it does not, no new event is created. The MVP does not compare the events as package diffs.
 
 For a mixed-scope handoff, the selected knowledge includes explicit Definition Scope or Supporting Context designations. Each Definition Scope activates its applicable meaningful-product-definition rule, while Supporting Context explains, constrains or caveats a Definition Scope without activating another rule. Definition Scope rules compose conjunctively. A shared Functional Requirement or Acceptance Criterion satisfies more than one Definition Scope only through explicit relationships.
 
