@@ -77,6 +77,7 @@ Recent clarification established the first target user as an AI-assisted develop
 - The first meaningful-definition rule for a feature-centered handoff has been validated: an active Feature needs explicitly related Functional Requirement(s) and Acceptance Criteria validating each included requirement; other context is profile- or relationship-specific rather than universally required.
 - The first meaningful-definition rule for a UX/UI-centered handoff has been validated: Screen/View, User Flow, UI Requirements, underlying Functional Requirements and Acceptance Criteria are all required as an explicitly linked implementation bundle.
 - The first meaningful-definition rule for an integration-centered handoff has been validated: external system and purpose, known integration behavior, related Functional Requirements and acceptance coverage are required; unavailable external contract context remains a caveat rather than invented knowledge.
+- The first meaningful-definition rule for a data-model-centered handoff has been validated: explicit domain structure, at least one governing rule or invariant, related Functional Requirements and acceptance coverage are required; implementation-specific schema choices remain out of scope.
 
 ---
 
