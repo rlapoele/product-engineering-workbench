@@ -1052,7 +1052,7 @@ The project owner may enable AI-use disclosure. When enabled, the owner selects 
 - **Workbench and handoff** — known AI assistance is disclosed within the workbench and included in the handoff.
 - **Handoff only** — known AI assistance is included in the handoff but is not automatically disclosed to ordinary workbench collaborators.
 
-The exact visual treatment in the workbench and the exact handoff representation remain UX and export-format work. They must preserve the selected destination and the limits of the known AI activity trace.
+When disclosure includes handoff, `README.md` provides a concise human-readable disclosure and `manifest.json` is the authoritative structured record. They include only known AI activity whose declared scope is included in the package, do not expose raw prompts, assembled context or raw responses by default, and state that the disclosure is neither final-text authorship attribution nor comprehensive AI-use detection. When no known AI activity is recorded for the included scope, the handoff says so with the same caveat. Exact visual treatment in the workbench remains UX work.
 
 ## Consequences
 

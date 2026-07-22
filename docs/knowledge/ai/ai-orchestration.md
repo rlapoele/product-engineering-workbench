@@ -418,7 +418,7 @@ The trace does not establish exact final-text authorship after human editing, or
 
 AI-use disclosure is a project-owner setting and is off by default. When enabled, it has one selected destination: Workbench only, Workbench and handoff, or Handoff only. Workbench only is the default enabled destination. Disclosure controls automatic presentation to collaborators and handoff consumers; it does not remove the project owner's access to the known AI activity trace.
 
-Contribution review remains required before canonical product knowledge changes. The exact workbench presentation and handoff encoding of disclosure remain UX and export-format work.
+Contribution review remains required before canonical product knowledge changes. When disclosure includes handoff, `README.md` provides a concise human-readable known-AI disclosure and `manifest.json` is the authoritative structured record. They include only entries whose declared scope is included in the package, never raw prompts, assembled context or raw responses by default, and state the known-activity, non-authorship and non-detection limits. If no known activity relates to included scope, they state that limited absence with the same caveat.
 
 Unknown external AI use should be treated as a governance and trust policy issue rather than a technical prevention problem.
 
