@@ -1054,6 +1054,8 @@ The project owner may enable AI-use disclosure. When enabled, the owner selects 
 
 When disclosure includes handoff, `README.md` provides a concise human-readable disclosure and `manifest.json` is the authoritative structured record. They include only known AI activity whose declared scope is included in the package, do not expose raw prompts, assembled context or raw responses by default, and state that the disclosure is neither final-text authorship attribution nor comprehensive AI-use detection. When no known AI activity is recorded for the included scope, the handoff says so with the same caveat. Exact visual treatment in the workbench remains UX work.
 
+Before preparation, the existing package-boundary preview lets the project owner inspect this derived disclosure, open its scoped trace or navigate to change the disclosure setting. It does not permit manual disclosure editing, alter readiness or meaningful-definition outcomes, or create a Handoff History event.
+
 ## Consequences
 
 The product supports a compliance or policy need for disclosure without imposing it as a universal judgment on AI use. Project owners retain the governance evidence needed to make an informed setting choice, while the default experience remains focused on product knowledge quality and review.
