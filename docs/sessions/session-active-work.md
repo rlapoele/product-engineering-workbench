@@ -451,6 +451,7 @@ Validated readiness scenarios:
 - The first document-first Resource Reference interaction is validated. A user attaches a Resource from the contextual actions at its Specification, Section or Product Artifact target, selects or supplies the source, then enters its target-specific purpose and caption before saving; a Screen / View may add represented-state and viewport context. The reference renders inline with its source type and a compact available preview. Replacing it first selects the new source, then offers an explicit choice to reuse the current reference details or start fresh. Reuse copies the details into an editable draft; starting fresh requires re-entry. Nothing changes until the user saves, and an unavailable external preview remains explainable feedback rather than an editing blocker.
 - Resource Reference controls are a short contextual wizard, not persistent document buttons or nested hover menus. The existing generic contextual control opens first-level actions: `Edit` and `Add reference` for an artifact, or `Edit section` and `Add reference` for a section. `Add reference` replaces that control set with source choices and a back action to the original target-aware controls; choosing a source replaces the source choices with the reference-details draft.
 - Contextual document interactions should default to local, non-modal progressive disclosure. Each step replaces or expands nearby content while preserving the user's document position and offering ordinary back navigation; this avoids dialog-driven interruption, particularly on mobile. A modal or dialog requires a specific later justification rather than being the default interaction container.
+- Resource Reference source selection is provisional and does not begin a preserved draft by itself. A private local reference draft starts when the user changes reference details or explicitly chooses `Reuse details` during replacement. It includes the selected source and current details, creates no Revision and persists through ordinary navigation until saved or explicitly discarded; returning to the target offers `Continue reference draft` and `Discard draft`.
 
 See `2026-07-22-readiness-aware-handoff-outcome-validation.md`.
 See `2026-07-22-multiple-readiness-blockers-validation.md`.
@@ -474,6 +475,7 @@ See `2026-07-22-resource-reference-lifecycle-and-reuse-validation.md`.
 See `2026-07-22-resource-reference-document-interaction-validation.md`.
 See `2026-07-22-resource-reference-contextual-wizard-validation.md`.
 See `2026-07-22-contextual-document-disclosure-validation.md`.
+See `2026-07-22-resource-reference-draft-preservation-validation.md`.
 
 ---
 

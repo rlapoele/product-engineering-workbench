@@ -92,6 +92,7 @@ Recent clarification established the first target user as an AI-assisted develop
 - The first document-first Resource Reference interaction has been validated: attach from the local contextual actions, describe the target-specific meaning, preview inline when available, and replace through an explicit reuse-or-start-fresh choice for the reference details before saving.
 - Resource Reference controls have been refined as a compact contextual wizard: target-aware first-level actions advance to source selection and then reference details, with the current step replacing the prior controls rather than adding persistent document buttons or nested hover menus.
 - Local non-modal progressive disclosure has been established as the default for contextual document interactions, preserving the user's place while steps replace or expand nearby content with ordinary back navigation.
+- Resource Reference draft preservation has been bounded: source selection alone is transient; edited details or an explicit reuse choice begin a private local draft that persists until saved or discarded.
 
 ---
 
