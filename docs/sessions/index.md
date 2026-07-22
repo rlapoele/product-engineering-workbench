@@ -37,3 +37,4 @@
 | 2026-07-22-06 | 2026-07-22 | 6 | UX/UI-Centered Handoff Definition | Crystallized | Minimum Screen/View, User Flow, UI Requirement, Functional Requirement and acceptance coverage bundle |
 | 2026-07-22-07 | 2026-07-22 | 7 | Integration-Centered Handoff Definition | Crystallized | Minimum external-system, integration-behavior, requirement and acceptance-coverage bundle |
 | 2026-07-22-08 | 2026-07-22 | 8 | Data-Model-Centered Handoff Definition | Crystallized | Minimum domain structure, rule or invariant, requirement and acceptance-coverage bundle |
+| 2026-07-22-09 | 2026-07-22 | 9 | Mixed-Scope Handoff Composition | Crystallized | Explicit Definition Scope and Supporting Context roles with conjunctive rule composition |

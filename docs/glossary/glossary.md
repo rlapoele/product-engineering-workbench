@@ -395,11 +395,27 @@ The MVP default Handoff Profile is `Implementation Handoff`, intended to be huma
 
 ---
 
+## Handoff Definition Scope
+
+A Handoff Definition Scope is selected Product Knowledge that the user explicitly designates as knowledge the implementation consumer is being asked to implement.
+
+Each Definition Scope activates the applicable meaningful-product-definition rule of the selected Handoff Profile. Multiple Definition Scopes compose conjunctively.
+
+---
+
+## Handoff Supporting Context
+
+Handoff Supporting Context is related Product Knowledge included to explain, constrain or caveat a Handoff Definition Scope without itself becoming an implementation subject.
+
+Supporting Context does not activate an additional meaningful-product-definition rule. It remains distinct from Direct External Dependencies.
+
+---
+
 ## Handoff Preparation Preference
 
 A Handoff Preparation Preference is personal application state remembered per user, Project/Specification and Handoff Profile.
 
-It may include the last selected handoff scope, whether readiness validation runs before preparation and whether the resulting Readiness Report is included in the package. It is not shared Project Knowledge or a project-wide default.
+It may include the last selected handoff scope, the Definition Scope or Supporting Context designation of selected knowledge, whether readiness validation runs before preparation and whether the resulting Readiness Report is included in the package. It is not shared Project Knowledge or a project-wide default.
 
 ---
 

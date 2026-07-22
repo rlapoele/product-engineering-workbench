@@ -317,6 +317,8 @@ For the MVP, Prepare Handoff should use the default `Implementation Handoff` pro
 
 The resulting package should make those caveats prominent in the implementation brief and verification guidance. It should include or reference direct active dependencies outside the requested export scope, clearly labeling them as external dependencies. It must not silently omit limitations or create false confidence.
 
+For a mixed-scope request, the requestor explicitly distinguishes Definition Scope from Supporting Context. Each Definition Scope activates its applicable minimum-definition rule, and all active rules must pass. Supporting Context may explain, constrain or caveat Definition Scope but does not activate another rule. Shared Functional Requirements or Acceptance Criteria may satisfy multiple scopes only through explicit relationships; the workbench must not auto-add missing knowledge. The resulting package labels Definition Scope, Supporting Context and Direct External Dependencies separately.
+
 The readiness check applies only to the requested export scope and its direct external dependencies. It can produce `Ready`, `Ready with Caveats` or `Not Ready`; this result is distinct from the package result. A meaningful scope may still produce `Prepared` or `Prepared with Caveats` when its readiness outcome is Not Ready.
 
 The request should report insufficient product definition and not prepare a package only when the export scope is not meaningful or there is too little product definition to prepare responsibly. This boundary applies even when readiness validation is disabled. A preparation outcome such as `Prepared` or `Prepared with Caveats` describes the package, not the lifecycle state of any Product Artifact.
