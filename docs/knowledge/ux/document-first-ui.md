@@ -130,6 +130,10 @@ Users may attach a managed file or external link directly while working on the w
 
 A Resource may be used at more than one location, but each Resource Reference is edited at its own attached target. Replacing the source creates a new Resource and updates only the explicitly chosen reference; it must not silently replace another artifact's or section's reference. Adding, removing or materially changing a reference follows the ordinary saved Revision and impact-feedback flow for its attached target. An unavailable external link is shown as an explainable caveat or preview failure without blocking ordinary editing; changing the URL creates a new Resource rather than implying that the original changed.
 
+Resource actions belong in the contextual actions for the Specification, Section or Product Artifact where the reference will attach. `Attach resource` lets the user select an existing managed Resource, upload a file or enter an external URL, then describe its local purpose and caption before saving. A Screen / View may additionally capture represented-state and viewport context. The saved reference appears inline at its target with its source type and, when available, a compact preview; the preview supplements rather than replaces the user-authored meaning.
+
+`Replace resource` first selects the replacement source, then asks whether to reuse the existing reference details. Reusing copies that reference's current purpose, caption and applicable location-specific metadata into an editable draft; starting fresh leaves those fields empty and requires the user to enter the required details again. This choice applies only to the reference being replaced and changes nothing until the user explicitly saves. If an external source cannot be previewed or accessed, the inline reference must make that failure understandable without preventing the user from editing or saving the surrounding Product Knowledge.
+
 ## Initial Preset Classification
 
 The initial Project Presets should classify the first Section Catalog as follows:

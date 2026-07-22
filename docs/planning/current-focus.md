@@ -89,12 +89,14 @@ Recent clarification established the first target user as an AI-assisted develop
 - Handoff evolution after preparation has been validated: changing current Supporting Context into a new Integration Definition Scope activates new checks without altering earlier Handoff History; a newly meaningful scope produces a separate preparation event.
 - General Resource and Resource Reference support has been clarified: managed files and external links may be attached directly to a Specification, Section or Product Artifact, while Screen/View visual references are the first specialized use; resources remain distinct from Product Artifacts, Context References and Artifact Relationships.
 - Resource Reference lifecycle and partial-handoff behavior has been resolved: shared Resources have independent target-level references and effectively immutable sources; replacements create new Resources without hidden global updates; target-level reference changes create ordinary Revisions; partial packages exclude Specification-level references by default and de-duplicate shared managed sources while retaining every reference's local meaning.
+- The first document-first Resource Reference interaction has been validated: attach from the local contextual actions, describe the target-specific meaning, preview inline when available, and replace through an explicit reuse-or-start-fresh choice for the reference details before saving.
 
 ---
 
 # Current Activities
 
 - Validate the first-pass document editing and impact-feedback flow through prototypes and concrete specification exercises.
+- Validate accessibility, keyboard behavior and visual density of the Resource Reference attach, preview and replacement controls through a low-fidelity prototype.
 - Validate deterministic next-step guidance through prototypes and concrete specification exercises.
 - Validate additional readiness-aware handoff edge cases through concrete specification exercises.
 - Validate detailed context assembly rules for remaining generation and feedback examples.
