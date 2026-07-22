@@ -1339,7 +1339,7 @@ Context answers:
 
 A Resource is reusable supporting material for a Project. It may be a managed uploaded file or an external URL. A Resource is not a Product Artifact by default.
 
-A Resource Reference attaches a Resource to a Specification, Specification Section or Product Artifact and explains why it is relevant at that location. It may include a user-authored purpose or type, description or caption, and location-specific metadata such as a represented Screen / View state or viewport.
+A Resource Reference attaches a Resource to a Specification, Specification Section or Product Artifact and explains why it is relevant at that location. It may include a user-authored purpose or type, one user-authored Description and location-specific metadata such as a represented Screen / View state or viewport. A downstream representation may render the Description as a caption, but Caption is not a separate MVP Resource Reference field.
 
 The MVP should support both managed uploaded files and external links. Users create a Resource Reference directly while working on the Specification, Section or Product Artifact; they do not need to first place an external link in a separate external-links section. A Resource may be reused through multiple Resource References. Each reference retains its own target, purpose, description and location-specific metadata.
 

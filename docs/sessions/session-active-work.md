@@ -455,6 +455,7 @@ Validated readiness scenarios:
 - A preserved Resource Reference draft has no permanent document badge. Reopening the target's contextual control shows `Edit`, `Continue reference draft` and `Discard draft`; continuation temporarily replaces `Add reference` to prevent a competing flow. Continuing resumes the last meaningful wizard step, while discarding restores ordinary actions.
 - The MVP permits at most one active unsaved Resource Reference draft per attachment target. The user saves or discards it before adding another reference at that target; drafts at different targets remain independent.
 - The MVP Resource Reference Purpose control is a compact prescribed list: `Visual reference`, `Prototype`, `Source material`, `Contract`, `Research`, `Example` and `Other`. `Other` requires a short custom purpose; Screen / View starts on the editable `Visual reference` choice. Administration roles and metadata-list configuration are deferred rather than implied by this fixed MVP list.
+- A Resource Reference has one canonical Description field, including for visual references. Downstream package or UI representations may render it as a caption, but Caption is not a second field and does not create separate user-authored meaning.
 
 See `2026-07-22-readiness-aware-handoff-outcome-validation.md`.
 See `2026-07-22-multiple-readiness-blockers-validation.md`.
@@ -482,6 +483,7 @@ See `2026-07-22-resource-reference-draft-preservation-validation.md`.
 See `2026-07-22-resource-reference-draft-resumption-validation.md`.
 See `2026-07-22-single-resource-reference-draft-per-target-validation.md`.
 See `2026-07-22-resource-reference-purpose-catalog-validation.md`.
+See `2026-07-22-resource-reference-description-field-validation.md`.
 
 ---
 

@@ -96,6 +96,7 @@ Recent clarification established the first target user as an AI-assisted develop
 - Resource Reference draft resumption is contextual rather than permanently flagged: the target action surface offers continuation or discard, temporarily replacing a competing new-reference action until the draft is resolved.
 - The MVP limits unsaved Resource Reference authoring to one active draft per attachment target, avoiding a draft picker while allowing independent drafts at different targets.
 - The MVP Resource Reference Purpose catalog has been fixed as a compact prescribed list with `Other` for a short custom purpose; administrative metadata configuration is explicitly deferred.
+- Resource Reference explanation uses one canonical Description field; downstream consumers may render it as a caption without creating a second field or divergent meaning.
 
 ---
 
