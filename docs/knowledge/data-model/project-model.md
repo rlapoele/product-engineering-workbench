@@ -1349,6 +1349,10 @@ Adding, removing, replacing or materially changing a Resource Reference is a Rev
 
 For the MVP, Resource Reference Purpose uses a compact prescribed list: `Visual reference`, `Prototype`, `Source material`, `Contract`, `Research`, `Example` and `Other`. Selecting `Other` requires a short user-authored purpose. For a Screen / View, `Visual reference` is the initial Purpose but remains editable. Visual references may include screenshots, mockups, wireframes, prototypes and design-file references.
 
+For a `Visual reference` attached to a Screen / View, optional Visual Context metadata may record a represented state and viewport. Represented state is optional free text, such as a default, confirmation, validation-error or empty state. Viewport is optional and uses a compact prescribed list: `Mobile portrait`, `Mobile landscape`, `Tablet portrait`, `Tablet landscape`, `Desktop` or `Other`. No selection means viewport is unspecified. Selecting `Other` requires a free-text viewport value, such as a named device, exact dimensions or breakpoint.
+
+Visual Context is interpretive reference metadata. It does not alter the Screen / View's canonical behavior, create an Artifact Relationship or become a separate device-specification model.
+
 Administrative roles, metadata-catalog configuration and Purpose-list customization are deferred. They must not be inferred from the MVP's fixed Purpose list.
 
 A Resource becomes a Product Artifact only when it needs independent lifecycle, review state, relationships, provenance or collaboration. A Resource Reference remains distinct from an Artifact Relationship and does not create a Product Knowledge Graph edge by itself.
