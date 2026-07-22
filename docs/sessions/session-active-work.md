@@ -439,6 +439,7 @@ Validated readiness scenarios:
 - The first meaningful-definition rule for a data-model-centered scope requires active `Data or Domain Model` section content identifying relevant domain entities and explicit relationships, at least one explicit domain rule or invariant governing the selected elements, related active Functional Requirement(s), and Acceptance Criteria validating every included requirement. The scope selector displays domain structure, domain rule or invariant, related Functional Requirements, and acceptance coverage as deterministic checks. Implementation-level schema details, storage technology, migrations, indexes, database ownership and physical data types are not universal minimum elements. Privacy, retention, security classification, integration ownership and technical constraints are caveats when explicitly relevant and must not be invented.
 - For a mixed-scope handoff, the user explicitly designates selected knowledge as Definition Scope or Supporting Context. Every Definition Scope activates its applicable meaningful-product-definition rule, and all active rules compose conjunctively. Supporting Context explains, constrains or caveats Definition Scope without activating another rule. Shared Functional Requirements or Acceptance Criteria satisfy more than one Definition Scope only through explicit relationships. The workbench never infers the designation, silently promotes Supporting Context or auto-adds missing knowledge. The package distinguishes Definition Scope, Supporting Context and Direct External Dependencies.
 - A partial package makes that boundary explicit in every generated representation. `README.md` gives a concise summary; `IMPLEMENTATION_BRIEF.md` explains Definition Scope, intentionally outside scope and caveats; and `manifest.json` is authoritative for Definition Scope, Supporting Context, Direct External Dependencies and directly related intentionally out-of-package knowledge. `specification/SPECIFICATION.md` and section Markdown files contain only selected scope, labeled by role, and do not claim to be the full Project Specification. The package names only directly related omitted knowledge needed to explain the boundary, not the whole Project Specification.
+- A concrete MealLoop `Pause subscription` mixed handoff validates the composition: Feature and UX/UI Definition Scopes share explicitly related Functional Requirements and Acceptance Criteria; a Subscription data-model excerpt is Supporting Context; cancellation behavior is directly related but intentionally outside the package; and an Open Question blocking a Stripe direct external dependency makes readiness Not Ready while the meaningful package is Prepared with Caveats.
 
 See `2026-07-22-readiness-aware-handoff-outcome-validation.md`.
 See `2026-07-22-multiple-readiness-blockers-validation.md`.
@@ -450,6 +451,7 @@ See `2026-07-22-integration-centered-handoff-definition.md`.
 See `2026-07-22-data-model-centered-handoff-definition.md`.
 See `2026-07-22-mixed-scope-handoff-composition.md`.
 See `2026-07-22-partial-handoff-package-boundary.md`.
+See `2026-07-22-mixed-partial-handoff-validation.md`.
 
 ---
 

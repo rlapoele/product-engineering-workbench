@@ -80,6 +80,7 @@ Recent clarification established the first target user as an AI-assisted develop
 - The first meaningful-definition rule for a data-model-centered handoff has been validated: explicit domain structure, at least one governing rule or invariant, related Functional Requirements and acceptance coverage are required; implementation-specific schema choices remain out of scope.
 - Mixed-scope handoff composition has been clarified: user-designated Definition Scopes each apply their minimum rule conjunctively, while Supporting Context informs or caveats the package without activating additional rules.
 - Partial handoff package boundaries have been clarified: README and implementation brief explain the boundary for humans, manifest is authoritative for machines, and the specification files contain only labeled included scope rather than claiming to be the whole Project Specification.
+- A concrete mixed partial-handoff scenario has validated the combined rules: shared evidence may serve Feature and UX/UI Definition Scopes through explicit relationships; Supporting Context and related omissions remain bounded; and a blocking Direct External Dependency yields Not Ready with a Prepared with Caveats package.
 
 ---
 

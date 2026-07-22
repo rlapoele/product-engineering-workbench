@@ -39,3 +39,4 @@
 | 2026-07-22-08 | 2026-07-22 | 8 | Data-Model-Centered Handoff Definition | Crystallized | Minimum domain structure, rule or invariant, requirement and acceptance-coverage bundle |
 | 2026-07-22-09 | 2026-07-22 | 9 | Mixed-Scope Handoff Composition | Crystallized | Explicit Definition Scope and Supporting Context roles with conjunctive rule composition |
 | 2026-07-22-10 | 2026-07-22 | 10 | Partial Handoff Package Boundary | Crystallized | Explicit boundary representation across package files with manifest as authoritative scope record |
+| 2026-07-22-11 | 2026-07-22 | 11 | Mixed Partial Handoff Validation | Crystallized | Combined Definition Scope, Supporting Context, omission and external-blocker behavior validated |
