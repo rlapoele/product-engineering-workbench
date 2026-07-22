@@ -35,3 +35,4 @@
 | 2026-07-22-04 | 2026-07-22 | 4 | Insufficient Product Definition Boundary | Crystallized | No-package boundary for eligible scopes lacking meaningful product definition |
 | 2026-07-22-05 | 2026-07-22 | 5 | Feature-Centered Handoff Definition | Crystallized | Minimum Feature, Functional Requirement and Acceptance Criteria definition for a meaningful handoff |
 | 2026-07-22-06 | 2026-07-22 | 6 | UX/UI-Centered Handoff Definition | Crystallized | Minimum Screen/View, User Flow, UI Requirement, Functional Requirement and acceptance coverage bundle |
+| 2026-07-22-07 | 2026-07-22 | 7 | Integration-Centered Handoff Definition | Crystallized | Minimum external-system, integration-behavior, requirement and acceptance-coverage bundle |
