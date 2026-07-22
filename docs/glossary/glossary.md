@@ -381,6 +381,8 @@ It may contain structured files, document sections, implementation guidance, acc
 
 The MVP package should include a combined specification file, section-level Markdown files, an implementation brief and a manifest file. It may also include a standalone Readiness Report when readiness validation and report inclusion are selected. Artifact-level files and expanded metadata may be added as stretch items.
 
+For a partial handoff, the package must make its boundary explicit: Definition Scope, Supporting Context, directly related knowledge intentionally outside the package, and Direct External Dependencies. The manifest is the authoritative machine-readable representation of that boundary.
+
 ---
 
 ## Handoff Profile

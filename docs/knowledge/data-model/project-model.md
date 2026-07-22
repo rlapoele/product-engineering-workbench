@@ -774,6 +774,8 @@ An optional Readiness Report is an exported snapshot of that assessment. It is n
 
 For a mixed-scope handoff, the selected knowledge includes explicit Definition Scope or Supporting Context designations. Each Definition Scope activates its applicable meaningful-product-definition rule, while Supporting Context explains, constrains or caveats a Definition Scope without activating another rule. Definition Scope rules compose conjunctively. A shared Functional Requirement or Acceptance Criterion satisfies more than one Definition Scope only through explicit relationships.
 
+For a partial handoff, the manifest is the authoritative machine-readable record of the package boundary. It identifies the Definition Scope and Supporting Context entries, Direct External Dependencies, and directly related knowledge intentionally outside the package. The combined specification and section files contain only the included scope, labeled by role. They must not claim to be the complete Project Specification. Omitted knowledge is recorded only when it is directly related and relevant to understanding the boundary; the model does not represent the rest of the Project as an exhaustive omission list.
+
 ---
 
 # 13. Contributor
@@ -1415,7 +1417,7 @@ The target export model may also include artifact-level files and expanded metad
 
 The MVP may defer the `artifacts/` folder and expanded `metadata/` folder as stretch items, but should still generate `manifest.json` as the minimal required metadata file.
 
-The manifest should identify the project, template, preset, included sections, artifact IDs, export timestamp and export format version.
+The manifest should identify the project, template, preset, included sections, artifact IDs, export timestamp and export format version. For a partial package, it is also the authoritative record of Definition Scope, Supporting Context, Direct External Dependencies and directly related intentionally out-of-package knowledge.
 
 ---
 

@@ -79,6 +79,7 @@ Recent clarification established the first target user as an AI-assisted develop
 - The first meaningful-definition rule for an integration-centered handoff has been validated: external system and purpose, known integration behavior, related Functional Requirements and acceptance coverage are required; unavailable external contract context remains a caveat rather than invented knowledge.
 - The first meaningful-definition rule for a data-model-centered handoff has been validated: explicit domain structure, at least one governing rule or invariant, related Functional Requirements and acceptance coverage are required; implementation-specific schema choices remain out of scope.
 - Mixed-scope handoff composition has been clarified: user-designated Definition Scopes each apply their minimum rule conjunctively, while Supporting Context informs or caveats the package without activating additional rules.
+- Partial handoff package boundaries have been clarified: README and implementation brief explain the boundary for humans, manifest is authoritative for machines, and the specification files contain only labeled included scope rather than claiming to be the whole Project Specification.
 
 ---
 
