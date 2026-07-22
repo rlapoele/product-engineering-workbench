@@ -478,6 +478,8 @@ AI-generated or AI-assisted material should not silently become canonical produc
 
 The user experience may support project-level governance settings for built-in AI capabilities, such as enabling or disabling AI assistance or limiting where specific AI capabilities can be used. It must also support a project-owner AI-use disclosure setting, off by default. When enabled, the owner selects Workbench only, Workbench and handoff, or Handoff only; Workbench only is the default enabled destination. This setting controls automatic disclosure, not the project owner's ability to inspect known AI activity.
 
+When Workbench disclosure is enabled, collaborators see one discreet project-level **Known AI activity** entry near project information or the document outline. It opens the scoped trace without adding persistent AI-use badges to artifact prose or implying exact word-level authorship. When disclosure is off or Handoff only, that entry is not automatically shown to collaborators. The project owner can inspect the trace directly through project governance/settings for every disclosure destination. A handoff includes disclosure only when its selected destination includes handoff; this applies equally to every handoff recipient, including the project owner.
+
 The workbench should not claim to prevent all external AI use by human collaborators. A human contributor may use an outside AI tool before submitting work. The product can record voluntary disclosure, provenance notes and review workflows for known AI-assisted work, but cannot reliably prove which final content came from AI or that a human contribution was not externally AI-assisted.
 
 ---

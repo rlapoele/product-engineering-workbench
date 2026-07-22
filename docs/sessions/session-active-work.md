@@ -457,6 +457,7 @@ Validated readiness scenarios:
 - The MVP Resource Reference Purpose control is a compact prescribed list: `Visual reference`, `Prototype`, `Source material`, `Contract`, `Research`, `Example` and `Other`. `Other` requires a short custom purpose; Screen / View starts on the editable `Visual reference` choice. Administration roles and metadata-list configuration are deferred rather than implied by this fixed MVP list.
 - A Resource Reference has one canonical Description field, including for visual references. Downstream package or UI representations may render it as a caption, but Caption is not a second field and does not create separate user-authored meaning.
 - Known in-workbench AI assistance and voluntary external-AI declarations are recorded in a project-owner-inspectable AI Activity Trace. This trace records the request, scope, response, Context Explanation, status and any explicit Provenance or Revision link; it does not claim exact final-text authorship after human editing or comprehensive external-AI detection. AI-use disclosure is off by default. When a project owner enables it, one destination is selected: Workbench only (the default enabled destination), Workbench and handoff, or Handoff only. The selected destination controls automatic disclosure, not the project owner's trace access.
+- When workbench disclosure is enabled, collaborators see a single project-level `Known AI activity` entry near project information or the document outline. It opens scoped trace information without persistent artifact badges. When workbench disclosure is off or Handoff only, collaborators do not see that automatic entry; the project owner can inspect the trace directly for every setting. A handoff includes disclosure only when its destination includes handoff, uniformly for all recipients including the owner.
 
 See `2026-07-22-readiness-aware-handoff-outcome-validation.md`.
 See `2026-07-22-multiple-readiness-blockers-validation.md`.
@@ -486,6 +487,7 @@ See `2026-07-22-single-resource-reference-draft-per-target-validation.md`.
 See `2026-07-22-resource-reference-purpose-catalog-validation.md`.
 See `2026-07-22-resource-reference-description-field-validation.md`.
 See `2026-07-22-ai-use-disclosure-governance-validation.md`.
+See `2026-07-22-ai-disclosure-workbench-presentation-validation.md`.
 
 ---
 

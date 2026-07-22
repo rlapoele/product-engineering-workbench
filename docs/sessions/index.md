@@ -57,3 +57,4 @@
 | 2026-07-22-26 | 2026-07-22 | 26 | Resource Reference Purpose Catalog Validation | Crystallized | Compact MVP Purpose list with custom Other value |
 | 2026-07-22-27 | 2026-07-22 | 27 | Resource Reference Description Field Validation | Crystallized | One canonical description with optional downstream caption rendering |
 | 2026-07-22-28 | 2026-07-22 | 28 | AI Use Disclosure Governance Validation | Crystallized | Owner trace, default-off disclosure and selectable disclosure destinations |
+| 2026-07-22-29 | 2026-07-22 | 29 | AI Disclosure Workbench Presentation Validation | Crystallized | Project-level trace entry and owner access across disclosure destinations |
