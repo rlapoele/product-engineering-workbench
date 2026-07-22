@@ -74,6 +74,7 @@ Recent clarification established the first target user as an AI-assisted develop
 - Multiple simultaneous readiness blockers have been validated: any explicit blocker makes the scope Not Ready; the readiness report groups affected artifacts and dependencies by their originating Open Question, provides one follow-up action per blocker and uses deterministic non-semantic ordering.
 - Handoff scope eligibility has been clarified as a deterministic precondition separate from readiness: the MVP `Implementation Handoff` profile requires a whole-Specification or section-rooted scope, while individual artifacts may only narrow a selected section.
 - The no-package boundary has been validated: an eligible scope can still lack enough product definition for responsible handoff; this produces Not Ready when validated and prevents package preparation even when validation is disabled.
+- The first meaningful-definition rule for a feature-centered handoff has been validated: an active Feature needs explicitly related Functional Requirement(s) and Acceptance Criteria validating each included requirement; other context is profile- or relationship-specific rather than universally required.
 
 ---
 

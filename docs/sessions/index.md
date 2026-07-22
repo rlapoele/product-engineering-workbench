@@ -33,3 +33,4 @@
 | 2026-07-22-02 | 2026-07-22 | 2 | Multiple Readiness Blockers Validation | Crystallized | Deterministic aggregation, grouping, ordering and follow-up guidance for simultaneous blockers |
 | 2026-07-22-03 | 2026-07-22 | 3 | Handoff Scope Eligibility | Crystallized | Section-rooted MVP handoff scopes and separation of scope eligibility from readiness |
 | 2026-07-22-04 | 2026-07-22 | 4 | Insufficient Product Definition Boundary | Crystallized | No-package boundary for eligible scopes lacking meaningful product definition |
+| 2026-07-22-05 | 2026-07-22 | 5 | Feature-Centered Handoff Definition | Crystallized | Minimum Feature, Functional Requirement and Acceptance Criteria definition for a meaningful handoff |
