@@ -403,6 +403,8 @@ A Handoff Definition Scope is selected Product Knowledge that the user explicitl
 
 Each Definition Scope activates the applicable meaningful-product-definition rule of the selected Handoff Profile. Multiple Definition Scopes compose conjunctively.
 
+For a mixed handoff, each Definition Scope is an explicitly created, separately displayed selection set. This preserves the user's designation and lets the workbench show deterministic checks for each implementation subject; shared evidence remains shared only through explicit relationships.
+
 ---
 
 ## Handoff Supporting Context
