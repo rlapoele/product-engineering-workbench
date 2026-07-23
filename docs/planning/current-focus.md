@@ -105,6 +105,7 @@ Recent clarification established the first target user as an AI-assisted develop
 - Visual Context handoff representation is now bounded: the manifest remains authoritative Resource Reference metadata, while Screen / View export content gives implementation consumers a concise, reference-local mention when represented state or viewport is supplied; neither representation promotes it to canonical behavior.
 - Shared-Resource handoff semantics are now bounded: the manifest records each source once by URL or package-relative path, references retain local meaning, and only human or requested AI review may assess semantic mismatch in free-text Visual Context; no automatic error, Stale state or readiness block follows from sharing alone.
 - Direct handoff semantics are now bounded: disabling readiness validation produces no hidden reduced assessment, readiness outcome or report; the preview states that validation was not run, while ordinary included risk and dependency knowledge remains visible and eligibility and meaningful-definition safeguards still apply.
+- Handoff History now distinguishes direct handoffs truthfully: its immutable summary records `Readiness validation not run` instead of a blank or inferred positive outcome, while validated handoffs retain their actual readiness result.
 
 ---
 
