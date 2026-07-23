@@ -103,6 +103,7 @@ Recent clarification established the first target user as an AI-assisted develop
 - The MVP Resource Reference Purpose catalog has been fixed as a compact prescribed list with `Other` for a short custom purpose; administrative metadata configuration is explicitly deferred.
 - Resource Reference explanation uses one canonical Description field; downstream consumers may render it as a caption without creating a second field or divergent meaning.
 - Visual Context handoff representation is now bounded: the manifest remains authoritative Resource Reference metadata, while Screen / View export content gives implementation consumers a concise, reference-local mention when represented state or viewport is supplied; neither representation promotes it to canonical behavior.
+- Shared-Resource handoff semantics are now bounded: the manifest records each source once by URL or package-relative path, references retain local meaning, and only human or requested AI review may assess semantic mismatch in free-text Visual Context; no automatic error, Stale state or readiness block follows from sharing alone.
 
 ---
 

@@ -463,6 +463,7 @@ Validated readiness scenarios:
 - Each successful Handoff History event retains only a compact immutable AI-disclosure summary: selected destination, whether disclosure was included, disclosed-entry count, whether no known activity was recorded for included scope and the standard trace-limit caveat. It stores neither entry-level trace detail, raw prompts, raw responses nor a live link to current trace state; the manifest snapshot remains authoritative for what the package disclosed.
 - A `Visual reference` on a Screen / View may optionally add local Visual Context: free-text represented state and an optional Viewport. Viewport uses `Mobile portrait`, `Mobile landscape`, `Tablet portrait`, `Tablet landscape`, `Desktop` or `Other`; an unselected value means unspecified and `Other` requires a free-text device, dimensions or breakpoint. This metadata helps interpret a visual without altering canonical Screen / View behavior or creating a device model.
 - An included Screen / View visual reference carries Visual Context in both package representations with distinct roles: `manifest.json` is authoritative metadata, while the human-readable Screen / View export gives a concise, reference-local mention only when represented state and/or viewport is supplied. The human-readable mention identifies its reference, omits unspecified fields and remains interpretive rather than a canonical Screen / View state or behavior declaration.
+- In a mixed MeatLoop handoff, one shared checkout-prototype Resource appears once in the manifest—by URL for an external source or package-relative path for a managed file, never by a consumer-machine-specific `file://` URI—while its Order review and Order confirmation references retain separate Descriptions and Visual Context. Reuse is structurally visible but is not an automatic ambiguity or error: free-text represented state needs human judgment or an explicitly requested AI Review or Find Inconsistencies request. Any resulting Finding is caveated and non-canonical; it does not automatically alter metadata, mark artifacts Stale or block a handoff.
 
 See `2026-07-22-readiness-aware-handoff-outcome-validation.md`.
 See `2026-07-22-multiple-readiness-blockers-validation.md`.
@@ -498,6 +499,7 @@ See `2026-07-22-ai-disclosure-preparation-preview-validation.md`.
 See `2026-07-22-ai-disclosure-handoff-history-validation.md`.
 See `2026-07-22-screen-view-visual-context-validation.md`.
 See `2026-07-23-screen-view-visual-context-handoff-representation-validation.md`.
+See `2026-07-23-shared-visual-resource-handoff-validation.md`.
 
 ---
 
