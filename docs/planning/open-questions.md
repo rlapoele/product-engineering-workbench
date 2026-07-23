@@ -843,7 +843,7 @@ The MVP should include unresolved open questions and known risks in the export.
 
 Open questions should not block export by default, but the package should clearly indicate when unresolved questions may block or increase the risk of implementation.
 
-Prepare Handoff should generate the best available package for a meaningful selected scope even when active artifacts are Stale or implementation caveats remain. The result should be identified as `Prepared` or `Prepared with Caveats`, which is a package-level result rather than an artifact lifecycle state. When the selected scope has insufficient product definition to prepare responsibly, no package should be prepared; this boundary applies even when `Validate Readiness` is disabled.
+Prepare Handoff should generate the best available package for a meaningful selected scope even when active artifacts are Stale or implementation caveats remain. The result should be identified as `Prepared` or `Prepared with Caveats`, which is a package-level result rather than an artifact lifecycle state. A direct handoff retains the `Prepared` result and separately records `Readiness validation not run`; History and preparation confirmation render the two fields as `Prepared - readiness validation not run`, without adding a third package-result value. When the selected scope has insufficient product definition to prepare responsibly, no package should be prepared; this boundary applies even when `Validate Readiness` is disabled.
 
 The caveat summary should include relevant Stale artifacts, Risks, Assumptions, Open Questions, blockers, missing or external UX/UI design guidance, and direct active dependencies outside the selected scope. Dependencies outside the scope should be labeled as external dependencies.
 

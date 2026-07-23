@@ -106,6 +106,7 @@ Recent clarification established the first target user as an AI-assisted develop
 - Shared-Resource handoff semantics are now bounded: the manifest records each source once by URL or package-relative path, references retain local meaning, and only human or requested AI review may assess semantic mismatch in free-text Visual Context; no automatic error, Stale state or readiness block follows from sharing alone.
 - Direct handoff semantics are now bounded: disabling readiness validation produces no hidden reduced assessment, readiness outcome or report; the preview states that validation was not run, while ordinary included risk and dependency knowledge remains visible and eligibility and meaningful-definition safeguards still apply.
 - Handoff History now distinguishes direct handoffs truthfully: its immutable summary records `Readiness validation not run` instead of a blank or inferred positive outcome, while validated handoffs retain their actual readiness result.
+- Direct-handoff presentation now preserves two dimensions: package result remains `Prepared`, validation state is `Readiness validation not run`, and History or confirmation combines them as `Prepared - readiness validation not run` without adding a third result value.
 
 ---
 
