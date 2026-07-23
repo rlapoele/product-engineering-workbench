@@ -64,3 +64,4 @@
 | 2026-07-22-33 | 2026-07-22 | 33 | Screen/View Visual Context Validation | Crystallized | Optional represented state and structured responsive viewport context |
 | 2026-07-23-01 | 2026-07-23 | 1 | Screen/View Visual Context Handoff Representation Validation | Crystallized | Authoritative manifest metadata plus concise reference-local Screen/View export mention |
 | 2026-07-23-02 | 2026-07-23 | 2 | Shared Visual Resource Handoff Validation | Crystallized | One package source record, local references and review-only semantic ambiguity assessment |
+| 2026-07-23-03 | 2026-07-23 | 3 | Direct Handoff Without Readiness Validation | Crystallized | No hidden assessment or report; visible validation omission and invariant definition safeguards |
