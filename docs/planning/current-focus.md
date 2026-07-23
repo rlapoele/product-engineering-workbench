@@ -108,6 +108,7 @@ Recent clarification established the first target user as an AI-assisted develop
 - Handoff History now distinguishes direct handoffs truthfully: its immutable summary records `Readiness validation not run` instead of a blank or inferred positive outcome, while validated handoffs retain their actual readiness result.
 - Direct-handoff presentation now preserves two dimensions: package result remains `Prepared`, validation state is `Readiness validation not run`, and History or confirmation combines them as `Prepared - readiness validation not run` without adding a third result value.
 - The manifest now mirrors direct-handoff readiness state for machine consumers: it distinguishes evaluated outcomes from `not_run`, records report inclusion and never relies on a blank value or inferred `Ready` state.
+- Package-level readiness disclosure is now symmetric: the README states the evaluated outcome when validation ran and `Readiness validation was not run` for a direct handoff, without generating a substitute report or assessment.
 
 ---
 
