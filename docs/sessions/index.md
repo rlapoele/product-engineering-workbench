@@ -67,3 +67,4 @@
 | 2026-07-23-03 | 2026-07-23 | 3 | Direct Handoff Without Readiness Validation | Crystallized | No hidden assessment or report; visible validation omission and invariant definition safeguards |
 | 2026-07-23-04 | 2026-07-23 | 4 | Handoff History Readiness Validation State | Crystallized | Explicit immutable distinction between evaluated readiness and validation not run |
 | 2026-07-23-05 | 2026-07-23 | 5 | Direct Handoff Result Presentation | Crystallized | `Prepared` result plus explicit not-run validation state, rendered together for people |
+| 2026-07-23-06 | 2026-07-23 | 6 | Manifest Readiness Validation State | Crystallized | Machine-readable evaluated versus not-run readiness state and report inclusion |
