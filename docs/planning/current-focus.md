@@ -110,6 +110,7 @@ Recent clarification established the first target user as an AI-assisted develop
 - The manifest now mirrors direct-handoff readiness state for machine consumers: it distinguishes evaluated outcomes from `not_run`, records report inclusion and never relies on a blank value or inferred `Ready` state.
 - Package-level readiness disclosure is now symmetric: the README states the evaluated outcome when validation ran and `Readiness validation was not run` for a direct handoff, without generating a substitute report or assessment.
 - README entry-point presentation is now ordered for scanning: package metadata, Package boundary, Readiness, conditional Known AI activity and Start here; detailed material remains in the implementation brief, report and manifest.
+- A validated `Not Ready` README now separates its `Prepared with Caveats` package result from the readiness outcome, explains that meaningful scope remains but blockers exist, and links to the report instead of repeating blocker detail.
 
 ---
 
