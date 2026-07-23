@@ -112,6 +112,7 @@ Recent clarification established the first target user as an AI-assisted develop
 - README entry-point presentation is now ordered for scanning: package metadata, Package boundary, Readiness, conditional Known AI activity and Start here; detailed material remains in the implementation brief, report and manifest.
 - A validated `Not Ready` README now separates its `Prepared with Caveats` package result from the readiness outcome, explains that meaningful scope remains but blockers exist, and links to the report instead of repeating blocker detail.
 - Evaluated README wording now forms a coherent set: `Ready` reports no blockers or caveats, `Ready with Caveats` reports non-blocking caveats, and both retain separate package results and optional report links without duplicating details.
+- README readiness scannability is validated across all four states: a fixed package layout varies only its package result, concise Readiness copy and report link, while boundary, conditional disclosure and navigation stay stable.
 
 ---
 
