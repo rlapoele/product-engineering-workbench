@@ -1458,6 +1458,8 @@ A handoff AI disclosure includes only known AI activity whose declared scope is 
 
 An included Resource Reference travels with the Specification, Section or Product Artifact to which it is attached; a Resource never expands handoff scope by itself. A Specification-level Resource Reference is excluded from a partial handoff unless the user explicitly includes it as Supporting Context. A managed uploaded file referenced by included scope should be copied into the Implementation Handoff Package with its reference metadata. If one included Resource has several included references, its managed source is copied once while every reference and its local purpose remain represented in the package. An external Resource remains a labeled link in the package and should be surfaced as a caveat when its availability cannot be established.
 
+For an included `Visual reference` on a Screen / View, `manifest.json` is authoritative for its Visual Context metadata. Human-readable Screen / View export content also includes a compact, reference-local Visual Context mention when that metadata is present. The mention identifies the specific reference and may state its represented state and/or viewport; it does not repeat unspecified fields, become a top-level Screen / View state summary or redefine canonical interface behavior.
+
 ---
 
 # 27. Initial Model Summary

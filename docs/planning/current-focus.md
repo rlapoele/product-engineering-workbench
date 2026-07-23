@@ -102,6 +102,7 @@ Recent clarification established the first target user as an AI-assisted develop
 - The MVP limits unsaved Resource Reference authoring to one active draft per attachment target, avoiding a draft picker while allowing independent drafts at different targets.
 - The MVP Resource Reference Purpose catalog has been fixed as a compact prescribed list with `Other` for a short custom purpose; administrative metadata configuration is explicitly deferred.
 - Resource Reference explanation uses one canonical Description field; downstream consumers may render it as a caption without creating a second field or divergent meaning.
+- Visual Context handoff representation is now bounded: the manifest remains authoritative Resource Reference metadata, while Screen / View export content gives implementation consumers a concise, reference-local mention when represented state or viewport is supplied; neither representation promotes it to canonical behavior.
 
 ---
 
