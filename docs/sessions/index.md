@@ -69,3 +69,4 @@
 | 2026-07-23-05 | 2026-07-23 | 5 | Direct Handoff Result Presentation | Crystallized | `Prepared` result plus explicit not-run validation state, rendered together for people |
 | 2026-07-23-06 | 2026-07-23 | 6 | Manifest Readiness Validation State | Crystallized | Machine-readable evaluated versus not-run readiness state and report inclusion |
 | 2026-07-23-07 | 2026-07-23 | 7 | Package Readiness Statement | Crystallized | README discloses evaluated readiness or that validation was not run |
+| 2026-07-23-08 | 2026-07-23 | 8 | README Handoff Summary Layout | Crystallized | Scannable package boundary, readiness and conditional AI-disclosure ordering |
