@@ -117,6 +117,7 @@ Recent clarification established the first target user as an AI-assisted develop
 - Direct-handoff README disclosure is also bounded when known activity exists: it gives only an included-scope entry count and manifest link, keeping request-level trace detail and authorship claims out of the README while readiness remains independent.
 - Evaluated-handoff AI-disclosure scenarios are validated as a batch: `Not Ready` and `Ready with Caveats` remain distinguishable despite the shared caveated package result, while known or no-known activity is separately and concisely disclosed.
 - Readiness-report inclusion is now aligned across evaluated handoffs: owner choice affects only the report file and README link, while manifest and Handoff History retain immutable inclusion state without changing outcome or package result.
+- The README/readiness/report/AI-disclosure representation thread is closed: a representative matrix covers every readiness state, report inclusion or omission, and disclosure state while preserving consistent README, manifest and Handoff History semantics.
 
 ---
 
@@ -129,7 +130,7 @@ Recent clarification established the first target user as an AI-assisted develop
 - Validate detailed context assembly rules for remaining generation and feedback examples.
 - Clarify how discussions crystallize into stable product knowledge.
 - Validate the first Section Catalog and Project Preset classification through concrete specification exercises.
-- Clarify the MVP export package structure for implementation handoff.
+- Validate remaining export-format details and package-generation constraints beyond the resolved README, readiness, report and AI-disclosure representations.
 - Detail the resolved asynchronous Collaboration Request and Contribution Response flow for human and AI contributors.
 - Detail contributor selection using both capability and availability.
 - Validate the first-pass Assistance Request Type matrix through concrete specification exercises.
