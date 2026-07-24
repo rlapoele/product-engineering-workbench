@@ -289,7 +289,7 @@ Contributor availability should shape which collaborators the user can request h
 
 For human contributors in the MVP, availability depends on invitation and acceptance. A project owner may invite a human collaborator at project creation time or later. The invited person may need to complete onboarding before accepting the invitation and becoming available for scoped Collaboration Requests.
 
-For AI Contributors provided by the application in the MVP, availability is different. Built-in AI assistance should be available by default when the relevant AI capability is enabled and usable. The user does not invite built-in AI Contributors in the same way they invite human collaborators.
+For AI Contributors in the MVP, availability is personal rather than invitation-gated. A human user may use AI assistance only through their own enabled, usable Bring Your Own AI credentials; a project owner or other collaborator enabling AI does not enable it for anyone else. The user does not invite an AI Contributor in the same way they invite a human collaborator, but applicable Project settings still apply.
 
 Example capabilities include:
 
@@ -308,7 +308,7 @@ The project owner remains responsible for accepting, rejecting or acting on cont
 
 ## Conversations Workspace
 
-Conversations are a separate project-scoped workspace for multi-party working-memory exchange, not an inline component of the Specification and not an Assistance Request Type. A user may initiate a Conversation from contextual document actions on the Project, a Section, a Product Artifact or selected content; the source/scope is carried into the new Conversation.
+Conversations are a separate project-scoped workspace for multi-party working-memory exchange, not an inline component of the Specification and not an Assistance Request Type. A user may initiate a Conversation from contextual document actions on the Project, a Section, a Product Artifact or selected content; the source/scope is carried into the new Conversation. An AI Contributor is available to a Conversation only through a participating human user's enabled Bring Your Own AI configuration; the detailed visibility and invocation behavior remains to be defined.
 
 On a sufficiently wide layout, opening Conversations reveals a dedicated right-side pane that reflows the document workspace rather than overlaying it. This preserves visible product context while keeping the Conversation itself outside canonical document content. The document retains only compact contextual cues that open the relevant Conversation or filtered Conversation list.
 
@@ -492,7 +492,7 @@ When AI contributes through the workbench, the project owner should be able to i
 
 AI-generated or AI-assisted material should not silently become canonical product knowledge. A Contribution Response remains conversational input; it can influence product knowledge only through a separate, explicit user action or another authorized workflow.
 
-The user experience may support project-level governance settings for built-in AI capabilities, such as enabling or disabling AI assistance or limiting where specific AI capabilities can be used. It must also support a project-owner AI-use disclosure setting, off by default. When enabled, the owner selects Workbench only, Workbench and handoff, or Handoff only; Workbench only is the default enabled destination. This setting controls automatic disclosure, not the project owner's ability to inspect known AI activity.
+The user experience may support Project-level governance settings that limit where personally enabled Bring Your Own AI assistance may be used. Those settings must not enable a human user's AI support for other collaborators or create a shared Project credential. It must also support a project-owner AI-use disclosure setting, off by default. When enabled, the owner selects Workbench only, Workbench and handoff, or Handoff only; Workbench only is the default enabled destination. This setting controls automatic disclosure, not the project owner's ability to inspect known AI activity.
 
 When Workbench disclosure is enabled, collaborators see one discrete project-level **Known AI activity** entry near project information or the document outline. It opens the scoped trace without adding persistent AI-use badges to artifact prose or implying exact word-level authorship. When disclosure is off or Handoff only, that entry is not automatically shown to collaborators. The project owner can inspect the trace directly through project governance/settings for every disclosure destination. A handoff includes disclosure only when its selected destination includes handoff; this applies equally to every handoff recipient, including the project owner.
 

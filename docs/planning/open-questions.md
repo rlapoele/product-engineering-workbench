@@ -994,7 +994,7 @@ Review is a composite Assistance Request Type. It may include multiple Check Typ
 
 Contributor matching should consider requested capability and contributor availability.
 
-For human contributors, MVP availability is invitation-gated. For application-provided AI Contributors, MVP availability means the relevant capability is enabled and usable.
+For human contributors, MVP availability is invitation-gated. For AI Contributors, availability is personal to the human user invoking assistance: that user must have enabled usable Bring Your Own AI credentials, and the requested action must be permitted by applicable Project settings. One collaborator's AI configuration does not make AI available to another collaborator.
 
 Contributors will respond asynchronously by submitting Contribution Responses.
 
@@ -1008,7 +1008,7 @@ If a manual action informed by a Contribution Response changes product knowledge
 
 Known AI assistance should remain traceable and governable through Contribution records, accepted Revisions, Provenance, Context Explanations and project settings. Its automatic disclosure within the workbench or handoff follows the project-owner AI-use disclosure setting.
 
-The workbench can govern AI assistance that occurs inside the product, including built-in AI Contributors and AI-assisted Contribution Responses disclosed by human contributors.
+The workbench can govern AI assistance that occurs inside the product through personally configured Bring Your Own AI support, as well as AI-assisted Contribution Responses disclosed by human contributors.
 
 The workbench cannot reliably prevent or prove undisclosed external AI use by a human collaborator.
 

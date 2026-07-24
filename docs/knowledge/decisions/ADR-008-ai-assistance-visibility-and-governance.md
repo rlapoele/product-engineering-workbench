@@ -26,7 +26,7 @@ AI-generated or AI-assisted material should not silently become canonical produc
 
 Canonical product knowledge should change only when the project owner or another authorized contributor accepts, edits or otherwise acts on the contribution.
 
-The workbench may support project-level governance settings for built-in AI capabilities, including whether AI assistance is enabled and where specific capabilities may be used.
+The workbench may support Project-level governance settings that limit where personally enabled Bring Your Own AI assistance may be used. Provider and model credentials, enablement and associated usage remain personal to the individual human user; a Project setting does not create shared AI access.
 
 Known AI-assisted product knowledge should be represented in Provenance when accepted into canonical project knowledge.
 
@@ -44,8 +44,8 @@ This decision preserves the principle that humans remain in control while acknow
 
 The workbench can reliably govern:
 
-- built-in AI Contributors;
-- enabled AI capabilities;
+- known assistance invoked through personally configured Bring Your Own AI;
+- which Project actions permit personally enabled AI assistance;
 - scoped assistance requests;
 - assembled context;
 - submitted AI Contribution Responses;

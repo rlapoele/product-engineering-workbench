@@ -38,7 +38,7 @@ An AI Contributor is an artificial intelligence contributor that can participate
 
 AI Contributors are contributors. Their contributions should remain visible to users and should not silently replace human judgment.
 
-In the MVP, AI Contributors provided by the application are available by default when their capabilities are enabled.
+In the MVP, an AI Contributor is available to a particular human user only through that user's enabled Bring Your Own AI configuration. It is not a shared Project credential or an independently available project participant.
 
 ## AI Implementation Environment
 
@@ -52,7 +52,7 @@ AI Contributors help create, review or refine product knowledge. AI Implementati
 
 An AI Assistant is a general AI support surface available inside the workbench to help users think, navigate, understand terminology, ask questions and decide what to do next.
 
-The AI Assistant is distinct from scoped assistance requests. It may help the user choose or initiate an Assistance Request Type, but it should not silently alter canonical product knowledge.
+The AI Assistant is distinct from scoped assistance requests. When it uses AI capabilities, it is available only through the current human user's enabled Bring Your Own AI configuration. It may help the user choose or initiate an Assistance Request Type, but it should not silently alter canonical product knowledge.
 
 ## AI Assistance Governance
 
@@ -116,6 +116,16 @@ Product Artifacts may be atomic or composite and may reference other Product Art
 
 ---
 
+# B
+
+## Bring Your Own AI (BYO-AI)
+
+Bring Your Own AI is the MVP model in which a human user supplies and enables their own provider and model credentials for AI support.
+
+The configuration, provider access and associated usage belong to that human user. Enabling it makes AI assistance available to that user only; it does not expose credentials, enable AI for other collaborators or create a Project-owned AI credential.
+
+---
+
 # C
 
 ## Capability
@@ -159,7 +169,7 @@ Contributor Availability describes whether a contributor can receive or respond 
 
 For human contributors in the MVP, availability is invitation-gated: a human contributor becomes available after being invited, onboarded if needed and accepting the invitation.
 
-For AI Contributors provided by the application in the MVP, availability means the relevant AI capability is enabled and usable.
+For AI Contributors in the MVP, availability is personal to the current human user: that user must have enabled usable Bring Your Own AI credentials, and the requested assistance must be permitted by applicable Project settings.
 
 ---
 

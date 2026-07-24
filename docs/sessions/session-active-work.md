@@ -4,13 +4,14 @@
 
 **Purpose:** Capture questions and draft answers during an active specification session before crystallizing stable conclusions into project knowledge.
 
-## Current Conversation Foundation
+## Current AI and Conversation Foundation
 
-- `Conversation` is now the canonical term for a project-scoped, multi-party working-memory exchange. It is distinct from a Collaboration Request and Assistance Request Type, requires recipients, carries source/scope and topic, and may include accepted human collaborators, pending invitees and enabled AI Contributors.
+- `Conversation` is the canonical term for a project-scoped, multi-party working-memory exchange. It is distinct from a Collaboration Request and Assistance Request Type, requires recipients, carries source/scope and topic, and may include accepted human collaborators, pending invitees and AI assistance available to a participating human user.
 - Conversations live in a dedicated topic-led workspace, presented beside the document in a reflowing right-side pane when width allows. They retain source links and may later support assistance requests or explicit outcome capture, but never alter Product Knowledge directly.
-- Comments and private notes remain separate, deferred concepts. The next decision is the Conversation initiation matrix.
+- The MVP adopts Bring Your Own AI: each human user supplies and enables their own provider/model credentials. AI support, provider access and usage are personal to that human and are not made available to other collaborators or the Project simply because one user enables them.
+- Comments and private notes remain separate, deferred concepts. The next decision is how a personally invoked AI contribution appears and behaves in a shared Conversation.
 
-See `2026-07-24-project-conversations-workspace.md`.
+See `2026-07-24-project-conversations-workspace.md` and `2026-07-24-bring-your-own-ai.md`.
 
 Use the `Answer` blocks to reply directly in this file. Answers can be rough, partial or exploratory.
 
@@ -104,7 +105,7 @@ Contributor availability differs between human and AI collaborators.
 
 Human collaborators are invitation-gated. A human collaborator becomes available after being invited, completing onboarding if needed and accepting the invitation.
 
-AI collaborators provided by the application are available by default when their capabilities are enabled and usable. They do not need to be invited in the same way as human collaborators.
+AI assistance is available to a human user only through that user's enabled, usable Bring Your Own AI credentials. It does not need a human-collaborator invitation, but one user's enablement does not make AI available to another collaborator.
 
 Both human and AI collaborators should still participate through scoped assistance requests, and canonical product knowledge should change only after the project owner or authorized requestor accepts or acts on the resulting contribution.
 
@@ -663,7 +664,7 @@ For the MVP, capabilities should be combined with availability when deciding whi
 
 Human collaborator availability depends on invitation and acceptance.
 
-AI collaborator availability depends on whether the application-provided AI capability is enabled and usable.
+AI collaborator availability depends on whether the current human user has enabled usable Bring Your Own AI support and whether the requested action is permitted by applicable Project settings.
 
 
 ### 4.3
@@ -1166,7 +1167,7 @@ AI-generated or AI-assisted material should not silently become canonical produc
 
 The project owner or another authorized contributor should manually review the response, then may acknowledge it, mark it acted on or separately update Product Knowledge after considering it.
 
-The workbench can govern AI assistance that occurs inside the product, including built-in AI Contributors and disclosed AI-assisted human submissions.
+The workbench can govern AI assistance that occurs inside the product through personally configured Bring Your Own AI support and disclosed AI-assisted human submissions.
 
 The workbench cannot reliably prevent or prove undisclosed external AI use by a human collaborator.
 

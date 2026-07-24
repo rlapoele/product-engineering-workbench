@@ -833,7 +833,7 @@ Contributor availability should be interpreted differently for human and AI cont
 
 For human contributors in the MVP, availability is invitation-gated. A human contributor becomes available for project collaboration only after being invited, completing onboarding if needed and accepting the invitation.
 
-For AI Contributors provided by the application in the MVP, availability means that the relevant AI capability is enabled and usable. Built-in AI Contributors do not require the same invitation and acceptance flow as human collaborators.
+For AI Contributors in the MVP, availability is personal to the human user invoking assistance. That user must have enabled usable Bring Your Own AI credentials, and the requested action must be permitted by applicable Project settings. Another collaborator's AI credentials or configured AI are not available to the current user. AI Contributors do not require the same invitation and acceptance flow as human collaborators.
 
 ---
 
@@ -893,7 +893,7 @@ Contributions should be traceable so that users can understand how product knowl
 
 For the MVP, many contributions should originate from Collaboration Requests.
 
-When a Contribution is submitted by an AI Contributor, or when a human contributor voluntarily discloses that external AI assistance was used, that participation should be recorded in the known AI activity trace and remain inspectable by the project owner. Its automatic disclosure to other workbench users or handoff consumers follows the project-owner AI-use disclosure setting.
+When a Contribution is submitted through a human user's configured AI Contributor, or when a human contributor voluntarily discloses that external AI assistance was used, that participation should be recorded in the known AI activity trace and remain inspectable by the project owner. Its automatic disclosure to other workbench users or handoff consumers follows the project-owner AI-use disclosure setting.
 
 Undisclosed external AI use by a human contributor cannot be reliably detected or prevented by the workbench.
 
@@ -999,7 +999,7 @@ Contribution Response Status is tracked separately from Product Artifact lifecyc
 
 A Conversation is a topic-focused, multi-party exchange inside one Project. It supports exploration, clarification and collaboration, and belongs to the Project's working memory rather than its canonical Product Knowledge.
 
-A Conversation has an initiating participant, at least one recipient, an initial message, a human-readable topic and an explicit Project ownership record. It may include accepted project collaborators, invited people whose participation is pending, and enabled available AI Contributors. Invitation state belongs to each invited person: a Conversation remains active for its accepted participants while another invitation is pending or declined.
+A Conversation has an initiating participant, at least one recipient, an initial message, a human-readable topic and an explicit Project ownership record. It may include accepted project collaborators, invited people whose participation is pending, and an AI Contributor available through a participating human user's enabled Bring Your Own AI configuration. Invitation state belongs to each invited person: a Conversation remains active for its accepted participants while another invitation is pending or declined.
 
 Every Conversation has an explicit scope/source. It may be attached to:
 

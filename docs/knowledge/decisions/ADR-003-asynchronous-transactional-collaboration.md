@@ -66,7 +66,7 @@ Human and AI contributors share the same abstract Contributor and Capability mod
 
 Human collaborators are invitation-gated. A human becomes available to contribute to a project after being invited, completing onboarding if needed and accepting the invitation.
 
-AI Contributors provided by the application are available by default when their capabilities are enabled and usable. They do not require the same invitation and acceptance flow as human collaborators.
+AI Contributor availability is personal to the human user invoking assistance. A user may use AI only through their own enabled, usable Bring Your Own AI credentials; another collaborator's configuration, provider access and associated usage are not available to them. AI Contributors do not require the same invitation and acceptance flow as human collaborators, but applicable Project settings still apply.
 
 Contributors will respond asynchronously by submitting Contribution Responses.
 

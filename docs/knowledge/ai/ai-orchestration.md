@@ -14,6 +14,14 @@ AI should assist with thinking, drafting, reviewing, analysis and handoff prepar
 
 AI assistance should operate on structured context whenever possible rather than isolated text.
 
+## Bring Your Own AI
+
+The MVP uses **Bring Your Own AI (BYO-AI)**. Provider and model credentials are owned by an individual human user. A user who supplies valid usable credentials may enable AI support for themselves; that enablement does not make AI support, credentials, provider access or associated usage available to the project owner or any other collaborator.
+
+AI availability is therefore evaluated for the current human user. The user's configured AI may be used only when their personal AI support is enabled, their provider and model are usable, and the requested action is permitted by applicable Project settings. The workbench must not treat a Project as owning a shared AI credential or an AI Contributor as independently available because another human has enabled AI support.
+
+This decision defines access and ownership, not the eventual number or specialization of AI collaborators. The product may use Assistance Request Types, capabilities, Review Lenses, Context Assembly and bounded internal workflows to shape AI behavior without presenting those behaviors as separate AI identities.
+
 ---
 
 # 2. AI Contributor
@@ -74,7 +82,7 @@ Example AI capabilities include:
 
 The same capability model should apply to both human contributors and AI contributors wherever possible.
 
-For the MVP, AI Contributors provided by the application should be available by default when their capabilities are enabled and usable. Unlike human collaborators, built-in AI Contributors do not need to be invited into a project before the user can request assistance from them.
+For the MVP, AI Contributor availability is personal rather than invitation-gated. A human user may request assistance only through their own enabled, usable BYO-AI configuration; another collaborator's credentials and configured AI are not available to them. An AI Contributor does not need a human-collaborator invitation, but applicable Project settings still apply.
 
 AI Contributor availability should still respect project settings, permissions and enabled capabilities.
 
@@ -398,7 +406,7 @@ The workbench should make known AI participation traceable, reviewable and gover
 
 Governance should focus on actions the product can actually control:
 
-- whether built-in AI capabilities are enabled for a project;
+- whether a user's personal BYO-AI support is enabled and usable for a project action;
 - which scopes can receive AI assistance;
 - which Assistance Request Types are available;
 - which context is assembled for the request;

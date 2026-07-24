@@ -47,7 +47,7 @@ Recent clarification established the first target user as an AI-assisted develop
 - The MVP default Handoff Profile has been clarified as `Implementation Handoff`, a human-readable and AI-useful export profile.
 - The MVP direction has been clarified as document-first, template-driven and implementation-handoff oriented.
 - Capability-based collaboration with human and AI contributors has been clarified as a core product concept.
-- Contributor availability has been clarified for the MVP: human collaborators are invitation-gated, while application-provided AI collaborators are available by default when their capabilities are enabled and usable.
+- Contributor availability has been clarified for the MVP: human collaborators are invitation-gated, while AI assistance is personally enabled through each human user's valid Bring Your Own AI credentials and is not shared with other collaborators.
 - The initial MVP Assistance Request Type set has been clarified as a compact user-facing set, including Request Feedback and Review as distinct interaction intents.
 - Review has been clarified as a composite Assistance Request Type that may include multiple checks, while focused request types may expose individual checks directly.
 - Initial MVP Contribution Response Shapes and Finding Types have been clarified.
@@ -119,6 +119,7 @@ Recent clarification established the first target user as an AI-assisted develop
 - Readiness-report inclusion is now aligned across evaluated handoffs: owner choice affects only the report file and README link, while manifest and Handoff History retain immutable inclusion state without changing outcome or package result.
 - The README/readiness/report/AI-disclosure representation thread is closed: a representative matrix covers every readiness state, report inclusion or omission, and disclosure state while preserving consistent README, manifest and Handoff History semantics.
 - Project Conversations are now bounded as a dedicated, topic-led working-memory workspace: they are scoped multi-party exchanges, distinct from Collaboration Requests and canonical Product Knowledge, and retain source context without becoming inline specification chat.
+- Bring Your Own AI has been established: provider and model credentials belong to an individual human user, so enabling AI support is personal and does not make that user's provider access, usage or configured AI available to project collaborators.
 
 ---
 
@@ -130,6 +131,7 @@ Recent clarification established the first target user as an AI-assisted develop
 - Validate additional readiness-aware handoff edge cases through concrete specification exercises.
 - Validate detailed context assembly rules for remaining generation and feedback examples.
 - Define the Conversation initiation matrix: valid initiating scopes, eligible initiators and recipient-selection or invitation paths.
+- Define how personally invoked AI contributions appear and behave in shared Conversations.
 - Validate the first Section Catalog and Project Preset classification through concrete specification exercises.
 - Validate remaining export-format details and package-generation constraints beyond the resolved README, readiness, report and AI-disclosure representations.
 - Detail the resolved asynchronous Collaboration Request and Contribution Response flow for human and AI contributors.
