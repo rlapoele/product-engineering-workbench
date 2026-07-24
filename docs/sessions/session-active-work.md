@@ -6,12 +6,13 @@
 
 ## Current AI and Conversation Foundation
 
-- `Conversation` is the canonical term for a project-scoped, multi-party working-memory exchange. It is distinct from a Collaboration Request and Assistance Request Type, requires recipients, carries source/scope and topic, and may include accepted human collaborators, pending invitees and AI assistance available to a participating human user.
+- `Conversation` is the canonical term for a project-scoped, multi-party working-memory exchange. It is distinct from a Collaboration Request and Assistance Request Type, requires recipients, carries source/scope and topic, and may include accepted human collaborators, pending invitees and Personal AI Assistants available to a participating human user.
 - Conversations live in a dedicated topic-led workspace, presented beside the document in a reflowing right-side pane when width allows. They retain source links and may later support assistance requests or explicit outcome capture, but never alter Product Knowledge directly.
 - The MVP adopts Bring Your Own AI: each human user supplies and enables their own provider/model credentials. AI support, provider access and usage are personal to that human and are not made available to other collaborators or the Project simply because one user enables them.
-- Comments and private notes remain separate, deferred concepts. The next decision is how a personally invoked AI contribution appears and behaves in a shared Conversation.
+- A human user may configure multiple named Personal AI Assistants and mark one default. Contributions use the assistant's name and a compact AI indicator; ownership is available through its profile, provider/model details stay in the owner's settings, and every visible reply requires explicit invocation by its owner.
+- Comments and private notes remain separate, deferred concepts. The next decision is how a user selects or creates a Personal AI Assistant while choosing Conversation recipients.
 
-See `2026-07-24-project-conversations-workspace.md` and `2026-07-24-bring-your-own-ai.md`.
+See `2026-07-24-project-conversations-workspace.md`, `2026-07-24-bring-your-own-ai.md` and `2026-07-24-personal-ai-assistants.md`.
 
 Use the `Answer` blocks to reply directly in this file. Answers can be rough, partial or exploratory.
 

@@ -20,13 +20,15 @@ The MVP uses **Bring Your Own AI (BYO-AI)**. Provider and model credentials are 
 
 AI availability is therefore evaluated for the current human user. The user's configured AI may be used only when their personal AI support is enabled, their provider and model are usable, and the requested action is permitted by applicable Project settings. The workbench must not treat a Project as owning a shared AI credential or an AI Contributor as independently available because another human has enabled AI support.
 
-This decision defines access and ownership, not the eventual number or specialization of AI collaborators. The product may use Assistance Request Types, capabilities, Review Lenses, Context Assembly and bounded internal workflows to shape AI behavior without presenting those behaviors as separate AI identities.
+Each human user may configure multiple **Personal AI Assistants** and mark one as their default. A Personal AI Assistant has a user-chosen display name and uses a selected provider/model configuration owned by that human user. The default display name is possessive and generic, such as `Alex's assistant`; the user may rename it, for example to `Alfred`. A default assistant is preselected for convenience only and never authorizes automatic AI activity.
+
+Provider and model details are available only in the owning user's AI settings/configuration. The product may use Assistance Request Types, capabilities, Review Lenses, Context Assembly and bounded internal workflows to shape AI behavior without exposing those configuration details or presenting behavior modes as separate AI identities.
 
 ---
 
 # 2. AI Contributor
 
-An AI Contributor is an artificial intelligence participant that can contribute to a project.
+An AI Contributor is a Personal AI Assistant acting as a participant in a Project.
 
 AI Contributors may:
 
@@ -48,6 +50,7 @@ AI assistance inside the workbench should be visible and governable.
 When an AI Contributor participates through a scoped request, users should be able to see:
 
 - that the contribution came from an AI Contributor;
+- the assistant's display name;
 - the Assistance Request Type and scope;
 - the capability or Review Lens used;
 - the assembled context when available;
@@ -55,6 +58,8 @@ When an AI Contributor participates through a scoped request, users should be ab
 - any resulting Revision or Provenance update.
 
 The workbench should not silently convert AI output into canonical product knowledge.
+
+An assistant is not a separately authenticated User or an independently available Project member. Its owner alone may invoke it. A visible AI contribution records the invoking human for traceability, but the conversation surface shows the assistant's display name with a compact AI indicator; the owner is available through the assistant profile rather than repeated beside every contribution. Provider and model details are not exposed outside the owner's AI settings/configuration.
 
 ---
 

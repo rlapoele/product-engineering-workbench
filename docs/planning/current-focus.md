@@ -120,6 +120,7 @@ Recent clarification established the first target user as an AI-assisted develop
 - The README/readiness/report/AI-disclosure representation thread is closed: a representative matrix covers every readiness state, report inclusion or omission, and disclosure state while preserving consistent README, manifest and Handoff History semantics.
 - Project Conversations are now bounded as a dedicated, topic-led working-memory workspace: they are scoped multi-party exchanges, distinct from Collaboration Requests and canonical Product Knowledge, and retain source context without becoming inline specification chat.
 - Bring Your Own AI has been established: provider and model credentials belong to an individual human user, so enabling AI support is personal and does not make that user's provider access, usage or configured AI available to project collaborators.
+- Personal AI Assistants are now defined for the MVP: users may configure multiple named assistants and select a default; contributions use the assistant name and a compact AI cue, while ownership is discoverable through its profile and provider/model details remain in the owner's settings.
 
 ---
 
@@ -131,7 +132,7 @@ Recent clarification established the first target user as an AI-assisted develop
 - Validate additional readiness-aware handoff edge cases through concrete specification exercises.
 - Validate detailed context assembly rules for remaining generation and feedback examples.
 - Define the Conversation initiation matrix: valid initiating scopes, eligible initiators and recipient-selection or invitation paths.
-- Define how personally invoked AI contributions appear and behave in shared Conversations.
+- Define how a user selects or creates a Personal AI Assistant while choosing Conversation recipients.
 - Validate the first Section Catalog and Project Preset classification through concrete specification exercises.
 - Validate remaining export-format details and package-generation constraints beyond the resolved README, readiness, report and AI-disclosure representations.
 - Detail the resolved asynchronous Collaboration Request and Contribution Response flow for human and AI contributors.

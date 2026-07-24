@@ -34,11 +34,11 @@ An Alternative Proposal may be a feature variant, an outcome-preserving substitu
 
 ## AI Contributor
 
-An AI Contributor is an artificial intelligence contributor that can participate in a project by providing capabilities such as generation, review, analysis, summarization or implementation-readiness evaluation.
+An AI Contributor is a Personal AI Assistant acting as a contributor to a Project by providing capabilities such as generation, review, analysis, summarization or implementation-readiness evaluation.
 
 AI Contributors are contributors. Their contributions should remain visible to users and should not silently replace human judgment.
 
-In the MVP, an AI Contributor is available to a particular human user only through that user's enabled Bring Your Own AI configuration. It is not a shared Project credential or an independently available project participant.
+In the MVP, an AI Contributor is available to a particular human user only through that user's enabled Personal AI Assistant. It is not a shared Project credential or an independently available project participant.
 
 ## AI Implementation Environment
 
@@ -52,7 +52,7 @@ AI Contributors help create, review or refine product knowledge. AI Implementati
 
 An AI Assistant is a general AI support surface available inside the workbench to help users think, navigate, understand terminology, ask questions and decide what to do next.
 
-The AI Assistant is distinct from scoped assistance requests. When it uses AI capabilities, it is available only through the current human user's enabled Bring Your Own AI configuration. It may help the user choose or initiate an Assistance Request Type, but it should not silently alter canonical product knowledge.
+The AI Assistant is distinct from scoped assistance requests. When it uses AI capabilities, it is available only through the current human user's enabled Personal AI Assistant. It may help the user choose or initiate an Assistance Request Type, but it should not silently alter canonical product knowledge.
 
 ## AI Assistance Governance
 
@@ -523,6 +523,14 @@ Open questions are intentionally tracked until resolved or archived.
 ---
 
 # P
+
+## Personal AI Assistant
+
+A Personal AI Assistant is a named, user-owned AI configuration that a human user may invoke through Bring Your Own AI support.
+
+For the MVP, a user may configure multiple Personal AI Assistants and mark one as their default. Each assistant uses a selected provider/model configuration owned by that human user. The assistant's display name defaults to a possessive generic name such as `Alex's assistant`, but its owner may rename it, for example to `Alfred`.
+
+The assistant's provider and model details are available only in its owner's AI settings/configuration. When it contributes, it appears by its display name with a compact AI indicator; its human owner is available through the assistant profile rather than repeated beside every contribution. A Personal AI Assistant is not a separately authenticated User, cannot use another user's credentials, and may make a visible contribution only when its owner explicitly invokes it.
 
 ## Planning
 

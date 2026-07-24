@@ -289,7 +289,7 @@ Contributor availability should shape which collaborators the user can request h
 
 For human contributors in the MVP, availability depends on invitation and acceptance. A project owner may invite a human collaborator at project creation time or later. The invited person may need to complete onboarding before accepting the invitation and becoming available for scoped Collaboration Requests.
 
-For AI Contributors in the MVP, availability is personal rather than invitation-gated. A human user may use AI assistance only through their own enabled, usable Bring Your Own AI credentials; a project owner or other collaborator enabling AI does not enable it for anyone else. The user does not invite an AI Contributor in the same way they invite a human collaborator, but applicable Project settings still apply.
+For AI Contributors in the MVP, availability is personal rather than invitation-gated. A human user may use one of their own enabled, usable Personal AI Assistants through Bring Your Own AI credentials; a project owner or other collaborator enabling AI does not enable it for anyone else. A user may configure multiple assistants and mark one as default. The user does not invite an AI Contributor in the same way they invite a human collaborator, but applicable Project settings still apply.
 
 Example capabilities include:
 
@@ -308,7 +308,9 @@ The project owner remains responsible for accepting, rejecting or acting on cont
 
 ## Conversations Workspace
 
-Conversations are a separate project-scoped workspace for multi-party working-memory exchange, not an inline component of the Specification and not an Assistance Request Type. A user may initiate a Conversation from contextual document actions on the Project, a Section, a Product Artifact or selected content; the source/scope is carried into the new Conversation. An AI Contributor is available to a Conversation only through a participating human user's enabled Bring Your Own AI configuration; the detailed visibility and invocation behavior remains to be defined.
+Conversations are a separate project-scoped workspace for multi-party working-memory exchange, not an inline component of the Specification and not an Assistance Request Type. A user may initiate a Conversation from contextual document actions on the Project, a Section, a Product Artifact or selected content; the source/scope is carried into the new Conversation. An AI Contributor is available to a Conversation only through a participating human user's enabled Personal AI Assistant.
+
+An AI contribution appears under the assistant's display name with a compact AI indicator. Its provider and model details are not displayed in the Conversation or the assistant profile; they remain available only in the owning user's AI settings/configuration. Selecting or hovering over the assistant opens a profile that identifies the assistant and its human owner, avoiding a repeated ownership label beside every contribution. The assistant's owner alone may invoke it, and every visible reply requires a new explicit human invocation. The remaining Conversation decision is how a user selects or adds an assistant as a recipient when creating or extending a Conversation.
 
 On a sufficiently wide layout, opening Conversations reveals a dedicated right-side pane that reflows the document workspace rather than overlaying it. This preserves visible product context while keeping the Conversation itself outside canonical document content. The document retains only compact contextual cues that open the relevant Conversation or filtered Conversation list.
 
