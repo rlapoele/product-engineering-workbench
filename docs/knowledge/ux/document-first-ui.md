@@ -306,6 +306,20 @@ Example capabilities include:
 
 The project owner remains responsible for accepting, rejecting or acting on contributions.
 
+## Conversations Workspace
+
+Conversations are a separate project-scoped workspace for multi-party working-memory exchange, not an inline component of the Specification and not an Assistance Request Type. A user may initiate a Conversation from contextual document actions on the Project, a Section, a Product Artifact or selected content; the source/scope is carried into the new Conversation.
+
+On a sufficiently wide layout, opening Conversations reveals a dedicated right-side pane that reflows the document workspace rather than overlaying it. This preserves visible product context while keeping the Conversation itself outside canonical document content. The document retains only compact contextual cues that open the relevant Conversation or filtered Conversation list.
+
+The pane initially presents a topic-led list ordered by recent activity. Selecting a Conversation replaces the list with that Conversation's thread and provides a clear return control. A split list-and-thread layout is optional only when the pane has enough usable width. The thread header shows its topic, source link, participants and invitation state without repeating the enclosing Project name.
+
+Responsive layouts must preserve one usable workspace rather than compressing both the document and Conversation below readable widths. Container-query-based component adaptation is an appropriate implementation technique, but the exact narrow/mobile transition remains to be validated.
+
+Conversation messages are working memory. The workspace may later offer contextual actions such as inviting participants, creating a scoped Assistance Request and capturing an outcome, but none silently changes Product Knowledge.
+
+Comments and private notes are adjacent but separate concepts. Their audience, anchoring, visibility, notification behavior and relation to Conversations remain to be defined; a private note is not a Conversation because it has no recipient.
+
 ## Assistance Request Types
 
 The MVP should expose a compact set of user-facing Assistance Request Types.

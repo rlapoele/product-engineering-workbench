@@ -4,6 +4,14 @@
 
 **Purpose:** Capture questions and draft answers during an active specification session before crystallizing stable conclusions into project knowledge.
 
+## Current Conversation Foundation
+
+- `Conversation` is now the canonical term for a project-scoped, multi-party working-memory exchange. It is distinct from a Collaboration Request and Assistance Request Type, requires recipients, carries source/scope and topic, and may include accepted human collaborators, pending invitees and enabled AI Contributors.
+- Conversations live in a dedicated topic-led workspace, presented beside the document in a reflowing right-side pane when width allows. They retain source links and may later support assistance requests or explicit outcome capture, but never alter Product Knowledge directly.
+- Comments and private notes remain separate, deferred concepts. The next decision is the Conversation initiation matrix.
+
+See `2026-07-24-project-conversations-workspace.md`.
+
 Use the `Answer` blocks to reply directly in this file. Answers can be rough, partial or exploratory.
 
 When the answers are ready, ask Codex to update the project documents based on this file.

@@ -589,7 +589,7 @@ Candidate Context may include:
 - Structural Context implied by the Specification Document Template, document structure, section composition, artifact type expectations or artifact hierarchy;
 - Explicit Context from manually created, imported or accepted Artifact Relationships and Context References;
 - Inferred Context suggested by analysis, AI assistance or system inference;
-- supporting knowledge such as Decisions, Risks, Assumptions, Open Questions, Reviews, Discussions, Provenance and project metadata.
+- supporting knowledge such as Decisions, Risks, Assumptions, Open Questions, Reviews, Conversations, Provenance and project metadata.
 
 Candidate Context should be filtered and weighted according to:
 
@@ -645,7 +645,7 @@ For Draft Product Overview, the primary context should include the stated drafti
 
 For Suggest Alternatives on a Core Feature, the primary context should include the selected feature, the User Needs and Goals it addresses, the stated alternatives prompt or decision focus, applicable constraints, Scope and Non-Goals. The request should optimize for the intended outcome rather than preserve the feature by default. It may propose a feature variant, outcome-preserving substitute, scope or timing change such as deferment, or reframing that questions whether the feature addresses the right need or goal. A partial-context request may suggest local variants, but must identify strategic alternatives as constrained when outcome links or boundaries are missing. Each Alternative Proposal remains non-canonical unless an authorized requestor separately changes Product Knowledge after considering it.
 
-For Ask Question on an Open Question, the primary context should include the selected Open Question, the requestor's stated question or framing prompt, the question's rationale and scope, and artifacts it blocks or directly relates to. Supporting context may include related Goals, User Needs, Features, Requirements, Constraints, Decisions, Assumptions, Risks, other Open Questions, Discussions and known evidence in the Project State. The expected Response Shapes are Answer, Question, Finding, Proposed Decision and Summary. An Answer is a conversational Contribution Response: it does not automatically resolve the Open Question or change Product Knowledge.
+For Ask Question on an Open Question, the primary context should include the selected Open Question, the requestor's stated question or framing prompt, the question's rationale and scope, and artifacts it blocks or directly relates to. Supporting context may include related Goals, User Needs, Features, Requirements, Constraints, Decisions, Assumptions, Risks, other Open Questions, Conversations and known evidence in the Project State. The expected Response Shapes are Answer, Question, Finding, Proposed Decision and Summary. An Answer is a conversational Contribution Response: it does not automatically resolve the Open Question or change Product Knowledge.
 
 Contribution Responses should use separate statuses. A response is Submitted when sent, then may be manually marked Acknowledged when read and Acted On when the requestor has dealt with its content. These statuses have no direct effect on the specification, do not require a linked Revision or note, and must not trigger automation.
 
@@ -1133,8 +1133,15 @@ Storage technology remains undecided. This decision does not require a relationa
 
 ## Context
 
-Discussions are working memory, but important conclusions should eventually become stable product knowledge such as artifacts, decisions, updates or open questions.
+Conversations are working memory, but important conclusions should eventually become stable product knowledge such as artifacts, decisions, updates or Open Questions.
+
+## Established Foundation
+
+- `Conversation` is the canonical term for a project-scoped, multi-party working-memory exchange; `Discussion` is not a separate product concept.
+- A Conversation is not a Collaboration Request or an Assistance Request Type. It may later link to a request, but it never changes Product Knowledge directly.
+- Conversations have explicit source/scope, topic and participants, and live in a dedicated Conversations workspace outside the Specification while retaining links to their source context.
+- The remaining question is how user-visible signals and explicit, human-controlled actions should turn a Conversation outcome into durable Product Knowledge, a Decision, an update or an Open Question.
 
 ## Question
 
-What rules or signals should help users decide when a discussion should become an artifact, decision, update or open question?
+What rules or signals should help users decide when a Conversation should become an artifact, Decision, update or Open Question?

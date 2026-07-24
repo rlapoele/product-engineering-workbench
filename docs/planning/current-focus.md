@@ -118,6 +118,7 @@ Recent clarification established the first target user as an AI-assisted develop
 - Evaluated-handoff AI-disclosure scenarios are validated as a batch: `Not Ready` and `Ready with Caveats` remain distinguishable despite the shared caveated package result, while known or no-known activity is separately and concisely disclosed.
 - Readiness-report inclusion is now aligned across evaluated handoffs: owner choice affects only the report file and README link, while manifest and Handoff History retain immutable inclusion state without changing outcome or package result.
 - The README/readiness/report/AI-disclosure representation thread is closed: a representative matrix covers every readiness state, report inclusion or omission, and disclosure state while preserving consistent README, manifest and Handoff History semantics.
+- Project Conversations are now bounded as a dedicated, topic-led working-memory workspace: they are scoped multi-party exchanges, distinct from Collaboration Requests and canonical Product Knowledge, and retain source context without becoming inline specification chat.
 
 ---
 
@@ -128,7 +129,7 @@ Recent clarification established the first target user as an AI-assisted develop
 - Validate deterministic next-step guidance through prototypes and concrete specification exercises.
 - Validate additional readiness-aware handoff edge cases through concrete specification exercises.
 - Validate detailed context assembly rules for remaining generation and feedback examples.
-- Clarify how discussions crystallize into stable product knowledge.
+- Define the Conversation initiation matrix: valid initiating scopes, eligible initiators and recipient-selection or invitation paths.
 - Validate the first Section Catalog and Project Preset classification through concrete specification exercises.
 - Validate remaining export-format details and package-generation constraints beyond the resolved README, readiness, report and AI-disclosure representations.
 - Detail the resolved asynchronous Collaboration Request and Contribution Response flow for human and AI contributors.
@@ -194,7 +195,7 @@ Current emphasis:
 - UX — document-first experience over structured product knowledge
 - AI — context assembly for AI contributors
 - ARCH — canonical product state representation
-- PROC — crystallization of discussions into stable knowledge
+- PROC — crystallization of Conversations into stable knowledge
 
 ---
 
