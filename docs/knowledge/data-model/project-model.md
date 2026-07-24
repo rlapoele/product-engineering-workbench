@@ -1001,6 +1001,8 @@ A Conversation is a topic-focused, multi-party exchange inside one Project. It s
 
 A Conversation has an initiating participant, at least one recipient, an initial message, a human-readable topic and an explicit Project ownership record. It may include accepted project collaborators, invited people whose participation is pending, and a Personal AI Assistant available through a participating human user's enabled Bring Your Own AI configuration. Invitation state belongs to each invited person: a Conversation remains active for its accepted participants while another invitation is pending or declined.
 
+Conversation recipient selection is intentionally limited in the MVP. A human recipient must already be an accepted or pending Project collaborator; a Personal AI Assistant must already be configured and enabled by its owner. Adding a recipient neither invites a new human contributor to the Project nor creates or configures an assistant.
+
 Every Conversation has an explicit scope/source. It may be attached to:
 
 - the whole Project;
@@ -1011,7 +1013,7 @@ Every Conversation has an explicit scope/source. It may be attached to:
 
 The source explains where the matter arises; the topic explains what the participants are discussing. Several Conversations may share a source without being the same Conversation.
 
-Conversations are not Collaboration Requests and `Conversation` is not an Assistance Request Type. A Conversation may later be linked to a scoped Collaboration Request or support an explicit knowledge-crystallization action, but messages and participation never directly change Product Knowledge. A Personal AI Assistant may contribute only through an explicit invocation by its human owner; it does not respond autonomously.
+Conversations are not Collaboration Requests and `Conversation` is not an Assistance Request Type. A Conversation may later be linked to a scoped Collaboration Request or support an explicit knowledge-crystallization action, but messages and participation never directly change Product Knowledge. A Personal AI Assistant may contribute only through an explicit invocation by its human owner; it does not respond autonomously. Adding an assistant as a recipient is not itself an invocation.
 
 Important conclusions from Conversations may eventually crystallize into stable Product Knowledge through separate, explicit user actions that create or update an artifact, record a Decision or track an Open Question. The resulting Revision or new record may retain provenance that it was based on a Conversation.
 

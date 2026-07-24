@@ -59,7 +59,7 @@ When an AI Contributor participates through a scoped request, users should be ab
 
 The workbench should not silently convert AI output into canonical product knowledge.
 
-An assistant is not a separately authenticated User or an independently available Project member. Its owner alone may invoke it. A visible AI contribution records the invoking human for traceability, but the conversation surface shows the assistant's display name with a compact AI indicator; the owner is available through the assistant profile rather than repeated beside every contribution. Provider and model details are not exposed outside the owner's AI settings/configuration.
+An assistant is not a separately authenticated User or an independently available Project member. Its owner alone may invoke it. A visible AI contribution records the invoking human for traceability, but the conversation surface shows the assistant's display name with a compact assistant cue; the owner is available through the assistant profile rather than repeated beside every contribution. Provider and model details are not exposed outside the owner's AI settings/configuration.
 
 ---
 

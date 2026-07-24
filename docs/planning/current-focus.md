@@ -120,7 +120,8 @@ Recent clarification established the first target user as an AI-assisted develop
 - The README/readiness/report/AI-disclosure representation thread is closed: a representative matrix covers every readiness state, report inclusion or omission, and disclosure state while preserving consistent README, manifest and Handoff History semantics.
 - Project Conversations are now bounded as a dedicated, topic-led working-memory workspace: they are scoped multi-party exchanges, distinct from Collaboration Requests and canonical Product Knowledge, and retain source context without becoming inline specification chat.
 - Bring Your Own AI has been established: provider and model credentials belong to an individual human user, so enabling AI support is personal and does not make that user's provider access, usage or configured AI available to project collaborators.
-- Personal AI Assistants are now defined for the MVP: users may configure multiple named assistants and select a default; contributions use the assistant name and a compact AI cue, while ownership is discoverable through its profile and provider/model details remain in the owner's settings.
+- Personal AI Assistants are now defined for the MVP: users may configure multiple named assistants and select a default; contributions use the assistant name and a compact assistant cue, while ownership is discoverable through its profile and provider/model details remain in the owner's settings.
+- Conversation recipients are now bounded for the MVP: users add existing Project collaborators or their already configured assistants; invitations and assistant setup remain outside the Conversation flow, and assistants contribute only after an explicit owner invocation.
 
 ---
 
@@ -131,8 +132,8 @@ Recent clarification established the first target user as an AI-assisted develop
 - Validate deterministic next-step guidance through prototypes and concrete specification exercises.
 - Validate additional readiness-aware handoff edge cases through concrete specification exercises.
 - Validate detailed context assembly rules for remaining generation and feedback examples.
-- Define the Conversation initiation matrix: valid initiating scopes, eligible initiators and recipient-selection or invitation paths.
-- Define how a user selects or creates a Personal AI Assistant while choosing Conversation recipients.
+- Define the Conversation initiation matrix: valid initiating scopes and eligible initiators.
+- Define who may add or remove Conversation recipients after creation, including participants' own assistants.
 - Validate the first Section Catalog and Project Preset classification through concrete specification exercises.
 - Validate remaining export-format details and package-generation constraints beyond the resolved README, readiness, report and AI-disclosure representations.
 - Detail the resolved asynchronous Collaboration Request and Contribution Response flow for human and AI contributors.

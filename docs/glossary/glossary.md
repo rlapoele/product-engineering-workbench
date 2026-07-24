@@ -300,7 +300,9 @@ A topic-focused exchange between an initiating participant and at least one reci
 
 Conversations support exploration, clarification and collaboration. They are Project working memory, not canonical Product Knowledge or an Assistance Request Type.
 
-Each Conversation has a topic and explicit source/scope, such as the Project, a Section, a Product Artifact or selected Specification content. It may involve accepted human collaborators, pending invitees and enabled available AI Contributors.
+Each Conversation has a topic and explicit source/scope, such as the Project, a Section, a Product Artifact or selected Specification content. It may involve accepted human collaborators, pending invitees and enabled available Personal AI Assistants.
+
+`Invite contributor` is reserved for adding a human collaborator to a Project. `Add recipient` adds an existing person or Personal AI Assistant to a Conversation without changing Project membership or configuring a new assistant.
 
 Conversations are transient. Important conclusions may later crystallize through separate explicit actions that create or update Product Knowledge, record a Decision or track an Open Question.
 
@@ -530,7 +532,7 @@ A Personal AI Assistant is a named, user-owned AI configuration that a human use
 
 For the MVP, a user may configure multiple Personal AI Assistants and mark one as their default. Each assistant uses a selected provider/model configuration owned by that human user. The assistant's display name defaults to a possessive generic name such as `Alex's assistant`, but its owner may rename it, for example to `Alfred`.
 
-The assistant's provider and model details are available only in its owner's AI settings/configuration. When it contributes, it appears by its display name with a compact AI indicator; its human owner is available through the assistant profile rather than repeated beside every contribution. A Personal AI Assistant is not a separately authenticated User, cannot use another user's credentials, and may make a visible contribution only when its owner explicitly invokes it.
+The assistant's provider and model details are available only in its owner's AI settings/configuration. When it contributes, it appears by its display name with a compact assistant cue; its human owner is available through the assistant profile rather than repeated beside every contribution. A Personal AI Assistant is not a separately authenticated User, cannot use another user's credentials, and may make a visible contribution only when its owner explicitly invokes it.
 
 ## Planning
 
