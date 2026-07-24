@@ -76,3 +76,4 @@
 | 2026-07-24-02 | 2026-07-24 | 2 | Direct Handoff No-Known-AI Disclosure Validation | Crystallized | Independent direct-readiness and caveated zero-activity disclosure states |
 | 2026-07-24-03 | 2026-07-24 | 3 | Direct Handoff Known-AI Disclosure Validation | Crystallized | Concise included-scope activity count with manifest authority and no trace detail |
 | 2026-07-24-04 | 2026-07-24 | 4 | Evaluated Handoff AI Disclosure Batch Validation | Crystallized | Distinct evaluated readiness outcomes with independent known-AI disclosure |
+| 2026-07-24-05 | 2026-07-24 | 5 | Evaluated Readiness Report Inclusion Validation | Crystallized | Owner-selectable report with aligned README, manifest and history states |

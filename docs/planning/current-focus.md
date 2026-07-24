@@ -116,6 +116,7 @@ Recent clarification established the first target user as an AI-assisted develop
 - Direct-handoff README disclosure is validated when no included-scope AI activity is known: `Readiness validation was not run` and the caveated no-known-AI statement appear independently, with manifest and Handoff History retaining matching compact state.
 - Direct-handoff README disclosure is also bounded when known activity exists: it gives only an included-scope entry count and manifest link, keeping request-level trace detail and authorship claims out of the README while readiness remains independent.
 - Evaluated-handoff AI-disclosure scenarios are validated as a batch: `Not Ready` and `Ready with Caveats` remain distinguishable despite the shared caveated package result, while known or no-known activity is separately and concisely disclosed.
+- Readiness-report inclusion is now aligned across evaluated handoffs: owner choice affects only the report file and README link, while manifest and Handoff History retain immutable inclusion state without changing outcome or package result.
 
 ---
 
