@@ -94,7 +94,7 @@ AI assistance may help users understand or resolve Stale artifacts after propaga
 
 Artifact Placement is the document location at which a Product Artifact is presented in a Specification Section.
 
-For the MVP, an artifact type has a deterministic canonical destination section. A newly created artifact is placed at the end of that section; the creation flow does not offer an alternative placement. If its canonical section is not selected in the Specification, the user must explicitly add that section or cancel the creation.
+For the MVP, an artifact type has a deterministic canonical destination section. A newly created artifact is placed at the end of that section; the creation flow does not offer an alternative placement. If its canonical section is not selected in the Specification, the user must explicitly add that section or cancel the creation. Canceling at that section gate makes no document change; after the user explicitly adds the section, it remains selected even if the artifact's later unsaved draft is discarded.
 
 Users may reorder artifacts up or down only within their current section. Such a change creates a Revision of the document composition, but does not change artifact identity, provenance, Artifact Relationships or Conversation Outcome Links. Moving an artifact between sections is outside the MVP.
 

@@ -16,7 +16,9 @@ Creating Product Knowledge from a Conversation must make the resulting artifact 
 
 For the MVP, every Product Artifact type has a deterministic canonical Specification Section. Creating a new artifact, including through **Create from conversation**, places it at the end of that section. The creation flow does not offer a placement picker.
 
-When that canonical section is not selected in the current Specification, the flow explicitly asks the user to add the section or cancel creation. It must not silently add a section or create an unplaced artifact.
+When that canonical section is not selected in the current Specification, the flow explicitly asks the user to add the section or cancel creation. In a Conversation capture, cancel returns to the destination choice with the selected messages intact and makes no change to the Specification outline. It must not silently add a section or create an unplaced artifact.
+
+Once the user explicitly adds the destination section, that outline choice remains even if they later discard the unsaved artifact draft. Adding the section is an intentional document-structure decision, not a hidden side effect of saving the artifact.
 
 Users may use **Move up** and **Move down** to reorder an artifact only within its current Specification Section. Saving the reorder creates an ordinary Revision of document composition. It does not change the artifact's identity, lifecycle, provenance, Artifact Relationships or Conversation Outcome Links.
 
