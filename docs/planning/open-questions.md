@@ -853,6 +853,8 @@ When the user disables validation, the workbench must not run a hidden reduced r
 
 If handoff AI disclosure is also enabled and no known activity is recorded for the included scope, the same README additionally shows the conditional `Known AI activity` section stating `No known AI activity is recorded for the included scope` with the standard known-activity, non-authorship and non-detection limitation. This disclosure is independent of `Readiness validation was not run`; neither statement is evidence of the other.
 
+If known included-scope activity exists instead, the conditional README section states `Known AI activity is recorded for the included scope`, gives the included entry count and links to `manifest.json`. It retains the standard limitation without exposing individual trace details. The direct readiness statement remains unchanged and independent.
+
 Each resulting Handoff History event records whether readiness validation ran. A validated handoff retains its immutable readiness outcome; a direct handoff explicitly retains `Readiness validation not run`, never a blank field, inferred `Ready` result or retrospective caveat summary.
 
 `manifest.json` carries the equivalent machine-readable state: package result; readiness-validation state of `evaluated` with a readiness outcome, or `not_run` with no outcome; and whether `READINESS_REPORT.md` is included. This lets machine consumers distinguish a direct handoff from a validated one without inferring meaning from absent data.

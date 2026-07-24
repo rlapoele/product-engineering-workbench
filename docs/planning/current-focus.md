@@ -114,6 +114,7 @@ Recent clarification established the first target user as an AI-assisted develop
 - Evaluated README wording now forms a coherent set: `Ready` reports no blockers or caveats, `Ready with Caveats` reports non-blocking caveats, and both retain separate package results and optional report links without duplicating details.
 - README readiness scannability is validated across all four states: a fixed package layout varies only its package result, concise Readiness copy and report link, while boundary, conditional disclosure and navigation stay stable.
 - Direct-handoff README disclosure is validated when no included-scope AI activity is known: `Readiness validation was not run` and the caveated no-known-AI statement appear independently, with manifest and Handoff History retaining matching compact state.
+- Direct-handoff README disclosure is also bounded when known activity exists: it gives only an included-scope entry count and manifest link, keeping request-level trace detail and authorship claims out of the README while readiness remains independent.
 
 ---
 
