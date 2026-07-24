@@ -622,6 +622,16 @@ This disclosure stays independent of readiness. For a direct handoff with enable
 
 For the counterpart direct handoff with known included-scope activity, the same Readiness section remains unchanged. The conditional Known AI activity section instead states `Known AI activity is recorded for the included scope` and gives the included entry count, then links to `manifest.json`. It does not expose individual request, contributor or response detail. This disclosure does not make a final-text authorship claim or change the direct-handoff readiness state.
 
+Evaluated-handoff disclosure uses the same independent presentation. The following concise README states remain distinguishable even where package result is the same:
+
+| Scenario | Package result | Readiness | Known AI activity |
+|---|---|---|---|
+| Blocking condition with known activity | `Prepared with Caveats` | `Not Ready` with blocking-condition explanation and report link. | Known activity recorded, with entry count and manifest link. |
+| Non-blocking caveat with known activity | `Prepared with Caveats` | `Ready with Caveats` with non-blocking-caveat explanation and report link. | Known activity recorded, with entry count and manifest link. |
+| No blockers or caveats with none known | `Prepared` | `Ready` with no-blockers-or-caveats explanation and report link when included. | No known activity recorded, with the standard limitation and manifest link. |
+
+The package result never substitutes for the Readiness outcome, and AI disclosure never changes either readiness or package result.
+
 For a partial package, `specification/SPECIFICATION.md` is the complete combined representation of the handoff scope, not a claim to be the full Project Specification. It and section Markdown files include only selected Definition Scope and Supporting Context, visibly labeled by Handoff Package Role. Direct External Dependencies are not represented as included knowledge. When selected, the Readiness Report records the readiness outcome, blockers and caveats separately from the package boundary.
 
 Prepare Handoff uses a scope panel over the document outline rather than a separate record-selection screen. For the first handoff, it starts with the entire Specification as Definition Scope and enabled readiness validation and report inclusion. Preparing that default handoff confirms the whole-Specification Definition Scope. The user may choose Customize scope for a partial handoff.
