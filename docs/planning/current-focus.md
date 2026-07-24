@@ -127,6 +127,7 @@ Recent clarification established the first target user as an AI-assisted develop
 - Conversation workspace navigation is now bounded: Active Conversations are the default list, while Closed Conversations remain searchable and readable in a separate collapsed group or filter.
 - Conversation initiation is now bounded: the workspace defaults new threads to Project scope, while whole-Specification, Section, Product Artifact and selected-content entry points carry progressively narrower scope; pending invitees and assistants do not initiate Conversations.
 - Conversation outcome capture is now bounded: any human with access may copy conversation material, while only the Project owner may create or update canonical knowledge from an entire Conversation or selected messages through ordinary reviewed save flows.
+- Conversation Outcome Links are now bounded as internal bidirectional navigation/provenance: they distinguish Archived from genuinely Broken targets, are removable only by their creator or the Project owner, and never enter a handoff.
 
 ---
 

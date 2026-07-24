@@ -314,6 +314,16 @@ Conversations are transient. Important conclusions may later crystallize through
 
 ---
 
+## Conversation Outcome Link
+
+A Conversation Outcome Link is an internal, bidirectional provenance and navigation link between a Conversation and Product Knowledge, a Decision or an Open Question created or updated from that Conversation.
+
+It is not a Product Artifact, Artifact Relationship, Context Reference or Handoff Package item. It is visible from both the Conversation and the linked record, may optionally identify selected source messages, and never implies participant agreement.
+
+If its linked record is Archived, the link remains valid and is labeled Archived. If the target is genuinely unavailable because it was deleted or otherwise removed by a future retention or recovery policy, the link remains visible but is labeled Broken using its retained target title and identifier snapshot. Only the link creator or Project owner may delete a Conversation Outcome Link; deletion removes the connection, not either endpoint, and records a concise history event. Conversation Outcome Links are never included in an Implementation Handoff Package.
+
+---
+
 # D
 
 ## Decision
@@ -400,6 +410,8 @@ It may contain structured files, document sections, implementation guidance, acc
 The MVP package should include a combined specification file, section-level Markdown files, an implementation brief and a manifest file. It may also include a standalone Readiness Report when readiness validation and report inclusion are selected. Artifact-level files and expanded metadata may be added as stretch items.
 
 For a partial handoff, the package must make its boundary explicit: Definition Scope, Supporting Context, directly related knowledge intentionally outside the package, and Direct External Dependencies. The manifest is the authoritative machine-readable representation of that boundary.
+
+Conversation Outcome Links are internal working-memory provenance and navigation. They are never included in an Implementation Handoff Package.
 
 ---
 

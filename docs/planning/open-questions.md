@@ -1141,7 +1141,7 @@ Conversations are working memory, but important conclusions should eventually be
 - A Conversation is not a Collaboration Request or an Assistance Request Type. It may later link to a request, but it never changes Product Knowledge directly.
 - Conversations have explicit source/scope, topic and participants, and live in a dedicated Conversations workspace outside the Specification while retaining links to their source context.
 - Any human with Conversation access may copy an entire Conversation, individual messages or selected text. In the MVP, only the Project owner may crystallize entire-Conversation or selected-message source material into new or updated Product Knowledge, a Decision or an Open Question through ordinary reviewed creation or editing flows.
-- Successful crystallization retains Conversation and optional selected-message provenance, but never implies agreement, alters the thread or closes it. Text-range outcome capture and formal non-owner crystallization requests are deferred.
+- Successful crystallization creates a bidirectional Conversation Outcome Link, with optional selected-message provenance. Links remain internal to the workbench, distinguish Archived from genuinely Broken targets, may be removed only by their creator or the Project owner, and are never included in handoffs. They never imply agreement, alter the thread or close it. Text-range outcome capture and formal non-owner crystallization requests are deferred.
 - The remaining question is how the owner-facing destination choices, draft review and resulting outcome links should be validated as one coherent journey.
 
 ## Question
