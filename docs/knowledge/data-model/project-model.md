@@ -1003,6 +1003,10 @@ A Conversation has an initiating participant, at least one recipient, an initial
 
 Conversation recipient selection is intentionally limited in the MVP. A human recipient must already be an accepted or pending Project collaborator; a Personal AI Assistant must already be configured and enabled by its owner. Adding a recipient neither invites a new human contributor to the Project nor creates or configures an assistant.
 
+The Conversation initiator may add or remove human recipients and add or remove their own assistants. They cannot add, remove or invoke another participant's assistant. Other human Conversation participants may request that an existing eligible human be added, but the initiator approves or rejects the request. A Project owner may add or remove human recipients in a Conversation they did not initiate.
+
+A participant may add or remove only their own assistants. If a human recipient is removed, every assistant that person added to the Conversation is removed as well. Apart from this removal cascade, no one else may remove an assistant. Removing any recipient ends future participation but preserves prior messages, assistant contributions, attribution and a concise recipient-change event in the Conversation history.
+
 Every Conversation has an explicit scope/source. It may be attached to:
 
 - the whole Project;

@@ -122,6 +122,7 @@ Recent clarification established the first target user as an AI-assisted develop
 - Bring Your Own AI has been established: provider and model credentials belong to an individual human user, so enabling AI support is personal and does not make that user's provider access, usage or configured AI available to project collaborators.
 - Personal AI Assistants are now defined for the MVP: users may configure multiple named assistants and select a default; contributions use the assistant name and a compact assistant cue, while ownership is discoverable through its profile and provider/model details remain in the owner's settings.
 - Conversation recipients are now bounded for the MVP: users add existing Project collaborators or their already configured assistants; invitations and assistant setup remain outside the Conversation flow, and assistants contribute only after an explicit owner invocation.
+- Conversation recipient management is now bounded: the initiator controls human recipients, participants control only their own assistants, the Project owner has a human-recipient safety override, and removals preserve history while removing a former participant's assistants.
 
 ---
 
@@ -133,7 +134,7 @@ Recent clarification established the first target user as an AI-assisted develop
 - Validate additional readiness-aware handoff edge cases through concrete specification exercises.
 - Validate detailed context assembly rules for remaining generation and feedback examples.
 - Define the Conversation initiation matrix: valid initiating scopes and eligible initiators.
-- Define who may add or remove Conversation recipients after creation, including participants' own assistants.
+- Define Conversation participant status and completion: whether and how an initiator, human recipient or assistant may leave, and how the Conversation is closed or retained.
 - Validate the first Section Catalog and Project Preset classification through concrete specification exercises.
 - Validate remaining export-format details and package-generation constraints beyond the resolved README, readiness, report and AI-disclosure representations.
 - Detail the resolved asynchronous Collaboration Request and Contribution Response flow for human and AI contributors.

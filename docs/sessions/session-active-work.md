@@ -11,9 +11,10 @@
 - The MVP adopts Bring Your Own AI: each human user supplies and enables their own provider/model credentials. AI support, provider access and usage are personal to that human and are not made available to other collaborators or the Project simply because one user enables them.
 - A human user may configure multiple named Personal AI Assistants and mark one default. Contributions use the assistant's name and a compact assistant cue; ownership is available through its profile, provider/model details stay in the owner's settings, and every visible reply requires explicit invocation by its owner.
 - `Invite contributor` is reserved for Project-level human collaboration. A Conversation uses **Add recipient**, grouping existing accepted or pending people and the current user's preconfigured **My assistants**. It does not create Project invitations or configure assistants; adding an assistant does not invoke it.
-- Comments and private notes remain separate, deferred concepts. The next decision is who may change Conversation recipients after creation, including adding a participant's own assistant.
+- The initiator controls human recipients; other human participants may request an addition for approval. Participants control only their own assistants, except that removing a human recipient also removes their assistants. The Project owner has a human-recipient safety override. Every change is retained as a concise history event and never erases prior contributions.
+- Comments and private notes remain separate, deferred concepts. The next decision is Conversation participant status and completion.
 
-See `2026-07-24-project-conversations-workspace.md`, `2026-07-24-bring-your-own-ai.md`, `2026-07-24-personal-ai-assistants.md` and `2026-07-24-conversation-recipients-and-assistant-terminology.md`.
+See `2026-07-24-project-conversations-workspace.md`, `2026-07-24-bring-your-own-ai.md`, `2026-07-24-personal-ai-assistants.md`, `2026-07-24-conversation-recipients-and-assistant-terminology.md` and `2026-07-24-conversation-recipient-management.md`.
 
 Use the `Answer` blocks to reply directly in this file. Answers can be rough, partial or exploratory.
 

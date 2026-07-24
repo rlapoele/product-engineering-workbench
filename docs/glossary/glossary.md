@@ -304,6 +304,8 @@ Each Conversation has a topic and explicit source/scope, such as the Project, a 
 
 `Invite contributor` is reserved for adding a human collaborator to a Project. `Add recipient` adds an existing person or Personal AI Assistant to a Conversation without changing Project membership or configuring a new assistant.
 
+The initiating participant manages human recipients. Other human Conversation participants may request an additional human recipient, but the initiator approves or rejects that request. A participant manages only their own assistants; removing a human recipient also removes every assistant that person added. Recipient changes preserve prior messages and appear as concise Conversation history events.
+
 Conversations are transient. Important conclusions may later crystallize through separate explicit actions that create or update Product Knowledge, record a Decision or track an Open Question.
 
 ---
