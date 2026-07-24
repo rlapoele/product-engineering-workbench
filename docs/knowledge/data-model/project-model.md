@@ -1007,6 +1007,10 @@ The Conversation initiator may add or remove human recipients and add or remove 
 
 A participant may add or remove only their own assistants. If a human recipient is removed, every assistant that person added to the Conversation is removed as well. Apart from this removal cascade, no one else may remove an assistant. Removing any recipient ends future participation but preserves prior messages, assistant contributions, attribution and a concise recipient-change event in the Conversation history.
 
+Human recipient status is Pending, Active, Declined, Left or Removed. An accepted human recipient may leave an Open Conversation; leaving has the same removal cascade for that person's assistants as a removal. A Personal AI Assistant is Included or Removed. It never leaves or declines by itself. If an assistant later becomes unavailable because its owner disables it or its credentials are no longer usable, it remains historically included but cannot be invoked.
+
+A Conversation is Open or Closed. The initiator may close an Open Conversation instead of leaving it; a Project owner has the same safety override for a Conversation they did not initiate. Closing records a concise history event and makes the Conversation read-only: it permits no new messages, recipient changes or assistant invocations. It does not create a Decision, resolve an Open Question or otherwise change Product Knowledge. Closed Conversations remain accessible and are not reopened or deleted in the MVP; new work starts a new related Conversation.
+
 Every Conversation has an explicit scope/source. It may be attached to:
 
 - the whole Project;
