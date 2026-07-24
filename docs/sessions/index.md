@@ -89,3 +89,4 @@
 | 2026-07-24-15 | 2026-07-24 | 15 | Conversation Outcome Capture | Crystallized | Owner-controlled canonical capture from conversations or selected messages |
 | 2026-07-24-16 | 2026-07-24 | 16 | Conversation Outcome Links | Crystallized | Internal bidirectional links with retained broken-target evidence and no handoff export |
 | 2026-07-25-01 | 2026-07-25 | 1 | Artifact Placement and Section Reordering | Crystallized | Deterministic canonical placement, explicit missing-section safeguard and section-local revisions |
+| 2026-07-25-02 | 2026-07-25 | 2 | Conversation Outcome-Capture Journey Validation | Crystallized | End-to-end selected-message capture, missing-section recovery, Outcome Link and reorder validation |

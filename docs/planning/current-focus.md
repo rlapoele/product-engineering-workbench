@@ -129,6 +129,7 @@ Recent clarification established the first target user as an AI-assisted develop
 - Conversation outcome capture is now bounded: any human with access may copy conversation material, while only the Project owner may create or update canonical knowledge from an entire Conversation or selected messages through ordinary reviewed save flows.
 - Conversation Outcome Links are now bounded as internal bidirectional navigation/provenance: they distinguish Archived from genuinely Broken targets, are removable only by their creator or the Project owner, and never enter a handoff.
 - Artifact placement is now bounded for the MVP: a new artifact is placed deterministically at the end of its canonical section, an unselected destination section requires explicit enablement or cancellation, and saved reordering remains within that section as a document-composition Revision.
+- The complete owner-facing Conversation outcome-capture journey has been validated: selected-message source, destination choice, missing-section recovery, explicit save, Outcome Link and separate section-local reorder remain coherent.
 
 ---
 
@@ -139,7 +140,6 @@ Recent clarification established the first target user as an AI-assisted develop
 - Validate deterministic next-step guidance through prototypes and concrete specification exercises.
 - Validate additional readiness-aware handoff edge cases through concrete specification exercises.
 - Validate detailed context assembly rules for remaining generation and feedback examples.
-- Validate the complete owner-facing Conversation outcome-capture journey: destination choice, review/editing, deterministic placement and resulting outcome links.
 - Validate the first Section Catalog and Project Preset classification through concrete specification exercises.
 - Validate remaining export-format details and package-generation constraints beyond the resolved README, readiness, report and AI-disclosure representations.
 - Detail the resolved asynchronous Collaboration Request and Contribution Response flow for human and AI contributors.
