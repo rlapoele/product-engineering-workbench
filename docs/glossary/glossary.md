@@ -90,6 +90,14 @@ The process uses semantically eligible Artifact Relationships in the Product Kno
 
 AI assistance may help users understand or resolve Stale artifacts after propagation, but AI is not required to identify the initial impact set.
 
+## Artifact Placement
+
+Artifact Placement is the document location at which a Product Artifact is presented in a Specification Section.
+
+For the MVP, an artifact type has a deterministic canonical destination section. A newly created artifact is placed at the end of that section; the creation flow does not offer an alternative placement. If its canonical section is not selected in the Specification, the user must explicitly add that section or cancel the creation.
+
+Users may reorder artifacts up or down only within their current section. Such a change creates a Revision of the document composition, but does not change artifact identity, provenance, Artifact Relationships or Conversation Outcome Links. Moving an artifact between sections is outside the MVP.
+
 ## Assumption
 
 An Assumption is a belief treated as true for the purpose of current product reasoning, specification or implementation planning.
@@ -734,7 +742,7 @@ Revisions preserve change history by recording what changed, when it changed, wh
 
 Revision is distinct from Contribution and Provenance: Contribution records participation, Revision records saved change history and Provenance records origin or derivation.
 
-For an interactive artifact edit, a Revision is created only when the user selects `Done editing`, not while an Edit-in-progress Draft is being written or preserved.
+For an interactive artifact edit, a Revision is created only when the user selects `Done editing`, not while an Edit-in-progress Draft is being written or preserved. A saved within-section Artifact Placement reorder is also a Revision of document composition.
 
 ---
 
