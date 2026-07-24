@@ -126,6 +126,7 @@ Recent clarification established the first target user as an AI-assisted develop
 - Conversation completion is now bounded: people may leave, assistants never leave autonomously, initiators close rather than leave, and closed Conversations are retained read-only without reopening, deletion or inactivity-based automatic closure in the MVP.
 - Conversation workspace navigation is now bounded: Active Conversations are the default list, while Closed Conversations remain searchable and readable in a separate collapsed group or filter.
 - Conversation initiation is now bounded: the workspace defaults new threads to Project scope, while whole-Specification, Section, Product Artifact and selected-content entry points carry progressively narrower scope; pending invitees and assistants do not initiate Conversations.
+- Conversation outcome capture is now bounded: any human with access may copy conversation material, while only the Project owner may create or update canonical knowledge from an entire Conversation or selected messages through ordinary reviewed save flows.
 
 ---
 
@@ -136,7 +137,7 @@ Recent clarification established the first target user as an AI-assisted develop
 - Validate deterministic next-step guidance through prototypes and concrete specification exercises.
 - Validate additional readiness-aware handoff edge cases through concrete specification exercises.
 - Validate detailed context assembly rules for remaining generation and feedback examples.
-- Define the user-visible signals and human-controlled actions through which Conversation outcomes crystallize into Product Knowledge, Decisions, updates or Open Questions.
+- Validate the complete owner-facing Conversation outcome-capture journey: destination choice, review/editing and resulting outcome links.
 - Validate the first Section Catalog and Project Preset classification through concrete specification exercises.
 - Validate remaining export-format details and package-generation constraints beyond the resolved README, readiness, report and AI-disclosure representations.
 - Detail the resolved asynchronous Collaboration Request and Contribution Response flow for human and AI contributors.

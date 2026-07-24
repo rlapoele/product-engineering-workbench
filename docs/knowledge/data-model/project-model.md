@@ -1037,6 +1037,10 @@ The source explains where the matter arises; the topic explains what the partici
 
 Conversations are not Collaboration Requests and `Conversation` is not an Assistance Request Type. A Conversation may later be linked to a scoped Collaboration Request or support an explicit knowledge-crystallization action, but messages and participation never directly change Product Knowledge. A Personal AI Assistant may contribute only through an explicit invocation by its human owner; it does not respond autonomously. Adding an assistant as a recipient is not itself an invocation.
 
+For the MVP, only the Project owner may crystallize Conversation material into Product Knowledge. The owner explicitly chooses an entire Conversation or one or more individual messages as source material, then chooses to create a new Product Artifact, record a Decision, track an Open Question or update existing Product Knowledge. The normal artifact creation or editing flow remains responsible for review and explicit save; only that save creates the canonical record or Revision.
+
+The resulting record retains provenance to the Conversation and, when applicable, its selected messages. A Conversation may show compact derived links to outcomes captured from it. This linkage does not make the Conversation canonical, close it or imply participant agreement. It may be created from a Closed Conversation without reopening the Conversation or adding a message. Text-range capture as source material and a formal non-owner request-to-crystallize flow are deferred from the MVP.
+
 Important conclusions from Conversations may eventually crystallize into stable Product Knowledge through separate, explicit user actions that create or update an artifact, record a Decision or track an Open Question. The resulting Revision or new record may retain provenance that it was based on a Conversation.
 
 ---

@@ -1140,7 +1140,9 @@ Conversations are working memory, but important conclusions should eventually be
 - `Conversation` is the canonical term for a project-scoped, multi-party working-memory exchange; `Discussion` is not a separate product concept.
 - A Conversation is not a Collaboration Request or an Assistance Request Type. It may later link to a request, but it never changes Product Knowledge directly.
 - Conversations have explicit source/scope, topic and participants, and live in a dedicated Conversations workspace outside the Specification while retaining links to their source context.
-- The remaining question is how user-visible signals and explicit, human-controlled actions should turn a Conversation outcome into durable Product Knowledge, a Decision, an update or an Open Question.
+- Any human with Conversation access may copy an entire Conversation, individual messages or selected text. In the MVP, only the Project owner may crystallize entire-Conversation or selected-message source material into new or updated Product Knowledge, a Decision or an Open Question through ordinary reviewed creation or editing flows.
+- Successful crystallization retains Conversation and optional selected-message provenance, but never implies agreement, alters the thread or closes it. Text-range outcome capture and formal non-owner crystallization requests are deferred.
+- The remaining question is how the owner-facing destination choices, draft review and resulting outcome links should be validated as one coherent journey.
 
 ## Question
 

@@ -502,6 +502,10 @@ Knowledge forms the project's long-term memory.
 
 The process of transforming exploratory Conversations into stable project knowledge.
 
+For the MVP, only the Project owner may explicitly crystallize a Conversation into new or updated Product Knowledge, a Decision or an Open Question. The owner may use an entire Conversation or one or more selected messages as source material, then reviews and saves the result through the ordinary creation or revision flow. Copying a Conversation, messages or selected text does not crystallize knowledge. Text-range capture as source material and formal contributor requests for crystallization are deferred.
+
+Crystallization records provenance linking the resulting knowledge to the Conversation and, when messages were selected, to those messages. It does not itself close, resolve or otherwise change the Conversation.
+
 Typical progression:
 
 Idea
