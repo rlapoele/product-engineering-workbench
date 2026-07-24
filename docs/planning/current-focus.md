@@ -118,13 +118,14 @@ Recent clarification established the first target user as an AI-assisted develop
 - Evaluated-handoff AI-disclosure scenarios are validated as a batch: `Not Ready` and `Ready with Caveats` remain distinguishable despite the shared caveated package result, while known or no-known activity is separately and concisely disclosed.
 - Readiness-report inclusion is now aligned across evaluated handoffs: owner choice affects only the report file and README link, while manifest and Handoff History retain immutable inclusion state without changing outcome or package result.
 - The README/readiness/report/AI-disclosure representation thread is closed: a representative matrix covers every readiness state, report inclusion or omission, and disclosure state while preserving consistent README, manifest and Handoff History semantics.
-- Project Conversations are now bounded as a dedicated, topic-led working-memory workspace: they are scoped multi-party exchanges, distinct from Collaboration Requests and canonical Product Knowledge, and retain source context without becoming inline specification chat.
+- Project Conversations are now bounded as a dedicated, topic-led working-memory workspace: they are scoped multi-party exchanges, distinct from Collaboration Requests and canonical Product Knowledge, retain source context without becoming inline specification chat, and may be initiated only by accepted human collaborators from within a Project.
 - Bring Your Own AI has been established: provider and model credentials belong to an individual human user, so enabling AI support is personal and does not make that user's provider access, usage or configured AI available to project collaborators.
 - Personal AI Assistants are now defined for the MVP: users may configure multiple named assistants and select a default; contributions use the assistant name and a compact assistant cue, while ownership is discoverable through its profile and provider/model details remain in the owner's settings.
 - Conversation recipients are now bounded for the MVP: users add existing Project collaborators or their already configured assistants; invitations and assistant setup remain outside the Conversation flow, and assistants contribute only after an explicit owner invocation.
 - Conversation recipient management is now bounded: the initiator controls human recipients, participants control only their own assistants, the Project owner has a human-recipient safety override, and removals preserve history while removing a former participant's assistants.
 - Conversation completion is now bounded: people may leave, assistants never leave autonomously, initiators close rather than leave, and closed Conversations are retained read-only without reopening, deletion or inactivity-based automatic closure in the MVP.
 - Conversation workspace navigation is now bounded: Active Conversations are the default list, while Closed Conversations remain searchable and readable in a separate collapsed group or filter.
+- Conversation initiation is now bounded: the workspace defaults new threads to Project scope, while whole-Specification, Section, Product Artifact and selected-content entry points carry progressively narrower scope; pending invitees and assistants do not initiate Conversations.
 
 ---
 
@@ -135,7 +136,7 @@ Recent clarification established the first target user as an AI-assisted develop
 - Validate deterministic next-step guidance through prototypes and concrete specification exercises.
 - Validate additional readiness-aware handoff edge cases through concrete specification exercises.
 - Validate detailed context assembly rules for remaining generation and feedback examples.
-- Define the Conversation initiation matrix: valid initiating scopes and eligible initiators.
+- Define the user-visible signals and human-controlled actions through which Conversation outcomes crystallize into Product Knowledge, Decisions, updates or Open Questions.
 - Validate the first Section Catalog and Project Preset classification through concrete specification exercises.
 - Validate remaining export-format details and package-generation constraints beyond the resolved README, readiness, report and AI-disclosure representations.
 - Detail the resolved asynchronous Collaboration Request and Contribution Response flow for human and AI contributors.

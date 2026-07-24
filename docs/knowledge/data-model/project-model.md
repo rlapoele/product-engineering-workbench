@@ -1014,10 +1014,24 @@ A Conversation is Open or Closed. The initiator may close an Open Conversation i
 Every Conversation has an explicit scope/source. It may be attached to:
 
 - the whole Project;
-- a stage;
+- the whole Specification;
 - a Specification Section;
 - a Product Artifact; or
 - selected content within the Specification.
+
+Only the Project owner or an accepted human Project collaborator may initiate a Conversation. A pending invitee and a Personal AI Assistant cannot initiate one. Initiation always occurs from inside a Project: a future home or cross-project surface may show existing Conversations but does not initiate an unscoped one.
+
+The MVP offers these source-specific entry points:
+
+| Entry point | Initial source/scope |
+|---|---|
+| Conversations workspace: **New conversation** | Project, by default |
+| Specification action | Whole Specification |
+| Section action | That Specification Section |
+| Artifact action | That Product Artifact |
+| Selected-content action | That selected Specification content |
+
+A selected-content Conversation retains its containing Section or Artifact as structural context while keeping selected content as its explicit source. A workflow stage remains a potential future source only when the product exposes a meaningful stage surface; it has no MVP initiation entry point.
 
 The source explains where the matter arises; the topic explains what the participants are discussing. Several Conversations may share a source without being the same Conversation.
 

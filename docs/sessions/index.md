@@ -85,3 +85,4 @@
 | 2026-07-24-11 | 2026-07-24 | 11 | Conversation Recipient Management | Crystallized | Initiator control, personal-assistant ownership, owner override and retained history |
 | 2026-07-24-12 | 2026-07-24 | 12 | Conversation Completion | Crystallized | Human leave, assistant lifecycle and retained read-only closure |
 | 2026-07-24-13 | 2026-07-24 | 13 | Conversation Closure and List Organization | Crystallized | Intentional closure and distinct active/closed workspace navigation |
+| 2026-07-24-14 | 2026-07-24 | 14 | Conversation Initiation Matrix | Crystallized | Project-contained initiation by accepted humans across explicit source scopes |

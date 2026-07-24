@@ -300,7 +300,9 @@ A topic-focused exchange between an initiating participant and at least one reci
 
 Conversations support exploration, clarification and collaboration. They are Project working memory, not canonical Product Knowledge or an Assistance Request Type.
 
-Each Conversation has a topic and explicit source/scope, such as the Project, a Section, a Product Artifact or selected Specification content. It may involve accepted human collaborators, pending invitees and enabled available Personal AI Assistants.
+Each Conversation has a topic and explicit source/scope. In the MVP, it may arise from the Project, whole Specification, a Specification Section, a Product Artifact or selected Specification content. It may involve accepted human collaborators, pending invitees and enabled available Personal AI Assistants.
+
+Only a Project owner or accepted human collaborator may initiate a Conversation. Pending invitees and Personal AI Assistants cannot initiate one. Conversation initiation always occurs in a Project context; a future home or cross-project surface may show existing Conversations but does not offer an unscoped Conversation composer.
 
 `Invite contributor` is reserved for adding a human collaborator to a Project. `Add recipient` adds an existing person or Personal AI Assistant to a Conversation without changing Project membership or configuring a new assistant.
 

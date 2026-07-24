@@ -308,7 +308,9 @@ The project owner remains responsible for accepting, rejecting or acting on cont
 
 ## Conversations Workspace
 
-Conversations are a separate project-scoped workspace for multi-party working-memory exchange, not an inline component of the Specification and not an Assistance Request Type. A user may initiate a Conversation from contextual document actions on the Project, a Section, a Product Artifact or selected content; the source/scope is carried into the new Conversation. A Personal AI Assistant is available to a Conversation only through a participating human user's enabled Bring Your Own AI configuration.
+Conversations are a separate project-scoped workspace for multi-party working-memory exchange, not an inline component of the Specification and not an Assistance Request Type. A Project owner or accepted human collaborator may initiate a Conversation only from inside a Project. A pending invitee and a Personal AI Assistant cannot initiate one. A future home or cross-project surface may show existing Conversations, but does not expose an unscoped Conversation composer.
+
+The MVP source-specific entry points are **New conversation** in the Conversations workspace (Project scope by default), a whole-Specification action, and contextual actions on a Section, Product Artifact or selected content. The entry point carries its source/scope into the new Conversation. Selected content remains the explicit source while its containing Section or Artifact supplies structural context. A Personal AI Assistant is available to a Conversation only through a participating human user's enabled Bring Your Own AI configuration.
 
 Conversation creation uses **Add recipient** for both people and assistants. The recipient picker groups existing eligible entries as **People** and **My assistants**. People must already be accepted Project collaborators or pending Project invitees; an assistant must already be configured and enabled by the selecting user. The picker does not offer project-contributor invitation, provider connection or assistant configuration in the MVP; users return to the relevant Project or personal settings flow when those are needed.
 
