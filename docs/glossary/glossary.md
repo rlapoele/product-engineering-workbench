@@ -306,7 +306,7 @@ Each Conversation has a topic and explicit source/scope, such as the Project, a 
 
 The initiating participant manages human recipients. Other human Conversation participants may request an additional human recipient, but the initiator approves or rejects that request. A participant manages only their own assistants; removing a human recipient also removes every assistant that person added. Recipient changes preserve prior messages and appear as concise Conversation history events.
 
-A Conversation is Open or Closed. Human recipients may leave an Open Conversation; an assistant never leaves by itself and is removed only by its owner or through its owner's departure or removal. The initiator closes an Open Conversation instead of leaving it; a Project owner has a safety override. A Closed Conversation is retained as read-only working memory, not reopened or deleted in the MVP.
+A Conversation is Open or Closed. Human recipients may leave an Open Conversation; an assistant never leaves by itself and is removed only by its owner or through its owner's departure or removal. The initiator closes an Open Conversation instead of leaving it; a Project owner has a safety override. The absence of other active human recipients does not close a Conversation automatically or after a fixed period. A Closed Conversation is retained as read-only working memory, not reopened or deleted in the MVP.
 
 Conversations are transient. Important conclusions may later crystallize through separate explicit actions that create or update Product Knowledge, record a Decision or track an Open Question.
 

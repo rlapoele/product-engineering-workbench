@@ -123,7 +123,8 @@ Recent clarification established the first target user as an AI-assisted develop
 - Personal AI Assistants are now defined for the MVP: users may configure multiple named assistants and select a default; contributions use the assistant name and a compact assistant cue, while ownership is discoverable through its profile and provider/model details remain in the owner's settings.
 - Conversation recipients are now bounded for the MVP: users add existing Project collaborators or their already configured assistants; invitations and assistant setup remain outside the Conversation flow, and assistants contribute only after an explicit owner invocation.
 - Conversation recipient management is now bounded: the initiator controls human recipients, participants control only their own assistants, the Project owner has a human-recipient safety override, and removals preserve history while removing a former participant's assistants.
-- Conversation completion is now bounded: people may leave, assistants never leave autonomously, initiators close rather than leave, and closed Conversations are retained read-only without reopening or deletion in the MVP.
+- Conversation completion is now bounded: people may leave, assistants never leave autonomously, initiators close rather than leave, and closed Conversations are retained read-only without reopening, deletion or inactivity-based automatic closure in the MVP.
+- Conversation workspace navigation is now bounded: Active Conversations are the default list, while Closed Conversations remain searchable and readable in a separate collapsed group or filter.
 
 ---
 
