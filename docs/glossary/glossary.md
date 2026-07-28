@@ -526,6 +526,8 @@ For the MVP, only the Project owner may explicitly crystallize a Conversation in
 
 Crystallization records provenance linking the resulting knowledge to the Conversation and, when messages were selected, to those messages. It does not itself close, resolve or otherwise change the Conversation.
 
+The MVP relies on the Project owner's explicit judgment of whether and when to crystallize. It provides no Conversation-ready status, prompt, recommendation or participant signal, and does not infer readiness from activity, inactivity, apparent agreement, assistant analysis or closure. A participant may raise a possible outcome through an ordinary message without creating a workflow state or obligation.
+
 Typical progression:
 
 Idea

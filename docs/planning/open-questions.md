@@ -1129,7 +1129,7 @@ Storage technology remains undecided. This decision does not require a relationa
 
 **Category:** Process and Methodology
 
-**Status:** 🟡 Exploring
+**Status:** 🟢 Resolved
 
 ## Context
 
@@ -1144,8 +1144,17 @@ Conversations are working memory, but important conclusions should eventually be
 - Successful crystallization creates a bidirectional Conversation Outcome Link, with optional selected-message provenance. Links remain internal to the workbench, distinguish Archived from genuinely Broken targets, may be removed only by their creator or the Project owner, and are never included in handoffs. They never imply agreement, alter the thread or close it. Text-range outcome capture and formal non-owner crystallization requests are deferred.
 - A newly captured Product Artifact is placed at the end of the deterministic canonical section for its type, without a placement picker. An unselected canonical section requires an explicit add-section or cancel choice: cancel returns to destination choice with selected messages intact and no outline change, while an explicitly added section remains if the later unsaved artifact draft is discarded. Section-local reordering is a separate document-composition Revision and does not change Conversation provenance or Outcome Links.
 - A complete owner-facing journey has validated selected-message capture into an Open Question: destination choice, missing-section cancellation and return, explicit section addition, draft review and save, bidirectional Outcome Link, and later within-section reorder all retain their separate boundaries.
-- The remaining question is whether the product should offer any signals beyond the Project owner's explicit judgment that a Conversation may be ready to crystallize.
 
-## Question
+## Decision
 
-What rules or signals should help users decide when a Conversation should become an artifact, Decision, update or Open Question?
+For the MVP, the Project owner alone uses explicit judgment to decide whether and when a Conversation warrants outcome capture. The product provides no Conversation-ready status, capture prompt, recommendation or participant signal.
+
+The workbench must not infer or signal capture readiness from message activity, inactivity, apparent agreement, assistant analysis or Conversation closure. These are not reliable evidence that a discussion has reached a durable conclusion, and a signal would introduce a misleading quasi-workflow state or obligation.
+
+Any participant may raise a possible outcome through an ordinary Conversation message. This remains conversational input: it does not express consensus, mark the Conversation as ready, notify or oblige the owner, or change Product Knowledge. A future non-binding suggestion action may be considered only if ordinary messages and owner-led capture prove insufficient.
+
+## Consequences
+
+- Conversations remain working memory until the owner deliberately starts the existing capture flow and explicitly saves an outcome.
+- Capture readiness remains separate from Conversation openness, closure and participant agreement.
+- The MVP avoids extra states, history events, notifications and authorization rules for a capture-suggestion mechanism.

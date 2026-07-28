@@ -2,7 +2,7 @@
 
 **Status:** Active
 
-**Last Updated:** 2026-07-22
+**Last Updated:** 2026-07-28
 
 ---
 
@@ -130,6 +130,7 @@ Recent clarification established the first target user as an AI-assisted develop
 - Conversation Outcome Links are now bounded as internal bidirectional navigation/provenance: they distinguish Archived from genuinely Broken targets, are removable only by their creator or the Project owner, and never enter a handoff.
 - Artifact placement is now bounded for the MVP: a new artifact is placed deterministically at the end of its canonical section, an unselected destination section requires explicit enablement or cancellation, and saved reordering remains within that section as a document-composition Revision.
 - The complete owner-facing Conversation outcome-capture journey has been validated: selected-message source, destination choice, missing-section recovery, explicit save, Outcome Link and separate section-local reorder remain coherent.
+- Conversation outcome-capture readiness is now bounded: the MVP relies entirely on the Project owner's explicit judgment and adds no ready status, prompt, recommendation or participant signal; activity, inactivity, apparent agreement, assistant analysis and closure never infer readiness.
 
 ---
 
