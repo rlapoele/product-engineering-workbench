@@ -136,6 +136,7 @@ Recent clarification established the first target user as an AI-assisted develop
 - The standalone Collaboration Request lifecycle is now bounded: a required Request Brief and explicit Draft, Submitted, In Progress, Responded, Declined and Cancelled states preserve one bounded response cycle; Reopen returns terminal requests to a private Draft where only the brief may change before resubmission.
 - AI-targeted Collaboration Requests now have a bounded interruption path: explicit owner invocation starts or resumes only the owner's usable Personal AI Assistant; technical interruption or lost eligibility moves the request to AI-specific On Hold, which never auto-resumes or exposes private provider/model, credential, credit or failure details.
 - Paired MeatLoop journeys validate standalone Collaboration Requests: human review exercises In Progress, response handling and the Declined alternative, while personal-AI review exercises explicit invocation, On Hold and owner-only resume without changing Product Knowledge.
+- Standalone Collaboration Request creation is now defined as a scope-led, local progressive-disclosure flow: contextual Specification, Section, Product Artifact and selected-content entries establish scope, while the request list starts scope-first; writing the Request Brief creates the private Draft, derived context is read-only, and human versus personal-AI submission remains explicit.
 
 ---
 
@@ -148,7 +149,7 @@ Recent clarification established the first target user as an AI-assisted develop
 - Validate detailed context assembly rules for remaining generation and feedback examples.
 - Validate the first Section Catalog and Project Preset classification through concrete specification exercises.
 - Validate remaining export-format details and package-generation constraints beyond the resolved README, readiness, report and AI-disclosure representations.
-- Detail the resolved asynchronous Collaboration Request and Contribution Response flow for human and AI contributors.
+- Define how Collaboration Request lists and recipient-facing pending-request views organize lifecycle state without becoming delivery boards.
 - Detail contributor selection using both capability and availability.
 - Validate the first-pass Assistance Request Type matrix through concrete specification exercises.
 - Validate the initial Response Shape and Finding Type model through concrete review and feedback examples.

@@ -96,3 +96,4 @@
 | 2026-07-28-04 | 2026-07-28 | 4 | Collaboration Request Lifecycle | Crystallized | Request Brief, explicit lifecycle and brief-only reopened drafts |
 | 2026-07-28-05 | 2026-07-28 | 5 | AI Collaboration Request Interruption | Crystallized | Explicit personal-AI invocation and AI-specific On Hold interruption state |
 | 2026-07-28-06 | 2026-07-28 | 6 | Collaboration Request Journey Validation | Crystallized | Paired human and personal-AI request journeys validate lifecycle boundaries |
+| 2026-07-28-07 | 2026-07-28 | 7 | Collaboration Request Creation Interaction | Crystallized | Scope-led local composer, Brief-triggered private Draft and explicit submission |
