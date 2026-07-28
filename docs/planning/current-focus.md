@@ -138,6 +138,7 @@ Recent clarification established the first target user as an AI-assisted develop
 - Paired MeatLoop journeys validate standalone Collaboration Requests: human review exercises In Progress, response handling and the Declined alternative, while personal-AI review exercises explicit invocation, On Hold and owner-only resume without changing Product Knowledge.
 - Standalone Collaboration Request creation is now defined as a scope-led, local progressive-disclosure flow: contextual Specification, Section, Product Artifact and selected-content entries establish scope, while the request list starts scope-first; writing the Request Brief creates the private Draft, derived context is read-only, and human versus personal-AI submission remains explicit.
 - Collaboration Requests remain Project-scoped in the MVP: their Project request list is the canonical workplace, while any future cross-project home summary is limited to orientation and routing back into a Project rather than creating a global request-management surface.
+- Project roles and home-page orientation are now bounded: a Project Owner is its creator, an accepted invited person is a Project Collaborator, and the roles are mutually exclusive within one Project; the home page routes users through Projects and compact attention only, with recipient responsibility remaining request-specific.
 
 ---
 

@@ -173,9 +173,9 @@ A Check Type may be exposed as a focused Assistance Request Type or used interna
 
 ## Contributor Availability
 
-Contributor Availability describes whether a contributor can receive or respond to a Collaboration Request for a given project, scope and requested capability.
+Contributor Availability describes whether a potential human or AI recipient can receive or respond to a Collaboration Request for a given Project, scope and requested capability.
 
-For human contributors in the MVP, availability is invitation-gated: a human contributor becomes available after being invited, onboarded if needed and accepting the invitation.
+For human recipients in the MVP, availability is invitation-gated: an accepted Project Collaborator becomes available after being invited, onboarded if needed and accepting the invitation.
 
 For AI Contributors in the MVP, availability is personal to the current human user: that user must have enabled usable Bring Your Own AI credentials, and the requested assistance must be permitted by applicable Project settings.
 
@@ -191,11 +191,19 @@ For the MVP, Product Artifacts inherit the Project or Specification content loca
 
 ## Collaboration Request
 
-A Collaboration Request is a scoped request for assistance sent to one selected available human or AI contributor.
+A Collaboration Request is a scoped request for assistance sent to one selected available human or AI recipient.
 
-A Collaboration Request identifies the Request Brief, relevant scope, selected contributor, relevant capability and context needed to respond. Capability may inform selection, but it is not a capability-only queue or a multi-recipient request.
+A Collaboration Request identifies the Request Brief, relevant scope, selected recipient, relevant capability and context needed to respond. Capability may inform selection, but it is not a capability-only queue or a multi-recipient request.
 
 In the MVP, Collaboration Requests support asynchronous and transactional collaboration rather than real-time co-editing.
+
+---
+
+## Collaboration Request Recipient
+
+A Collaboration Request Recipient is the person or Personal AI Assistant selected to provide the bounded response to one Collaboration Request. It is a temporary request responsibility, not a Project membership role.
+
+A human recipient must be an accepted Project Collaborator. The Project Owner cannot be the human recipient of their own request. An AI recipient must be the requestor's own enabled, usable Personal AI Assistant.
 
 ---
 
@@ -281,7 +289,7 @@ A Contribution records participation in the product engineering process. It is d
 
 ## Contribution Response
 
-A Contribution Response is a contributor's submitted input for a Collaboration Request.
+A Contribution Response is a Collaboration Request recipient's submitted input.
 
 A Contribution Response may contain answers, comments, review results, suggested edits, proposed artifacts, proposed decisions or other requested input.
 
@@ -291,7 +299,7 @@ Contribution Responses do not directly alter canonical Product Knowledge. A proj
 
 Contribution Response Status describes the requestor's handling of an individual Contribution Response.
 
-For the MVP, a response is Submitted when the contributor sends it. The requestor may manually mark it Acknowledged to indicate that it has been read, and may later mark it Acted On to indicate that they have dealt with its content.
+For the MVP, a response is Submitted when the request recipient sends it. The requestor may manually mark it Acknowledged to indicate that it has been read, and may later mark it Acted On to indicate that they have dealt with its content.
 
 Acknowledged and Acted On are collaboration statuses only. They do not accept, apply, validate or otherwise change Product Knowledge, and Acted On does not require the requestor to link a Revision or record a note.
 
@@ -299,14 +307,14 @@ Acknowledged and Acted On are collaboration statuses only. They do not accept, a
 
 ## Contributor
 
-An entity capable of contributing to a project.
+An abstract human or AI actor capable of providing a Contribution.
 
 A contributor may be:
 
 - Human
 - Artificial Intelligence
 
-Contributors provide capabilities independently of their implementation.
+Contributors provide capabilities independently of their implementation. `Contributor` is not a Project membership role: an accepted invited person is a Project Collaborator, and a selected person or assistant on one request is its recipient.
 
 ---
 
@@ -626,9 +634,19 @@ Product knowledge is composed of interconnected Product Artifacts.
 
 ---
 
+## Project Collaborator
+
+A Project Collaborator is a person who has been invited to participate in a Project and has accepted that invitation. This is a durable Project relationship, independent of whether the collaborator currently has a Collaboration Request awaiting a reply.
+
+A Project Collaborator may be selected as the human recipient of a Collaboration Request and may participate in eligible Conversations. A Project Collaborator is not the Project Owner of that same Project.
+
+---
+
 ## Project Owner
 
-A Project Owner is the contributor responsible for controlling a project's product knowledge and deciding whether requested or received contributions should be accepted, rejected or acted upon.
+A Project Owner is the user who created a Project. The owner controls the Project's Product Knowledge and decides whether requested or received contributions should be acted upon.
+
+Project Owner and Project Collaborator are mutually exclusive roles within one Project. A Project Owner cannot select themself as the human recipient of a Collaboration Request; they may instead work directly or explicitly invoke one of their own eligible Personal AI Assistants.
 
 ---
 
@@ -714,7 +732,7 @@ It records the deterministic readiness outcome for the selected scope, its basis
 
 A Request Brief is the requestor-authored framing of the specific help, question or desired outcome for a Collaboration Request.
 
-The Assistance Request Type identifies the kind of help sought; the Request Brief identifies what the selected contributor should address within the request's scope. It is required for a submitted request.
+The Assistance Request Type identifies the kind of help sought; the Request Brief identifies what the selected recipient should address within the request's scope. It is required for a submitted request.
 
 After a request has first been submitted, its recipient, Assistance Request Type, scope and recorded context remain read-only. If the requestor reopens the request, only its Request Brief may be revised before the request is resubmitted.
 

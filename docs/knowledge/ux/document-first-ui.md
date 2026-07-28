@@ -31,6 +31,22 @@ The first version of the product should optimize for this user before generalizi
 
 ---
 
+## Home Page Orientation
+
+The first page after sign-in should orient the user and route them into Project work; it is not a second Project workspace or a global request-management surface.
+
+At a high level, it may offer:
+
+- **Continue**, for recently opened Projects, Conversations or document locations;
+- **Needs your attention**, for compact cross-Project signals such as a pending invitation, a Collaboration Request awaiting the current user's reply, or an AI request that its owner must explicitly resume; and
+- **Your Projects**, as the primary entry to durable Project context.
+
+`Your Projects` groups Projects as **Projects you own** and **Projects you collaborate on**. A Project appears in exactly one group: its creator is the Project Owner, while an invited person appears only after accepting as a Project Collaborator. A pending invitation is an attention item, not a Project collaboration relationship. A request recipient is a temporary request-level responsibility, not a third Project role or a Project grouping.
+
+An owner may see owner-relevant attention, such as a received response or a personal-AI request on hold, but never a human Collaboration Request addressed to themself. A Project Collaborator may see a request awaiting their reply. Where the user may create Projects, **Create Project** remains available regardless of their current Project relationships. Optional personal AI settings remain available through personal settings and do not dominate the new-user empty state.
+
+For a new user with no Projects or accepted invitations, the page should present a calm empty state: create a first Project, wait for or respond to an invitation, and optionally consult getting-started guidance. It should not show empty request-management panels. Any future cross-Project attention summary only routes the user into the relevant Project; it provides neither an unscoped composer nor a global request board.
+
 # 3. MVP Project Creation Flow
 
 The MVP should allow users to create a new project.
@@ -486,13 +502,13 @@ MVP collaboration should be asynchronous and transactional.
 
 The MVP should not support real-time co-editing, shared cursors, live presence or simultaneous editing conflict resolution.
 
-Instead, a project owner should create a scoped Collaboration Request for a contributor. The contributor should be able to open the request, review the relevant context, submit a Contribution Response and leave the requestor to review it later.
+Instead, a Project Owner should create a scoped Collaboration Request for one recipient. The recipient should be able to open the request, review the relevant context, submit a Contribution Response and leave the requestor to review it later.
 
-Each MVP Collaboration Request selects exactly one available contributor. Capability and availability may guide that selection, but the request is not sent to a capability-only queue, broadcast or group. A user who needs multiple perspectives or evolving shared context uses a Conversation instead.
+Each MVP Collaboration Request selects exactly one available recipient. Capability and availability may guide that selection, but the request is not sent to a capability-only queue, broadcast or group. A user who needs multiple perspectives or evolving shared context uses a Conversation instead.
 
 ### Creating a standalone Collaboration Request
 
-Only the Project owner can create a standalone Collaboration Request. The owner can start **Request collaboration** from the Specification header, a Section action menu, a Product Artifact action menu or a selected-content action. Each contextual entry point establishes its corresponding initial scope: respectively the whole Specification, that Section, that Product Artifact or the selected content together with its containing structural context. That scope stays pinned in the contextual creation path; the owner who needs another scope cancels and starts from the appropriate source rather than being sent through a broad record picker.
+Only the Project Owner can create a standalone Collaboration Request. The owner can start **Request collaboration** from the Specification header, a Section action menu, a Product Artifact action menu or a selected-content action. Each contextual entry point establishes its corresponding initial scope: respectively the whole Specification, that Section, that Product Artifact or the selected content together with its containing structural context. That scope stays pinned in the contextual creation path; the owner who needs another scope cancels and starts from the appropriate source rather than being sent through a broad record picker. The owner cannot select themself as the human recipient.
 
 The Project's Collaboration Requests list also provides **New request**. This path begins with scope: the whole Specification is the default, and the owner may deliberately choose a Section or Product Artifact through the outline. Selected-content scope begins only from a selected-content action. The lower-priority Conversation-to-request capability is not an MVP entry point. This is a Project-scoped workspace, not a separate global request workplace. A future home or cross-project surface may show a compact, non-actionable attention summary and route the user into the relevant Project, but it must not offer an unscoped request composer, independent request board or separate global **My requests** and **Requests for me** pages.
 

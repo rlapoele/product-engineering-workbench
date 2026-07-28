@@ -30,7 +30,7 @@ Resolved from:
 
 MVP collaboration will be asynchronous and transactional.
 
-Project owners will create scoped Collaboration Requests for contributors.
+Project Owners will create scoped Collaboration Requests for recipients.
 
 Each Collaboration Request should have an Assistance Request Type that describes the kind of help being requested.
 
@@ -62,7 +62,7 @@ A Collaboration Request may target:
 - selected content;
 - another explicit project scope.
 
-Each MVP Collaboration Request has exactly one selected available contributor. Capability and availability guide selection but do not create a capability-only queue, broadcast or group request. A Conversation remains the multi-party path when multiple perspectives or evolving shared context are needed.
+Each MVP Collaboration Request has exactly one selected available recipient. A human recipient must be an accepted Project Collaborator; the Project Owner cannot request collaboration from themself. Capability and availability guide selection but do not create a capability-only queue, broadcast or group request. A Conversation remains the multi-party path when multiple perspectives or evolving shared context are needed.
 
 A Project owner may initiate a standalone request from the Specification, a Section, a Product Artifact or selected content, whose contextual entry establishes a pinned scope. The Project's Collaboration Requests list provides a scope-first `New request` path that defaults to the whole Specification and allows deliberate Section or Product Artifact selection through the outline. This list remains the canonical Project-scoped request workplace. A future home or cross-project surface may summarize attention and route users back into the appropriate Project, but does not expose an unscoped composer, independent request board or global request workplace. Creation is a local, non-modal progressive-disclosure interaction: after scope, the owner selects type and one recipient, writes the Request Brief, inspects derived read-only context and submits explicitly. Scope, type and recipient are provisional until writing or editing the brief creates a private Draft. The final action is `Submit request` for a human recipient or `Submit and ask` for the owner's usable Personal AI Assistant. No inline invitation, assistant configuration or Conversation-to-request entry is part of this core MVP flow.
 
@@ -76,7 +76,7 @@ Collaboration Requests and Conversations are separate optional paths. A Conversa
 
 Human and AI contributors share the same abstract Contributor and Capability model, but they become available differently in the MVP.
 
-Human collaborators are invitation-gated. A human becomes available to contribute to a project after being invited, completing onboarding if needed and accepting the invitation.
+Human Project Collaborators are invitation-gated. A human becomes available as a Collaboration Request recipient after being invited, completing onboarding if needed and accepting the invitation. Project Owner and Project Collaborator are mutually exclusive within the same Project: ownership comes from creating the Project, while collaboration comes from accepting an invitation.
 
 AI Contributor availability is personal to the human user invoking assistance. A user may use AI only through their own enabled, usable Bring Your Own AI credentials; another collaborator's configuration, provider access and associated usage are not available to them. AI Contributors do not require the same invitation and acceptance flow as human collaborators, but applicable Project settings still apply.
 
