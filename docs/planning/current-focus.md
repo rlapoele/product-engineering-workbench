@@ -135,6 +135,7 @@ Recent clarification established the first target user as an AI-assisted develop
 - Standalone Collaboration Requests now have one explicit recipient: capability and availability guide selection but never create a queue, broadcast or group request; multi-party context belongs in a Conversation.
 - The standalone Collaboration Request lifecycle is now bounded: a required Request Brief and explicit Draft, Submitted, In Progress, Responded, Declined and Cancelled states preserve one bounded response cycle; Reopen returns terminal requests to a private Draft where only the brief may change before resubmission.
 - AI-targeted Collaboration Requests now have a bounded interruption path: explicit owner invocation starts or resumes only the owner's usable Personal AI Assistant; technical interruption or lost eligibility moves the request to AI-specific On Hold, which never auto-resumes or exposes private provider/model, credential, credit or failure details.
+- Paired MeatLoop journeys validate standalone Collaboration Requests: human review exercises In Progress, response handling and the Declined alternative, while personal-AI review exercises explicit invocation, On Hold and owner-only resume without changing Product Knowledge.
 
 ---
 
