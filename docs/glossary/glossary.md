@@ -199,6 +199,14 @@ In the MVP, Collaboration Requests support asynchronous and transactional collab
 
 ---
 
+## Collaboration Request Status
+
+Collaboration Request Status describes the lifecycle of a Collaboration Request. The MVP statuses are Draft, Submitted, In Progress, Responded, Declined and Cancelled.
+
+`On Hold` is an additional AI-specific status. It records that an AI-targeted request cannot currently proceed because its assistant's processing was technically interrupted or that owner's AI assistance became unavailable. It is not used for human recipients or as a general delivery-management state. The assistant owner may explicitly resume or retry only after AI assistance is usable again; otherwise the request remains On Hold or may be cancelled.
+
+---
+
 ## Context
 
 The relevant surrounding knowledge needed to understand or act on a Product Artifact, project area or contribution.
@@ -565,6 +573,8 @@ A Personal AI Assistant is a named, user-owned AI configuration that a human use
 For the MVP, a user may configure multiple Personal AI Assistants and mark one as their default. Each assistant uses a selected provider/model configuration owned by that human user. The assistant's display name defaults to a possessive generic name such as `Alex's assistant`, but its owner may rename it, for example to `Alfred`.
 
 The assistant's provider and model details are available only in its owner's AI settings/configuration. When it contributes, it appears by its display name with a compact assistant cue; its human owner is available through the assistant profile rather than repeated beside every contribution. A Personal AI Assistant is not a separately authenticated User, cannot use another user's credentials, and may make a visible contribution only when its owner explicitly invokes it.
+
+In an AI-targeted Collaboration Request, the owner's explicit `Submit and ask` or `Resume assistant` action is the invocation. The assistant never begins, resumes, declines or cancels the request autonomously. Provider, model, credit, credential and detailed technical-failure information remain private to the owner; ordinary request surfaces may show only that AI assistance is currently unavailable.
 
 ## Planning
 

@@ -24,6 +24,8 @@ Each human user may configure multiple **Personal AI Assistants** and mark one a
 
 Provider and model details are available only in the owning user's AI settings/configuration. The product may use Assistance Request Types, capabilities, Review Lenses, Context Assembly and bounded internal workflows to shape AI behavior without exposing those configuration details or presenting behavior modes as separate AI identities.
 
+For an AI-targeted Collaboration Request, only the requestor's own enabled, usable Personal AI Assistants are eligible. The requestor's explicit `Submit and ask` action invokes the selected assistant; merely selecting it or preparing a request Draft does not. The request records Submitted and moves to In Progress only after the assistant has actually started work. If AI assistance becomes unavailable before start, or processing is technically interrupted, the request enters the AI-specific `On Hold` status. Eligibility restoration never resumes processing automatically: only the assistant owner may explicitly invoke `Resume assistant`, which resumes or retries the same private response work. `On Hold` does not promise a provider-side checkpoint; resumption may use an available private draft or retry from retained request context. Provider, model, credit, credential and detailed technical-failure information remain private to the owner. The assistant never declines, cancels or resumes a request autonomously; insufficient context produces a bounded Question or caveated response rather than a Declined state.
+
 ---
 
 # 2. AI Contributor

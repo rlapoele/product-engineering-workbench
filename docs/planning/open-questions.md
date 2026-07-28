@@ -986,7 +986,9 @@ Project owners will create scoped Collaboration Requests for contributors. Reque
 
 Each MVP Collaboration Request has one selected available contributor. Capability and availability may guide selection, but a request is not a capability-only queue, broadcast or group request. Multiple perspectives and evolving shared context belong in a Conversation.
 
-A request has a required Request Brief framing the specific help, question or desired outcome. Its lifecycle is Draft, Submitted, In Progress, Responded, Declined and Cancelled. The requestor submits a completed Draft; the recipient may work in private while In Progress and then submit one bounded Contribution Response or decline; the requestor may cancel an active request. No acceptance, automatic expiry or delivery-management state is needed.
+A request has a required Request Brief framing the specific help, question or desired outcome. Its lifecycle is Draft, Submitted, In Progress, Responded, Declined and Cancelled. A human recipient may work in private while In Progress and then submit one bounded Contribution Response or decline; the requestor may cancel an active request. No acceptance, automatic expiry or delivery-management state is needed.
+
+`On Hold` is an AI-specific request status for technical interruption or loss of the assistant owner's AI eligibility. Only the requestor's own enabled, usable Personal AI Assistant may receive a new AI request. The owner's explicit Submit and ask or Resume assistant action invokes it; restored eligibility never resumes it automatically. The assistant cannot Decline, cancel or resume by itself, and its provider/model, credential, credit and detailed failure information remain private to its owner.
 
 The requestor may Reopen a Responded, Declined or Cancelled request. Reopen is an action, not a status: it returns the request to a private Draft. Recipient, Assistance Request Type, scope and recorded context are read-only; only the Request Brief may change. Resubmission returns it to Submitted for the same recipient and retains earlier lifecycle and response evidence.
 

@@ -94,3 +94,4 @@
 | 2026-07-28-02 | 2026-07-28 | 2 | Conversation and Collaboration Request Priorities | Crystallized | Separate paths; owner-led outcome capture is core MVP and Conversation-to-Request integration is stretch |
 | 2026-07-28-03 | 2026-07-28 | 3 | Collaboration Request Single Recipient | Crystallized | One selected contributor per request; multi-party context remains in Conversations |
 | 2026-07-28-04 | 2026-07-28 | 4 | Collaboration Request Lifecycle | Crystallized | Request Brief, explicit lifecycle and brief-only reopened drafts |
+| 2026-07-28-05 | 2026-07-28 | 5 | AI Collaboration Request Interruption | Crystallized | Explicit personal-AI invocation and AI-specific On Hold interruption state |
