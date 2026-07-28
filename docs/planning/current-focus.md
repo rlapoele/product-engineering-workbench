@@ -131,6 +131,7 @@ Recent clarification established the first target user as an AI-assisted develop
 - Artifact placement is now bounded for the MVP: a new artifact is placed deterministically at the end of its canonical section, an unselected destination section requires explicit enablement or cancellation, and saved reordering remains within that section as a document-composition Revision.
 - The complete owner-facing Conversation outcome-capture journey has been validated: selected-message source, destination choice, missing-section recovery, explicit save, Outcome Link and separate section-local reorder remain coherent.
 - Conversation outcome-capture readiness is now bounded: the MVP relies entirely on the Project owner's explicit judgment and adds no ready status, prompt, recommendation or participant signal; activity, inactivity, apparent agreement, assistant analysis and closure never infer readiness.
+- Conversations and scoped Collaboration Requests are now prioritized as separate optional paths: direct recipient participation supports evolving discussion, while requests seek bounded asynchronous responses; owner-led outcome capture is core MVP, and creating or linking a request from a Conversation is a stretch capability.
 
 ---
 

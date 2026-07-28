@@ -340,7 +340,9 @@ An Outcome Link to an Archived record remains visible and is labeled **Archived*
 
 Responsive layouts must preserve one usable workspace rather than compressing both the document and Conversation below readable widths. Container-query-based component adaptation is an appropriate implementation technique, but the exact narrow/mobile transition remains to be validated.
 
-Conversation messages are working memory. The workspace may later offer contextual actions such as inviting participants, creating a scoped Assistance Request and capturing an outcome, but none silently changes Product Knowledge.
+Conversation messages are working memory. The workspace may offer contextual actions such as inviting participants and capturing an outcome, but none silently changes Product Knowledge.
+
+Conversations and scoped Collaboration Requests have separate entry points and do not require each other. A Conversation is the appropriate path for an evolving multi-party discussion: an eligible collaborator may be added as a recipient and contribute in context. A scoped Collaboration Request remains the separate path for a bounded asynchronous response. Owner-led **Create from conversation** is a core MVP outcome-capture action; a control to create or link a scoped Collaboration Request from a Conversation is a lower-priority MVP stretch capability. Until then, neither surface creates a link or changes the state of the other.
 
 Comments and private notes are adjacent but separate concepts. Their audience, anchoring, visibility, notification behavior and relation to Conversations remain to be defined; a private note is not a Conversation because it has no recipient.
 

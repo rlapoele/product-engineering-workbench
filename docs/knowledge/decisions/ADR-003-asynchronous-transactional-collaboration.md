@@ -62,6 +62,8 @@ A Collaboration Request may target:
 - selected content;
 - another explicit project scope.
 
+Collaboration Requests and Conversations are separate optional paths. A Conversation supports evolving multi-party exploration and may include an eligible collaborator directly; a Collaboration Request asks a contributor for a bounded asynchronous response. Owner-led Conversation outcome capture is a core MVP path, while creating or linking a scoped Collaboration Request from a Conversation is a lower-priority MVP stretch capability. Until that integration is introduced, neither path creates or links to the other implicitly.
+
 Human and AI contributors share the same abstract Contributor and Capability model, but they become available differently in the MVP.
 
 Human collaborators are invitation-gated. A human becomes available to contribute to a project after being invited, completing onboarding if needed and accepting the invitation.

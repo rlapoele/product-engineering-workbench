@@ -984,6 +984,8 @@ MVP collaboration will be asynchronous and transactional.
 
 Project owners will create scoped Collaboration Requests for contributors. Requests may target the whole specification, a document section, a Product Artifact, selected content or another explicit scope.
 
+Conversations and Collaboration Requests are separate optional paths. A Conversation supports evolving multi-party exploration, including direct participation by eligible collaborators; a Collaboration Request is appropriate when a bounded asynchronous response is needed. Owner-led Conversation outcome capture is a core MVP priority. Creating or linking a scoped Collaboration Request from a Conversation is a lower-priority MVP stretch capability, so neither path implicitly creates or links to the other.
+
 Each Collaboration Request should include an Assistance Request Type that describes the kind of help being requested.
 
 Initial MVP Assistance Request Types are Draft, Improve, Request Feedback, Review, Find Gaps, Find Inconsistencies, Analyze Impact, Suggest Alternatives, Validate Readiness, Ask Question and Prepare Handoff.
