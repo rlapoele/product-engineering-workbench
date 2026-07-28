@@ -193,7 +193,7 @@ For the MVP, Product Artifacts inherit the Project or Specification content loca
 
 A Collaboration Request is a scoped request for assistance sent to one selected available human or AI contributor.
 
-A Collaboration Request identifies the requested action, relevant scope, selected contributor, relevant capability and context needed to respond. Capability may inform selection, but it is not a capability-only queue or a multi-recipient request.
+A Collaboration Request identifies the Request Brief, relevant scope, selected contributor, relevant capability and context needed to respond. Capability may inform selection, but it is not a capability-only queue or a multi-recipient request.
 
 In the MVP, Collaboration Requests support asynchronous and transactional collaboration rather than real-time co-editing.
 
@@ -697,6 +697,16 @@ For deterministic Implementation Handoff Readiness, a selected scope is `Ready`,
 A Readiness Report is an optional standalone `READINESS_REPORT.md` file in an Implementation Handoff Package.
 
 It records the deterministic readiness outcome for the selected scope, its basis, external dependencies and recommended follow-up actions. It is generated only when readiness validation and report inclusion are selected.
+
+---
+
+## Request Brief
+
+A Request Brief is the requestor-authored framing of the specific help, question or desired outcome for a Collaboration Request.
+
+The Assistance Request Type identifies the kind of help sought; the Request Brief identifies what the selected contributor should address within the request's scope. It is required for a submitted request.
+
+After a request has first been submitted, its recipient, Assistance Request Type, scope and recorded context remain read-only. If the requestor reopens the request, only its Request Brief may be revised before the request is resubmitted.
 
 ---
 

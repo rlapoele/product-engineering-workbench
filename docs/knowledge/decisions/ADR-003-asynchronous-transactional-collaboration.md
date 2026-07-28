@@ -64,6 +64,10 @@ A Collaboration Request may target:
 
 Each MVP Collaboration Request has exactly one selected available contributor. Capability and availability guide selection but do not create a capability-only queue, broadcast or group request. A Conversation remains the multi-party path when multiple perspectives or evolving shared context are needed.
 
+A request includes a required Request Brief that frames the specific help, question or desired outcome within its scope. Its MVP lifecycle is Draft, Submitted, In Progress, Responded, Declined and Cancelled. The recipient may start work with a private response draft, then submit one bounded Contribution Response or decline; the requestor may cancel an active request. No acceptance, automatic expiry or delivery-management state is needed.
+
+After Responded, Declined or Cancelled, the requestor may Reopen the request. Reopen is an action rather than a status: it returns the request to a private Draft. Recipient, Assistance Request Type, scope and recorded context remain read-only; only the Request Brief may change. Resubmitting returns the request to Submitted for the same recipient, while earlier lifecycle and response evidence remain retained.
+
 Collaboration Requests and Conversations are separate optional paths. A Conversation supports evolving multi-party exploration and may include an eligible collaborator directly; a Collaboration Request asks a contributor for a bounded asynchronous response. Owner-led Conversation outcome capture is a core MVP path, while creating or linking a scoped Collaboration Request from a Conversation is a lower-priority MVP stretch capability. Until that integration is introduced, neither path creates or links to the other implicitly.
 
 Human and AI contributors share the same abstract Contributor and Capability model, but they become available differently in the MVP.

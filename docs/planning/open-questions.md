@@ -986,6 +986,10 @@ Project owners will create scoped Collaboration Requests for contributors. Reque
 
 Each MVP Collaboration Request has one selected available contributor. Capability and availability may guide selection, but a request is not a capability-only queue, broadcast or group request. Multiple perspectives and evolving shared context belong in a Conversation.
 
+A request has a required Request Brief framing the specific help, question or desired outcome. Its lifecycle is Draft, Submitted, In Progress, Responded, Declined and Cancelled. The requestor submits a completed Draft; the recipient may work in private while In Progress and then submit one bounded Contribution Response or decline; the requestor may cancel an active request. No acceptance, automatic expiry or delivery-management state is needed.
+
+The requestor may Reopen a Responded, Declined or Cancelled request. Reopen is an action, not a status: it returns the request to a private Draft. Recipient, Assistance Request Type, scope and recorded context are read-only; only the Request Brief may change. Resubmission returns it to Submitted for the same recipient and retains earlier lifecycle and response evidence.
+
 Conversations and Collaboration Requests are separate optional paths. A Conversation supports evolving multi-party exploration, including direct participation by eligible collaborators; a Collaboration Request is appropriate when a bounded asynchronous response is needed. Owner-led Conversation outcome capture is a core MVP priority. Creating or linking a scoped Collaboration Request from a Conversation is a lower-priority MVP stretch capability, so neither path implicitly creates or links to the other.
 
 Each Collaboration Request should include an Assistance Request Type that describes the kind of help being requested.

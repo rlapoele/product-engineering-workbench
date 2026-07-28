@@ -961,13 +961,19 @@ A Collaboration Request should identify:
 - the requestor;
 - one selected requested contributor, with relevant capability when applicable;
 - the Assistance Request Type;
-- the requested action;
+- the Request Brief;
 - the scope of the request;
 - the context needed to respond;
 - the applicable availability or eligibility condition;
 - the request status.
 
 For the MVP, a Collaboration Request has exactly one selected recipient. Capability and availability may guide the requestor's choice, but they do not create a capability-only queue, broadcast or multi-recipient request. When multiple perspectives or an evolving shared context are needed, the requestor uses a Conversation instead.
+
+The Request Brief is the requestor-authored framing of the specific help, question or desired outcome. It is required before a request may be submitted. The Assistance Request Type identifies the kind of help sought; the Request Brief identifies what the selected contributor should address within the request's scope.
+
+A Collaboration Request has these MVP statuses: Draft, Submitted, In Progress, Responded, Declined and Cancelled. Draft is private to the requestor. Explicit submission makes the request Submitted and available to its selected recipient. The recipient may mark it In Progress while preparing a private response draft, then submit one bounded Contribution Response to make the request Responded; no acceptance or delivery-management state is required. A recipient may instead explicitly Decline. The requestor may explicitly Cancel a Submitted or In Progress request. No request changes state through inactivity or elapsed time.
+
+The requestor remains the request owner; a recipient has active response responsibility while a request is Submitted or In Progress. A requestor may use Reopen only after the request is Responded, Declined or Cancelled. Reopen is an action and history event, not a request status: it returns the request to a private Draft. The recipient, Assistance Request Type, scope and recorded context remain read-only; only the Request Brief may be revised. Explicit resubmission returns the request to Submitted for the same recipient and preserves prior response and lifecycle history as evidence.
 
 A Contribution Response is the contributor's submitted input for a Collaboration Request.
 
