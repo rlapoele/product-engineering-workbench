@@ -197,6 +197,8 @@ A Collaboration Request identifies the Request Brief, relevant scope, selected r
 
 In the MVP, Collaboration Requests support asynchronous and transactional collaboration rather than real-time co-editing.
 
+Within a Project, requests appear in one role-aware, paginated list: **Requests you created** for the Project Owner and **Requests for you** for a Project Collaborator. The list is searchable, filterable and sortable; it does not separate requests and their Contribution Responses into different lists or workspaces.
+
 ---
 
 ## Collaboration Request Recipient
