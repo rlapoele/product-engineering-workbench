@@ -959,13 +959,15 @@ A Review may also have a Review Lens, such as Requirements Quality, UX Quality, 
 A Collaboration Request should identify:
 
 - the requestor;
-- the requested contributor or required capability;
+- one selected requested contributor, with relevant capability when applicable;
 - the Assistance Request Type;
 - the requested action;
 - the scope of the request;
 - the context needed to respond;
 - the applicable availability or eligibility condition;
 - the request status.
+
+For the MVP, a Collaboration Request has exactly one selected recipient. Capability and availability may guide the requestor's choice, but they do not create a capability-only queue, broadcast or multi-recipient request. When multiple perspectives or an evolving shared context are needed, the requestor uses a Conversation instead.
 
 A Contribution Response is the contributor's submitted input for a Collaboration Request.
 

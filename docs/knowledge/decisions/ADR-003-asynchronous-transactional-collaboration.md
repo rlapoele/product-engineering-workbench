@@ -62,6 +62,8 @@ A Collaboration Request may target:
 - selected content;
 - another explicit project scope.
 
+Each MVP Collaboration Request has exactly one selected available contributor. Capability and availability guide selection but do not create a capability-only queue, broadcast or group request. A Conversation remains the multi-party path when multiple perspectives or evolving shared context are needed.
+
 Collaboration Requests and Conversations are separate optional paths. A Conversation supports evolving multi-party exploration and may include an eligible collaborator directly; a Collaboration Request asks a contributor for a bounded asynchronous response. Owner-led Conversation outcome capture is a core MVP path, while creating or linking a scoped Collaboration Request from a Conversation is a lower-priority MVP stretch capability. Until that integration is introduced, neither path creates or links to the other implicitly.
 
 Human and AI contributors share the same abstract Contributor and Capability model, but they become available differently in the MVP.

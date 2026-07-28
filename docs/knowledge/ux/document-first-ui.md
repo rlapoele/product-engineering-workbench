@@ -488,6 +488,8 @@ The MVP should not support real-time co-editing, shared cursors, live presence o
 
 Instead, a project owner should create a scoped Collaboration Request for a contributor. The contributor should be able to open the request, review the relevant context, submit a Contribution Response and leave the requestor to review it later.
 
+Each MVP Collaboration Request selects exactly one available contributor. Capability and availability may guide that selection, but the request is not sent to a capability-only queue, broadcast or group. A user who needs multiple perspectives or evolving shared context uses a Conversation instead.
+
 Human collaborators should participate through this asynchronous request and response flow. AI Contributors may return responses more immediately, but their contributions should still be treated as scoped assistance that the project owner can review before canonical product knowledge changes.
 
 The project owner should be able to see submitted responses and manually mark each one Acknowledged after reading it and Acted On after dealing with its content. An acknowledged response should remain visibly read but not acted on until the requestor marks it Acted On.

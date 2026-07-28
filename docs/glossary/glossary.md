@@ -191,9 +191,9 @@ For the MVP, Product Artifacts inherit the Project or Specification content loca
 
 ## Collaboration Request
 
-A Collaboration Request is a scoped request for assistance sent to a human or AI contributor.
+A Collaboration Request is a scoped request for assistance sent to one selected available human or AI contributor.
 
-A Collaboration Request identifies the requested action, relevant scope, requested contributor or capability and context needed to respond.
+A Collaboration Request identifies the requested action, relevant scope, selected contributor, relevant capability and context needed to respond. Capability may inform selection, but it is not a capability-only queue or a multi-recipient request.
 
 In the MVP, Collaboration Requests support asynchronous and transactional collaboration rather than real-time co-editing.
 

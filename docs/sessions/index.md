@@ -92,3 +92,4 @@
 | 2026-07-25-02 | 2026-07-25 | 2 | Conversation Outcome-Capture Journey Validation | Crystallized | End-to-end selected-message capture, missing-section recovery, Outcome Link and reorder validation |
 | 2026-07-28-01 | 2026-07-28 | 1 | Conversation Outcome-Capture Readiness | Crystallized | Owner judgment only; no capture-readiness signal or inference in the MVP |
 | 2026-07-28-02 | 2026-07-28 | 2 | Conversation and Collaboration Request Priorities | Crystallized | Separate paths; owner-led outcome capture is core MVP and Conversation-to-Request integration is stretch |
+| 2026-07-28-03 | 2026-07-28 | 3 | Collaboration Request Single Recipient | Crystallized | One selected contributor per request; multi-party context remains in Conversations |

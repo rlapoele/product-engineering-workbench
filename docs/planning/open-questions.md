@@ -984,6 +984,8 @@ MVP collaboration will be asynchronous and transactional.
 
 Project owners will create scoped Collaboration Requests for contributors. Requests may target the whole specification, a document section, a Product Artifact, selected content or another explicit scope.
 
+Each MVP Collaboration Request has one selected available contributor. Capability and availability may guide selection, but a request is not a capability-only queue, broadcast or group request. Multiple perspectives and evolving shared context belong in a Conversation.
+
 Conversations and Collaboration Requests are separate optional paths. A Conversation supports evolving multi-party exploration, including direct participation by eligible collaborators; a Collaboration Request is appropriate when a bounded asynchronous response is needed. Owner-led Conversation outcome capture is a core MVP priority. Creating or linking a scoped Collaboration Request from a Conversation is a lower-priority MVP stretch capability, so neither path implicitly creates or links to the other.
 
 Each Collaboration Request should include an Assistance Request Type that describes the kind of help being requested.

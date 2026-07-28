@@ -132,6 +132,7 @@ Recent clarification established the first target user as an AI-assisted develop
 - The complete owner-facing Conversation outcome-capture journey has been validated: selected-message source, destination choice, missing-section recovery, explicit save, Outcome Link and separate section-local reorder remain coherent.
 - Conversation outcome-capture readiness is now bounded: the MVP relies entirely on the Project owner's explicit judgment and adds no ready status, prompt, recommendation or participant signal; activity, inactivity, apparent agreement, assistant analysis and closure never infer readiness.
 - Conversations and scoped Collaboration Requests are now prioritized as separate optional paths: direct recipient participation supports evolving discussion, while requests seek bounded asynchronous responses; owner-led outcome capture is core MVP, and creating or linking a request from a Conversation is a stretch capability.
+- Standalone Collaboration Requests now have one explicit recipient: capability and availability guide selection but never create a queue, broadcast or group request; multi-party context belongs in a Conversation.
 
 ---
 
