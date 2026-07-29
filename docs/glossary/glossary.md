@@ -740,6 +740,14 @@ After a request has first been submitted, its recipient, Assistance Request Type
 
 ---
 
+## Request Cycle
+
+A Request Cycle is one bounded iteration of a Collaboration Request, beginning when the request is first created or reopened and ending when that iteration is Responded, Declined or Cancelled.
+
+Reopen begins a new Request Cycle while retaining earlier lifecycle and Contribution Response evidence. A response from an earlier cycle is not a response to the reopened cycle and is labelled as a Previous response in the request list until the current cycle receives a response.
+
+---
+
 ## Resource
 
 A Resource is reusable supporting material for a Project. It may be a managed uploaded file or an external URL. One Resource may have several independent Resource References. Once referenced, its source is effectively immutable: replacing its managed file or changing its URL creates a new Resource and updates only explicitly selected references.

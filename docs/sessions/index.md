@@ -100,3 +100,4 @@
 | 2026-07-28-08 | 2026-07-28 | 8 | Collaboration Request Workspace Boundary | Crystallized | Project-scoped request workplace; future cross-project summaries route back into Projects |
 | 2026-07-28-09 | 2026-07-28 | 9 | Project Roles and Home Page Orientation | Crystallized | Exclusive owner/collaborator roles and Project-first home-page orientation |
 | 2026-07-29-01 | 2026-07-29 | 1 | Collaboration Request List Interaction | Crystallized | One role-aware, filterable request list with parent-contained response status |
+| 2026-07-29-02 | 2026-07-29 | 2 | Collaboration Request List Defaults and Fields | Crystallized | Default list behavior, compact fields and reopened-response distinction |

@@ -2,7 +2,7 @@
 
 **Status:** Active
 
-**Last Updated:** 2026-07-28
+**Last Updated:** 2026-07-29
 
 ---
 
@@ -140,6 +140,7 @@ Recent clarification established the first target user as an AI-assisted develop
 - Collaboration Requests remain Project-scoped in the MVP: their Project request list is the canonical workplace, while any future cross-project home summary is limited to orientation and routing back into a Project rather than creating a global request-management surface.
 - Project roles and home-page orientation are now bounded: a Project Owner is its creator, an accepted invited person is a Project Collaborator, and the roles are mutually exclusive within one Project; the home page routes users through Projects and compact attention only, with recipient responsibility remaining request-specific.
 - The Project Collaboration Requests workspace now has one role-aware, paginated list: **Requests you created** for the owner and **Requests for you** for the selected collaborator recipient. It is searchable, filterable and sortable; responses remain in their parent request as a separately labelled handling-status field rather than a distinct list or area.
+- The Project Collaboration Requests list defaults are now defined: no lifecycle or response-handling filter, last activity newest first, a compact filter and sort set, compact request-oriented rows, parent-contained response handling, and explicit Previous response labelling after Reopen.
 
 ---
 
@@ -152,7 +153,8 @@ Recent clarification established the first target user as an AI-assisted develop
 - Validate detailed context assembly rules for remaining generation and feedback examples.
 - Validate the first Section Catalog and Project Preset classification through concrete specification exercises.
 - Validate remaining export-format details and package-generation constraints beyond the resolved README, readiness, report and AI-disclosure representations.
-- Define the default filters, sorting and row/detail fields for the Project Collaboration Requests list, including how request and response status remain legible together.
+- The Project Collaboration Requests list defaults have been clarified: no lifecycle or response-handling filter, last activity newest first, a compact filter and sort set, compact request-oriented rows, parent-contained response handling, and an explicit Previous response label after Reopen.
+- Validate the Collaboration Requests list through Project Owner, Project Collaborator, AI On Hold and reopened-request scenarios.
 - Detail contributor selection using both capability and availability.
 - Validate the first-pass Assistance Request Type matrix through concrete specification exercises.
 - Validate the initial Response Shape and Finding Type model through concrete review and feedback examples.
