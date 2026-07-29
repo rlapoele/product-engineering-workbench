@@ -42,6 +42,7 @@ Recent clarification established the first target user as an AI-assisted develop
 - Specification Document Template has been introduced as the user-facing term for project-start templates.
 - The MVP has been clarified to start with one `Implementation-Ready Web App Specification` template backed by a reusable Section Catalog and multiple Project Presets.
 - The first Section Catalog and initial Project Preset classification have been accepted as a first pass.
+- Product Engineering Stages are now defined as optional, template-owned orientation metadata: the initial template maps its Section Catalog to Explore, Discover, Define, Design, Specify, Validate readiness and Handoff, while preserving non-linear work and leaving lifecycle, readiness and handoff behavior unchanged.
 - The MVP minimum Product Artifact set and common artifact fields have been accepted.
 - The initial artifact relationship types and artifact lifecycle states have been accepted.
 - The MVP default Handoff Profile has been clarified as `Implementation Handoff`, a human-readable and AI-useful export profile.
@@ -155,7 +156,7 @@ Recent clarification established the first target user as an AI-assisted develop
 - Validate deterministic next-step guidance through prototypes and concrete specification exercises.
 - Validate additional readiness-aware handoff edge cases through concrete specification exercises.
 - Validate detailed context assembly rules for remaining generation and feedback examples.
-- Validate the first Section Catalog and Project Preset classification through concrete specification exercises.
+- Validate the first Section Catalog, Project Preset classification and Product Engineering Stage attribution through concrete specification exercises.
 - Validate remaining export-format details and package-generation constraints beyond the resolved README, readiness, report and AI-disclosure representations.
 - The Project Collaboration Requests list defaults have been clarified: no lifecycle or response-handling filter; **Last updated — newest first** based on meaningful events visible to the viewer; a compact filter and sort set; compact request-oriented rows; parent-contained response handling; and an explicit Previous response label after Reopen.
 - Owner, collaborator, AI On Hold and reopened-request scenarios validate the Collaboration Requests list: the collaborator keeps a frozen read-only prior view after Reopen, viewer-visible events determine list ordering, and restored AI eligibility does not reorder an On Hold request before explicit Resume.

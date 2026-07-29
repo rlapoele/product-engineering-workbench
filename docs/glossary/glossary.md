@@ -628,6 +628,16 @@ Product Engineering is the primary focus of the Product Engineering Workbench.
 
 ---
 
+## Product Engineering Stage
+
+A Product Engineering Stage is a template-defined, ordered orientation category for product engineering work. It helps users understand how specification sections and their contained Product Artifacts primarily contribute to a coherent journey from exploration to implementation handoff.
+
+A stage is not a Project, Product Artifact or Collaboration Request lifecycle state; task, delivery, release or approval status; readiness criterion; or handoff eligibility rule. Stages may be revisited and overlap. They provide optional organization and navigation, not gates, required order of work or automated next actions.
+
+When a Workflow Template uses stages, each Section Catalog entry has one primary stage and may name zero or more contributing stages. Contained Product Artifacts derive the same orientation from their canonical section rather than storing a separate mutable stage field.
+
+---
+
 ## Product Knowledge
 
 The complete body of knowledge describing a product.
@@ -803,6 +813,8 @@ For an interactive artifact edit, a Revision is created only when the user selec
 A Section Catalog is the reusable collection of specification sections that can be composed into Specification Document Templates and Project Presets.
 
 The Section Catalog allows multiple templates or presets to reuse common sections without duplicating their definitions.
+
+When its Workflow Template defines Product Engineering Stages, a Section Catalog entry declares one primary stage and may declare contributing stages as template metadata.
 
 ---
 

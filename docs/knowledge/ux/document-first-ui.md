@@ -86,6 +86,8 @@ The initial template should be backed by a reusable Section Catalog.
 
 Section Catalog entries should be localization-ready because section labels, descriptions and guidance are app-controlled content. Catalog entries should use stable section identifiers and localization keys such as `labelKey`, `descriptionKey` and `guidanceKey`.
 
+The initial template also defines an optional, ordered Product Engineering Stage catalogue: **Explore**, **Discover**, **Define**, **Design**, **Specify**, **Validate readiness** and **Handoff**. A catalog entry has one primary stage and may have contributing stages. These are template-owned orientation metadata, from which contained Product Artifacts derive their stage orientation; they are not editable artifact fields, lifecycle states, workflow gates, readiness criteria or handoff conditions. The document remains the canonical section-oriented view. Future stage views may organize or filter the same Specification without changing its content or imposing a linear process.
+
 The initial template should support multiple presets rather than separate small, medium and complex templates.
 
 Initial presets should include:
@@ -158,33 +160,33 @@ Resource actions use the existing compact contextual-action surface rather than 
 
 Selecting a source alone is provisional navigation state: returning, leaving the document or otherwise abandoning the wizard before editing details retains no Resource Reference draft. A private local reference draft begins only when the user changes a reference-detail field, or explicitly chooses `Reuse details` during replacement. The draft includes its selected source and current local details, creates no Revision and is not canonical Product Knowledge. It persists through back navigation and ordinary navigation elsewhere in the workbench until the user saves or explicitly discards it. The MVP permits at most one active Resource Reference draft per attachment target; drafts on different targets remain independent. The document shows no permanent draft badge. Instead, when the user returns to the target's contextual control, its first level offers `Edit`, `Continue reference draft` and `Discard draft`; `Continue reference draft` temporarily replaces `Add reference` so a second competing attachment flow cannot begin. Continuing resumes the wizard at its last meaningful step, while discarding restores the ordinary `Edit` and `Add reference` actions.
 
-## Initial Preset Classification
+## Initial Preset Classification And Stage Attribution
 
-The initial Project Presets should classify the first Section Catalog as follows:
+The initial Project Presets and template-owned stage attribution should classify the first Section Catalog as follows. Contributing stages are orientation only; they neither require that work nor affect readiness or handoff.
 
-| Section | Simple Web Presence | Standard Web App | Complex Product App |
-|---|---|---|---|
-| Product Overview | Required | Required | Required |
-| Problem or Opportunity | Recommended | Required | Required |
-| Goals and Success Criteria | Required | Required | Required |
-| Non-Goals | Recommended | Recommended | Required |
-| Target Users or Personas | Required | Required | Required |
-| User Needs | Optional | Required | Required |
-| Scope | Required | Required | Required |
-| Core Features | Required | Required | Required |
-| User Stories and Use Cases | Optional | Recommended | Required |
-| Acceptance Criteria | Required | Required | Required |
-| Functional Requirements | Required | Required | Required |
-| Non-Functional Requirements | Optional | Recommended | Required |
-| Data or Domain Model | Optional | Required | Required |
-| UX/UI Design Requirements and Interaction Notes | Required | Required | Required |
-| Technical Constraints and Preferences | Recommended | Recommended | Required |
-| External Integrations | Optional | Optional | Recommended |
-| AI or Automation Expectations | Optional | Optional | Recommended |
-| Risks, Assumptions and Open Questions | Recommended | Required | Required |
-| Implementation Guidance | Recommended | Recommended | Required |
-| Validation and Testing Guidance | Required | Required | Required |
-| Export and Handoff Instructions | Optional | Recommended | Required |
+| Section | Primary stage | Contributing stages | Simple Web Presence | Standard Web App | Complex Product App |
+|---|---|---|---|---|---|
+| Product Overview | Explore | Define | Required | Required | Required |
+| Problem or Opportunity | Explore | Discover, Define | Recommended | Required | Required |
+| Goals and Success Criteria | Define | Validate readiness | Required | Required | Required |
+| Non-Goals | Define | Validate readiness | Recommended | Recommended | Required |
+| Target Users or Personas | Discover | Define, Design | Required | Required | Required |
+| User Needs | Discover | Define, Specify | Optional | Required | Required |
+| Scope | Define | Specify, Validate readiness | Required | Required | Required |
+| Core Features | Define | Design, Specify | Required | Required | Required |
+| User Stories and Use Cases | Specify | Design, Validate readiness | Optional | Recommended | Required |
+| Acceptance Criteria | Specify | Validate readiness | Required | Required | Required |
+| Functional Requirements | Specify | Design, Validate readiness | Required | Required | Required |
+| Non-Functional Requirements | Specify | Design, Validate readiness | Optional | Recommended | Required |
+| Data or Domain Model | Design | Specify | Optional | Required | Required |
+| UX/UI Design Requirements and Interaction Notes | Design | Specify, Validate readiness | Required | Required | Required |
+| Technical Constraints and Preferences | Design | Specify, Validate readiness | Recommended | Recommended | Required |
+| External Integrations | Specify | Design, Validate readiness | Optional | Optional | Recommended |
+| AI or Automation Expectations | Design | Specify, Validate readiness | Optional | Optional | Recommended |
+| Risks, Assumptions and Open Questions | Validate readiness | Explore, Discover, Define, Design, Specify | Recommended | Required | Required |
+| Implementation Guidance | Handoff | Specify | Recommended | Recommended | Required |
+| Validation and Testing Guidance | Validate readiness | Specify, Handoff | Required | Required | Required |
+| Export and Handoff Instructions | Handoff | Validate readiness | Optional | Recommended | Required |
 
 This classification is a first pass and should be validated through future specification exercises.
 

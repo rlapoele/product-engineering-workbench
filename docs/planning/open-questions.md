@@ -719,31 +719,33 @@ The `User Stories and Use Cases` section will contain items typed as either User
 
 `UX/UI Design Requirements and Interaction Notes` is the place for application-specific visual and interaction guidance needed for faithful implementation. It may include shared visual guidance, component usage and states, responsive and accessibility expectations, and external design-source references without introducing lower-level design-system artifact types into the MVP.
 
+The initial template defines an ordered, optional Product Engineering Stage catalogue: **Explore**, **Discover**, **Define**, **Design**, **Specify**, **Validate readiness** and **Handoff**. Stages are template-defined orientation metadata rather than Product Artifact fields or lifecycle states. Every initial Section Catalog entry has one primary stage and may have contributing stages; contained Product Artifacts derive that attribution from their canonical section. Stages do not impose a work sequence, create workflow gates, affect readiness validation or alter handoff eligibility.
+
 The first Project Presets will classify sections as follows:
 
-| Section | Simple Web Presence | Standard Web App | Complex Product App |
-|---|---|---|---|
-| Product Overview | Required | Required | Required |
-| Problem or Opportunity | Recommended | Required | Required |
-| Goals and Success Criteria | Required | Required | Required |
-| Non-Goals | Recommended | Recommended | Required |
-| Target Users or Personas | Required | Required | Required |
-| User Needs | Optional | Required | Required |
-| Scope | Required | Required | Required |
-| Core Features | Required | Required | Required |
-| User Stories and Use Cases | Optional | Recommended | Required |
-| Acceptance Criteria | Required | Required | Required |
-| Functional Requirements | Required | Required | Required |
-| Non-Functional Requirements | Optional | Recommended | Required |
-| Data or Domain Model | Optional | Required | Required |
-| UX/UI Design Requirements and Interaction Notes | Required | Required | Required |
-| Technical Constraints and Preferences | Recommended | Recommended | Required |
-| External Integrations | Optional | Optional | Recommended |
-| AI or Automation Expectations | Optional | Optional | Recommended |
-| Risks, Assumptions and Open Questions | Recommended | Required | Required |
-| Implementation Guidance | Recommended | Recommended | Required |
-| Validation and Testing Guidance | Required | Required | Required |
-| Export and Handoff Instructions | Optional | Recommended | Required |
+| Section | Primary stage | Contributing stages | Simple Web Presence | Standard Web App | Complex Product App |
+|---|---|---|---|---|---|
+| Product Overview | Explore | Define | Required | Required | Required |
+| Problem or Opportunity | Explore | Discover, Define | Recommended | Required | Required |
+| Goals and Success Criteria | Define | Validate readiness | Required | Required | Required |
+| Non-Goals | Define | Validate readiness | Recommended | Recommended | Required |
+| Target Users or Personas | Discover | Define, Design | Required | Required | Required |
+| User Needs | Discover | Define, Specify | Optional | Required | Required |
+| Scope | Define | Specify, Validate readiness | Required | Required | Required |
+| Core Features | Define | Design, Specify | Required | Required | Required |
+| User Stories and Use Cases | Specify | Design, Validate readiness | Optional | Recommended | Required |
+| Acceptance Criteria | Specify | Validate readiness | Required | Required | Required |
+| Functional Requirements | Specify | Design, Validate readiness | Required | Required | Required |
+| Non-Functional Requirements | Specify | Design, Validate readiness | Optional | Recommended | Required |
+| Data or Domain Model | Design | Specify | Optional | Required | Required |
+| UX/UI Design Requirements and Interaction Notes | Design | Specify, Validate readiness | Required | Required | Required |
+| Technical Constraints and Preferences | Design | Specify, Validate readiness | Recommended | Recommended | Required |
+| External Integrations | Specify | Design, Validate readiness | Optional | Optional | Recommended |
+| AI or Automation Expectations | Design | Specify, Validate readiness | Optional | Optional | Recommended |
+| Risks, Assumptions and Open Questions | Validate readiness | Explore, Discover, Define, Design, Specify | Recommended | Required | Required |
+| Implementation Guidance | Handoff | Specify | Recommended | Recommended | Required |
+| Validation and Testing Guidance | Validate readiness | Specify, Handoff | Required | Required | Required |
+| Export and Handoff Instructions | Handoff | Validate readiness | Optional | Recommended | Required |
 
 ## Consequences
 

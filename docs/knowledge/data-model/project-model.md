@@ -692,6 +692,24 @@ It may define:
 
 The workbench should support different workflow templates without forcing a single product methodology.
 
+## Product Engineering Stages
+
+A Workflow Template may define an ordered catalogue of Product Engineering Stages. A stage has a stable template-local identifier, user-facing label, short purpose and display order. The initial `Implementation-Ready Web App Specification` template defines these stages:
+
+1. `explore` — frame initial ideas, the opportunity and product intent.
+2. `discover` — understand users, needs, evidence and relevant context.
+3. `define` — establish goals, scope, non-goals, outcomes and product decisions.
+4. `design` — shape UX/UI, domain or data models, technical approach and constraints.
+5. `specify` — describe implementation-ready behavior, requirements, acceptance criteria and integration detail.
+6. `validate-readiness` — review completeness, consistency, risks, open questions and readiness for implementation.
+7. `handoff` — deliberately prepare selected product knowledge for an external implementation consumer.
+
+Stages are a non-blocking orientation and organization layer. They are not Product Artifact or Collaboration Request lifecycle states, task or delivery states, readiness criteria, handoff eligibility rules, approvals or an enforced sequence. Product engineering is iterative: users may revisit any stage, and a stage never creates, assigns or automatically advances work.
+
+When a Workflow Template uses stages, each Section Catalog entry declares one `primaryWorkflowStageId` and zero or more `contributingWorkflowStageIds`. The primary stage gives a section its main orientation; contributing stages acknowledge that the same knowledge remains useful elsewhere in the journey. A contained Product Artifact derives that orientation from its canonical Specification Section. Neither a section nor an artifact receives a separate mutable stage field in Project State, and a stage mapping does not change artifact content, lifecycle, provenance, Revision behavior, readiness validation or handoff preparation.
+
+Stage-aware navigation, filtering or alternate Specification views may be added later, but the canonical document remains organized by its selected sections. A template may omit stages entirely; stage support must not be required for a valid Specification Document Template or Project Preset.
+
 ## User-facing template terminology
 
 In the user experience, the template selected during project creation should usually be called a Specification Document Template.
