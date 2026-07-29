@@ -101,3 +101,4 @@
 | 2026-07-28-09 | 2026-07-28 | 9 | Project Roles and Home Page Orientation | Crystallized | Exclusive owner/collaborator roles and Project-first home-page orientation |
 | 2026-07-29-01 | 2026-07-29 | 1 | Collaboration Request List Interaction | Crystallized | One role-aware, filterable request list with parent-contained response status |
 | 2026-07-29-02 | 2026-07-29 | 2 | Collaboration Request List Defaults and Fields | Crystallized | Default list behavior, compact fields and reopened-response distinction |
+| 2026-07-29-03 | 2026-07-29 | 3 | Collaboration Request Last-Updated Semantics | Crystallized | Meaningful request updates drive default list sorting |

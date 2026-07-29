@@ -21,7 +21,7 @@ The role boundary is the only default list restriction:
 - A Project Owner sees all **Requests you created**, including private Drafts.
 - A Project Collaborator sees all **Requests for you**, where they are the selected human recipient.
 
-No lifecycle or Contribution Response handling filter is applied by default. The default sort is **Last activity — newest first**. The other MVP sort choices are last activity oldest first, creation newest first and Request Brief A–Z.
+No lifecycle or Contribution Response handling filter is applied by default. The default sort is **Last updated — newest first**. The other MVP sort choices are Last updated oldest first, creation newest first and Request Brief A–Z.
 
 Search covers the Request Brief, Assistance Request Type, scoped-source label and participant names. The compact filters are Request status, Contribution Response handling status, Assistance Request Type and scope kind. The Project Owner may additionally filter by recipient.
 
@@ -33,7 +33,7 @@ Each compact row shows:
 - other party;
 - labelled Request status;
 - labelled current-cycle response handling status when a response exists; and
-- concise last activity.
+- concise last-update event.
 
 Request and response labels keep similarly named states distinct, for example `Request: Responded · Response: Submitted`. A Contribution Response remains inside its parent request. The request detail holds the complete Brief, immutable recorded context, lifecycle history, response content and response-handling actions together.
 
