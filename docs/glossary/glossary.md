@@ -197,7 +197,7 @@ A Collaboration Request identifies the Request Brief, relevant scope, selected r
 
 In the MVP, Collaboration Requests support asynchronous and transactional collaboration rather than real-time co-editing. An initial Draft is private to its requestor. After Reopen, the selected human recipient retains a frozen, read-only view of the previously shared request and response evidence; the new Draft Brief and any draft-context changes remain private until resubmission.
 
-Within a Project, requests appear in one role-aware, paginated list: **Requests you created** for the Project Owner and **Requests for you** for a Project Collaborator. The list is searchable, filterable and sortable; it does not separate requests and their Contribution Responses into different lists or workspaces.
+Within a Project, requests appear in one role-aware, paginated list: **Requests you created** for the Project Owner and **Requests for you** for a Project Collaborator. A former recipient of a Declined request continues to see their frozen Declined cycle in **Requests for you** if the request is later reopened and reassigned; the new cycle remains private to the Project Owner and replacement recipient. The list is searchable, filterable and sortable; it does not separate requests and their Contribution Responses into different lists or workspaces.
 
 ---
 
@@ -744,7 +744,7 @@ After a request has first been submitted, its recipient, Assistance Request Type
 
 A Request Cycle is one bounded iteration of a Collaboration Request, beginning when the request is first created or reopened and ending when that iteration is Responded, Declined or Cancelled.
 
-Reopen begins a new Request Cycle while retaining earlier lifecycle and Contribution Response evidence. The selected human recipient keeps a frozen, read-only view of that earlier evidence until resubmission, but cannot see the new Draft Brief or draft-context changes. On a reopened Declined request, a replacement recipient sees only the new current cycle; the original recipient retains only their declined cycle. A response from an earlier cycle is not a response to the reopened cycle and is labelled as a Previous response in the request list until the current cycle receives a response. A Cancelled request does not begin another Request Cycle.
+Reopen begins a new Request Cycle while retaining earlier lifecycle and Contribution Response evidence. The selected human recipient keeps a frozen, read-only view of that earlier evidence until resubmission, but cannot see the new Draft Brief or draft-context changes. On a reopened Declined request, a replacement recipient sees only the new current cycle; the original recipient retains their frozen Declined cycle in **Requests for you**. Reassignment, resubmission and later activity in the new cycle neither appear in nor reorder that original recipient's list record, whose Last updated value remains their decline. A response from an earlier cycle is not a response to the reopened cycle and is labelled as a Previous response in the request list until the current cycle receives a response. A Cancelled request does not begin another Request Cycle.
 
 ---
 

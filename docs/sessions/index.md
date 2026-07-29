@@ -106,3 +106,4 @@
 | 2026-07-29-05 | 2026-07-29 | 5 | Collaboration Request Complete List Journey | Crystallized | Search, filters, pagination and retained-history boundaries validated |
 | 2026-07-29-06 | 2026-07-29 | 6 | Collaboration Request Detail History Presentation | Crystallized | Newest-first cycles, deferred immutable history and concise milestones |
 | 2026-07-29-07 | 2026-07-29 | 7 | Collaboration Request Current-Cycle Actions | Crystallized | Role-specific actions, declined reassignment and terminal cancellation |
+| 2026-07-29-08 | 2026-07-29 | 8 | Collaboration Request Decline and Reassignment Journey | Crystallized | Frozen former-recipient record, private reassignment and terminal cancellation validated |
