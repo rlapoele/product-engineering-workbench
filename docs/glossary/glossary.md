@@ -736,7 +736,7 @@ A Request Brief is the requestor-authored framing of the specific help, question
 
 The Assistance Request Type identifies the kind of help sought; the Request Brief identifies what the selected recipient should address within the request's scope. It is required for a submitted request.
 
-After a request has first been submitted, its recipient, Assistance Request Type, scope and recorded context remain read-only. If the requestor reopens the request, only its Request Brief may be revised before the request is resubmitted.
+After a request has first been submitted, its recipient, Assistance Request Type, scope and recorded context remain read-only. If the requestor reopens a Responded request, only its Request Brief may be revised before resubmission. If the requestor reopens a Declined request, they may also choose a different eligible human recipient. A Cancelled request cannot be reopened; renewed work requires a new request.
 
 ---
 
@@ -744,7 +744,7 @@ After a request has first been submitted, its recipient, Assistance Request Type
 
 A Request Cycle is one bounded iteration of a Collaboration Request, beginning when the request is first created or reopened and ending when that iteration is Responded, Declined or Cancelled.
 
-Reopen begins a new Request Cycle while retaining earlier lifecycle and Contribution Response evidence. The selected human recipient keeps a frozen, read-only view of that earlier evidence until resubmission, but cannot see the new Draft Brief or draft-context changes. A response from an earlier cycle is not a response to the reopened cycle and is labelled as a Previous response in the request list until the current cycle receives a response.
+Reopen begins a new Request Cycle while retaining earlier lifecycle and Contribution Response evidence. The selected human recipient keeps a frozen, read-only view of that earlier evidence until resubmission, but cannot see the new Draft Brief or draft-context changes. On a reopened Declined request, a replacement recipient sees only the new current cycle; the original recipient retains only their declined cycle. A response from an earlier cycle is not a response to the reopened cycle and is labelled as a Previous response in the request list until the current cycle receives a response. A Cancelled request does not begin another Request Cycle.
 
 ---
 
