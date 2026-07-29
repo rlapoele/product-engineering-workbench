@@ -103,3 +103,4 @@
 | 2026-07-29-02 | 2026-07-29 | 2 | Collaboration Request List Defaults and Fields | Crystallized | Default list behavior, compact fields and reopened-response distinction |
 | 2026-07-29-03 | 2026-07-29 | 3 | Collaboration Request Last-Updated Semantics | Crystallized | Meaningful request updates drive default list sorting |
 | 2026-07-29-04 | 2026-07-29 | 4 | Collaboration Request List Visibility Scenarios | Crystallized | Reopened recipient visibility and AI On Hold ordering validated |
+| 2026-07-29-05 | 2026-07-29 | 5 | Collaboration Request Complete List Journey | Crystallized | Search, filters, pagination and retained-history boundaries validated |

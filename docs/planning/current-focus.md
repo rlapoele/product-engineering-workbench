@@ -141,6 +141,7 @@ Recent clarification established the first target user as an AI-assisted develop
 - Project roles and home-page orientation are now bounded: a Project Owner is its creator, an accepted invited person is a Project Collaborator, and the roles are mutually exclusive within one Project; the home page routes users through Projects and compact attention only, with recipient responsibility remaining request-specific.
 - The Project Collaboration Requests workspace now has one role-aware, paginated list: **Requests you created** for the owner and **Requests for you** for the selected collaborator recipient. It is searchable, filterable and sortable; responses remain in their parent request as a separately labelled handling-status field rather than a distinct list or area.
 - The Project Collaboration Requests list defaults are now defined: no lifecycle or response-handling filter; **Last updated — newest first** based only on meaningful updates visible to the viewer; a compact filter and sort set; compact request-oriented rows; parent-contained response handling; and explicit Previous response labelling after Reopen.
+- A complete role-aware list journey is now validated: role boundary, search and filters apply before sorting and 25-item pagination; filters reset to page one; search and response filters exclude private and retained-history content; and deterministic tie-breaking keeps pages stable.
 
 ---
 
@@ -155,6 +156,7 @@ Recent clarification established the first target user as an AI-assisted develop
 - Validate remaining export-format details and package-generation constraints beyond the resolved README, readiness, report and AI-disclosure representations.
 - The Project Collaboration Requests list defaults have been clarified: no lifecycle or response-handling filter; **Last updated — newest first** based on meaningful events visible to the viewer; a compact filter and sort set; compact request-oriented rows; parent-contained response handling; and an explicit Previous response label after Reopen.
 - Owner, collaborator, AI On Hold and reopened-request scenarios validate the Collaboration Requests list: the collaborator keeps a frozen read-only prior view after Reopen, viewer-visible events determine list ordering, and restored AI eligibility does not reorder an On Hold request before explicit Resume.
+- The complete role-aware list journey is validated: search, filters, sorting, 25-item pagination and retained response history preserve role visibility and current-cycle boundaries.
 - Detail contributor selection using both capability and availability.
 - Validate the first-pass Assistance Request Type matrix through concrete specification exercises.
 - Validate the initial Response Shape and Finding Type model through concrete review and feedback examples.
