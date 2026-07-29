@@ -857,6 +857,8 @@ For human contributors in the MVP, availability is invitation-gated. A human con
 
 For AI Contributors in the MVP, availability is personal to the human user invoking assistance. That user must have enabled usable Bring Your Own AI credentials and a selected Personal AI Assistant, and the requested action must be permitted by applicable Project settings. Another collaborator's AI credentials or configured assistants are not available to the current user. AI Contributors do not require the same invitation and acceptance flow as human collaborators.
 
+Availability is deliberately not live presence, calendar time, willingness, capacity, workload or response-time information. The MVP neither labels people as online, busy or free nor ranks, assigns or redistributes requests from that information.
+
 ---
 
 # 14. Capability
@@ -877,7 +879,7 @@ For example, a contributor may have capabilities such as:
 - AI Draft Generation
 - Consistency Analysis
 
-Capabilities can be used to route requests to the right available contributor, whether human or AI.
+Capabilities help the Project Owner select an appropriate available contributor, whether human or AI. They may provide an exact, related or unstated fit for the requested Assistance Request Type, scope and Review Lens, but remain explainable, non-binding guidance rather than an automatic routing or assignment rule.
 
 ## Example
 
@@ -940,7 +942,7 @@ Initial MVP Assistance Request Types:
 - Ask Question
 - Prepare Handoff
 
-The available Assistance Request Types should depend on request scope, artifact type, artifact maturity, contributor availability and eligible capabilities.
+The available Assistance Request Types should depend on request scope, artifact type, artifact maturity, availability of an eligible recipient path and applicable Project settings. Known capabilities may guide recipient selection after a type is chosen, but do not by themselves determine which types appear or which eligible available candidate the owner may select.
 
 Request Feedback and Review should remain distinct.
 
@@ -985,7 +987,11 @@ A Collaboration Request should identify:
 - the applicable availability or eligibility condition;
 - the request status.
 
-For the MVP, a Collaboration Request has exactly one selected recipient. A human recipient is an accepted Project Collaborator; the Project Owner cannot select themself as the human recipient. Capability and availability may guide the requestor's choice, but they do not create a capability-only queue, broadcast or multi-recipient request. When multiple perspectives or an evolving shared context are needed, the requestor uses a Conversation instead.
+For the MVP, a Collaboration Request has exactly one selected recipient. Recipient selection evaluates three distinct dimensions. **Eligibility** is the structural boundary: a human candidate must be a Project Collaborator rather than the Project Owner, while an AI candidate must be the requestor's own assistant and permitted by Project settings. **Availability** determines whether an eligible candidate can be selected now: a human becomes available on accepted invitation, while an AI assistant must be enabled and usable. **Capability** describes known fit for the requested Assistance Request Type, scope and optional Review Lens. It may explain and guide the requestor's choice, including an exact, related or unstated fit, but does not automatically route, rank or exclude an otherwise available eligible candidate.
+
+The recipient selector groups selectable candidates as **People**—accepted Project Collaborators—and **My assistants**—the requestor's enabled, usable Personal AI Assistants. It may show concise capability guidance beside each candidate. A configured but currently unusable assistant may appear as a non-selectable `AI assistance unavailable` state without revealing provider, model, credential, credit or detailed failure information. Pending invitees, non-collaborators, the owner as a human recipient and another user's assistant do not appear as selectable candidates. When no eligible and available candidate exists for the selected request, the flow explains the absent path generically and cannot proceed to the Request Brief or submission; scope and type remain local transient choices, so no Draft, queue, broadcast or fallback assignment is created. Invitation and assistant configuration remain outside this flow.
+
+Capability and availability may guide the requestor's choice, but they do not create a capability-only queue, broadcast or multi-recipient request. When multiple perspectives or an evolving shared context are needed, the requestor uses a Conversation instead.
 
 The Request Brief is the requestor-authored framing of the specific help, question or desired outcome. It is required before a request may be submitted. The Assistance Request Type identifies the kind of help sought; the Request Brief identifies what the selected recipient should address within the request's scope.
 

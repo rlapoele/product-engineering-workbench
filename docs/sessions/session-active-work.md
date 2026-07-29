@@ -686,6 +686,12 @@ Human collaborator availability depends on invitation and acceptance.
 
 AI collaborator availability depends on whether the current human user has enabled usable Bring Your Own AI support and whether the requested action is permitted by applicable Project settings.
 
+Resolved refinement:
+
+Recipient selection has three distinct dimensions. Eligibility is the structural boundary: human candidates are Project Collaborators rather than the Project Owner, while AI candidates are the requestor's own assistants permitted by Project settings. Availability determines which eligible candidates are selectable now: people become available through accepted Project collaboration and assistants must be enabled and usable. Capability is explainable, non-binding guidance about known fit for the Assistance Request Type, scope and optional Review Lens; it may identify exact, related or unstated fit but never automatically routes, ranks, assigns or excludes a candidate.
+
+The selector groups selectable candidates as **People** and **My assistants**. A configured but unusable assistant may appear only as non-selectable `AI assistance unavailable`, without private provider, model, credential, credit or technical-failure detail. Pending invitees, non-collaborators, the owner as human recipient and another user's assistant are not selectable. If no eligible and available candidate exists, the local flow cannot reach Brief or submission, creates no Draft, and gives a generic explanation rather than creating a queue, broadcast, fallback assignment, inline invitation or assistant configuration. Availability is not presence, calendar time, willingness, capacity, workload or response-time tracking.
+
 
 ### 4.3
 

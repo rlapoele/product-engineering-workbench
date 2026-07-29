@@ -87,9 +87,9 @@ Example AI capabilities include:
 - Implementation Readiness Review
 - Export Preparation
 
-The same capability model should apply to both human contributors and AI contributors wherever possible.
+The same capability model should apply to both human contributors and AI contributors wherever possible. Capability is explainable, non-binding guidance about known fit for a request; it may help the Project Owner choose but never automatically routes, ranks, assigns or excludes a candidate by itself.
 
-For the MVP, AI Contributor availability is personal rather than invitation-gated. A human user may request assistance only through their own enabled, usable BYO-AI configuration; another collaborator's credentials and configured AI are not available to them. An AI Contributor does not need a human-collaborator invitation, but applicable Project settings still apply.
+For the MVP, AI Contributor eligibility and availability are personal rather than invitation-gated. An AI recipient must be the requestor's own assistant and applicable Project settings must permit the requested assistance; it is selectable only when its owner's BYO-AI configuration is enabled and usable. Another collaborator's credentials and configured AI are not available to them. A configured but unusable assistant may be identified only as `AI assistance unavailable`; provider, model, credential, credit and detailed failure information remain private. An AI Contributor does not need a human-collaborator invitation.
 
 AI Contributor availability should still respect project settings, permissions and enabled capabilities.
 

@@ -149,7 +149,7 @@ Examples include:
 - Requirement Generation
 - Risk Analysis
 
-Capabilities are used to route contribution requests.
+Capabilities help a Project Owner understand how well a candidate may fit a Collaboration Request's Assistance Request Type, scope and, when applicable, Review Lens. They are advisory selection guidance rather than an automatic routing rule, capability-only queue or claim that one contributor is objectively best.
 
 ---
 
@@ -179,6 +179,8 @@ For human recipients in the MVP, availability is invitation-gated: an accepted P
 
 For AI Contributors in the MVP, availability is personal to the current human user: that user must have enabled usable Bring Your Own AI credentials, and the requested assistance must be permitted by applicable Project settings.
 
+Availability is not presence, calendar time, willingness, capacity, workload or response-time tracking. The MVP does not label people as online, busy or free, and does not use availability to rank, assign or redistribute requests.
+
 ---
 
 ## Content Locale
@@ -206,6 +208,14 @@ Within a Project, requests appear in one role-aware, paginated list: **Requests 
 A Collaboration Request Recipient is the person or Personal AI Assistant selected to provide the bounded response to one Collaboration Request. It is a temporary request responsibility, not a Project membership role.
 
 A human recipient must be an accepted Project Collaborator. The Project Owner cannot be the human recipient of their own request. An AI recipient must be the requestor's own enabled, usable Personal AI Assistant.
+
+---
+
+## Recipient Eligibility
+
+Recipient Eligibility describes whether a candidate is structurally permitted to appear in Collaboration Request selection before current availability and capability fit are considered.
+
+For a human, the candidate must be a Project Collaborator rather than the Project Owner. For an AI recipient, the assistant must belong to the requestor and applicable Project settings must permit the requested assistance. Eligibility does not make a candidate selected, available, recommended or responsible.
 
 ---
 

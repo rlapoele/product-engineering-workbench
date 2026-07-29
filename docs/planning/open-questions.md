@@ -986,7 +986,9 @@ MVP collaboration will be asynchronous and transactional.
 
 Project Owners will create scoped Collaboration Requests for recipients. Requests may target the whole specification, a document section, a Product Artifact, selected content or another explicit scope.
 
-Each MVP Collaboration Request has one selected available recipient. A human recipient is an accepted Project Collaborator; the Project Owner cannot select themself. Capability and availability may guide selection, but a request is not a capability-only queue, broadcast or group request. Multiple perspectives and evolving shared context belong in a Conversation.
+Each MVP Collaboration Request has one selected available recipient. Recipient selection distinguishes eligibility, availability and capability. Eligibility is the structural boundary: a human candidate is a Project Collaborator rather than the Project Owner; an AI candidate is the requestor's own assistant and is permitted by Project settings. Availability determines whether an eligible candidate can be selected now: a human becomes available through accepted Project collaboration, while an assistant must be enabled and usable. Capability gives explainable, non-binding guidance about known fit for the type, scope and optional Review Lens; it may identify exact, related or unstated fit but never automatically routes, ranks, assigns or excludes a candidate.
+
+The selector groups selectable accepted collaborators as **People** and the requestor's enabled, usable assistants as **My assistants**. A configured but unusable assistant may show only a non-selectable `AI assistance unavailable` state. Pending invitees, non-collaborators, the owner as human recipient and another user's assistant are not selectable. If no eligible and available candidate exists, the flow explains that absence generically and cannot proceed to Brief or submission; scope and type remain transient, so no Draft, queue, broadcast, fallback assignment, inline invitation or assistant setup is created. Availability is not presence, calendar time, willingness, capacity, workload or response-time tracking. Multiple perspectives and evolving shared context belong in a Conversation.
 
 A request has a required Request Brief framing the specific help, question or desired outcome. Its lifecycle is Draft, Submitted, In Progress, Responded, Declined and Cancelled. A human recipient may work in private while In Progress and then submit one bounded Contribution Response or decline; the requestor may cancel an active request. No acceptance, automatic expiry or delivery-management state is needed.
 
@@ -1012,9 +1014,7 @@ Request Feedback is open-ended and comment-oriented. Review is structured and cr
 
 Review is a composite Assistance Request Type. It may include multiple Check Types, while focused Assistance Request Types such as Find Gaps or Find Inconsistencies may expose individual checks directly.
 
-Recipient selection should consider requested capability and availability.
-
-For human recipients, MVP availability is invitation-gated: an invited person becomes a Project Collaborator on acceptance. A Project Owner and Project Collaborator are mutually exclusive within the same Project. For AI Contributors, availability is personal to the human user invoking assistance: that user must have enabled usable Bring Your Own AI credentials, and the requested action must be permitted by applicable Project settings. One collaborator's AI configuration does not make AI available to another collaborator.
+Recipient selection considers requested capability and availability after applying the eligibility boundary. For human recipients, MVP availability is invitation-gated: an invited person becomes a Project Collaborator on acceptance. A Project Owner and Project Collaborator are mutually exclusive within the same Project. For AI Contributors, availability is personal to the human user invoking assistance: that user must have enabled usable Bring Your Own AI credentials, and the requested action must be permitted by applicable Project settings. One collaborator's AI configuration does not make AI available to another collaborator. These are not presence, workload or assignment signals.
 
 Contributors will respond asynchronously by submitting Contribution Responses.
 
