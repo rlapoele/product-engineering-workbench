@@ -195,7 +195,7 @@ A Collaboration Request is a scoped request for assistance sent to one selected 
 
 A Collaboration Request identifies the Request Brief, relevant scope, selected recipient, relevant capability and context needed to respond. Capability may inform selection, but it is not a capability-only queue or a multi-recipient request.
 
-In the MVP, Collaboration Requests support asynchronous and transactional collaboration rather than real-time co-editing.
+In the MVP, Collaboration Requests support asynchronous and transactional collaboration rather than real-time co-editing. An initial Draft is private to its requestor. After Reopen, the selected human recipient retains a frozen, read-only view of the previously shared request and response evidence; the new Draft Brief and any draft-context changes remain private until resubmission.
 
 Within a Project, requests appear in one role-aware, paginated list: **Requests you created** for the Project Owner and **Requests for you** for a Project Collaborator. The list is searchable, filterable and sortable; it does not separate requests and their Contribution Responses into different lists or workspaces.
 
@@ -744,7 +744,7 @@ After a request has first been submitted, its recipient, Assistance Request Type
 
 A Request Cycle is one bounded iteration of a Collaboration Request, beginning when the request is first created or reopened and ending when that iteration is Responded, Declined or Cancelled.
 
-Reopen begins a new Request Cycle while retaining earlier lifecycle and Contribution Response evidence. A response from an earlier cycle is not a response to the reopened cycle and is labelled as a Previous response in the request list until the current cycle receives a response.
+Reopen begins a new Request Cycle while retaining earlier lifecycle and Contribution Response evidence. The selected human recipient keeps a frozen, read-only view of that earlier evidence until resubmission, but cannot see the new Draft Brief or draft-context changes. A response from an earlier cycle is not a response to the reopened cycle and is labelled as a Previous response in the request list until the current cycle receives a response.
 
 ---
 

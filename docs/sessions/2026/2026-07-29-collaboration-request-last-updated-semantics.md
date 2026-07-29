@@ -18,7 +18,7 @@ The default Project Collaboration Requests list had been described as sorted by 
 
 The default sort is **Last updated — newest first**.
 
-Last updated changes only for a meaningful update to the request:
+For the Project Owner, Last updated changes only for a meaningful update to the request:
 
 - editing the Request Brief;
 - submitting the request;
@@ -27,6 +27,8 @@ Last updated changes only for a meaningful update to the request:
 - changing the Contribution Response handling status.
 
 Opening or viewing a request does not update it. A compact row may describe the update that produced its timestamp, for example `Maya submitted a response · 2h ago`.
+
+For a Project Collaborator, Last updated means the newest meaningful event visible to that collaborator. A private Brief edit in a reopened Draft updates the owner's list only; Reopen and resubmission update both lists. The collaborator retains a frozen read-only prior view during the reopened Draft, so the timestamp does not disclose private drafting activity.
 
 The other MVP sort choices are Last updated oldest first, creation newest first and Request Brief A–Z.
 
@@ -45,6 +47,7 @@ The other MVP sort choices are Last updated oldest first, creation newest first 
 - `docs/knowledge/data-model/project-model.md`
 - `docs/knowledge/ux/document-first-ui.md`
 - `docs/knowledge/decisions/ADR-003-asynchronous-transactional-collaboration.md`
+- `docs/glossary/glossary.md`
 - `docs/planning/open-questions.md`
 - `docs/planning/current-focus.md`
 - `docs/sessions/session-active-work.md`
