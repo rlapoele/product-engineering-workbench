@@ -451,7 +451,18 @@ The matrix is a first pass. It should be validated through concrete specificatio
 
 Existing selected-content Review availability remains unchanged. It is a narrow fragment review and never represents the containing Artifact, Section or Specification as a whole.
 
-Review does not automatically use the Readiness Fact Check Set, which remains specific to `Validate Readiness`. It neither approves Product Knowledge nor certifies implementation, conformance, security, accessibility or readiness; it does not create Product Knowledge, delivery workflow or automatic changes. The initial lens catalog and lens-to-scope compatibility rules remain the next decision.
+The initial catalog has six lenses: Requirements Quality, UX Quality, Accessibility, Security, Testability and Implementation Readiness. Requirements Quality is compatible with requirement- or acceptance-oriented content; UX Quality with experience-oriented content; Accessibility with interaction-oriented content; Security with boundary- or constraint-oriented content; Testability with behavior- or verification-oriented content; and Implementation Readiness with implementation-bearing content. Every lens is available from the whole Specification. A compatible Section or Artifact may still lack sufficient evidence, in which case the Review proceeds with explicit partial or insufficient-context limits rather than hiding a lens, changing the request scope or deriving an outcome. Selected-content scope inherits compatible lenses from its containing Artifact or Section, but the response remains about the fragment and immediately relevant host context only.
+
+| Scope kind | Lens compatibility |
+|---|---|
+| Whole Specification | All six catalog lenses are available. |
+| Eligible Specification Section | The lens must be compatible with the Section's template purpose or active contained content. |
+| Active Product Artifact | The lens must be compatible with the Artifact's stated role. |
+| Selected content | The fragment inherits compatible lenses from its containing Artifact or Section; it never represents that host as a whole. |
+
+At an Artifact contextual entry, the composer may visibly preselect a catalog-declared default—for example, Requirements Quality for a Functional Requirement—but the requestor still confirms it. Section and whole-Specification entries always require deliberate lens selection. Lens compatibility filters the available lens choices; it does not rank, route or select the one recipient, and does not infer a readiness state. Accessibility may be standards-informed but never certifies conformance; Security never certifies security; and an Implementation Readiness Lens returns Findings and Summary rather than a Readiness Result or deterministic handoff outcome.
+
+Review does not automatically use the Readiness Fact Check Set, which remains specific to `Validate Readiness`. It neither approves Product Knowledge nor certifies implementation, conformance, security, accessibility or readiness; it does not create Product Knowledge, delivery workflow or automatic changes.
 
 ### Validate Readiness scope-kind validation
 

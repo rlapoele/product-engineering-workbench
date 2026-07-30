@@ -722,7 +722,16 @@ A Review returns non-canonical, lens-qualified specification-coverage findings f
 
 A Review Lens is the one explicit perspective, standard or quality dimension used when performing a Review. It determines the relevant checks, the primary and supporting context, and how the response is qualified.
 
-Examples include Requirements Quality, UX Quality, Accessibility, Security, Testability and Implementation Readiness.
+The initial MVP catalog is Requirements Quality, UX Quality, Accessibility, Security, Testability and Implementation Readiness. These lenses assess specification coverage only:
+
+- Requirements Quality assesses requirement and acceptance-definition clarity, completeness, consistency, traceability and appropriate constraint.
+- UX Quality assesses user outcomes, flows, states and interaction guidance.
+- Accessibility assesses accessible outcomes, risks and verification needs; it may be standards-informed but never certifies conformance.
+- Security assesses security-relevant outcomes, boundaries, assumptions, risks and verification needs; it never certifies security.
+- Testability assesses observable behavior, acceptance evidence and verifiable outcomes.
+- Implementation Readiness assesses implementation-relevant behavior, constraints, dependencies and gaps; it returns Findings and Summary, never a Readiness Result or deterministic handoff outcome.
+
+Lens compatibility is structural rather than a sufficiency, recipient-fit or routing judgment. A catalog entry declares the artifact roles and section content to which it applies; a compatible scope may still have partial or insufficient context. Requirements Quality applies to requirement- or acceptance-oriented content; UX Quality to experience-oriented content; Accessibility to interaction-oriented content; Security to boundary- or constraint-oriented content; Testability to behavior- or verification-oriented content; and Implementation Readiness to implementation-bearing content. Each lens is available for whole-Specification Review. At selected-content scope, compatibility is inherited from the containing Artifact or Section, while the review remains limited to the fragment and immediately relevant host context.
 
 The requestor must see and confirm the lens before submitting a Review. A contextual entry may preselect a compatible default, but never applies it invisibly. Whole-Specification and Specification Section Reviews require the requestor to choose a lens deliberately.
 
