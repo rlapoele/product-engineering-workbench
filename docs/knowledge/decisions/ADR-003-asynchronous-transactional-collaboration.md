@@ -54,6 +54,8 @@ Review is a composite Assistance Request Type. It may include multiple Check Typ
 
 Focused Assistance Request Types may expose individual checks directly. For example, Find Gaps may run a Gap Check, while a broader Review may include that check alongside others.
 
+Each MVP Review has one explicit Review Lens. It may run multiple checks inside that lens, while different lenses require separate Collaboration Requests. The requestor sees and confirms the lens before submission; a contextual entry may preselect a compatible default only when a lens catalog declares one, and Whole-Specification and Specification Section Reviews require deliberate selection. The lens determines context, checks and lens-qualified conclusions. A Review returns non-canonical Findings, Questions, Suggested Edits, Proposals and Summaries, concluding only that specification coverage appears adequate for the named lens at the current scope, that findings or risks were identified, or that context is insufficient. It never approves Product Knowledge, certifies implementation, conformance, security, accessibility or readiness, or uses a Readiness Result—even under an Implementation Readiness Lens.
+
 A Collaboration Request may target:
 
 - the whole specification;

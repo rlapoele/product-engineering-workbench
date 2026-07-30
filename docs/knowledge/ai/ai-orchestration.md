@@ -145,9 +145,9 @@ The selected Assistance Request Type should help determine:
 
 Request Feedback should produce open-ended observations, comments, questions and suggestions.
 
-Review should produce a more structured evaluation against a specific lens or standard, such as requirements quality, UX quality, accessibility, security, testability or implementation readiness.
+Review should produce a more structured evaluation against one explicit lens or standard, such as requirements quality, UX quality, accessibility, security, testability or implementation readiness.
 
-Review should be treated as a composite Assistance Request Type.
+Review should be treated as a composite Assistance Request Type. It may run several Check Types within its one selected Review Lens; multiple lenses require separate requests.
 
 An AI Review may orchestrate multiple Check Types, such as:
 
@@ -177,6 +177,8 @@ An AI Review workflow may eventually:
 7. suggest next actions.
 
 Review orchestration may use one AI Contributor or multiple AI agents in the future, but the MVP should not require multi-agent orchestration.
+
+The requestor must see and confirm a Review Lens before submission. A contextual entry may preselect a compatible default when an initial lens catalog declares one, but must not apply it invisibly. Whole-Specification and Specification Section Reviews require a deliberate lens selection. The lens determines primary and supporting context, applicable Check Types and lens-qualified response language. A Review produces Findings, Questions, Suggested Edits, Proposed Artifacts, Proposed Relationships, Proposed Decisions and Summaries; even an Implementation Readiness Lens uses Findings and Summary rather than a Readiness Result.
 
 Initial MVP Response Shapes:
 

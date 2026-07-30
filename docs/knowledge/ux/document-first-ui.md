@@ -400,9 +400,13 @@ Improve on a Functional Requirement should make the requirement clearer, more pr
 
 Review is structured, deliberate and criteria-based. It asks a contributor to evaluate the target against a specific capability, lens or standard.
 
-Review should be treated as a composite assistance activity.
+Each MVP Review has one explicit Review Lens. The lens must be visible and confirmed before the owner submits the request. A contextual entry may preselect a compatible default only when the initial lens catalog declares one; it must never apply invisibly. Whole-Specification and Specification Section Reviews require the owner to choose a lens deliberately.
+
+Review should be treated as a composite assistance activity within that one lens.
 
 A Review may run multiple checks, such as gap checks, inconsistency checks, ambiguity checks, testability checks, feasibility checks, alignment checks, risk checks and readiness checks.
+
+Different lenses require separate Collaboration Requests. The selected lens determines the primary and supporting context, applicable checks and the qualification of the result. A Review returns Findings, Questions, Suggested Edits, Proposed Artifacts, Proposed Relationships, Proposed Decisions and a Summary; it does not return a Readiness Result, even when the Implementation Readiness Lens is selected.
 
 Focused Assistance Request Types can expose some of those checks directly. For example, Find Gaps can run a focused gap check, while a broader Review can include gap checking alongside other checks.
 
@@ -434,6 +438,20 @@ First-pass contextual availability matrix:
 | Selected Content | Improve, Request Feedback, Review, Find Gaps, Find Inconsistencies, Ask Question |
 
 The matrix is a first pass. It should be validated through concrete specification exercises before being treated as final.
+
+### Review scope-kind validation
+
+`Review` is available from the whole Specification, an eligible Specification Section and an active Product Artifact. Its lens-qualified conclusion is limited to whether specification coverage appears adequate for the named lens at that scope, whether findings or risks were identified, or whether the available context is insufficient.
+
+| Scope kind | Meaning of the review |
+|---|---|
+| Whole Specification | Assesses available cross-section coverage for the named lens; it never implies that implemented software, the Project or a delivery plan is approved. |
+| Eligible Specification Section | Assesses the Section's active content and relevant connections for its template purpose under the named lens; it makes no claim about other Sections or the whole Specification. |
+| Individual Product Artifact | Assesses the Artifact's specification coverage under the named lens and for its stated role; it makes no claim about its parent Section, Feature or implementation. |
+
+Existing selected-content Review availability remains unchanged. It is a narrow fragment review and never represents the containing Artifact, Section or Specification as a whole.
+
+Review does not automatically use the Readiness Fact Check Set, which remains specific to `Validate Readiness`. It neither approves Product Knowledge nor certifies implementation, conformance, security, accessibility or readiness; it does not create Product Knowledge, delivery workflow or automatic changes. The initial lens catalog and lens-to-scope compatibility rules remain the next decision.
 
 ### Validate Readiness scope-kind validation
 

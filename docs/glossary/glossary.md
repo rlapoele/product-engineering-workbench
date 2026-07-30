@@ -712,15 +712,19 @@ A contribution whose objective is to evaluate, improve or validate existing prod
 
 A review may be performed by either a human or an AI contributor.
 
-Review is a composite Assistance Request Type. It may include multiple Check Types, such as gap checks, inconsistency checks, ambiguity checks, testability checks, feasibility checks, alignment checks, risk checks and readiness checks.
+Review is a composite Assistance Request Type. Each MVP Review has one explicit Review Lens, and may include multiple Check Types within that lens, such as gap checks, inconsistency checks, ambiguity checks, testability checks, feasibility checks, alignment checks, risk checks and readiness checks. Separate lenses require separate Collaboration Requests.
+
+A Review returns non-canonical, lens-qualified specification-coverage findings for its selected scope. It may conclude that coverage appears adequate for that lens at the current scope, that findings or risks were identified, or that the available context is insufficient. It does not approve Product Knowledge, certify implementation, conformance, security, accessibility or readiness, or change Product Knowledge automatically.
 
 ---
 
 ## Review Lens
 
-A Review Lens is the perspective, standard or quality dimension used when performing a Review.
+A Review Lens is the one explicit perspective, standard or quality dimension used when performing a Review. It determines the relevant checks, the primary and supporting context, and how the response is qualified.
 
 Examples include Requirements Quality, UX Quality, Accessibility, Security, Testability and Implementation Readiness.
+
+The requestor must see and confirm the lens before submitting a Review. A contextual entry may preselect a compatible default, but never applies it invisibly. Whole-Specification and Specification Section Reviews require the requestor to choose a lens deliberately.
 
 ---
 

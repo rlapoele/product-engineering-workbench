@@ -152,6 +152,7 @@ Recent clarification established the first target user as an AI-assisted develop
 - The first Assistance Request Type matrix boundary is validated: `Prepare Handoff` is available only from whole-Specification and eligible Section roots, never an individual Product Artifact or selected-content scope; an eligible but insufficient section retains its scope and exposes deterministic missing-definition checks without preparing a package.
 - The `Validate Readiness` matrix boundary is validated: whole-Specification, eligible Section and active Product Artifact scopes produce non-canonical local knowledge-quality assessments with explicit context limits; selected content is unavailable; and no result substitutes for deterministic Implementation Handoff Readiness inside `Prepare Handoff`.
 - `Validate Readiness` now derives explicit deterministic fact checks for its recipient: a transient composer preview becomes an immutable per-cycle context snapshot on submission, remains separate from assessment and handoff outcomes, and does not silently refresh, score, route, block work or change Product Knowledge.
+- The `Review` matrix boundary is validated: whole-Specification, eligible Section and active Product Artifact scopes use one visible, confirmed Review Lens; composite checks stay within that lens; and non-canonical coverage findings never become approval, certification or readiness results.
 
 ---
 
@@ -167,7 +168,7 @@ Recent clarification established the first target user as an AI-assisted develop
 - The Project Collaboration Requests list defaults have been clarified: no lifecycle or response-handling filter; **Last updated — newest first** based on meaningful events visible to the viewer; a compact filter and sort set; compact request-oriented rows; parent-contained response handling; and an explicit Previous response label after Reopen.
 - Owner, collaborator, AI On Hold and reopened-request scenarios validate the Collaboration Requests list: the collaborator keeps a frozen read-only prior view after Reopen, viewer-visible events determine list ordering, and restored AI eligibility does not reorder an On Hold request before explicit Resume.
 - The complete role-aware list journey is validated: search, filters, sorting, 25-item pagination and retained response history preserve role visibility and current-cycle boundaries.
-- Validate `Review` across individual Product Artifact, eligible Section and whole-Specification scopes, including how an explicit Review Lens changes context and results without creating certification.
+- Define the initial Review Lens catalog and its structural compatibility with individual Product Artifact, eligible Section, whole-Specification and existing selected-content scopes.
 - Validate the initial Response Shape and Finding Type model through concrete review and feedback examples.
 - Validate additional Context Relevance and Context Sufficiency rules through concrete assistance request examples.
 - Use the clarified AI assistance governance stance when refining provenance, contribution review and export visibility.

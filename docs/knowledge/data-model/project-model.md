@@ -1134,11 +1134,11 @@ They allow future contributors to understand not only what the product is, but w
 
 # 18. Review
 
-A Review is an evaluation of one or more artifacts.
+A Review is a structured, lens-qualified evaluation of selected Product Knowledge.
 
 A review may be performed by a human contributor or an AI contributor.
 
-A review may check:
+A Review has exactly one explicit Review Lens in the MVP. It may combine multiple Check Types within that lens, such as:
 
 - completeness;
 - consistency;
@@ -1150,17 +1150,15 @@ A review may check:
 - risk;
 - implementation readiness.
 
-Reviews should produce explicit outcomes, such as:
+Separate lenses require separate Collaboration Requests. The requestor must see and confirm the lens before submission. A contextual entry may preselect a compatible default only when the initial lens catalog declares one; Whole-Specification and Specification Section Reviews require the requestor to select a lens deliberately.
 
-- accepted;
-- needs changes;
-- has questions;
-- blocked;
-- suggested improvements.
+The selected lens determines the relevant Check Types, primary and supporting context, and how conclusions are qualified. A Review may return Findings, Questions, Suggested Edits, Proposed Artifacts, Proposed Relationships, Proposed Decisions and a Summary. It should conclude that specification coverage appears adequate for the named lens at the current scope, that findings or risks were identified, or that the available context cannot support a responsible assessment.
 
-Reviews should not silently change product knowledge.
+Review conclusions are non-canonical. They do not approve Product Knowledge; certify implementation, conformance, security, accessibility or readiness; or use a Readiness Result, even for an Implementation Readiness Lens. Response handling remains separate from Product Knowledge lifecycle and occurs through the ordinary Contribution Response statuses.
 
-They should produce feedback, suggestions or status changes that remain visible to users.
+Review is available for the whole Specification, an eligible Specification Section with non-whitespace section content or an active contained Product Artifact, and an active Product Artifact. At Artifact scope, it evaluates that Artifact's coverage for the named lens and stated role; at Section scope, it evaluates active content and relevant connections for the Section's template purpose; and at whole-Specification scope, it evaluates cross-section coverage for the named lens. Existing selected-content Review availability is unchanged; it remains a narrow fragment review and does not represent the containing Artifact, Section or Specification as a whole.
+
+Reviews do not silently change Product Knowledge, create approval or delivery workflow, or certify an implemented product. The initial lens catalog and structural compatibility rules remain a separate decision.
 
 ---
 
