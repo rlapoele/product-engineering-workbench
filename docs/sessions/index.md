@@ -111,3 +111,4 @@
 | 2026-07-30-01 | 2026-07-30 | 1 | AI Request Detail Journey | Crystallized | Explicit resume, compact interrupted state and bounded response/cancellation journey validated |
 | 2026-07-30-02 | 2026-07-30 | 2 | Collaboration Request Recipient Selection | Crystallized | Eligibility, availability and non-binding capability guidance for one-recipient selection |
 | 2026-07-30-03 | 2026-07-30 | 3 | Collaboration Request Recipient Selection Validation | Crystallized | Creation and reopen gates, preserved Drafts and human-to-personal-AI declined reassignment |
+| 2026-07-30-04 | 2026-07-30 | 4 | Assistance Request Type Matrix: Prepare Handoff Scope Validation | Crystallized | Whole/section handoff roots versus artifact and selected-content boundaries |

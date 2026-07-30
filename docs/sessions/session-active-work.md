@@ -663,6 +663,10 @@ First-pass contextual availability matrix:
 
 The matrix is a first pass and should be validated through concrete specification exercises.
 
+Validated scope-kind boundary:
+
+`Prepare Handoff` is available from the whole Specification and from an eligible Specification Section—one containing non-whitespace section content or an active contained Product Artifact. It is unavailable from an individual Product Artifact or selected content, which may only narrow a section-rooted handoff after the owner starts that scope. An eligible but insufficient `Core Features` section, such as one holding only a high-level Feature with no related Functional Requirement or Acceptance Criteria coverage, may still open the handoff scope panel. The panel identifies the missing deterministic definition checks and prevents package preparation while retaining the selected scope for ordinary document recovery.
+
 AI support may also include a lightweight general AI Assistant.
 
 The general AI Assistant is not the same thing as a scoped assistance request. It should help the user think, navigate the application, understand terminology, ask questions and decide what to do next.

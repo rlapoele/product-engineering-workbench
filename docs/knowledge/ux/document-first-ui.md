@@ -435,6 +435,19 @@ First-pass contextual availability matrix:
 
 The matrix is a first pass. It should be validated through concrete specification exercises before being treated as final.
 
+### Prepare Handoff scope-kind validation
+
+`Prepare Handoff` is governed by handoff-root eligibility rather than by the broad artifact and selected-content entries in the matrix. Its first scope-kind validation is:
+
+| Scope kind | `Prepare Handoff` availability |
+|---|---|
+| Whole Specification | Available. |
+| Eligible Specification Section | Available when the section has non-whitespace section content or an active contained Product Artifact. |
+| Individual Product Artifact | Unavailable. An artifact may narrow a selected section-rooted handoff scope, but cannot initiate one. |
+| Selected content | Unavailable. Selected text is not a handoff root. |
+
+An eligible section root may still lack meaningful product definition. For example, a non-empty `Core Features` section containing only a high-level Feature may enter the handoff scope panel, which deterministically identifies the missing Functional Requirement and Acceptance Criteria coverage and prevents package preparation. The owner retains the selected scope and uses ordinary document actions to add missing knowledge; the workbench creates no task, queue or automatic knowledge.
+
 ## Accessibility Specification Review
 
 A Review on a UI Requirement may use the Accessibility Lens to assess whether the specification defines accessible outcomes, risks and verification needs clearly enough for implementation and later evaluation.

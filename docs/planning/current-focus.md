@@ -149,6 +149,7 @@ Recent clarification established the first target user as an AI-assisted develop
 - The complete AI request-detail journey is now validated: explicit invocation, actual start, interruption, non-reordering restored eligibility, explicit best-effort resume, bounded response handling and terminal cancellation remain legible without exposing incomplete assistant output.
 - Collaboration Request recipient selection is now defined: eligibility sets Project-role, assistant-ownership and Project-setting boundaries; invitation-gated human and usable personal-AI availability determine what is selectable; and capability provides explainable, non-binding fit guidance without automatic routing, ranking, presence, workload or delivery-management behavior.
 - Recipient-selection scenarios are now validated: no recipient path disables initial request creation; an already-started Draft survives later unavailability but cannot submit until corrected; and a reopened Declined request may select an eligible available human or the owner's Personal AI Assistant while preserving the former recipient's frozen cycle.
+- The first Assistance Request Type matrix boundary is validated: `Prepare Handoff` is available only from whole-Specification and eligible Section roots, never an individual Product Artifact or selected-content scope; an eligible but insufficient section retains its scope and exposes deterministic missing-definition checks without preparing a package.
 
 ---
 
@@ -164,7 +165,7 @@ Recent clarification established the first target user as an AI-assisted develop
 - The Project Collaboration Requests list defaults have been clarified: no lifecycle or response-handling filter; **Last updated — newest first** based on meaningful events visible to the viewer; a compact filter and sort set; compact request-oriented rows; parent-contained response handling; and an explicit Previous response label after Reopen.
 - Owner, collaborator, AI On Hold and reopened-request scenarios validate the Collaboration Requests list: the collaborator keeps a frozen read-only prior view after Reopen, viewer-visible events determine list ordering, and restored AI eligibility does not reorder an On Hold request before explicit Resume.
 - The complete role-aware list journey is validated: search, filters, sorting, 25-item pagination and retained response history preserve role visibility and current-cycle boundaries.
-- Validate the first-pass Assistance Request Type matrix through concrete specification exercises.
+- Validate `Validate Readiness` across individual Product Artifact, eligible Section and whole-Specification scopes.
 - Validate the initial Response Shape and Finding Type model through concrete review and feedback examples.
 - Validate additional Context Relevance and Context Sufficiency rules through concrete assistance request examples.
 - Use the clarified AI assistance governance stance when refining provenance, contribution review and export visibility.
