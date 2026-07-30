@@ -20,6 +20,7 @@
 - List processing applies that role boundary first, then search and all selected filters, then the chosen sort and 25-item pagination. Search or filter changes return the user to page one and show a matching-result count. Search includes only the currently visible request surface; response bodies, retained prior-cycle content and private reopened-Draft changes are excluded. Response-handling filters apply only to the current Request Cycle. Creation time and then a stable internal identifier break equal visible sort values.
 - Request detail is one newest-first Request Cycle structure. The current cycle stays expanded with immutable recorded context and either its submitted response with labelled handling status or a compact state; private human response drafts remain private. An AI request shows only that compact state while In Progress or On Hold; incomplete assistant working state is private to best-effort resume and never shown as partial response text or retained as history. Earlier cycles are collapsed summaries; expanding one immediately shows its summary and loads its stored immutable Brief, context and response inline with loading, retry and current-detail-session caching. Detail shows only concise lifecycle milestones—submission, start, response, decline, cancellation, On Hold, resume, reopen and response-handling changes—rather than an activity feed or chat surface.
 - Current-cycle detail actions are role-specific: the owner continues, discards or submits an initial Draft; may cancel an active request; acknowledges, acts on or reopens Responded; and may discard a reopened Draft to restore its preceding terminal cycle. A human recipient starts, continues, submits or declines a private response; a recipient otherwise sees retained evidence read-only. Only the assistant owner can cancel an active AI request or resume or cancel it from On Hold.
+- `Validate Readiness` is a scoped, non-canonical local knowledge-quality assessment: it is available for the whole Specification, eligible Sections and active Product Artifacts, but not selected content. Its result names evidence and context limits, and never substitutes for the explicit-Project-State implementation-handoff outcome available only through Prepare Handoff; neither creates knowledge, delivery work or a certification automatically.
 - The MVP adopts Bring Your Own AI: each human user supplies and enables their own provider/model credentials. AI support, provider access and usage are personal to that human and are not made available to other collaborators or the Project simply because one user enables them.
 - A human user may configure multiple named Personal AI Assistants and mark one default. Contributions use the assistant's name and a compact assistant cue; ownership is available through its profile, provider/model details stay in the owner's settings, and every visible reply requires explicit invocation by its owner.
 - `Invite contributor` is reserved for Project-level human collaboration. A Conversation uses **Add recipient**, grouping existing accepted or pending people and the current user's preconfigured **My assistants**. It does not create Project invitations or configure assistants; adding an assistant does not invoke it.
@@ -446,7 +447,7 @@ It should include a suggested implementation sequence to help human and AI consu
 
 Readiness-aware handoff decision:
 
-- `Validate Readiness` is selected by default when the user requests Prepare Handoff, but may be disabled for a direct handoff.
+- Deterministic readiness validation is selected by default when the user requests Prepare Handoff, but may be disabled for a direct handoff.
 - The deterministic readiness check applies only to the selected scope and its direct external dependencies.
 - The first scope defaults to the entire Specification. The user may modify it through the outline; the last selection is remembered per user, Project/Specification and Handoff Profile.
 - Section selection includes active contained content by default; individual artifacts may be deselected.
@@ -1276,7 +1277,7 @@ Confirming a Stale artifact as valid clears only that artifact's Stale status. T
 
 ## Prepare Handoff Context Assembly
 
-Prepare Handoff is distinct from Validate Readiness. Validate Readiness assesses whether product knowledge is ready for implementation; Prepare Handoff composes the best available implementation package for a requested scope and Handoff Profile.
+Prepare Handoff is distinct from Validate Readiness. Validate Readiness assesses local Product Knowledge quality for its selected scope; Prepare Handoff composes the best available implementation package for a requested scope and Handoff Profile.
 
 Prepare Handoff should always generate a caveated package when the scope contains meaningful product definition. It should use the default `Implementation Handoff` profile when the user does not choose another profile.
 

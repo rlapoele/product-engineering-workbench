@@ -849,7 +849,7 @@ Prepare Handoff should generate the best available package for a meaningful sele
 
 The caveat summary should include relevant Stale artifacts, Risks, Assumptions, Open Questions, blockers, missing or external UX/UI design guidance, and direct active dependencies outside the selected scope. Dependencies outside the scope should be labeled as external dependencies.
 
-Prepare Handoff should enable `Validate Readiness` by default, while allowing the user to disable it for a direct handoff. When enabled, readiness validation is deterministic and applies only to the selected handoff scope plus direct external dependencies. It produces `Ready`, `Ready with Caveats` or `Not Ready` from explicit Project State. This outcome does not block preparation of a meaningful caveated package.
+Prepare Handoff should enable deterministic readiness validation by default, while allowing the user to disable it for a direct handoff. When enabled, readiness validation applies only to the selected handoff scope plus direct external dependencies. It produces `Ready`, `Ready with Caveats` or `Not Ready` from explicit Project State. This outcome does not block preparation of a meaningful caveated package.
 
 When the user disables validation, the workbench must not run a hidden reduced readiness assessment, generate a readiness outcome or include `READINESS_REPORT.md`. The package-boundary preview and package README state `Readiness validation was not run`. Included Risks, Assumptions, Open Questions, Direct External Dependencies and other selected Product Knowledge remain in their ordinary package representations; this is not a substitute caveat summary or readiness judgment. When validation ran, the README instead states the evaluated readiness outcome. Scope eligibility and meaningful-product-definition gates remain non-optional.
 
@@ -1009,6 +1009,10 @@ Conversations and Collaboration Requests are separate optional paths. A Conversa
 Each Collaboration Request should include an Assistance Request Type that describes the kind of help being requested.
 
 Initial MVP Assistance Request Types are Draft, Improve, Request Feedback, Review, Find Gaps, Find Inconsistencies, Analyze Impact, Suggest Alternatives, Validate Readiness, Ask Question and Prepare Handoff.
+
+`Validate Readiness` is available for the whole Specification, an eligible Specification Section or an active Product Artifact. It assesses the selected Product Knowledge locally—its available evidence, gaps, risks, dependencies and next actions—for that scope's stated purpose. An eligible Section has non-whitespace section content or an active contained Product Artifact. Selected content is not a valid readiness scope because a text fragment lacks the required structural boundary; the requestor may select its containing Artifact or Section instead. With insufficient context, the contributor may identify missing knowledge or ask questions but cannot make a positive local-readiness claim.
+
+This non-canonical Readiness Result is distinct from deterministic Implementation Handoff Readiness. Only Prepare Handoff evaluates the Handoff Profile's eligible selected scope and direct external dependencies against explicit Project State, producing `Ready`, `Ready with Caveats` or `Not Ready`. Neither assessment certifies implementation, delivery workflow, implementation conformance or a package, and neither automatically changes Product Knowledge.
 
 Request Feedback is open-ended and comment-oriented. Review is structured and criteria-oriented.
 

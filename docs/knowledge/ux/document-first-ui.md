@@ -382,7 +382,7 @@ Initial Assistance Request Types:
 | Find Inconsistencies | Identify conflicts or contradictions with other product knowledge. |
 | Analyze Impact | Explain what this affects, depends on or may influence. |
 | Suggest Alternatives | Propose other viable options or approaches. |
-| Validate Readiness | Determine whether this is ready for the next step or implementation handoff. |
+| Validate Readiness | Assess the available Product Knowledge for this scope's stated purpose, with visible evidence and limits. |
 | Ask Question | Help answer a specific question or think through a topic. |
 | Prepare Handoff | Generate or refine implementation handoff materials. |
 
@@ -434,6 +434,19 @@ First-pass contextual availability matrix:
 | Selected Content | Improve, Request Feedback, Review, Find Gaps, Find Inconsistencies, Ask Question |
 
 The matrix is a first pass. It should be validated through concrete specification exercises before being treated as final.
+
+### Validate Readiness scope-kind validation
+
+`Validate Readiness` assesses local Product Knowledge quality. It is not the deterministic Implementation Handoff Readiness validation performed by `Prepare Handoff`, and it neither certifies implementation nor changes Product Knowledge.
+
+| Scope kind | `Validate Readiness` availability | Meaning of the resulting assessment |
+|---|---|---|
+| Whole Specification | Available. | Whether the Specification's available knowledge is coherent, connected and sufficiently evidenced for its stated product purpose; it may identify cross-section gaps and limits. |
+| Eligible Specification Section | Available when the section has non-whitespace section content or an active contained Product Artifact. | Whether the section's active content forms a coherent, sufficiently supported definition for its template purpose; it makes no claim about other Sections or the whole Specification. |
+| Individual Product Artifact | Available when the Artifact is active. | Whether the Artifact is clear, complete, internally coherent and adequately related or validated for its stated role; it makes no claim about its parent Section, Feature or implementation. |
+| Selected content | Unavailable. | A text fragment lacks the structural boundary for a readiness assessment; use Improve, Review or Find Gaps, or select the containing Artifact or Section. |
+
+A Readiness Result identifies the selected scope and purpose, context used and missing, local strengths and gaps, risks, dependencies and suggested follow-up. With partial context it may assess only what is observable and must name the limits. With insufficient context it may identify missing knowledge or ask questions, but must not make a positive local-readiness claim. It is a non-canonical Contribution Response. It does not certify implementation, delivery workflow, implementation conformance or a handoff, create a task or package, or automatically update Product Knowledge.
 
 ### Prepare Handoff scope-kind validation
 
@@ -678,7 +691,7 @@ Stable artifact IDs should be embedded in `SPECIFICATION.md` and in section Mark
 
 ## Readiness-aware handoff preparation
 
-Prepare Handoff should offer `Validate Readiness` as an enabled-by-default option. When enabled, the workbench runs a deterministic Implementation Handoff Readiness check before preparing the requested package, then prepares the package without requiring the user to resolve the result first. The user may disable validation and prepare the handoff directly.
+Prepare Handoff should enable deterministic readiness validation by default. When enabled, the workbench runs an Implementation Handoff Readiness check before preparing the requested package, then prepares the package without requiring the user to resolve the result first. The user may disable validation and prepare the handoff directly.
 
 The readiness check applies only to the selected handoff scope and its direct external dependencies. It must not silently assess the entire Specification. Direct external dependencies are labeled as such and make the handoff Not Ready only when they explicitly block the selected scope.
 

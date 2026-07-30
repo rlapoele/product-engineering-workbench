@@ -944,6 +944,8 @@ Initial MVP Assistance Request Types:
 
 The available Assistance Request Types should depend on request scope, artifact type, artifact maturity, availability of an eligible recipient path and applicable Project settings. Known capabilities may guide recipient selection after a type is chosen, but do not by themselves determine which types appear or which eligible available candidate the owner may select.
 
+`Validate Readiness` is available for the whole Specification, an eligible Specification Section or an active Product Artifact. An eligible Section has non-whitespace section content or an active contained Product Artifact. It is unavailable for selected content because a text fragment lacks the structural boundary needed for a readiness judgment; the requestor may instead select its containing Artifact or Section. An incomplete active Artifact remains a valid scope, but an insufficient-context result cannot make a positive local-readiness claim.
+
 Request Feedback and Review should remain distinct.
 
 Request Feedback is open-ended and comment-oriented. It asks a contributor to react, identify concerns, ask clarifying questions and suggest improvements.
@@ -1033,7 +1035,7 @@ Initial MVP Response Shapes:
 | Proposed Artifact | Suggested new Product Artifact. | Accept, reject or edit before accepting. |
 | Proposed Relationship | Suggested relationship between Product Artifacts. | Accept, reject or adjust. |
 | Proposed Decision | Suggested decision, option or recommendation. | Accept as Decision, reject or discuss further. |
-| Readiness Result | Assessment of readiness, blockers, warnings and next actions. | Accept, act on blockers, defer or export with warnings. |
+| Readiness Result | Non-canonical local assessment of the selected Product Knowledge's evidence, gaps, risks, dependencies and next actions. | Accept, act on findings, defer or separately request Prepare Handoff. |
 | Summary | Condensed explanation of content, context or results. | Use as reference or insert into project knowledge if accepted. |
 | Handoff Material | Generated or refined implementation handoff content. | Accept into the export package, edit or reject. |
 
@@ -1300,7 +1302,7 @@ The same artifact type may be primary in one request and supporting in another.
 
 For example, Functional Requirements and Acceptance Criteria are primary for an Implementation Handoff Readiness review, while Goals and Target Users may be supporting context. For a Product Strategy review, Goals and Target Users may become primary.
 
-For the MVP, the default lens for Validate Readiness should be Implementation Handoff Readiness.
+For the MVP, the default lens for Validate Readiness should be Implementation Handoff Readiness. It guides a scoped contributor assessment of local Product Knowledge quality, not the deterministic readiness outcome produced only by Prepare Handoff.
 
 The system should assess Context Sufficiency before fulfilling the request.
 
@@ -1330,6 +1332,8 @@ Validated example patterns:
 | Find Gaps on User Story | User Story, parent Feature, existing Acceptance Criteria | related User Needs, Functional Requirements, Non-Functional Requirements, Screen/View or User Flow | Finding, Proposed Artifact, Question |
 | Find Inconsistencies on Feature | Feature, directly related Requirements, Decisions, Acceptance Criteria | Goals, Non-Goals, constraints, related sections, Open Questions, Risks | Finding, Question, Proposed Decision, Suggested Edit |
 | Analyze Impact on Requirement | selected Requirement, directly related artifacts, parent Feature, affected Acceptance Criteria, affected Screen/View or User Flow, dependencies and known constraints | Goals, User Needs, Non-Goals, Decisions, Risks, Open Questions, data/domain model, external integrations, implementation guidance, previous Reviews | Summary, Finding, Proposed Relationship, Proposed Artifact, Proposed Decision, Question |
+| Validate Readiness on Product Artifact | selected active Product Artifact; its type and template expectations; directly related, validating or constraining knowledge; artifact status | containing Section, parent or child artifacts, Goals, Decisions, Risks, Assumptions, Open Questions, previous Reviews and relevant implementation or validation guidance | Readiness Result, Finding, Summary, Proposed Artifact, Proposed Relationship, Question |
+| Validate Readiness on Specification Section | selected eligible Section; its template purpose; active contained artifacts and section content; relationships and coverage among that content | adjacent or related Sections, Goals, Decisions, Risks, Assumptions, Open Questions, previous Reviews and relevant implementation or validation guidance | Readiness Result, Finding, Summary, Proposed Artifact, Proposed Relationship, Question |
 | Validate Readiness on whole Specification | included sections, required artifacts, artifact statuses, Acceptance Criteria, Functional and Non-Functional Requirements, Risks, Open Questions, technical constraints, validation/testing guidance | Goals, Non-Goals, Target Users, Decisions, Assumptions, UX Requirements, data/domain model, implementation guidance, previous Reviews | Readiness Result, Finding, Summary, Proposed Artifact, Question |
 | Prepare Handoff | requested export scope, Handoff Profile, active included sections and artifacts, Functional and Non-Functional Requirements, Acceptance Criteria, UX/UI design guidance, Screen/Views, User Flows, technical constraints, external integrations, implementation and validation guidance, artifact statuses, Decisions, Risks, Assumptions, Open Questions, relationship and dependency information, direct active dependencies outside the scope | Vision, Goals, Non-Goals, Target Users, User Needs, data/domain model, prior readiness results and Reviews, relevant Conversations, known Provenance when required by project policy or Handoff Profile | Handoff Material, Summary, Finding, Question, Readiness Result |
 | Review UI Requirement with Accessibility Lens | selected UI Requirement; related Screen/View and User Flow; interaction and state behavior; linked Functional Requirements and Acceptance Criteria; applicable UX/UI design guidance; explicit accessibility expectations; declared accessibility target when present | related User Story and User Need; external design references; Decisions, Risks, Assumptions and Open Questions; related UI Requirements; technical constraints; prior UX or accessibility Reviews | Finding, Suggested Edit, Question, Proposed Artifact, Summary |

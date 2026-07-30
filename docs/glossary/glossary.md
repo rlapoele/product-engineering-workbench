@@ -738,7 +738,9 @@ The degree to which a Product Artifact, feature, project area or export is matur
 
 Readiness may depend on required Product Artifacts, required relationships, resolved open questions, identified risks, testable acceptance criteria, completed reviews and stale knowledge being updated.
 
-For deterministic Implementation Handoff Readiness, a selected scope is `Ready`, `Ready with Caveats` or `Not Ready` according to explicit Project State. This outcome is distinct from the `Prepared` or `Prepared with Caveats` result of a handoff package.
+`Validate Readiness` is a scoped Assistance Request Type that returns a non-canonical contributor assessment of the selected Product Knowledge. It may assess an active Product Artifact, an eligible Specification Section or the whole Specification, and must identify its local purpose, evidence, context limits, gaps, risks, dependencies and suggested follow-up. It does not certify implementation, delivery workflow or a handoff, and cannot change Product Knowledge automatically.
+
+For deterministic Implementation Handoff Readiness, a selected handoff scope is `Ready`, `Ready with Caveats` or `Not Ready` according to explicit Project State. It runs only through `Prepare Handoff` for the Handoff Profile's eligible scope and direct external dependencies. This outcome is distinct from both a contributor's Readiness Result and the `Prepared` or `Prepared with Caveats` result of a handoff package.
 
 ---
 
