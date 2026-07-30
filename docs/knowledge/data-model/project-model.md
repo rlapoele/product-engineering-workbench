@@ -1427,6 +1427,10 @@ Reviewing an eligible `External Integrations` Section with the Implementation Re
 
 The result is limited to non-canonical Findings and Summary about the available specification coverage. It does not use a Readiness Result, calculate `Ready`, `Ready with Caveats` or `Not Ready`, run a Readiness Fact Check Set or Handoff Profile meaningful-definition checks, create a report or package, or determine whether a dependency blocks a handoff. Those deterministic rules remain exclusive to `Prepare Handoff`.
 
+Reviewing the whole Specification with the Testability Lens assesses the available cross-section coverage of documented observable behavior and verification evidence. Primary context includes active behavior-defining Product Knowledge, linked Acceptance Criteria and their relationships, User Stories, Functional and Non-Functional Requirements, UI flows, data/domain rules, integrations, technical constraints, Risks and Open Questions. Goals, User Needs, Non-Goals, Decisions, Assumptions, Resource References and prior Reviews may be supporting context.
+
+The Review may identify an explicitly documented behavior that lacks observable acceptance evidence or an explicit validation relationship—for example, a known pending-cancellation state whose available Acceptance Criteria verify only the success state. It does not invent generic edge cases unrelated to known Product Knowledge. Its conclusion is limited to whether whole-Specification testability coverage appears adequate, whether Findings or risks were identified, or whether context is insufficient. It does not execute tests, create a test result, certify the implemented product or produce a Readiness Result, report or handoff outcome.
+
 ---
 
 # 22. Context References

@@ -739,6 +739,8 @@ An eligible Specification Section with implementation-bearing active content is 
 
 Selected text inside an interaction-oriented Artifact inherits Accessibility compatibility from that host. Its Review assesses the fragment and immediately relevant host context only; it cannot conclude that the containing Artifact, Section or implemented interface conforms to accessibility requirements.
 
+A whole-Specification Testability Review assesses cross-section coverage of documented observable behavior and verification evidence. It may identify known behavior lacking Acceptance Criteria or traceability, but does not execute tests, create test results or certify the implemented product.
+
 The requestor must see and confirm the lens before submitting a Review. A contextual entry may preselect a compatible default, but never applies it invisibly. Whole-Specification and Specification Section Reviews require the requestor to choose a lens deliberately.
 
 ---

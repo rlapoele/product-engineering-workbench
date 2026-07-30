@@ -468,6 +468,8 @@ For an active Artifact that defines integration behavior, Security is a compatib
 
 For an eligible `External Integrations` Section with implementation-bearing active content, Implementation Readiness is a compatible lens. The composer includes the Section purpose and active content, related requirements and acceptance evidence, known dependency, contract and ownership material, technical constraints, Decisions, Risks, Assumptions and Open Questions. An unresolved dependency becomes an explicit context limit or Finding; it does not make the Section ineligible, calculate a readiness outcome, create a report or package, or apply the deterministic handoff-dependency rules.
 
+At whole-Specification scope, Testability assesses available cross-section evidence for documented observable behavior. The composer includes active behavior-defining knowledge, Acceptance Criteria and explicit validation relationships, requirements, flows, data/domain rules, integrations, constraints, Risks and Open Questions. A known behavior without acceptance evidence becomes a Finding; the Review does not invent generic edge cases, execute tests, create test results, certify implementation or produce a readiness outcome.
+
 Review does not automatically use the Readiness Fact Check Set, which remains specific to `Validate Readiness`. It neither approves Product Knowledge nor certifies implementation, conformance, security, accessibility or readiness; it does not create Product Knowledge, delivery workflow or automatic changes.
 
 ### Validate Readiness scope-kind validation

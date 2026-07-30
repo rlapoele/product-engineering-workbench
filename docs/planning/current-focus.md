@@ -157,6 +157,7 @@ Recent clarification established the first target user as an AI-assisted develop
 - Security Lens compatibility is validated for an active Product Artifact that defines integration behavior: the system boundary makes the scope compatible, while missing contract, authentication, data-handling or verification detail becomes explicit context limits or Findings rather than structural ineligibility, certification or a readiness outcome.
 - Implementation Readiness Lens compatibility is validated for an eligible `External Integrations` Section with incomplete dependency knowledge: implementation-bearing active content makes the Section compatible, while missing webhook contract or account ownership remains a context limit or Finding and never becomes a deterministic handoff result, report or package action.
 - Accessibility Lens compatibility is validated for selected text inside an interaction-oriented UI Requirement: it inherits the compatible host's immediate context but yields only fragment-level accessibility coverage Findings, never a conclusion about the host, implementation or accessibility conformance.
+- Whole-Specification Testability Review is validated as a cross-section specification-coverage assessment: it identifies only documented behavior lacking observable acceptance evidence or validation links, and never executes tests, creates test results, certifies implementation or produces a readiness outcome.
 
 ---
 
