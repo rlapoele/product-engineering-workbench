@@ -448,6 +448,10 @@ The matrix is a first pass. It should be validated through concrete specificatio
 
 A Readiness Result identifies the selected scope and purpose, context used and missing, local strengths and gaps, risks, dependencies and suggested follow-up. With partial context it may assess only what is observable and must name the limits. With insufficient context it may identify missing knowledge or ask questions, but must not make a positive local-readiness claim. It is a non-canonical Contribution Response. It does not certify implementation, delivery workflow, implementation conformance or a handoff, create a task or package, or automatically update Product Knowledge.
 
+When the owner selects `Validate Readiness` and an eligible scope, the composer shows a derived, non-persistent **Readiness fact checks** preview. It applies only explicit Project State rules: scope structure, template-declared content expectations, active or Stale status, explicit relationships and validation coverage, known blockers and direct dependencies. Each check gives its rule and affected knowledge a `Satisfied`, `Attention needed`, `Not applicable` or `Cannot determine` result. The preview is evidence for the eventual recipient; it is not a readiness verdict, score, recipient-ranking signal or submission block.
+
+Immediately before **Submit request** or **Submit and ask**, the workbench reruns the checks and records the result in that Request Cycle's immutable context, visible to its selected human or AI recipient alongside the Request Brief and Context Explanation. It does not silently refresh after submission. An explicit reopen and resubmission makes a new current-cycle snapshot while the earlier cycle's result stays immutable. The check set does not create Product Knowledge, tasks, delivery workflow or a package, and it does not run the Handoff Profile's meaningful-definition or `Ready` / `Ready with Caveats` / `Not Ready` validation.
+
 ### Prepare Handoff scope-kind validation
 
 `Prepare Handoff` is governed by handoff-root eligibility rather than by the broad artifact and selected-content entries in the matrix. Its first scope-kind validation is:

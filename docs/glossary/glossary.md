@@ -744,6 +744,16 @@ For deterministic Implementation Handoff Readiness, a selected handoff scope is 
 
 ---
 
+## Readiness Fact Check Set
+
+A Readiness Fact Check Set is the automatically derived set of explicit, deterministic Project State facts supplied with a `Validate Readiness` Collaboration Request. It is shared evidence for the request recipient, whether human or AI, rather than a Contribution Response or readiness verdict.
+
+It may check the selected scope's structural eligibility, template-declared content expectations, active or Stale status, explicit relationships and validation coverage, known blockers and direct dependencies. Each check is `Satisfied`, `Attention needed`, `Not applicable` or `Cannot determine`, and identifies its applicable rule and affected Product Knowledge.
+
+The requestor can inspect a non-persistent preview while composing the request. The workbench reruns the set immediately before explicit submission and retains that result as immutable recorded context for the Request Cycle. It does not silently refresh after submission; an explicit Reopen and resubmission creates a new cycle snapshot while preserving earlier evidence. The set does not score, rank, route, block a request, create work, update Product Knowledge or produce an Implementation Handoff Readiness outcome.
+
+---
+
 ## Readiness Report
 
 A Readiness Report is an optional standalone `READINESS_REPORT.md` file in an Implementation Handoff Package.

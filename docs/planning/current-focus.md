@@ -151,6 +151,7 @@ Recent clarification established the first target user as an AI-assisted develop
 - Recipient-selection scenarios are now validated: no recipient path disables initial request creation; an already-started Draft survives later unavailability but cannot submit until corrected; and a reopened Declined request may select an eligible available human or the owner's Personal AI Assistant while preserving the former recipient's frozen cycle.
 - The first Assistance Request Type matrix boundary is validated: `Prepare Handoff` is available only from whole-Specification and eligible Section roots, never an individual Product Artifact or selected-content scope; an eligible but insufficient section retains its scope and exposes deterministic missing-definition checks without preparing a package.
 - The `Validate Readiness` matrix boundary is validated: whole-Specification, eligible Section and active Product Artifact scopes produce non-canonical local knowledge-quality assessments with explicit context limits; selected content is unavailable; and no result substitutes for deterministic Implementation Handoff Readiness inside `Prepare Handoff`.
+- `Validate Readiness` now derives explicit deterministic fact checks for its recipient: a transient composer preview becomes an immutable per-cycle context snapshot on submission, remains separate from assessment and handoff outcomes, and does not silently refresh, score, route, block work or change Product Knowledge.
 
 ---
 
