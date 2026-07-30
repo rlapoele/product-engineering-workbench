@@ -464,6 +464,8 @@ At an Artifact contextual entry, the composer may visibly preselect a catalog-de
 
 For an active Artifact that defines integration behavior, Security is a compatible lens because the Artifact establishes a system boundary. The composer identifies that boundary and includes known related requirements, acceptance evidence, constraints, Decisions, Risks and available contract references in the context preview. Missing external contract, authentication, data-handling or verification detail is communicated as a context limit or potential Finding; it neither hides the Security Lens nor turns the Review into a security certification, readiness check or recipient-routing rule.
 
+For an eligible `External Integrations` Section with implementation-bearing active content, Implementation Readiness is a compatible lens. The composer includes the Section purpose and active content, related requirements and acceptance evidence, known dependency, contract and ownership material, technical constraints, Decisions, Risks, Assumptions and Open Questions. An unresolved dependency becomes an explicit context limit or Finding; it does not make the Section ineligible, calculate a readiness outcome, create a report or package, or apply the deterministic handoff-dependency rules.
+
 Review does not automatically use the Readiness Fact Check Set, which remains specific to `Validate Readiness`. It neither approves Product Knowledge nor certifies implementation, conformance, security, accessibility or readiness; it does not create Product Knowledge, delivery workflow or automatic changes.
 
 ### Validate Readiness scope-kind validation

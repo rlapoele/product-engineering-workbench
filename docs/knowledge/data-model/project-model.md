@@ -1419,6 +1419,10 @@ Reviewing an active Product Artifact that defines integration behavior with the 
 
 The Review may identify unclear trust boundaries, authentication or authorization assumptions, sensitive-data handling, webhook or callback verification, failure or replay behavior, and missing security verification evidence only when the available Product Knowledge makes them relevant. Missing contract, constraint or verification knowledge is a stated partial- or insufficient-context limit or a Finding; it does not make the Artifact structurally incompatible, create a security certification, invoke the Readiness Fact Check Set or produce a Readiness Result or handoff outcome.
 
+Reviewing an eligible `External Integrations` Section with the Implementation Readiness Lens assesses whether the active Section content and relevant connections define implementation-relevant behavior, constraints, dependencies and gaps for that template purpose. The Section is structurally compatible when it has implementation-bearing active content; unresolved webhook contract or account-ownership dependency knowledge may make the assessment partial or become a Finding. Primary context includes the Section's template purpose and active content, related Functional Requirements and Acceptance Criteria, known dependency and contract material, technical constraints, Decisions, Risks, Assumptions and Open Questions. Adjacent or related Sections, data/domain and user-facing behavior, Resource References and prior Reviews may be supporting context.
+
+The result is limited to non-canonical Findings and Summary about the available specification coverage. It does not use a Readiness Result, calculate `Ready`, `Ready with Caveats` or `Not Ready`, run a Readiness Fact Check Set or Handoff Profile meaningful-definition checks, create a report or package, or determine whether a dependency blocks a handoff. Those deterministic rules remain exclusive to `Prepare Handoff`.
+
 ---
 
 # 22. Context References

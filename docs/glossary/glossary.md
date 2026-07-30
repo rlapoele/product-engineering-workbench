@@ -735,6 +735,8 @@ Lens compatibility is structural rather than a sufficiency, recipient-fit or rou
 
 For example, an active Product Artifact that defines integration behavior is Security-compatible because it establishes a system boundary. Missing external contract, authentication, sensitive-data handling or verification evidence may make that Review partial or insufficient, but does not change its lens compatibility.
 
+An eligible Specification Section with implementation-bearing active content is compatible with the Implementation Readiness Lens. Incomplete dependency, contract or ownership knowledge may limit the Review or become a Finding, but does not turn it into deterministic Implementation Handoff Readiness.
+
 The requestor must see and confirm the lens before submitting a Review. A contextual entry may preselect a compatible default, but never applies it invisibly. Whole-Specification and Specification Section Reviews require the requestor to choose a lens deliberately.
 
 ---
