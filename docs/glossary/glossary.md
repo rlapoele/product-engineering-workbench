@@ -756,7 +756,7 @@ A Request Brief is the requestor-authored framing of the specific help, question
 
 The Assistance Request Type identifies the kind of help sought; the Request Brief identifies what the selected recipient should address within the request's scope. It is required for a submitted request.
 
-After a request has first been submitted, its recipient, Assistance Request Type, scope and recorded context remain read-only. If the requestor reopens a Responded request, only its Request Brief may be revised before resubmission. If the requestor reopens a Declined request, they may also choose a different eligible human recipient. A Cancelled request cannot be reopened; renewed work requires a new request.
+After a request has first been submitted, its recipient, Assistance Request Type, scope and recorded context remain read-only. If the requestor reopens a Responded request, only its Request Brief may be revised before resubmission. If the requestor reopens a Declined request, they may also choose an eligible, available human recipient or their own eligible, available Personal AI Assistant. Reopen is unavailable when the next Request Cycle has no valid recipient path: a Responded request requires its fixed recipient to be eligible and available, while a Declined request requires at least one eligible and available human or personal-AI recipient. A Cancelled request cannot be reopened; renewed work requires a new request.
 
 ---
 
@@ -764,7 +764,7 @@ After a request has first been submitted, its recipient, Assistance Request Type
 
 A Request Cycle is one bounded iteration of a Collaboration Request, beginning when the request is first created or reopened and ending when that iteration is Responded, Declined or Cancelled.
 
-Reopen begins a new Request Cycle while retaining earlier lifecycle and Contribution Response evidence. The selected human recipient keeps a frozen, read-only view of that earlier evidence until resubmission, but cannot see the new Draft Brief or draft-context changes. On a reopened Declined request, a replacement recipient sees only the new current cycle; the original recipient retains their frozen Declined cycle in **Requests for you**. Reassignment, resubmission and later activity in the new cycle neither appear in nor reorder that original recipient's list record, whose Last updated value remains their decline. A response from an earlier cycle is not a response to the reopened cycle and is labelled as a Previous response in the request list until the current cycle receives a response. A Cancelled request does not begin another Request Cycle.
+Reopen begins a new Request Cycle while retaining earlier lifecycle and Contribution Response evidence. The selected human recipient keeps a frozen, read-only view of that earlier evidence until resubmission, but cannot see the new Draft Brief or draft-context changes. On a reopened Declined request, a replacement human recipient or Personal AI Assistant sees only the new current cycle; the original recipient retains their frozen Declined cycle in **Requests for you**. Reassignment, resubmission and later activity in the new cycle neither appear in nor reorder that original recipient's list record, whose Last updated value remains their decline. A response from an earlier cycle is not a response to the reopened cycle and is labelled as a Previous response in the request list until the current cycle receives a response. A Cancelled request does not begin another Request Cycle.
 
 ---
 

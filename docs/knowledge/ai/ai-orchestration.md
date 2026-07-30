@@ -91,6 +91,8 @@ The same capability model should apply to both human contributors and AI contrib
 
 For the MVP, AI Contributor eligibility and availability are personal rather than invitation-gated. An AI recipient must be the requestor's own assistant and applicable Project settings must permit the requested assistance; it is selectable only when its owner's BYO-AI configuration is enabled and usable. Another collaborator's credentials and configured AI are not available to them. A configured but unusable assistant may be identified only as `AI assistance unavailable`; provider, model, credential, credit and detailed failure information remain private. An AI Contributor does not need a human-collaborator invitation.
 
+An initial Collaboration Request cannot begin unless at least one eligible and available recipient exists. If an AI assistant becomes unavailable after a private Draft has begun but before explicit submission, the Draft remains private and submission is disabled until availability returns or the owner selects another eligible available recipient. After a human request is Declined, its reopened Draft may select the owner's eligible, available Personal AI Assistant; the assistant receives only that new Request Cycle and is still invoked only by the owner's explicit `Submit and ask` action.
+
 AI Contributor availability should still respect project settings, permissions and enabled capabilities.
 
 ---
