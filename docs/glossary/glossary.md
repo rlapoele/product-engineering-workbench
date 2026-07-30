@@ -733,6 +733,8 @@ The initial MVP catalog is Requirements Quality, UX Quality, Accessibility, Secu
 
 Lens compatibility is structural rather than a sufficiency, recipient-fit or routing judgment. A catalog entry declares the artifact roles and section content to which it applies; a compatible scope may still have partial or insufficient context. Requirements Quality applies to requirement- or acceptance-oriented content; UX Quality to experience-oriented content; Accessibility to interaction-oriented content; Security to boundary- or constraint-oriented content; Testability to behavior- or verification-oriented content; and Implementation Readiness to implementation-bearing content. Each lens is available for whole-Specification Review. At selected-content scope, compatibility is inherited from the containing Artifact or Section, while the review remains limited to the fragment and immediately relevant host context.
 
+For example, an active Product Artifact that defines integration behavior is Security-compatible because it establishes a system boundary. Missing external contract, authentication, sensitive-data handling or verification evidence may make that Review partial or insufficient, but does not change its lens compatibility.
+
 The requestor must see and confirm the lens before submitting a Review. A contextual entry may preselect a compatible default, but never applies it invisibly. Whole-Specification and Specification Section Reviews require the requestor to choose a lens deliberately.
 
 ---

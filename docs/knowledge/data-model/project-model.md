@@ -1415,6 +1415,10 @@ The review conclusion should be one of:
 
 These conclusions describe specification readiness, not the accessibility conformance of an implemented application. Conformance evaluation requires evidence from the actual interface and its complete applicable scope.
 
+Reviewing an active Product Artifact that defines integration behavior with the Security Lens is a Security specification-coverage assessment. Its integration behavior and external-system purpose establish the relevant system boundary, so the scope is structurally compatible even when the available documentation is incomplete. Primary context includes the selected Artifact, stated boundary, directly related Functional Requirements and Acceptance Criteria, explicit authentication and data-handling behavior, technical constraints, Decisions, Risks and any available contract Resource References. User-facing behavior, data/domain rules, dependencies, Assumptions, Open Questions and prior Reviews may be supporting context when relevant.
+
+The Review may identify unclear trust boundaries, authentication or authorization assumptions, sensitive-data handling, webhook or callback verification, failure or replay behavior, and missing security verification evidence only when the available Product Knowledge makes them relevant. Missing contract, constraint or verification knowledge is a stated partial- or insufficient-context limit or a Finding; it does not make the Artifact structurally incompatible, create a security certification, invoke the Readiness Fact Check Set or produce a Readiness Result or handoff outcome.
+
 ---
 
 # 22. Context References
