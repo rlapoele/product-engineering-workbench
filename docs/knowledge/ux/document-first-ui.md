@@ -466,6 +466,8 @@ For selected text within an interaction-oriented UI Requirement, Accessibility i
 
 For an active Artifact that defines integration behavior, Security is a compatible lens because the Artifact establishes a system boundary. The composer identifies that boundary and includes known related requirements, acceptance evidence, constraints, Decisions, Risks and available contract references in the context preview. Missing external contract, authentication, data-handling or verification detail is communicated as a context limit or potential Finding; it neither hides the Security Lens nor turns the Review into a security certification, readiness check or recipient-routing rule.
 
+For an active User Flow that defines a user journey, states or interaction guidance, UX Quality is a compatible lens because the Artifact is experience-oriented. The composer includes the stated review focus, related User Need or User Story, linked Screen/Views, UI Requirements, Functional Requirements and Acceptance Criteria, and applicable UX/UI design guidance. It may identify unclear journey steps, transitions, feedback, recovery or continuity only where documented Product Knowledge establishes them as relevant. Missing user, interaction, state or acceptance knowledge is communicated as a context limit or potential Finding; it does not hide the UX Quality Lens or make a usability, accessibility, implementation or readiness claim.
+
 For an eligible `External Integrations` Section with implementation-bearing active content, Implementation Readiness is a compatible lens. The composer includes the Section purpose and active content, related requirements and acceptance evidence, known dependency, contract and ownership material, technical constraints, Decisions, Risks, Assumptions and Open Questions. An unresolved dependency becomes an explicit context limit or Finding; it does not make the Section ineligible, calculate a readiness outcome, create a report or package, or apply the deterministic handoff-dependency rules.
 
 At whole-Specification scope, Testability assesses available cross-section evidence for documented observable behavior. The composer includes active behavior-defining knowledge, Acceptance Criteria and explicit validation relationships, requirements, flows, data/domain rules, integrations, constraints, Risks and Open Questions. A known behavior without acceptance evidence becomes a Finding; the Review does not invent generic edge cases, execute tests, create test results, certify implementation or produce a readiness outcome.
@@ -511,6 +513,14 @@ The review should include the UI Requirement, related Screen/View and User Flow,
 The default lens is standards-informed but does not claim conformance. A declared target such as WCAG 2.2 AA may guide the review and its findings. Without one, the Context Explanation should say that the review applied general accessibility principles and cannot certify conformance.
 
 The review should conclude that specification coverage appears sufficient, that gaps or risks were found, or that accessibility cannot yet be assessed from the available specification. It should return Findings, Suggested Edits, Questions, Proposed Artifacts or a Summary; it should not silently alter canonical product knowledge.
+
+## UX Quality Review
+
+A Review on an active User Flow may use the UX Quality Lens to assess whether the available specification describes a coherent user journey, states and interaction guidance for the stated experience.
+
+The review should include the selected User Flow, any stated review focus, related User Need or User Story, linked Screen/Views and UI Requirements, related Functional Requirements and Acceptance Criteria, and applicable UX/UI design guidance. Related Features or flows, Non-Functional Requirements, technical constraints, Decisions, Risks, Assumptions, Open Questions, Resource References and prior Reviews may provide supporting context.
+
+The review may identify unclear journey steps, state transitions, feedback, recovery or continuity only where documented Product Knowledge makes them relevant. Missing user, interaction, state or acceptance knowledge should remain an explicit context limit or Finding. The Review returns non-canonical Findings, Questions, Suggested Edits, Proposals or Summary; it does not certify usability, accessibility, implementation or readiness, produce a Readiness Result or change Product Knowledge automatically.
 
 ## Requirements Quality Review
 

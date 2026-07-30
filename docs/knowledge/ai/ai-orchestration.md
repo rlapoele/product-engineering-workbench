@@ -184,6 +184,8 @@ The initial Review Lens catalog is Requirements Quality, UX Quality, Accessibili
 
 The catalog declares structural compatibility, not context sufficiency, capability fit or routing. Requirements Quality is compatible with requirement- or acceptance-oriented artifacts and sections containing that content; UX Quality with experience-oriented content; Accessibility with interaction-oriented content; Security with boundary- or constraint-oriented content; Testability with behavior- or verification-oriented content; and Implementation Readiness with implementation-bearing content. Every initial lens is available for a whole-Specification Review. Selected content inherits compatibility from its containing Artifact or Section, but reviews only the fragment and immediately relevant host context. Missing related knowledge may make a compatible Review partial or insufficient; it does not silently switch lenses, select a recipient, route the request or create a readiness verdict.
 
+For example, an active User Flow is UX Quality-compatible when it defines a user journey, states or interaction guidance. Its Review may assess available flow clarity, transition, feedback, recovery and continuity coverage using related User Needs, User Stories, Screens/Views, UI Requirements, Functional Requirements, Acceptance Criteria and applicable design guidance. Missing knowledge is a context limit or Finding; the result never certifies usability, accessibility, implementation or readiness.
+
 Initial MVP Response Shapes:
 
 | Response Shape | Expected Use |

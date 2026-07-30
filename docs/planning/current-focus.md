@@ -2,7 +2,7 @@
 
 **Status:** Active
 
-**Last Updated:** 2026-07-30
+**Last Updated:** 2026-07-31
 
 ---
 
@@ -158,6 +158,8 @@ Recent clarification established the first target user as an AI-assisted develop
 - Implementation Readiness Lens compatibility is validated for an eligible `External Integrations` Section with incomplete dependency knowledge: implementation-bearing active content makes the Section compatible, while missing webhook contract or account ownership remains a context limit or Finding and never becomes a deterministic handoff result, report or package action.
 - Accessibility Lens compatibility is validated for selected text inside an interaction-oriented UI Requirement: it inherits the compatible host's immediate context but yields only fragment-level accessibility coverage Findings, never a conclusion about the host, implementation or accessibility conformance.
 - Whole-Specification Testability Review is validated as a cross-section specification-coverage assessment: it identifies only documented behavior lacking observable acceptance evidence or validation links, and never executes tests, creates test results, certifies implementation or produces a readiness outcome.
+- UX Quality Lens compatibility is validated for an active User Flow: its experience-oriented journey, states and interaction guidance support grounded flow-clarity, transition, feedback, recovery and continuity Findings, while missing knowledge remains a context limit and the Review never certifies usability, accessibility, implementation or readiness.
+- The initial Review Lens catalog now has focused validated coverage for all six lenses across active Artifact, eligible Section, selected-content and whole-Specification exercises.
 
 ---
 
@@ -173,7 +175,6 @@ Recent clarification established the first target user as an AI-assisted develop
 - The Project Collaboration Requests list defaults have been clarified: no lifecycle or response-handling filter; **Last updated — newest first** based on meaningful events visible to the viewer; a compact filter and sort set; compact request-oriented rows; parent-contained response handling; and an explicit Previous response label after Reopen.
 - Owner, collaborator, AI On Hold and reopened-request scenarios validate the Collaboration Requests list: the collaborator keeps a frozen read-only prior view after Reopen, viewer-visible events determine list ordering, and restored AI eligibility does not reorder an On Hold request before explicit Resume.
 - The complete role-aware list journey is validated: search, filters, sorting, 25-item pagination and retained response history preserve role visibility and current-cycle boundaries.
-- Validate the initial Review Lens catalog through concrete Artifact, Section, whole-Specification and selected-content exercises.
 - Validate the initial Response Shape and Finding Type model through concrete review and feedback examples.
 - Validate additional Context Relevance and Context Sufficiency rules through concrete assistance request examples.
 - Use the clarified AI assistance governance stance when refining provenance, contribution review and export visibility.

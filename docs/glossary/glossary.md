@@ -741,6 +741,8 @@ Selected text inside an interaction-oriented Artifact inherits Accessibility com
 
 A whole-Specification Testability Review assesses cross-section coverage of documented observable behavior and verification evidence. It may identify known behavior lacking Acceptance Criteria or traceability, but does not execute tests, create test results or certify the implemented product.
 
+An active User Flow is UX Quality-compatible when it defines a user journey, its states or its interaction guidance. The Review may assess the documented flow's clarity, state transitions, feedback, recovery and continuity from available Product Knowledge, but it does not certify usability, accessibility, implementation or readiness.
+
 The requestor must see and confirm the lens before submitting a Review. A contextual entry may preselect a compatible default, but never applies it invisibly. Whole-Specification and Specification Section Reviews require the requestor to choose a lens deliberately.
 
 ---
