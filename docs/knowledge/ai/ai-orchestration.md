@@ -45,7 +45,7 @@ AI Contributors may:
 - summarize discussions;
 - help prepare export or handoff materials.
 
-AI-generated contributions should usually begin as drafts, suggestions or reviews until accepted by a human project owner or authorized contributor.
+AI-generated contributions should begin as non-canonical drafts, suggestions or reviews until the Project Owner explicitly reviews and saves any resulting Product Knowledge change.
 
 AI assistance inside the workbench should be visible and governable.
 
@@ -113,7 +113,7 @@ Possible scopes include:
 
 The requested scope should determine which context is assembled for the AI Contributor.
 
-AI assistance may feel more immediate than human collaboration, but it should remain scoped and request-driven. AI Contributors should not silently change canonical product knowledge without the project owner or authorized contributor accepting or acting on the contribution.
+AI assistance may feel more immediate than human collaboration, but it should remain scoped and request-driven. AI Contributors should not silently change canonical Product Knowledge; in the MVP, only the Project Owner may explicitly save a resulting change.
 
 ---
 
@@ -206,7 +206,7 @@ Findings may use Finding Types such as Gap, Inconsistency, Ambiguity, Risk, Bloc
 
 One bounded Contribution Response may contain multiple discrete response items. Each item has one primary Response Shape; each Finding item has exactly one Finding Type. A Summary may synthesize the items but does not replace them. A Finding and a separately shaped Suggested Edit or Proposal may address the same concern, but neither changes Product Knowledge automatically. Finding Type is not severity, priority, workflow state, task, recipient assignment or a deterministic readiness outcome.
 
-The requestor sees an optional Summary as a compact overview, then the response items in contributor order with their Response Shape labels, Finding Type where applicable and visible links between related concerns and remedies. An authorized requestor may dismiss one item as not pursued, retaining it visibly with an optional rationale, or open an ordinary private creation or editing draft from an item. Dismissal is not rejection or deletion, and opening a draft does not apply it; only an authorized user's ordinary save can create Product Knowledge and a Revision. At that save, the human may explicitly add one optional whole-response Response Source Link to the resulting Revision. This link means only that the response informed the saved change; it does not record item-level adoption, acceptance, agreement or authorship. The requestor may explicitly mark the whole response Acted On after any mix of consideration, dismissal or separate crystallization; this does not require each item to have a disposition or a linked Revision.
+The Project Owner as requestor sees an optional Summary as a compact overview, then the response items in contributor order with their Response Shape labels, Finding Type where applicable and visible links between related concerns and remedies. The owner may dismiss one item as not pursued, retaining it visibly with an optional rationale, or open an ordinary private creation or editing draft from an item. Dismissal is not rejection or deletion, and opening a draft does not apply it; only the owner's ordinary explicit save can create Product Knowledge and a Revision. At that save, the owner may explicitly add one optional whole-response Response Source Link to the resulting Revision. This link means only that the response informed the saved change; it does not record item-level adoption, acceptance, agreement or authorship. The requestor may explicitly mark the whole response Acted On after any mix of consideration, dismissal or separate crystallization; this does not require each item to have a disposition or a linked Revision.
 
 For example, a Requirements Quality Review may return an `Ambiguity` Finding for unclear wording, a `Gap` Finding for missing known acceptance coverage, a Question for unresolved intent, a Suggested Edit for safe clarity improvement, a Proposed Relationship for missing traceability and a Summary. A Security Review may distinguish a grounded `Risk` from an external `Dependency`, while a Request Feedback response remains comment-oriented and uses Comments, Questions, Suggested Edits, Proposals and Summary rather than Findings or Finding Types.
 

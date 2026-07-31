@@ -30,7 +30,7 @@ An Answer may explain its basis, assumptions, limits and unresolved dependencies
 
 An Alternative Proposal is a non-canonical response to a Suggest Alternatives request that describes a viable way to meet or reassess an intended product outcome.
 
-An Alternative Proposal may be a feature variant, an outcome-preserving substitute, a scope or timing change such as deferring the feature, or a reframing that questions whether the feature addresses the right User Need or Goal. It does not change canonical Product Knowledge unless an authorized contributor accepts or acts on it.
+An Alternative Proposal may be a feature variant, an outcome-preserving substitute, a scope or timing change such as deferring the feature, or a reframing that questions whether the feature addresses the right User Need or Goal. It does not change canonical Product Knowledge unless the Project Owner separately creates or revises that knowledge through the ordinary explicit save flow.
 
 ## AI Contributor
 
@@ -311,9 +311,9 @@ A Contribution Response may contain answers, comments, review results, suggested
 
 One bounded Contribution Response may contain multiple discrete Contribution Response Items. Each item has one primary Response Shape. A Summary may synthesize the items but does not replace them; a Finding may be accompanied by a separate Suggested Edit or Proposal that addresses it. These item relationships are explanatory only and do not apply a change.
 
-Contribution Responses do not directly alter canonical Product Knowledge. A project owner or authorized requestor may manually act on a response by updating or creating product knowledge through a separate action, which records the resulting Revision when applicable.
+Contribution Responses do not directly alter canonical Product Knowledge. In the MVP, only the Project Owner may manually consider a response, create or revise Product Knowledge in a separate private draft, and explicitly save the resulting canonical record or Revision. A requestor or recipient role does not add that authority.
 
-When an authorized human saves such a Revision, they may explicitly create one optional Response Source Link to the whole Contribution Response that informed it. This is a narrow navigation and provenance record, not a separate acceptance or authorship workflow.
+When the Project Owner saves such a Revision, they may explicitly create one optional Response Source Link to the whole Contribution Response that informed it. This is a narrow navigation and provenance record, not a separate acceptance or authorship workflow.
 
 ## Contribution Response Item
 
@@ -321,7 +321,7 @@ A Contribution Response Item is one discrete part of a submitted Contribution Re
 
 An item has one primary Response Shape. Each Finding Item has exactly one Finding Type to classify its issue or observation. A separate item may propose a response to that Finding, but neither item alters canonical Product Knowledge automatically.
 
-An authorized requestor may explicitly dismiss an individual item as not being pursued. A dismissed item remains visible as retained response evidence, with an optional rationale. Dismissal does not delete or reject the Contribution Response, change canonical Product Knowledge or mark the whole response Acted On. An authorized requestor may instead open an ordinary private creation or editing draft from an item and decide whether to save it through the usual reviewed flow.
+The Project Owner as requestor may explicitly dismiss an individual item as not being pursued. A dismissed item remains visible as retained response evidence, with an optional rationale. Dismissal does not delete or reject the Contribution Response, change canonical Product Knowledge or mark the whole response Acted On. The owner may instead open an ordinary private creation or editing draft from an item and decide whether to save it through the usual reviewed flow.
 
 ## Contribution Response Status
 
@@ -678,13 +678,13 @@ Product knowledge is composed of interconnected Product Artifacts.
 
 A Project Collaborator is a person who has been invited to participate in a Project and has accepted that invitation. This is a durable Project relationship, independent of whether the collaborator currently has a Collaboration Request awaiting a reply.
 
-A Project Collaborator may be selected as the human recipient of a Collaboration Request and may participate in eligible Conversations. A Project Collaborator is not the Project Owner of that same Project.
+A Project Collaborator may be selected as the human recipient of a Collaboration Request and may participate in eligible Conversations. A collaborator may prepare and submit non-canonical contributions, but cannot create, edit, save or record a Response Source Link for canonical Product Knowledge in the MVP. A Project Collaborator is not the Project Owner of that same Project.
 
 ---
 
 ## Project Owner
 
-A Project Owner is the user who created a Project. The owner controls the Project's Product Knowledge and decides whether requested or received contributions should be acted upon.
+A Project Owner is the user who created a Project. The owner controls the Project's Product Knowledge and decides whether requested or received contributions should be acted upon. In the MVP, the owner alone may create or edit a private Product Knowledge draft, explicitly save a new canonical record or Revision, and optionally record a Response Source Link while saving a Revision. A requestor or recipient relationship never grants these powers; collaborator write delegation is deferred.
 
 Project Owner and Project Collaborator are mutually exclusive roles within one Project. A Project Owner cannot select themself as the human recipient of a Collaboration Request; they may instead work directly or explicitly invoke one of their own eligible Personal AI Assistants.
 
@@ -861,11 +861,11 @@ A Response Shape does not authorize a direct Product Knowledge change. It guides
 
 ## Response Source Link
 
-A Response Source Link is an optional, explicit navigation and provenance link from one whole Contribution Response to a later Revision that an authorized human saved after considering it.
+A Response Source Link is an optional, explicit navigation and provenance link from one whole Contribution Response to a later Revision that the Project Owner saved after considering it.
 
 It records the retained response and its Request Cycle, the target Revision and Product Knowledge, the human who created the link and the time. It does not copy response content, select or disposition individual response items, or create a separate Provenance record.
 
-A Response Source Link means only that the response informed the human-authorized saved change. It does not imply acceptance, agreement, correctness, that every response item was adopted, exact word-level origin, sole causation or exclusive human authorship. The absence of a link does not imply that a response was ignored.
+A Response Source Link means only that the response informed the owner-saved change. It does not imply acceptance, agreement, correctness, that every response item was adopted, exact word-level origin, sole causation or exclusive human authorship. The absence of a link does not imply that a response was ignored.
 
 ---
 
@@ -875,7 +875,7 @@ A saved change to a Product Artifact or other project knowledge item.
 
 Revisions preserve change history by recording what changed, when it changed, who or what changed it and why it changed when that is known.
 
-When an authorized human explicitly records a Response Source Link at save, the Revision retains that one optional whole-response source. Opening a response or draft, automatic acknowledgement, item dismissal and response-level Acted On handling never create this link.
+When the Project Owner explicitly records a Response Source Link at save, the Revision retains that one optional whole-response source. Opening a response or draft, automatic acknowledgement, item dismissal and response-level Acted On handling never create this link.
 
 Revision is distinct from Contribution and Provenance: Contribution records participation, Revision records saved change history and Provenance records origin or derivation.
 
