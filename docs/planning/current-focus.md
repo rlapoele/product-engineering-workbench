@@ -166,6 +166,7 @@ Recent clarification established the first target user as an AI-assisted develop
 - Canonical Product Knowledge authority is owner-only in the MVP: only the Project Owner may create or edit a private draft, explicitly save a canonical record or Revision, and optionally record one whole-response Response Source Link at that save. Project Collaborator, requestor and recipient describe participation or request roles rather than write authority; collaborator delegation is deferred.
 - Response-to-Revision traceability is deliberately minimal: when the Project Owner saves a Revision, they may explicitly link one whole Contribution Response as its source; the optional link remains owner-visible Revision-history evidence, never a separate response trace, collaborator disclosure, handoff field, automatic acceptance, item disposition or authorship claim.
 - Context Relevance is now a request-specific inclusion rule: ordinary assembly contains only Primary and Supporting context; Optional material requires an explicit Brief need before submission; structurally nearby but non-supporting material remains excluded without a global relevance score or graph-distance rule; and a recipient who needs more material returns a Question or caveated response until the owner explicitly Reopens and resubmits revised context.
+- The inactive MVP implementation cut is now selected: a new or returning authenticated user reaches a calm Project home, creates and later revisits an owner-controlled Project using the fixed `Implementation-Ready Web App Specification` / `Standard Web App` starter, then creates and explicitly saves one Goal as a Draft Product Artifact with its first Revision. This is a planning boundary only; it does not authorize implementation or resolve the remaining technical, contract, prototype or quality packages.
 
 ---
 
@@ -208,13 +209,13 @@ When the foundation is mature enough to reconsider implementation, use this guid
 
 | Future decision package | Intended outcome | Indicative discussion effort |
 |---|---|---:|
-| MVP implementation cut | Explicit first usable vertical slice and explicit deferrals. | 2–3 focused discussions |
+| MVP implementation cut | **Selected (inactive planning):** authenticated entry; first-use orientation; Project creation with title, optional description and the fixed `Implementation-Ready Web App Specification` / `Standard Web App` starter; continuous Specification entry; one Goal created and explicitly saved as Draft Product Knowledge with its first Revision; later return to the Project. Template/preset choice, section customization, AI, collaboration, Resources, propagation and handoff are deferred. | Completed through focused discussions |
 | Technical architecture | Frontend, backend, persistence, authentication, API boundaries and technology choices. | 3–4 focused discussions |
 | Data and lifecycle contracts | Concrete schema and behavior for Projects, Specifications, Product Artifacts, Revisions and owner-only authority. | 2–3 focused discussions |
 | First-slice UX prototype | Validate document navigation, editing, save/revision, empty/loading/error states and keyboard behavior. | 3–4 prototype or specification exercises |
 | Engineering quality baseline | Test strategy, security and privacy baseline, observability, deployment and environment assumptions. | 2–4 focused discussions |
 
-The current estimate is 12–18 focused discussions or exercises before starting that first slice. Collaboration Requests, Bring Your Own AI integration, AI disclosure, Resource References, impact propagation and full handoff generation may be explicitly deferred behind stable boundaries; they do not need to block the first slice.
+The initial estimate was 12–18 focused discussions or exercises before starting that first slice. The MVP implementation-cut package is now selected as inactive planning; the remaining packages still require deliberate discussion before any implementation decision. Collaboration Requests, Bring Your Own AI integration, AI disclosure, Resource References, impact propagation and full handoff generation may be explicitly deferred behind stable boundaries; they do not need to block the first slice.
 
 ---
 
