@@ -311,6 +311,8 @@ One bounded Contribution Response may contain multiple discrete Contribution Res
 
 Contribution Responses do not directly alter canonical Product Knowledge. A project owner or authorized requestor may manually act on a response by updating or creating product knowledge through a separate action, which records the resulting Revision when applicable.
 
+When an authorized human saves such a Revision, they may explicitly create one optional Response Source Link to the whole Contribution Response that informed it. This is a narrow navigation and provenance record, not a separate acceptance or authorship workflow.
+
 ## Contribution Response Item
 
 A Contribution Response Item is one discrete part of a submitted Contribution Response. Its Response Shape identifies whether it is, for example, a Finding, Question, Suggested Edit or Proposal.
@@ -708,6 +710,8 @@ Provenance is distinct from Contribution and Revision: Contribution records part
 
 Provenance records known origin and derivation. It should not imply that the workbench can prove a human contribution was not assisted by an external AI tool.
 
+An optional Response Source Link on a Revision may provide supporting known provenance for a Contribution Response considered in that saved change. It does not create a separate response-to-Provenance mechanism in the MVP.
+
 ---
 
 # R
@@ -853,6 +857,14 @@ Examples include Answer, Comment, Question, Finding, Suggested Edit, Proposed Ar
 
 A Response Shape does not authorize a direct Product Knowledge change. It guides how the requestor can understand and separately consider that item.
 
+## Response Source Link
+
+A Response Source Link is an optional, explicit navigation and provenance link from one whole Contribution Response to a later Revision that an authorized human saved after considering it.
+
+It records the retained response and its Request Cycle, the target Revision and Product Knowledge, the human who created the link and the time. It does not copy response content, select or disposition individual response items, or create a separate Provenance record.
+
+A Response Source Link means only that the response informed the human-authorized saved change. It does not imply acceptance, agreement, correctness, that every response item was adopted, exact word-level origin, sole causation or exclusive human authorship. The absence of a link does not imply that a response was ignored.
+
 ---
 
 ## Revision
@@ -860,6 +872,8 @@ A Response Shape does not authorize a direct Product Knowledge change. It guides
 A saved change to a Product Artifact or other project knowledge item.
 
 Revisions preserve change history by recording what changed, when it changed, who or what changed it and why it changed when that is known.
+
+When an authorized human explicitly records a Response Source Link at save, the Revision retains that one optional whole-response source. Opening a response or draft, automatic acknowledgement, item dismissal and response-level Acted On handling never create this link.
 
 Revision is distinct from Contribution and Provenance: Contribution records participation, Revision records saved change history and Provenance records origin or derivation.
 

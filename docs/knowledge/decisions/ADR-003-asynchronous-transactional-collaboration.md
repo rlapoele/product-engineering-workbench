@@ -122,7 +122,7 @@ Contributors will not directly alter canonical project knowledge through a Colla
 
 The project owner or authorized requestor will review submitted responses. Each response is Submitted when sent, automatically becomes Acknowledged on the requestor's deliberate fully rendered response access, and may be explicitly marked Acted On when the requestor has dealt with its content. These statuses are conversational and do not apply, accept, validate or otherwise change Product Knowledge.
 
-If a requestor separately changes product knowledge after considering a response, the resulting saved change will be recorded as a Revision. No Contribution Response, including an Answer, directly alters product knowledge or triggers automation.
+If a requestor separately changes product knowledge after considering a response, the resulting saved change will be recorded as a Revision. At that save, the authorized human may explicitly link one whole Contribution Response as its source. This optional Response Source Link is retained as navigation and known provenance between the response's immutable Request Cycle evidence and the Revision; it is not inferred from viewing, acknowledgement, dismissal or Acted On handling. It does not select individual items, imply acceptance, agreement, correctness, adoption, exact origin, sole causation or exclusive human authorship. No Contribution Response, including an Answer, directly alters product knowledge or triggers automation.
 
 ---
 
