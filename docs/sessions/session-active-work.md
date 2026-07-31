@@ -757,6 +757,8 @@ Does a contribution produce comments, suggested edits, review results, new artif
 
 **Answer:**
 
+**Superseded:** The acceptance/rejection and per-item action language in the following initial paragraph, table and Question 4.5 is exploratory only. The current model is the response-handling, owner-only canonical-authority and Response Source Link decisions recorded in the July 31 crystallized sessions and current knowledge documents.
+
 A contribution will probably produce comments, suggested edits, review results, new artifacts, or decisions.
 Certain types of contribution will however require the acceptance (or rejection) of the contribution by the requestor; based on that acceptance/rejection, suggested edits will be persisted, new artifacts will be created, action(s) will be taken based on a decision.
 Comments and review results will probably not require acceptance.
@@ -981,15 +983,15 @@ The MVP artifact lifecycle states are:
 
 State meanings:
 
-- Draft: artifact exists but has not yet been verified or accepted.
+- Draft: artifact exists but has not yet been verified or validated.
 - Needs Review: artifact requires verification before it can be considered reliable.
-- Validated: artifact has been verified and accepted as currently accurate.
+- Validated: artifact has been verified as currently accurate.
 - Stale: artifact may no longer be accurate because related upstream knowledge changed.
 - Archived: artifact is no longer active but is preserved for history and traceability.
 
 Review does not need to be human-only. Verification may be performed by a human contributor, AI contributor or capability-specific reviewer when that is appropriate.
 
-Rejected is not an MVP artifact lifecycle state. Rejection belongs to contribution responses, suggestions or proposed changes.
+Rejected is not an MVP artifact lifecycle state or Contribution Response status. A recipient may decline a Collaboration Request before submitting a response; after submission, the Project Owner may dismiss an individual response item as not pursued without rejecting the contributor or whole response.
 
 ### 5.6
 
@@ -1192,7 +1194,7 @@ Example:
 
 "This request used the selected User Story, its parent Feature, related Acceptance Criteria, linked Functional Requirements, unresolved Open Questions and blocking Risks."
 
-Detailed relevance rules per Assistance Request Type remain future validation work.
+Detailed relevance rules per Assistance Request Type are now crystallized in `2026-07-31-context-relevance-inclusion-validation.md`.
 
 Validated example patterns:
 

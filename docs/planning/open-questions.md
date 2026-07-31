@@ -491,7 +491,7 @@ Validated propagation edge-case rules:
 
 Review does not need to be human-only. Verification may be performed by a human contributor, AI contributor or capability-specific reviewer when that is appropriate.
 
-Rejected is not an MVP artifact lifecycle state. Rejection belongs to contribution responses, suggestions or proposed changes. An artifact that should no longer be active can be archived.
+Rejected is not an MVP artifact lifecycle state or Contribution Response status. A recipient may decline a Collaboration Request before submitting a response. After submission, the Project Owner may dismiss an individual response item as not pursued; dismissal retains evidence and does not reject the contributor or the whole response. An artifact that should no longer be active can be archived.
 
 ---
 
@@ -601,7 +601,7 @@ Candidate Context should be filtered and weighted according to:
 - contributor permissions and availability;
 - known context limits.
 
-For the MVP, Context Relevance is a request-specific inclusion decision represented as primary, supporting, optional or excluded. Primary context is required to make the requested contribution; supporting context directly explains, constrains, validates or could materially change it. Optional context may add useful detail but enters only when the Brief explicitly calls for it or a contributor deliberately expands it with visible explanation. Excluded context does not support the stated contribution even when structurally nearby or related. Relevance is not a score, graph-distance rule or instruction to include every related item. Inferred context may guide inspection but cannot satisfy missing Primary evidence or silently become evidence. A Context Explanation identifies included Primary and Supporting context, any expanded Optional material and material exclusions or missing anchors without listing every excluded candidate.
+For the MVP, Context Relevance is a request-specific inclusion decision represented as primary, supporting, optional or excluded. Primary context is required to make the requested contribution; supporting context directly explains, constrains, validates or could materially change it. Optional context may add useful detail but enters only when the Brief explicitly calls for it before submission. Excluded context does not support the stated contribution even when structurally nearby or related. Relevance is not a score, graph-distance rule or instruction to include every related item. A recipient cannot expand immutable recorded context after submission; they return a Question or caveated response when more material is needed, and the Project Owner may Reopen and resubmit with revised context. Inferred context may guide inspection but cannot satisfy missing Primary evidence or silently become evidence. A Context Explanation identifies included Primary and Supporting context and material exclusions or missing anchors without listing every excluded candidate.
 
 The system should assess Context Sufficiency as sufficient, partial or insufficient for the specific Assistance Request Type, Review Lens and stated focus, rather than as a general source-quality score. Sufficient context supports all requested checks or feedback focus. Partial context has enough substantive content for at least one useful bounded contribution but not every requested dimension. Insufficient context has no substantive basis for even a bounded contribution.
 
@@ -1038,7 +1038,7 @@ Contributors will not directly alter canonical Product Knowledge through a Colla
 
 If a manual action informed by a Contribution Response changes product knowledge, the resulting saved change will be recorded as a Revision.
 
-Known AI assistance should remain traceable and governable through Contribution records, accepted Revisions, Provenance, Context Explanations and project settings. Its automatic disclosure within the workbench or handoff follows the project-owner AI-use disclosure setting.
+Known AI assistance should remain traceable and governable through Contribution records, owner-saved Revisions, Provenance, Context Explanations and project settings. Its automatic disclosure within the workbench or handoff follows the project-owner AI-use disclosure setting.
 
 The workbench can govern AI assistance that occurs inside the product through personally configured Bring Your Own AI support, as well as AI-assisted Contribution Responses disclosed by human contributors.
 

@@ -58,7 +58,7 @@ The AI Assistant is distinct from scoped assistance requests. When it uses AI ca
 
 AI Assistance Governance is the set of product rules, settings and records that make known AI participation traceable, reviewable and controllable inside the workbench.
 
-It may include enabled AI capabilities, scoped Assistance Request Types, Contribution Responses, acceptance workflows, Context Explanations, Revisions, Provenance, a known AI activity trace and AI-use disclosure settings.
+It may include enabled AI capabilities, scoped Assistance Request Types, Contribution Responses, human review, explicit Project Owner save flows, Context Explanations, Revisions, Provenance, a known AI activity trace and AI-use disclosure settings.
 
 AI Assistance Governance applies to AI assistance known to the workbench. It cannot reliably prevent or prove undisclosed external AI use by a human collaborator. AI-use disclosure is off by default and, when enabled by the project owner, may be directed to the workbench, handoff or both.
 
@@ -259,7 +259,7 @@ Context Relevance describes whether a candidate context item should be included 
 
 For the MVP, relevance may be represented conceptually as primary, supporting, optional or excluded. Primary context is required for the requested contribution. Supporting context directly explains, constrains, validates or could materially change it. Optional context may add detail but is not needed for a grounded response. Excluded context does not support the stated contribution even when structurally nearby or related.
 
-Only Primary and Supporting context enter ordinary Context Assembly by default. Optional context enters only when the Request Brief explicitly calls for it or a contributor deliberately expands it with visible explanation. Inferred context may guide further inspection but cannot satisfy missing Primary context or become unlabelled evidence. A Context Explanation identifies included Primary and Supporting context, any expanded optional material and material exclusions or missing anchors; it need not enumerate every excluded candidate.
+Only Primary and Supporting context enter ordinary Context Assembly by default. Optional context enters only when the Request Brief explicitly calls for it before submission. A recipient cannot expand a Request Cycle's immutable recorded context after submission; if more material is needed, they return a Question or caveated response and the Project Owner may Reopen and resubmit with revised context. Inferred context may guide further inspection but cannot satisfy missing Primary context or become unlabelled evidence. A Context Explanation identifies included Primary and Supporting context and material exclusions or missing anchors; it need not enumerate every excluded candidate.
 
 ---
 

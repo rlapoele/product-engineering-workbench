@@ -252,11 +252,11 @@ Supporting Context explains, constrains or validates that judgment.
 
 The same artifact type may be primary for one request and supporting for another. For example, Goals and Target Users may support an Implementation Handoff Readiness review but become primary for a Product Strategy review.
 
-Context Relevance is a request-specific inclusion decision rather than a score, proximity rule or instruction to include every related item. Primary Context is required to make the requested contribution. Supporting Context directly explains, constrains, validates or could materially change it. Optional Context may add detail but is not necessary for a grounded response, so it enters only when the Request Brief explicitly calls for it or a contributor deliberately expands it with visible explanation. Excluded Context does not support the stated contribution even when structurally nearby or related.
+Context Relevance is a request-specific inclusion decision rather than a score, proximity rule or instruction to include every related item. Primary Context is required to make the requested contribution. Supporting Context directly explains, constrains, validates or could materially change it. Optional Context may add detail but is not necessary for a grounded response, so it enters only when the Request Brief explicitly calls for it before submission. Excluded Context does not support the stated contribution even when structurally nearby or related.
 
 Current active Product Knowledge is preferred. Stale knowledge stays visibly caveated; archived knowledge is excluded unless historical comparison or impact reasoning needs it. Directly related contradictory or constraining evidence is Supporting rather than omitted for convenience. Prior Conversations, Reviews and Contribution Responses are Supporting only for comparison, follow-through or prior reasoning. A Resource Reference is included only when its target-local purpose supports the request, while relevant unavailable material becomes a stated limit. Inferred context may guide inspection but cannot satisfy missing Primary context or silently become evidence.
 
-Only Primary and Supporting context enter ordinary assembly by default. The Context Explanation identifies those included items, any expanded Optional material and material exclusions or missing anchors; it does not need to inventory every excluded candidate.
+Only Primary and Supporting context enter ordinary assembly by default. A recipient cannot expand a Request Cycle's immutable recorded context after submission; if more material is needed, they return a Question or caveated response and the Project Owner may Reopen and resubmit with revised context. The Context Explanation identifies included Primary and Supporting context and material exclusions or missing anchors; it does not need to inventory every excluded candidate.
 
 For the MVP, the default lens for Validate Readiness should be Implementation Handoff Readiness. This lens guides a contributor's local knowledge-quality assessment; it does not produce the deterministic Implementation Handoff Readiness outcome used by Prepare Handoff.
 
@@ -281,6 +281,8 @@ For example, an AI Contributor reviewing a User Story may need:
 The system should be able to explain which context was provided so that users can understand and trust AI contributions.
 
 Validated example context patterns:
+
+The Primary and Supporting columns identify candidate material, not automatic inclusion. Context Relevance still determines whether each candidate enters the assembled request. Prior Conversations, Reviews, feedback and Contribution Responses enter only when comparison, follow-through or earlier reasoning is requested or materially necessary.
 
 | Request | Primary Context | Supporting Context | Typical Response Shapes |
 |---|---|---|---|
