@@ -254,9 +254,11 @@ The same artifact type may be primary for one request and supporting for another
 
 For the MVP, the default lens for Validate Readiness should be Implementation Handoff Readiness. This lens guides a contributor's local knowledge-quality assessment; it does not produce the deterministic Implementation Handoff Readiness outcome used by Prepare Handoff.
 
-The system should assess whether context is sufficient, partial or insufficient before fulfilling an AI assistance request.
+The system should assess whether context is sufficient, partial or insufficient for the specific Assistance Request Type, Review Lens and stated focus before fulfilling an AI assistance request. It is not a general quality score for the selected scope: the same Product Artifact may be sufficient for one request and partial or insufficient for another.
 
-Insufficient context should not always block the request. The system may ask a clarifying question, warn that the response will be limited, suggest linking or creating missing artifacts or allow the user to proceed with limited context.
+Context is sufficient when relevant evidence supports all requested checks or the stated feedback focus. It is partial when substantive selected content supports at least one useful bounded contribution but required context for some requested dimensions is absent. It is insufficient when no substantive basis exists for even a bounded contribution to that request. Structural compatibility, recipient fit and routing remain separate and must not change silently because context is partial or insufficient.
+
+A partial request proceeds with a visible Context Explanation, grounded local observations and clear limits on unsupported dimensions. An insufficient request may still be explicitly submitted with a visible warning, but should return Questions and an explanation of missing basis rather than invented Findings, edits, proposals or a positive quality conclusion. The system may suggest creating or linking missing artifacts but does not create them automatically.
 
 For example, an AI Contributor reviewing a User Story may need:
 

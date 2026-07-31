@@ -273,9 +273,11 @@ Context References are distinct from Provenance: Context References identify wha
 
 ## Context Sufficiency
 
-Context Sufficiency describes whether the assembled context is rich enough to support a reliable contribution.
+Context Sufficiency describes whether assembled context supports the specific requested contribution, not a general quality score for the selected scope. The same Product Artifact may be sufficient for one Assistance Request Type, Review Lens or stated focus and partial or insufficient for another.
 
-Insufficient context should not always block a request, but it should be visible to the user and may result in a warning, clarifying question or limited-confidence response.
+Context is sufficient when relevant evidence supports all requested checks or the stated feedback focus. It is partial when the selected scope has substantive material for at least one useful bounded contribution but lacks context for some requested dimensions. It is insufficient when no substantive basis exists for even a bounded contribution to that request.
+
+Context Sufficiency is distinct from structural scope compatibility, recipient fit and routing. Partial or insufficient context does not silently change the lens, scope or selected recipient. A partial request proceeds with a visible Context Explanation and caveated, grounded response. An insufficient request may still be explicitly submitted, but should return Questions and an explanation of the missing basis rather than invented Findings, edits, proposals or a positive quality conclusion.
 
 ---
 

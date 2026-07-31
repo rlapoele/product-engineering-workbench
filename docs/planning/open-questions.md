@@ -603,9 +603,9 @@ Candidate Context should be filtered and weighted according to:
 
 For the MVP, Context Relevance may be represented conceptually as primary, supporting, optional or excluded.
 
-The system should assess Context Sufficiency as sufficient, partial or insufficient.
+The system should assess Context Sufficiency as sufficient, partial or insufficient for the specific Assistance Request Type, Review Lens and stated focus, rather than as a general source-quality score. Sufficient context supports all requested checks or feedback focus. Partial context has enough substantive content for at least one useful bounded contribution but not every requested dimension. Insufficient context has no substantive basis for even a bounded contribution.
 
-Insufficient context should not always block a request. The system may submit with a warning, ask a clarifying question, suggest creating or linking missing artifacts or allow the user to proceed with limited context when appropriate.
+Partial and insufficient context do not silently alter compatibility, lens, scope, recipient fit or routing. A partial request proceeds with a visible Context Explanation and grounded caveated response. An insufficient request may still be explicitly submitted with a warning, but returns Questions and an explanation of missing basis rather than invented Findings, edits, proposals or a positive conclusion. The workbench may suggest creating or linking missing artifacts but does not do so automatically.
 
 The system should provide a Context Explanation that identifies what context was included and why.
 

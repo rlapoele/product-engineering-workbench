@@ -162,6 +162,7 @@ Recent clarification established the first target user as an AI-assisted develop
 - The initial Review Lens catalog now has focused validated coverage for all six lenses across active Artifact, eligible Section, selected-content and whole-Specification exercises.
 - The initial Contribution Response model is validated through review and feedback examples: one bounded response may contain discrete one-shape items; only Findings use Finding Types; summaries synthesize rather than replace items; and any related edit or proposal remains a separate non-canonical response item.
 - Contribution Response presentation and follow-through are now bounded: request detail keeps response items together with shape/type labels and linked remedies; acknowledgement is automatic only on deliberate fully rendered response access and never reorders the list; dismissal remains retained item evidence; and Act On or separate drafts/saves remain explicit requestor judgments.
+- Context Sufficiency is now request-specific and validated across review and feedback: sufficient supports the requested contribution, partial supports caveated grounded local work, and insufficient returns Questions and missing-basis explanation without changing compatibility, lens, scope or recipient.
 
 ---
 
@@ -177,7 +178,7 @@ Recent clarification established the first target user as an AI-assisted develop
 - The Project Collaboration Requests list defaults have been clarified: no lifecycle or response-handling filter; **Last updated — newest first** based on meaningful events visible to the viewer; a compact filter and sort set; compact request-oriented rows; parent-contained response handling; and an explicit Previous response label after Reopen.
 - Owner, collaborator, AI On Hold and reopened-request scenarios validate the Collaboration Requests list: the collaborator keeps a frozen read-only prior view after Reopen, viewer-visible events determine list ordering, and restored AI eligibility does not reorder an On Hold request before explicit Resume.
 - The complete role-aware list journey is validated: search, filters, sorting, 25-item pagination and retained response history preserve role visibility and current-cycle boundaries.
-- Validate additional Context Relevance and Context Sufficiency rules through concrete assistance request examples.
+- Validate additional Context Relevance rules through concrete assistance request examples.
 - Use the clarified AI assistance governance stance when refining provenance, contribution review and export visibility.
 - Define remaining artifact-type-specific propagation exceptions and future implementation constraints for the deterministic propagation engine.
 - Use the Project Model to inform the next UX, AI and architecture documents.

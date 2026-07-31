@@ -1314,7 +1314,7 @@ For example, Functional Requirements and Acceptance Criteria are primary for an 
 
 For the MVP, the default lens for Validate Readiness should be Implementation Handoff Readiness. It guides a scoped contributor assessment of local Product Knowledge quality, not the deterministic readiness outcome produced only by Prepare Handoff.
 
-The system should assess Context Sufficiency before fulfilling the request.
+The system should assess Context Sufficiency for the specific Assistance Request Type, Review Lens and stated focus before fulfilling the request. It is not a general quality score for the selected scope: the same Product Artifact may be sufficient for one request and partial or insufficient for another.
 
 Possible Context Sufficiency states:
 
@@ -1322,15 +1322,17 @@ Possible Context Sufficiency states:
 - partial;
 - insufficient.
 
-Insufficient context should not always block a request. The system may:
+Context is sufficient when relevant evidence supports all requested checks or the stated feedback focus. It is partial when substantive selected content supports at least one useful bounded contribution but required context for some requested dimensions is absent. It is insufficient when no substantive basis exists for even a bounded contribution to that request.
+
+Structural compatibility, recipient fit and routing remain separate from Context Sufficiency. A partial or insufficient result does not silently change the lens, scope or recipient. The system should:
 
 - submit the request normally when context is sufficient;
-- submit the request with a visible warning when context is partial;
-- ask a clarifying question when context is insufficient;
-- suggest creating or linking missing artifacts;
-- allow the user to proceed with limited context when appropriate.
+- submit the request with a visible Context Explanation when context is partial, returning only grounded local observations and clearly naming unsupported dimensions; and
+- allow explicit submission with a visible warning when context is insufficient, returning Questions and an explanation of missing basis rather than invented Findings, edits, proposals or a positive quality conclusion.
 
 The system should provide a Context Explanation that identifies what context was included and why.
+
+For partial or insufficient context, the explanation must also identify the missing anchors, the resulting limits and, when applicable, the questions needed to continue. It may suggest creating or linking missing knowledge but does not create it automatically.
 
 For example, a Context Explanation might say that a request used the selected User Story, its parent Feature, related Acceptance Criteria, linked Functional Requirements, unresolved Open Questions and blocking Risks.
 
@@ -1412,7 +1414,7 @@ Prepare Handoff should report insufficient product definition and not prepare a 
 
 Reviewing an active User Flow with the UX Quality Lens is a UX specification-coverage assessment. A User Flow that defines a user journey, its states or interaction guidance is structurally compatible because it is experience-oriented. Primary context includes the selected flow, stated review focus, related User Need or User Story, linked Screen/Views and UI Requirements, related Functional Requirements and Acceptance Criteria, and applicable UX/UI design guidance. Related Features or flows, Non-Functional Requirements, technical constraints, Decisions, Risks, Assumptions, Open Questions, Resource References and prior Reviews may be supporting context.
 
-The Review may identify unclear journey steps, state transitions, feedback, recovery or continuity only where available Product Knowledge makes those concerns relevant. Missing user, interaction, state or acceptance knowledge is a stated partial- or insufficient-context limit or a Finding; it does not make the User Flow structurally incompatible. The result remains non-canonical and may return Findings, Questions, Suggested Edits, Proposals or Summary. It does not certify usability, accessibility, implementation or readiness, produce a Readiness Result, invoke the Readiness Fact Check Set or create a handoff outcome.
+The Review may identify unclear journey steps, state transitions, feedback, recovery or continuity only where available Product Knowledge makes those concerns relevant. Missing user, interaction, state or acceptance knowledge is a stated partial-context limit or a grounded Finding when the available flow establishes it as relevant; if the missing basis makes the request insufficient, the response asks Questions and explains that limit instead. It does not make the User Flow structurally incompatible. The result remains non-canonical and may return Findings, Questions, Suggested Edits, Proposals or Summary only when its context supports them. It does not certify usability, accessibility, implementation or readiness, produce a Readiness Result, invoke the Readiness Fact Check Set or create a handoff outcome.
 
 Review UI Requirement with Accessibility Lens is an Accessibility Specification Review. It should assess whether the specification defines accessible outcomes, risks and verification needs clearly enough to guide implementation and later evaluation.
 
@@ -1434,7 +1436,7 @@ The conclusion is limited to the selected fragment's accessibility specification
 
 Reviewing an active Product Artifact that defines integration behavior with the Security Lens is a Security specification-coverage assessment. Its integration behavior and external-system purpose establish the relevant system boundary, so the scope is structurally compatible even when the available documentation is incomplete. Primary context includes the selected Artifact, stated boundary, directly related Functional Requirements and Acceptance Criteria, explicit authentication and data-handling behavior, technical constraints, Decisions, Risks and any available contract Resource References. User-facing behavior, data/domain rules, dependencies, Assumptions, Open Questions and prior Reviews may be supporting context when relevant.
 
-The Review may identify unclear trust boundaries, authentication or authorization assumptions, sensitive-data handling, webhook or callback verification, failure or replay behavior, and missing security verification evidence only when the available Product Knowledge makes them relevant. Missing contract, constraint or verification knowledge is a stated partial- or insufficient-context limit or a Finding; it does not make the Artifact structurally incompatible, create a security certification, invoke the Readiness Fact Check Set or produce a Readiness Result or handoff outcome.
+The Review may identify unclear trust boundaries, authentication or authorization assumptions, sensitive-data handling, webhook or callback verification, failure or replay behavior, and missing security verification evidence only when the available Product Knowledge makes them relevant. Missing contract, constraint or verification knowledge is a stated partial-context limit or a grounded Finding when the available boundary establishes it as relevant; if the missing basis makes the request insufficient, the response asks Questions and explains that limit instead. It does not make the Artifact structurally incompatible, create a security certification, invoke the Readiness Fact Check Set or produce a Readiness Result or handoff outcome.
 
 Reviewing an eligible `External Integrations` Section with the Implementation Readiness Lens assesses whether the active Section content and relevant connections define implementation-relevant behavior, constraints, dependencies and gaps for that template purpose. The Section is structurally compatible when it has implementation-bearing active content; unresolved webhook contract or account-ownership dependency knowledge may make the assessment partial or become a Finding. Primary context includes the Section's template purpose and active content, related Functional Requirements and Acceptance Criteria, known dependency and contract material, technical constraints, Decisions, Risks, Assumptions and Open Questions. Adjacent or related Sections, data/domain and user-facing behavior, Resource References and prior Reviews may be supporting context.
 
