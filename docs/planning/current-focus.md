@@ -198,6 +198,26 @@ Recent clarification established the first target user as an AI-assisted develop
 
 ---
 
+# Implementation Entry Guidance
+
+**Status:** Future planning guidance — not active work
+
+This section records the estimated decision packages needed before an intentionally selected first implementation slice can begin safely. It does not change the current Repository Foundation milestone, authorize implementation, create delivery tasks, establish a schedule or require these packages to be completed as a serial checklist. Current analysis and specification work remain the priority.
+
+When the foundation is mature enough to reconsider implementation, use this guidance to choose a deliberately narrow first vertical slice rather than attempting the complete MVP at once.
+
+| Future decision package | Intended outcome | Indicative discussion effort |
+|---|---|---:|
+| MVP implementation cut | Explicit first usable vertical slice and explicit deferrals. | 2–3 focused discussions |
+| Technical architecture | Frontend, backend, persistence, authentication, API boundaries and technology choices. | 3–4 focused discussions |
+| Data and lifecycle contracts | Concrete schema and behavior for Projects, Specifications, Product Artifacts, Revisions and owner-only authority. | 2–3 focused discussions |
+| First-slice UX prototype | Validate document navigation, editing, save/revision, empty/loading/error states and keyboard behavior. | 3–4 prototype or specification exercises |
+| Engineering quality baseline | Test strategy, security and privacy baseline, observability, deployment and environment assumptions. | 2–4 focused discussions |
+
+The current estimate is 12–18 focused discussions or exercises before starting that first slice. Collaboration Requests, Bring Your Own AI integration, AI disclosure, Resource References, impact propagation and full handoff generation may be explicitly deferred behind stable boundaries; they do not need to block the first slice.
+
+---
+
 # Explicitly Out of Scope
 
 The following activities are intentionally deferred until the repository foundation is considered sufficiently mature:
