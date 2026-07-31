@@ -255,9 +255,11 @@ Context Explanations help users understand and trust human or AI contributions.
 
 ## Context Relevance
 
-Context Relevance describes how useful a candidate context item is for a specific request.
+Context Relevance describes whether a candidate context item should be included for a specific request. It is a request-specific inclusion judgment, not a relevance score, document-proximity rule or instruction to include every related item.
 
-For the MVP, relevance may be represented conceptually as primary, supporting, optional or excluded.
+For the MVP, relevance may be represented conceptually as primary, supporting, optional or excluded. Primary context is required for the requested contribution. Supporting context directly explains, constrains, validates or could materially change it. Optional context may add detail but is not needed for a grounded response. Excluded context does not support the stated contribution even when structurally nearby or related.
+
+Only Primary and Supporting context enter ordinary Context Assembly by default. Optional context enters only when the Request Brief explicitly calls for it or a contributor deliberately expands it with visible explanation. Inferred context may guide further inspection but cannot satisfy missing Primary context or become unlabelled evidence. A Context Explanation identifies included Primary and Supporting context, any expanded optional material and material exclusions or missing anchors; it need not enumerate every excluded candidate.
 
 ---
 

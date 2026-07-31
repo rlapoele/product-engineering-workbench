@@ -164,6 +164,7 @@ Recent clarification established the first target user as an AI-assisted develop
 - Contribution Response presentation and follow-through are now bounded: request detail keeps response items together with shape/type labels and linked remedies; acknowledgement is automatic only on deliberate fully rendered response access and never reorders the list; dismissal remains retained item evidence; and Act On or separate drafts/saves remain explicit requestor judgments.
 - Context Sufficiency is now request-specific and validated across review and feedback: sufficient supports the requested contribution, partial supports caveated grounded local work, and insufficient returns Questions and missing-basis explanation without changing compatibility, lens, scope or recipient.
 - Response-to-Revision traceability is deliberately minimal: when an authorized human saves a Revision, they may explicitly link one whole Contribution Response as its source; the optional link is evidence navigation and known provenance, never automatic acceptance, item disposition or an authorship claim.
+- Context Relevance is now a request-specific inclusion rule: ordinary assembly contains only Primary and Supporting context; Optional material requires an explicit Brief need or visible expansion; and structurally nearby but non-supporting material remains excluded without a global relevance score or graph-distance rule.
 
 ---
 

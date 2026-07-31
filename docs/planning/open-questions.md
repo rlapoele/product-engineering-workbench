@@ -601,7 +601,7 @@ Candidate Context should be filtered and weighted according to:
 - contributor permissions and availability;
 - known context limits.
 
-For the MVP, Context Relevance may be represented conceptually as primary, supporting, optional or excluded.
+For the MVP, Context Relevance is a request-specific inclusion decision represented as primary, supporting, optional or excluded. Primary context is required to make the requested contribution; supporting context directly explains, constrains, validates or could materially change it. Optional context may add useful detail but enters only when the Brief explicitly calls for it or a contributor deliberately expands it with visible explanation. Excluded context does not support the stated contribution even when structurally nearby or related. Relevance is not a score, graph-distance rule or instruction to include every related item. Inferred context may guide inspection but cannot satisfy missing Primary evidence or silently become evidence. A Context Explanation identifies included Primary and Supporting context, any expanded Optional material and material exclusions or missing anchors without listing every excluded candidate.
 
 The system should assess Context Sufficiency as sufficient, partial or insufficient for the specific Assistance Request Type, Review Lens and stated focus, rather than as a general source-quality score. Sufficient context supports all requested checks or feedback focus. Partial context has enough substantive content for at least one useful bounded contribution but not every requested dimension. Insufficient context has no substantive basis for even a bounded contribution.
 

@@ -1314,6 +1314,12 @@ Excluded Context is related knowledge that is not useful for the current request
 
 The same artifact type may be primary in one request and supporting in another.
 
+Context Relevance is a request-specific inclusion decision, not a score, document-proximity rule or instruction to include every graph-related item. Primary Context is required to make the requested contribution. Supporting Context directly explains, constrains, validates or could materially change it. Optional Context may add detail but is not necessary for a grounded response; it enters only when the Request Brief explicitly calls for it or a contributor deliberately expands it with visible explanation. Excluded Context does not support the stated contribution even when structurally nearby or related.
+
+Current active Product Knowledge is preferred. Stale knowledge may remain relevant but must retain its visible limit; archived knowledge is excluded unless the request specifically needs historical comparison or impact reasoning. Directly related evidence that could contradict or materially constrain a response is Supporting rather than omitted for convenience. Prior Conversations, Reviews and Contribution Responses are Supporting only when the request seeks comparison, follow-through or earlier reasoning. Resource References are included only when their target-local purpose supports the request; a relevant unavailable Resource is a stated limit. Inferred context may guide inspection but cannot satisfy a missing Primary requirement or become unlabelled evidence.
+
+Only Primary and Supporting context enter ordinary assembly by default. A Context Explanation identifies included Primary and Supporting context, any expanded Optional material and material exclusions or missing anchors; it need not enumerate every excluded Candidate Context item.
+
 For example, Functional Requirements and Acceptance Criteria are primary for an Implementation Handoff Readiness review, while Goals and Target Users may be supporting context. For a Product Strategy review, Goals and Target Users may become primary.
 
 For the MVP, the default lens for Validate Readiness should be Implementation Handoff Readiness. It guides a scoped contributor assessment of local Product Knowledge quality, not the deterministic readiness outcome produced only by Prepare Handoff.
