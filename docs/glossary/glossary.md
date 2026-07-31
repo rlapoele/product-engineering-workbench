@@ -305,7 +305,15 @@ A Contribution Response is a Collaboration Request recipient's submitted input.
 
 A Contribution Response may contain answers, comments, review results, suggested edits, proposed artifacts, proposed decisions or other requested input.
 
+One bounded Contribution Response may contain multiple discrete Contribution Response Items. Each item has one primary Response Shape. A Summary may synthesize the items but does not replace them; a Finding may be accompanied by a separate Suggested Edit or Proposal that addresses it. These item relationships are explanatory only and do not apply a change.
+
 Contribution Responses do not directly alter canonical Product Knowledge. A project owner or authorized requestor may manually act on a response by updating or creating product knowledge through a separate action, which records the resulting Revision when applicable.
+
+## Contribution Response Item
+
+A Contribution Response Item is one discrete part of a submitted Contribution Response. Its Response Shape identifies whether it is, for example, a Finding, Question, Suggested Edit or Proposal.
+
+An item has one primary Response Shape. Each Finding Item has exactly one Finding Type to classify its issue or observation. A separate item may propose a response to that Finding, but neither item alters canonical Product Knowledge automatically.
 
 ## Contribution Response Status
 
@@ -405,9 +413,11 @@ Explicit Context represents project-specific knowledge links that contributors h
 
 ## Finding Type
 
-A Finding Type describes the kind of issue, observation or result produced by a review or check.
+A Finding Type describes the kind of issue, observation or result recorded by a Finding Item from a review or check.
 
 Examples include Gap, Inconsistency, Ambiguity, Risk, Blocker, Dependency, Recommendation and Readiness Warning.
+
+Finding Type applies only to a Finding Item. It is not a Response Shape, severity, priority, workflow state, task, recipient assignment or deterministic readiness outcome.
 
 ---
 
@@ -833,9 +843,11 @@ Stale does not mean the artifact is definitely incorrect. It means the artifact 
 
 ## Response Shape
 
-A Response Shape describes the form of a Contribution Response.
+A Response Shape describes the form of a Contribution Response Item.
 
 Examples include Answer, Comment, Question, Finding, Suggested Edit, Proposed Artifact, Proposed Relationship, Proposed Decision, Readiness Result, Summary and Handoff Material.
+
+A Response Shape does not authorize a direct Product Knowledge change. It guides how the requestor can understand and separately consider that item.
 
 ---
 

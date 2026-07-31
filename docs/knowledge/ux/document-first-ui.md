@@ -544,7 +544,9 @@ The response should conclude that acceptance coverage appears sufficient for the
 
 The result of an assistance request should be presented according to its Response Shape.
 
-The Response Shape determines what the user receives and what actions are available.
+One bounded Contribution Response may contain multiple discrete response items. Each item has one primary Response Shape. A Summary may synthesize the items but does not replace them; a Finding may be accompanied by a separately shaped Suggested Edit or Proposal that addresses it. The request detail presents these as related response content, not as separate requests, tasks or automatic Product Knowledge changes.
+
+The Response Shape determines what the user receives and how they may separately consider it.
 
 Initial MVP Response Shapes:
 
@@ -553,16 +555,16 @@ Initial MVP Response Shapes:
 | Answer | A direct response to a question, including known basis and limits. | Acknowledge, act on manually or ask a follow-up. |
 | Comment | A general note, observation or reaction. | Resolve, reply, ignore or turn into another action. |
 | Question | A clarification request. | Answer, discuss or convert to an Open Question. |
-| Finding | A structured issue or observation from a review or check. | Accept, dismiss, create a follow-up artifact or request changes. |
-| Suggested Edit | Proposed replacement or modification for existing content. | Accept, reject or edit before accepting. |
-| Proposed Artifact | A suggested new Product Artifact. | Accept, reject or edit before accepting. |
-| Proposed Relationship | A suggested relationship between artifacts. | Accept, reject or adjust. |
-| Proposed Decision | A suggested decision, option or recommendation. | Accept as Decision, reject or discuss further. |
-| Readiness Result | A readiness judgment with blockers, warnings or next actions. | Accept, act on blockers, defer or export with warnings. |
-| Summary | A condensed explanation of content, context or results. | Use as reference or insert if accepted. |
-| Handoff Material | Generated or refined handoff content. | Accept into the export package, edit or reject. |
+| Finding | A structured issue or observation from a review or check. | Acknowledge, act on separately or request follow-up. |
+| Suggested Edit | Proposed replacement or modification for existing content. | Review, apply separately, reject or edit. |
+| Proposed Artifact | A suggested new Product Artifact. | Review, create separately, reject or edit. |
+| Proposed Relationship | A suggested relationship between artifacts. | Review, create separately, reject or adjust. |
+| Proposed Decision | A suggested decision, option or recommendation. | Review, decide separately, reject or discuss further. |
+| Readiness Result | A readiness judgment with blockers, warnings or next actions. | Review, act on findings separately, defer or request Prepare Handoff. |
+| Summary | A condensed explanation of content, context or results. | Use as reference or separately incorporate into Product Knowledge. |
+| Handoff Material | Generated or refined handoff content. | Review, include separately in the export package, edit or reject. |
 
-Review findings should be grouped by Finding Type where useful.
+Each Finding has exactly one Finding Type. Finding Type classifies an issue or observation; it is not a Response Shape, severity, priority, workflow state, task, recipient assignment or deterministic readiness outcome. Review findings should be grouped by Finding Type where useful.
 
 Example Finding Types:
 
@@ -574,6 +576,8 @@ Example Finding Types:
 - Dependency
 - Recommendation
 - Readiness Warning
+
+A Requirements Quality Review may present an Ambiguity Finding for unclear wording and a Gap Finding for missing known Acceptance coverage beside a Question, a safe Suggested Edit, a Proposed Relationship and a Summary. A Security Review may distinguish a grounded Risk Finding from a Dependency Finding. Request Feedback stays comment-oriented: it may present Comments, Questions, Suggested Edits, Proposals and Summary, but never uses Findings or Finding Types merely to present open-ended feedback as a structured Review.
 
 ## MVP Collaboration Mode
 

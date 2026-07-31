@@ -204,6 +204,10 @@ Initial MVP Response Shapes:
 
 Findings may use Finding Types such as Gap, Inconsistency, Ambiguity, Risk, Blocker, Dependency, Recommendation and Readiness Warning.
 
+One bounded Contribution Response may contain multiple discrete response items. Each item has one primary Response Shape; each Finding item has exactly one Finding Type. A Summary may synthesize the items but does not replace them. A Finding and a separately shaped Suggested Edit or Proposal may address the same concern, but neither changes Product Knowledge automatically. Finding Type is not severity, priority, workflow state, task, recipient assignment or a deterministic readiness outcome.
+
+For example, a Requirements Quality Review may return an `Ambiguity` Finding for unclear wording, a `Gap` Finding for missing known acceptance coverage, a Question for unresolved intent, a Suggested Edit for safe clarity improvement, a Proposed Relationship for missing traceability and a Summary. A Security Review may distinguish a grounded `Risk` from an external `Dependency`, while a Request Feedback response remains comment-oriented and uses Comments, Questions, Suggested Edits, Proposals and Summary rather than Findings or Finding Types.
+
 ---
 
 # 6. General AI Assistant

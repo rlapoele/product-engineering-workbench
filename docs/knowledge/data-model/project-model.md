@@ -1023,7 +1023,9 @@ A Contribution Response is the contributor's submitted input for a Collaboration
 
 Contribution Responses may include answers, comments, questions, findings, suggested edits, proposed artifacts, proposed relationships, proposed decisions, readiness results, summaries or handoff material.
 
-These are Response Shapes. A Response Shape describes the form of the submitted response and helps determine what the requestor can do with it.
+One bounded Contribution Response may contain multiple discrete response items. Each item has one primary Response Shape. A Summary may synthesize items but does not replace them; a Finding may be accompanied by a separately shaped Suggested Edit or Proposal that addresses it. These relationships do not apply a change or create Product Knowledge.
+
+Response Shapes describe the form of a response item and help determine how the requestor can understand and separately consider it.
 
 Initial MVP Response Shapes:
 
@@ -1032,16 +1034,18 @@ Initial MVP Response Shapes:
 | Answer | Direct response to a question in the request, including known basis and limits. | Acknowledge, act on manually or ask a follow-up. |
 | Comment | General note, observation or reaction. | Resolve, reply, ignore or convert into another action. |
 | Question | Clarification requested from the requestor. | Answer, discuss or convert to an Open Question. |
-| Finding | Structured issue, observation or result from a review or check. | Accept, dismiss, create a follow-up artifact or request changes. |
-| Suggested Edit | Proposed change to existing content. | Accept, reject or modify before accepting. |
-| Proposed Artifact | Suggested new Product Artifact. | Accept, reject or edit before accepting. |
-| Proposed Relationship | Suggested relationship between Product Artifacts. | Accept, reject or adjust. |
-| Proposed Decision | Suggested decision, option or recommendation. | Accept as Decision, reject or discuss further. |
-| Readiness Result | Non-canonical local assessment of the selected Product Knowledge's evidence, gaps, risks, dependencies and next actions. | Accept, act on findings, defer or separately request Prepare Handoff. |
-| Summary | Condensed explanation of content, context or results. | Use as reference or insert into project knowledge if accepted. |
-| Handoff Material | Generated or refined implementation handoff content. | Accept into the export package, edit or reject. |
+| Finding | Structured issue, observation or result from a review or check. | Acknowledge, act on separately or request follow-up. |
+| Suggested Edit | Proposed change to existing content. | Review, apply separately, reject or modify. |
+| Proposed Artifact | Suggested new Product Artifact. | Review, create separately, reject or edit. |
+| Proposed Relationship | Suggested relationship between Product Artifacts. | Review, create separately, reject or adjust. |
+| Proposed Decision | Suggested decision, option or recommendation. | Review, decide separately, reject or discuss further. |
+| Readiness Result | Non-canonical local assessment of the selected Product Knowledge's evidence, gaps, risks, dependencies and next actions. | Review, act on findings separately, defer or request Prepare Handoff. |
+| Summary | Condensed explanation of content, context or results. | Use as reference or separately incorporate into Product Knowledge. |
+| Handoff Material | Generated or refined implementation handoff content. | Review, include separately in the export package, edit or reject. |
 
-Findings may have Finding Types, such as Gap, Inconsistency, Ambiguity, Risk, Blocker, Dependency, Recommendation or Readiness Warning.
+Each Finding has exactly one Finding Type: Gap, Inconsistency, Ambiguity, Risk, Blocker, Dependency, Recommendation or Readiness Warning. Finding Type classifies the reported issue or observation; it is not a Response Shape, severity, priority, workflow state, task, recipient assignment or deterministic readiness outcome.
+
+A Requirements Quality Review may combine an Ambiguity Finding for unclear wording, a Gap Finding for missing known Acceptance coverage, a Question for unresolved intent, a Suggested Edit for a safe clarity improvement, a Proposed Relationship for missing traceability and a Summary. A Security Review may distinguish a grounded Risk Finding from a Dependency Finding. Request Feedback remains comment-oriented and may use Comments, Questions, Suggested Edits, Proposals and Summary, but does not use Findings or Finding Types merely to give open-ended feedback a structured-review appearance.
 
 Contributors should not directly alter canonical Product Knowledge through a Collaboration Request. The project owner or authorized requestor may manually update or create product knowledge after considering a response; the response itself is not applied to the Project State.
 

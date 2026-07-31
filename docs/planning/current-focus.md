@@ -160,6 +160,7 @@ Recent clarification established the first target user as an AI-assisted develop
 - Whole-Specification Testability Review is validated as a cross-section specification-coverage assessment: it identifies only documented behavior lacking observable acceptance evidence or validation links, and never executes tests, creates test results, certifies implementation or produces a readiness outcome.
 - UX Quality Lens compatibility is validated for an active User Flow: its experience-oriented journey, states and interaction guidance support grounded flow-clarity, transition, feedback, recovery and continuity Findings, while missing knowledge remains a context limit and the Review never certifies usability, accessibility, implementation or readiness.
 - The initial Review Lens catalog now has focused validated coverage for all six lenses across active Artifact, eligible Section, selected-content and whole-Specification exercises.
+- The initial Contribution Response model is validated through review and feedback examples: one bounded response may contain discrete one-shape items; only Findings use Finding Types; summaries synthesize rather than replace items; and any related edit or proposal remains a separate non-canonical response item.
 
 ---
 
@@ -175,7 +176,6 @@ Recent clarification established the first target user as an AI-assisted develop
 - The Project Collaboration Requests list defaults have been clarified: no lifecycle or response-handling filter; **Last updated — newest first** based on meaningful events visible to the viewer; a compact filter and sort set; compact request-oriented rows; parent-contained response handling; and an explicit Previous response label after Reopen.
 - Owner, collaborator, AI On Hold and reopened-request scenarios validate the Collaboration Requests list: the collaborator keeps a frozen read-only prior view after Reopen, viewer-visible events determine list ordering, and restored AI eligibility does not reorder an On Hold request before explicit Resume.
 - The complete role-aware list journey is validated: search, filters, sorting, 25-item pagination and retained response history preserve role visibility and current-cycle boundaries.
-- Validate the initial Response Shape and Finding Type model through concrete review and feedback examples.
 - Validate additional Context Relevance and Context Sufficiency rules through concrete assistance request examples.
 - Use the clarified AI assistance governance stance when refining provenance, contribution review and export visibility.
 - Define remaining artifact-type-specific propagation exceptions and future implementation constraints for the deterministic propagation engine.
