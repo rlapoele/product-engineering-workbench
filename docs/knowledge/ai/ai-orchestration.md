@@ -49,7 +49,7 @@ AI-generated contributions should begin as non-canonical drafts, suggestions or 
 
 AI assistance inside the workbench should be visible and governable.
 
-When an AI Contributor participates through a scoped request, users should be able to see:
+When an AI Contributor participates through a scoped request, the Project Owner should be able to inspect:
 
 - that the contribution came from an AI Contributor;
 - the assistant's display name;
@@ -57,7 +57,7 @@ When an AI Contributor participates through a scoped request, users should be ab
 - the capability or Review Lens used;
 - the assembled context when available;
 - its visible response-handling status; and
-- any explicit Response Source Link to a resulting Revision.
+- any explicit Response Source Link to a resulting Revision, as an owner-only reference to the existing Revision history.
 
 The workbench should not silently convert AI output into canonical product knowledge.
 
@@ -463,13 +463,13 @@ It cannot reliably prevent a human contributor from using external AI tools outs
 
 The product should therefore avoid claims that it can prove content was or was not externally AI-assisted.
 
-Instead, the MVP should retain a known AI activity trace for in-product AI assistance and voluntary external-AI declarations. The project owner can inspect its request, scope, response, context explanation, status and any explicit provenance or Revision link.
+Instead, the MVP should retain a known AI activity trace for in-product AI assistance and voluntary external-AI declarations. The project owner can inspect its request, scope, response, context explanation, status and any explicit provenance or Revision link. An explicit Response Source Link may be reached there only when the owner recorded it at the ordinary Revision save; the trace must not infer a response-to-Revision relationship, represent an absent link or become a separate response-trace surface.
 
 The trace does not establish exact final-text authorship after human editing, or prove whether undisclosed external AI was used.
 
 AI-use disclosure is a project-owner setting and is off by default. When enabled, it has one selected destination: Workbench only, Workbench and handoff, or Handoff only. Workbench only is the default enabled destination. Disclosure controls automatic presentation to collaborators and handoff consumers; it does not remove the project owner's access to the known AI activity trace.
 
-Contribution review remains required before canonical product knowledge changes. When disclosure includes handoff, `README.md` provides a concise human-readable known-AI disclosure and `manifest.json` is the authoritative structured record. They include only entries whose declared scope is included in the package, never raw prompts, assembled context or raw responses by default, and state the known-activity, non-authorship and non-detection limits. If no known activity relates to included scope, they state that limited absence with the same caveat.
+Contribution review remains required before canonical product knowledge changes. When disclosure includes handoff, `README.md` provides a concise human-readable known-AI disclosure and `manifest.json` is the authoritative structured record. They include only entries whose declared scope is included in the package, never raw prompts, assembled context, raw responses or Response Source Links by default, and state the known-activity, non-authorship and non-detection limits. Workbench disclosure likewise does not expose Response Source Links to collaborators. If no known activity relates to included scope, they state that limited absence with the same caveat.
 
 Unknown external AI use should be treated as a governance and trust policy issue rather than a technical prevention problem.
 

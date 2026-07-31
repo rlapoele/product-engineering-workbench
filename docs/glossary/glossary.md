@@ -66,7 +66,7 @@ AI Assistance Governance applies to AI assistance known to the workbench. It can
 
 An AI Activity Trace is the project-owner-inspectable record of known in-workbench AI assistance and voluntary external-AI disclosures.
 
-It may record the request, scope, response, Context Explanation, status and an explicit resulting Provenance or Revision link. It records known participation and responses, not a reliable attribution of every final word after human editing or a proof that external AI was not used.
+It may record the request, scope, response, Context Explanation, status and an explicit resulting Provenance or Revision link. When an AI Contribution Response has an explicit Response Source Link, the owner may reach that existing Revision-history link from the trace; the trace does not infer, count or represent an absent link. Response Source Links are not collaborator disclosure or handoff metadata. The trace records known participation and responses, not a reliable attribution of every final word after human editing or a proof that external AI was not used.
 
 ## Accessibility Specification Review
 
@@ -865,7 +865,7 @@ A Response Source Link is an optional, explicit navigation and provenance link f
 
 It records the retained response and its Request Cycle, the target Revision and Product Knowledge, the human who created the link and the time. It does not copy response content, select or disposition individual response items, or create a separate Provenance record.
 
-A Response Source Link means only that the response informed the owner-saved change. It does not imply acceptance, agreement, correctness, that every response item was adopted, exact word-level origin, sole causation or exclusive human authorship. The absence of a link does not imply that a response was ignored.
+A Response Source Link means only that the response informed the owner-saved change. It is retained in the authorized owner's Revision history and may be reached from that owner's Known AI Activity Trace when its source was an AI response. It does not create a separate response trace, collaborator-facing disclosure or Implementation Handoff Package metadata. It does not imply acceptance, agreement, correctness, that every response item was adopted, exact word-level origin, sole causation or exclusive human authorship. The absence of a link does not imply that a response was ignored.
 
 ---
 
