@@ -315,13 +315,15 @@ A Contribution Response Item is one discrete part of a submitted Contribution Re
 
 An item has one primary Response Shape. Each Finding Item has exactly one Finding Type to classify its issue or observation. A separate item may propose a response to that Finding, but neither item alters canonical Product Knowledge automatically.
 
+An authorized requestor may explicitly dismiss an individual item as not being pursued. A dismissed item remains visible as retained response evidence, with an optional rationale. Dismissal does not delete or reject the Contribution Response, change canonical Product Knowledge or mark the whole response Acted On. An authorized requestor may instead open an ordinary private creation or editing draft from an item and decide whether to save it through the usual reviewed flow.
+
 ## Contribution Response Status
 
 Contribution Response Status describes the requestor's handling of an individual Contribution Response.
 
-For the MVP, a response is Submitted when the request recipient sends it. The requestor may manually mark it Acknowledged to indicate that it has been read, and may later mark it Acted On to indicate that they have dealt with its content.
+For the MVP, a response is Submitted when the request recipient sends it. It becomes Acknowledged automatically when the requestor deliberately opens fully rendered response content for the first time: the current response in request detail or a retained response after expanding it. A list row, notification, compact preview or loading state does not acknowledge a response. The requestor may later explicitly mark it Acted On to indicate that they have dealt with its content.
 
-Acknowledged and Acted On are collaboration statuses only. They do not accept, apply, validate or otherwise change Product Knowledge, and Acted On does not require the requestor to link a Revision or record a note.
+Acknowledged and Acted On are collaboration statuses only. They do not accept, apply, validate or otherwise change Product Knowledge, and Acted On does not require the requestor to link a Revision or record a note. Automatic acknowledgement is a read marker: it does not change Last updated, reorder a request list or create a lifecycle-history event.
 
 ---
 

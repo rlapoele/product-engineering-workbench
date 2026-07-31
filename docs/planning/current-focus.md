@@ -161,6 +161,7 @@ Recent clarification established the first target user as an AI-assisted develop
 - UX Quality Lens compatibility is validated for an active User Flow: its experience-oriented journey, states and interaction guidance support grounded flow-clarity, transition, feedback, recovery and continuity Findings, while missing knowledge remains a context limit and the Review never certifies usability, accessibility, implementation or readiness.
 - The initial Review Lens catalog now has focused validated coverage for all six lenses across active Artifact, eligible Section, selected-content and whole-Specification exercises.
 - The initial Contribution Response model is validated through review and feedback examples: one bounded response may contain discrete one-shape items; only Findings use Finding Types; summaries synthesize rather than replace items; and any related edit or proposal remains a separate non-canonical response item.
+- Contribution Response presentation and follow-through are now bounded: request detail keeps response items together with shape/type labels and linked remedies; acknowledgement is automatic only on deliberate fully rendered response access and never reorders the list; dismissal remains retained item evidence; and Act On or separate drafts/saves remain explicit requestor judgments.
 
 ---
 
