@@ -4,7 +4,9 @@ The first-slice backend is the server application and canonical-persistence boun
 
 ## Responsibilities
 
-The backend receives the authenticated user identity, resolves Project ownership, and permits only the Project Owner to read or change their selected first-slice Project State. It executes the explicit Project commands and returns authoritative saved state.
+The backend receives the current authenticated user's stable, opaque identity, resolves Project ownership, and permits only the Project Owner to read or change their selected first-slice Project State. It derives that identity from the authenticated session rather than accepting an owner identifier from the browser. It executes the explicit Project commands and returns authoritative saved state.
+
+Every Project view and command requires authentication. Project creation records the authenticated user as the immutable owner. Listing is limited to that user's Projects; load and write operations require a matching owner. A request for a non-owned Project returns a privacy-preserving not-found result without confirming the Project's existence.
 
 Creating a Project atomically records the Project, its owner, the fixed starter and its default Specification composition. Saving the first Goal atomically records the canonical Draft Goal and its first Revision. Commands must be retry-safe and return saved state with Revision or version information suitable for the future offline-evolvable posture.
 

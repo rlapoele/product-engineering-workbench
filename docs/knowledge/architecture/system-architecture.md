@@ -118,7 +118,11 @@ The boundary model is:
 
 The minimum commands are: list the current user's Projects; create a Project and its default Specification composition atomically; load an owned Project; and create and save a Goal with its first Revision atomically.
 
-The identity provider, UI framework, API style, database, deployment platform and client-storage technology remain undecided. The browser reaches Project data and commands through the client-facing boundary established by the online-first, offline-evolvable posture; a future local store and synchronization layer may sit behind that boundary.
+The first slice requires an authenticated user for every Project view and command. The identity boundary supplies a stable, opaque user identifier; the server derives it from the authenticated session rather than accepting an owner identifier from the browser. Project creation records that identifier as the Project's immutable owner. List, load and write operations permit only a matching owner. A non-owner receives a privacy-preserving not-found result, which does not disclose whether a Project exists.
+
+If a session expires, the server does not execute the command. The browser keeps visible unsaved input available for the user to retry after reauthentication, but never presents it as saved. A retry may retain its Operation ID only when the same authenticated user resumes it.
+
+Anonymous Projects, sharing, invitations, collaborators, ownership transfer, roles beyond the owner, account/profile management and authentication-provider mechanics are outside the first slice. The identity provider, UI framework, API style, database, deployment platform and client-storage technology remain undecided. The browser reaches Project data and commands through the client-facing boundary established by the online-first, offline-evolvable posture; a future local store and synchronization layer may sit behind that boundary.
 
 ---
 

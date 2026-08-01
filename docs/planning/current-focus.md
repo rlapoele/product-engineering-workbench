@@ -172,7 +172,7 @@ Recent clarification established the first target user as an AI-assisted develop
 - The selected first slice now has its baseline data and lifecycle contracts: Project creation materializes the fixed empty Specification without a Revision; explicit Goal save atomically creates canonical Draft Product Knowledge and immutable Revision 1; and Operation IDs make writes retry-safe without duplicate state. Relationships, expanded history and all collaboration or synchronization behavior remain deferred.
 - The selected first slice now has a low-fidelity UX prototype and interaction-validation model: it tests the first-use home, fixed-starter Project creation, empty document, local Goal creation, explicit save, later Project return and essential pending, error and keyboard states. It deliberately defers navigation-persistent drafts, visual design, authentication mechanics and broader MVP capability.
 - The selected first slice now has a proportionate five-gate engineering-quality baseline covering core correctness, owner-only authority and privacy, journey/accessibility validation, recovery/observability and release discipline. It treats Product Knowledge as confidential by default while deferring enterprise-scale availability, performance and compliance commitments.
-- The five first-slice decision packages have been reassessed as coherent: the chosen scope, online modular-monolith boundaries, atomic data contracts, interaction-validation model and quality gates describe the same owner-controlled journey. They remain inactive planning and do not authorize implementation. Remaining prerequisites are the minimal access/identity contract, `contentLocale` default, starter-version convention, executed prototype evidence, and concrete technology/operational choices for the agreed quality gates.
+- The five first-slice decision packages have been reassessed as coherent: the chosen scope, online modular-monolith boundaries, atomic data contracts, interaction-validation model and quality gates describe the same owner-controlled journey. They remain inactive planning and do not authorize implementation. The accepted access/identity contract now requires authenticated, server-derived owner identity, owner-only Project access and privacy-preserving non-owner results. Remaining prerequisites are the `contentLocale` default, starter-version convention, executed prototype evidence, and concrete technology/operational choices for the agreed quality gates.
 
 ---
 
@@ -192,7 +192,7 @@ Recent clarification established the first target user as an AI-assisted develop
 - Use the clarified AI assistance governance stance when refining provenance, contribution review and export visibility.
 - Define remaining artifact-type-specific propagation exceptions and future implementation constraints for the deterministic propagation engine.
 - Use the selected first-slice system boundaries, data contracts, interaction-validation model and engineering-quality baseline when evaluating future implementation readiness.
-- Define the minimal first-slice access and identity contract before technology selection, then resolve the recorded locale, starter-version and operational prerequisites in the relevant decision packages.
+- Define the Project `contentLocale` default next, then resolve the starter-version and operational prerequisites in the relevant decision packages.
 - Use the Project Model to inform the next UX, AI and architecture documents.
 
 ---

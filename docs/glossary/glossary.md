@@ -10,6 +10,12 @@ Unless explicitly stated otherwise, the definitions contained in this glossary t
 
 # A
 
+## Authenticated User
+
+An Authenticated User is the current human user whose identity has been established by the workbench's identity boundary.
+
+For the first slice, the identity boundary supplies one stable, opaque user identifier to the server application. The browser does not choose or submit that identifier as Project ownership or command authority. Authentication provider, credential, account-recovery and session-implementation details remain outside this contract.
+
 ## Assistance Request Type
 
 An Assistance Request Type describes the kind of help a user is asking for when creating a scoped Collaboration Request or requesting AI assistance.

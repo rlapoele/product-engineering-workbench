@@ -108,6 +108,8 @@ The selected first slice materializes only the records needed for its owner-cont
 
 Project creation atomically creates the Project and its empty fixed Specification. It records neither a Product Artifact nor a Revision: it instantiates system-defined starter composition rather than saving authored Product Knowledge.
 
+The Project owner identifier comes only from the current authenticated user's server-derived identity; a browser command does not supply or select it. That owner is immutable in the first slice. Only the matching owner may list, load or change the Project; a non-owner receives a privacy-preserving not-found result. Collaboration, delegated authority and ownership transfer remain deferred.
+
 The browser may hold a private in-progress Goal draft. That draft is not canonical Project State and does not create a Goal or Revision. `Done editing` atomically creates the canonical Draft Goal and its first Revision. A failed request leaves neither a partial Goal nor a partial Revision.
 
 Every first-slice write carries an Operation ID. The system retains each command's outcome so a retry with the same Operation ID returns the original outcome without applying another canonical change. The same Operation ID with changed command content is rejected rather than treated as a new command.
