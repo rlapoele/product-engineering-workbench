@@ -99,3 +99,23 @@ The first slice should therefore:
 Later offline support may add a local Project store, an outbox, synchronization, retry and recovery behavior, and sync-state presentation behind those boundaries. A future sync state must communicate whether local changes are saved, awaiting synchronization or blocked; a browser online/offline hint alone is not a correctness signal.
 
 The first slice deliberately does not implement local Project persistence, synchronization, conflict resolution, offline attachments, offline collaboration or online/offline status UI. It also does not require event sourcing, a local-first synchronization engine, a graph database or a specific client storage technology.
+
+---
+
+# 4. First-Slice System Boundaries
+
+The selected first slice uses one deployable, online **modular monolith**. The term describes logical responsibilities inside one application deployment; it does not require microservices, separate deployment units or a distributed system.
+
+The boundary model is:
+
+| Boundary | Responsibility | Explicit limit |
+|---|---|---|
+| Browser presentation | Onboarding, Project home, Project creation, document rendering and private UI draft interaction. | Does not authorize Project access or become canonical Product State. |
+| Identity boundary | Establishes the current authenticated user. | Does not decide Project ownership or permissions. |
+| Server application | Enforces owner-only access, executes Project commands and assembles Project views. | Does not expose persistence details as a browser contract. |
+| Canonical persistence | Durably records Projects, Specifications, Goals and Revisions. | Does not encode presentation behavior. |
+| Fixed-starter definition | Supplies the selected template/preset and default section composition. | Is not user-editable configuration in this slice. |
+
+The minimum commands are: list the current user's Projects; create a Project and its default Specification composition atomically; load an owned Project; and create and save a Goal with its first Revision atomically.
+
+The identity provider, UI framework, API style, database, deployment platform and client-storage technology remain undecided. The browser reaches Project data and commands through the client-facing boundary established by the online-first, offline-evolvable posture; a future local store and synchronization layer may sit behind that boundary.

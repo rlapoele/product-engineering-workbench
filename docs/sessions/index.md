@@ -132,3 +132,4 @@
 | 2026-07-31-10 | 2026-07-31 | 10 | Implementation Entry Guidance | Crystallized | Inactive five-package estimate for a future narrow implementation slice |
 | 2026-07-31-11 | 2026-07-31 | 11 | MVP Implementation Cut | Crystallized | Inactive first-use vertical slice: onboarding, Project creation, one saved Goal and Revision; explicit deferrals |
 | 2026-08-01-01 | 2026-08-01 | 1 | Online-First, Offline-Evolvable Posture | Crystallized | Online first slice with future single-owner offline-authoring seams; synchronization and conflicts deferred |
+| 2026-08-01-02 | 2026-08-01 | 2 | First-Slice System Boundaries | Crystallized | One deployable online modular monolith with presentation, identity, application, persistence and starter boundaries |
