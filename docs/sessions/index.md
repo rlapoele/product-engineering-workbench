@@ -138,3 +138,4 @@
 | 2026-08-01-05 | 2026-08-01 | 5 | First-Slice Engineering-Quality Baseline | Crystallized | Five-gate correctness, privacy, accessibility, recovery and release evidence baseline |
 | 2026-08-01-06 | 2026-08-01 | 6 | First-Slice Package Coherence Review | Crystallized | Coherent five-package owner journey and remaining implementation prerequisites |
 | 2026-08-01-07 | 2026-08-01 | 7 | First-Slice Access And Identity Contract | Crystallized | Authenticated server-derived owner identity, privacy-preserving owner-only access and same-user retry boundary |
+| 2026-08-01-08 | 2026-08-01 | 8 | First-Slice Content Locale Default | Crystallized | Editable Project Content Language defaults from resolved Interface Locale; locale scope remains Project-level |

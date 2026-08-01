@@ -195,6 +195,8 @@ Content Locale identifies the locale of user-authored specification content for 
 
 For the MVP, Product Artifacts inherit the Project or Specification content locale rather than storing artifact-level localization fields.
 
+For the first slice, `contentLocale` is a Project-level well-formed BCP 47 language tag. It defaults from the application's resolved Interface Locale at Project creation, but the Project Owner may choose a different Content Language before saving the Project. Later changes to Interface Locale do not alter the saved Project value.
+
 ---
 
 ## Collaboration Request
@@ -456,6 +458,12 @@ It identifies its Project State basis and lets the user navigate to the relevant
 ---
 
 # I
+
+## Interface Locale
+
+Interface Locale identifies the locale used to present workbench-controlled interface text. It is distinct from Content Locale, which identifies the language of user-authored specification content.
+
+For the first slice, the application resolves the current Interface Locale at entry from the browser's highest-preference valid locale, with `en` as the fallback. It does not require a saved user preference, interface-language settings or fully localized interface content. The resolved value only provides the initial default for a new Project's Content Language.
 
 ## Implementation-ready Knowledge
 

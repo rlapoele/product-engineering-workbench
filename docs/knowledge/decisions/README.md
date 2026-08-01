@@ -34,3 +34,4 @@ When in doubt, prefer updating an existing document rather than creating a new o
 | ADR-012 | First-Slice UX Prototype Validation | Accepted | 2026-08-01 |
 | ADR-013 | First-Slice Engineering-Quality Baseline | Accepted | 2026-08-01 |
 | ADR-014 | First-Slice Access And Identity Contract | Accepted | 2026-08-01 |
+| ADR-015 | First-Slice Content Locale Default | Accepted | 2026-08-01 |

@@ -66,6 +66,8 @@ The user should be able to customize which template sections are included before
 
 User-authored specification content should use a Project or Specification-level `contentLocale`.
 
+For the first slice, Project creation presents an editable **Content language** control. It is pre-filled from the current resolved Interface Locale, itself resolved at application entry from the browser's highest-preference valid locale with `en` as fallback. The owner may choose a different valid value before creation; that Project-level value remains distinct from Interface Locale and does not change merely because the interface language changes later.
+
 ---
 
 # 4. Specification Document Template
@@ -276,7 +278,7 @@ It must validate these user-visible states:
 | Moment | Required validation |
 |---|---|
 | First-use home | A no-Projects user recognizes one clear primary action: **Create your first Project**. |
-| Project creation | Required-title validation, optional description and an understandable fixed starter without a fake template picker. |
+| Project creation | Required-title validation, optional description, editable **Content language** pre-filled from the resolved Interface Locale, and an understandable fixed starter without a fake template picker. |
 | Project creation pending or failure | Pending state is clear; on failure, entered values remain visible and retry is available. |
 | Empty Specification | Users understand that the document is empty but actionable. |
 | Add Goal | Users find and understand the local action in `Goals and Success Criteria`. |
@@ -290,7 +292,7 @@ Keyboard validation covers logical sequential focus, visible focus, keyboard act
 
 The validation task asks a target user to capture an initial outcome for a new product idea and return to it later. Evidence includes whether the user completes the journey without explanation, distinguishes private draft from saved state, understands the fixed starter and `Done editing`, and recovers from simulated creation or save failure.
 
-This model does not validate persistent Goal-draft resumption across navigation; that capability remains deferred. It does validate preserving the visible draft after a save failure, which is necessary to prevent silent loss and allow a retry or explicit discard. It also does not validate authentication mechanics, offline behavior, visual styling, alternative starters, collaboration, AI or handoff.
+This model does not validate persistent Goal-draft resumption across navigation; that capability remains deferred. It does validate preserving the visible draft after a save failure, which is necessary to prevent silent loss and allow a retry or explicit discard. It also validates that Content Language is visible, editable and carried through Project creation, but does not validate browser-locale detection, interface-language settings or translated interface content. Authentication mechanics, offline behavior, visual styling, alternative starters, collaboration, AI and handoff remain outside the model.
 
 ### Deterministic next-step guidance
 

@@ -14,7 +14,7 @@ The first implementation slice has a selected user journey, system boundaries an
 
 Use a low-fidelity interactive journey prototype and observed task-validation script for one first-time Project Owner.
 
-The prototype covers authenticated entry; the calm no-Projects home; Project creation with required title, optional description and the fixed starter; empty Specification orientation; local `Add Goal`; inline title/content editing; `Done editing`; saved Draft Goal presentation; and later return to the Project.
+The prototype covers authenticated entry; the calm no-Projects home; Project creation with required title, optional description, editable Content Language pre-filled from the resolved Interface Locale and the fixed starter; empty Specification orientation; local `Add Goal`; inline title/content editing; `Done editing`; saved Draft Goal presentation; and later return to the Project.
 
 It must simulate project-creation and Goal-save pending and failure states. Failures preserve the relevant entered or visible draft data, permit retry and never present false saved state. The saved Goal presents a textual Draft status and concise confirmation, then receives focus.
 
@@ -22,7 +22,7 @@ Keyboard validation covers sequential and visible focus, keyboard activation, la
 
 The validation task asks users to capture an initial outcome for a new product idea and return to it later. It assesses whether they can complete that journey, distinguish private draft from canonical saved state, understand the fixed starter and explicit save action, and recover from simulated failure without explanation.
 
-Persistent draft resumption across navigation, authentication mechanics, offline behavior, visual styling, alternative starters, collaboration, AI and handoff are outside this validation model.
+Persistent draft resumption across navigation, browser-locale detection, interface-language settings, translated interface content, authentication mechanics, offline behavior, visual styling, alternative starters, collaboration, AI and handoff are outside this validation model.
 
 ## Rationale
 
