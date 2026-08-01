@@ -171,6 +171,7 @@ Recent clarification established the first target user as an AI-assisted develop
 - The selected first slice now has a technology-neutral system-boundary model: one deployable online modular monolith separates browser presentation, identity, server application commands, canonical persistence and the fixed starter. The browser never authorizes ownership or owns canonical state; Project creation and first Goal save are explicit atomic command boundaries.
 - The selected first slice now has its baseline data and lifecycle contracts: Project creation materializes the fixed empty Specification without a Revision; explicit Goal save atomically creates canonical Draft Product Knowledge and immutable Revision 1; and Operation IDs make writes retry-safe without duplicate state. Relationships, expanded history and all collaboration or synchronization behavior remain deferred.
 - The selected first slice now has a low-fidelity UX prototype and interaction-validation model: it tests the first-use home, fixed-starter Project creation, empty document, local Goal creation, explicit save, later Project return and essential pending, error and keyboard states. It deliberately defers navigation-persistent drafts, visual design, authentication mechanics and broader MVP capability.
+- The selected first slice now has a proportionate five-gate engineering-quality baseline covering core correctness, owner-only authority and privacy, journey/accessibility validation, recovery/observability and release discipline. It treats Product Knowledge as confidential by default while deferring enterprise-scale availability, performance and compliance commitments.
 
 ---
 
@@ -189,7 +190,7 @@ Recent clarification established the first target user as an AI-assisted develop
 - Validate additional Context Relevance rules through concrete assistance request examples.
 - Use the clarified AI assistance governance stance when refining provenance, contribution review and export visibility.
 - Define remaining artifact-type-specific propagation exceptions and future implementation constraints for the deterministic propagation engine.
-- Use the selected first-slice system boundaries, data contracts and interaction-validation model when defining engineering-quality expectations.
+- Use the selected first-slice system boundaries, data contracts, interaction-validation model and engineering-quality baseline when evaluating future implementation readiness.
 - Use the Project Model to inform the next UX, AI and architecture documents.
 
 ---

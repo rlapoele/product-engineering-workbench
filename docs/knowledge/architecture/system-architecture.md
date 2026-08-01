@@ -119,3 +119,11 @@ The boundary model is:
 The minimum commands are: list the current user's Projects; create a Project and its default Specification composition atomically; load an owned Project; and create and save a Goal with its first Revision atomically.
 
 The identity provider, UI framework, API style, database, deployment platform and client-storage technology remain undecided. The browser reaches Project data and commands through the client-facing boundary established by the online-first, offline-evolvable posture; a future local store and synchronization layer may sit behind that boundary.
+
+---
+
+# 5. First-Slice Quality And Operational Boundaries
+
+The first slice may not rely on a successful happy path alone. Its command boundaries must be testable for atomicity, owner-only access and retry behavior. Browser-level validation must exercise the selected first-use and save-failure journeys, while manual keyboard and screen-reader-oriented checks cover the documented interaction states.
+
+Operational telemetry must record privacy-safe command outcomes and failures without recording Project or Goal content, credentials or session secrets. Canonical persistence must have a verified recovery path before it holds real user content. Production configuration and secrets remain outside local development configuration, and a production-like environment must validate the full journey and recovery path before release.
