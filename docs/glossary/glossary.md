@@ -594,6 +594,12 @@ Knowledge
 
 # O
 
+## Operation ID
+
+An Operation ID is a caller-generated stable identifier attached to one explicit write command. The system retains the command outcome so that a retry with the same Operation ID returns the original outcome rather than applying an additional canonical change.
+
+An Operation ID is not a Product Artifact, Revision, lifecycle state or ordering mechanism. If a retry presents the same Operation ID with different command content, the system must reject that mismatch rather than treating it as a new operation.
+
 ## Open Question
 
 An unresolved question that requires further exploration before becoming stable project knowledge.
@@ -880,6 +886,8 @@ When the Project Owner explicitly records a Response Source Link at save, the Re
 Revision is distinct from Contribution and Provenance: Contribution records participation, Revision records saved change history and Provenance records origin or derivation.
 
 For an interactive artifact edit, a Revision is created only when the user selects `Done editing`, not while an Edit-in-progress Draft is being written or preserved. A saved within-section Artifact Placement reorder is also a Revision of document composition.
+
+For the selected first slice, a Goal Revision preserves a complete immutable snapshot of the saved Goal and its per-Goal version. Creating a Project's fixed empty Specification does not create a Revision because it instantiates system-defined starter composition rather than saving authored Product Knowledge.
 
 ---
 

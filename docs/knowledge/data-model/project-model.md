@@ -95,6 +95,25 @@ Specification Sections should organize artifact references and section content r
 
 This preserves document-first UX while keeping artifact identity and graph reasoning available.
 
+## 3.2 First-Slice Data And Lifecycle Contract
+
+The selected first slice materializes only the records needed for its owner-controlled first-use journey. The broader Project State model remains authoritative for later scope but does not need to be implemented in this slice.
+
+| Record | First-slice contract |
+|---|---|
+| Project | Stable identifier; owner identifier; required title; optional description; active status; content locale; fixed starter identifier and version. |
+| Specification | Stable identifier; Project identifier; materialized default section identifiers and ordering from the fixed starter. |
+| Goal | Stable identifier; Project, Specification and canonical-section reference; `Goal` type; required non-whitespace title and content; `Draft` status; creator and timestamps; current Revision reference. |
+| Revision | Stable identifier; Goal identifier; immutable complete snapshot of the saved Goal; per-Goal version; saving owner and time. |
+
+Project creation atomically creates the Project and its empty fixed Specification. It records neither a Product Artifact nor a Revision: it instantiates system-defined starter composition rather than saving authored Product Knowledge.
+
+The browser may hold a private in-progress Goal draft. That draft is not canonical Project State and does not create a Goal or Revision. `Done editing` atomically creates the canonical Draft Goal and its first Revision. A failed request leaves neither a partial Goal nor a partial Revision.
+
+Every first-slice write carries an Operation ID. The system retains each command's outcome so a retry with the same Operation ID returns the original outcome without applying another canonical change. The same Operation ID with changed command content is rejected rather than treated as a new command.
+
+The contract deliberately defers Goal relationships, additional Product Artifact types, later Goal revisions, revision diffs, draft resumption, Project archiving, impact propagation, collaboration and conflict resolution.
+
 ---
 
 # 4. Project

@@ -8,6 +8,8 @@ The backend receives the authenticated user identity, resolves Project ownership
 
 Creating a Project atomically records the Project, its owner, the fixed starter and its default Specification composition. Saving the first Goal atomically records the canonical Draft Goal and its first Revision. Commands must be retry-safe and return saved state with Revision or version information suitable for the future offline-evolvable posture.
 
+Every write carries an Operation ID. The backend retains the completed command outcome and returns it for a matching retry, so transient network failure cannot create duplicate Projects, Goals or Revisions. A repeated Operation ID with different command content is rejected. Project creation creates no Revision; the first Goal save creates the first Revision as an immutable complete Goal snapshot.
+
 ## Limits
 
 The backend does not prescribe the browser presentation, require a particular identity provider, expose a database-specific contract, or implement local synchronization, conflict resolution, collaboration, AI assistance, handoff generation or impact propagation in the first slice.

@@ -30,3 +30,4 @@ When in doubt, prefer updating an existing document rather than creating a new o
 | ADR-008 | AI Assistance Visibility And Governance | Accepted | 2026-07-20 |
 | ADR-009 | Online-First, Offline-Evolvable Posture | Accepted | 2026-08-01 |
 | ADR-010 | First-Slice System Boundaries | Accepted | 2026-08-01 |
+| ADR-011 | First-Slice Data And Lifecycle Contracts | Accepted | 2026-08-01 |
