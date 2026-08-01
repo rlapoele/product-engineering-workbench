@@ -114,13 +114,15 @@ The boundary model is:
 | Identity boundary | Establishes the current authenticated user. | Does not decide Project ownership or permissions. |
 | Server application | Enforces owner-only access, executes Project commands and assembles Project views. | Does not expose persistence details as a browser contract. |
 | Canonical persistence | Durably records Projects, Specifications, Goals and Revisions. | Does not encode presentation behavior. |
-| Fixed-starter definition | Supplies the selected template/preset and default section composition. | Is not user-editable configuration in this slice. |
+| Fixed-starter definition | Supplies immutable, versioned selected template/preset definitions and default section composition. | Is not user-editable configuration in this slice, and existing Projects do not auto-upgrade. |
 
 The minimum commands are: list the current user's Projects; create a Project and its default Specification composition atomically; load an owned Project; and create and save a Goal with its first Revision atomically.
 
 The first slice requires an authenticated user for every Project view and command. The identity boundary supplies a stable, opaque user identifier; the server derives it from the authenticated session rather than accepting an owner identifier from the browser. Project creation records that identifier as the Project's immutable owner. List, load and write operations permit only a matching owner. A non-owner receives a privacy-preserving not-found result, which does not disclose whether a Project exists.
 
 At application entry, the browser presentation resolves the current Interface Locale from the browser's highest-preference valid locale, with `en` as fallback. Project creation pre-fills its editable Content Language from that resolved value; the server validates and persists the owner's chosen Project `contentLocale`. Interface Locale is not Project authority or canonical Project State, and changing it later does not alter a saved Project.
+
+For the first slice, the server selects the fixed starter `implementation-ready-web-app-specification.standard-web-app` at version `1` and records both values on the Project. A Starter Version is an immutable definition of the initial template/preset composition, including section identifiers, order and semantic label/guidance references. Future source changes that alter materialized starter output create the next positive integer version; existing Projects remain on their recorded version, and translation changes behind unchanged semantic keys do not create a new version.
 
 If a session expires, the server does not execute the command. The browser keeps visible unsaved input available for the user to retry after reauthentication, but never presents it as saved. A retry may retain its Operation ID only when the same authenticated user resumes it.
 

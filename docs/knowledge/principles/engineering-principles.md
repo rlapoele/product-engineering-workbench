@@ -8,7 +8,7 @@ Before the selected first slice is used for real user content, it must satisfy f
 
 | Gate | Required evidence |
 |---|---|
-| Core correctness | Automated tests prove fixed-starter Project creation without a Revision; atomic Goal/Revision 1 save; exact Operation-ID retry behavior; and rejection of mismatched Operation-ID reuse. |
+| Core correctness | Automated tests prove fixed-starter version `1` Project creation with its expected composition and without a Revision; atomic Goal/Revision 1 save; exact Operation-ID retry behavior; and rejection of mismatched Operation-ID reuse. |
 | Authority and privacy | Integration tests prove owner-only Project reads and writes. Product content, credentials and session secrets do not appear in ordinary logs, telemetry or error messages. |
 | Journey and accessibility | Browser-level coverage of the essential journey and simulated creation/save failure; manual keyboard and screen-reader-oriented checks for focus, labels, errors and saved-state feedback. |
 | Recovery and observability | Privacy-safe structured command outcomes and failure metrics for Project creation and Goal save; tested backup restoration before real user content is relied upon. |

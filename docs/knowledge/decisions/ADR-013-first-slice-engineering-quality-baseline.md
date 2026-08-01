@@ -16,7 +16,7 @@ The quality baseline must be proportionate to one online modular monolith. It mu
 
 Before the first slice holds real user content, require five quality gates:
 
-1. **Core correctness:** automated coverage of fixed-starter Project creation without a Revision, atomic Goal/Revision 1 save, exact Operation-ID retry behavior and mismatched-ID rejection.
+1. **Core correctness:** automated coverage of fixed-starter version `1` Project creation with its expected composition and without a Revision, atomic Goal/Revision 1 save, exact Operation-ID retry behavior and mismatched-ID rejection.
 2. **Authority and privacy:** integration coverage of owner-only Project reads and writes; no Product content, credentials or session secrets in ordinary logs, telemetry or error messages.
 3. **Journey and accessibility:** browser-level coverage of the essential journey and simulated creation/save failure; manual keyboard and screen-reader-oriented checks for focus, labels, errors and saved-state feedback.
 4. **Recovery and observability:** privacy-safe structured command outcomes and failure metrics for Project creation and Goal save; tested backup restoration before real user content is relied upon.

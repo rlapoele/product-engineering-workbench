@@ -907,6 +907,12 @@ For the selected first slice, a Goal Revision preserves a complete immutable sna
 
 # S
 
+## Starter Version
+
+A Starter Version is an immutable, ordered definition of the starter-controlled document a new Project receives. It identifies the selected template/preset pair, included section identifiers, their order, and the semantic label and guidance references used to render that initial structure.
+
+For the first slice, the only starter is `implementation-ready-web-app-specification.standard-web-app` at positive integer version `1`. The server selects the active version and records it on the Project. Existing Projects never auto-upgrade. A later starter change that changes a new Project's materialized document creates the next integer version; translation changes behind unchanged semantic keys do not.
+
 ## Section Catalog
 
 A Section Catalog is the reusable collection of specification sections that can be composed into Specification Document Templates and Project Presets.

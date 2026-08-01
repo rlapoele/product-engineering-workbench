@@ -14,7 +14,7 @@ The first-slice system-boundary decision requires atomic Project creation and Go
 
 The first slice persists four records: Project, Specification, Goal and Revision.
 
-Project creation atomically creates an active owner-controlled Project with a required title, optional description, content locale, fixed starter identifier/version and one empty materialized Specification. The Specification records its stable identity, Project identity, and the starter's default section identifiers and ordering. Project creation creates no Product Artifact or Revision.
+Project creation atomically creates an active owner-controlled Project with a required title, optional description, content locale, fixed starter identifier/version and one empty materialized Specification. The first starter is server-selected as `implementation-ready-web-app-specification.standard-web-app` at positive integer version `1`; its definition is immutable and includes the template/preset pair, section identifiers, ordering and semantic label/guidance references. The Specification records its stable identity, Project identity, and the starter's default section identifiers and ordering. Project creation creates no Product Artifact or Revision.
 
 The first Goal has a stable identity, Project, Specification and canonical-section references, `Goal` type, required non-whitespace title and content, `Draft` lifecycle status, creator/timestamps and current Revision reference. `Done editing` atomically creates the canonical Goal and Revision 1.
 
@@ -28,7 +28,7 @@ The browser's in-progress Goal draft is private and non-canonical until `Done ed
 
 This compact model is sufficient for the chosen user journey while preserving clear owner authority, visible save semantics, immutable history and retry safety. Complete Goal snapshots are easy to understand and load, and avoid requiring event-sourcing or revision-diff machinery before they demonstrate value.
 
-The materialized starter composition keeps created Projects stable if the source starter changes later. Stable record identities, versions and retry-safe commands also preserve options for future offline synchronization without requiring it now.
+The materialized starter composition keeps created Projects stable if the source starter changes later. A later materialized-output change creates the next integer Starter Version; unchanged semantic keys with new translations do not. Stable record identities, versions and retry-safe commands also preserve options for future offline synchronization without requiring it now.
 
 ## Consequences
 
