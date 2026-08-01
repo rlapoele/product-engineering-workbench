@@ -265,6 +265,33 @@ The affected artifacts retain persistent, accessible cues in the document for as
 
 These interaction rules are a first pass and should be validated through later prototypes and concrete specification exercises.
 
+## First-Slice UX Prototype And Interaction Validation
+
+The selected first slice requires a low-fidelity, interactive journey prototype and an observed task-validation script. This is a validation model, not a production interface, visual-design system or implementation authorization.
+
+The prototype follows one first-time Project Owner through authenticated entry, the calm no-Projects home, Project creation, the fixed `Implementation-Ready Web App Specification` / `Standard Web App` starter, the empty Specification, local `Add Goal`, inline Goal editing, explicit `Done editing`, and later return to the saved Project.
+
+It must validate these user-visible states:
+
+| Moment | Required validation |
+|---|---|
+| First-use home | A no-Projects user recognizes one clear primary action: **Create your first Project**. |
+| Project creation | Required-title validation, optional description and an understandable fixed starter without a fake template picker. |
+| Project creation pending or failure | Pending state is clear; on failure, entered values remain visible and retry is available. |
+| Empty Specification | Users understand that the document is empty but actionable. |
+| Add Goal | Users find and understand the local action in `Goals and Success Criteria`. |
+| Inline Goal editor | Title and content are clear; focus enters the title field. |
+| Explicit save | Users understand that `Done editing` creates canonical saved Product Knowledge rather than merely exiting the editor. |
+| Goal save failure | The visible draft remains available for retry or explicit discard; no false saved state appears. |
+| Saved result | The rendered Goal, textual `Draft` status and concise save confirmation are understandable; focus moves to the saved Goal. |
+| Project return | The Project appears in the user's Project home and reopens with the saved Goal. |
+
+Keyboard validation covers logical sequential focus, visible focus, keyboard activation, labelled controls, focus entry into the Goal editor and accessible validation or error feedback. Status and error communication must not rely on color alone.
+
+The validation task asks a target user to capture an initial outcome for a new product idea and return to it later. Evidence includes whether the user completes the journey without explanation, distinguishes private draft from saved state, understands the fixed starter and `Done editing`, and recovers from simulated creation or save failure.
+
+This model does not validate persistent Goal-draft resumption across navigation; that capability remains deferred. It does validate preserving the visible draft after a save failure, which is necessary to prevent silent loss and allow a retry or explicit discard. It also does not validate authentication mechanics, offline behavior, visual styling, alternative starters, collaboration, AI or handoff.
+
 ### Deterministic next-step guidance
 
 The document should offer an optional, user-invoked `What next?` control near the document outline. It presents deterministic guidance derived from the current Project State; it is not a task list, Product Artifact, workflow gate or AI request.

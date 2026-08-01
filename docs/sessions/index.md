@@ -134,3 +134,4 @@
 | 2026-08-01-01 | 2026-08-01 | 1 | Online-First, Offline-Evolvable Posture | Crystallized | Online first slice with future single-owner offline-authoring seams; synchronization and conflicts deferred |
 | 2026-08-01-02 | 2026-08-01 | 2 | First-Slice System Boundaries | Crystallized | One deployable online modular monolith with presentation, identity, application, persistence and starter boundaries |
 | 2026-08-01-03 | 2026-08-01 | 3 | First-Slice Data And Lifecycle Contracts | Crystallized | Project, Specification, Goal and Revision contracts with atomic saves and retry-safe Operation IDs |
+| 2026-08-01-04 | 2026-08-01 | 4 | First-Slice UX Prototype Validation | Crystallized | Low-fidelity first-use and save journey with failure, keyboard and state validation |

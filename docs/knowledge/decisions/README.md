@@ -31,3 +31,4 @@ When in doubt, prefer updating an existing document rather than creating a new o
 | ADR-009 | Online-First, Offline-Evolvable Posture | Accepted | 2026-08-01 |
 | ADR-010 | First-Slice System Boundaries | Accepted | 2026-08-01 |
 | ADR-011 | First-Slice Data And Lifecycle Contracts | Accepted | 2026-08-01 |
+| ADR-012 | First-Slice UX Prototype Validation | Accepted | 2026-08-01 |
