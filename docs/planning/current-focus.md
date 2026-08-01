@@ -167,6 +167,7 @@ Recent clarification established the first target user as an AI-assisted develop
 - Response-to-Revision traceability is deliberately minimal: when the Project Owner saves a Revision, they may explicitly link one whole Contribution Response as its source; the optional link remains owner-visible Revision-history evidence, never a separate response trace, collaborator disclosure, handoff field, automatic acceptance, item disposition or authorship claim.
 - Context Relevance is now a request-specific inclusion rule: ordinary assembly contains only Primary and Supporting context; Optional material requires an explicit Brief need before submission; structurally nearby but non-supporting material remains excluded without a global relevance score or graph-distance rule; and a recipient who needs more material returns a Question or caveated response until the owner explicitly Reopens and resubmits revised context.
 - The inactive MVP implementation cut is now selected: a new or returning authenticated user reaches a calm Project home, creates and later revisits an owner-controlled Project using the fixed `Implementation-Ready Web App Specification` / `Standard Web App` starter, then creates and explicitly saves one Goal as a Draft Product Artifact with its first Revision. This is a planning boundary only; it does not authorize implementation or resolve the remaining technical, contract, prototype or quality packages.
+- The selected first slice now has an online-first, offline-evolvable architectural posture: the slice remains server-authoritative and online-only, while its Project data and command boundaries, stable identifiers, retry-safe writes, saved-state version information and private-draft distinction preserve the option for later single-owner offline authoring. Local storage, synchronization, conflict resolution and offline collaboration remain deferred.
 
 ---
 
@@ -185,6 +186,7 @@ Recent clarification established the first target user as an AI-assisted develop
 - Validate additional Context Relevance rules through concrete assistance request examples.
 - Use the clarified AI assistance governance stance when refining provenance, contribution review and export visibility.
 - Define remaining artifact-type-specific propagation exceptions and future implementation constraints for the deterministic propagation engine.
+- Define the selected first slice's system boundaries and evaluation criteria without selecting technologies prematurely.
 - Use the Project Model to inform the next UX, AI and architecture documents.
 
 ---

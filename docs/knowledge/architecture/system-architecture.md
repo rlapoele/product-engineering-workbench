@@ -79,3 +79,23 @@ AI may then be offered as a contextual action to help users understand or resolv
 This decision does not require a specific database technology.
 
 Storage technology remains intentionally undecided.
+
+---
+
+# 3. Online-First, Offline-Evolvable Posture
+
+The selected first implementation slice is online-only. While online, the server-side application boundary remains authoritative for identity, Project ownership, canonical Project State, commands and persistence.
+
+The product should nevertheless preserve the option to support offline authoring for a single Project Owner later. This is an architectural posture, not a commitment to deliver offline capability in the first slice or MVP.
+
+The first slice should therefore:
+
+- keep UI components behind a Project data and command boundary rather than coupling them directly to persistence details;
+- use stable record identifiers that can later be safely client-originated or remapped during synchronization;
+- model writes as explicit, retry-safe commands that return authoritative saved state and Revision or version information;
+- keep unsaved local draft state distinct from canonical saved Project State; and
+- keep identity and owner-only authorization authoritative outside the browser.
+
+Later offline support may add a local Project store, an outbox, synchronization, retry and recovery behavior, and sync-state presentation behind those boundaries. A future sync state must communicate whether local changes are saved, awaiting synchronization or blocked; a browser online/offline hint alone is not a correctness signal.
+
+The first slice deliberately does not implement local Project persistence, synchronization, conflict resolution, offline attachments, offline collaboration or online/offline status UI. It also does not require event sourcing, a local-first synchronization engine, a graph database or a specific client storage technology.
