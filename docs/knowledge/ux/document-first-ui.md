@@ -294,6 +294,52 @@ The validation task asks a target user to capture an initial outcome for a new p
 
 This model does not validate persistent Goal-draft resumption across navigation; that capability remains deferred. It does validate preserving the visible draft after a save failure, which is necessary to prevent silent loss and allow a retry or explicit discard. It also validates that Content Language is visible, editable and carried through Project creation, but does not validate browser-locale detection, interface-language settings or translated interface content. Authentication mechanics, offline behavior, visual styling, alternative starters, collaboration, AI and handoff remain outside the model.
 
+### Prototype execution and evaluation
+
+Run five observed, moderated 30–45 minute sessions with people plausibly creating a product specification for the first time. The prototype is a low-fidelity clickable model with deliberately simulated local state, pending states and failures; it is not product implementation. Tell each participant that the interface—not their skill—is being tested, ask them to think aloud, and do not explain controls unless the attempt has clearly failed.
+
+The prototype state map contains one happy-path journey and two injected recovery branches:
+
+| State or branch | Prototype behavior and evidence sought |
+|---|---|
+| Authenticated entry and no-Projects home | Assume the participant is signed in. They recognize **Create your first Project** as the primary action. |
+| Project creation | Required title, optional description, editable **Content language** pre-filled from the Interface Locale, and a visible fixed starter. The participant understands that the starter is already selected rather than a missing template choice. |
+| Missing-title validation | An attempted create without a title shows understandable validation and permits correction. |
+| Project-creation recovery | A simulated pending state becomes a failure. Entered values remain visible and retry creates the Project. |
+| Empty Specification | The selected section structure is empty but actionable; the participant finds local `Add Goal` in `Goals and Success Criteria`. |
+| Goal editor and explicit save | Title and content are edited inline. Before selecting `Done editing`, the participant explains what they expect it to do. |
+| Goal-save recovery | A simulated pending state becomes a failure. The visible unsaved Goal remains distinguishable from saved state and supports retry or explicit discard. Retry produces the saved outcome. |
+| Saved result and return | The Goal renders with textual `Draft` status and concise confirmation, focus moves to it, and the participant can return home and reopen the saved Project. |
+
+Use a task card that asks the participant to capture an initial outcome for a new product idea and return to it later. Include a content-language scenario in which the intended specification language differs from the displayed interface language. Before normal creation, ask the participant to demonstrate what happens if the title is omitted. After the successful first Goal, use a short disposable-Goal follow-on scenario to exercise explicit discard after a simulated save failure if the participant did not choose discard naturally.
+
+Run a separate keyboard-only and screen-reader-oriented pass over the same state map. Verify logical visible focus, keyboard activation, focus entry into the Goal title, focus after save, labels, validation and error text, saved-state feedback, and non-color status/error communication.
+
+For each participant, record completion without help, time only as a supporting signal, points of hesitation, incorrect mental models, recovery behavior and exact wording about the fixed starter, Content Language, `Done editing`, `Draft` and saved state. Classify each finding as:
+
+- **Critical:** creates a false belief that unsaved or failed content is saved, prevents safe recovery, or blocks essential keyboard access.
+- **Major:** prevents independent completion of a core journey step or materially obscures the starter, language or save boundary.
+- **Minor:** causes hesitation or confusion without preventing safe completion.
+
+Proceed to technology selection only when at least four of five participants independently complete the core journey, no participant retains a false saved-state belief after the recovery scenarios, and no unmitigated critical keyboard or screen-reader-oriented issue remains. Otherwise, refine the interaction and repeat the relevant exercise. These rules guide judgment; they are not a substitute for reviewing the qualitative evidence.
+
+### Moderator script
+
+Use this script consistently, adapting only the product idea details to the participant's context.
+
+1. **Opening:** “Thank you for helping us test an early product concept. We are testing the interface, not you. Please say what you expect to happen as you go. I will not explain the interface unless you are clearly stuck.”
+2. **Main task:** “Imagine you have just signed in and want to capture an initial outcome for a new product idea, then find it again later. Please begin.”
+3. **Creation validation:** After the participant opens Project creation, say: “Before entering the Project name, show me what you think happens if you try to create it without one.” Then say: “Now create the Project. The interface is in English, but this specification will be authored in French. Use the title *Neighbourhood Repair Network* and any short description you find helpful.”
+4. **Creation failure:** Let the prototype show its pending state and failure. Ask only: “What do you think happened? What would you do next?” Do not identify retry controls or explain whether data was retained.
+5. **Empty document and Goal:** After successful retry, say: “Now record the first Goal for this idea. Use a title and content that make sense to you.” Observe discovery of the local Goal action without naming its location.
+6. **Explicit save:** Once title and content are present but before the participant selects `Done editing`, ask: “What do you expect this action to do?” Then permit the action.
+7. **Goal-save failure:** Let the prototype show its pending state and failure. Ask: “What do you understand about the Goal now? What would you do next?” Observe whether the participant can retry without a false saved-state belief.
+8. **Saved result and return:** After retry succeeds, say: “Please show me how you would return to this work later.” Observe the saved `Draft` presentation, confirmation and Project reopening.
+9. **Discard follow-on:** If the participant did not naturally choose discard in the failure branch, say: “Imagine you start a second Goal but decide not to keep it after a save failure. Show me what you would do.” Use the disposable second Goal state; do not imply which control is correct.
+10. **Closing questions:** Ask: “What did the fixed starter mean to you?” “How would you explain the difference between the editor and a saved Draft Goal?” “What did Content language mean here?” and “What, if anything, was confusing or unexpected?”
+
+After each session, complete an observation sheet before discussing findings: completion category (independent, assisted or failed); observed route; time as context; notable quotes; finding severity; suspected cause; and recommended change or follow-up question. Synthesize only after all five sessions and the accessibility pass, so a vivid single session does not override the overall evidence.
+
 ### Deterministic next-step guidance
 
 The document should offer an optional, user-invoked `What next?` control near the document outline. It presents deterministic guidance derived from the current Project State; it is not a task list, Product Artifact, workflow gate or AI request.

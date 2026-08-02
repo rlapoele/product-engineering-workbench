@@ -22,6 +22,10 @@ Keyboard validation covers sequential and visible focus, keyboard activation, la
 
 The validation task asks users to capture an initial outcome for a new product idea and return to it later. It assesses whether they can complete that journey, distinguish private draft from canonical saved state, understand the fixed starter and explicit save action, and recover from simulated failure without explanation.
 
+Execute the validation as five observed, moderated 30–45 minute sessions with first-time product-specification creators. Use a low-fidelity clickable prototype with simulated pending and failure states, not product implementation. The state map covers no-Projects home; Project creation; missing-title validation; Project-creation failure and retry; empty Specification; local Goal creation; inline editing; explicit-save comprehension; Goal-save failure, retry or discard; saved Draft Goal; and Project return. Include a scenario in which the intended Content Language differs from the displayed Interface Locale. Run a separate keyboard-only and screen-reader-oriented pass over the same states.
+
+Capture independent completion, hesitation, incorrect mental models, recovery behavior and participant wording. Classify a false saved-state belief, unsafe recovery failure or essential keyboard blocker as critical. Technology selection requires independent core-journey completion by at least four of five participants, no retained false saved-state belief after recovery scenarios, and no unmitigated critical keyboard or screen-reader-oriented issue. These criteria guide a qualitative evidence review rather than replacing it with a score.
+
 Persistent draft resumption across navigation, browser-locale detection, interface-language settings, translated interface content, authentication mechanics, offline behavior, visual styling, alternative starters, collaboration, AI and handoff are outside this validation model.
 
 ## Rationale
