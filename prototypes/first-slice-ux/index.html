@@ -1,0 +1,434 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>First-Slice UX Prototype</title>
+    <style>
+      :root {
+        color-scheme: light dark;
+        --ink: light-dark(#172033, #edf2ff);
+        --muted: light-dark(#56627a, #afbad1);
+        --line: light-dark(#cbd3e1, #44506b);
+        --surface: light-dark(#ffffff, #1e2638);
+        --canvas: light-dark(#f5f7fb, #131a29);
+        --accent: light-dark(#155eef, #8ab4ff);
+        --accent-ink: #ffffff;
+        --notice: light-dark(#e8f0ff, #203967);
+        --error: light-dark(#a71930, #ffb4c0);
+        --error-bg: light-dark(#fff0f2, #4a222c);
+        --success: light-dark(#0c6b42, #8ce7bb);
+        --focus: light-dark(#111827, #ffffff);
+      }
+
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        min-width: 320px;
+        background: var(--canvas);
+        color: var(--ink);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+      button, input, textarea, select { font: inherit; }
+      button, select, input, textarea { border: 1px solid var(--line); border-radius: 6px; }
+      button {
+        cursor: pointer;
+        padding: .65rem .95rem;
+        background: var(--surface);
+        color: var(--ink);
+      }
+      button:hover:not(:disabled) { border-color: var(--accent); }
+      button:disabled { cursor: wait; opacity: .68; }
+      button.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+      button.quiet { border: 0; background: transparent; padding-inline: .25rem; text-decoration: underline; }
+      button.danger { color: var(--error); }
+      button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible, summary:focus-visible {
+        outline: 3px solid var(--focus);
+        outline-offset: 3px;
+      }
+      input, textarea, select { width: 100%; padding: .65rem .7rem; background: var(--surface); color: var(--ink); }
+      textarea { min-height: 8rem; resize: vertical; }
+      label { display: block; font-weight: 650; margin: 0 0 .35rem; }
+      .hint { color: var(--muted); font-size: .9rem; margin: .25rem 0 0; }
+      .sr-only { position: absolute; inline-size: 1px; block-size: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+      .prototype-note { max-width: 1120px; margin: 1rem auto 0; padding: 0 1rem; color: var(--muted); font-size: .88rem; }
+      .app { max-width: 1120px; min-height: calc(100vh - 5rem); margin: 1rem auto; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; box-shadow: 0 12px 30px light-dark(#1b274422, #00000033); }
+      .topbar { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 1rem 1.25rem; border-bottom: 1px solid var(--line); }
+      .brand { font-weight: 750; letter-spacing: -.015em; }
+      .context { color: var(--muted); font-size: .9rem; }
+      .content { padding: clamp(1.25rem, 4vw, 3.25rem); max-width: 860px; margin: 0 auto; }
+      h1 { font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1.15; margin: 0 0 .75rem; letter-spacing: -.03em; }
+      h2 { font-size: 1.15rem; margin: 0 0 .6rem; }
+      p { line-height: 1.55; }
+      .lead { max-width: 48rem; color: var(--muted); font-size: 1.05rem; margin-bottom: 1.7rem; }
+      .panel { border: 1px solid var(--line); border-radius: 8px; padding: 1.1rem; margin: 1rem 0; background: var(--surface); }
+      .starter { background: var(--notice); border-color: color-mix(in srgb, var(--accent) 35%, var(--line)); }
+      .starter p { margin: .2rem 0; }
+      .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+      .full { grid-column: 1 / -1; }
+      .actions { display: flex; flex-wrap: wrap; align-items: center; gap: .75rem; margin-top: 1.4rem; }
+      .status { min-height: 1.5rem; margin: .85rem 0; color: var(--muted); }
+      .message { border-radius: 6px; padding: .8rem .9rem; margin: .9rem 0; }
+      .message.error { color: var(--error); background: var(--error-bg); border: 1px solid color-mix(in srgb, var(--error) 45%, var(--line)); }
+      .message.success { color: var(--success); background: color-mix(in srgb, var(--success) 12%, var(--surface)); border: 1px solid color-mix(in srgb, var(--success) 45%, var(--line)); }
+      .error-text { color: var(--error); font-size: .9rem; margin: .4rem 0 0; }
+      .hidden { display: none !important; }
+      .home-empty { padding: 3rem 0 1rem; }
+      .home-empty .primary { margin-top: .75rem; }
+      .project-header { border-bottom: 1px solid var(--line); padding-bottom: 1rem; margin-bottom: 1.4rem; }
+      .project-meta { color: var(--muted); margin: .35rem 0 0; font-size: .94rem; }
+      .document { display: grid; grid-template-columns: 13rem 1fr; gap: 1.3rem; }
+      .outline { border-right: 1px solid var(--line); padding-right: 1rem; }
+      .outline h2 { font-size: .9rem; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; }
+      .outline ul { padding: 0; margin: .6rem 0; list-style: none; }
+      .outline li { padding: .45rem .25rem; color: var(--muted); }
+      .outline li.active { color: var(--ink); font-weight: 700; border-left: 3px solid var(--accent); padding-left: .55rem; }
+      .section-title { margin-bottom: .2rem; }
+      .empty-copy { color: var(--muted); margin-top: .25rem; }
+      .goal-card { border-left: 4px solid var(--accent); padding: 1rem; background: color-mix(in srgb, var(--accent) 7%, var(--surface)); }
+      .goal-card h3 { margin: 0 0 .5rem; }
+      .badge { display: inline-block; padding: .16rem .48rem; border: 1px solid var(--line); border-radius: 999px; font-size: .8rem; font-weight: 650; }
+      .inline-editor { border: 2px dashed var(--line); padding: 1rem; margin-top: 1rem; }
+      .inline-editor h3 { margin-top: 0; }
+      .focus-target { scroll-margin-top: 1rem; }
+      .facilitator { max-width: 1120px; margin: 0 auto 2rem; padding: 0 1rem; }
+      .facilitator summary { cursor: pointer; color: var(--muted); }
+      .facilitator div { margin-top: .5rem; }
+      @media (max-width: 680px) {
+        .app { margin: 0; min-height: 100vh; border-radius: 0; border-inline: 0; }
+        .topbar { align-items: flex-start; flex-direction: column; }
+        .form-grid, .document { grid-template-columns: 1fr; }
+        .outline { border-right: 0; border-bottom: 1px solid var(--line); padding: 0 0 .8rem; }
+        .outline ul { display: flex; gap: .5rem; flex-wrap: wrap; }
+        .outline li { border: 1px solid var(--line); border-radius: 999px; font-size: .85rem; }
+        .outline li.active { border-left: 1px solid var(--accent); }
+      }
+    </style>
+  </head>
+  <body>
+    <p class="prototype-note">Low-fidelity validation model — simulated local state, pending states and failures; not product implementation.</p>
+
+    <main class="app" aria-labelledby="app-name">
+      <header class="topbar">
+        <div id="app-name" class="brand">Product Engineering Workbench</div>
+        <div class="context">Signed in as Project Owner</div>
+      </header>
+
+      <section id="home-view" class="content" aria-labelledby="home-heading">
+        <div id="home-empty" class="home-empty">
+          <h1 id="home-heading">A calm place to begin</h1>
+          <p class="lead">Capture the knowledge that will help you make your next product decision clearer.</p>
+          <button id="create-project-home" class="primary" type="button">Create your first Project</button>
+        </div>
+        <div id="home-saved" class="hidden">
+          <h1>Your Projects</h1>
+          <p class="lead">Return to the product knowledge you have started.</p>
+          <section class="panel" aria-labelledby="saved-project-heading">
+            <h2 id="saved-project-heading">Neighbourhood Repair Network</h2>
+            <p id="saved-project-meta" class="hint">Content language · No Goals yet</p>
+            <button id="open-project" class="primary" type="button">Open Project</button>
+          </section>
+        </div>
+      </section>
+
+      <section id="create-view" class="content hidden" aria-labelledby="create-heading">
+        <button id="back-home" class="quiet" type="button">Back to Projects</button>
+        <h1 id="create-heading">Create a Project</h1>
+        <p class="lead">Start with the essentials. You can add product knowledge in the document next.</p>
+
+        <form id="project-form" novalidate>
+          <div class="form-grid">
+            <div class="full">
+              <label for="project-title">Project name <span aria-hidden="true">(required)</span></label>
+              <input id="project-title" name="title" autocomplete="off" aria-describedby="title-error">
+              <p id="title-error" class="error-text hidden" role="alert">Enter a Project name before creating it.</p>
+            </div>
+            <div class="full">
+              <label for="project-description">Short description <span class="hint">(optional)</span></label>
+              <textarea id="project-description" name="description" rows="3"></textarea>
+            </div>
+            <div>
+              <label for="content-language">Content language</label>
+              <select id="content-language" name="contentLanguage" aria-describedby="content-language-hint">
+                <option value="en-US" selected>English (United States)</option>
+                <option value="en-GB">English (United Kingdom)</option>
+                <option value="fr">French</option>
+                <option value="nl">Dutch</option>
+              </select>
+              <p id="content-language-hint" class="hint">Defaulted from the current interface language. You can change it for this Project.</p>
+            </div>
+          </div>
+
+          <section class="panel starter" aria-labelledby="starter-heading">
+            <h2 id="starter-heading">Your starting structure</h2>
+            <p><strong>Implementation-Ready Web App Specification</strong></p>
+            <p><span class="badge">Standard Web App</span> <span class="hint">Fixed starter · version 1</span></p>
+            <p class="hint">This Project will start with a clear, empty specification structure. You will add your own product knowledge next.</p>
+          </section>
+
+          <p id="create-status" class="status" aria-live="polite"></p>
+          <div id="create-error" class="message error hidden" role="alert">
+            <strong>Project not created.</strong> Your entered values are still here. Retry when you are ready.
+          </div>
+          <div class="actions">
+            <button id="create-project" class="primary" type="submit">Create Project</button>
+          </div>
+        </form>
+      </section>
+
+      <section id="project-view" class="content hidden" aria-labelledby="project-heading">
+        <button id="back-to-projects" class="quiet" type="button">Projects</button>
+        <div class="project-header">
+          <h1 id="project-heading">Neighbourhood Repair Network</h1>
+          <p class="project-meta"><span id="saved-language">French</span> content · Fixed starter version 1</p>
+        </div>
+
+        <div class="document">
+          <nav class="outline" aria-label="Specification outline">
+            <h2>Specification</h2>
+            <ul>
+              <li>Product Overview</li>
+              <li class="active">Goals and Success Criteria</li>
+              <li>Target Users</li>
+              <li>Core Features</li>
+              <li>Validation and Testing Guidance</li>
+            </ul>
+          </nav>
+
+          <section aria-labelledby="goals-heading">
+            <h2 id="goals-heading" class="section-title">Goals and Success Criteria</h2>
+            <p id="goals-empty" class="empty-copy">No Goals yet. Capture an outcome you want this product to achieve.</p>
+            <div id="saved-goal" class="goal-card focus-target hidden" tabindex="-1">
+              <span class="badge">Draft</span>
+              <h3 id="saved-goal-title"></h3>
+              <p id="saved-goal-content"></p>
+            </div>
+            <p id="goal-status" class="status" aria-live="polite"></p>
+            <div id="goal-error" class="message error hidden" role="alert">
+              <strong>Goal not saved.</strong> Your draft is still visible and has not been saved. Retry or discard it.
+            </div>
+            <div id="goal-success" class="message success hidden" role="status">Goal saved as Draft.</div>
+            <button id="add-goal" class="primary" type="button">Add Goal</button>
+
+            <form id="goal-editor" class="inline-editor hidden" novalidate aria-labelledby="editor-heading">
+              <h3 id="editor-heading">New Goal</h3>
+              <p class="hint">This Goal is private to this editor until you select Done editing.</p>
+              <p>
+                <label for="goal-title">Goal title <span aria-hidden="true">(required)</span></label>
+                <input id="goal-title" autocomplete="off" aria-describedby="goal-title-error">
+                <span id="goal-title-error" class="error-text hidden" role="alert">Enter a Goal title.</span>
+              </p>
+              <p>
+                <label for="goal-content">Goal content <span aria-hidden="true">(required)</span></label>
+                <textarea id="goal-content" aria-describedby="goal-content-error"></textarea>
+                <span id="goal-content-error" class="error-text hidden" role="alert">Enter Goal content.</span>
+              </p>
+              <div class="actions">
+                <button id="done-editing" class="primary" type="submit">Done editing</button>
+                <button id="discard-goal" class="danger" type="button">Discard draft</button>
+              </div>
+            </form>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <aside class="facilitator">
+      <details>
+        <summary>Prototype facilitator controls</summary>
+        <div><button id="restart" type="button">Restart prototype</button></div>
+      </details>
+    </aside>
+
+    <script>
+      (() => {
+        const home = document.getElementById('home-view');
+        const homeEmpty = document.getElementById('home-empty');
+        const homeSaved = document.getElementById('home-saved');
+        const create = document.getElementById('create-view');
+        const project = document.getElementById('project-view');
+        const projectForm = document.getElementById('project-form');
+        const goalEditor = document.getElementById('goal-editor');
+        const title = document.getElementById('project-title');
+        const titleError = document.getElementById('title-error');
+        const createStatus = document.getElementById('create-status');
+        const createError = document.getElementById('create-error');
+        const createButton = document.getElementById('create-project');
+        const contentLanguage = document.getElementById('content-language');
+        const goalTitle = document.getElementById('goal-title');
+        const goalContent = document.getElementById('goal-content');
+        const goalTitleError = document.getElementById('goal-title-error');
+        const goalContentError = document.getElementById('goal-content-error');
+        const goalStatus = document.getElementById('goal-status');
+        const goalError = document.getElementById('goal-error');
+        const goalSuccess = document.getElementById('goal-success');
+        const doneEditing = document.getElementById('done-editing');
+        const discardGoal = document.getElementById('discard-goal');
+        const addGoal = document.getElementById('add-goal');
+        const goalsEmpty = document.getElementById('goals-empty');
+        const savedGoal = document.getElementById('saved-goal');
+        const savedGoalTitle = document.getElementById('saved-goal-title');
+        const savedGoalContent = document.getElementById('saved-goal-content');
+        const savedLanguage = document.getElementById('saved-language');
+        const savedProjectMeta = document.getElementById('saved-project-meta');
+
+        const state = { projectCreated: false, createAttempts: 0, goalAttempts: 0, hasSavedGoal: false };
+
+        function show(view) {
+          [home, create, project].forEach((element) => element.classList.add('hidden'));
+          view.classList.remove('hidden');
+        }
+
+        function showCreate() {
+          show(create);
+          createError.classList.add('hidden');
+          createStatus.textContent = '';
+          setTimeout(() => title.focus(), 0);
+        }
+
+        function showHome() {
+          show(home);
+          homeEmpty.classList.toggle('hidden', state.projectCreated);
+          homeSaved.classList.toggle('hidden', !state.projectCreated);
+        }
+
+        function setCreateBusy(isBusy, message = '') {
+          createButton.disabled = isBusy;
+          createStatus.textContent = message;
+        }
+
+        function setGoalBusy(isBusy, message = '') {
+          doneEditing.disabled = isBusy;
+          discardGoal.disabled = isBusy;
+          goalStatus.textContent = message;
+        }
+
+        function resetGoalErrors() {
+          goalTitleError.classList.add('hidden');
+          goalContentError.classList.add('hidden');
+        }
+
+        document.getElementById('create-project-home').addEventListener('click', showCreate);
+        document.getElementById('open-project').addEventListener('click', () => {
+          show(project);
+          addGoal.focus();
+        });
+        document.getElementById('back-home').addEventListener('click', showHome);
+        document.getElementById('back-to-projects').addEventListener('click', showHome);
+
+        projectForm.addEventListener('submit', (event) => {
+          event.preventDefault();
+          titleError.classList.toggle('hidden', Boolean(title.value.trim()));
+          title.setAttribute('aria-invalid', String(!title.value.trim()));
+          if (!title.value.trim()) {
+            title.focus();
+            return;
+          }
+          createError.classList.add('hidden');
+          setCreateBusy(true, 'Creating Project…');
+          window.setTimeout(() => {
+            state.createAttempts += 1;
+            if (state.createAttempts === 1) {
+              setCreateBusy(false, '');
+              createError.classList.remove('hidden');
+              createButton.focus();
+              return;
+            }
+            state.projectCreated = true;
+            savedLanguage.textContent = contentLanguage.options[contentLanguage.selectedIndex].text;
+            savedProjectMeta.textContent = `${savedLanguage.textContent} content · No Goals yet`;
+            setCreateBusy(false, '');
+            show(project);
+            addGoal.focus();
+          }, 700);
+        });
+
+        addGoal.addEventListener('click', () => {
+          goalEditor.reset();
+          goalEditor.classList.remove('hidden');
+          addGoal.classList.add('hidden');
+          goalError.classList.add('hidden');
+          goalSuccess.classList.add('hidden');
+          goalStatus.textContent = '';
+          resetGoalErrors();
+          state.goalAttempts = 0;
+          setTimeout(() => goalTitle.focus(), 0);
+        });
+
+        goalEditor.addEventListener('submit', (event) => {
+          event.preventDefault();
+          const invalidTitle = !goalTitle.value.trim();
+          const invalidContent = !goalContent.value.trim();
+          goalTitleError.classList.toggle('hidden', !invalidTitle);
+          goalContentError.classList.toggle('hidden', !invalidContent);
+          goalTitle.setAttribute('aria-invalid', String(invalidTitle));
+          goalContent.setAttribute('aria-invalid', String(invalidContent));
+          if (invalidTitle || invalidContent) {
+            (invalidTitle ? goalTitle : goalContent).focus();
+            return;
+          }
+          goalError.classList.add('hidden');
+          goalSuccess.classList.add('hidden');
+          setGoalBusy(true, 'Saving Goal…');
+          window.setTimeout(() => {
+            state.goalAttempts += 1;
+            if (state.goalAttempts === 1) {
+              setGoalBusy(false, '');
+              goalError.classList.remove('hidden');
+              doneEditing.focus();
+              return;
+            }
+            state.hasSavedGoal = true;
+            savedGoalTitle.textContent = goalTitle.value.trim();
+            savedGoalContent.textContent = goalContent.value.trim();
+            goalsEmpty.classList.add('hidden');
+            savedGoal.classList.remove('hidden');
+            savedProjectMeta.textContent = `${savedLanguage.textContent} content · 1 Draft Goal`;
+            goalEditor.classList.add('hidden');
+            addGoal.classList.remove('hidden');
+            goalSuccess.classList.remove('hidden');
+            setGoalBusy(false, '');
+            savedGoal.focus();
+          }, 700);
+        });
+
+        discardGoal.addEventListener('click', () => {
+          goalEditor.classList.add('hidden');
+          goalError.classList.add('hidden');
+          goalSuccess.classList.add('hidden');
+          goalStatus.textContent = 'Draft discarded. No Goal was saved.';
+          goalTitle.value = '';
+          goalContent.value = '';
+          resetGoalErrors();
+          addGoal.classList.remove('hidden');
+          addGoal.focus();
+        });
+
+        document.getElementById('restart').addEventListener('click', () => {
+          state.projectCreated = false;
+          state.createAttempts = 0;
+          state.goalAttempts = 0;
+          state.hasSavedGoal = false;
+          projectForm.reset();
+          titleError.classList.add('hidden');
+          createError.classList.add('hidden');
+          createStatus.textContent = '';
+          createButton.disabled = false;
+          goalEditor.reset();
+          goalEditor.classList.add('hidden');
+          addGoal.classList.remove('hidden');
+          goalError.classList.add('hidden');
+          goalSuccess.classList.add('hidden');
+          goalStatus.textContent = '';
+          savedGoal.classList.add('hidden');
+          savedProjectMeta.textContent = 'Content language · No Goals yet';
+          goalsEmpty.classList.remove('hidden');
+          resetGoalErrors();
+          showHome();
+          document.getElementById('create-project-home').focus();
+        });
+      })();
+    </script>
+  </body>
+</html>
