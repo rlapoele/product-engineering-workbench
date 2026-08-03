@@ -8,6 +8,10 @@
 
 The first-slice UX validation model named the journey and necessary states, but still needed an executable study design and evidence threshold before prototype work could meaningfully inform an implementation decision.
 
+## Supersession Note
+
+The pre-technology five-participant threshold in this session was replaced by the documented solo Prototype Review in `2026-08-03-first-slice-solo-prototype-evidence-model.md`. The state map, recovery scenarios and critical-finding definitions remain useful, while independent user and broader accessibility input now become execution-stage recommendations for the working product.
+
 ## Decision
 
 Use a low-fidelity clickable prototype with simulated local state, pending behavior and failures—not product code. Run five observed, moderated 30–45 minute sessions with plausible first-time product-specification creators, alongside a separate keyboard-only and screen-reader-oriented pass.

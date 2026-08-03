@@ -720,6 +720,16 @@ For the MVP, presets may classify sections as Required, Recommended or Optional.
 
 ---
 
+## Prototype Review
+
+A Prototype Review is a documented evaluation of an interactive prototype against its declared journey, states and interaction rules.
+
+For the first slice, a solo Prototype Review is performed by the Project Owner before technology selection. It checks interaction and state coherence, recovery, declared layout and UI patterns, keyboard operation, and preliminary screen-reader semantics where those checks are meaningful in the prototype. It records discovered issues and known limits.
+
+A solo Prototype Review is not independent usability research, an accessibility conformance assessment or evidence of how first-time users or assistive-technology users experience a working product. Those remain execution-stage recommendations and implementation-quality concerns.
+
+---
+
 ## Provenance
 
 An explanation of where a piece of product knowledge came from.

@@ -269,76 +269,65 @@ These interaction rules are a first pass and should be validated through later p
 
 ## First-Slice UX Prototype And Interaction Validation
 
-The selected first slice requires a low-fidelity, interactive journey prototype and an observed task-validation script. This is a validation model, not a production interface, visual-design system or implementation authorization.
+The selected first slice requires a low-fidelity, interactive journey prototype and a documented solo Prototype Review. This is a design-validation model, not a production interface, visual-design system, independent usability study or implementation authorization.
 
 The prototype follows one first-time Project Owner through authenticated entry, the calm no-Projects home, Project creation, the fixed `Implementation-Ready Web App Specification` / `Standard Web App` starter, the empty Specification, local `Add Goal`, inline Goal editing, explicit `Done editing`, and later return to the saved Project.
 
-It must validate these user-visible states:
+It must express these user-visible states clearly enough for the solo review:
 
-| Moment | Required validation |
+| Moment | Required interaction property |
 |---|---|
-| First-use home | A no-Projects user recognizes one clear primary action: **Create your first Project**. |
-| Project creation | Required-title validation, optional description, editable **Content language** pre-filled from the resolved Interface Locale, and an understandable fixed starter without a fake template picker. |
+| First-use home | One clear primary action: **Create your first Project**. |
+| Project creation | Required-title validation, optional description, editable **Content language** pre-filled from the resolved Interface Locale, and a fixed starter without a fake template picker. |
 | Project creation pending or failure | Pending state is clear; on failure, entered values remain visible and retry is available. |
-| Empty Specification | Users understand that the document is empty but actionable. |
-| Add Goal | Users find and understand the local action in `Goals and Success Criteria`. |
+| Empty Specification | The document is empty but actionable. |
+| Add Goal | A local action is present in `Goals and Success Criteria`. |
 | Inline Goal editor | Title and content are clear; focus enters the title field. |
-| Explicit save | Users understand that `Done editing` creates canonical saved Product Knowledge rather than merely exiting the editor. |
+| Explicit save | `Done editing` clearly signals canonical saved Product Knowledge rather than merely exiting the editor. |
 | Goal save failure | The visible draft remains available for retry or explicit discard; no false saved state appears. |
-| Saved result | The rendered Goal, textual `Draft` status and concise save confirmation are understandable; focus moves to the saved Goal. |
+| Saved result | The rendered Goal has textual `Draft` status and concise save confirmation; focus moves to the saved Goal. |
 | Project return | The Project appears in the user's Project home and reopens with the saved Goal. |
 
 Keyboard validation covers logical sequential focus, visible focus, keyboard activation, labelled controls, focus entry into the Goal editor and accessible validation or error feedback. Status and error communication must not rely on color alone.
 
-The validation task asks a target user to capture an initial outcome for a new product idea and return to it later. Evidence includes whether the user completes the journey without explanation, distinguishes private draft from saved state, understands the fixed starter and `Done editing`, and recovers from simulated creation or save failure.
+The solo reviewer follows the task of capturing an initial outcome for a new product idea and returning to it later, while deliberately checking the perspective of a first-time Project Owner. The review checks whether the journey expresses the private-draft and saved-state distinction, fixed starter, explicit `Done editing` boundary, and recovery from simulated creation or save failure. It records limits rather than claiming independent user comprehension.
 
 This model does not validate persistent Goal-draft resumption across navigation; that capability remains deferred. It does validate preserving the visible draft after a save failure, which is necessary to prevent silent loss and allow a retry or explicit discard. It also validates that Content Language is visible, editable and carried through Project creation, but does not validate browser-locale detection, interface-language settings or translated interface content. Authentication mechanics, offline behavior, visual styling, alternative starters, collaboration, AI and handoff remain outside the model.
 
-### Prototype execution and evaluation
+### Solo Prototype Review before technology selection
 
-Run five observed, moderated 30–45 minute sessions with people plausibly creating a product specification for the first time. The prototype is a low-fidelity clickable model with deliberately simulated local state, pending states and failures; it is not product implementation. Tell each participant that the interface—not their skill—is being tested, ask them to think aloud, and do not explain controls unless the attempt has clearly failed.
+Before technology selection, the Project Owner completes and records a solo Prototype Review. The prototype is a low-fidelity clickable model with deliberately simulated local state, pending states and failures; it is not product implementation. The review evaluates specification coherence and interaction direction, not independent usability, visual-design quality or accessibility conformance.
 
-The prototype state map contains one happy-path journey and two injected recovery branches:
+The review state map contains one happy-path journey and two injected recovery branches:
 
-| State or branch | Prototype behavior and evidence sought |
+| State or branch | Prototype behavior and review check |
 |---|---|
-| Authenticated entry and no-Projects home | Assume the participant is signed in. They recognize **Create your first Project** as the primary action. |
-| Project creation | Required title, optional description, editable **Content language** pre-filled from the Interface Locale, and a visible fixed starter. The participant understands that the starter is already selected rather than a missing template choice. |
+| Authenticated entry and no-Projects home | Assume the reviewer is signed in. Check that **Create your first Project** is the clear primary action. |
+| Project creation | Required title, optional description, editable **Content language** pre-filled from the Interface Locale, and a visible fixed starter. Check that the starter is clearly already selected rather than a missing template choice. |
 | Missing-title validation | An attempted create without a title shows understandable validation and permits correction. |
 | Project-creation recovery | A simulated pending state becomes a failure. Entered values remain visible and retry creates the Project. |
-| Empty Specification | The selected section structure is empty but actionable; the participant finds local `Add Goal` in `Goals and Success Criteria`. |
-| Goal editor and explicit save | Title and content are edited inline. Before selecting `Done editing`, the participant explains what they expect it to do. |
+| Empty Specification | The selected section structure is empty but actionable; check the local `Add Goal` action in `Goals and Success Criteria`. |
+| Goal editor and explicit save | Title and content are edited inline. Before selecting `Done editing`, check whether its effect is clearly expressed. |
 | Goal-save recovery | A simulated pending state becomes a failure. The visible unsaved Goal remains distinguishable from saved state and supports retry or explicit discard. Retry produces the saved outcome. |
-| Saved result and return | The Goal renders with textual `Draft` status and concise confirmation, focus moves to it, and the participant can return home and reopen the saved Project. |
+| Saved result and return | The Goal renders with textual `Draft` status and concise confirmation, focus moves to it, and the reviewer can return home and reopen the saved Project. |
 
-Use a task card that asks the participant to capture an initial outcome for a new product idea and return to it later. Include a content-language scenario in which the intended specification language differs from the displayed interface language. Before normal creation, ask the participant to demonstrate what happens if the title is omitted. After the successful first Goal, use a short disposable-Goal follow-on scenario to exercise explicit discard after a simulated save failure if the participant did not choose discard naturally.
+Use a task card that asks the reviewer to capture an initial outcome for a new product idea and return to it later. Include a content-language scenario in which the intended specification language differs from the displayed interface language. Before normal creation, check what happens when the title is omitted. After the successful first Goal, use a short disposable-Goal follow-on scenario to exercise explicit discard after a simulated save failure.
 
-Run a separate keyboard-only and screen-reader-oriented pass over the same state map. Verify logical visible focus, keyboard activation, focus entry into the Goal title, focus after save, labels, validation and error text, saved-state feedback, and non-color status/error communication.
+Run a keyboard-only pass over the same state map. Verify logical visible focus, keyboard activation, focus entry into the Goal title, focus after save, labels, validation and error text, saved-state feedback, and non-color status/error communication. Run a preliminary screen-reader-oriented pass where the prototype's implementation makes it meaningful; record the browser, assistive technology and any limits rather than making a conformance claim.
 
-For each participant, record completion without help, time only as a supporting signal, points of hesitation, incorrect mental models, recovery behavior and exact wording about the fixed starter, Content Language, `Done editing`, `Draft` and saved state. Classify each finding as:
+Record the exercised state or branch, result, discovered issue, known limit and any follow-up. Where layout is in scope, record the viewport assumption and whether the declared hierarchy, control placement and state communication remain understandable. Classify each finding as:
 
-- **Critical:** creates a false belief that unsaved or failed content is saved, prevents safe recovery, or blocks essential keyboard access.
-- **Major:** prevents independent completion of a core journey step or materially obscures the starter, language or save boundary.
+- **Critical:** creates a false presentation that unsaved or failed content is saved, prevents safe recovery, or blocks essential keyboard access.
+- **Major:** prevents completion of a core journey step or materially obscures the starter, language or save boundary.
 - **Minor:** causes hesitation or confusion without preventing safe completion.
 
-Proceed to technology selection only when at least four of five participants independently complete the core journey, no participant retains a false saved-state belief after the recovery scenarios, and no unmitigated critical keyboard or screen-reader-oriented issue remains. Otherwise, refine the interaction and repeat the relevant exercise. These rules guide judgment; they are not a substitute for reviewing the qualitative evidence.
+Proceed to technology selection when the documented review covers the declared state map and no unresolved critical contradiction, false saved-state presentation, unsafe recovery path or essential keyboard blocker remains. Otherwise, refine the interaction and repeat the relevant review. This establishes a sufficiently coherent direction for technology selection; it is not a claim of independent usability validation or accessibility conformance.
 
-### Moderator script
+### Execution-stage recommendations
 
-Use this script consistently, adapting only the product idea details to the participant's context.
+Once a working implementation exists, recommendations should include iterative independent first-time-user sessions and accessibility input where feasible, alongside the engineering-quality baseline's browser, keyboard and screen-reader-oriented checks. These recommendations should be tailored to the working product and its intended users; they are not a pre-technology-selection requirement.
 
-1. **Opening:** “Thank you for helping us test an early product concept. We are testing the interface, not you. Please say what you expect to happen as you go. I will not explain the interface unless you are clearly stuck.”
-2. **Main task:** “Imagine you have just signed in and want to capture an initial outcome for a new product idea, then find it again later. Please begin.”
-3. **Creation validation:** After the participant opens Project creation, say: “Before entering the Project name, show me what you think happens if you try to create it without one.” Then say: “Now create the Project. The interface is in English, but this specification will be authored in French. Use the title *Neighbourhood Repair Network* and any short description you find helpful.”
-4. **Creation failure:** Let the prototype show its pending state and failure. Ask only: “What do you think happened? What would you do next?” Do not identify retry controls or explain whether data was retained.
-5. **Empty document and Goal:** After successful retry, say: “Now record the first Goal for this idea. Use a title and content that make sense to you.” Observe discovery of the local Goal action without naming its location.
-6. **Explicit save:** Once title and content are present but before the participant selects `Done editing`, ask: “What do you expect this action to do?” Then permit the action.
-7. **Goal-save failure:** Let the prototype show its pending state and failure. Ask: “What do you understand about the Goal now? What would you do next?” Observe whether the participant can retry without a false saved-state belief.
-8. **Saved result and return:** After retry succeeds, say: “Please show me how you would return to this work later.” Observe the saved `Draft` presentation, confirmation and Project reopening.
-9. **Discard follow-on:** If the participant did not naturally choose discard in the failure branch, say: “Imagine you start a second Goal but decide not to keep it after a save failure. Show me what you would do.” Use the disposable second Goal state; do not imply which control is correct.
-10. **Closing questions:** Ask: “What did the fixed starter mean to you?” “How would you explain the difference between the editor and a saved Draft Goal?” “What did Content language mean here?” and “What, if anything, was confusing or unexpected?”
-
-After each session, complete an observation sheet before discussing findings: completion category (independent, assisted or failed); observed route; time as context; notable quotes; finding severity; suspected cause; and recommended change or follow-up question. Synthesize only after all five sessions and the accessibility pass, so a vivid single session does not override the overall evidence.
+For independent-session work later in execution, the prior task structure remains useful: first-use creation; required-title validation; a Content Language that differs from the Interface Locale; creation failure and retry; empty Specification orientation; local Goal creation; explicit-save comprehension; save failure with retry or discard; saved result; and Project return. Treat a false saved-state belief, unsafe recovery failure or essential keyboard barrier as a critical finding. Record the participant and accessibility-review scope and limits; do not generalize a small study as conformance evidence.
 
 ### Deterministic next-step guidance
 
