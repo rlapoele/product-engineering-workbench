@@ -142,3 +142,4 @@
 | 2026-08-01-09 | 2026-08-01 | 9 | First-Slice Fixed-Starter Version Convention | Crystallized | Server-selected immutable starter version `1`, integer evolution and no automatic Project upgrade |
 | 2026-08-02-01 | 2026-08-02 | 1 | First-Slice UX Prototype Execution And Evaluation | Crystallized | Five-session moderated state-map exercise, accessibility pass and evidence rubric; solo walkthrough supports no interaction refinement but remains indicative |
 | 2026-08-03-01 | 2026-08-03 | 1 | First-Slice Solo Prototype Evidence Model | Crystallized | Documented solo coherence review before technology selection; independent user and broader accessibility input move to execution-stage recommendations |
+| 2026-08-03-02 | 2026-08-03 | 2 | Artifact Lifecycle Simplification | Crystallized | Active, Stale and Archived lifecycle; owner-controlled recovery and archive; review/Revision evidence separated from status |

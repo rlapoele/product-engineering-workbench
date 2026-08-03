@@ -285,7 +285,7 @@ It must express these user-visible states clearly enough for the solo review:
 | Inline Goal editor | Title and content are clear; focus enters the title field. |
 | Explicit save | `Done editing` clearly signals canonical saved Product Knowledge rather than merely exiting the editor. |
 | Goal save failure | The visible draft remains available for retry or explicit discard; no false saved state appears. |
-| Saved result | The rendered Goal has textual `Draft` status and concise save confirmation; focus moves to the saved Goal. |
+| Saved result | The rendered Goal has concise save confirmation; focus moves to the saved Goal. |
 | Project return | The Project appears in the user's Project home and reopens with the saved Goal. |
 
 Keyboard validation covers logical sequential focus, visible focus, keyboard activation, labelled controls, focus entry into the Goal editor and accessible validation or error feedback. Status and error communication must not rely on color alone.
@@ -309,7 +309,7 @@ The review state map contains one happy-path journey and two injected recovery b
 | Empty Specification | The selected section structure is empty but actionable; check the local `Add Goal` action in `Goals and Success Criteria`. |
 | Goal editor and explicit save | Title and content are edited inline. Before selecting `Done editing`, check whether its effect is clearly expressed. |
 | Goal-save recovery | A simulated pending state becomes a failure. The visible unsaved Goal remains distinguishable from saved state and supports retry or explicit discard. Retry produces the saved outcome. |
-| Saved result and return | The Goal renders with textual `Draft` status and concise confirmation, focus moves to it, and the reviewer can return home and reopen the saved Project. |
+| Saved result and return | The Goal renders with concise confirmation, focus moves to it, and the reviewer can return home and reopen the saved Project. |
 
 Use a task card that asks the reviewer to capture an initial outcome for a new product idea and return to it later. Include a content-language scenario in which the intended specification language differs from the displayed interface language. Before normal creation, check what happens when the title is omitted. After the successful first Goal, use a short disposable-Goal follow-on scenario to exercise explicit discard after a simulated save failure.
 

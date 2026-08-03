@@ -96,6 +96,14 @@ The process uses semantically eligible Artifact Relationships in the Product Kno
 
 AI assistance may help users understand or resolve Stale artifacts after propagation, but AI is not required to identify the initial impact set.
 
+## Artifact Lifecycle
+
+An Artifact Lifecycle identifies whether canonical Product Knowledge is currently active, potentially out of date because of a known upstream impact, or intentionally retained as inactive history.
+
+The MVP lifecycle states are **Active**, **Stale** and **Archived**. Active is the ordinary state and normally needs no persistent status label. Stale identifies a recorded upstream impact and should expose its causal explanation. Archived is excluded from active work while remaining historical evidence.
+
+An edit-in-progress draft is private working input rather than an Artifact Lifecycle state. A Revision records creation and updates. Review results, validation confirmations, coverage/readiness warnings and blockers are evidence or attention signals rather than lifecycle states. A Project Owner may later hard-delete an Archived Artifact through a separate retention operation; deletion is not a soft status and its relationship and retention mechanics remain deferred.
+
 ## Artifact Placement
 
 Artifact Placement is the document location at which a Product Artifact is presented in a Specification Section.

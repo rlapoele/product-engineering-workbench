@@ -406,13 +406,11 @@ The relationship set supports traceability, validation, dependency reasoning, im
 
 ## Context
 
-Artifacts need lifecycle states so users and contributors can understand whether knowledge is draft, ready for review, currently valid, stale or preserved for history.
+Artifacts need lifecycle states so users and contributors can distinguish ordinary active knowledge, knowledge with a known upstream impact, and knowledge retained only for history without turning revision or review evidence into competing status labels.
 
 ## Current Candidate
 
-- Draft
-- Needs Review
-- Validated
+- Active
 - Stale
 - Archived
 
@@ -424,23 +422,27 @@ Which statuses are required initially?
 
 The MVP artifact lifecycle states are:
 
-- Draft
-- Needs Review
-- Validated
+- Active
 - Stale
 - Archived
 
 ## State Meanings
 
-Draft means the artifact exists but has not yet been verified or accepted.
-
-Needs Review means the artifact requires verification before it can be considered reliable.
-
-Validated means the artifact has been verified and accepted as currently accurate.
+Active means ordinary canonical Product Knowledge. Creation and update history belongs in Revisions; it makes no claim that an Artifact is new, reviewed, complete or permanently correct.
 
 Stale means the artifact may no longer be accurate because related upstream knowledge changed.
 
 Archived means the artifact is no longer active but is preserved for history and traceability.
+
+An edit-in-progress draft is private working input rather than lifecycle status. Review results, validation confirmations, coverage/readiness warnings, blockers and detected inconsistencies are evidence or attention signals. A Project Owner may confirm a Stale Artifact remains current, but `Validated` is not a lifecycle status or content lock.
+
+The lifecycle transitions are:
+
+- a Project Owner creates or updates an Artifact as Active; content creation or update creates a Revision;
+- the system may mark an Active Artifact Stale after a semantically relevant upstream change and records the causal path without creating a content Revision;
+- a Project Owner may update a Stale Artifact to return it to Active with a new Revision, or confirm it remains current to return it to Active with a recorded confirmation;
+- a Project Owner may archive an Active or Stale Artifact; an Archived Artifact may later be restored to Active;
+- a Project Owner may later hard-delete an Archived Artifact through a separate retention operation. Hard deletion is not a soft status; its retention, relationship and recovery rules remain deferred.
 
 When an artifact is updated or archived, deterministic system logic should use Artifact Relationships to identify potentially impacted downstream artifacts and mark them Stale.
 
@@ -470,7 +472,7 @@ The first-pass rules have been validated against concrete scenarios:
 - User Story changes should mark dependent downstream artifacts Stale and mark the parent Feature Stale only when the Feature content aggregates or depends on the changed story.
 - User Story archival should usually create coverage/readiness warnings for the parent Feature and possibly upstream User Need or Goal rather than automatically marking those upstream artifacts Stale.
 - Decision changes should mark explained or dependent artifacts Stale when their rationale, constraint or behavior may have changed.
-- Open Question resolution should mark blocked artifacts Needs Review or Stale depending on whether existing content relied on an assumption changed by the answer.
+- Open Question resolution should mark blocked Artifacts Stale when existing content relied on an assumption changed by the answer; otherwise it should create a coverage/readiness warning.
 
 Child artifact changes or archival may create upstream coverage impact.
 
@@ -485,13 +487,13 @@ Validated propagation edge-case rules:
 - For each triggering Revision, cyclic re-propagation must stop. The system resolves one relationship-specific impact outcome per active artifact while retaining the distinct non-cyclic causal paths that explain it.
 - When several paths reach one artifact, Stale takes precedence over a coverage/readiness warning.
 - A Requirement change that makes Acceptance Criteria Stale should ordinarily create a coverage/readiness warning, rather than Stale status, on a parent User Story. The User Story becomes Stale only when another path indicates that its own content may be inaccurate.
-- Confirming a Stale artifact as valid clears Stale only on the reviewed artifact. The system may suggest revalidation of active artifacts whose recorded impact paths pass through it, but must not automatically clear their states.
+- Confirming a Stale Artifact remains current returns only the reviewed Artifact to Active. The system may suggest review of active Artifacts whose recorded impact paths pass through it, but must not automatically clear their states.
 
 ## Consequences
 
-Review does not need to be human-only. Verification may be performed by a human contributor, AI contributor or capability-specific reviewer when that is appropriate.
+Review does not need to be human-only. A human contributor, AI contributor or capability-specific reviewer may supply non-canonical evidence, while only the Project Owner may make a canonical update, lifecycle transition or confirmation.
 
-Rejected is not an MVP artifact lifecycle state or Contribution Response status. A recipient may decline a Collaboration Request before submitting a response. After submission, the Project Owner may dismiss an individual response item as not pursued; dismissal retains evidence and does not reject the contributor or the whole response. An artifact that should no longer be active can be archived.
+Rejected is not an MVP Artifact lifecycle state or Contribution Response status. A recipient may decline a Collaboration Request before submitting a response. After submission, the Project Owner may dismiss an individual response item as not pursued; dismissal retains evidence and does not reject the contributor or the whole response. An Artifact that should no longer be active can be archived.
 
 ---
 

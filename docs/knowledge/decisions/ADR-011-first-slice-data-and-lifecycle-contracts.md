@@ -4,6 +4,8 @@
 
 **Date:** 2026-08-01
 
+**Updated:** 2026-08-03
+
 ---
 
 ## Context
@@ -16,7 +18,7 @@ The first slice persists four records: Project, Specification, Goal and Revision
 
 Project creation atomically creates an active owner-controlled Project with a required title, optional description, content locale, fixed starter identifier/version and one empty materialized Specification. The first starter is server-selected as `implementation-ready-web-app-specification.standard-web-app` at positive integer version `1`; its definition is immutable and includes the template/preset pair, section identifiers, ordering and semantic label/guidance references. The Specification records its stable identity, Project identity, and the starter's default section identifiers and ordering. Project creation creates no Product Artifact or Revision.
 
-The first Goal has a stable identity, Project, Specification and canonical-section references, `Goal` type, required non-whitespace title and content, `Draft` lifecycle status, creator/timestamps and current Revision reference. `Done editing` atomically creates the canonical Goal and Revision 1.
+The first Goal has a stable identity, Project, Specification and canonical-section references, `Goal` type, required non-whitespace title and content, `Active` lifecycle status, creator/timestamps and current Revision reference. `Done editing` atomically creates the canonical Goal and Revision 1.
 
 Revision 1 is an immutable complete snapshot of that saved Goal. It records a stable identity, the Goal identity, a per-Goal version, the saving owner and time. The first slice does not use deltas or event sourcing for Revision history.
 
@@ -33,7 +35,7 @@ The materialized starter composition keeps created Projects stable if the source
 ## Consequences
 
 - Project creation and Goal save have all-or-nothing persistence behavior.
-- A saved Goal is canonical Draft Product Knowledge even though its browser draft was private beforehand.
+- A saved Goal is canonical Active Product Knowledge even though its browser draft was private beforehand.
 - The first-slice history contains Goal Revision 1 but no Revision for empty starter instantiation.
 - Relationships, additional artifacts, later Goal revisions, revision diffs, draft resumption, archiving, propagation, collaboration and conflicts remain deferred.
 

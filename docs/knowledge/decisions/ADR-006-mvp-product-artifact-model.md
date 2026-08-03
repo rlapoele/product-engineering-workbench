@@ -4,6 +4,8 @@
 
 **Date:** 2026-07-18
 
+**Updated:** 2026-08-03
+
 ---
 
 ## Context
@@ -148,13 +150,13 @@ The MVP relationship types are:
 - `derived_from`
 - `relates_to`
 
-The MVP artifact lifecycle states are:
+The MVP Artifact lifecycle states are:
 
-- Draft
-- Needs Review
-- Validated
+- Active
 - Stale
 - Archived
+
+Creation and update history belongs in Revisions, while review outcomes, validation confirmations, coverage/readiness warnings and blockers remain separate evidence or attention signals. An edit-in-progress draft is private working input rather than canonical lifecycle status. A Project Owner may hard-delete an Archived Artifact through a separate future retention operation; hard deletion is not a soft status.
 
 ---
 

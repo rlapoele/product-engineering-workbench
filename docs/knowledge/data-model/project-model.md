@@ -103,7 +103,7 @@ The selected first slice materializes only the records needed for its owner-cont
 |---|---|
 | Project | Stable identifier; owner identifier; required title; optional description; active status; content locale; fixed starter identifier and version. |
 | Specification | Stable identifier; Project identifier; materialized default section identifiers and ordering from the fixed starter. |
-| Goal | Stable identifier; Project, Specification and canonical-section reference; `Goal` type; required non-whitespace title and content; `Draft` status; creator and timestamps; current Revision reference. |
+| Goal | Stable identifier; Project, Specification and canonical-section reference; `Goal` type; required non-whitespace title and content; `Active` status; creator and timestamps; current Revision reference. |
 | Revision | Stable identifier; Goal identifier; immutable complete snapshot of the saved Goal; per-Goal version; saving owner and time. |
 
 Project creation atomically creates the Project and its empty fixed Specification. It records neither a Product Artifact nor a Revision: it instantiates system-defined starter composition rather than saving authored Product Knowledge.
@@ -114,7 +114,7 @@ In the first slice, `contentLocale` is a Project-level well-formed BCP 47 langua
 
 The first slice records `starterId` as `implementation-ready-web-app-specification.standard-web-app` and `starterVersion` as positive integer `1`. The server selects this fixed active starter; the browser does not select or submit either field. A Starter Version is an immutable definition of the template/preset pair, included section identifiers, ordering and semantic label/guidance references used for a new empty Specification. Source definitions for recorded versions remain available for Project explanation; existing Projects do not auto-upgrade. A later source change that changes materialized starter output creates the next integer version, not a Project Revision or semantic-version classification. Translation changes behind unchanged semantic keys do not create a new Starter Version.
 
-The browser may hold a private in-progress Goal draft. That draft is not canonical Project State and does not create a Goal or Revision. `Done editing` atomically creates the canonical Draft Goal and its first Revision. A failed request leaves neither a partial Goal nor a partial Revision.
+The browser may hold a private in-progress Goal draft. That draft is not canonical Project State and does not create a Goal or Revision. `Done editing` atomically creates the canonical Active Goal and its first Revision. A failed request leaves neither a partial Goal nor a partial Revision.
 
 Every first-slice write carries an Operation ID. The system retains each command's outcome so a retry with the same Operation ID returns the original outcome without applying another canonical change. The same Operation ID with changed command content is rejected rather than treated as a new command.
 
@@ -403,51 +403,31 @@ The template does not replace the artifact schema. It provides a friendly editin
 
 ---
 
-# 8. Artifact Status
+# 8. Artifact Lifecycle
 
-Artifacts should have lifecycle states.
+Product Artifacts have three mutually exclusive lifecycle states:
 
-A minimum lifecycle could include:
-
-- Draft
-- Needs Review
-- Validated
+- Active
 - Stale
 - Archived
 
-## Draft
+## Active
 
-The artifact exists but has not yet been verified or validated.
-
-AI-generated artifacts should usually begin as Draft and require human review before a later explicit Project Owner save or validation, as appropriate.
-
-## Needs Review
-
-The artifact requires verification before it can be considered reliable.
-
-This may happen after generation, modification, dependency changes or detected inconsistency.
-
-## Validated
-
-The artifact has been verified and accepted as currently accurate.
-
-Validated does not mean permanent.
-
-It means valid for now.
+Active is ordinary canonical Product Knowledge. It makes no claim that the Artifact is new, mature, reviewed, complete or permanently correct. Creation and subsequent updates are represented by `createdAt`, `updatedAt` and Revision history rather than status labels.
 
 ## Stale
 
-The artifact may no longer be accurate because related upstream knowledge changed.
+Stale means that a semantically relevant upstream change may have made an active Artifact inaccurate. The system records the triggering Revision and causal relationship path where available. Stale does not mean the Artifact is definitely wrong, and it does not create a new content Revision.
 
-For example, if a Goal changes, related Features or User Stories may become stale.
-
-Stale is the appropriate lifecycle state for downstream artifacts that may be impacted when an upstream artifact is updated or archived.
-
-Stale does not mean the downstream artifact is wrong. It means the artifact requires review because related source knowledge changed.
+After review, the Project Owner may update the Artifact, which returns it to Active with a new content Revision; confirm it remains current, which returns it to Active with a recorded confirmation; leave it Stale; archive it; or create related Product Knowledge or an Open Question. Clearing Stale affects only the reviewed Artifact and never clears related impacts automatically.
 
 ## Archived
 
-The artifact is no longer active, but is preserved for history and traceability.
+Archived means the Artifact is no longer active but is retained as historical evidence. It is excluded from active work and ordinary handoff composition, and it does not receive or relay new impact propagation. The Project Owner may restore an Archived Artifact to Active or hard-delete it through a separate retention operation. Hard deletion is not a lifecycle state; its retention, relationship and recovery semantics remain deferred.
+
+## Evidence and attention outside the lifecycle
+
+An edit-in-progress draft is private working input, not an Artifact lifecycle state. Review results, validation confirmations, coverage/readiness warnings, blockers and detected inconsistencies are evidence or attention signals rather than lifecycle states. A Project Owner may record a validation confirmation after a review, but `Validated` is not a lifecycle status or an implicit content lock.
 
 ---
 
@@ -639,7 +619,7 @@ First-pass relationship propagation rules:
 | `depends_on` | Feature depends_on Integration Decision | Usually no Stale propagation from dependent to dependency. | Mark source Stale. |
 | `affects` | Risk affects Feature | Mark target Stale. | Maybe mark source Stale. |
 | `explains` | Decision explains Requirement | Mark target Stale. | Maybe mark source Stale. |
-| `blocks` | Open Question blocks Feature | Mark target Stale or Needs Review. | Usually no Stale propagation. |
+| `blocks` | Open Question blocks Feature | Mark target Stale or create a coverage/readiness warning, depending on whether its content may be inaccurate. | Usually no Stale propagation. |
 | `derived_from` | Acceptance Criteria derived_from Requirement | Usually no Stale propagation from derived artifact to source. | Mark source Stale. |
 | `relates_to` | weak generic link | No automatic Stale propagation. | No automatic Stale propagation. |
 
@@ -672,7 +652,7 @@ The first-pass propagation rules have been validated against these concrete scen
 | User Story changes | User Story `part_of` Feature; Acceptance Criteria, Requirements or UX artifacts validate, depend on or derive from User Story | Mark downstream Acceptance Criteria, Requirements or UX artifacts Stale when their content depends on the changed User Story. Mark the parent Feature Stale only when the Feature content aggregates or depends on that story. | A User Story change may alter behavior and downstream validation, but it does not always change the upstream Feature, User Need or Goal. |
 | User Story archived | User Story `part_of` Feature; Feature `addresses` User Need; User Need `supports` Goal | Create coverage/readiness warnings for the parent Feature and possibly upstream User Need or Goal rather than automatically marking them Stale. Mark dependent or derived downstream artifacts Stale or orphaned. | Removing a User Story may weaken behavioral coverage without changing the meaning of the Feature, User Need or Goal. |
 | Decision changes | Decision `explains` Requirement or Technical Constraint; other artifacts depend on the decision | Mark explained or dependent artifacts Stale when their rationale, constraint or behavior may have changed. | A changed Decision may invalidate the reasoning behind downstream artifacts. |
-| Open Question resolved | Open Question `blocks` Feature, Requirement or validation | Mark blocked artifact Needs Review or Stale depending on whether existing content relied on an assumption now changed by the answer. | Resolution removes a block, but the affected artifact still needs confirmation or update before being considered valid. |
+| Open Question resolved | Open Question `blocks` Feature, Requirement or validation | Mark blocked Artifact Stale when existing content relied on an assumption changed by the answer; otherwise create a coverage/readiness warning. | Resolution removes a block, but the affected Artifact may still need confirmation or update. |
 
 These examples reinforce the distinction between Stale propagation and coverage/readiness warnings.
 
@@ -694,9 +674,9 @@ Multi-hop outcomes should be determined by the meaning of each relationship in t
 
 For example, when a Requirement changes, related Acceptance Criteria may become Stale. If those Acceptance Criteria are part of a User Story, the User Story should ordinarily receive a coverage/readiness warning: its validation coverage may need review, but the User Story itself is not necessarily inaccurate. The User Story should become Stale only when a separate relationship path indicates that its own content depends on, derives from or aggregates the changed knowledge.
 
-When a user reviews a Stale artifact and confirms it is valid, the system should clear Stale only on that reviewed artifact. It must not automatically clear related artifacts or their impact results.
+When a Project Owner reviews a Stale Artifact and confirms it remains current, the system returns it to Active and clears Stale only on that reviewed Artifact. It must not automatically clear related Artifacts or their impact results.
 
-The system may instead suggest that users review or revalidate active artifacts whose recorded impact paths pass through the newly validated artifact. This is a contextual action, not an automatic state transition: validating one artifact does not prove that every related artifact remains valid.
+The system may instead suggest that users review active Artifacts whose recorded impact paths pass through the newly confirmed Artifact. This is a contextual action, not an automatic state transition: confirming one Artifact does not prove that every related Artifact remains current.
 
 ---
 
