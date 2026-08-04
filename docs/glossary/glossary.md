@@ -634,6 +634,12 @@ An unresolved question that requires further exploration before becoming stable 
 
 Open questions are intentionally tracked until resolved or archived.
 
+## Operational Release Evidence
+
+Operational Release Evidence is the content-free record that a migration release or application release was attempted and verified for a named environment and source revision.
+
+For the first slice, it records only the environment, release type, source revision, relevant migration identifiers, outcome, duration, readiness or smoke-check result, recovery-exercise reference and approved technical error classification. It never records Product Knowledge, user identity, raw request data, credentials or session material.
+
 ---
 
 # P

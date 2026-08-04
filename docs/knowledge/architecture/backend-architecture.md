@@ -20,4 +20,8 @@ The backend uses Railway-hosted PostgreSQL as canonical persistence through the 
 
 The migration runner executes in a separately configured, private, terminating Railway job. It receives the migration credential only, applies reviewed migrations and emits a content-free outcome before the application deployment for the same source revision may proceed.
 
+The backend writes newline-delimited JSON operational logs through Pino to standard output. Production logs contain only approved technical fields, including event name, command category, outcome, duration, random request correlation identifier, release revision and approved error classification. They do not contain Product Knowledge, user, Project or Goal identifiers, email addresses, request bodies, raw routes, SQL or parameters, credentials, headers, cookies, session material, exception messages or stacks. Pino redaction remains a defense in depth; the log call sites must not supply sensitive fields.
+
+The backend maintains content-free hourly command-outcome aggregates and Operational Release Evidence in PostgreSQL. This operational data is distinct from canonical Product Knowledge. Aggregate or log-recording failure must not alter the authoritative outcome of a Project command.
+
 The first slice does not choose API style, queue, cache or event-sourcing model. Astro/Node, Railway deployment and the SQL migration mechanism are selected separately; local synchronization, conflict resolution, collaboration, AI assistance, handoff generation and impact propagation remain deferred.
