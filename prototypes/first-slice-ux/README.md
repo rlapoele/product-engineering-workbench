@@ -8,7 +8,7 @@ It deliberately simulates local state, pending states and failures. It is not pr
 
 1. Open the Project-creation form and submit it with no title to see validation.
 2. Enter a Project name, choose a different Content language if required, then create the Project. The first valid attempt simulates a failure; retry succeeds.
-3. In `Goals and Success Criteria`, add a Goal and select `Done editing`. The first save for each new Goal simulates a failure; retry saves it as `Draft`.
+3. In `Goals and Success Criteria`, add a Goal and select `Done editing`. The first save for each new Goal simulates a failure; retry saves it with an ordinary confirmation.
 4. Add a disposable second Goal to exercise explicit discard after its simulated save failure.
 5. Use the `Projects` action to return home, then reopen the saved Project with the primary action.
 

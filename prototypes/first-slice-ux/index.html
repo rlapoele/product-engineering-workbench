@@ -200,7 +200,6 @@
             <h2 id="goals-heading" class="section-title">Goals and Success Criteria</h2>
             <p id="goals-empty" class="empty-copy">No Goals yet. Capture an outcome you want this product to achieve.</p>
             <div id="saved-goal" class="goal-card focus-target hidden" tabindex="-1">
-              <span class="badge">Draft</span>
               <h3 id="saved-goal-title"></h3>
               <p id="saved-goal-content"></p>
             </div>
@@ -208,7 +207,7 @@
             <div id="goal-error" class="message error hidden" role="alert">
               <strong>Goal not saved.</strong> Your draft is still visible and has not been saved. Retry or discard it.
             </div>
-            <div id="goal-success" class="message success hidden" role="status">Goal saved as Draft.</div>
+            <div id="goal-success" class="message success hidden" role="status">Goal saved.</div>
             <button id="add-goal" class="primary" type="button">Add Goal</button>
 
             <form id="goal-editor" class="inline-editor hidden" novalidate aria-labelledby="editor-heading">
@@ -384,7 +383,7 @@
             savedGoalContent.textContent = goalContent.value.trim();
             goalsEmpty.classList.add('hidden');
             savedGoal.classList.remove('hidden');
-            savedProjectMeta.textContent = `${savedLanguage.textContent} content · 1 Draft Goal`;
+            savedProjectMeta.textContent = `${savedLanguage.textContent} content · 1 Goal`;
             goalEditor.classList.add('hidden');
             addGoal.classList.remove('hidden');
             goalSuccess.classList.remove('hidden');
@@ -397,7 +396,7 @@
           goalEditor.classList.add('hidden');
           goalError.classList.add('hidden');
           goalSuccess.classList.add('hidden');
-          goalStatus.textContent = 'Draft discarded. No Goal was saved.';
+          goalStatus.textContent = 'Unsaved Goal discarded. No Goal was saved.';
           goalTitle.value = '';
           goalContent.value = '';
           resetGoalErrors();
