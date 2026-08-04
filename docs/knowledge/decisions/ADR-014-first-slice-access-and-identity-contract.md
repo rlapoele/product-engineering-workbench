@@ -18,7 +18,7 @@ Creating a Project atomically assigns the authenticated user's identifier as the
 
 If authentication expires, a command is not executed. The browser keeps visible unsaved input available for retry after reauthentication without presenting it as saved. A retry can retain its Operation ID only when the same authenticated user resumes it.
 
-The first slice has no anonymous Projects, sharing, invitations, collaborators, ownership transfer, delegated authority, account/profile management or roles beyond the Project Owner. Authentication provider, credential, account-recovery and session-implementation choices remain deferred.
+The first slice has no anonymous Projects, sharing, invitations, collaborators, ownership transfer, delegated authority, account/profile management or roles beyond the Project Owner. Its concrete authentication mechanism is defined separately in ADR-017; email/password authentication, manual account linking and account recovery remain deferred.
 
 ## Rationale
 
@@ -54,3 +54,4 @@ This was selected because it directly supports the chosen first-use journey, pri
 - `docs/knowledge/decisions/ADR-010-first-slice-system-boundaries.md`
 - `docs/knowledge/decisions/ADR-011-first-slice-data-and-lifecycle-contracts.md`
 - `docs/knowledge/decisions/ADR-013-first-slice-engineering-quality-baseline.md`
+- `docs/knowledge/decisions/ADR-017-first-slice-oauth-identity-mechanism.md`

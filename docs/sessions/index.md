@@ -144,3 +144,4 @@
 | 2026-08-03-01 | 2026-08-03 | 1 | First-Slice Solo Prototype Evidence Model | Crystallized | Documented solo coherence review before technology selection; independent user and broader accessibility input move to execution-stage recommendations |
 | 2026-08-03-02 | 2026-08-03 | 2 | Artifact Lifecycle Simplification | Crystallized | Active, Stale and Archived lifecycle; owner-controlled recovery and archive; review/Revision evidence separated from status |
 | 2026-08-04-01 | 2026-08-04 | 1 | First-Slice Solo Prototype Review | Crystallized | Saved Goal presentation, simulated recovery, responsive layout and preliminary accessibility semantics reviewed; keyboard automation limitation recorded |
+| 2026-08-04-02 | 2026-08-04 | 2 | First-Slice OAuth Identity Mechanism | Crystallized | Better Auth with Google and GitHub OAuth; verified-email-only provider association and no password/recovery scope |

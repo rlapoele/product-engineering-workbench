@@ -14,7 +14,7 @@ Unless explicitly stated otherwise, the definitions contained in this glossary t
 
 An Authenticated User is the current human user whose identity has been established by the workbench's identity boundary.
 
-For the first slice, the identity boundary supplies one stable, opaque user identifier to the server application. The browser does not choose or submit that identifier as Project ownership or command authority. Authentication provider, credential, account-recovery and session-implementation details remain outside this contract.
+For the first slice, Better Auth establishes a session through Google or GitHub OAuth and supplies one stable, opaque user identifier to the server application. The browser does not choose or submit that identifier, an email address or an OAuth-provider identifier as Project ownership or command authority. Email/password authentication, anonymous access, provider-account settings, manual account linking and account recovery remain outside this slice.
 
 ## Assistance Request Type
 

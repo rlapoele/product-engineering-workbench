@@ -14,6 +14,6 @@ Every write carries an Operation ID. The backend retains the completed command o
 
 ## Limits
 
-The backend does not prescribe the browser presentation, require a particular identity provider, expose a database-specific contract, or implement local synchronization, conflict resolution, collaboration, AI assistance, handoff generation or impact propagation in the first slice.
+The backend does not prescribe the browser presentation or expose a database-specific contract. In the first slice it receives authenticated identity through Better Auth's Google and GitHub OAuth sessions, but does not implement local synchronization, conflict resolution, collaboration, AI assistance, handoff generation or impact propagation.
 
 The first slice does not choose API style, application framework, database, ORM, queue, cache, deployment platform or event-sourcing model.
