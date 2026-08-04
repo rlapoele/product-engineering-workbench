@@ -10,6 +10,12 @@ Unless explicitly stated otherwise, the definitions contained in this glossary t
 
 # A
 
+## Astro React Island
+
+An Astro React Island is a bounded interactive browser component rendered within an otherwise server-rendered Astro page.
+
+For the first slice, React Islands own only their local interaction state, such as in-progress form input, pending command feedback and recoverable error presentation. They obtain Project reads and submit explicit Project commands through the client-facing Project data and command boundary; they do not become canonical Project State or client-side authorization authority.
+
 ## Authenticated User
 
 An Authenticated User is the current human user whose identity has been established by the workbench's identity boundary.

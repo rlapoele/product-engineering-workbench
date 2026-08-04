@@ -1,6 +1,6 @@
 # Frontend Architecture
 
-The first-slice frontend is the browser presentation boundary of the online modular monolith.
+The first-slice frontend is the browser presentation boundary of the online modular monolith. Astro provides the server-rendered page composition; React Islands provide the bounded interactive areas.
 
 ## Responsibilities
 
@@ -12,4 +12,6 @@ It accesses Project reads and writes through a client-facing Project data and co
 
 The frontend does not decide whether a user owns a Project, write canonical Project State directly or create a Revision merely because a user types. It submits explicit commands and renders the authoritative saved Project and Revision state returned by the server application.
 
-The first slice does not choose a UI framework, client state-management library, routing library, local database, service-worker approach or offline-status presentation.
+React component state and hooks are the first-slice reactivity mechanism. An Island owns only the interaction state needed for its rendered boundary, such as form input, pending state, validation feedback and recovery presentation. It must not treat local state as canonical Project State, cache private Project content for offline use or infer that an explicit command succeeded before the server returns authoritative saved state.
+
+The first slice does not choose a separate client state-management library, client-side routing library, local database, service-worker approach or offline-status presentation. React components may later be extracted into Web Components where that creates a justified reusable platform boundary; this is not an MVP requirement or constraint.
