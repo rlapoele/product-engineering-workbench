@@ -16,4 +16,8 @@ Every write carries an Operation ID. The backend retains the completed command o
 
 The backend does not prescribe the browser presentation or expose a database-specific contract. In the first slice it receives authenticated identity through Better Auth's Google and GitHub OAuth sessions, but does not implement local synchronization, conflict resolution, collaboration, AI assistance, handoff generation or impact propagation.
 
-The first slice does not choose API style, application framework, database, ORM, queue, cache, deployment platform or event-sourcing model.
+The backend uses Railway-hosted PostgreSQL as canonical persistence through the `pg` driver and parameterized SQL. Commands requiring multiple canonical writes use explicit database transactions; no ORM is selected. The runtime database role has only the schema, table and sequence permissions required to serve the application, while a separate migration role owns the relevant schemas and performs schema changes. The running application receives the runtime credential only.
+
+The migration runner executes in a separately configured, private, terminating Railway job. It receives the migration credential only, applies reviewed migrations and emits a content-free outcome before the application deployment for the same source revision may proceed.
+
+The first slice does not choose API style, queue, cache or event-sourcing model. Astro/Node, Railway deployment and the SQL migration mechanism are selected separately; local synchronization, conflict resolution, collaboration, AI assistance, handoff generation and impact propagation remain deferred.

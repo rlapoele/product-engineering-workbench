@@ -76,9 +76,7 @@ Confirming a Stale artifact as valid clears that artifact's Stale status only. T
 
 AI may then be offered as a contextual action to help users understand or resolve Stale artifacts, but AI should not be required to identify the initial impact set.
 
-This decision does not require a specific database technology.
-
-Storage technology remains intentionally undecided.
+The first slice uses Railway-hosted PostgreSQL as canonical persistence. It is an unmanaged Railway database service: backup, recovery, security, monitoring and schema discipline remain the Project Owner's operational responsibility.
 
 ---
 
@@ -104,7 +102,7 @@ The first slice deliberately does not implement local Project persistence, synch
 
 # 4. First-Slice System Boundaries
 
-The selected first slice uses one deployable, online **modular monolith**. The term describes logical responsibilities inside one application deployment; it does not require microservices, separate deployment units or a distributed system.
+The selected first slice uses one deployable, online **modular monolith**. The term describes logical responsibilities inside one running application deployment; it does not require microservices or a distributed product runtime. A separate terminating migration job is an operational release control, not a second product application or system boundary.
 
 The boundary model is:
 
@@ -114,6 +112,7 @@ The boundary model is:
 | Identity boundary | Establishes the current authenticated user. | Does not decide Project ownership or permissions. |
 | Server application | Enforces owner-only access, executes Project commands and assembles Project views. | Does not expose persistence details as a browser contract. |
 | Canonical persistence | Durably records Projects, Specifications, Goals and Revisions. | Does not encode presentation behavior. |
+| Migration job | Applies reviewed forward Schema Migrations before an application release. | Has no public route or product command surface, terminates after its run and is not a product runtime service. |
 | Fixed-starter definition | Supplies immutable, versioned selected template/preset definitions and default section composition. | Is not user-editable configuration in this slice, and existing Projects do not auto-upgrade. |
 
 The minimum commands are: list the current user's Projects; create a Project and its default Specification composition atomically; load an owned Project; and create and save a Goal with its first Revision atomically.
@@ -128,7 +127,7 @@ If a session expires, the server does not execute the command. The browser keeps
 
 Better Auth provides the first-slice identity mechanism through Google and GitHub OAuth. The server derives owner authority from Better Auth's authenticated user identity, never from an email address or provider identifier supplied by the browser. OAuth accounts are automatically associated only when Better Auth receives the same verified email; the configuration does not override an unverified provider claim as trusted. The first slice has no email/password authentication, anonymous Projects, sharing, invitations, collaborators, ownership transfer, roles beyond the owner, provider-account settings or manual account-linking UI.
 
-Astro provides the server-rendered browser presentation, with React Islands for the bounded interactive areas. React owns local presentation state only; Project reads and commands continue to cross the client-facing boundary. API style, database, deployment platform and client-storage technology remain undecided. The browser reaches Project data and commands through the client-facing boundary established by the online-first, offline-evolvable posture; a future local store and synchronization layer may sit behind that boundary.
+Astro provides the server-rendered browser presentation, with React Islands for the bounded interactive areas. React owns local presentation state only; Project reads and commands continue to cross the client-facing boundary. The Astro/Node application and its Railway PostgreSQL service communicate through Railway private networking. The server reaches canonical persistence through the `pg` driver and parameterized SQL using a runtime role with no schema-definition authority. A separate private terminating migration job uses a distinct migration role, owns the relevant schemas and runs reviewed migrations before the application release from the same source revision may proceed. Schemas organize application, Better Auth and migration objects; PostgreSQL role grants enforce the authority boundary. API style and client-storage technology remain undecided. The browser reaches Project data and commands through the client-facing boundary established by the online-first, offline-evolvable posture; a future local store and synchronization layer may sit behind that boundary.
 
 ---
 
@@ -136,4 +135,4 @@ Astro provides the server-rendered browser presentation, with React Islands for 
 
 The first slice may not rely on a successful happy path alone. Its command boundaries must be testable for atomicity, owner-only access and retry behavior. Browser-level validation must exercise the selected first-use and save-failure journeys, while manual keyboard and screen-reader-oriented checks cover the documented interaction states.
 
-Operational telemetry must record privacy-safe command outcomes and failures without recording Project or Goal content, credentials or session secrets. Canonical persistence must have a verified recovery path before it holds real user content. Production configuration and secrets remain outside local development configuration, and a production-like environment must validate the full journey and recovery path before release.
+Operational telemetry must record privacy-safe command outcomes and failures without recording Project or Goal content, credentials or session secrets. Canonical persistence must have a verified recovery path before it holds real user content. Railway point-in-time recovery must be enabled when available and its restore-to-sibling-service/cutover procedure exercised in a non-production environment before real content; if it is unavailable, an equivalent scheduled-backup and tested-restoration procedure is required. Production configuration and secrets remain outside local development configuration, and a production-like environment must validate the full journey and recovery path before release.

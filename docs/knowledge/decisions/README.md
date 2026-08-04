@@ -38,3 +38,4 @@ When in doubt, prefer updating an existing document rather than creating a new o
 | ADR-016 | First-Slice Fixed-Starter Version Convention | Accepted | 2026-08-01 |
 | ADR-017 | First-Slice OAuth Identity Mechanism | Accepted | 2026-08-04 |
 | ADR-018 | First-Slice Browser Interaction Architecture | Accepted | 2026-08-04 |
+| ADR-019 | First-Slice PostgreSQL Access And SQL Migrations | Accepted | 2026-08-04 |

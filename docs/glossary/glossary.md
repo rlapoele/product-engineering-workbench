@@ -937,6 +937,18 @@ A Starter Version is an immutable, ordered definition of the starter-controlled 
 
 For the first slice, the only starter is `implementation-ready-web-app-specification.standard-web-app` at positive integer version `1`. The server selects the active version and records it on the Project. Existing Projects never auto-upgrade. A later starter change that changes a new Project's materialized document creates the next integer version; translation changes behind unchanged semantic keys do not.
 
+## Schema Migration
+
+A Schema Migration is one ordered, immutable, reviewed change to the canonical PostgreSQL schema or its required database data.
+
+For the first slice, Schema Migrations are committed forward-only SQL files. An applied migration is never edited, reordered or automatically reversed in production; a correction is another forward migration, or a separately exercised database recovery procedure. Schema Migrations include the tables used by the application and Better Auth.
+
+## Database Roles
+
+Database Roles are PostgreSQL identities and grants that enforce which database operations a process may perform. They are distinct from schemas, which organize database objects but do not alone provide a security boundary.
+
+For the first slice, the runtime role may use the application and Better Auth schemas and perform only required data operations. The separate migration role owns those schemas and performs schema changes. The application process never receives the migration role's credential.
+
 ## Section Catalog
 
 A Section Catalog is the reusable collection of specification sections that can be composed into Specification Document Templates and Project Presets.
