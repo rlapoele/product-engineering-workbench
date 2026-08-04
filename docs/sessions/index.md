@@ -148,3 +148,4 @@
 | 2026-08-04-03 | 2026-08-04 | 3 | First-Slice Browser Interaction Architecture | Crystallized | Astro server-rendered pages with bounded React Islands and component-local reactivity |
 | 2026-08-04-04 | 2026-08-04 | 4 | First-Slice PostgreSQL Access And SQL Migrations | Crystallized | Railway PostgreSQL, direct `pg`, forward-only SQL migrations and rehearsed recovery |
 | 2026-08-04-05 | 2026-08-04 | 5 | First-Slice Environments, Observability And Release Evidence | Crystallized | Local/staging/production topology, two-gate releases and privacy-safe evidence |
+| 2026-08-04-06 | 2026-08-04 | 6 | First-Slice Project Command Transport And CSRF Posture | Crystallized | Same-origin JSON command endpoints, server validation, safe results and independent CSRF enforcement |

@@ -12,6 +12,10 @@ Creating a Project atomically records the Project, its owner, the server-selecte
 
 Every write carries an Operation ID. The backend retains the completed command outcome and returns it for a matching retry, so transient network failure cannot create duplicate Projects, Goals or Revisions. A repeated Operation ID with different command content is rejected. Project creation creates no Revision; the first Goal save creates the first Revision as an immutable complete Goal snapshot.
 
+The first-slice command transport uses dedicated same-origin JSON `POST` Astro endpoints rather than a generic command endpoint. The endpoints accept only bounded JSON request bodies, require a command-specific non-simple request header and validate the complete untrusted envelope with server-owned Zod schemas before an application command executes. An owner-scoped `GET` serves Project reads. The public result contract is a discriminated, content-safe response: authoritative saved state on success, and only safe validation, authentication, privacy-preserving not-found, Operation-ID-reuse or temporary-unavailability codes on failure. Project responses use `Cache-Control: no-store`.
+
+Every unsafe command independently enforces CSRF posture at the application boundary: it rejects absent, `null` or non-allowlisted `Origin` values and cross-origin requests, and the application supplies no CORS allowance. Its exact environment-specific application origin is configured explicitly rather than derived from an untrusted request host. Better Auth retains its own trusted-origin and CSRF protection for authentication routes; it does not replace the Project-command check.
+
 ## Limits
 
 The backend does not prescribe the browser presentation or expose a database-specific contract. In the first slice it receives authenticated identity through Better Auth's Google and GitHub OAuth sessions, but does not implement local synchronization, conflict resolution, collaboration, AI assistance, handoff generation or impact propagation.
@@ -24,4 +28,4 @@ The backend writes newline-delimited JSON operational logs through Pino to stand
 
 The backend maintains content-free hourly command-outcome aggregates and Operational Release Evidence in PostgreSQL. This operational data is distinct from canonical Product Knowledge. Aggregate or log-recording failure must not alter the authoritative outcome of a Project command.
 
-The first slice does not choose API style, queue, cache or event-sourcing model. Astro/Node, Railway deployment and the SQL migration mechanism are selected separately; local synchronization, conflict resolution, collaboration, AI assistance, handoff generation and impact propagation remain deferred.
+The first slice does not choose a generic RPC protocol, queue, event-sourcing model or cross-origin API. Astro/Node, Railway deployment and the SQL migration mechanism are selected separately; local synchronization, conflict resolution, collaboration, AI assistance, handoff generation and impact propagation remain deferred.

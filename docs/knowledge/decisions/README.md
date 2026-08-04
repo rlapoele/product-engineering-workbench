@@ -40,3 +40,4 @@ When in doubt, prefer updating an existing document rather than creating a new o
 | ADR-018 | First-Slice Browser Interaction Architecture | Accepted | 2026-08-04 |
 | ADR-019 | First-Slice PostgreSQL Access And SQL Migrations | Accepted | 2026-08-04 |
 | ADR-020 | First-Slice Environments, Observability And Release Evidence | Accepted | 2026-08-04 |
+| ADR-021 | First-Slice Project Command Transport And CSRF Posture | Accepted | 2026-08-04 |

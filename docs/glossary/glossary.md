@@ -730,6 +730,14 @@ Project Owner and Project Collaborator are mutually exclusive roles within one P
 
 ---
 
+## Project Command
+
+A Project Command is one explicit request to change canonical Project State through the client-facing Project data and command boundary. It carries a caller-generated Operation ID and command-specific input; the server derives identity and authority from the session, validates the untrusted request and returns an authoritative saved result or a safe, typed failure.
+
+For the first slice, Project Commands use same-origin JSON `POST` requests to dedicated Astro endpoints. They do not expose persistence operations, accept browser-supplied ownership, mutate on `GET`, or treat a React Island's local draft as saved state.
+
+---
+
 ## Project Preset
 
 A Project Preset is a predefined configuration within a Specification Document Template.
