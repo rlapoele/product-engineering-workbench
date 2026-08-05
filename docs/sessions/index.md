@@ -151,3 +151,4 @@
 | 2026-08-04-06 | 2026-08-04 | 6 | First-Slice Project Command Transport And CSRF Posture | Crystallized | Same-origin JSON command endpoints, server validation, safe results and independent CSRF enforcement |
 | 2026-08-05-01 | 2026-08-05 | 1 | First-Slice Verification Stack And Evidence Plan | Crystallized | Vitest/Testcontainers/Playwright stack, exact five-gate evidence and manual accessibility release checks |
 | 2026-08-05-02 | 2026-08-05 | 2 | First-Slice PostgreSQL Schema And Persistence Invariants | Crystallized | UUIDv7 identifiers, four-schema layout, table invariants, atomic commands and append-only records |
+| 2026-08-06-01 | 2026-08-06 | 1 | Project Archive And Import Contract | Crystallized | Full portable Project archive, new-owned import, identifier remapping and handoff separation |

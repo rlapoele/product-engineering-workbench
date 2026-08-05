@@ -532,6 +532,32 @@ Storage limits, malware scanning, fine-grained permissions, link checking and pr
 
 ---
 
+# DATA-006 — How should a Project be exported and imported for portability?
+
+**Category:** Data Model
+
+**Status:** 🟢 Resolved
+
+## Context
+
+Implementation Handoff Packages are intentional, potentially partial one-way representations for implementation consumers. They cannot safely serve as a backup, cross-deployment transfer or reusable Project import format.
+
+## Decision
+
+The product will support a distinct, versioned, machine-oriented Project Archive for one complete transferable Project. It supports backup and restore-as-a-new-Project, a user-directed move between accounts or deployments, and an independent reusable Project copy. The archive uses structured text data and managed Resource files; its exact archive container and physical file layout remain a later format-specification decision.
+
+An archive retains transferable canonical Project knowledge and history, including Project and Specification composition, artifacts, relationships, Revisions, provenance, reviews, collaboration-request records, Handoff History, known AI activity records and managed Resources. It excludes Conversations and Conversation Outcome Links; authentication, sessions and credentials; live collaborator access and invitations; operational records and command outcomes; deployment configuration; and personal drafts or preferences. External Resources remain their link and metadata, not a downloaded remote copy.
+
+Import validates the archive format/version and complete structure, then creates a new Project owned by the importing authenticated user. Destination records receive new local identifiers and preserve only opaque source identifiers for lineage and historical attribution. Imported collaborators do not regain access. Import neither overwrites nor merges with an existing Project, and a move is user-directed copy-and-verify rather than an atomic cross-deployment operation. A standalone Specification import, in-place restore and clean history-free template/fork mode remain deferred.
+
+Implementation Handoff Packages remain one-way and are never accepted as Project Archive input.
+
+## Consequences
+
+The future interchange contract requires compatibility validation, structural and resource safety validation, and no partial visible Project on failure. Archives contain confidential Product Knowledge and must not enter logs, telemetry or operational evidence. The future architecture needs a separate Project Archive/import boundary, not a persistence shortcut or an extension of the Handoff Profile renderer.
+
+---
+
 # UX-001 — Is the document a canonical object or a view over artifacts?
 
 **Category:** User Experience

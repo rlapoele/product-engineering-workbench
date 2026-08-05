@@ -54,6 +54,8 @@ AI context assembly should use the requested scope, relevant artifacts, relation
 
 Artifact Relationships should be first-class records with their own metadata, including source or provenance metadata.
 
+The product also needs a future Project Archive boundary. A Project Archive is a versioned, machine-oriented interchange representation of one complete transferable Project; import validates it through the server application and creates a new locally owned Project with remapped local identifiers. This is distinct from the potentially partial, one-way Implementation Handoff Package. Archive/import must not transfer sessions, credentials, live collaborator authority, personal state or operational configuration, and it must not write persistence directly from a file adapter.
+
 Context Assembly should operate over Project State.
 
 The system should start from the requested scope, expand through structural relationships, explicit Artifact Relationships and Context References, then filter and weight candidate context according to the Assistance Request Type, expected Response Shape, contributor capability and Review Lens.

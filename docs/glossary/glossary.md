@@ -722,6 +722,16 @@ A Project Collaborator may be selected as the human recipient of a Collaboration
 
 ---
 
+## Project Archive
+
+A Project Archive is a versioned, machine-oriented portable package containing one complete Project's transferable canonical state. It supports backup and restore-as-a-new-Project, a user-directed move between accounts or deployments, and sharing an independent reusable Project starting point.
+
+A Project Archive is distinct from an Implementation Handoff Package. A handoff is a potentially partial representation for implementation consumers and is never an import source. An archive carries structured canonical Project knowledge, its transferable history and managed Resource files, but not Conversations, Conversation Outcome Links, authentication or session data, credentials, live collaborator authority, personal drafts or preferences, operational records, or deployment configuration.
+
+Import always creates a new locally owned Project after validation. It does not overwrite or merge with an existing Project, restore live collaborators, or treat source identifiers as destination identifiers. The importing authenticated user becomes the Project Owner; source identities may remain only as historical attribution without access or authority. Managed Resources are copied into the archive; external Resources remain external links and metadata.
+
+---
+
 ## Project Owner
 
 A Project Owner is the user who created a Project. The owner controls the Project's Product Knowledge and decides whether requested or received contributions should be acted upon. In the MVP, the owner alone may create or edit a private Product Knowledge draft, explicitly save a new canonical record or Revision, and optionally record a Response Source Link while saving a Revision. A requestor or recipient relationship never grants these powers; collaborator write delegation is deferred.

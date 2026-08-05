@@ -150,7 +150,7 @@ The MVP can postpone:
 - artifact-level file generation;
 - expanded metadata files;
 - relationship index exports;
-- re-import from handoff package.
+- Project Archive import; a handoff package is not an import source.
 
 Future export work should evolve toward the target package structure without breaking the MVP export contract.
 

@@ -2,7 +2,7 @@
 
 **Status:** Active
 
-**Last Updated:** 2026-08-05
+**Last Updated:** 2026-08-06
 
 ---
 
@@ -181,6 +181,7 @@ Recent clarification established the first target user as an AI-assisted develop
 - The first-slice Project command boundary now uses owner-scoped `GET` reads and dedicated same-origin JSON `POST` Astro endpoints for Project creation and first-Goal save. Each bounded, server-validated Zod envelope carries an Operation ID and command input; it returns authoritative saved state or a narrow safe error result. Commands independently require the configured same-origin `Origin`, JSON and a non-simple command header, offer no CORS, use no-store Project responses, and keep Better Auth's authentication-route CSRF protection separate. A generic command endpoint, cross-origin API and browser-supplied authority remain out of scope.
 - The first-slice verification stack is now selected: `astro check` and production build; Vitest with React Testing Library/user-event for unit and component coverage; Testcontainers PostgreSQL with actual migrations and a Better Auth test-only factory for integration coverage; and Playwright with axe scans for the built Node application. Chromium is mandatory for automated journeys, Firefox/WebKit provide release-candidate smoke coverage, and manual release evidence requires keyboard-only plus VoiceOver/Safari and NVDA/Firefox journeys. Staging OAuth uses dedicated synthetic accounts at first release and after identity configuration changes; automated browser tests never introduce a production auth bypass.
 - The first-slice PostgreSQL schema is now selected: application-generated UUIDv7 IDs; `app` canonical Project, Specification, Goal, immutable Goal Revision and idempotent command-outcome tables; `auth` Better Auth tables; `ops` content-free operational tables; and `migration` ledger. Explicit constraints, foreign keys, append-only runtime grants and atomic transactions preserve ownership, Revision immutability and exact same-owner Operation-ID retries. This is a first-slice-complete schema, not a premature MVP-wide Product Artifact storage decision; the later general artifact persistence strategy remains open.
+- Project portability now has a distinct future contract: a versioned machine-oriented Project Archive, separate from the partial one-way Implementation Handoff Package, retains transferable canonical Project knowledge and history plus managed Resource files. Import validates the archive and creates a newly owned Project with remapped local IDs and retained import lineage; it never restores authority, overwrites or merges a Project. Conversations, sessions, credentials, operational data and personal state are excluded. The archive format and its later implementation remain deferred.
 
 ---
 

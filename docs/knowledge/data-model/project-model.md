@@ -122,6 +122,18 @@ The contract deliberately defers Goal relationships, additional Product Artifact
 
 ---
 
+## 3.3 Project Archive And Import
+
+A Project Archive is the portable, versioned representation of one complete Project's transferable canonical state. It is designed for backup and restore-as-a-new-Project, a user-directed move between accounts or deployments, and sharing an independent reusable starting point. It is machine-oriented structured data with managed Resource files; it does not need to be human-readable.
+
+The archive preserves transferable Project knowledge and history, including specification composition, Product Artifacts, relationships, Revisions, provenance, reviews, collaboration-request records, Handoff History, known AI activity records and managed Resources. It excludes Conversations and Conversation Outcome Links, authentication and session material, credentials, operational records, runtime command outcomes, deployment configuration, personal drafts and user-specific preferences. External Resources remain links with their retained metadata rather than copied remote content.
+
+An archive import validates its declared format version and complete structure, then creates a new locally owned Project. The server derives the importing user from the current authenticated session; it never trusts an archive as current authorization. Destination records receive new local identifiers and relationships are remapped consistently. The package retains opaque source identifiers only for import lineage and historical attribution; imported collaborators do not regain access or authority. Import does not merge with, overwrite or mutate an existing Project. A standalone Specification import, in-place restore, cross-deployment destructive move and clean history-free template/fork mode remain future decisions.
+
+An Implementation Handoff Package is a different, one-way generated representation for implementation consumers. It may be partial and is never a Project Archive or an import source.
+
+---
+
 # 4. Project
 
 A Project represents a product engineering workspace.
