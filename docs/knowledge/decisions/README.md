@@ -42,3 +42,4 @@ When in doubt, prefer updating an existing document rather than creating a new o
 | ADR-020 | First-Slice Environments, Observability And Release Evidence | Accepted | 2026-08-04 |
 | ADR-021 | First-Slice Project Command Transport And CSRF Posture | Accepted | 2026-08-04 |
 | ADR-022 | First-Slice Verification Stack And Evidence Plan | Accepted | 2026-08-05 |
+| ADR-023 | First-Slice PostgreSQL Schema And Persistence Invariants | Accepted | 2026-08-05 |

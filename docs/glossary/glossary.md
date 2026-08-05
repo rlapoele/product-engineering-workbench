@@ -624,7 +624,7 @@ Knowledge
 
 ## Operation ID
 
-An Operation ID is a caller-generated stable identifier attached to one explicit write command. The system retains the command outcome so that a retry with the same Operation ID returns the original outcome rather than applying an additional canonical change.
+An Operation ID is a caller-generated UUIDv7 stable identifier attached to one explicit write command. The system retains the command outcome so that a retry by the same authenticated user with the same Operation ID returns the original outcome rather than applying an additional canonical change.
 
 An Operation ID is not a Product Artifact, Revision, lifecycle state or ordering mechanism. If a retry presents the same Operation ID with different command content, the system must reject that mismatch rather than treating it as a new operation.
 
@@ -961,7 +961,7 @@ For the first slice, Schema Migrations are committed forward-only SQL files. An 
 
 Database Roles are PostgreSQL identities and grants that enforce which database operations a process may perform. They are distinct from schemas, which organize database objects but do not alone provide a security boundary.
 
-For the first slice, the runtime role may use the application and Better Auth schemas and perform only required data operations. The separate migration role owns those schemas and performs schema changes. The application process never receives the migration role's credential.
+For the first slice, the runtime role may use the `app`, `auth` and `ops` schemas and perform only required data operations. It has no update or delete grant on canonical Project, Specification, Goal, Goal Revision or command-operation records. The separate migration role owns those schemas and the `migration` schema, and performs schema changes. The application process never receives the migration role's credential.
 
 ## Section Catalog
 

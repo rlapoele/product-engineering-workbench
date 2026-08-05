@@ -16,6 +16,10 @@ The first-slice command transport uses dedicated same-origin JSON `POST` Astro e
 
 Every unsafe command independently enforces CSRF posture at the application boundary: it rejects absent, `null` or non-allowlisted `Origin` values and cross-origin requests, and the application supplies no CORS allowance. Its exact environment-specific application origin is configured explicitly rather than derived from an untrusted request host. Better Auth retains its own trusted-origin and CSRF protection for authentication routes; it does not replace the Project-command check.
 
+Canonical first-slice tables live in the `app` schema: Projects, one Specification per Project, Goals, immutable Goal Revisions and idempotent command outcomes. Their identifiers are application-generated UUIDv7 values; Better Auth owner identifiers remain opaque `text` values in the separate `auth` schema. `app.command_operations` stores the same-owner Operation ID, command kind, request fingerprint and result references, but never a duplicate Product Knowledge payload. `ops` holds content-free hourly command aggregates and immutable release evidence, while `migration.pgmigrations` is the migration-runner ledger. The fixed starter remains server source plus the Specification's materialized ordered section-ID snapshot; it is not a database configuration table.
+
+The runtime role inserts and reads first-slice canonical records but receives no update or delete grant on them. Goals reference their current Revision through a deferred foreign key; a Goal and its Revision 1 are inserted in the same transaction with pre-generated UUIDv7 values. Owner enforcement uses explicit server SQL predicates and foreign-key structure, not PostgreSQL row-level security or browser-supplied database authority.
+
 ## Limits
 
 The backend does not prescribe the browser presentation or expose a database-specific contract. In the first slice it receives authenticated identity through Better Auth's Google and GitHub OAuth sessions, but does not implement local synchronization, conflict resolution, collaboration, AI assistance, handoff generation or impact propagation.
