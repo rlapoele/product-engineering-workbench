@@ -2,7 +2,7 @@
 
 **Status:** Active
 
-**Last Updated:** 2026-08-04
+**Last Updated:** 2026-08-05
 
 ---
 
@@ -179,6 +179,7 @@ Recent clarification established the first target user as an AI-assisted develop
 - The first-slice persistence and migration model is Railway-hosted PostgreSQL through `pg` and parameterized SQL, with explicit transactions for atomic commands. `node-pg-migrate` runs committed forward-only SQL migrations in a separate private, terminating Railway migration job; its distinct credential owns schemas while the application runtime credential has least privilege. A successful migration release gates the application release from the same source revision; application auto-deployment may not bypass it. Railway's database service is unmanaged, so real content requires a rehearsed recovery procedure with point-in-time recovery when available. Node 22 is the minimum supported runtime baseline; the exact supported LTS major remains implementation verification.
 - The first-slice environment, observability and release-evidence model is local disposable development/testing plus isolated persistent Railway staging with synthetic data and Railway production with real Product Knowledge. Staging and production use separate database, identity and OAuth configuration. Each applies the two-gate migration/application release model. Pino JSON logs, Railway health/resource metrics, and a content-free PostgreSQL operational ledger provide proportionate diagnosis and durable release evidence; no external telemetry vendor, PR environment, pager, SLO or automatic alerting is selected. Staging restoration is required before real content, then quarterly and before data-moving or destructive migrations.
 - The first-slice Project command boundary now uses owner-scoped `GET` reads and dedicated same-origin JSON `POST` Astro endpoints for Project creation and first-Goal save. Each bounded, server-validated Zod envelope carries an Operation ID and command input; it returns authoritative saved state or a narrow safe error result. Commands independently require the configured same-origin `Origin`, JSON and a non-simple command header, offer no CORS, use no-store Project responses, and keep Better Auth's authentication-route CSRF protection separate. A generic command endpoint, cross-origin API and browser-supplied authority remain out of scope.
+- The first-slice verification stack is now selected: `astro check` and production build; Vitest with React Testing Library/user-event for unit and component coverage; Testcontainers PostgreSQL with actual migrations and a Better Auth test-only factory for integration coverage; and Playwright with axe scans for the built Node application. Chromium is mandatory for automated journeys, Firefox/WebKit provide release-candidate smoke coverage, and manual release evidence requires keyboard-only plus VoiceOver/Safari and NVDA/Firefox journeys. Staging OAuth uses dedicated synthetic accounts at first release and after identity configuration changes; automated browser tests never introduce a production auth bypass.
 
 ---
 
