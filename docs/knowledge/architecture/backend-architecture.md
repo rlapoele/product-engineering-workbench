@@ -20,6 +20,14 @@ Canonical first-slice tables live in the `app` schema: Projects, one Specificati
 
 The runtime role inserts and reads first-slice canonical records but receives no update or delete grant on them. Goals reference their current Revision through a deferred foreign key; a Goal and its Revision 1 are inserted in the same transaction with pre-generated UUIDv7 values. Owner enforcement uses explicit server SQL predicates and foreign-key structure, not PostgreSQL row-level security or browser-supplied database authority.
 
+## Module And Dependency Boundaries
+
+The server is a capability-oriented modular monolith. The Project module owns owner-scoped views, explicit Project commands, retry policy and canonical Project/Specification/Artifact rules; the Fixed Starter module owns immutable starter definitions and materialization rules. Future Implementation Handoff and Project Archive modules use public Project contracts rather than persistence internals: Handoff is one-way rendering, while Archive owns interchange compatibility, identifier remapping and import lineage before invoking a Project import use case.
+
+Application Modules depend only on their own product rules and Application Ports. Ports are task-shaped interfaces owned by the consuming module for authenticated-principal resolution, owner-scoped reads, explicit transactional persistence, starter lookup, interchange snapshots/import creation, managed Resources, time/UUID generation and content-free operational recording. Concrete Astro/HTTP, Better Auth, PostgreSQL/`pg`, archive/resource and Pino/operational-ledger adapters depend on those ports, never the reverse. Generic repositories, service locators, a general event bus and a port for every library are not selected.
+
+Astro routes translate HTTP, CSRF posture, bounded Zod parsing and safe result serialization; they do not own product policy. Better Auth translates a session into an opaque authenticated principal; it does not decide Project authority. PostgreSQL supplies durable state, transactions, grants and constraints, but no hidden workflow in triggers or stored procedures. Pino and the operational ledger observe only approved content-free outcomes after canonical handling, and their failure cannot change it. The Composition Root alone validates environment configuration and wires concrete adapters. Railway provides that runtime/deployment context and the migration release gate, not domain configuration or product authority.
+
 ## Limits
 
 The backend does not prescribe the browser presentation or expose a database-specific contract. In the first slice it receives authenticated identity through Better Auth's Google and GitHub OAuth sessions, but does not implement local synchronization, conflict resolution, collaboration, AI assistance, handoff generation or impact propagation.

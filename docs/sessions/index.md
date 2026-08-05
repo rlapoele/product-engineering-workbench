@@ -152,3 +152,4 @@
 | 2026-08-05-01 | 2026-08-05 | 1 | First-Slice Verification Stack And Evidence Plan | Crystallized | Vitest/Testcontainers/Playwright stack, exact five-gate evidence and manual accessibility release checks |
 | 2026-08-05-02 | 2026-08-05 | 2 | First-Slice PostgreSQL Schema And Persistence Invariants | Crystallized | UUIDv7 identifiers, four-schema layout, table invariants, atomic commands and append-only records |
 | 2026-08-06-01 | 2026-08-06 | 1 | Project Archive And Import Contract | Crystallized | Full portable Project archive, new-owned import, identifier remapping and handoff separation |
+| 2026-08-06-02 | 2026-08-06 | 2 | Modular Monolith Application Modules And Dependency Boundaries | Crystallized | Capability modules, inward adapters, proportionate ports and a composition-root rule |

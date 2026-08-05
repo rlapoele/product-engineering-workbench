@@ -10,6 +10,18 @@ Unless explicitly stated otherwise, the definitions contained in this glossary t
 
 # A
 
+## Application Module
+
+An Application Module is a capability-oriented boundary that owns one coherent set of product use cases, policies and public application contracts. It is not a framework layer or a generic folder of technical classes.
+
+For the modular monolith, modules may depend on their own product rules and application-owned Ports, but not on concrete HTTP, UI, Better Auth, PostgreSQL, file/archive, logging, Railway or environment-configuration implementations. The initial modules are Project and Fixed Starter; Implementation Handoff and Project Archive are future modules with the same rule.
+
+## Application Port
+
+An Application Port is a small, task-shaped interface owned by an Application Module that describes an external capability it needs, such as authenticated-principal resolution, owner-scoped Project persistence, a transactional command, managed Resource access or content-free operational recording.
+
+A Port does not expose a framework's native objects or prescribe its adapter. The workbench does not create generic repositories, event buses or ports for every library merely to satisfy a pattern.
+
 ## Astro React Island
 
 An Astro React Island is a bounded interactive browser component rendered within an otherwise server-rendered Astro page.
@@ -178,6 +190,12 @@ Capabilities help a Project Owner understand how well a candidate may fit a Coll
 Candidate Context is the set of potentially relevant product knowledge gathered before filtering for a specific assistance request or contribution.
 
 Candidate Context may include Structural Context, Explicit Context, Inferred Context, Conversations, decisions, risks, assumptions, reviews, provenance and project metadata.
+
+## Composition Root
+
+The Composition Root is the runtime entry boundary that validates configuration and connects concrete adapters to Application Ports. It is the only application area allowed to know the selected concrete framework, database driver, identity provider, archive/resource implementation, observability implementation and Railway runtime configuration together.
+
+The Composition Root does not contain product policy, and the private terminating migration job is an operational entry point rather than a second product application runtime.
 
 ---
 

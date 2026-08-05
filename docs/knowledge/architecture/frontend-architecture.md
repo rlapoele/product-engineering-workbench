@@ -8,6 +8,8 @@ The frontend renders authenticated entry, the first-use Project home, Project cr
 
 It accesses Project reads and writes through a client-facing Project data and command boundary. For the first slice, the boundary uses owner-scoped `GET` requests and two dedicated same-origin JSON `POST` endpoints: Project creation and first-Goal save. Each write submits a caller-generated Operation ID with command-specific input, then replaces local presentation state only with the authoritative saved result returned by the server. This keeps components independent of remote persistence details and preserves a future insertion point for local Project storage and synchronization.
 
+The browser-side Project client is an HTTP adapter to those public contracts. Astro pages and React Islands may depend on that client-facing boundary and shared transport contracts, but never import server application internals, Better Auth, PostgreSQL, Railway configuration or archive/resource adapters.
+
 ## Limits
 
 The frontend does not decide whether a user owns a Project, write canonical Project State directly or create a Revision merely because a user types. It submits explicit commands with `credentials: "same-origin"`, JSON content and the required command header, and renders the authoritative saved Project and Revision state returned by the server application. It does not call cross-origin command endpoints.

@@ -137,7 +137,19 @@ The selected persistence layout has four schemas: `app` for canonical first-slic
 
 ---
 
-# 5. First-Slice Quality And Operational Boundaries
+# 5. Application Modules And Dependency Direction
+
+The modular monolith is organized around capability-oriented Application Modules, not generic technical layers. The Project module owns owner-scoped Project views, explicit commands, retry policy and canonical Project/Specification/Artifact rules. The Fixed Starter module owns immutable selected-starter versions and their materialization. Future Implementation Handoff and Project Archive modules are separate capabilities: Handoff produces one-way downstream representations, while Archive produces and validates portable Project interchange state, remaps identifiers and invokes a Project import use case.
+
+An Application Module may depend on its own product rules and task-shaped Application Ports that it owns. An adapter implements a Port and depends inward; product policy never depends on Astro, React, Better Auth, PostgreSQL, `pg`, Pino, archive/file libraries, Railway or runtime environment objects. The browser-facing Project client is likewise an HTTP adapter to public read/command contracts, not a client-side copy of server persistence.
+
+The Composition Root is the only place that validates runtime configuration and connects concrete adapters. Astro translates HTTP, CSRF and bounded input into application calls; Better Auth translates sessions into opaque principals; PostgreSQL provides transactions, constraints and grants; archive/resource adapters read or write packages/files; and Pino plus the operations ledger record approved content-free outcomes. These adapters do not become product authority. PostgreSQL constraints remain structural protection alongside explicit application policy, while Railway supplies deployment, private networking and release control only. The migration job remains an operational entry point, not a second product runtime.
+
+The first slice has no generic repository abstraction, service locator, dependency-injection container, event bus, event-sourcing infrastructure, CQRS framework, aggregate framework, import-graph enforcement tool or microservice split. Tests establish the boundaries through pure policy tests, real-adapter integration tests, endpoint translation tests and browser journeys; dependency-direction compliance is initially a code-review and module-boundary rule.
+
+---
+
+# 6. First-Slice Quality And Operational Boundaries
 
 The first slice may not rely on a successful happy path alone. `astro check` and the production build provide static and build verification. Vitest provides unit, React-Island component and server-integration tests; React Testing Library and `user-event` test Island interactions in JSDOM. Integration tests use a disposable Testcontainers PostgreSQL instance, run the committed forward migrations and exercise actual `pg` transactions, database authority predicates and Better Auth test-only sessions. The Better Auth test helper exists only in a separate test auth factory and is never a production route or authentication bypass.
 
