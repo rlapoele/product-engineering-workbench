@@ -144,6 +144,14 @@ Before accepting a first-slice implementation change, review that:
 
 No later step bypasses an earlier quality gate. A failure in operations recording cannot turn a committed canonical command into a failure, and a migration/application release cannot bypass the selected two-gate release sequence.
 
+## Implementation Authorization Gate
+
+No repository product code begins until the Project Owner explicitly authorizes the named first slice after accepting a Dependency Verification Record. The verification exercise is local-only and disposable: it evaluates a candidate Node LTS—Node `24` first, with the accepted Node `22` minimum as a fallback candidate—and one exact package set in a temporary directory with local Testcontainers PostgreSQL where required.
+
+The Record must identify the tested runtime and package versions; peer-dependency and production-build result; Astro Node adapter and React-Island result; Better Auth PostgreSQL/schema-generation result; reviewed generated Better Auth DDL for the `auth` schema; `pg` plus `node-pg-migrate` migration-ledger result; Vitest/Testcontainers and Playwright/axe tooling result; and any accepted incompatibility replacement. It must not add repository product code, migrations or routes, deploy to Railway, configure OAuth applications, or use Product Knowledge.
+
+After the Record is accepted, Implementation Authorization permits only the first-slice construction sequence above. Railway migration-job behavior, staging OAuth, restoration exercises, manual accessibility checks and production readiness remain later release-readiness gates; they do not block the first local implementation increment.
+
 ## Related Decisions
 
 - `docs/knowledge/decisions/ADR-018-first-slice-browser-interaction-architecture.md`

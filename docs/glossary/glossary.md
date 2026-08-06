@@ -431,6 +431,14 @@ Decisions may update project knowledge and may optionally be formalized through 
 
 ---
 
+## Dependency Verification Exercise
+
+A Dependency Verification Exercise is a local-only, disposable compatibility check performed before product-code authorization. It tests one candidate Node LTS and exact package set against the selected Astro/React, Better Auth, PostgreSQL/`pg`, SQL-migration and verification-tool boundaries.
+
+It may use a temporary directory, local package installation and disposable Testcontainers PostgreSQL. It adds no repository product code, migrations, routes or Product Knowledge. It does not use Railway, OAuth applications or real staging/production data, and it does not substitute for staging/release evidence.
+
+---
+
 ## Deterministic Next-step Guidance
 
 Deterministic Next-step Guidance is an optional, user-invoked derived view that identifies relevant follow-up work from explicit Project State.
@@ -496,6 +504,12 @@ It identifies its Project State basis and lets the user navigate to the relevant
 ---
 
 # I
+
+## Implementation Authorization
+
+Implementation Authorization is the Project Owner's explicit permission to add product code for one named accepted slice after its prerequisite documentation and Dependency Verification Record are accepted.
+
+It is scoped to the named slice and does not authorize deferred product capabilities, deployment to Railway, use of real Product Knowledge, or production release. Staging and production remain subject to their separate release-readiness gates.
 
 ## Interface Locale
 

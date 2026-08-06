@@ -18,6 +18,12 @@ User-authored Project knowledge is confidential by default. The first slice must
 
 The baseline does not require an availability SLA, horizontal scaling, a performance benchmark, penetration-test certification, compliance certification or a dedicated staging environment. It does require enough production-like validation to establish that the trusted value loop and recovery path work before users rely on them.
 
+## Implementation Authorization And Platform Lock
+
+Product code for the first slice requires explicit Project Owner Implementation Authorization after acceptance of a local-only Dependency Verification Record. That Record proves one exact Node/package set against the accepted architecture in a disposable temporary harness and Testcontainers PostgreSQL where needed; it does not deploy to Railway, configure OAuth or use Product Knowledge.
+
+The selected quality gates still govern staging and production. Railway migration/application gating, real staging OAuth, recovery exercises, manual assistive-technology evidence and production readiness are release-readiness requirements, not prerequisites for the first local code increment.
+
 ## First-Slice Verification Stack
 
 The first slice uses `astro check` and `astro build` for static/type and production-build verification. Vitest is the unit, React-Island component and server-integration runner; React Testing Library and `user-event` test React Islands in JSDOM. Integration tests use Testcontainers PostgreSQL, apply the committed forward migrations and exercise the actual `pg` transaction and authorization paths. Better Auth test utilities live only in a separate test-only auth factory; they create isolated users and sessions for tests and do not add a production route or authentication bypass.

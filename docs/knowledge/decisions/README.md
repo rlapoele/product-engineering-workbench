@@ -46,3 +46,4 @@ When in doubt, prefer updating an existing document rather than creating a new o
 | ADR-024 | Project Archive And Import Contract | Accepted | 2026-08-06 |
 | ADR-025 | Modular Monolith Application Modules And Dependency Boundaries | Accepted | 2026-08-06 |
 | ADR-026 | First-Slice Executable Specification Boundary | Accepted | 2026-08-06 |
+| ADR-027 | First-Slice Implementation Authorization And Dependency Verification | Accepted | 2026-08-06 |
