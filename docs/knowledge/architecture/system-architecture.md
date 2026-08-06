@@ -147,6 +147,8 @@ The Composition Root is the only place that validates runtime configuration and 
 
 The first slice has no generic repository abstraction, service locator, dependency-injection container, event bus, event-sourcing infrastructure, CQRS framework, aggregate framework, import-graph enforcement tool or microservice split. Tests establish the boundaries through pure policy tests, real-adapter integration tests, endpoint translation tests and browser journeys; dependency-direction compliance is initially a code-review and module-boundary rule.
 
+The executable first-slice specification fixes a minimal `src/modules`, `src/adapters`, `src/composition`, `src/pages` and `src/islands` layout, thin routes for owner-scoped reads and two commands, and a separate `migrations` directory. It defines application and migration configuration contracts, but leaves implementation dependency versions and exact environment-variable spellings to dependency verification. It does not authorize capabilities beyond the selected first slice.
+
 ---
 
 # 6. First-Slice Quality And Operational Boundaries

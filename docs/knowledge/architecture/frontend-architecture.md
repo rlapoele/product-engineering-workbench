@@ -10,6 +10,8 @@ It accesses Project reads and writes through a client-facing Project data and co
 
 The browser-side Project client is an HTTP adapter to those public contracts. Astro pages and React Islands may depend on that client-facing boundary and shared transport contracts, but never import server application internals, Better Auth, PostgreSQL, Railway configuration or archive/resource adapters.
 
+The executable first-slice layout places thin Astro UI and JSON adapters in `src/pages/`, React Islands in `src/islands/`, and the browser Project client in `src/adapters/browser/project-http-client.ts`. The framework-required page files delegate into the server Composition Root rather than owning application policy.
+
 ## Limits
 
 The frontend does not decide whether a user owns a Project, write canonical Project State directly or create a Revision merely because a user types. It submits explicit commands with `credentials: "same-origin"`, JSON content and the required command header, and renders the authoritative saved Project and Revision state returned by the server application. It does not call cross-origin command endpoints.

@@ -441,6 +441,12 @@ It is not a task list, workflow gate, Product Artifact or AI request. The initia
 
 # E
 
+## Executable Specification
+
+An Executable Specification is an implementation-facing knowledge document that fixes the smallest source layout, public contracts, configuration boundary, dependency-review rules and implementation sequence needed to build an accepted product slice.
+
+It constrains module and adapter responsibilities without becoming product code, a line-by-line design, a generic framework prescription or authorization to implement outside the accepted slice.
+
 ## Edit-in-progress Draft
 
 An Edit-in-progress Draft is a persistent, user-owned working copy of a Product Artifact that has not yet become canonical Product Knowledge.
