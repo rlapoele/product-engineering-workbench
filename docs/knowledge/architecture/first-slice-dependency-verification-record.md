@@ -29,7 +29,7 @@ Node `24.14.1` is accepted as the first supported LTS candidate. Node `22` remai
 | Area | Accepted package versions |
 | --- | --- |
 | Application | `astro` `7.2.0`; `@astrojs/node` `11.1.0`; `@astrojs/react` `6.0.2`; `react` and `react-dom` `19.2.8`; `tailwindcss` `4.3.3` |
-| Runtime boundaries | `better-auth` `1.6.26`; `pg` `8.23.0`; `zod` `4.4.3`; `pino` `10.3.1`; `node-pg-migrate` `9.0.0` |
+| Runtime boundaries | `better-auth` `1.6.26`; its PostgreSQL configuration dependency `kysely` `0.28.17`; `pg` `8.23.0`; `zod` `4.4.3`; `pino` `10.3.1`; `node-pg-migrate` `9.0.0` |
 | Static and component verification | `typescript` `6.0.3`; `@astrojs/check` `0.9.10`; `vitest` `4.1.10`; `jsdom` `29.1.1`; `@vitejs/plugin-react` `6.0.5`; React Testing Library `16.3.2`; `user-event` `14.6.3` |
 | Database and browser verification | `testcontainers` `12.1.0`; `@playwright/test` `1.62.1`; `@axe-core/playwright` `4.12.1` |
 | Supporting type and CLI tooling | `@types/node` `26.2.0`; `@types/pg` `8.21.0`; `@types/react` `19.2.18`; `@types/react-dom` `19.2.4`; `auth` `1.6.26` |
@@ -37,6 +37,8 @@ Node `24.14.1` is accepted as the first supported LTS candidate. Node `22` remai
 TypeScript `7.0.2` was rejected: `@astrojs/check` `0.9.10` accepts TypeScript `5` or `6`, not `7`. TypeScript `6.0.3` passed all static, build and test checks.
 
 The obsolete `@better-auth/cli` `1.4.21` candidate was rejected because it carries an older Better Auth line. The selected `auth` package is version-aligned at `1.6.26`; its executable reports `1.1.2` for `--version`, but its installed package manifest and dependency tree both identify `1.6.26` and it generated the reviewed schema successfully.
+
+Better Auth's supported PostgreSQL runtime configuration uses its Kysely dialect boundary. The accepted lock resolves that internal dependency as `kysely` `0.28.17`; the application declares that exact version directly only to make the Better Auth composition import reproducible. Product persistence remains direct parameterized `pg` SQL; Kysely is not used by the Project module or PostgreSQL Project adapter.
 
 ## Results
 

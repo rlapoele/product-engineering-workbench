@@ -1,0 +1,50 @@
+{
+  "name": "product-engineering-workbench",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24.14.1 <25"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "start": "node ./dist/server/entry.mjs",
+    "check": "astro check",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:browser": "playwright test",
+    "verify": "npm run check && npm run build && npm run test",
+    "migrate": "node-pg-migrate --migrations-dir migrations --migrations-table migration.pgmigrations --migration-file-language sql --no-verbose up"
+  },
+  "dependencies": {
+    "@astrojs/node": "11.1.0",
+    "@astrojs/react": "6.0.2",
+    "astro": "7.2.0",
+    "better-auth": "1.6.26",
+    "kysely": "0.28.17",
+    "pg": "8.23.0",
+    "pino": "10.3.1",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "tailwindcss": "4.3.3",
+    "zod": "4.4.3"
+  },
+  "devDependencies": {
+    "@astrojs/check": "0.9.10",
+    "@axe-core/playwright": "4.12.1",
+    "@playwright/test": "1.62.1",
+    "@testing-library/react": "16.3.2",
+    "@testing-library/user-event": "14.6.3",
+    "@types/node": "26.2.0",
+    "@types/pg": "8.21.0",
+    "@types/react": "19.2.18",
+    "@types/react-dom": "19.2.4",
+    "@vitejs/plugin-react": "6.0.5",
+    "jsdom": "29.1.1",
+    "node-pg-migrate": "9.0.0",
+    "testcontainers": "12.1.0",
+    "typescript": "6.0.3",
+    "vitest": "4.1.10"
+  }
+}
