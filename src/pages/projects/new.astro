@@ -8,4 +8,8 @@ const principal = await resolvePrincipal(composed.auth, Astro.request);
 if (!principal) return Astro.redirect('/');
 const contentLocale = Astro.request.headers.get('accept-language')?.split(',')[0]?.trim() || 'en';
 ---
-<main><p><a href="/">← Your Projects</a></p><p class="eyebrow">New Project</p><h1>Give your thinking a home.</h1><CreateProjectIsland client:load contentLocale={contentLocale} /></main>
+<!doctype html>
+<html lang="en">
+  <head><meta charset="utf-8" /><meta name="viewport" content="width=device-width" /><title>New Project — Product Engineering Workbench</title></head>
+  <body><main><p><a href="/">← Your Projects</a></p><p class="eyebrow">New Project</p><h1>Give your thinking a home.</h1><CreateProjectIsland client:load contentLocale={contentLocale} /></main></body>
+</html>

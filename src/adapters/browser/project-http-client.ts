@@ -1,12 +1,16 @@
 import type { CommandResult, CreateProjectInput, ProjectView, SaveFirstGoalInput } from '../../modules/project/public';
 
 const request = async <T>(path: string, command: string, body: unknown): Promise<CommandResult<T>> => {
-  const response = await fetch(path, {
-    method: 'POST', credentials: 'same-origin',
-    headers: { 'Content-Type': 'application/json', 'X-Project-Command': command },
-    body: JSON.stringify(body),
-  });
-  return response.json() as Promise<CommandResult<T>>;
+  try {
+    const response = await fetch(path, {
+      method: 'POST', credentials: 'same-origin',
+      headers: { 'Content-Type': 'application/json', 'X-Project-Command': command },
+      body: JSON.stringify(body),
+    });
+    return await response.json() as CommandResult<T>;
+  } catch {
+    return { ok: false, code: 'temporary_unavailable' };
+  }
 };
 
 export const projectHttpClient = {

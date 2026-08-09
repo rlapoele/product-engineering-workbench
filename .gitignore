@@ -9,6 +9,9 @@ dist/
 build/
 out/
 coverage/
+.playwright-browser-runtime.json
+playwright-report/
+test-results/
 
 # Logs
 *.log
