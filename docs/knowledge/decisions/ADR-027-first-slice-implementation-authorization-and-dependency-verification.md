@@ -36,6 +36,8 @@ The Record contains:
 - Vitest/Testcontainers and Playwright/axe tooling result; and
 - any incompatibility, replacement and its accepted rationale.
 
+The accepted Record is `docs/knowledge/architecture/first-slice-dependency-verification-record.md`.
+
 ### 2. Explicit implementation authorization
 
 After the Project Owner accepts the Dependency Verification Record, the Owner may explicitly authorize repository product code for the named ADR-026 first slice only. That authorization does not include Project Archive, handoff generation, collaboration, AI, offline capability, additional Artifact types or any other deferred capability.
