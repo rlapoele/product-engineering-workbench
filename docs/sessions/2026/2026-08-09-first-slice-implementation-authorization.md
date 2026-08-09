@@ -12,9 +12,9 @@ The authorized scope remains authenticated owner entry; calm Project home; fixed
 
 ## Initial implementation record
 
-The repository now contains the Astro/Node and bounded React-Island baseline; fixed starter v1; Project public contracts; direct-SQL migration and PostgreSQL adapter; Better Auth Google/GitHub composition; same-origin JSON command routes; and a minimal responsive journey. The initial static check, production build, unit command tests and React draft-recovery component test pass.
+The repository now contains the Astro/Node and bounded React-Island baseline; fixed starter v1; Project public contracts; direct-SQL migration and PostgreSQL adapter; Better Auth Google/GitHub composition; same-origin JSON command routes; and a minimal responsive journey. Static check, production build, unit command tests and React draft-recovery component test pass. Disposable Testcontainers PostgreSQL applies the committed migration twice through `node-pg-migrate` and proves owner-private reads, exact Operation-ID replay and mismatch rejection, plus atomic first Goal / Revision 1 persistence.
 
-This is not release readiness. Testcontainers migration/transaction coverage, endpoint authority coverage, built-app Playwright/axe evidence, Railway migration gating, staging OAuth, recovery and manual accessibility evidence remain pending their respective accepted gates.
+This is not release readiness. Endpoint authority coverage, built-app Playwright/axe evidence, Railway migration gating, staging OAuth, recovery and manual accessibility evidence remain pending their respective accepted gates.
 
 ## Recommended Next Topic
 
