@@ -5,7 +5,9 @@ import { Pool } from 'pg';
 import { GenericContainer, Wait } from 'testcontainers';
 import { afterAll, beforeAll, describe, expect, it } from 'vitest';
 import { PostgresProjectStore } from '../../src/adapters/postgres/project-store';
+import { postgresLedger } from '../../src/adapters/operations/postgres-ledger';
 import { fixedStarter } from '../../src/modules/fixed-starter/standard-web-app-v1';
+import { projectApi } from '../../src/modules/project';
 
 const execFileAsync = promisify(execFile);
 const operation = (suffix: string) => `01987b06-cfc7-7000-8000-00000000000${suffix}`;
@@ -54,5 +56,20 @@ describe('PostgresProjectStore', () => {
     expect(replayed).toEqual(saved);
     const counts = await pool.query(`SELECT (SELECT count(*)::int FROM app.goals WHERE project_id = $1) AS goals, (SELECT count(*)::int FROM app.goal_revisions r JOIN app.goals g ON g.id = r.goal_id WHERE g.project_id = $1) AS revisions`, [created.value.id]);
     expect(counts.rows[0]).toEqual({ goals: 1, revisions: 1 });
+  });
+
+  it('records a content-free hourly command outcome after a successful authoritative command', async () => {
+    const ledger = postgresLedger(pool);
+    const recorded: unknown[] = [];
+    const projects = projectApi(new PostgresProjectStore(pool, fixedStarter.active()), fixedStarter, { record: async (input) => { recorded.push(input); await ledger.record(input); } }, 'integration-test');
+    const result = await projects.createProject({ userId: 'owner-a' }, { operationId: operation('4'), title: 'Synthetic observability Project', contentLocale: 'en' });
+    expect(result).toMatchObject({ ok: true, value: { title: 'Synthetic observability Project' } });
+    expect(recorded).toHaveLength(1);
+
+    const outcomes = await pool.query(`SELECT command_category, outcome, source_revision, count, total_duration_ms, max_duration_ms FROM ops.command_outcomes_hourly WHERE command_category = 'create_project' AND source_revision = 'integration-test'`);
+    expect(outcomes.rows).toHaveLength(1);
+    expect(outcomes.rows[0]).toMatchObject({ command_category: 'create_project', outcome: 'success', source_revision: 'integration-test', count: '1' });
+    expect(Number(outcomes.rows[0].total_duration_ms)).toBeGreaterThanOrEqual(0);
+    expect(Number(outcomes.rows[0].max_duration_ms)).toBeGreaterThanOrEqual(0);
   });
 });
