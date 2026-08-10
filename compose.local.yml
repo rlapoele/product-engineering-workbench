@@ -1,0 +1,46 @@
+# Local development only. It is not a Railway or production deployment definition.
+services:
+  postgres:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_DB: product_engineering_workbench
+      POSTGRES_USER: pew_migration
+      POSTGRES_PASSWORD: pew_migration_local
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U pew_migration -d product_engineering_workbench"]
+      interval: 2s
+      timeout: 5s
+      retries: 15
+    ports:
+      - "127.0.0.1:54329:5432"
+    volumes:
+      - pew_local_postgres:/var/lib/postgresql/data
+      - ./docker/local-postgres-init/01-runtime-role.sql:/docker-entrypoint-initdb.d/01-runtime-role.sql:ro
+
+  migrate:
+    build:
+      context: .
+      dockerfile: Dockerfile.local
+    environment:
+      DATABASE_URL: postgresql://pew_migration:pew_migration_local@postgres:5432/product_engineering_workbench
+    command: npm run migrate
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile.local
+    env_file: .env
+    environment:
+      DATABASE_URL: postgresql://pew_runtime:pew_runtime_local@postgres:5432/product_engineering_workbench
+      PORT: "4321"
+    ports:
+      - "127.0.0.1:4321:4321"
+    depends_on:
+      migrate:
+        condition: service_completed_successfully
+
+volumes:
+  pew_local_postgres:

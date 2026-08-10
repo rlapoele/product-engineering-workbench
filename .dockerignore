@@ -1,0 +1,9 @@
+.env
+.git
+.astro
+dist
+node_modules
+playwright-report
+test-results
+coverage
+npm-debug.log*

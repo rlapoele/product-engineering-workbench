@@ -16,6 +16,9 @@
     "test:browser": "playwright test",
     "verify": "npm run check && npm run build && npm run test",
     "verify:release": "npm run verify && npm run test:browser",
+    "start:db": "docker compose -f compose.local.yml up -d postgres",
+    "stop:db": "docker compose -f compose.local.yml stop postgres",
+    "migrate:db": "docker compose -f compose.local.yml run --rm migrate",
     "migrate": "node-pg-migrate --migrations-dir migrations --migrations-table migration.pgmigrations --migration-file-language sql --no-verbose up"
   },
   "dependencies": {

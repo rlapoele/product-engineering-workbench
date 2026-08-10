@@ -66,6 +66,39 @@ This repository documents and implements the product; it should not be interpret
 
 ---
 
+## Local Docker Development
+
+The local-only Compose setup starts PostgreSQL, applies the committed migrations through its local migration role, and runs the application with its separate runtime role. It is not a Railway or production deployment configuration.
+
+1. Fill the Google and GitHub OAuth values in your ignored `.env` file and configure both providers with `http://127.0.0.1:4321` as the local application origin/callback base.
+2. Start the local stack:
+
+   ```sh
+   docker compose -f compose.local.yml up --build
+   ```
+
+3. Open `http://127.0.0.1:4321`.
+
+The local host-side runtime connection is:
+
+```text
+postgresql://pew_runtime:pew_runtime_local@127.0.0.1:54329/product_engineering_workbench
+```
+
+To run the application on your host instead of in Compose, start and migrate only the database, then run Astro:
+
+```sh
+npm run start:db
+npm run migrate:db
+npm run dev
+```
+
+Use `npm run stop:db` to stop the database container while retaining its local volume.
+
+Use `docker compose -f compose.local.yml down` to stop the stack. Add `--volumes` only when you intentionally want to discard the local database.
+
+---
+
 ## Current Status
 
 This repository is currently in the **knowledge discovery and specification phase**.
