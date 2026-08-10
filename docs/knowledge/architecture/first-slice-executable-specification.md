@@ -150,7 +150,7 @@ No repository product code begins until the Project Owner explicitly authorizes 
 
 The Record must identify the tested runtime and package versions; peer-dependency and production-build result; Astro Node adapter and React-Island result; Better Auth PostgreSQL/schema-generation result; reviewed generated Better Auth DDL for the `auth` schema; `pg` plus `node-pg-migrate` migration-ledger result; Vitest/Testcontainers and Playwright/axe tooling result; and any accepted incompatibility replacement. It must not add repository product code, migrations or routes, deploy to Railway, configure OAuth applications, or use Product Knowledge.
 
-After the Record is accepted, Implementation Authorization permits only the first-slice construction sequence above. Railway migration-job behavior, staging OAuth, restoration exercises, manual accessibility checks and production readiness remain later release-readiness gates; they do not block the first local implementation increment.
+After the Record is accepted, Implementation Authorization permits only the first-slice construction sequence above. Railway migration-job behavior, staging OAuth, restoration exercises and production readiness remain later release-readiness gates; manual VoiceOver/Safari validation is deferred until the MVP is built or its implementation reaches that stage. None block the first local implementation increment.
 
 ## Related Decisions
 

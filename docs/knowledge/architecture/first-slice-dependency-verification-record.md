@@ -64,7 +64,7 @@ The `auth` CLI is generation-time tooling only. It is not selected as an applica
 
 This Record satisfies ADR-027's local platform-lock prerequisite. It does not grant Implementation Authorization.
 
-Repository product code remains unauthorized until the Project Owner explicitly authorizes the named ADR-026 first slice. Railway migration/application gating, staging OAuth, recovery exercises, manual accessibility evidence and production readiness remain separate later gates.
+Repository product code remains unauthorized until the Project Owner explicitly authorizes the named ADR-026 first slice. Railway migration/application gating, staging OAuth, recovery exercises and production readiness remain separate later gates; manual VoiceOver/Safari validation is deferred until the MVP is built or its implementation reaches that stage.
 
 ## Related Documents
 

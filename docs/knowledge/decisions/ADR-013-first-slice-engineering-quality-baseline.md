@@ -18,7 +18,7 @@ Before the first slice holds real user content, require five quality gates:
 
 1. **Core correctness:** automated coverage of fixed-starter version `1` Project creation with its expected composition and without a Revision, atomic Goal/Revision 1 save, exact Operation-ID retry behavior and mismatched-ID rejection.
 2. **Authority and privacy:** integration coverage of owner-only Project reads and writes; no Product content, credentials or session secrets in ordinary logs, telemetry or error messages.
-3. **Journey and accessibility:** browser-level coverage of the essential journey and simulated creation/save failure; manual keyboard and screen-reader-oriented checks for focus, labels, errors and saved-state feedback.
+3. **Journey and accessibility:** browser-level coverage of the essential journey, simulated creation/save failure and automated accessibility scans. The current evidence is retained in versioned repository tests and source-revision records; manual VoiceOver/Safari validation is deliberately deferred until the MVP is built or its implementation reaches that stage.
 4. **Recovery and observability:** privacy-safe structured command outcomes and failure metrics for Project creation and Goal save; tested backup restoration before real user content is relied upon.
 5. **Release discipline:** automated checks before release; production configuration and secrets separated from local development; a production-like full-journey and recovery check; and tested rollback or recovery for schema/data changes.
 

@@ -44,7 +44,7 @@ After the Project Owner accepts the Dependency Verification Record, the Owner ma
 
 ### Separate release readiness
 
-The platform lock and Implementation Authorization do not deploy to Railway. The existing release-readiness gates remain independent: private migration-job/application-release gating, staging configuration and synthetic OAuth accounts, staging backup restoration, restricted observability, automated quality evidence, manual keyboard and assistive-technology evidence, and production readiness checks. They block staging/production use as specified by the existing ADRs, but do not block the first local code increment.
+The platform lock and Implementation Authorization do not deploy to Railway. The existing release-readiness gates remain independent: private migration-job/application-release gating, staging configuration and synthetic OAuth accounts, staging backup restoration, restricted observability, automated quality evidence, deferred manual VoiceOver/Safari evidence, and production readiness checks. They block staging/production use as specified by the existing ADRs, but do not block the first local code increment.
 
 ## Rationale
 

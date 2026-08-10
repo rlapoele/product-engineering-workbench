@@ -24,11 +24,11 @@ The required evidence is:
 |---|---|---|
 | Core correctness | Fixed starter v1 composition without a Revision; atomic Goal/Revision 1 save; exact Operation-ID replay; mismatched-reuse rejection. | — |
 | Authority and privacy | Owner-only reads/writes; unauthenticated, non-owner, invalid-origin, missing-origin and malformed-command rejection; safe errors and content-free logs/ledger. | Test fixtures contain no real Product Knowledge, credentials or secrets. |
-| Journey and accessibility | Essential Playwright journey; intercepted creation/save network failure and retry; axe scans of defined interaction states. | Keyboard-only journey; VoiceOver/Safari and NVDA/Firefox essential journeys. |
+| Journey and accessibility | Essential Playwright journey; intercepted creation/save network failure and retry; axe scans of defined interaction states. Results are retained in the committed suite and source-revision evidence records. | Manual VoiceOver/Safari validation is deferred until the MVP is built or its implementation reaches that stage; a human-followable scenario template must be created before it is run. |
 | Recovery and observability | Telemetry/ledger failure does not change a successful canonical command result. | Staging restoration exercise and release-evidence review. |
 | Release discipline | Static/build checks, Vitest suites and Playwright suite pass before release. | Staging smoke journey; production readiness and non-destructive owner check; recovery evidence for schema/data changes. |
 
-Manual release evidence records source revision, environment, browser/assistive-technology combination, outcome, defects and known limits. Dedicated synthetic staging accounts exercise actual Google and GitHub OAuth before the first production release and after identity-provider, callback-origin or Better Auth configuration changes. Ordinary browser tests use test-only sessions instead of automating a production OAuth flow.
+Generated Playwright reports and traces are transient synthetic-only diagnostics. The committed suite plus a source-revision evidence record retain the current automated result in the repository. Manual accessibility evidence is not a current implementation requirement. When the MVP is built or its implementation reaches that stage, add and use a VoiceOver/Safari scenario template that records source revision, environment, browser/assistive-technology combination, outcome, defects and known limits. Dedicated synthetic staging accounts exercise actual Google and GitHub OAuth before the first production release and after identity-provider, callback-origin or Better Auth configuration changes. Ordinary browser tests use test-only sessions instead of automating a production OAuth flow.
 
 ## Rationale
 
@@ -43,7 +43,7 @@ Using test-only Better Auth helpers keeps authenticated test setup explicit with
 - Test setup requires a Docker-capable local or automated-test environment for disposable PostgreSQL containers.
 - The application must keep the production auth factory separate from the test-only auth factory.
 - The release workflow requires a repeatable aggregate verification command that runs static checks, build, Vitest suites and the Playwright journey suite before a staging or production release.
-- Chromium is the everyday browser automation baseline; Firefox/WebKit smoke coverage and real Safari/VoiceOver plus Firefox/NVDA checks prevent that baseline from being treated as universal browser or assistive-technology proof.
+- Chromium is the everyday browser automation baseline; Firefox/WebKit smoke coverage remains release-candidate coverage. Automated results do not establish accessibility conformance; the later VoiceOver/Safari template provides the selected minimum manual evidence when manual validation begins.
 - Test recordings, test databases and staging accounts remain synthetic and must follow the same confidentiality boundary as operational diagnostics.
 - No hosted CI provider, coverage-percentage threshold, visual-regression vendor, full cross-browser matrix, accessibility certification or production browser recording is selected.
 
