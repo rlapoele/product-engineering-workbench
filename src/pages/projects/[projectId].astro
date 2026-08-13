@@ -1,6 +1,7 @@
 ---
 import { resolvePrincipal } from '../../adapters/better-auth/principal-resolver';
 import { serverComposition } from '../../composition/server-composition';
+import { AccountActionsIsland } from '../../islands/account-actions-island';
 import { GoalEditorIsland } from '../../islands/goal-editor-island';
 import '../../styles/global.css';
 const composed = serverComposition();
@@ -12,5 +13,5 @@ if (!project) return new Response(null, { status: 404, statusText: 'Not Found' }
 <!doctype html>
 <html lang="en">
   <head><meta charset="utf-8" /><meta name="viewport" content="width=device-width" /><title>{project.title} — Product Engineering Workbench</title></head>
-  <body><main><p><a href="/">← Your Projects</a></p><p class="eyebrow">{project.starter.templateName} · {project.starter.presetName}</p><h1>{project.title}</h1>{project.description && <p>{project.description}</p>}<div class="project-layout"><aside><h2>Specification</h2><ol class="outline">{project.specification.sectionIds.map((id) => <li>{id.replaceAll('-', ' ')}</li>)}</ol></aside><section><h2>Goals and Success Criteria</h2>{project.goals.length === 0 ? <><p>This Specification is empty. Start by describing the outcome you want to achieve.</p><GoalEditorIsland client:load projectId={project.id} /></> : project.goals.map((goal) => <article class="goal"><p class="status">Goal saved · Revision {goal.revision.version}</p><h3>{goal.title}</h3><p>{goal.content}</p></article>)}</section></div></main></body>
+  <body><main><div class="page-head"><p><a href="/">← Your Projects</a></p><AccountActionsIsland client:load name={principal.name} email={principal.email} /></div><p class="eyebrow">{project.starter.templateName} · {project.starter.presetName}</p><h1>{project.title}</h1>{project.description && <p>{project.description}</p>}<div class="project-layout"><aside><h2>Specification</h2><ol class="outline">{project.specification.sectionIds.map((id) => <li>{id.replaceAll('-', ' ')}</li>)}</ol></aside><section><h2>Goals and Success Criteria</h2>{project.goals.length === 0 ? <><p>This Specification is empty. Start by describing the outcome you want to achieve.</p><GoalEditorIsland client:load projectId={project.id} /></> : project.goals.map((goal) => <article class="goal"><p class="status">Goal saved · Revision {goal.revision.version}</p><h3>{goal.title}</h3><p>{goal.content}</p></article>)}</section></div></main></body>
 </html>

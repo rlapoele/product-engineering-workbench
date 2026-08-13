@@ -13,7 +13,7 @@
     "check": "astro check",
     "test": "vitest run",
     "test:watch": "vitest",
-    "test:browser": "playwright test",
+    "test:browser": "npm run build && playwright test",
     "verify": "npm run check && npm run build && npm run test",
     "verify:release": "npm run verify && npm run test:browser",
     "start:db": "docker compose -f compose.local.yml up -d postgres",

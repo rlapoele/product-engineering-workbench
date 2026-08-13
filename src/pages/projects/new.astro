@@ -1,6 +1,7 @@
 ---
 import { resolvePrincipal } from '../../adapters/better-auth/principal-resolver';
 import { serverComposition } from '../../composition/server-composition';
+import { AccountActionsIsland } from '../../islands/account-actions-island';
 import { CreateProjectIsland } from '../../islands/create-project-island';
 import '../../styles/global.css';
 const composed = serverComposition();
@@ -11,5 +12,5 @@ const contentLocale = Astro.request.headers.get('accept-language')?.split(',')[0
 <!doctype html>
 <html lang="en">
   <head><meta charset="utf-8" /><meta name="viewport" content="width=device-width" /><title>New Project — Product Engineering Workbench</title></head>
-  <body><main><p><a href="/">← Your Projects</a></p><p class="eyebrow">New Project</p><h1>Give your thinking a home.</h1><CreateProjectIsland client:load contentLocale={contentLocale} /></main></body>
+  <body><main><div class="page-head"><p><a href="/">← Your Projects</a></p><AccountActionsIsland client:load name={principal.name} email={principal.email} /></div><p class="eyebrow">New Project</p><h1>Give your thinking a home.</h1><CreateProjectIsland client:load contentLocale={contentLocale} /></main></body>
 </html>

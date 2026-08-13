@@ -1,6 +1,7 @@
 ---
 import { resolvePrincipal } from '../adapters/better-auth/principal-resolver';
 import { serverComposition } from '../composition/server-composition';
+import { AccountActionsIsland } from '../islands/account-actions-island';
 import { SignInIsland } from '../islands/sign-in-island';
 import '../styles/global.css';
 const composed = serverComposition();
@@ -10,5 +11,5 @@ const projects = principal ? await composed.projects.listProjects(principal) : [
 <!doctype html>
 <html lang="en">
   <head><meta charset="utf-8" /><meta name="viewport" content="width=device-width" /><title>Projects — Product Engineering Workbench</title></head>
-  <body>{principal ? <main><div class="home-head"><div><p class="eyebrow">Your Projects</p><h1>Start with what matters.</h1></div><a role="button" href="/projects/new">Create Project</a></div>{projects.length === 0 ? <section class="panel"><h2>No Projects yet</h2><p>Create a Project when you are ready to capture an initial outcome.</p><a href="/projects/new">Create your first Project</a></section> : <ul class="project-list">{projects.map((project) => <li><a href={`/projects/${project.id}`}><strong>{project.title}</strong><br /><span>{project.goalCount} {project.goalCount === 1 ? 'Goal' : 'Goals'}</span></a></li>)}</ul>}</main> : <SignInIsland client:load />}</body>
+  <body>{principal ? <main><div class="home-head"><div><p class="eyebrow">Your Projects</p><h1>Start with what matters.</h1></div><div class="home-actions"><a role="button" href="/projects/new">Create Project</a><AccountActionsIsland client:load name={principal.name} email={principal.email} /></div></div>{projects.length === 0 ? <section class="panel"><h2>No Projects yet</h2><p>Create a Project when you are ready to capture an initial outcome.</p><a href="/projects/new">Create your first Project</a></section> : <ul class="project-list">{projects.map((project) => <li><a href={`/projects/${project.id}`}><strong>{project.title}</strong><br /><span>{project.goalCount} {project.goalCount === 1 ? 'Goal' : 'Goals'}</span></a></li>)}</ul>}</main> : <main><SignInIsland client:load /></main>}</body>
 </html>

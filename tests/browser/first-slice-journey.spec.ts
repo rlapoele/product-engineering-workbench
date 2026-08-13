@@ -20,6 +20,8 @@ test('an authenticated owner creates and saves a Goal after a failed-save retry'
     await page.goto('/');
     await expect(page.getByRole('heading', { name: 'Start with what matters.' })).toBeVisible();
     await expect(page.getByRole('heading', { name: 'No Projects yet' })).toBeVisible();
+    await expect(page.getByText(`${session.userId}@example.test`)).toBeVisible();
+    await expect(page.getByRole('button', { name: 'Sign out' })).toBeVisible();
     await assertAccessible(page);
 
     await page.getByRole('button', { name: 'Create Project' }).click();
@@ -55,6 +57,22 @@ test('an authenticated owner creates and saves a Goal after a failed-save retry'
     await page.getByRole('button', { name: 'Done editing' }).click();
     await expect(page.getByText('Goal saved · Revision 1')).toBeVisible();
     await expect(page.getByRole('heading', { name: 'Reduce uncertainty' })).toBeVisible();
+    await assertAccessible(page);
+  } finally {
+    await pool.end();
+  }
+});
+
+test('an authenticated owner can sign out', async ({ page, context }) => {
+  const runtime = JSON.parse(await readFile(browserRuntimeStatePath, 'utf8')) as BrowserRuntimeState;
+  const pool = new Pool({ connectionString: runtime.databaseUrl });
+  const session = await createBetterAuthTestSession({ pool, secret: runtime.betterAuthSecret });
+  await context.addCookies([{ name: 'better-auth.session_token', value: session.cookieValue, url: 'http://localhost:4321' }]);
+
+  try {
+    await page.goto('/');
+    await page.getByRole('button', { name: 'Sign out' }).click();
+    await expect(page.getByRole('heading', { name: 'A calm place to begin thinking.' })).toBeVisible();
     await assertAccessible(page);
   } finally {
     await pool.end();
