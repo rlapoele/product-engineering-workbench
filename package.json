@@ -7,7 +7,7 @@
     "node": ">=24.14.1 <25"
   },
   "scripts": {
-    "dev": "astro dev",
+    "dev": "set -a; [ ! -f .env ] || . ./.env; set +a; astro dev --host 127.0.0.1",
     "build": "astro build",
     "start": "node ./dist/server/entry.mjs",
     "check": "astro check",

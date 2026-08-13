@@ -93,6 +93,8 @@ npm run migrate:db
 npm run dev
 ```
 
+`npm run dev` reads the ignored local `.env` file when present and listens on `http://127.0.0.1:4321`. The Compose application service supplies its environment directly, overriding any local file values.
+
 Use `npm run stop:db` to stop the database container while retaining its local volume.
 
 Use `docker compose -f compose.local.yml down` to stop the stack. Add `--volumes` only when you intentionally want to discard the local database.
