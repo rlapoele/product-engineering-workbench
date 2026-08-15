@@ -1,4 +1,4 @@
-import type { OperationRecorder } from '../../modules/project/ports';
+import type { OperationRecorder } from '@modules/project/ports';
 
 /** Isolates independent diagnostics so one failing sink cannot prevent another from observing a command. */
 export const bestEffortRecorder = (...recorders: readonly OperationRecorder[]): OperationRecorder => ({

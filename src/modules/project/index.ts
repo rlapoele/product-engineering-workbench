@@ -1,4 +1,4 @@
-import type { FixedStarterPort } from '../fixed-starter/public';
+import type { FixedStarterPort } from '@modules/fixed-starter/public';
 import { createProject as create, saveFirstGoal as save } from './commands';
 import type { OperationRecorder, ProjectStore } from './ports';
 import type { CommandResult, CreateProjectInput, ProjectPublicApi, ProjectView, SaveFirstGoalInput } from './public';

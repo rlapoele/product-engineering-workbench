@@ -3,7 +3,12 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"]
+      "@adapters/*": ["src/adapters/*"],
+      "@composition/*": ["src/composition/*"],
+      "@islands/*": ["src/islands/*"],
+      "@modules/*": ["src/modules/*"],
+      "@pages/*": ["src/pages/*"],
+      "@styles/*": ["src/styles/*"]
     }
   },
   "include": ["src", "tests", "playwright.config.ts", "vitest.config.ts"]

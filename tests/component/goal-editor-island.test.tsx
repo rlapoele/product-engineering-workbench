@@ -4,7 +4,7 @@ import { beforeEach, describe, expect, it, vi } from 'vitest';
 const mocks = vi.hoisted(() => ({ saveFirstGoal: vi.fn() }));
 vi.mock('../../src/adapters/browser/project-http-client', () => ({ projectHttpClient: { saveFirstGoal: mocks.saveFirstGoal } }));
 vi.mock('../../src/adapters/browser/operation-id', () => ({ operationId: () => '01987b06-cfc7-7000-8000-000000000003' }));
-import { GoalEditorIsland } from '../../src/islands/goal-editor-island';
+import { GoalEditorIsland } from '@islands/goal-editor-island';
 
 describe('GoalEditorIsland', () => {
   beforeEach(() => mocks.saveFirstGoal.mockReset());

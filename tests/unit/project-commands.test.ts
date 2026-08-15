@@ -1,8 +1,8 @@
 import { describe, expect, it, vi } from 'vitest';
-import { fixedStarter } from '../../src/modules/fixed-starter/standard-web-app-v1';
-import { createProject, saveFirstGoal } from '../../src/modules/project/commands';
-import type { ProjectStore } from '../../src/modules/project/ports';
-import type { ProjectView } from '../../src/modules/project/public';
+import { fixedStarter } from '@modules/fixed-starter/standard-web-app-v1';
+import { createProject, saveFirstGoal } from '@modules/project/commands';
+import type { ProjectStore } from '@modules/project/ports';
+import type { ProjectView } from '@modules/project/public';
 
 const project: ProjectView = {
   id: '01987b06-cfc7-7000-8000-000000000001', title: 'MealLoop', description: null, contentLocale: 'en',

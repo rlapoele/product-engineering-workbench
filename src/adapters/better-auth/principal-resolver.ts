@@ -1,4 +1,4 @@
-import type { Principal } from '../../modules/project/public';
+import type { Principal } from '@modules/project/public';
 
 export interface AuthenticatedPrincipal extends Principal {
   name: string;

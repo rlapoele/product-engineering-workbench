@@ -1,7 +1,7 @@
 import { betterAuth } from 'better-auth';
 import { Kysely, PostgresDialect } from 'kysely';
 import { Pool } from 'pg';
-import type { RuntimeConfig } from '../../composition/runtime-config';
+import type { RuntimeConfig } from '@composition/runtime-config';
 
 export const createServerAuth = (config: RuntimeConfig) => {
   const pool = new Pool({ connectionString: config.DATABASE_URL, options: '-c search_path=auth,app,ops,public' });

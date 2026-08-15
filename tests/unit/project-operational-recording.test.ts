@@ -1,8 +1,8 @@
 import { describe, expect, it, vi } from 'vitest';
-import { fixedStarter } from '../../src/modules/fixed-starter/standard-web-app-v1';
-import { projectApi } from '../../src/modules/project';
-import type { OperationRecorder, ProjectStore } from '../../src/modules/project/ports';
-import type { CommandResult, ProjectView } from '../../src/modules/project/public';
+import { fixedStarter } from '@modules/fixed-starter/standard-web-app-v1';
+import { projectApi } from '@modules/project';
+import type { OperationRecorder, ProjectStore } from '@modules/project/ports';
+import type { CommandResult, ProjectView } from '@modules/project/public';
 
 const view: ProjectView = {
   id: '01987b06-cfc7-7000-8000-000000000001', title: 'Synthetic Project', description: null, contentLocale: 'en',

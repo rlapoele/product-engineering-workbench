@@ -1,5 +1,5 @@
 import type { Pool } from 'pg';
-import type { OperationRecorder } from '../../modules/project/ports';
+import type { OperationRecorder } from '@modules/project/ports';
 
 /** Records only command outcome aggregates; it never receives Product Knowledge or identity. */
 export const postgresLedger = (pool: Pick<Pool, 'query'>): OperationRecorder => ({

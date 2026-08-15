@@ -4,10 +4,10 @@ import { promisify } from 'node:util';
 import { Pool } from 'pg';
 import { GenericContainer, Wait } from 'testcontainers';
 import { afterAll, beforeAll, describe, expect, it } from 'vitest';
-import { PostgresProjectStore } from '../../src/adapters/postgres/project-store';
-import { postgresLedger } from '../../src/adapters/operations/postgres-ledger';
-import { fixedStarter } from '../../src/modules/fixed-starter/standard-web-app-v1';
-import { projectApi } from '../../src/modules/project';
+import { PostgresProjectStore } from '@adapters/postgres/project-store';
+import { postgresLedger } from '@adapters/operations/postgres-ledger';
+import { fixedStarter } from '@modules/fixed-starter/standard-web-app-v1';
+import { projectApi } from '@modules/project';
 
 const execFileAsync = promisify(execFile);
 const operation = (suffix: string) => `01987b06-cfc7-7000-8000-00000000000${suffix}`;

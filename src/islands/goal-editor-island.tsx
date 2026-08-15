@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { operationId } from '../adapters/browser/operation-id';
-import { projectHttpClient } from '../adapters/browser/project-http-client';
+import { operationId } from '@adapters/browser/operation-id';
+import { projectHttpClient } from '@adapters/browser/project-http-client';
 
 export function GoalEditorIsland({ projectId }: { projectId: string }) {
   const [editing, setEditing] = useState(false); const [title, setTitle] = useState(''); const [content, setContent] = useState(''); const [pending, setPending] = useState(false); const [error, setError] = useState<string>();

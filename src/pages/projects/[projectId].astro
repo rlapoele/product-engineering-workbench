@@ -1,9 +1,9 @@
 ---
-import { resolvePrincipal } from '../../adapters/better-auth/principal-resolver';
-import { serverComposition } from '../../composition/server-composition';
-import { AccountActionsIsland } from '../../islands/account-actions-island';
-import { GoalEditorIsland } from '../../islands/goal-editor-island';
-import '../../styles/global.css';
+import { resolvePrincipal } from '@adapters/better-auth/principal-resolver';
+import { serverComposition } from '@composition/server-composition';
+import { AccountActionsIsland } from '@islands/account-actions-island';
+import { GoalEditorIsland } from '@islands/goal-editor-island';
+import '@styles/global.css';
 const composed = serverComposition();
 const principal = await resolvePrincipal(composed.auth, Astro.request);
 if (!principal) return Astro.redirect('/');

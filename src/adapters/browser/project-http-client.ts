@@ -1,4 +1,4 @@
-import type { CommandResult, CreateProjectInput, ProjectView, SaveFirstGoalInput } from '../../modules/project/public';
+import type { CommandResult, CreateProjectInput, ProjectView, SaveFirstGoalInput } from '@modules/project/public';
 
 const request = async <T>(path: string, command: string, body: unknown): Promise<CommandResult<T>> => {
   try {

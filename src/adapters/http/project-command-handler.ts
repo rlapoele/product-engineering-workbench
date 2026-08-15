@@ -1,4 +1,4 @@
-import type { ProjectPublicApi, Principal, SafeFailureCode } from '../../modules/project/public';
+import type { ProjectPublicApi, Principal, SafeFailureCode } from '@modules/project/public';
 
 type PrincipalResolver = () => Promise<Principal | null>;
 

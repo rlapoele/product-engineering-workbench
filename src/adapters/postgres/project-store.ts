@@ -1,8 +1,8 @@
 import { createHash } from 'node:crypto';
 import type { Pool, PoolClient } from 'pg';
-import type { FixedStarter } from '../../modules/fixed-starter/public';
-import type { ProjectStore } from '../../modules/project/ports';
-import type { CommandResult, CreateProjectInput, Principal, ProjectSummary, ProjectView, SaveFirstGoalInput } from '../../modules/project/public';
+import type { FixedStarter } from '@modules/fixed-starter/public';
+import type { ProjectStore } from '@modules/project/ports';
+import type { CommandResult, CreateProjectInput, Principal, ProjectSummary, ProjectView, SaveFirstGoalInput } from '@modules/project/public';
 import { inTransaction } from './transactions';
 import { uuidv7 } from './uuidv7';
 

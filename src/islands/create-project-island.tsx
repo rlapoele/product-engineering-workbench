@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { operationId } from '../adapters/browser/operation-id';
-import { projectHttpClient } from '../adapters/browser/project-http-client';
+import { operationId } from '@adapters/browser/operation-id';
+import { projectHttpClient } from '@adapters/browser/project-http-client';
 
 export function CreateProjectIsland({ contentLocale }: { contentLocale: string }) {
   const [title, setTitle] = useState(''); const [description, setDescription] = useState(''); const [locale, setLocale] = useState(contentLocale);

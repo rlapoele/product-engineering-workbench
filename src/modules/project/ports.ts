@@ -1,4 +1,4 @@
-import type { FixedStarter } from '../fixed-starter/public';
+import type { FixedStarter } from '@modules/fixed-starter/public';
 import type { CommandResult, CreateProjectInput, Principal, ProjectSummary, ProjectView, SaveFirstGoalInput } from './public';
 
 export interface ProjectStore {

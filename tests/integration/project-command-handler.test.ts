@@ -1,6 +1,6 @@
 import { describe, expect, it, vi } from 'vitest';
-import { handleCreateProject, handleSaveFirstGoal } from '../../src/adapters/http/project-command-handler';
-import type { ProjectPublicApi } from '../../src/modules/project/public';
+import { handleCreateProject, handleSaveFirstGoal } from '@adapters/http/project-command-handler';
+import type { ProjectPublicApi } from '@modules/project/public';
 
 const origin = 'http://127.0.0.1:4321';
 const owner = { userId: 'synthetic-owner' };
