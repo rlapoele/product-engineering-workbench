@@ -457,7 +457,7 @@ It constrains module and adapter responsibilities without becoming product code,
 
 ## Edit-in-progress Draft
 
-An Edit-in-progress Draft is a persistent, user-owned working copy of a Product Artifact or its Goal-owned structured child that has not yet become canonical Product Knowledge.
+An Edit-in-progress Draft is a persistent, user-owned working copy of a Product Artifact, section-owned prose, or a Goal-owned structured child that has not yet become canonical Product Knowledge.
 
 It is not an Artifact lifecycle state or a Revision. It may be kept, discarded or completed through `Done editing`; only Done editing creates a new Revision and may trigger Artifact Change Impact Propagation. Completing a Goal Success Criterion draft creates a new Revision of its parent Goal, not an independent child Revision.
 
@@ -697,6 +697,14 @@ For the first slice, it records only the environment, release type, source revis
 ---
 
 # P
+
+## Product Overview
+
+A Product Overview is the concise, section-owned canonical prose that orients a reader to what is being created, who it serves, the problem or opportunity, and the intended value.
+
+It is not a Product Artifact. It summarizes and orients without duplicating detailed Goals, Scope, Requirements or other Product Knowledge held in their dedicated sections. Template guidance for an empty Product Overview is non-canonical instructional text; saved overview prose is canonical section content with its own draft and Revision boundary.
+
+The Product Overview supports ordinary paragraphs. Rich-text formatting is a later document-wide capability decision, not a section-specific control.
 
 ## Personal AI Assistant
 

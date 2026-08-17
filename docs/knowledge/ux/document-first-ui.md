@@ -237,6 +237,14 @@ The available actions must be explicit and scope-aware. An empty `Goals and Succ
 
 Blank space within a section invokes the section's action surface. Hovering, focusing or selecting an existing artifact reveals that artifact's action surface. This distinction lets a document section contain its own prose and multiple Product Artifacts without confusing their scopes.
 
+### Product Overview authoring
+
+`Product Overview` is concise canonical prose owned by its section, not a Product Artifact. An empty section displays non-canonical template guidance: `Give readers a concise orientation: what is being created, who it serves, the problem or opportunity, and the value it should create. Keep detailed Goals, Scope, and Requirements in their own sections.` Hovering, keyboard focus or touch reveals its one direct action, `Write Product Overview`.
+
+Selecting that action opens one inline multi-paragraph prose draft. Leaving preserves the private draft; `Discard` returns the section to its template guidance; and `Done editing` creates a canonical section-content Revision. A saved overview exposes `Edit Product Overview` and secondary `Clear Product Overview`. Clearing uses local explicit confirmation, creates a new section-content Revision and returns the section to its template guidance. As summary prose, a saved overview does not infer downstream relationships or mark Product Artifacts Stale.
+
+The initial editor supports ordinary paragraph breaks only. It does not introduce a section-specific rich-text toolbar. Inline formatting, links, lists, headings and other rich-text behavior require a later document-wide capability decision and may vary by section or artifact type.
+
 ### Inline artifact creation and rendering
 
 Choosing an action such as `Add Goal` should insert the new Product Artifact directly into its natural document location and enter editing immediately. The initial inline editing surface should present the artifact's essential fields, such as its title and content, while complex type-specific information, relationships, provenance and review history remain progressively available through the artifact's contextual actions.
