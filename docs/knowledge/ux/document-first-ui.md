@@ -265,6 +265,8 @@ Goal Success Criteria are visible, Goal-owned structured children in `Goals and 
 
 `Done editing` saves the new or edited criterion as part of a complete new Revision of its parent Goal. Leaving preserves the private child draft, while `Discard` removes only that draft. A saved criterion exposes `Edit Success Criterion` and `More actions`; `Remove Success Criterion` is a secondary action that creates a new parent-Goal Revision. It is not independently archived.
 
+The section renders active Goals as an ordered document sequence, for example `Goal 1 — [title]`, with an automatically numbered list of each Goal's Success Criteria beneath it. The numbers are derived from current document order and are not stable identifiers. `Add Goal` appends a new Goal to the end of the section. `Move Goal up` and `Move Goal down` are secondary actions that renumber the visible sequence without changing Goal meaning, owned criteria or their local review state.
+
 ### Impact feedback after a committed edit
 
 After `Done editing`, the saved Revision should apply immediately. The workbench should then provide a non-blocking, artifact-anchored impact disclosure. It is collapsed by default, may show a compact affected-artifact count and can expand to a short navigable list of the affected artifacts.

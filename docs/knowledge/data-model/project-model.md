@@ -313,6 +313,8 @@ A Goal Success Criterion is a Goal-owned structured child, not a Product Artifac
 
 A Goal may contain zero or more Goal Success Criteria. Each criterion belongs to exactly one Goal and cannot exist without it. Goal Success Criteria have no independent lifecycle, relationships, provenance, collaboration or Revision history. Saving or removing one changes the parent Goal's complete Revision snapshot; confirming that an affected criterion still fits records local review evidence without silently changing its content. Archiving a Goal removes it and its owned criteria from active document work; restoring the Goal returns its complete current set of criteria together.
 
+Goals are Product Artifacts in the ordered `Goals and Success Criteria` section. New Goals append at the end of that section. The document renders Goals and each Goal's Success Criteria with derived ordinals based on their current order; those ordinals are presentation only and never replace stable identities. `Move Goal up` and `Move Goal down` change document composition and renumber the display, but do not alter Goal meaning, owned criteria or their review state.
+
 Goal Success Criteria are distinct from Acceptance Criteria. They identify evidence that a product outcome has been achieved; Acceptance Criteria validate specified system behavior.
 
 A User Story may include:

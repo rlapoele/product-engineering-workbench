@@ -499,7 +499,7 @@ Functional Requirements are distinct from Core Features: a Core Feature describe
 
 A Goal is a Product Artifact expressing an intended product outcome or target.
 
-A Goal may own zero or more Goal Success Criteria. A Goal without them remains valid canonical Product Knowledge, but lacks explicit evidence of how its outcome will be recognized and may receive optional deterministic next-step guidance. Archiving a Goal removes it and its owned criteria from active document work; restoring it returns that complete set together.
+A Goal may own zero or more Goal Success Criteria. A Goal without them remains valid canonical Product Knowledge, but lacks explicit evidence of how its outcome will be recognized and may receive optional deterministic next-step guidance. In the `Goals and Success Criteria` section, Goals render in current document order with a derived display ordinal; that ordinal is not the Goal's stable identity. Archiving a Goal removes it and its owned criteria from active document work; restoring it returns that complete set together.
 
 ## Goal Success Criterion
 
@@ -507,7 +507,7 @@ A Goal Success Criterion is a Goal-owned structured child that states clear, mea
 
 It has one required plain-language measurable statement and may add structured Measure, Target and Timeframe qualifiers. The statement is the canonical meaning; qualifiers clarify it. When the statement and qualifiers conflict, the workbench shows an understandable attention cue and does not silently rewrite either.
 
-Each Goal Success Criterion belongs to exactly one Goal and cannot exist independently. It is not a Product Artifact: it has no independent lifecycle, relationships, provenance, collaboration or Revision history. A Goal may have none, while a Goal Success Criterion cannot exist without its Goal. When its parent Goal is archived, the criterion is unavailable from active work and returns only if that Goal is restored.
+Each Goal Success Criterion belongs to exactly one Goal and cannot exist independently. It is not a Product Artifact: it has no independent lifecycle, relationships, provenance, collaboration or Revision history. A Goal may have none, while a Goal Success Criterion cannot exist without its Goal. In reading mode, its parent renders criteria as a derived numbered list; each item remains independently editable and removable. When its parent Goal is archived, the criterion is unavailable from active work and returns only if that Goal is restored.
 
 Goal Success Criteria are distinct from Acceptance Criteria. A Goal Success Criterion measures achievement of a product outcome; an Acceptance Criterion defines observable validation of specified system behavior.
 
