@@ -8,10 +8,6 @@ export interface ProjectStore {
   saveFirstGoal(owner: Principal, projectId: string, input: SaveFirstGoalInput): Promise<CommandResult<ProjectView>>;
 }
 
-export interface IdentifierPort {
-  uuidv7(): string;
-}
-
 export interface OperationRecorder {
   record(input: Readonly<{ command: 'create_project' | 'save_first_goal'; outcome: 'success' | 'failure'; durationMs: number; sourceRevision: string }>): Promise<void>;
 }
