@@ -10,7 +10,7 @@ const assertAccessible = async (page: Page) => {
   expect(results.violations).toEqual([]);
 };
 
-test('an authenticated owner creates and saves a Goal after a failed-save retry', async ({ page, context }) => {
+test('an authenticated owner creates and saves a Goal after a response-loss retry', async ({ page, context }) => {
   const runtime = JSON.parse(await readFile(browserRuntimeStatePath, 'utf8')) as BrowserRuntimeState;
   const pool = new Pool({ connectionString: runtime.databaseUrl });
   const session = await createBetterAuthTestSession({ pool, secret: runtime.betterAuthSecret });
@@ -39,11 +39,14 @@ test('an authenticated owner creates and saves a Goal after a failed-save retry'
     await page.getByLabel('Goal title').fill('Reduce uncertainty');
     await page.getByLabel('Goal details').fill('Help the owner capture an initial outcome with confidence.');
 
-    let failFirstSave = true;
+    let hideFirstSaveResponse = true;
+    const operationIds: string[] = [];
     await page.route('**/api/projects/*/goals', async (route) => {
-      if (failFirstSave) {
-        failFirstSave = false;
-        await route.abort('failed');
+      operationIds.push((route.request().postDataJSON() as { operationId: string }).operationId);
+      if (hideFirstSaveResponse) {
+        hideFirstSaveResponse = false;
+        await route.fetch();
+        await route.fulfill({ status: 503, contentType: 'text/plain', body: 'Synthetic response loss.' });
         return;
       }
       await route.continue();
@@ -57,6 +60,8 @@ test('an authenticated owner creates and saves a Goal after a failed-save retry'
     await page.getByRole('button', { name: 'Done editing' }).click();
     await expect(page.getByText('Goal saved · Revision 1')).toBeVisible();
     await expect(page.getByRole('heading', { name: 'Reduce uncertainty' })).toBeVisible();
+    expect(operationIds).toHaveLength(2);
+    expect(operationIds[0]).toBe(operationIds[1]);
     await assertAccessible(page);
   } finally {
     await pool.end();
