@@ -674,6 +674,16 @@ Knowledge
 
 ---
 
+# N
+
+## Non-Goal
+
+A Non-Goal is a concise, plain-language statement of an intentional boundary: something the current specification does not aim to achieve.
+
+Non-Goals are section-owned list items, not Product Artifacts. They are rendered as an unordered list because their display order has no meaning. Each has a private draft and an explicit section-content Revision boundary, but no independent lifecycle, relationships, provenance, collaboration or inferred impact propagation. Rich-text formatting remains a later document-wide capability decision.
+
+---
+
 # O
 
 ## Operation ID

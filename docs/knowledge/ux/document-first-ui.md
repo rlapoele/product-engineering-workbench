@@ -255,6 +255,16 @@ Saved blocks expose their own `Edit Problem` or `Edit Opportunity` action and se
 
 The blocks support ordinary paragraph breaks only. Rich-text formatting remains a later document-wide capability decision rather than a Problem-or-Opportunity-specific toolbar.
 
+### Non-Goals authoring
+
+`Non-Goals` is a structured list of section-owned boundary statements, not a Product Artifact collection. Its empty prepared state displays non-canonical guidance: `State what this specification intentionally does not aim to achieve.` Hovering, keyboard focus or touch exposes its one direct action, `Add Non-Goal`.
+
+Selecting that action opens a private inline draft with one required plain-language statement. Leaving preserves the draft; `Discard` removes it; and `Done editing` creates a canonical section-content Revision. After one or more items are saved, the section continues to expose `Add Non-Goal`. Saved items render as an unordered bullet list: their sequence is not meaningful and the MVP provides no reordering control.
+
+A saved item exposes `Edit Non-Goal` as its direct action and `Remove Non-Goal` as a secondary action. Removing requires local explicit confirmation and creates a section-content Revision. When it removes the final saved item, the section returns to its empty guided state. If the selected Non-Goals section is required, an empty section participates in ordinary low-priority required-section `What next?` coverage guidance. The items have no independent lifecycle, relationships or inferred impact propagation.
+
+The initial item editor supports its single plain-language statement only. Rich-text formatting remains a later document-wide capability decision rather than a Non-Goal-specific toolbar.
+
 ### Inline artifact creation and rendering
 
 Choosing an action such as `Add Goal` should insert the new Product Artifact directly into its natural document location and enter editing immediately. The initial inline editing surface should present the artifact's essential fields, such as its title and content, while complex type-specific information, relationships, provenance and review history remain progressively available through the artifact's contextual actions.

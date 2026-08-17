@@ -163,3 +163,4 @@
 | 2026-08-17-01 | 2026-08-17 | 1 | Goal Success Criteria Document Authoring | Crystallized | Prepared-document actions, Goal-owned measurable Success Criteria, owner-declared Goal-change review and next-step guidance |
 | 2026-08-18-01 | 2026-08-18 | 1 | Product Overview Section Authoring | Crystallized | Section-owned overview prose, explicit draft and Revision, no inferred impact, formatting deferred |
 | 2026-08-18-02 | 2026-08-18 | 2 | Problem Or Opportunity Section Authoring | Crystallized | Optional structured prose blocks, explicit drafts and coverage without choosing a solution |
+| 2026-08-18-03 | 2026-08-18 | 3 | Non-Goals Section Authoring | Crystallized | Lightweight unordered boundary statements with explicit drafts and coverage |
