@@ -2,6 +2,7 @@ import { z } from 'zod';
 
 export const UUID_V7_PATTERN = /^[0-9a-f]{8}-[0-9a-f]{4}-7[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
 export const operationIdSchema = z.string().regex(UUID_V7_PATTERN, 'Use a UUIDv7 operation ID.');
+export const isProjectId = (value: string | undefined): value is string => typeof value === 'string' && UUID_V7_PATTERN.test(value);
 const nonblank = (label: string) => z.string().trim().min(1, `${label} is required.`).max(280, `${label} is too long.`);
 
 export const createProjectSchema = z.object({

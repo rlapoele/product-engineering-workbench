@@ -84,3 +84,9 @@ test('an authenticated owner can sign out', async ({ page, context }) => {
     await pool.end();
   }
 });
+
+test('a malformed Project ID returns not found before session lookup', async ({ page }) => {
+  const response = await page.goto('/projects/not-a-project-id');
+
+  expect(response?.status()).toBe(HTTP_STATUS.NOT_FOUND);
+});

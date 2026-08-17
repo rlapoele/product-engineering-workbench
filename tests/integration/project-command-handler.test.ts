@@ -56,6 +56,17 @@ describe('Project command HTTP boundary', () => {
     expect(api.createProject).not.toHaveBeenCalled();
   });
 
+  it('rejects malformed Project IDs before resolving a command owner', async () => {
+    const api = projects();
+    const principal = vi.fn();
+    const result = await handleSaveFirstGoal({ request: request('save-first-goal', { operationId: '01987b06-cfc7-7000-8000-000000000002', title: 'Outcome', content: 'Synthetic content.' }), origin, projectId: 'not-a-project-id', projects: api, principal });
+
+    expect(result.status).toBe(HTTP_STATUS.BAD_REQUEST);
+    expect(await result.json()).toEqual({ ok: false, code: 'validation' });
+    expect(principal).not.toHaveBeenCalled();
+    expect(api.saveFirstGoal).not.toHaveBeenCalled();
+  });
+
   it('returns service unavailable for temporary command failures', async () => {
     const api: ProjectPublicApi = {
       ...projects(),

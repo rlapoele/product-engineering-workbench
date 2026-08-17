@@ -3,11 +3,14 @@ import { resolvePrincipal } from '@adapters/better-auth/principal-resolver';
 import { serverComposition } from '@composition/server-composition';
 import { AccountActionsIsland } from '@islands/account-actions-island';
 import { GoalEditorIsland } from '@islands/goal-editor-island';
+import { isProjectId } from '@modules/project/rules';
 import '@styles/global.css';
+const projectId = Astro.params.projectId;
+if (!isProjectId(projectId)) return new Response(null, { status: 404, statusText: 'Not Found' });
 const composed = serverComposition();
 const principal = await resolvePrincipal(composed.auth, Astro.request);
 if (!principal) return Astro.redirect('/');
-const project = await composed.projects.loadProject(principal, Astro.params.projectId!);
+const project = await composed.projects.loadProject(principal, projectId);
 if (!project) return new Response(null, { status: 404, statusText: 'Not Found' });
 ---
 <!doctype html>

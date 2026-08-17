@@ -1,4 +1,5 @@
 import type { CommandResult, ProjectPublicApi, Principal, SafeFailureCode } from '@modules/project/public';
+import { isProjectId } from '@modules/project/rules';
 import { HTTP_STATUS } from './http-status';
 
 type PrincipalResolver = () => Promise<Principal | null>;
@@ -53,7 +54,7 @@ export const handleCreateProject = async ({ request, origin, projects, principal
 };
 
 export const handleSaveFirstGoal = async ({ request, origin, projectId, projects, principal }: { request: Request; origin: string; projectId: string | undefined; projects: ProjectPublicApi; principal: PrincipalResolver }): Promise<Response> => {
-  if (!projectId || !validCommandRequest(request, origin, 'save-first-goal')) return invalid();
+  if (!isProjectId(projectId) || !validCommandRequest(request, origin, 'save-first-goal')) return invalid();
   const owner = await principal();
   if (!owner) return response({ ok: false, code: 'unauthenticated' satisfies SafeFailureCode }, HTTP_STATUS.UNAUTHORIZED);
   const body = await parsedBody(request);
