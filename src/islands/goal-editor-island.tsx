@@ -9,6 +9,13 @@ export function GoalEditorIsland({ projectId }: { projectId: string }) {
     activeOperationId.current = undefined;
     change();
   };
+  const discardDraft = () => {
+    activeOperationId.current = undefined;
+    setTitle('');
+    setContent('');
+    setError(undefined);
+    setEditing(false);
+  };
   if (!editing) return <button type="button" onClick={() => setEditing(true)}>Add Goal</button>;
   const save = async (event: { preventDefault(): void }) => {
     event.preventDefault(); setPending(true); setError(undefined);
@@ -25,6 +32,6 @@ export function GoalEditorIsland({ projectId }: { projectId: string }) {
   return <form className="form-stack goal-editor" onSubmit={save} noValidate>
     <label>Goal title<input value={title} onChange={(event) => changeDraft(() => setTitle(event.target.value))} disabled={pending} required maxLength={280} autoFocus /></label>
     <label>Goal details<textarea value={content} onChange={(event) => changeDraft(() => setContent(event.target.value))} disabled={pending} required maxLength={20_000} rows={7} /></label>
-    {error && <p role="alert">{error}</p>}<div className="button-row"><button disabled={pending}>{pending ? 'Saving…' : 'Done editing'}</button><button type="button" className="secondary" disabled={pending} onClick={() => setEditing(false)}>Discard draft</button></div>
+    {error && <p role="alert">{error}</p>}<div className="button-row"><button disabled={pending}>{pending ? 'Saving…' : 'Done editing'}</button><button type="button" className="secondary" disabled={pending} onClick={discardDraft}>Discard draft</button></div>
   </form>;
 }

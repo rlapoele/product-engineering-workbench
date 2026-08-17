@@ -44,4 +44,17 @@ describe('GoalEditorIsland', () => {
     expect(mocks.operationId).toHaveBeenCalledTimes(1);
     expect(mocks.saveFirstGoal.mock.calls[0][1].operationId).toBe(mocks.saveFirstGoal.mock.calls[1][1].operationId);
   });
+
+  it('clears the private draft when discarded', () => {
+    render(<GoalEditorIsland projectId="01987b06-cfc7-7000-8000-000000000001" />);
+    fireEvent.click(screen.getByRole('button', { name: 'Add Goal' }));
+    fireEvent.change(screen.getByLabelText('Goal title'), { target: { value: 'Reduce churn' } });
+    fireEvent.change(screen.getByLabelText('Goal details'), { target: { value: 'Help people pause with confidence.' } });
+
+    fireEvent.click(screen.getByRole('button', { name: 'Discard draft' }));
+    fireEvent.click(screen.getByRole('button', { name: 'Add Goal' }));
+
+    expect((screen.getByLabelText('Goal title') as HTMLInputElement).value).toBe('');
+    expect((screen.getByLabelText('Goal details') as HTMLTextAreaElement).value).toBe('');
+  });
 });
