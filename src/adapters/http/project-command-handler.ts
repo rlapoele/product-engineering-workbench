@@ -1,10 +1,11 @@
-import type { ProjectPublicApi, Principal, SafeFailureCode } from '@modules/project/public';
+import type { CommandResult, ProjectPublicApi, Principal, SafeFailureCode } from '@modules/project/public';
 
 type PrincipalResolver = () => Promise<Principal | null>;
 
 const headers = { 'Content-Type': 'application/json', 'Cache-Control': 'no-store' };
 const response = (body: unknown, status: number) => new Response(JSON.stringify(body), { status, headers });
 const invalid = () => response({ ok: false, code: 'validation' satisfies SafeFailureCode }, 400);
+const commandStatus = (result: CommandResult<unknown>) => result.ok ? 201 : result.code === 'not_found' ? 404 : result.code === 'temporary_unavailable' ? 503 : 400;
 
 const validCommandRequest = (request: Request, origin: string, command: string) =>
   request.headers.get('Origin') === origin &&
@@ -24,7 +25,7 @@ export const handleCreateProject = async ({ request, origin, projects, principal
   const body = await parsedBody(request);
   if (!body) return invalid();
   const result = await projects.createProject(owner, body as never);
-  return response(result, result.ok ? 201 : 400);
+  return response(result, commandStatus(result));
 };
 
 export const handleSaveFirstGoal = async ({ request, origin, projectId, projects, principal }: { request: Request; origin: string; projectId: string | undefined; projects: ProjectPublicApi; principal: PrincipalResolver }): Promise<Response> => {
@@ -34,5 +35,5 @@ export const handleSaveFirstGoal = async ({ request, origin, projectId, projects
   const body = await parsedBody(request);
   if (!body) return invalid();
   const result = await projects.saveFirstGoal(owner, projectId, body as never);
-  return response(result, result.ok ? 201 : result.code === 'not_found' ? 404 : 400);
+  return response(result, commandStatus(result));
 };

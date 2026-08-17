@@ -38,6 +38,22 @@ describe('Project command HTTP boundary', () => {
     expect(api.createProject).toHaveBeenCalledWith(owner, expect.objectContaining({ title: 'Atlas' }));
   });
 
+  it('returns service unavailable for temporary command failures', async () => {
+    const api: ProjectPublicApi = {
+      ...projects(),
+      createProject: vi.fn().mockResolvedValue({ ok: false, code: 'temporary_unavailable' }),
+      saveFirstGoal: vi.fn().mockResolvedValue({ ok: false, code: 'temporary_unavailable' }),
+    };
+
+    const createResult = await handleCreateProject({ request: request('create-project'), origin, projects: api, principal: async () => owner });
+    const goalResult = await handleSaveFirstGoal({ request: request('save-first-goal', { operationId: '01987b06-cfc7-7000-8000-000000000002', title: 'Outcome', content: 'Synthetic content.' }), origin, projectId: '01987b06-cfc7-7000-8000-000000000003', projects: api, principal: async () => owner });
+
+    expect(createResult.status).toBe(503);
+    expect(await createResult.json()).toEqual({ ok: false, code: 'temporary_unavailable' });
+    expect(goalResult.status).toBe(503);
+    expect(await goalResult.json()).toEqual({ ok: false, code: 'temporary_unavailable' });
+  });
+
   it('preserves privacy for a non-owner Goal command result', async () => {
     const api = projects();
     const result = await handleSaveFirstGoal({ request: request('save-first-goal', { operationId: '01987b06-cfc7-7000-8000-000000000002', title: 'Outcome', content: 'Synthetic content.' }), origin, projectId: '01987b06-cfc7-7000-8000-000000000003', projects: api, principal: async () => owner });
