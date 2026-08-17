@@ -1,5 +1,6 @@
 ---
 import { resolvePrincipal } from '@adapters/better-auth/principal-resolver';
+import { resolveInitialContentLocale } from '@adapters/http/initial-content-locale';
 import { serverComposition } from '@composition/server-composition';
 import { AccountActionsIsland } from '@islands/account-actions-island';
 import { CreateProjectIsland } from '@islands/create-project-island';
@@ -7,7 +8,7 @@ import '@styles/global.css';
 const composed = serverComposition();
 const principal = await resolvePrincipal(composed.auth, Astro.request);
 if (!principal) return Astro.redirect('/');
-const contentLocale = Astro.request.headers.get('accept-language')?.split(',')[0]?.trim() || 'en';
+const contentLocale = resolveInitialContentLocale(Astro.request.headers.get('accept-language'));
 ---
 <!doctype html>
 <html lang="en">
