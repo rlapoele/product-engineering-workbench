@@ -2,7 +2,7 @@
 
 **Status:** Active
 
-**Last Updated:** 2026-08-17
+**Last Updated:** 2026-08-18
 
 ---
 
@@ -80,6 +80,7 @@ Recent clarification established the first target user as an AI-assisted develop
 - Goal archival is now bounded: `Archive Goal` has local explicit confirmation, removes the Goal and its owned Success Criteria from active document work without a content Revision, and retains the complete set for restoration through an explicit archived/history view.
 - Multiple Goals now use a lightweight ordered-document presentation: derived Goal and Success Criterion numbering supports scanning, while `Move Goal up` and `Move Goal down` change only document composition and never replace stable identities or alter Goal meaning.
 - The `Product Overview` is now bounded as section-owned canonical prose rather than a Product Artifact: its template guidance leads to a direct `Write Product Overview` action, a private multi-paragraph draft and an explicit section-content Revision. It summarizes product orientation without duplicating detailed knowledge, does not infer impact, and defers rich-text formatting to a later document-wide capability decision.
+- `Problem or Opportunity` now uses optional section-owned Problem and Opportunity prose blocks: either or both may be authored through explicit local actions, while at least one satisfies required-section coverage. The blocks explain pain and unlocked value without choosing solutions, have private drafts and locally confirmed clearing, and defer rich-text formatting to the same later document-wide decision.
 - The readiness-aware handoff flow has been clarified: deterministic scope-level validation is enabled by default but optional; personal handoff preferences are remembered; and an optional default `READINESS_REPORT.md` makes the readiness result available to implementation consumers.
 - The initial readiness outcome rules have been validated: a partial scope with Stale knowledge and a non-blocking external dependency is Ready with Caveats; an explicitly blocking external dependency is Not Ready; and an included required-but-empty section is Not Ready. Meaningful scopes still produce caveated handoffs when not ready.
 - Multiple simultaneous readiness blockers have been validated: any explicit blocker makes the scope Not Ready; the readiness report groups affected artifacts and dependencies by their originating Open Question, provides one follow-up action per blocker and uses deterministic non-semantic ordering.

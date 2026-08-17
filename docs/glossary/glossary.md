@@ -706,6 +706,14 @@ It is not a Product Artifact. It summarizes and orients without duplicating deta
 
 The Product Overview supports ordinary paragraphs. Rich-text formatting is a later document-wide capability decision, not a section-specific control.
 
+## Problem or Opportunity
+
+Problem or Opportunity is a structured Specification Section that may contain a section-owned **Problem** prose block, an **Opportunity** prose block, or both. At least one block must contain saved content when the section is selected as required.
+
+A Problem describes a current pain, limitation or unmet need. An Opportunity describes the improvement or value that addressing it could unlock. Opportunities do not select a solution; candidate solutions belong in later Product Knowledge such as Core Features.
+
+The blocks are not Product Artifacts. They have no independent lifecycle, relationships, provenance, collaboration or inferred impact propagation. Each supports ordinary paragraphs and uses its own private draft and explicit section-content Revision boundary. Rich-text formatting remains a document-wide capability decision.
+
 ## Personal AI Assistant
 
 A Personal AI Assistant is a named, user-owned AI configuration that a human user may invoke through Bring Your Own AI support.

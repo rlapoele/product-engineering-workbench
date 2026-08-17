@@ -245,6 +245,16 @@ Selecting that action opens one inline multi-paragraph prose draft. Leaving pres
 
 The initial editor supports ordinary paragraph breaks only. It does not introduce a section-specific rich-text toolbar. Inline formatting, links, lists, headings and other rich-text behavior require a later document-wide capability decision and may vary by section or artifact type.
 
+### Problem or Opportunity authoring
+
+`Problem or Opportunity` is a structured section with two optional, section-owned prose blocks. Its prepared document template visibly labels both blocks with non-canonical guidance: `Problem` asks for the current pain, limitation or unmet need; `Opportunity` asks for the improvement or value that addressing it could unlock. The section does not select a solution; candidate solutions belong later in Core Features.
+
+An empty section exposes `Actions`, which progressively reveals `Add Problem` and `Add Opportunity`. The user may author either block or both. Each action creates a private inline multi-paragraph draft; `Done editing` saves a section-content Revision, while `Discard` restores that block's guidance. Once one block is saved, the section directly offers its missing block. Once both exist, there is no additional section-level authoring action.
+
+Saved blocks expose their own `Edit Problem` or `Edit Opportunity` action and secondary `Clear` action. Clearing requires local explicit confirmation and creates a section-content Revision. If it clears the final remaining saved block, the section returns to its empty guided state. When this selected required section has no saved Problem or Opportunity content, it participates in ordinary low-priority required-section `What next?` coverage guidance. The blocks have no independent lifecycle, relationships or inferred impact propagation.
+
+The blocks support ordinary paragraph breaks only. Rich-text formatting remains a later document-wide capability decision rather than a Problem-or-Opportunity-specific toolbar.
+
 ### Inline artifact creation and rendering
 
 Choosing an action such as `Add Goal` should insert the new Product Artifact directly into its natural document location and enter editing immediately. The initial inline editing surface should present the artifact's essential fields, such as its title and content, while complex type-specific information, relationships, provenance and review history remain progressively available through the artifact's contextual actions.
