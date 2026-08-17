@@ -2,27 +2,27 @@
 
 **Status:** Active
 
-**Last Updated:** 2026-08-10
+**Last Updated:** 2026-08-17
 
 ---
 
 # Current Objective
 
-Establish a solid and coherent knowledge foundation for the Product Engineering Workbench before beginning implementation.
+Maintain a solid and coherent knowledge foundation while validating the next document-first UX and product-specification decisions.
 
-The current priority is to validate the initial Product Knowledge Model and use it to guide the next UX, AI and architecture knowledge documents.
+The authorized authenticated Project-to-first-Goal technical slice is complete. Current work returns to product discovery and specification; no additional implementation scope is implied.
 
 ---
 
 # Current Milestone
 
-**Repository Foundation**
+**Repository Foundation and First-Slice Validation**
 
 The repository is being established as the project's long-term memory.
 
 Initial foundation work has defined the product vision, core principles, repository organization, product scope and initial Project Model.
 
-Current work focuses on resolving the open model questions needed to make the foundation coherent enough for specification work.
+Current work focuses on resolving the remaining model questions and validating the interaction models needed for subsequent specification work.
 
 Recent clarification established the first target user as an AI-assisted developer and strengthened the MVP direction around a document-first, template-driven specification experience.
 
@@ -179,12 +179,12 @@ Recent clarification established the first target user as an AI-assisted develop
 - The first-slice persistence and migration model is Railway-hosted PostgreSQL through `pg` and parameterized SQL, with explicit transactions for atomic commands. `node-pg-migrate` runs committed forward-only SQL migrations in a separate private, terminating Railway migration job; its distinct credential owns schemas while the application runtime credential has least privilege. A successful migration release gates the application release from the same source revision; application auto-deployment may not bypass it. Railway's database service is unmanaged, so real content requires a rehearsed recovery procedure with point-in-time recovery when available. Node 22 is the minimum supported runtime baseline; the exact supported LTS major remains implementation verification.
 - The first-slice environment, observability and release-evidence model is local disposable development/testing plus isolated persistent Railway staging with synthetic data and Railway production with real Product Knowledge. Staging and production use separate database, identity and OAuth configuration. Each applies the two-gate migration/application release model. Pino JSON logs, Railway health/resource metrics, and a content-free PostgreSQL operational ledger provide proportionate diagnosis and durable release evidence; no external telemetry vendor, PR environment, pager, SLO or automatic alerting is selected. Staging restoration is required before real content, then quarterly and before data-moving or destructive migrations.
 - The first-slice Project command boundary now uses owner-scoped `GET` reads and dedicated same-origin JSON `POST` Astro endpoints for Project creation and first-Goal save. Each bounded, server-validated Zod envelope carries an Operation ID and command input; it returns authoritative saved state or a narrow safe error result. Commands independently require the configured same-origin `Origin`, JSON and a non-simple command header, offer no CORS, use no-store Project responses, and keep Better Auth's authentication-route CSRF protection separate. A generic command endpoint, cross-origin API and browser-supplied authority remain out of scope.
-- The first-slice verification stack is now selected: `astro check` and production build; Vitest with React Testing Library/user-event for unit and component coverage; Testcontainers PostgreSQL with actual migrations and a Better Auth test-only factory for integration coverage; and Playwright with axe scans for the built Node application. Chromium is mandatory for automated journeys and Firefox/WebKit provide release-candidate smoke coverage. The committed suite and source-revision evidence records retain the automated result; manual VoiceOver/Safari validation and its scenario template are deferred until the MVP is built or its implementation reaches that stage. Staging OAuth uses dedicated synthetic accounts at first release and after identity configuration changes; automated browser tests never introduce a production auth bypass.
+- The first-slice verification stack is now selected: `astro check` and production build; Vitest with React Testing Library/user-event for unit and component coverage; Testcontainers PostgreSQL with actual migrations and a Better Auth test-only factory for integration coverage; and Playwright with axe scans for the built Node application. Chromium is mandatory for automated journeys and Firefox/WebKit provide release-candidate smoke coverage. The committed suite and source-revision evidence records retain the automated result; manual VoiceOver/Safari validation and its scenario template are planned as broader MVP work progresses. Staging OAuth uses dedicated synthetic accounts at first release and after identity configuration changes; automated browser tests never introduce a production auth bypass.
 - The first-slice PostgreSQL schema is now selected: application-generated UUIDv7 IDs; `app` canonical Project, Specification, Goal, immutable Goal Revision and idempotent command-outcome tables; `auth` Better Auth tables; `ops` content-free operational tables; and `migration` ledger. Explicit constraints, foreign keys, append-only runtime grants and atomic transactions preserve ownership, Revision immutability and exact same-owner Operation-ID retries. This is a first-slice-complete schema, not a premature MVP-wide Product Artifact storage decision; the later general artifact persistence strategy remains open.
 - Project portability now has a distinct future contract: a versioned machine-oriented Project Archive, separate from the partial one-way Implementation Handoff Package, retains transferable canonical Project knowledge and history plus managed Resource files. Import validates the archive and creates a newly owned Project with remapped local IDs and retained import lineage; it never restores authority, overwrites or merges a Project. Conversations, sessions, credentials, operational data and personal state are excluded. The archive format and its later implementation remain deferred.
 - The modular-monolith code organization is now defined as capability-oriented Application Modules with proportionate task-shaped Ports and concrete adapters that depend inward. The Project and Fixed Starter modules are the initial core; future Implementation Handoff and Project Archive modules consume public Project contracts rather than persistence internals. Astro, React, Better Auth, PostgreSQL/`pg`, archive/resource handling, Pino/operational evidence and Railway are adapters/runtime composition, not domain authority. No generic repository/event bus/DI/CQRS framework or microservice split is selected; dependency direction is initially maintained by module design and code review.
 - The first-slice executable specification now fixes the minimal source layout, public Project read/command contracts, thin Astro UI/API adapter routes, browser Project client, two separate Composition Root configuration contracts, dependency-boundary checklist and implementation sequence. It remains a build blueprint for the accepted first slice only: it selects no additional product behavior, package versions or environment-variable spellings.
-- The accepted Dependency Verification Record establishes Node `24.14.1`, the exact compatible Astro/React, Better Auth/PostgreSQL and verification-tool package set, a reviewed Better Auth `auth`-schema generation path and a Testcontainers PostgreSQL migration exercise. It rejects TypeScript `7` in favor of `6.0.3` for the selected Astro check tooling, keeps the Better Auth generation CLI isolated from the application runtime because its development-only graph has advisory findings, and records the version-pinned Kysely dependency required solely for Better Auth PostgreSQL composition. ADR-026 implementation is now authorized; Railway migration gating, staging OAuth, recovery and production checks remain later release-readiness gates, while manual VoiceOver/Safari validation is deferred until the MVP is built or its implementation reaches that stage.
+- The accepted Dependency Verification Record establishes Node `24.14.1`, the exact compatible Astro/React, Better Auth/PostgreSQL and verification-tool package set, a reviewed Better Auth `auth`-schema generation path and a Testcontainers PostgreSQL migration exercise. It rejects TypeScript `7` in favor of `6.0.3` for the selected Astro check tooling, keeps the Better Auth generation CLI isolated from the application runtime because its development-only graph has advisory findings, and records the version-pinned Kysely dependency required solely for Better Auth PostgreSQL composition. The authorized ADR-026 implementation is complete, including retry, discard, request-boundary, OAuth/sign-out and content-locale hardening. Railway migration gating, staging OAuth, recovery and production checks remain later release-readiness gates, while manual VoiceOver/Safari validation is planned as broader MVP work progresses.
 
 ---
 
@@ -204,7 +204,7 @@ Recent clarification established the first target user as an AI-assisted develop
 - Use the clarified AI assistance governance stance when refining provenance, contribution review and export visibility.
 - Define remaining artifact-type-specific propagation exceptions and future implementation constraints for the deterministic propagation engine.
 - Use the selected first-slice system boundaries, data contracts, interaction-validation model and engineering-quality baseline when evaluating future implementation readiness.
-- Implement the explicitly authorized ADR-026 first slice in bounded, verified increments; do not broaden its product scope.
+- Preserve the completed ADR-026 slice as a bounded, verified reference; do not broaden its product scope without new product knowledge and specification.
 - Use the Project Model to inform the next UX, AI and architecture documents.
 
 ---
@@ -214,18 +214,18 @@ Recent clarification established the first target user as an AI-assisted develop
 1. Resolve the open Product Knowledge Model questions.
 2. Keep terminology coherent across glossary, knowledge and planning documents.
 3. Use the Project Model as the source for upcoming UX, AI and architecture knowledge.
-4. Minimize ambiguity before specification or implementation planning begins.
-5. Delay implementation until sufficient knowledge has been crystallized.
+4. Use the completed first slice as evidence and a constraint while validating the next product and UX decisions.
+5. Select any later implementation increment only after its necessary knowledge and interaction model have been crystallized.
 
 ---
 
 # Implementation Entry Guidance
 
-**Status:** Future planning guidance — not active work
+**Status:** Historical planning record — first slice complete
 
-This section records the estimated decision packages needed before an intentionally selected first implementation slice can begin safely. It does not change the current Repository Foundation milestone, authorize implementation, create delivery tasks, establish a schedule or require these packages to be completed as a serial checklist. Current analysis and specification work remain the priority.
+This section records the decision packages that were needed before the intentionally selected first implementation slice began. Those packages informed the completed ADR-026 slice; they do not authorize a further increment, create delivery tasks, establish a schedule or require future product work to follow the same sequence.
 
-When the foundation is mature enough to reconsider implementation, use this guidance to choose a deliberately narrow first vertical slice rather than attempting the complete MVP at once.
+This record illustrates how the project chose a deliberately narrow vertical slice rather than attempting the complete MVP at once.
 
 | Future decision package | Intended outcome | Indicative discussion effort |
 |---|---|---:|
@@ -235,21 +235,20 @@ When the foundation is mature enough to reconsider implementation, use this guid
 | First-slice UX prototype | Validate document navigation, editing, save/revision, empty/loading/error states and keyboard behavior. | 3–4 prototype or specification exercises |
 | Engineering quality baseline | Test strategy, security and privacy baseline, observability, deployment and environment assumptions. | 2–4 focused discussions |
 
-The initial estimate was 12–18 focused discussions or exercises before starting that first slice. The MVP implementation-cut package is now selected as inactive planning; the remaining packages still require deliberate discussion before any implementation decision. Collaboration Requests, Bring Your Own AI integration, AI disclosure, Resource References, impact propagation and full handoff generation may be explicitly deferred behind stable boundaries; they do not need to block the first slice.
+The initial estimate was 12–18 focused discussions or exercises before starting that first slice. The selected package was implemented without broadening its scope. Collaboration Requests, Bring Your Own AI integration, AI disclosure, Resource References, impact propagation and full handoff generation remain deferred behind stable boundaries; they do not imply the next implementation increment.
 
 ---
 
 # Explicitly Out of Scope
 
-The following activities are intentionally deferred until the repository foundation is considered sufficiently mature:
+The following activities remain intentionally deferred beyond the completed first slice:
 
-- Application scaffolding
-- Technology selection refinement
-- User interface implementation
-- Backend implementation
-- Database implementation
-- AI integration implementation
-- Delivery management functionality
+- Additional Product Artifact creation and editing beyond the first Goal
+- Later revisions, lifecycle actions, relationships and impact propagation
+- Starter selection, alternate presets and section customization
+- Collaboration, Conversations and AI integration
+- Resources, implementation-handoff generation and Project Archive/import
+- Offline synchronization and delivery-management functionality
 
 ---
 

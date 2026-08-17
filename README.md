@@ -103,11 +103,11 @@ Use `docker compose -f compose.local.yml down` to stop the stack. Add `--volumes
 
 ## Current Status
 
-This repository is currently in the **knowledge discovery and specification phase**.
+This repository remains in **knowledge discovery and specification**, alongside a deliberately bounded working implementation.
 
-The primary objective is to establish a coherent and well-documented foundation before implementation begins.
+The authenticated Project-to-first-Goal technical slice is complete: it provides an Astro SSR application with bounded React Islands, Better Auth Google and GitHub OAuth, PostgreSQL persistence and local Docker support. Its automated correctness and accessibility evidence is in the repository. Railway migration/release gating, staging OAuth verification, restoration exercises and manual VoiceOver/Safari validation remain later MVP release-readiness work.
 
-Implementation will follow once the core concepts, architecture and product philosophy have sufficiently matured.
+Further implementation begins only after the relevant product knowledge and interaction model have been explored, validated and specified. The completed slice is a constrained reference implementation, not authorization to broaden product scope.
 
 ---
 
