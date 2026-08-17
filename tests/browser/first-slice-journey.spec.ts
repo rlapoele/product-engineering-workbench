@@ -2,6 +2,7 @@ import { readFile } from 'node:fs/promises';
 import { AxeBuilder } from '@axe-core/playwright';
 import { expect, test, type Page } from '@playwright/test';
 import { Pool } from 'pg';
+import { HTTP_STATUS } from '@adapters/http/http-status';
 import { createBetterAuthTestSession } from '../support/better-auth-test-session';
 import { browserRuntimeStatePath, type BrowserRuntimeState } from './runtime-state';
 
@@ -46,7 +47,7 @@ test('an authenticated owner creates and saves a Goal after a response-loss retr
       if (hideFirstSaveResponse) {
         hideFirstSaveResponse = false;
         await route.fetch();
-        await route.fulfill({ status: 503, contentType: 'text/plain', body: 'Synthetic response loss.' });
+        await route.fulfill({ status: HTTP_STATUS.SERVICE_UNAVAILABLE, contentType: 'text/plain', body: 'Synthetic response loss.' });
         return;
       }
       await route.continue();
