@@ -160,3 +160,4 @@
 | 2026-08-10-01 | 2026-08-10 | 1 | Automated accessibility evidence and manual evidence deferral | Crystallized | Versioned automated evidence; manual VoiceOver/Safari template deferred until the MVP is built or reaches that stage |
 | 2026-08-10-02 | 2026-08-10 | 2 | First-slice recovery and observability implementation | Active implementation | Content-free Pino and PostgreSQL operational recording; failed diagnostics preserve canonical command outcomes |
 | 2026-08-10-03 | 2026-08-10 | 3 | First-slice release verification command | Active implementation | One local aggregate command for static, build, Vitest and built-app Playwright evidence |
+| 2026-08-17-01 | 2026-08-17 | 1 | Goal Success Criteria Document Authoring | Crystallized | Prepared-document actions, Goal-owned measurable Success Criteria, owner-declared Goal-change review and next-step guidance |

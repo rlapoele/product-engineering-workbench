@@ -305,9 +305,15 @@ For example:
 
 A Goal may include:
 
-- success indicators;
+- Goal Success Criteria;
 - priority;
 - related vision.
+
+A Goal Success Criterion is a Goal-owned structured child, not a Product Artifact. It has a required plain-language measurable statement and optional structured `measure`, `target` and `timeframe` qualifiers. The plain-language statement remains canonical; the qualifiers clarify it. A mismatch is an explainable attention cue, never a silent rewrite.
+
+A Goal may contain zero or more Goal Success Criteria. Each criterion belongs to exactly one Goal and cannot exist without it. Goal Success Criteria have no independent lifecycle, relationships, provenance, collaboration or Revision history. Saving or removing one changes the parent Goal's complete Revision snapshot; confirming that an affected criterion still fits records local review evidence without silently changing its content.
+
+Goal Success Criteria are distinct from Acceptance Criteria. They identify evidence that a product outcome has been achieved; Acceptance Criteria validate specified system behavior.
 
 A User Story may include:
 
@@ -387,7 +393,7 @@ Structured fields do not automatically become Product Artifacts.
 
 A field should become a Product Artifact only when it needs an independent lifecycle, review state, reuse, relationships, provenance or collaboration.
 
-For the MVP, User Story and Use Case internals should remain structured fields rather than separate artifacts.
+For the MVP, User Story and Use Case internals and Goal Success Criteria should remain structured fields or Goal-owned children rather than separate artifacts.
 
 ## Artifact-specific schemas
 
@@ -798,6 +804,10 @@ Leaving the editing surface must preserve the working draft without creating a R
 
 This boundary prevents ordinary typing, scrolling or temporary navigation from creating history entries or triggering Artifact Change Impact Propagation.
 
+The same draft boundary applies to a new Goal Success Criterion. `Done editing` saves it within a new Revision of its parent Goal; `Discard` removes only that private child draft. Removing a saved Goal Success Criterion likewise creates a new parent-Goal Revision, retaining it in earlier snapshots. A saved Goal may be Archived under the Artifact Lifecycle rules, while a Goal Success Criterion is removed rather than independently archived.
+
+When a saved Goal with existing Goal Success Criteria is edited, the Project Owner explicitly identifies the change as either a wording-only correction or a change to the Goal's intended outcome. A wording-only correction leaves its criteria unchanged. An outcome change creates a local per-criterion review state: the owner must confirm each criterion still fits, edit it or remove it. This is review evidence within the Goal, not an Artifact Lifecycle transition or automatic Stale propagation.
+
 For the MVP, each Product Artifact type has a deterministic canonical Specification Section. New artifacts, including those created from a Conversation, are placed at the end of that section; the creation flow does not offer a placement choice. If the canonical section is not selected in the current Specification, the flow explicitly asks the user to add that section or cancel creation. It must not silently enable a section or create an unplaced artifact. Canceling at this gate makes no Project State change; in Conversation capture, it returns to the destination choice with the selected source messages intact. Once the user explicitly adds the section, that outline choice remains even if they later discard the unsaved artifact draft.
 
 The document may offer `Move up` and `Move down` for an artifact within its current section. A saved reorder creates an ordinary Revision of document composition but does not change the artifact's identity, provenance, Artifact Relationships, lifecycle or Conversation Outcome Links. Drag-and-drop and moves between sections are outside the MVP.
@@ -806,9 +816,9 @@ The document may offer `Move up` and `Move down` for an artifact within its curr
 
 The workbench may derive user-invoked next-step guidance from Project State. A Guidance Item is a derived view, not a persisted Product Artifact, task, workflow state or AI Contribution.
 
-For the first pass, the derivation uses only explicit information: the current user's Edit-in-progress Drafts; active `blocks` relationships from Open Questions; active Stale and coverage/readiness impact outcomes; and required selected sections with neither section content nor active contained Product Artifacts.
+For the first pass, the derivation uses only explicit information: the current user's Edit-in-progress Drafts; active `blocks` relationships from Open Questions; active Stale and coverage/readiness impact outcomes; Goal Success Criteria awaiting local review after an owner-identified Goal outcome change; Goals with no Goal Success Criteria; and required selected sections with neither section content nor active contained Product Artifacts.
 
-Guidance must identify its underlying basis, remain optional and never create, assign or apply work automatically. It should not infer semantic gaps or missing relationships without an explicit template or validation rule.
+Guidance must identify its underlying basis, remain optional and never create, assign or apply work automatically. The priority order is draft, blocker, impact review, Goal Success Criterion coverage, then empty required-section coverage. A Goal with several affected criteria appears as one parent-level Guidance Item that navigates to its local review state. It should not infer other semantic gaps or missing relationships without an explicit template or validation rule.
 
 ## Handoff preparation and readiness
 

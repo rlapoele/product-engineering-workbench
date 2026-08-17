@@ -225,17 +225,17 @@ The document view should support:
 
 ## Initial Document Interaction And Editing Flow
 
-After project creation, the user should see the selected Specification Document Template as an empty document outline: selected section titles are visible, but no substantive content or Product Artifacts exist yet.
+After project creation, the user should see the selected Specification Document Template as a prepared document: all selected section titles appear in document order, with concise template guidance or placeholders explaining each section's purpose. No substantive user-authored content or Product Artifacts exist yet. This should feel like opening a document template and filling it in, not discovering a blank application canvas.
 
 The document should be an actionable canvas without permanently displaying controls throughout the specification.
 
-On desktop, hovering an actionable section area or Product Artifact should reveal one neutral contextual-action control. Selecting that control opens the actions valid for that scope; it must not apply an action immediately. On mobile, where hover is unavailable, a tap or equivalent touch gesture should invoke the same contextual action menu before the user chooses an action. This keeps action discovery consistent across device types while avoiding persistent visual clutter.
+On desktop, hovering or keyboard-focusing an actionable section area or Product Artifact should reveal its contextual action control. When exactly one action is valid, the control names that action directly; an empty `Goals and Success Criteria` section therefore shows `Add Goal`. When several actions are valid, a neutral `Actions` control is shown first; selecting it replaces or expands locally into the available named controls without applying an action immediately. On mobile, where hover is unavailable, a tap or equivalent touch gesture invokes the same local action surface before the user chooses an action. This keeps action discovery consistent across device types while avoiding persistent visual clutter.
 
 Contextual actions and the information they progressively reveal should remain local to the selected document scope. They should use in-place replacement or expansion with ordinary back navigation, preserving the user's place in the document rather than opening a modal or dialog. This non-modal disclosure is the default, especially on mobile; any later exception must be justified by an interaction that cannot remain understandable in the document context.
 
-The available actions must be explicit and scope-aware. For example, the action menu for an empty `Goals and Success Criteria` section may offer `Add Goal`; `Add Goal` is a menu choice, not a permanently displayed direct control. The action menu for an existing Goal exposes actions appropriate to that Goal, including `Edit`.
+The available actions must be explicit and scope-aware. An empty `Goals and Success Criteria` section has one action: `Add Goal`. Once it contains a Goal, the section still offers `Add Goal`; it does not offer section-level introductory prose. An existing Goal exposes `Edit Goal` as its direct action and `More actions` for secondary actions such as `Archive Goal`. Its Goal Success Criteria child area owns `Add Success Criterion`, keeping that extension visibly associated with its parent rather than competing in the Goal toolbar.
 
-Blank space within a section invokes the section's action menu. Selecting an existing artifact invokes that artifact's action menu. This distinction lets a document section contain its own prose and multiple Product Artifacts without confusing their scopes.
+Blank space within a section invokes the section's action surface. Hovering, focusing or selecting an existing artifact reveals that artifact's action surface. This distinction lets a document section contain its own prose and multiple Product Artifacts without confusing their scopes.
 
 ### Inline artifact creation and rendering
 
@@ -257,6 +257,14 @@ The user may leave an inline editing surface to read elsewhere in the document o
 
 `Done editing` is the sole explicit commit point for the working draft. It creates the new Revision, updates canonical Product Knowledge and then evaluates deterministic artifact-change impact propagation when applicable. In-progress typing and a preserved edit-in-progress draft must not create Revisions or mark related artifacts Stale.
 
+### Goal Success Criteria authoring
+
+Goal Success Criteria are visible, Goal-owned structured children in `Goals and Success Criteria`; they are distinct from the Product Artifacts in the document and from Acceptance Criteria elsewhere in the Specification. The Goal child area contains the local `Add Success Criterion` action. Selecting it inserts a private inline draft at the end of the Goal's criterion list and focuses its required plain-language measurable statement.
+
+`Add measurement details` progressively reveals optional Measure, Target and Timeframe fields. In reading mode, the statement is the primary document text and supplied qualifiers render as compact supporting labels. The statement is canonical; if it conflicts with qualifiers, the workbench explains the mismatch and does not rewrite either value.
+
+`Done editing` saves the new or edited criterion as part of a complete new Revision of its parent Goal. Leaving preserves the private child draft, while `Discard` removes only that draft. A saved criterion exposes `Edit Success Criterion` and `More actions`; `Remove Success Criterion` is a secondary action that creates a new parent-Goal Revision. It is not independently archived.
+
 ### Impact feedback after a committed edit
 
 After `Done editing`, the saved Revision should apply immediately. The workbench should then provide a non-blocking, artifact-anchored impact disclosure. It is collapsed by default, may show a compact affected-artifact count and can expand to a short navigable list of the affected artifacts.
@@ -264,6 +272,8 @@ After `Done editing`, the saved Revision should apply immediately. The workbench
 The transient disclosure should disappear when the user acts outside the edited artifact or navigates to another page. It should not use a modal or otherwise interrupt document work.
 
 The affected artifacts retain persistent, accessible cues in the document for as long as their impact result remains active. The document outline should also surface aggregate indicators on affected section titles, distinguishing Stale artifacts from coverage/readiness warnings rather than showing only one generic affected-item count.
+
+When the owner saves a Goal that already has Goal Success Criteria, the save interaction asks whether the change is `Wording only` or `Goal meaning changed`; neither is preselected. A wording-only correction saves the Goal Revision without changing its criteria. A Goal-meaning change shows a compact non-modal disclosure anchored to the Goal, such as `This change may affect 2 Success Criteria. Review them.` Each affected criterion must be individually confirmed as still fitting, edited or removed. This is a local Goal review state, not the global Artifact Lifecycle state Stale.
 
 These interaction rules are a first pass and should be validated through later prototypes and concrete specification exercises.
 
@@ -341,8 +351,9 @@ The initial deterministic guidance categories and priority order are:
 |---:|---|---|
 | 1 | Continue draft | The current user owns an Edit-in-progress Draft. |
 | 2 | Resolve blocker | An active Open Question explicitly `blocks` an active artifact. |
-| 3 | Review impact | Active artifacts are Stale or have coverage/readiness warnings; Stale ranks above a warning. |
-| 4 | Complete required coverage | A required selected section has no non-whitespace section content and no active contained Product Artifacts. |
+| 3 | Review impact | Active artifacts are Stale or have coverage/readiness warnings; Stale ranks above a warning. A Goal whose owner identified a Goal-meaning change appears once for its affected Goal Success Criteria. |
+| 4 | Add Goal Success Criteria | A saved Goal has no Goal Success Criteria. |
+| 5 | Complete required coverage | A required selected section has no non-whitespace section content and no active contained Product Artifacts. |
 
 When several items have the same priority, the system should prefer the user's current scope, then direct relationship or impact paths, then broader document scope. Optional sections must not be presented as missing or problematic. The system must not claim semantic gaps or missing relationships unless a future explicit template or validation rule defines them.
 

@@ -443,7 +443,7 @@ It may use a temporary directory, local package installation and disposable Test
 
 Deterministic Next-step Guidance is an optional, user-invoked derived view that identifies relevant follow-up work from explicit Project State.
 
-It is not a task list, workflow gate, Product Artifact or AI request. The initial guidance rules use the current user's Edit-in-progress Drafts, explicit Open Question blockers, active impact outcomes and empty required selected sections.
+It is not a task list, workflow gate, Product Artifact or AI request. The initial guidance rules use the current user's Edit-in-progress Drafts, explicit Open Question blockers, active impact outcomes, Goals with Goal Success Criteria needing review, Goals with no Goal Success Criteria, and empty required selected sections.
 
 ---
 
@@ -457,9 +457,9 @@ It constrains module and adapter responsibilities without becoming product code,
 
 ## Edit-in-progress Draft
 
-An Edit-in-progress Draft is a persistent, user-owned working copy of a Product Artifact that has not yet become canonical Product Knowledge.
+An Edit-in-progress Draft is a persistent, user-owned working copy of a Product Artifact or its Goal-owned structured child that has not yet become canonical Product Knowledge.
 
-It is not an Artifact lifecycle state or a Revision. It may be kept, discarded or completed through `Done editing`; only Done editing creates a new Revision and may trigger Artifact Change Impact Propagation.
+It is not an Artifact lifecycle state or a Revision. It may be kept, discarded or completed through `Done editing`; only Done editing creates a new Revision and may trigger Artifact Change Impact Propagation. Completing a Goal Success Criterion draft creates a new Revision of its parent Goal, not an independent child Revision.
 
 ---
 
@@ -494,6 +494,22 @@ Functional Requirements are distinct from Core Features: a Core Feature describe
 ---
 
 # G
+
+## Goal
+
+A Goal is a Product Artifact expressing an intended product outcome or target.
+
+A Goal may own zero or more Goal Success Criteria. A Goal without them remains valid canonical Product Knowledge, but lacks explicit evidence of how its outcome will be recognized and may receive optional deterministic next-step guidance.
+
+## Goal Success Criterion
+
+A Goal Success Criterion is a Goal-owned structured child that states clear, measurable evidence that its parent Goal has been achieved.
+
+It has one required plain-language measurable statement and may add structured Measure, Target and Timeframe qualifiers. The statement is the canonical meaning; qualifiers clarify it. When the statement and qualifiers conflict, the workbench shows an understandable attention cue and does not silently rewrite either.
+
+Each Goal Success Criterion belongs to exactly one Goal and cannot exist independently. It is not a Product Artifact: it has no independent lifecycle, relationships, provenance, collaboration or Revision history. A Goal may have none, while a Goal Success Criterion cannot exist without its Goal.
+
+Goal Success Criteria are distinct from Acceptance Criteria. A Goal Success Criterion measures achievement of a product outcome; an Acceptance Criterion defines observable validation of specified system behavior.
 
 ## Guidance Item
 
@@ -597,9 +613,9 @@ A later change to the current handoff boundary or Handoff Package Roles does not
 
 ## Impact Disclosure
 
-An Impact Disclosure is a transient, non-modal summary shown after a committed Revision identifies impacted Product Artifacts.
+An Impact Disclosure is a transient, non-modal summary shown after a committed Revision identifies impacted Product Artifacts or Goal-owned structured children needing review.
 
-It is anchored to the edited artifact, is collapsed by default and may expand to a compact navigable list. It complements, but does not replace, the persistent Stale and coverage/readiness cues on affected artifacts and sections.
+It is anchored to the edited artifact, is collapsed by default and may expand to a compact navigable list. It complements, but does not replace, the persistent Stale and coverage/readiness cues on affected artifacts and sections. After the owner identifies a saved Goal change as altering its intended outcome, it may instead summarize the Goal Success Criteria that require local review; that local review state is not the Artifact Lifecycle state Stale.
 
 ---
 
@@ -987,7 +1003,7 @@ Revision is distinct from Contribution and Provenance: Contribution records part
 
 For an interactive artifact edit, a Revision is created only when the user selects `Done editing`, not while an Edit-in-progress Draft is being written or preserved. A saved within-section Artifact Placement reorder is also a Revision of document composition.
 
-For the selected first slice, a Goal Revision preserves a complete immutable snapshot of the saved Goal and its per-Goal version. Creating a Project's fixed empty Specification does not create a Revision because it instantiates system-defined starter composition rather than saving authored Product Knowledge.
+For the selected first slice, a Goal Revision preserves a complete immutable snapshot of the saved Goal and its per-Goal version. As Goal Success Criteria are later introduced, a Goal Revision preserves the Goal and its complete current set of Goal-owned Success Criteria rather than creating independent child Revisions. Creating a Project's fixed empty Specification does not create a Revision because it instantiates system-defined starter composition rather than saving authored Product Knowledge.
 
 ---
 
