@@ -311,7 +311,7 @@ A Goal may include:
 
 A Goal Success Criterion is a Goal-owned structured child, not a Product Artifact. It has a required plain-language measurable statement and optional structured `measure`, `target` and `timeframe` qualifiers. The plain-language statement remains canonical; the qualifiers clarify it. A mismatch is an explainable attention cue, never a silent rewrite.
 
-A Goal may contain zero or more Goal Success Criteria. Each criterion belongs to exactly one Goal and cannot exist without it. Goal Success Criteria have no independent lifecycle, relationships, provenance, collaboration or Revision history. Saving or removing one changes the parent Goal's complete Revision snapshot; confirming that an affected criterion still fits records local review evidence without silently changing its content.
+A Goal may contain zero or more Goal Success Criteria. Each criterion belongs to exactly one Goal and cannot exist without it. Goal Success Criteria have no independent lifecycle, relationships, provenance, collaboration or Revision history. Saving or removing one changes the parent Goal's complete Revision snapshot; confirming that an affected criterion still fits records local review evidence without silently changing its content. Archiving a Goal removes it and its owned criteria from active document work; restoring the Goal returns its complete current set of criteria together.
 
 Goal Success Criteria are distinct from Acceptance Criteria. They identify evidence that a product outcome has been achieved; Acceptance Criteria validate specified system behavior.
 
@@ -805,6 +805,8 @@ Leaving the editing surface must preserve the working draft without creating a R
 This boundary prevents ordinary typing, scrolling or temporary navigation from creating history entries or triggering Artifact Change Impact Propagation.
 
 The same draft boundary applies to a new Goal Success Criterion. `Done editing` saves it within a new Revision of its parent Goal; `Discard` removes only that private child draft. Removing a saved Goal Success Criterion likewise creates a new parent-Goal Revision, retaining it in earlier snapshots. A saved Goal may be Archived under the Artifact Lifecycle rules, while a Goal Success Criterion is removed rather than independently archived.
+
+`Archive Goal` is a secondary Goal action that requires local explicit confirmation. It archives the Goal without creating a content Revision and removes its owned Goal Success Criteria from the active document at the same time. The active document does not retain struck-through archived Goals; an explicit archived/history view provides `Restore Goal`, which returns the Goal and its complete current set of owned criteria together.
 
 When a saved Goal with existing Goal Success Criteria is edited, the Project Owner explicitly identifies the change as either a wording-only correction or a change to the Goal's intended outcome. A wording-only correction leaves its criteria unchanged. An outcome change creates a local per-criterion review state: the owner must confirm each criterion still fits, edit it or remove it. This is review evidence within the Goal, not an Artifact Lifecycle transition or automatic Stale propagation.
 
