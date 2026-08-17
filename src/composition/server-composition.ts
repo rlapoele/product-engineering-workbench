@@ -9,12 +9,17 @@ import { fixedStarter } from '@modules/fixed-starter/standard-web-app-v1';
 import { projectApi } from '@modules/project';
 import { runtimeConfig } from './runtime-config';
 
-export const serverComposition = () => {
+const createServerComposition = () => {
   const config = runtimeConfig();
   const pool = new Pool({ connectionString: config.DATABASE_URL, options: '-c search_path=auth,app,ops,public' });
   const authDatabase = new Kysely({ dialect: new PostgresDialect({ pool }) });
-  const auth = createServerAuth(config);
+  const auth = createServerAuth(config, authDatabase);
   const recorder = bestEffortRecorder(pinoRecorder({ sourceRevision: config.SOURCE_REVISION, environment: config.RUNTIME_ENVIRONMENT }), postgresLedger(pool));
   const projects = projectApi(new PostgresProjectStore(pool, fixedStarter.active()), fixedStarter, recorder, config.SOURCE_REVISION);
-  return { config, pool, authDatabase, auth, projects };
+  return { config, auth, projects };
 };
+
+let composition: ReturnType<typeof createServerComposition> | undefined;
+
+/** Creates the application dependencies once per Node process. */
+export const serverComposition = () => composition ??= createServerComposition();
