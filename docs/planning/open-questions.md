@@ -576,7 +576,7 @@ The future interchange contract requires compatibility validation, structural an
 
 **Category:** Data Model
 
-**Status:** 🟡 Exploring
+**Status:** 🟢 Resolved
 
 ## Context
 
@@ -602,9 +602,11 @@ The section has fixed Domain Concepts, Domain Relationships and Domain Rules blo
 
 Domain-model propagation follows the ordinary Stale-versus-coverage distinction. A changed or archived Domain Rule makes enforcing Functional Requirements and directly validating Acceptance Criteria Stale; a changed or archived enforcing Functional Requirement instead creates a coverage/readiness warning on its Domain Rule. A changed or archived Domain Concept makes governing Domain Rules Stale and gives connected Domain Relationships review cues. A changed or removed Domain Relationship makes governing Domain Rules Stale.
 
-## Open Decisions
+## Decision
 
-- Which additional explicit relationships apply to Domain Concepts and Domain Rules?
+No additional domain-specific relationship types are required for the current Data or Domain Model. The structured Domain Relationship record, together with `governs`, `enforces` and `validates`, provides the necessary structural, policy, system-behavior and evidence traceability. Existing generic Artifact Relationship types remain available where their established meanings apply.
+
+Additional relationship vocabulary, readable relationship references and structured state modeling remain deferred until a concrete product need demonstrates that the current model cannot express the needed knowledge clearly.
 
 ## Boundary
 
