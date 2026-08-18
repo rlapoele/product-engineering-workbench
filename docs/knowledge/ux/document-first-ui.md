@@ -349,6 +349,8 @@ The section's `Actions` surface reveals `Add Functional Requirement`, `Add Requi
 
 A saved Non-Functional Requirement may initially have no linked Acceptance Criterion; the document presents a coverage cue rather than blocking its save. `Add Acceptance Criterion` from the NFR opens ordinary criterion authoring with that NFR preselected as primary. A shared criterion may validate an NFR and related Functional Requirement only when its observable evidence genuinely covers each.
 
+The section's `Actions` surface reveals `Add Non-Functional Requirement` and no grouping action initially. Its private inline draft collects the quality category, required **Primary scope target**, optional additional targets, **Title**, measurable **Requirement statement** and optional Measurement context. Whole Specification is eligible, but the author must select it explicitly when beginning from the NFR section. From any eligible target artifact, `Add Non-Functional Requirement` preselects that target as primary. A saved NFR exposes direct `Edit Non-Functional Requirement`, secondary locally confirmed `Archive Non-Functional Requirement`, and `Add Acceptance Criterion`.
+
 ### Inline artifact creation and rendering
 
 Choosing an action such as `Add Goal` should insert the new Product Artifact directly into its natural document location and enter editing immediately. The initial inline editing surface should present the artifact's essential fields, such as its title and content, while complex type-specific information, relationships, provenance and review history remain progressively available through the artifact's contextual actions.
