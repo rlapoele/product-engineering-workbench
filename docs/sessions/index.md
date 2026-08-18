@@ -166,3 +166,4 @@
 | 2026-08-18-03 | 2026-08-18 | 3 | Non-Goals Section Authoring | Crystallized | Lightweight unordered boundary statements with explicit drafts and coverage |
 | 2026-08-18-04 | 2026-08-18 | 4 | Target Users Or Personas Section Authoring | Crystallized | Canonical User Profiles with Target User and Persona kinds, structured profile content and explicit future user-need links |
 | 2026-08-18-05 | 2026-08-18 | 5 | User Needs Section Authoring | Crystallized | Explicit profile-linked user needs, expected outcomes, and need-first or profile-first creation |
+| 2026-08-18-06 | 2026-08-18 | 6 | Scope Section Authoring | Crystallized | Fixed in-scope and out-of-scope blocks, constrained prose/list content and no inferred impact |

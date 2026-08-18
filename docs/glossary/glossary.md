@@ -1053,6 +1053,14 @@ Database Roles are PostgreSQL identities and grants that enforce which database 
 
 For the first slice, the runtime role may use the `app`, `auth` and `ops` schemas and perform only required data operations. It has no update or delete grant on canonical Project, Specification, Goal, Goal Revision or command-operation records. The separate migration role owns those schemas and the `migration` schema, and performs schema changes. The application process never receives the migration role's credential.
 
+## Scope
+
+Scope is a structured Specification Section that states the product boundary of the current specification through fixed, section-owned **In Scope** and **Out of Scope** blocks.
+
+In Scope identifies the high-level product areas and bounded capabilities the specification covers. Out of Scope identifies specific nearby capabilities, modes, integrations, data boundaries or operational boundaries it intentionally excludes. It may refer to an existing Non-Goal rather than duplicate it; Non-Goals remain the broader strategic layer.
+
+The blocks are not Product Artifacts and have no independent lifecycle, relationships, provenance, collaboration or inferred impact propagation. In Scope requires saved content when the Scope section is required; Out of Scope is optional. Each block supports short paragraphs, unordered lists and ordered lists only when order is meaningful. This constrained block vocabulary is specific to Scope and does not introduce a general rich-text editor, nested lists or arbitrary headings.
+
 ## Section Catalog
 
 A Section Catalog is the reusable collection of specification sections that can be composed into Specification Document Templates and Project Presets.

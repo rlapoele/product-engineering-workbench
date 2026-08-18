@@ -285,6 +285,16 @@ Leaving a need preserves its private draft; `Discard` removes it; and `Done edit
 
 User Needs is optional in the Simple Web Presence preset and required in the Standard Web App and Complex Product App presets. When selected as required and empty, it participates in ordinary low-priority required-section `What next?` coverage guidance. The initial editor supports plain-language statements only; rich-text formatting remains a later document-wide capability decision.
 
+### Scope authoring
+
+`Scope` is a structured section with fixed, section-owned **In Scope** and **Out of Scope** blocks. Its prepared document state presents concise guidance: In Scope describes the high-level product areas and bounded capabilities this specification covers; Out of Scope identifies nearby or expected areas it deliberately excludes. The latter may refer to an existing Non-Goal rather than repeat a broader strategic boundary.
+
+An empty Scope section exposes `Actions`, which reveals `Define In Scope` and `Define Out of Scope`. Each opens a private inline block draft supporting short paragraphs, unordered lists and ordered lists only where sequence is meaningful. It does not offer nested lists, arbitrary headings or a general rich-text toolbar. `Done editing` creates a section-content Revision; `Discard` restores the relevant block's guidance.
+
+A saved block exposes direct `Edit In Scope` or `Edit Out of Scope` and secondary locally confirmed `Clear` action. Clearing In Scope returns the required Scope section to its empty guided state; clearing Out of Scope restores only its optional guidance. The blocks are not Product Artifacts, have no independent lifecycle or relationships, and do not infer automatic Stale impact from prose or list edits.
+
+Scope is required in every initial preset. When In Scope has no saved content, the section participates in ordinary low-priority required-section `What next?` coverage guidance. Once In Scope is saved and Out of Scope remains empty, the section directly offers `Define Out of Scope`; after both are saved, there is no additional section-level authoring action.
+
 ### Inline artifact creation and rendering
 
 Choosing an action such as `Add Goal` should insert the new Product Artifact directly into its natural document location and enter editing immediately. The initial inline editing surface should present the artifact's essential fields, such as its title and content, while complex type-specific information, relationships, provenance and review history remain progressively available through the artifact's contextual actions.
