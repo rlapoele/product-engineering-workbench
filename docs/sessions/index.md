@@ -173,3 +173,4 @@
 | 2026-08-18-10 | 2026-08-18 | 10 | Functional Requirement Stable References | Crystallized | Immutable readable references, derived outline numbering and handoff-time snapshots |
 | 2026-08-18-11 | 2026-08-18 | 11 | Functional Requirement Grouping | Crystallized | Optional one-level section-owned groups separate readable organization from durable requirements |
 | 2026-08-18-12 | 2026-08-18 | 12 | Functional Requirement Leaf Authoring | Crystallized | Independently testable behavior leaves, qualifying conditions and non-blocking acceptance coverage |
+| 2026-08-18-13 | 2026-08-18 | 13 | Functional Requirement Authoring Flow | Crystallized | Contextual requirement/group/Feature actions with preserved prerequisite creation and direct acceptance coverage |
