@@ -572,9 +572,12 @@ The future interchange contract requires compatibility validation, structural an
 
 Domain Concept and Domain Rule are now independent Product Artifacts. A Domain Rule has one required kind: Business Rule or Invariant. This establishes independently traceable domain structure and governing knowledge without making the Data or Domain Model a database-design surface.
 
+## Current Direction
+
+A Domain Concept has a required title and plain-language definition. It may include an optional `Key business attributes` list whose entries name and explain business-meaningful attributes. Important states may appear in that list until a more structured state model is justified. The list must not prescribe database tables, column names, storage technology, physical data types, nullability, indexes or other schema choices.
+
 ## Open Decisions
 
-- Which fields are required or optional for a Domain Concept beyond its title and plain-language definition?
 - How should explicit domain relationships be represented, including their business meaning, direction and any cardinality?
 - Which fields and relationships does a Domain Rule require, and should it receive an immutable readable reference?
 - How should the document-first authoring and contextual related-knowledge flows work?

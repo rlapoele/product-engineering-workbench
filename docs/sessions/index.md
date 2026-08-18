@@ -184,3 +184,4 @@
 | 2026-08-18-21 | 2026-08-18 | 21 | Non-Functional Requirement Acceptance Coverage | Crystallized | NFR validation through ordinary reusable Acceptance Criteria and explicit shared evidence |
 | 2026-08-18-22 | 2026-08-18 | 22 | Non-Functional Requirement Authoring Flow | Crystallized | Deliberate scope selection, target-preselected creation and no grouping layer |
 | 2026-08-18-23 | 2026-08-18 | 23 | Data or Domain Model Artifact Direction | Crystallized | Independent Domain Concepts and Domain Rules, with Business Rule and Invariant kinds |
+| 2026-08-18-24 | 2026-08-18 | 24 | Domain Concept Initial Fields | Crystallized | Required title and definition with optional business-meaningful attributes; state and schema details deferred |
