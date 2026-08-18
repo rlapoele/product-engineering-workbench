@@ -485,7 +485,7 @@ Domain Relationships express product-domain structure, not database tables, fore
 
 ## Domain Rule
 
-A Domain Rule is an independent Product Artifact that governs valid domain meaning, state or behavior. It has a required title, kind, canonical rule statement and **Governs** list containing one or more Domain Concepts and/or Domain Relationships. Its required kind is either **Business Rule** or **Invariant**.
+A Domain Rule is an independent Product Artifact that governs valid domain meaning, state or behavior. It has a required title, kind, canonical rule statement and **Governs** list containing one or more Domain Concepts and/or Domain Relationships. Its required kind is either **Business Rule** or **Invariant**. The Governs list is the document-facing projection of the Rule's required outbound `governs` relationships, not duplicated relationship data.
 
 A Business Rule expresses a product policy governing allowed actions, decisions or state transitions. An Invariant expresses a condition that must always hold for valid domain state. The canonical statement expresses the complete rule, including any conditions or exceptions; no separate exceptions field is introduced initially.
 

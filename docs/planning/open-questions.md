@@ -365,6 +365,7 @@ Artifact Relationships form the Product Knowledge Graph and allow the workbench 
 - part_of
 - validates
 - enforces
+- governs
 - depends_on
 - affects
 - explains
@@ -385,6 +386,7 @@ The MVP relationship types are:
 - `part_of`
 - `validates`
 - `enforces`
+- `governs`
 - `depends_on`
 - `affects`
 - `explains`
@@ -397,6 +399,8 @@ The MVP relationship types are:
 `derived_from` is included because derivation matters for provenance, AI generation, refinement and implementation handoff traceability.
 
 `enforces` is included because a Functional Requirement may specify the system behavior that upholds a Domain Rule. It is distinct from `derived_from`, which records origin or refinement, and `depends_on`, which records dependency rather than the required system obligation.
+
+`governs` is included because a Domain Rule may constrain the valid meaning, state or behavior of a Domain Concept or Domain Relationship. A Domain Rule's document-facing Governs list is the projection of its required outbound `governs` relationships.
 
 ## Consequences
 
@@ -466,7 +470,7 @@ Stale propagation means the downstream artifact may no longer be accurate.
 
 Coverage or readiness warning means an artifact may now be under-supported, unvalidated, unaddressed or blocked without necessarily being inaccurate.
 
-Strong automatic Stale propagation should apply when the changed artifact is the target of `depends_on`, `derived_from`, `validates`, `enforces`, `addresses` or child-to-parent `part_of` relationships, and when the changed artifact is the source of an `affects` relationship.
+Strong automatic Stale propagation should apply when the changed artifact is the target of `depends_on`, `derived_from`, `validates`, `enforces`, `governs`, `addresses` or child-to-parent `part_of` relationships, and when the changed artifact is the source of an `affects` relationship.
 
 `relates_to` should not automatically propagate Stale.
 
@@ -584,7 +588,7 @@ A Domain Concept has a required title and plain-language definition. It may incl
 
 A Domain Relationship has a required source Domain Concept, readable relationship statement and target Domain Concept. It may record cardinality at either end. Cardinality is optional but must be supported when known; it clarifies domain structure and does not prescribe a database relationship.
 
-A Domain Rule has a required title, kind, canonical rule statement and `Governs` list containing one or more Domain Concepts and/or Domain Relationships. Its statement expresses the complete rule, including conditions and exceptions; no separate exceptions field is introduced initially.
+A Domain Rule has a required title, kind, canonical rule statement and `Governs` list containing one or more Domain Concepts and/or Domain Relationships. Its statement expresses the complete rule, including conditions and exceptions; no separate exceptions field is introduced initially. The Governs list is the document-facing projection of the Rule's required outbound `governs` relationships.
 
 Each Domain Rule receives an immutable project-scoped readable reference at creation, such as `DR-001`. The reference does not encode the rule kind or current document placement, and is retained after archival and in saved Implementation Handoff snapshots.
 

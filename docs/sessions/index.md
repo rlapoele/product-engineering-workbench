@@ -192,3 +192,4 @@
 | 2026-08-18-29 | 2026-08-18 | 29 | Domain Rule Acceptance Coverage | Crystallized | Domain Rules are direct validation targets; Concepts and Relationships remain structural context |
 | 2026-08-18-30 | 2026-08-18 | 30 | Data or Domain Model Authoring Flow | Crystallized | Fixed section blocks, contextual creation and preserved drafts without forced sequence |
 | 2026-08-19-01 | 2026-08-19 | 1 | Data or Domain Model Impact Propagation | Crystallized | Rule, concept and relationship changes follow explicit Stale, coverage and review-cue semantics |
+| 2026-08-19-02 | 2026-08-19 | 2 | Domain Rule Governs Relationship | Crystallized | Explicit `governs` relationships provide the canonical basis for Rule governing scope |

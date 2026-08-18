@@ -519,6 +519,7 @@ Domain Relationships express product-domain structure, not database tables, fore
 - An Open Question blocks validation of an artifact.
 - Acceptance Criteria may be derived from a Functional Requirement.
 - A Functional Requirement enforces a Domain Rule.
+- A Domain Rule governs a Domain Concept or Domain Relationship.
 
 ## Minimum relationship types
 
@@ -529,6 +530,7 @@ The initial relationship model should include:
 - part_of
 - validates
 - enforces
+- governs
 - depends_on
 - affects
 - explains
@@ -559,6 +561,10 @@ Example: Acceptance Criteria validate a Functional Requirement.
 `enforces` means a Functional Requirement specifies the system behavior that upholds a Domain Rule.
 
 Example: a Functional Requirement enforces a Domain Rule that a Customer may hold only one active Subscription for the same Service.
+
+`governs` means a Domain Rule constrains valid meaning, state or behavior of a Domain Concept or Domain Relationship.
+
+Example: a Domain Rule governs the Customer–Subscription relationship.
 
 `depends_on` means an artifact depends on another artifact being true, available, resolved or decided.
 
@@ -679,6 +685,7 @@ First-pass relationship propagation rules:
 | `part_of` | User Story part_of Feature | Maybe mark parent Stale when parent content aggregates child content. | Mark source Stale. |
 | `validates` | Acceptance Criteria validates Requirement | Usually create coverage/readiness warning rather than marking target Stale. | Mark source Stale. |
 | `enforces` | Functional Requirement enforces Domain Rule | Create coverage/readiness warning on the Domain Rule rather than marking it Stale. | Mark source Stale. |
+| `governs` | Domain Rule governs Domain Concept or Relationship | No automatic Stale propagation to the governed structure. | Mark source Stale. |
 | `depends_on` | Feature depends_on Integration Decision | Usually no Stale propagation from dependent to dependency. | Mark source Stale. |
 | `affects` | Risk affects Feature | Mark target Stale. | Maybe mark source Stale. |
 | `explains` | Decision explains Requirement | Mark target Stale. | Maybe mark source Stale. |
@@ -879,7 +886,7 @@ Contextual Related-Knowledge Creation is the reusable document-first pattern beh
 
 `Non-Functional Requirements` offers `Add Non-Functional Requirement` and no grouping actions initially. Its private draft collects quality category, a required explicitly selected primary scope target, optional additional targets, title, measurable statement and optional Measurement context. Whole Specification is eligible, but is never silently preselected when the draft begins in the section. From an eligible target, `Add Non-Functional Requirement` preselects that target as primary. A saved NFR follows ordinary Product Artifact drafts, Revisions, lifecycle and explicit relationship-based impact rules, and exposes ordinary edit and archive actions plus its target-preselected `Add Acceptance Criterion` path.
 
-`Data or Domain Model` presents three fixed document blocks: `Domain Concepts`, `Domain Relationships` and `Domain Rules`. They are section presentation blocks, not additional artifact types or separate documents. The section exposes `Add Domain Concept`, `Add Domain Relationship` and `Add Domain Rule`; an author may begin with any of them. A Domain Concept draft collects its title, definition and optional Key business attributes. A Domain Relationship draft collects its source Domain Concept, readable relationship statement, target Domain Concept and optional cardinality. A Domain Rule draft collects its title, kind, statement and one or more governed Domain Concepts and/or Domain Relationships. The workbench enforces only the prerequisites needed to save the current item: an unfinished draft is preserved while the author explicitly creates missing Domain Concepts or Domain Relationships, then resumes with new knowledge preselected. Starting `Add Domain Relationship` from a Domain Concept preselects it as the source. Starting `Add Domain Rule` from a Domain Concept or Domain Relationship preselects it in the Rule's Governs list. Domain Concepts and Domain Rules follow ordinary Product Artifact edit and archive actions. Domain Relationships are first-class relationship records, so they expose explicit edit and remove actions rather than artifact lifecycle actions.
+`Data or Domain Model` presents three fixed document blocks: `Domain Concepts`, `Domain Relationships` and `Domain Rules`. They are section presentation blocks, not additional artifact types or separate documents. The section exposes `Add Domain Concept`, `Add Domain Relationship` and `Add Domain Rule`; an author may begin with any of them. A Domain Concept draft collects its title, definition and optional Key business attributes. A Domain Relationship draft collects its source Domain Concept, readable relationship statement, target Domain Concept and optional cardinality. A Domain Rule draft collects its title, kind, statement and one or more governed Domain Concepts and/or Domain Relationships. Its document-facing Governs list is the projection of required outbound `governs` relationships, not duplicated relationship data. The workbench enforces only the prerequisites needed to save the current item: an unfinished draft is preserved while the author explicitly creates missing Domain Concepts or Domain Relationships, then resumes with new knowledge preselected. Starting `Add Domain Relationship` from a Domain Concept preselects it as the source. Starting `Add Domain Rule` from a Domain Concept or Domain Relationship preselects it in the Rule's Governs list. Domain Concepts and Domain Rules follow ordinary Product Artifact edit and archive actions. Domain Relationships are first-class relationship records, so they expose explicit edit and remove actions rather than artifact lifecycle actions.
 
 When a saved Goal with existing Goal Success Criteria is edited, the Project Owner explicitly identifies the change as either a wording-only correction or a change to the Goal's intended outcome. A wording-only correction leaves its criteria unchanged. An outcome change creates a local per-criterion review state: the owner must confirm each criterion still fits, edit it or remove it. This is review evidence within the Goal, not an Artifact Lifecycle transition or automatic Stale propagation.
 
