@@ -165,3 +165,4 @@
 | 2026-08-18-02 | 2026-08-18 | 2 | Problem Or Opportunity Section Authoring | Crystallized | Optional structured prose blocks, explicit drafts and coverage without choosing a solution |
 | 2026-08-18-03 | 2026-08-18 | 3 | Non-Goals Section Authoring | Crystallized | Lightweight unordered boundary statements with explicit drafts and coverage |
 | 2026-08-18-04 | 2026-08-18 | 4 | Target Users Or Personas Section Authoring | Crystallized | Canonical User Profiles with Target User and Persona kinds, structured profile content and explicit future user-need links |
+| 2026-08-18-05 | 2026-08-18 | 5 | User Needs Section Authoring | Crystallized | Explicit profile-linked user needs, expected outcomes, and need-first or profile-first creation |

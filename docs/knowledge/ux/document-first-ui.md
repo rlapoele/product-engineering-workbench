@@ -275,6 +275,16 @@ Leaving preserves the private draft; `Discard` removes it; and `Done editing` cr
 
 The section is required in every initial preset. An empty section therefore participates in ordinary low-priority required-section `What next?` coverage guidance. The initial profile editor supports plain-language text and statement lists only; rich-text formatting remains a later document-wide capability decision.
 
+### User Needs authoring
+
+`User Needs` contains an ungrouped list of User Need Product Artifacts. Each renders its explicit `For:` User Profile label or labels, followed by its required user-centred **Need** statement and required **Expected outcome**. The need statement is the readable heading; no duplicate title field is shown. The section's contextual `Actions` surface always reveals both `Add User Need` and `Add User Profile`.
+
+`Add User Need` opens a private inline artifact draft and requires the owner to select one or more existing User Profiles before saving. It then collects the Need statement and Expected outcome. If no User Profile exists, the flow explains that a target user is required and offers `Add User Profile` or cancel. Choosing it opens a private User Profile draft in the canonical `Target Users or Personas` section, preserves the need draft, and returns to it with the new profile selected after `Done editing`. The `Add User Profile` action remains available from User Needs even when profiles already exist. Conversely, `Add User Need` from a saved User Profile preselects that profile.
+
+Leaving a need preserves its private draft; `Discard` removes it; and `Done editing` creates a canonical User Need Revision. A saved need exposes direct `Edit User Need` and secondary `Archive User Need` with local explicit confirmation. Removing all User Profile links is invalid. Profile-local needs from the product may inform the draft but do not synchronize with or replace User Need artifacts. As with other Product Artifacts, only explicit saved relationships govern later impact feedback.
+
+User Needs is optional in the Simple Web Presence preset and required in the Standard Web App and Complex Product App presets. When selected as required and empty, it participates in ordinary low-priority required-section `What next?` coverage guidance. The initial editor supports plain-language statements only; rich-text formatting remains a later document-wide capability decision.
+
 ### Inline artifact creation and rendering
 
 Choosing an action such as `Add Goal` should insert the new Product Artifact directly into its natural document location and enter editing immediately. The initial inline editing surface should present the artifact's essential fields, such as its title and content, while complex type-specific information, relationships, provenance and review history remain progressively available through the artifact's contextual actions.

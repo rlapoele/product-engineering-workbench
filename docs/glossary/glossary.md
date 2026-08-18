@@ -1175,6 +1175,16 @@ As a Product Artifact, a User Profile follows the ordinary draft, Revision, life
 
 ---
 
+## User Need
+
+A User Need is a Product Artifact that records what one or more intended users need to achieve or resolve and the expected beneficial outcome when that need is met.
+
+Each User Need has one or more explicit User Profile links, a required user-centred need statement and a required expected outcome. The need statement is its readable document heading; the model does not require a separate duplicate title. Its profile links must not become empty.
+
+Needs from the product recorded within a User Profile are profile-local context. They may inform a User Need, but do not silently create, update or replace one. User Profile-to-User Need links and any resulting impact behavior are explicit and use the ordinary Product Artifact relationship rules. Rich-text formatting remains a later document-wide capability decision.
+
+---
+
 # W
 
 ## Working Memory
