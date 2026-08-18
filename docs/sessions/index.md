@@ -189,3 +189,4 @@
 | 2026-08-18-26 | 2026-08-18 | 26 | Domain Rule Initial Fields | Crystallized | Required title, kind, statement and governing scope; exceptions remain in the statement |
 | 2026-08-18-27 | 2026-08-18 | 27 | Domain Rule Stable References | Crystallized | Immutable project-scoped `DR-001` references independent of kind and document placement |
 | 2026-08-18-28 | 2026-08-18 | 28 | Functional Requirement Domain Rule Enforcement | Crystallized | Explicit `enforces` relationship from required system behavior to governing Domain Rules |
+| 2026-08-18-29 | 2026-08-18 | 29 | Domain Rule Acceptance Coverage | Crystallized | Domain Rules are direct validation targets; Concepts and Relationships remain structural context |

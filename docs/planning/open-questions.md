@@ -588,10 +588,12 @@ Each Domain Rule receives an immutable project-scoped readable reference at crea
 
 A Functional Requirement may explicitly `enforce` a Domain Rule when it specifies the system behavior that upholds that rule. `enforces` is distinct from `derived_from` and `depends_on`.
 
+A Domain Rule is an eligible Acceptance Criterion validation target. Missing acceptance coverage does not block the Domain Rule's initial save but is visible as a coverage cue. A shared criterion may validate a Domain Rule and related Functional Requirement only where its observable evidence covers both. Domain Concepts and Domain Relationships are structural context rather than Acceptance Criterion targets.
+
 ## Open Decisions
 
 - How should the document-first authoring and contextual related-knowledge flows work?
-- Which explicit relationships, validation targets and impact-propagation rules apply to Domain Concepts and Domain Rules?
+- Which additional explicit relationships and impact-propagation rules apply to Domain Concepts and Domain Rules?
 
 ## Boundary
 

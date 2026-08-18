@@ -54,9 +54,11 @@ An Answer may explain its basis, assumptions, limits and unresolved dependencies
 
 An Acceptance Criterion is an independent Product Artifact that defines observable evidence for whether specified product behavior is acceptable.
 
-Each criterion has one required primary validation target and may have additional explicit targets. A Core Feature, User Story, Use Case, Functional Requirement, Non-Functional Requirement, Screen / View, User Flow or UI Requirement may be a validation target. The primary target gives the criterion its natural authoring and rendering context; additional targets prevent duplicate criteria when the same evidence validates related knowledge.
+Each criterion has one required primary validation target and may have additional explicit targets. A Core Feature, User Story, Use Case, Functional Requirement, Non-Functional Requirement, Domain Rule, Screen / View, User Flow or UI Requirement may be a validation target. The primary target gives the criterion its natural authoring and rendering context; additional targets prevent duplicate criteria when the same evidence validates related knowledge.
 
 One Acceptance Criterion may validly validate multiple Functional Requirements when its observable evidence applies to each linked requirement. This does not by itself mean that the requirements are poorly formulated; when the evidence cannot be explained for each requirement, the criterion or requirement should instead be split.
+
+An Acceptance Criterion may also validate a Domain Rule and a related Functional Requirement when its observable evidence genuinely covers both. Domain Concepts and Domain Relationships remain structural context rather than validation targets.
 
 A criterion uses either a **Direct** form with a required observable pass condition, or a **Scenario** form with required `Given`, `When` and `Then` fields. In a Scenario, `Then` is the observable pass condition. A Direct criterion uses its pass condition as its readable heading and does not require a duplicate title.
 
