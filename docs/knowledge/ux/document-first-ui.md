@@ -343,6 +343,10 @@ An optional **Conditions and constraints** area is a flat list of plain-language
 
 The section's `Actions` surface reveals `Add Functional Requirement`, `Add Requirement Group` and `Add Core Feature`. A new requirement started from the section is initially ungrouped. A Requirement Group presents its own `Add Functional Requirement` action, which pre-associates the private draft with that group. Every requirement draft requires a primary Core Feature; when no Feature exists, the flow offers `Add Core Feature` or cancel, preserves the requirement draft and resumes it with the new Feature selected after save. A saved requirement exposes direct `Edit Functional Requirement`, secondary locally confirmed `Archive Functional Requirement`, and `Add Acceptance Criterion`, which opens the ordinary criterion draft with the requirement as its preselected primary validation target.
 
+### Non-Functional Requirements model
+
+`Non-Functional Requirements` contains independent artifacts for measurable quality expectations. Each has a quality category, measurable requirement statement and one or more explicit scope targets. An author may set a product-wide expectation by targeting the whole Specification; later authoring decisions will define the eligible artifact targets. This model keeps a cross-cutting quality requirement distinct from a Functional Requirement's local qualifier, which remains scoped to the behavior of that one requirement.
+
 ### Inline artifact creation and rendering
 
 Choosing an action such as `Add Goal` should insert the new Product Artifact directly into its natural document location and enter editing immediately. The initial inline editing surface should present the artifact's essential fields, such as its title and content, while complex type-specific information, relationships, provenance and review history remain progressively available through the artifact's contextual actions.

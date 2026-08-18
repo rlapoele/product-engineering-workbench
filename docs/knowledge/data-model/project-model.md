@@ -268,6 +268,8 @@ A User Story has one primary Core Feature, one primary User Profile, required In
 
 An Acceptance Criterion has one required primary validation target and optional additional explicit targets. A Core Feature, User Story, Use Case, Functional Requirement, Screen / View, User Flow or UI Requirement may be a target. This permits early observable acceptance evidence for a Core Feature before more detailed artifacts exist, while allowing later links to reuse the same criterion rather than duplicate it. A criterion uses either a Direct form with a required observable pass condition, or a Scenario form with required Given, When and Then fields; Then is its observable pass condition. A Direct criterion has no duplicate title. The `validates` relationship represents its explicit validation targets.
 
+A Non-Functional Requirement is an independent Product Artifact that defines a measurable quality, constraint or service characteristic for explicitly selected product scope. It has a quality category, measurable requirement statement and one or more explicit scope targets. A whole Specification is a valid product-wide scope target; the supported artifact target types are determined by the later authoring model. It is distinct from a Functional Requirement, which defines behavior, and from a Functional Requirement's local Conditions and constraints, which only qualify that behavior.
+
 User Story and Use Case are distinct artifact types.
 
 They may appear together in a single `User Stories and Use Cases` document section because both describe user-facing behavior and interaction intent.

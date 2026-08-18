@@ -706,6 +706,14 @@ Knowledge
 
 # N
 
+## Non-Functional Requirement
+
+A Non-Functional Requirement is an independent Product Artifact that defines a measurable quality, constraint or service characteristic expected of an explicitly selected scope of product behavior.
+
+It has a quality category, measurable requirement statement and one or more explicit scope targets. A whole Specification is a valid target for a product-wide quality expectation; other eligible target types will be defined with the authoring model. Non-Functional Requirements cover qualities such as performance, security, accessibility, reliability, compatibility or privacy. They are distinct from Functional Requirements, which define the behavior itself, and from a Functional Requirement's local Conditions and constraints, which qualify only that one behavior.
+
+---
+
 ## Non-Goal
 
 A Non-Goal is a concise, plain-language statement of an intentional boundary: something the current specification does not aim to achieve.
