@@ -516,6 +516,7 @@ Domain Relationships express product-domain structure, not database tables, fore
 - A Decision explains why a direction was chosen.
 - An Open Question blocks validation of an artifact.
 - Acceptance Criteria may be derived from a Functional Requirement.
+- A Functional Requirement enforces a Domain Rule.
 
 ## Minimum relationship types
 
@@ -525,6 +526,7 @@ The initial relationship model should include:
 - addresses
 - part_of
 - validates
+- enforces
 - depends_on
 - affects
 - explains
@@ -551,6 +553,10 @@ Example: a User Story is part of a Feature.
 `validates` means an artifact defines validation for another artifact.
 
 Example: Acceptance Criteria validate a Functional Requirement.
+
+`enforces` means a Functional Requirement specifies the system behavior that upholds a Domain Rule.
+
+Example: a Functional Requirement enforces a Domain Rule that a Customer may hold only one active Subscription for the same Service.
 
 `depends_on` means an artifact depends on another artifact being true, available, resolved or decided.
 

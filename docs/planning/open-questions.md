@@ -364,6 +364,7 @@ Artifact Relationships form the Product Knowledge Graph and allow the workbench 
 - addresses
 - part_of
 - validates
+- enforces
 - depends_on
 - affects
 - explains
@@ -383,6 +384,7 @@ The MVP relationship types are:
 - `addresses`
 - `part_of`
 - `validates`
+- `enforces`
 - `depends_on`
 - `affects`
 - `explains`
@@ -393,6 +395,8 @@ The MVP relationship types are:
 `belongs_to` is not included. `part_of` is preferred because it is clearer for artifact hierarchy and composition.
 
 `derived_from` is included because derivation matters for provenance, AI generation, refinement and implementation handoff traceability.
+
+`enforces` is included because a Functional Requirement may specify the system behavior that upholds a Domain Rule. It is distinct from `derived_from`, which records origin or refinement, and `depends_on`, which records dependency rather than the required system obligation.
 
 ## Consequences
 
@@ -581,6 +585,8 @@ A Domain Relationship has a required source Domain Concept, readable relationshi
 A Domain Rule has a required title, kind, canonical rule statement and `Governs` list containing one or more Domain Concepts and/or Domain Relationships. Its statement expresses the complete rule, including conditions and exceptions; no separate exceptions field is introduced initially.
 
 Each Domain Rule receives an immutable project-scoped readable reference at creation, such as `DR-001`. The reference does not encode the rule kind or current document placement, and is retained after archival and in saved Implementation Handoff snapshots.
+
+A Functional Requirement may explicitly `enforce` a Domain Rule when it specifies the system behavior that upholds that rule. `enforces` is distinct from `derived_from` and `depends_on`.
 
 ## Open Decisions
 

@@ -188,3 +188,4 @@
 | 2026-08-18-25 | 2026-08-18 | 25 | Domain Relationship Structure | Crystallized | First-class relationship records with required endpoints and statement; optional supported cardinality |
 | 2026-08-18-26 | 2026-08-18 | 26 | Domain Rule Initial Fields | Crystallized | Required title, kind, statement and governing scope; exceptions remain in the statement |
 | 2026-08-18-27 | 2026-08-18 | 27 | Domain Rule Stable References | Crystallized | Immutable project-scoped `DR-001` references independent of kind and document placement |
+| 2026-08-18-28 | 2026-08-18 | 28 | Functional Requirement Domain Rule Enforcement | Crystallized | Explicit `enforces` relationship from required system behavior to governing Domain Rules |
