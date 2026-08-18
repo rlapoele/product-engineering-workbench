@@ -586,6 +586,8 @@ Domain Concept and Domain Rule are now independent Product Artifacts. A Domain R
 
 A Domain Concept has a required title and plain-language definition. It may include an optional `Key business attributes` list whose entries name and explain business-meaningful attributes. Important states may appear in that list until a more structured state model is justified. The list must not prescribe database tables, column names, storage technology, physical data types, nullability, indexes or other schema choices.
 
+Each Domain Concept receives an immutable project-scoped readable reference at creation, such as `DC-001`. The reference does not change when the Concept is renamed or moved in the document, and is retained after archival and in saved Implementation Handoff snapshots.
+
 A Domain Relationship has a required source Domain Concept, readable relationship statement and target Domain Concept. It may record cardinality at either end. Cardinality is optional but must be supported when known; it clarifies domain structure and does not prescribe a database relationship.
 
 A Domain Rule has a required title, kind, canonical rule statement and `Governs` list containing one or more Domain Concepts and/or Domain Relationships. Its statement expresses the complete rule, including conditions and exceptions; no separate exceptions field is introduced initially. The Governs list is the document-facing projection of the Rule's required outbound `governs` relationships.

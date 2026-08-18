@@ -473,7 +473,9 @@ Decisions may update project knowledge and may optionally be formalized through 
 
 A Domain Concept is an independent Product Artifact representing an important real-world or business concept the product must understand. It has a required title and plain-language definition. It may include an optional **Key business attributes** list, whose entries each name and explain a business-meaningful attribute.
 
-A Domain Concept is implementation-independent. Its attribute list does not prescribe database tables, column names, storage technology, physical data types, nullability, indexes or other schema choices. A concept's important states may be expressed in that list until a more structured state model is justified. Domain Concepts may be explicitly related to other Product Artifacts and to Domain Rules.
+A Domain Concept is implementation-independent. Its attribute list does not prescribe database tables, column names, storage technology, physical data types, nullability, indexes or other schema choices. A concept's important states may be expressed in that list until a more structured state model is justified.
+
+Each Domain Concept receives an immutable project-scoped readable reference when created, such as `DC-001`, in addition to its internal artifact identifier. The reference does not change when the Concept is renamed or moved in the document. It is retained after archival and in saved Implementation Handoff snapshots. Domain Concepts may be explicitly related to other Product Artifacts and to Domain Rules.
 
 ## Domain Relationship
 
