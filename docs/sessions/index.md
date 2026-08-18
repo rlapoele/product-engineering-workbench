@@ -194,3 +194,4 @@
 | 2026-08-19-01 | 2026-08-19 | 1 | Data or Domain Model Impact Propagation | Crystallized | Rule, concept and relationship changes follow explicit Stale, coverage and review-cue semantics |
 | 2026-08-19-02 | 2026-08-19 | 2 | Domain Rule Governs Relationship | Crystallized | Explicit `governs` relationships provide the canonical basis for Rule governing scope |
 | 2026-08-19-03 | 2026-08-19 | 3 | Domain Concept Stable References | Crystallized | Immutable project-scoped `DC-001` references independent of concept title and placement |
+| 2026-08-19-04 | 2026-08-19 | 4 | Data or Domain Model Integrated Validation | Crystallized | Subscription scenario validates the complete domain structure, behavior, evidence and propagation chain |
