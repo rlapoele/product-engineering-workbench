@@ -56,6 +56,8 @@ An Acceptance Criterion is an independent Product Artifact that defines observab
 
 Each criterion has one required primary validation target and may have additional explicit targets. A Core Feature, User Story, Use Case, Functional Requirement, Screen / View, User Flow or UI Requirement may be a validation target. The primary target gives the criterion its natural authoring and rendering context; additional targets prevent duplicate criteria when the same evidence validates related knowledge.
 
+One Acceptance Criterion may validly validate multiple Functional Requirements when its observable evidence applies to each linked requirement. This does not by itself mean that the requirements are poorly formulated; when the evidence cannot be explained for each requirement, the criterion or requirement should instead be split.
+
 A criterion uses either a **Direct** form with a required observable pass condition, or a **Scenario** form with required `Given`, `When` and `Then` fields. In a Scenario, `Then` is the observable pass condition. A Direct criterion uses its pass condition as its readable heading and does not require a duplicate title.
 
 The canonical Acceptance Criteria section contains each criterion once. Linked targets may render the same artifact contextually with its ordinary actions, history and identity; these projections are not copies. Acceptance Criteria are distinct from Goal Success Criteria, which measure product-outcome achievement rather than validate specified system behavior.
@@ -514,6 +516,8 @@ A Functional Requirement is a specific behavior, rule or obligation the system m
 Functional Requirements describe what the system must do in enough detail to support implementation and validation.
 
 Functional Requirements are distinct from Core Features: a Core Feature describes a user-visible capability, while a Functional Requirement describes specific expected system behavior.
+
+Each Functional Requirement is an independent, traceable leaf. It has a required primary Core Feature, concise title and independently testable requirement statement. It may include conditions or constraints only when they qualify that same behavior. A condition that introduces independently changeable or testable behavior, a distinct outcome or a cross-cutting rule belongs in a separate Functional Requirement.
 
 Each Functional Requirement also receives an immutable, project-scoped readable reference when it is created, for example `FR-001`. This reference is distinct from the artifact's internal stable identifier. It is never renumbered or reused, including after archival. Document outline numbers may change as requirements are organized or reordered; they are presentation only and are not requirement references.
 

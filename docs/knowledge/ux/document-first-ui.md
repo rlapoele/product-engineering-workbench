@@ -335,6 +335,12 @@ The Acceptance Criteria section renders every criterion once with concise target
 
 Creating, editing or reordering a group, reordering requirements, or moving a requirement into or out of a group changes document composition only. It may change the derived outline numbering, but does not change a Functional Requirement's immutable readable reference, meaning, relationships, lifecycle or impact state.
 
+### Functional Requirement leaf authoring
+
+Each Functional Requirement renders as one independently traceable leaf: its immutable readable reference, concise **Title**, primary Core Feature context and a required, independently testable **Requirement statement**. The document-facing editor guidance uses the project Content Locale's equivalent of formal wording such as `The system shall …`; no particular English sentence pattern is the canonical data model or a requirement for authored content in another locale.
+
+An optional **Conditions and constraints** area may qualify the requirement's stated behavior. It must not conceal distinct obligations: content with an independently changeable or testable behavior, separate outcome or cross-cutting rule is authored as another Functional Requirement. A saved requirement may have no linked Acceptance Criterion initially. The document instead shows a clear coverage cue and offers ordinary later validation authoring; it does not block the requirement's first saved Revision or invent acceptance evidence.
+
 ### Inline artifact creation and rendering
 
 Choosing an action such as `Add Goal` should insert the new Product Artifact directly into its natural document location and enter editing immediately. The initial inline editing surface should present the artifact's essential fields, such as its title and content, while complex type-specific information, relationships, provenance and review history remain progressively available through the artifact's contextual actions.
