@@ -345,7 +345,7 @@ The section's `Actions` surface reveals `Add Functional Requirement`, `Add Requi
 
 ### Non-Functional Requirements model
 
-`Non-Functional Requirements` contains independent artifacts for measurable quality expectations. Each has a quality category, measurable requirement statement and one or more explicit scope targets. An author may set a product-wide expectation by targeting the whole Specification; later authoring decisions will define the eligible artifact targets. This model keeps a cross-cutting quality requirement distinct from a Functional Requirement's local qualifier, which remains scoped to the behavior of that one requirement.
+`Non-Functional Requirements` contains independent artifacts for measurable quality expectations. Each has a quality category, measurable requirement statement and one or more explicit scope targets. The initial category selector provides Performance, Reliability and availability, Security, Privacy, Accessibility, Compatibility, Usability, Compliance and Other. Selecting Other requires a short custom category label. Category labels are document-facing Content-Locale text; they organize and aid review but do not create document subsections or a workflow. An author may set a product-wide expectation by targeting the whole Specification; later authoring decisions will define the eligible artifact targets. This model keeps a cross-cutting quality requirement distinct from a Functional Requirement's local qualifier, which remains scoped to the behavior of that one requirement.
 
 ### Inline artifact creation and rendering
 
