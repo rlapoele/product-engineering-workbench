@@ -457,6 +457,22 @@ Decisions may update project knowledge and may optionally be formalized through 
 
 ---
 
+## Domain Concept
+
+A Domain Concept is an independent Product Artifact representing an important real-world or business concept the product must understand. It has a plain-language definition and may include key business attributes.
+
+A Domain Concept is implementation-independent. It does not prescribe database tables, storage technology, physical data types, indexes or other schema choices. Domain Concepts may be explicitly related to other Product Artifacts and to Domain Rules.
+
+## Domain Rule
+
+A Domain Rule is an independent Product Artifact that governs valid domain meaning, state or behavior. Its required kind is either **Business Rule** or **Invariant**.
+
+A Business Rule expresses a product policy governing allowed actions, decisions or state transitions. An Invariant expresses a condition that must always hold for valid domain state. A Domain Rule may govern one or more Domain Concepts or their relationships and may link to the Functional Requirements and Acceptance Criteria that implement and validate it.
+
+Domain Rules are distinct from Functional Requirements, which specify required system behavior; Non-Functional Requirements, which specify quality expectations; and implementation-level database constraints or schema design.
+
+---
+
 ## Dependency Verification Exercise
 
 A Dependency Verification Exercise is a local-only, disposable compatibility check performed before product-code authorization. It tests one candidate Node LTS and exact package set against the selected Astro/React, Better Auth, PostgreSQL/`pg`, SQL-migration and verification-tool boundaries.

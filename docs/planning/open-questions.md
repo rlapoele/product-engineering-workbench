@@ -233,6 +233,8 @@ The Project Model proposes a small initial set of Product Artifacts so the workb
 - Vision
 - Goal
 - User Need
+- Domain Concept
+- Domain Rule
 - Feature
 - User Story
 - Use Case
@@ -268,6 +270,8 @@ The MVP minimum Product Artifact set is:
 - Vision
 - Goal
 - User Need
+- Domain Concept
+- Domain Rule
 - Feature
 - User Story
 - Use Case
@@ -555,6 +559,30 @@ Implementation Handoff Packages remain one-way and are never accepted as Project
 ## Consequences
 
 The future interchange contract requires compatibility validation, structural and resource safety validation, and no partial visible Project on failure. Archives contain confidential Product Knowledge and must not enter logs, telemetry or operational evidence. The future architecture needs a separate Project Archive/import boundary, not a persistence shortcut or an extension of the Handoff Profile renderer.
+
+---
+
+# DATA-007 — How should the Data or Domain Model represent concepts, rules and relationships?
+
+**Category:** Data Model
+
+**Status:** 🟡 Exploring
+
+## Context
+
+Domain Concept and Domain Rule are now independent Product Artifacts. A Domain Rule has one required kind: Business Rule or Invariant. This establishes independently traceable domain structure and governing knowledge without making the Data or Domain Model a database-design surface.
+
+## Open Decisions
+
+- Which fields are required or optional for a Domain Concept beyond its title and plain-language definition?
+- How should explicit domain relationships be represented, including their business meaning, direction and any cardinality?
+- Which fields and relationships does a Domain Rule require, and should it receive an immutable readable reference?
+- How should the document-first authoring and contextual related-knowledge flows work?
+- Which explicit relationships, validation targets and impact-propagation rules apply to Domain Concepts and Domain Rules?
+
+## Boundary
+
+The section defines product-domain structure and governing policies. Database schemas, storage technology, physical data types, migrations, indexes and database ownership remain outside its scope.
 
 ---
 

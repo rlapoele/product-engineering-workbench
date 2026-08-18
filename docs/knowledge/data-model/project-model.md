@@ -217,7 +217,8 @@ Artifacts should be structured enough to support review, traceability, AI assist
 - Goal
 - User Profile
 - User Need
-- Business Rule
+- Domain Concept
+- Domain Rule
 - Epic
 - Feature
 - User Story
@@ -242,6 +243,8 @@ The initial minimum artifact set should probably include:
 - Goal
 - User Profile
 - User Need
+- Domain Concept
+- Domain Rule
 - Feature
 - User Story
 - Use Case
@@ -262,6 +265,10 @@ A User Profile represents either a Target User or a Persona through a required p
 
 A User Need has one or more required explicit User Profile links, a required user-centred need statement and a required expected outcome. It does not need a separate title: the need statement is its readable document heading. A User Need may not be saved or revised with no linked User Profile. A profile-local need from the product never silently creates, changes or replaces a User Need; it may only become one through the ordinary explicit creation and save flow.
 
+A Domain Concept is an independent Product Artifact representing one important real-world or business concept the product must understand. It has a plain-language definition and may include key business attributes. It is implementation-independent: it does not prescribe database tables, storage technology, physical data types, indexes or other schema choices. Domain Concepts may be explicitly related to other Product Artifacts and to Domain Rules.
+
+A Domain Rule is an independent Product Artifact that governs valid domain meaning, state or behavior. Its required kind is either Business Rule or Invariant. A Business Rule expresses a product policy governing allowed actions, decisions or state transitions. An Invariant expresses a condition that must always hold for valid domain state. A Domain Rule may govern one or more Domain Concepts or their relationships and may link to the Functional Requirements and Acceptance Criteria that implement and validate it. It is distinct from a Functional Requirement, which specifies a required system behavior; a Non-Functional Requirement, which specifies a quality expectation; and implementation-level database constraints or schema design.
+
 A Core Feature has a required title, concise description and one or more explicit User Need relationships that it `addresses`. It may belong to zero or one optional Feature Groups, which are section-owned presentation headings with a required title and optional short description. A Feature Group is not a Product Artifact, technical module or relationship type. It may contain zero or more Features; its order and Feature membership are document composition rather than Feature meaning. A Core Feature remains an independently versioned Product Artifact, and detailed behavior belongs in later User Stories, Use Cases, Requirements and Acceptance Criteria.
 
 A User Story has one primary Core Feature, one primary User Profile, required Intent and required Benefit fields. Its profile must be chosen from the Feature's explicitly linked User-Need context. The User Story does not need a separate title: it is rendered from the structured profile, intent and benefit using Content-Locale document scaffolding. A Use Case has one primary Core Feature plus a required title, primary actor, goal, trigger, ordered main flow and outcome; preconditions and alternate flows are optional. Its actor is either a User Profile or a plainly named external or system actor. A Use Case may optionally link a User Story, but neither artifact is a required expansion of the other.
@@ -277,6 +284,8 @@ A Non-Functional Requirement may be an Acceptance Criterion validation target. I
 They may appear together in a single `User Stories and Use Cases` document section because both describe user-facing behavior and interaction intent.
 
 Functional Requirement and Non-Functional Requirement should be included in the minimum artifact set because the first Specification Document Template needs to produce implementation-ready specifications.
+
+Domain Concept and Domain Rule should be included in the minimum artifact set because the `Data or Domain Model` section needs independently traceable domain structure and governing knowledge. The detailed representation of domain relationships, required artifact fields and readable references remains to be decided.
 
 Assumption should be included because the first Section Catalog includes `Risks, Assumptions and Open Questions`, and assumptions are important context for implementation handoff.
 
