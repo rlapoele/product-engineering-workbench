@@ -223,9 +223,11 @@ Availability is not presence, calendar time, willingness, capacity, workload or 
 
 ## Content Locale
 
-Content Locale identifies the locale of user-authored specification content for a Project or Specification.
+Content Locale identifies the locale of user-authored specification content and workbench-provided document-facing scaffolding for a Project or Specification.
 
-For the MVP, Product Artifacts inherit the Project or Specification content locale rather than storing artifact-level localization fields.
+For the MVP, Product Artifacts inherit the Project or Specification content locale rather than storing artifact-level localization fields. Document-facing scaffolding includes template section headings, guidance, placeholder examples and fixed wording that forms part of a rendered or exported specification, such as a User Story's localized structural sentence.
+
+Content Locale never automatically translates user-authored content. Workbench controls, navigation, form labels and validation messages remain Interface-Locale text unless they form part of the document itself.
 
 For the first slice, `contentLocale` is a Project-level well-formed BCP 47 language tag. It defaults from the application's resolved Interface Locale at Project creation, but the Project Owner may choose a different Content Language before saving the Project. Later changes to Interface Locale do not alter the saved Project value.
 
@@ -539,7 +541,7 @@ It is scoped to the named slice and does not authorize deferred product capabili
 
 ## Interface Locale
 
-Interface Locale identifies the locale used to present workbench-controlled interface text. It is distinct from Content Locale, which identifies the language of user-authored specification content.
+Interface Locale identifies the locale used to present workbench-controlled interface text such as navigation, actions, form labels and validation messages. It is distinct from Content Locale, which identifies the language of user-authored specification content and document-facing template scaffolding.
 
 For the first slice, the application resolves the current Interface Locale at entry from the browser's highest-preference valid locale, with `en` as the fallback. It does not require a saved user preference, interface-language settings or fully localized interface content. The resolved value only provides the initial default for a new Project's Content Language.
 
@@ -1155,21 +1157,21 @@ It may include shared visual design guidance, interaction patterns, component us
 
 ## Use Case
 
-A Use Case is a structured description of an interaction between an actor and the system.
+A Use Case is a structured description of an interaction between an actor and the system for one primary Core Feature.
 
-Use Cases typically describe a trigger, preconditions, main flow, alternate flows, postconditions and exceptions.
+It has a required title, primary actor, goal, trigger, ordered main flow and outcome. Preconditions and alternate flows are optional. A primary actor may be a User Profile or a plainly named external or system actor. A Use Case may optionally link a related User Story, but neither depends on the other.
 
-Use Cases are distinct from User Stories, though both describe user-facing behavior and interaction intent.
+Use Cases are distinct from User Stories, though both describe user-facing behavior and interaction intent. The flow editor is constrained structural content rather than a general rich-text editor.
 
 ---
 
 ## User Story
 
-A User Story is a compact, value-oriented description of something a user wants to achieve.
+A User Story is a compact, value-oriented Product Artifact for one primary Core Feature and one primary User Profile.
 
-User Stories typically identify an actor, a need and an expected benefit.
+It has required structured **Intent** and **Benefit** fields. Its primary User Profile is selected from the Core Feature's explicitly linked User-Need context. The document renders those fields using the project Content Locale's equivalent of `As a [profile], I want to [intent], so that [benefit]`; the structure is enforced even though the rendered language varies.
 
-User Stories are distinct from Use Cases, though both may appear in the `User Stories and Use Cases` section of a specification.
+User Stories are distinct from Use Cases, though both may appear in the `User Stories and Use Cases` section of a specification. They do not require a separate duplicate title or a general rich-text editor.
 
 ---
 

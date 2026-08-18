@@ -168,3 +168,4 @@
 | 2026-08-18-05 | 2026-08-18 | 5 | User Needs Section Authoring | Crystallized | Explicit profile-linked user needs, expected outcomes, and need-first or profile-first creation |
 | 2026-08-18-06 | 2026-08-18 | 6 | Scope Section Authoring | Crystallized | Fixed in-scope and out-of-scope blocks, constrained prose/list content and no inferred impact |
 | 2026-08-18-07 | 2026-08-18 | 7 | Core Features And Contextual Related-Knowledge Creation | Crystallized | Need-addressing Features, optional presentation groups and preserved-draft prerequisite creation |
+| 2026-08-18-08 | 2026-08-18 | 8 | User Stories, Use Cases And Content-Locale Scaffolding | Crystallized | Structured story/use-case distinction and document-language versus interface-language boundary |

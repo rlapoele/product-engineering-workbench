@@ -68,6 +68,8 @@ User-authored specification content should use a Project or Specification-level 
 
 For the first slice, Project creation presents an editable **Content language** control. It is pre-filled from the current resolved Interface Locale, itself resolved at application entry from the browser's highest-preference valid locale with `en` as fallback. The owner may choose a different valid value before creation; that Project-level value remains distinct from Interface Locale and does not change merely because the interface language changes later.
 
+Content Locale controls the language of document-facing template scaffolding, including section headings, guidance, placeholder examples and fixed structural wording rendered into the specification. Interface Locale controls the workbench's navigation, actions, form labels and validation. User-authored content is never translated automatically.
+
 ---
 
 # 4. Specification Document Template
@@ -306,6 +308,16 @@ The section's `Actions` surface always reveals `Add Core Feature`, `Add Feature 
 A saved Feature renders with its title, concise description and linked User Need labels. It exposes direct `Edit Core Feature` and secondary `Archive Core Feature` with local explicit confirmation. It follows ordinary Product Artifact drafts, Revisions, lifecycle and relationship-based impact behavior. Feature Groups offer their own edit controls; creating or editing a group, changing group or Feature order, or moving a Feature between groups creates a document-composition Revision only and never changes Feature meaning or impact state. Nested groups are not supported.
 
 Core Features is required in every initial preset. When the section has no active Feature, it participates in ordinary low-priority required-section `What next?` coverage guidance. The initial Feature and group editors support plain-language text only; rich-text formatting remains a later document-wide capability decision.
+
+### User Stories and Use Cases authoring
+
+`User Stories and Use Cases` contains independent User Story and Use Case Product Artifacts. Its `Actions` surface always reveals `Add User Story`, `Add Use Case` and `Add Core Feature`. Both drafts require one primary Core Feature. If none exists, the flow offers `Add Core Feature` or cancel; related-knowledge creation saves the Feature in its canonical section, preserves the original draft and resumes it with that Feature selected.
+
+A User Story requires one primary User Profile, **Intent** and **Benefit**. Its profile is selected from the primary Feature's explicitly linked User-Need context. The editor enforces these structured fields rather than one fragile typed sentence. In the document, it renders them through the project Content Locale's equivalent of `As a [profile], I want to [intent], so that [benefit]`; a different Content Locale changes only the fixed scaffolding, never the authored field values. A User Story has no separate title field.
+
+A Use Case requires **Title**, **Primary actor**, **Goal**, **Trigger**, an ordered **Main flow**, and **Outcome**. It may add **Preconditions**, **Alternate flows** and an optional related User Story. Its primary actor may be a User Profile or a plainly named external or system actor. Main and alternate flows use a controlled ordered-step editor rather than a general rich-text surface.
+
+Saved User Stories and Use Cases render in document flow with their Core Feature context and expose direct edit plus secondary locally confirmed archive actions. Both follow ordinary artifact drafts, Revisions, lifecycle and relationship-based impact behavior; neither automatically creates or replaces the other. The section is optional in the Simple Web Presence preset, recommended in the Standard Web App preset and required in the Complex Product App preset. When selected as required and empty, it participates in ordinary low-priority required-section `What next?` coverage guidance.
 
 ### Inline artifact creation and rendering
 
