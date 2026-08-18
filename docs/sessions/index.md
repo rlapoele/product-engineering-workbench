@@ -178,3 +178,4 @@
 | 2026-08-18-15 | 2026-08-18 | 15 | Functional Requirement Qualifier List | Crystallized | Flat unclassified qualifier statements with a clear boundary to separate requirements |
 | 2026-08-18-16 | 2026-08-18 | 16 | Non-Functional Requirement Model | Crystallized | Independent category-based measurable quality artifacts with explicit scope targets |
 | 2026-08-18-17 | 2026-08-18 | 17 | Non-Functional Requirement Quality Categories | Crystallized | Compact localized category vocabulary with explicit Other fallback |
+| 2026-08-18-18 | 2026-08-18 | 18 | Non-Functional Requirement Scope Targets | Crystallized | Primary scope anchor and explicit behavior/interface target set |
