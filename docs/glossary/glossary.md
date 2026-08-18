@@ -54,7 +54,7 @@ An Answer may explain its basis, assumptions, limits and unresolved dependencies
 
 An Acceptance Criterion is an independent Product Artifact that defines observable evidence for whether specified product behavior is acceptable.
 
-Each criterion has one required primary validation target and may have additional explicit targets. A Core Feature, User Story, Use Case, Functional Requirement, Screen / View, User Flow or UI Requirement may be a validation target. The primary target gives the criterion its natural authoring and rendering context; additional targets prevent duplicate criteria when the same evidence validates related knowledge.
+Each criterion has one required primary validation target and may have additional explicit targets. A Core Feature, User Story, Use Case, Functional Requirement, Non-Functional Requirement, Screen / View, User Flow or UI Requirement may be a validation target. The primary target gives the criterion its natural authoring and rendering context; additional targets prevent duplicate criteria when the same evidence validates related knowledge.
 
 One Acceptance Criterion may validly validate multiple Functional Requirements when its observable evidence applies to each linked requirement. This does not by itself mean that the requirements are poorly formulated; when the evidence cannot be explained for each requirement, the criterion or requirement should instead be split.
 
@@ -713,6 +713,8 @@ A Non-Functional Requirement is an independent Product Artifact that defines a m
 It has a concise title, quality category, measurable requirement statement, one required primary scope target and optional additional explicit scope targets. The statement is canonical and independently interpretable. It may have optional Measurement context to clarify the measurement event, conditions, baseline, or relevant source or standard; that context does not replace Acceptance Criteria or a test plan. The initial eligible target set is Whole Specification, Core Feature, Functional Requirement, Use Case, Screen / View, User Flow and UI Requirement. The primary target supplies the NFR's main authoring and document context; additional targets prevent duplicating a shared quality expectation. The initial quality categories are Performance, Reliability and availability, Security, Privacy, Accessibility, Compatibility, Usability, Compliance and Other. Selecting Other requires a short custom category label. Non-Functional Requirements are distinct from Functional Requirements, which define the behavior itself, and from a Functional Requirement's local Conditions and constraints, which qualify only that one behavior.
 
 Each Non-Functional Requirement receives an immutable, project-scoped readable reference when it is created, for example `NFR-001`. The reference is distinct from the artifact's internal stable identifier, is never reused or renumbered—including after archival—and does not encode its quality category or current document position.
+
+Its Acceptance Criteria relationships are explicit. Missing coverage does not prevent an NFR's initial save, but remains a visible coverage cue. A shared Acceptance Criterion may validate both Functional and Non-Functional Requirements only when its observable evidence genuinely covers every linked requirement.
 
 ---
 

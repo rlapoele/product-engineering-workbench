@@ -181,3 +181,4 @@
 | 2026-08-18-18 | 2026-08-18 | 18 | Non-Functional Requirement Scope Targets | Crystallized | Primary scope anchor and explicit behavior/interface target set |
 | 2026-08-18-19 | 2026-08-18 | 19 | Non-Functional Requirement Stable References | Crystallized | Immutable readable NFR references independent of category and placement |
 | 2026-08-18-20 | 2026-08-18 | 20 | Non-Functional Requirement Leaf Authoring | Crystallized | Concise title, canonical measurable statement and optional interpretation context |
+| 2026-08-18-21 | 2026-08-18 | 21 | Non-Functional Requirement Acceptance Coverage | Crystallized | NFR validation through ordinary reusable Acceptance Criteria and explicit shared evidence |
