@@ -17,12 +17,13 @@ The combined User Stories and Use Cases section must support both concise user-v
 - A Use Case has required Title, Primary actor, Goal, Trigger, ordered Main flow and Outcome. Preconditions, Alternate flows and a related User Story are optional. Its actor can be a User Profile or a plainly named external or system actor.
 - A User Story and Use Case may be linked but neither is required to expand, replace or automatically create the other. Both use normal artifact drafts, Revisions, lifecycle and explicit relationship-based impact behavior.
 - Use Case flows are controlled ordered steps, not general rich text.
-- Content Locale governs document-facing headings, guidance, placeholder examples and fixed structural wording. Interface Locale governs workbench controls, form labels and validation. User-authored content is never automatically translated.
+- Content Locale governs document-facing headings, guidance, placeholder examples, fixed block labels and structural wording. Interface Locale governs workbench controls, form labels and validation. User-authored content is never automatically translated.
+- Specification Document Templates are language-neutral in their identifiers, structure, rules and semantic text keys. Template locale resources resolve all document-facing text, including section titles and names. Full document authoring offers only a selected template's supported Content Locales, or visibly warns when it uses an explicitly allowed fallback; it never silently mixes localized and default-language scaffolding.
 - The section is optional in the Simple Web Presence preset, recommended in Standard Web App and required in Complex Product App. Required empty-section coverage follows ordinary `What next?` guidance.
 
 ## Consequences
 
-Authors can choose an appropriately lightweight or detailed behavior description without losing traceability to user value and core product capability. The explicit locale boundary allows structured document patterns to read naturally in the specification's language without tying the application interface to that language or mutating authored content.
+Authors can choose an appropriately lightweight or detailed behavior description without losing traceability to user value and core product capability. The explicit locale boundary allows the whole document template to read naturally in the specification's language without tying the application interface to that language, changing canonical structure, or mutating authored content.
 
 ## Documents Updated
 

@@ -68,7 +68,9 @@ User-authored specification content should use a Project or Specification-level 
 
 For the first slice, Project creation presents an editable **Content language** control. It is pre-filled from the current resolved Interface Locale, itself resolved at application entry from the browser's highest-preference valid locale with `en` as fallback. The owner may choose a different valid value before creation; that Project-level value remains distinct from Interface Locale and does not change merely because the interface language changes later.
 
-Content Locale controls the language of document-facing template scaffolding, including section headings, guidance, placeholder examples and fixed structural wording rendered into the specification. Interface Locale controls the workbench's navigation, actions, form labels and validation. User-authored content is never translated automatically.
+Content Locale controls the language of document-facing template scaffolding, including every section heading, guidance, placeholder example, fixed block label and structural wording rendered into the specification or export. Interface Locale controls the workbench's navigation, actions, form labels and validation. User-authored content is never translated automatically.
+
+A Specification Document Template has language-neutral section identifiers and semantic text keys, then Content-Locale resources for its document-facing text. Its selected Content Language must be supported by the selected template; if an explicit fallback is allowed, the document shows a clear warning before authors rely on mixed-language scaffolding. It must never silently mix localized and default-language section titles, guidance or placeholders. Changing interface language does not change the document language or its canonical structure.
 
 ---
 

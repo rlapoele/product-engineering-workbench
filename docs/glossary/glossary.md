@@ -229,6 +229,8 @@ For the MVP, Product Artifacts inherit the Project or Specification content loca
 
 Content Locale never automatically translates user-authored content. Workbench controls, navigation, form labels and validation messages remain Interface-Locale text unless they form part of the document itself.
 
+Specification Document Templates are Content-Locale-aware. Their canonical section identifiers, ordering, rules and relationships are language-neutral; locale resources resolve the document-facing titles, guidance, placeholders, fixed block labels and structural wording. Full document authoring offers only Content Locales supported by the selected template, or displays a clear fallback warning when an explicitly supported fallback is used. It must never silently mix default-language and localized document scaffolding.
+
 For the first slice, `contentLocale` is a Project-level well-formed BCP 47 language tag. It defaults from the application's resolved Interface Locale at Project creation, but the Project Owner may choose a different Content Language before saving the Project. Later changes to Interface Locale do not alter the saved Project value.
 
 ---
@@ -1049,7 +1051,9 @@ For the selected first slice, a Goal Revision preserves a complete immutable sna
 
 ## Starter Version
 
-A Starter Version is an immutable, ordered definition of the starter-controlled document a new Project receives. It identifies the selected template/preset pair, included section identifiers, their order, and the semantic label and guidance references used to render that initial structure.
+A Starter Version is an immutable, ordered definition of the starter-controlled document a new Project receives. It identifies the selected template/preset pair, included section identifiers, their order, and language-neutral semantic label and guidance references used to render that initial structure.
+
+Locale resources resolve those semantic references for the Project Content Locale. Full document authoring must expose only a selected template's supported Content Locales or disclose an explicit fallback; it must not silently render a mixed-language template.
 
 For the first slice, the only starter is `implementation-ready-web-app-specification.standard-web-app` at positive integer version `1`. The server selects the active version and records it on the Project. Existing Projects never auto-upgrade. A later starter change that changes a new Project's materialized document creates the next integer version; translation changes behind unchanged semantic keys do not.
 
