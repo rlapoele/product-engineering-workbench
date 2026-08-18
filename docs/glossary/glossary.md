@@ -712,6 +712,8 @@ A Non-Functional Requirement is an independent Product Artifact that defines a m
 
 It has a quality category, measurable requirement statement, one required primary scope target and optional additional explicit scope targets. The initial eligible target set is Whole Specification, Core Feature, Functional Requirement, Use Case, Screen / View, User Flow and UI Requirement. The primary target supplies the NFR's main authoring and document context; additional targets prevent duplicating a shared quality expectation. The initial quality categories are Performance, Reliability and availability, Security, Privacy, Accessibility, Compatibility, Usability, Compliance and Other. Selecting Other requires a short custom category label. Non-Functional Requirements are distinct from Functional Requirements, which define the behavior itself, and from a Functional Requirement's local Conditions and constraints, which qualify only that one behavior.
 
+Each Non-Functional Requirement receives an immutable, project-scoped readable reference when it is created, for example `NFR-001`. The reference is distinct from the artifact's internal stable identifier, is never reused or renumbered—including after archival—and does not encode its quality category or current document position.
+
 ---
 
 ## Non-Goal
