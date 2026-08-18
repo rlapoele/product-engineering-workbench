@@ -233,6 +233,8 @@ On desktop, hovering or keyboard-focusing an actionable section area or Product 
 
 Contextual actions and the information they progressively reveal should remain local to the selected document scope. They should use in-place replacement or expansion with ordinary back navigation, preserving the user's place in the document rather than opening a modal or dialog. This non-modal disclosure is the default, especially on mobile; any later exception must be justified by an interaction that cannot remain understandable in the document context.
 
+When the author reaches a missing prerequisite or related Product Artifact while working locally, the document may offer an explicit contextual related-knowledge creation action. It creates the new knowledge in its canonical section, preserves the original private draft and resumes it with the new relationship preselected after `Done editing`. This is an author-controlled continuation of the same thought, not automatic knowledge creation, inferred relationship creation, a task, workflow gate or separate workflow.
+
 The available actions must be explicit and scope-aware. An empty `Goals and Success Criteria` section has one action: `Add Goal`. Once it contains a Goal, the section still offers `Add Goal`; it does not offer section-level introductory prose. An existing Goal exposes `Edit Goal` as its direct action and `More actions` for secondary actions such as `Archive Goal`. `Archive Goal` uses local explicit confirmation, then removes the Goal and its owned criteria from the active document. The active document does not retain struck-through archived Goals; an explicit archived/history view provides `Restore Goal`. Its Goal Success Criteria child area owns `Add Success Criterion`, keeping that extension visibly associated with its parent rather than competing in the Goal toolbar.
 
 Blank space within a section invokes the section's action surface. Hovering, focusing or selecting an existing artifact reveals that artifact's action surface. This distinction lets a document section contain its own prose and multiple Product Artifacts without confusing their scopes.
@@ -294,6 +296,16 @@ An empty Scope section exposes `Actions`, which reveals `Define In Scope` and `D
 A saved block exposes direct `Edit In Scope` or `Edit Out of Scope` and secondary locally confirmed `Clear` action. Clearing In Scope returns the required Scope section to its empty guided state; clearing Out of Scope restores only its optional guidance. The blocks are not Product Artifacts, have no independent lifecycle or relationships, and do not infer automatic Stale impact from prose or list edits.
 
 Scope is required in every initial preset. When In Scope has no saved content, the section participates in ordinary low-priority required-section `What next?` coverage guidance. Once In Scope is saved and Out of Scope remains empty, the section directly offers `Define Out of Scope`; after both are saved, there is no additional section-level authoring action.
+
+### Core Features authoring
+
+`Core Features` contains Core Feature Product Artifacts, optionally organized under section-owned **Feature Groups**. A group has a required title and optional short description. It is a presentation heading rather than a Product Artifact, technical module or relationship type; it may contain zero or more Features. A Feature may remain ungrouped or belong to one group only.
+
+The section's `Actions` surface always reveals `Add Core Feature`, `Add Feature Group` and `Add User Need`. A Feature draft requires a **Title**, concise **Description**, and one or more linked User Needs that it addresses. If no User Need exists, the flow offers `Add User Need` or cancel; creating that Need occurs in its canonical section, preserves the Feature draft and resumes it with the new Need selected. Detailed behavior belongs later in User Stories, Use Cases, Requirements and Acceptance Criteria rather than in the Feature description.
+
+A saved Feature renders with its title, concise description and linked User Need labels. It exposes direct `Edit Core Feature` and secondary `Archive Core Feature` with local explicit confirmation. It follows ordinary Product Artifact drafts, Revisions, lifecycle and relationship-based impact behavior. Feature Groups offer their own edit controls; creating or editing a group, changing group or Feature order, or moving a Feature between groups creates a document-composition Revision only and never changes Feature meaning or impact state. Nested groups are not supported.
+
+Core Features is required in every initial preset. When the section has no active Feature, it participates in ordinary low-priority required-section `What next?` coverage guidance. The initial Feature and group editors support plain-language text only; rich-text formatting remains a later document-wide capability decision.
 
 ### Inline artifact creation and rendering
 

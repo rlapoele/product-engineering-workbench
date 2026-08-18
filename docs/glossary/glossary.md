@@ -329,7 +329,17 @@ A Core Feature is a user-visible capability or product area.
 
 Core Features describe the major things a product lets users do.
 
-A Core Feature may be refined by Functional Requirements and validated by Acceptance Criteria.
+A Core Feature has a required title, concise description and one or more explicit User Need relationships that it `addresses`. It may appear under an optional Feature Group, a section-owned presentation heading rather than a Product Artifact, technical module or relationship type.
+
+A Core Feature may be refined by Functional Requirements and validated by Acceptance Criteria. Its detailed behavior remains in later User Stories, Use Cases, Requirements and Acceptance Criteria.
+
+---
+
+## Contextual Related-Knowledge Creation
+
+Contextual Related-Knowledge Creation is the document-first interaction pattern that lets an author explicitly create missing prerequisite or related Product Knowledge while working at a meaningful local scope.
+
+The new knowledge is created in its canonical Specification Section. The original private draft is preserved, then resumed with the new relationship preselected after the related knowledge is saved. Nothing is inferred, silently created or automatically related. The pattern supports specification tightening without introducing tasks, workflow gates, delivery-management behavior or forced navigation away from the author's current thought.
 
 ---
 
