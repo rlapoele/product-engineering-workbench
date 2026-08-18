@@ -570,15 +570,16 @@ The future interchange contract requires compatibility validation, structural an
 
 ## Context
 
-Domain Concept and Domain Rule are now independent Product Artifacts. A Domain Rule has one required kind: Business Rule or Invariant. This establishes independently traceable domain structure and governing knowledge without making the Data or Domain Model a database-design surface.
+Domain Concept and Domain Rule are now independent Product Artifacts. A Domain Rule has one required kind: Business Rule or Invariant. Domain Relationships are structured, first-class Artifact Relationship records between Domain Concepts rather than separate Product Artifacts. This establishes independently traceable domain structure and governing knowledge without making the Data or Domain Model a database-design surface.
 
 ## Current Direction
 
 A Domain Concept has a required title and plain-language definition. It may include an optional `Key business attributes` list whose entries name and explain business-meaningful attributes. Important states may appear in that list until a more structured state model is justified. The list must not prescribe database tables, column names, storage technology, physical data types, nullability, indexes or other schema choices.
 
+A Domain Relationship has a required source Domain Concept, readable relationship statement and target Domain Concept. It may record cardinality at either end. Cardinality is optional but must be supported when known; it clarifies domain structure and does not prescribe a database relationship.
+
 ## Open Decisions
 
-- How should explicit domain relationships be represented, including their business meaning, direction and any cardinality?
 - Which fields and relationships does a Domain Rule require, and should it receive an immutable readable reference?
 - How should the document-first authoring and contextual related-knowledge flows work?
 - Which explicit relationships, validation targets and impact-propagation rules apply to Domain Concepts and Domain Rules?

@@ -497,6 +497,14 @@ Possible relationship sources include:
 - imported;
 - derived from another artifact or template.
 
+## Domain Relationships
+
+A Domain Relationship is a structured, first-class Artifact Relationship record connecting two Domain Concepts. It is not a separate Product Artifact. It has a required source Domain Concept, readable relationship statement and target Domain Concept.
+
+A Domain Relationship may record cardinality at either end. Cardinality is optional because it should clarify known domain structure, not compel unsupported precision, but the product must support recording it when it is known. For example, a relationship may express that a Customer holds zero or more Subscriptions, while each Subscription belongs to exactly one Customer.
+
+Domain Relationships express product-domain structure, not database tables, foreign keys, join tables or storage implementation. A Domain Rule may explicitly govern one or more Domain Relationships.
+
 ## Example relationships
 
 - A Goal supports a Vision.

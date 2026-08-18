@@ -463,11 +463,19 @@ A Domain Concept is an independent Product Artifact representing an important re
 
 A Domain Concept is implementation-independent. Its attribute list does not prescribe database tables, column names, storage technology, physical data types, nullability, indexes or other schema choices. A concept's important states may be expressed in that list until a more structured state model is justified. Domain Concepts may be explicitly related to other Product Artifacts and to Domain Rules.
 
+## Domain Relationship
+
+A Domain Relationship is a structured, first-class Artifact Relationship record connecting two Domain Concepts. It is not a separate Product Artifact.
+
+It has a required source Domain Concept, readable relationship statement and target Domain Concept. It may record cardinality at either end. Cardinality is optional because it should clarify known domain structure, not compel unsupported precision, but the product must support recording it when it is known.
+
+Domain Relationships express product-domain structure, not database tables, foreign keys, join tables or storage implementation. A Domain Rule may explicitly govern one or more Domain Relationships.
+
 ## Domain Rule
 
 A Domain Rule is an independent Product Artifact that governs valid domain meaning, state or behavior. Its required kind is either **Business Rule** or **Invariant**.
 
-A Business Rule expresses a product policy governing allowed actions, decisions or state transitions. An Invariant expresses a condition that must always hold for valid domain state. A Domain Rule may govern one or more Domain Concepts or their relationships and may link to the Functional Requirements and Acceptance Criteria that implement and validate it.
+A Business Rule expresses a product policy governing allowed actions, decisions or state transitions. An Invariant expresses a condition that must always hold for valid domain state. A Domain Rule may govern one or more Domain Concepts or Domain Relationships and may link to the Functional Requirements and Acceptance Criteria that implement and validate it.
 
 Domain Rules are distinct from Functional Requirements, which specify required system behavior; Non-Functional Requirements, which specify quality expectations; and implementation-level database constraints or schema design.
 
