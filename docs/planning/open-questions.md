@@ -578,9 +578,11 @@ A Domain Concept has a required title and plain-language definition. It may incl
 
 A Domain Relationship has a required source Domain Concept, readable relationship statement and target Domain Concept. It may record cardinality at either end. Cardinality is optional but must be supported when known; it clarifies domain structure and does not prescribe a database relationship.
 
+A Domain Rule has a required title, kind, canonical rule statement and `Governs` list containing one or more Domain Concepts and/or Domain Relationships. Its statement expresses the complete rule, including conditions and exceptions; no separate exceptions field is introduced initially.
+
 ## Open Decisions
 
-- Which fields and relationships does a Domain Rule require, and should it receive an immutable readable reference?
+- Should a Domain Rule receive an immutable readable reference?
 - How should the document-first authoring and contextual related-knowledge flows work?
 - Which explicit relationships, validation targets and impact-propagation rules apply to Domain Concepts and Domain Rules?
 

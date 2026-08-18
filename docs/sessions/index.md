@@ -186,3 +186,4 @@
 | 2026-08-18-23 | 2026-08-18 | 23 | Data or Domain Model Artifact Direction | Crystallized | Independent Domain Concepts and Domain Rules, with Business Rule and Invariant kinds |
 | 2026-08-18-24 | 2026-08-18 | 24 | Domain Concept Initial Fields | Crystallized | Required title and definition with optional business-meaningful attributes; state and schema details deferred |
 | 2026-08-18-25 | 2026-08-18 | 25 | Domain Relationship Structure | Crystallized | First-class relationship records with required endpoints and statement; optional supported cardinality |
+| 2026-08-18-26 | 2026-08-18 | 26 | Domain Rule Initial Fields | Crystallized | Required title, kind, statement and governing scope; exceptions remain in the statement |
