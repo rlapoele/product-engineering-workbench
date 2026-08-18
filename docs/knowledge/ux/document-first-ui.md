@@ -321,6 +321,14 @@ A Use Case requires **Title**, **Primary actor**, **Goal**, **Trigger**, an orde
 
 Saved User Stories and Use Cases render in document flow with their Core Feature context and expose direct edit plus secondary locally confirmed archive actions. Both follow ordinary artifact drafts, Revisions, lifecycle and relationship-based impact behavior; neither automatically creates or replaces the other. The section is optional in the Simple Web Presence preset, recommended in the Standard Web App preset and required in the Complex Product App preset. When selected as required and empty, it participates in ordinary low-priority required-section `What next?` coverage guidance.
 
+### Acceptance Criteria authoring
+
+`Acceptance Criteria` contains each Acceptance Criterion once as its canonical document list. The section exposes `Add Acceptance Criterion`, which opens a private draft. The draft first selects **Direct** or **Scenario** form, then one required **Primary validation target** and optional additional validation targets. A Core Feature, User Story, Use Case, Functional Requirement, Screen / View, User Flow or UI Requirement may be selected. When no target exists, the flow offers `Add Core Feature` or cancel; contextual related-knowledge creation preserves the criterion draft and resumes it with the new Feature selected.
+
+A Direct criterion requires one observable **Pass condition**, which is also its readable heading. A Scenario criterion requires **Given**, **When** and **Then**; `Then` is its observable pass condition. From any eligible target, `Add Acceptance Criterion` preselects that target as primary. The editor can add further explicit validation targets but never infers them from similarly worded text.
+
+The Acceptance Criteria section renders every criterion once with concise target labels. Its primary and additional targets may render the same linked criterion close to their own content, with the ordinary direct edit and secondary locally confirmed archive actions. These are contextual projections of one artifact, not copies. Criteria follow ordinary drafts, Revisions, lifecycle and explicit relationship-based impact behavior. Acceptance Criteria are required in every initial preset; an empty section participates in ordinary low-priority required-section `What next?` coverage guidance. The forms are controlled structured fields rather than a general rich-text editor.
+
 ### Inline artifact creation and rendering
 
 Choosing an action such as `Add Goal` should insert the new Product Artifact directly into its natural document location and enter editing immediately. The initial inline editing surface should present the artifact's essential fields, such as its title and content, while complex type-specific information, relationships, provenance and review history remain progressively available through the artifact's contextual actions.

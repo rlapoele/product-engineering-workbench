@@ -50,6 +50,16 @@ An Answer is a Contribution Response that directly responds to a question posed 
 
 An Answer may explain its basis, assumptions, limits and unresolved dependencies. It remains part of the request's conversation record and does not directly alter canonical Product Knowledge.
 
+## Acceptance Criterion
+
+An Acceptance Criterion is an independent Product Artifact that defines observable evidence for whether specified product behavior is acceptable.
+
+Each criterion has one required primary validation target and may have additional explicit targets. A Core Feature, User Story, Use Case, Functional Requirement, Screen / View, User Flow or UI Requirement may be a validation target. The primary target gives the criterion its natural authoring and rendering context; additional targets prevent duplicate criteria when the same evidence validates related knowledge.
+
+A criterion uses either a **Direct** form with a required observable pass condition, or a **Scenario** form with required `Given`, `When` and `Then` fields. In a Scenario, `Then` is the observable pass condition. A Direct criterion uses its pass condition as its readable heading and does not require a duplicate title.
+
+The canonical Acceptance Criteria section contains each criterion once. Linked targets may render the same artifact contextually with its ordinary actions, history and identity; these projections are not copies. Acceptance Criteria are distinct from Goal Success Criteria, which measure product-outcome achievement rather than validate specified system behavior.
+
 ## Alternative Proposal
 
 An Alternative Proposal is a non-canonical response to a Suggest Alternatives request that describes a viable way to meet or reassess an intended product outcome.
