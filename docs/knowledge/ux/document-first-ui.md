@@ -329,6 +329,12 @@ A Direct criterion requires one observable **Pass condition**, which is also its
 
 The Acceptance Criteria section renders every criterion once with concise target labels. Its primary and additional targets may render the same linked criterion close to their own content, with the ordinary direct edit and secondary locally confirmed archive actions. These are contextual projections of one artifact, not copies. Criteria follow ordinary drafts, Revisions, lifecycle and explicit relationship-based impact behavior. Acceptance Criteria are required in every initial preset; an empty section participates in ordinary low-priority required-section `What next?` coverage guidance. The forms are controlled structured fields rather than a general rich-text editor.
 
+### Functional Requirements organization
+
+`Functional Requirements` may present its independent Functional Requirement artifacts under optional **Requirement Groups**. A group has a required title and optional short purpose. It is a single-level, section-owned presentation heading: it may contain zero or more requirements, and a requirement may be ungrouped or belong to one group. Groups are not artifacts or technical modules, and nesting groups is not supported initially.
+
+Creating, editing or reordering a group, reordering requirements, or moving a requirement into or out of a group changes document composition only. It may change the derived outline numbering, but does not change a Functional Requirement's immutable readable reference, meaning, relationships, lifecycle or impact state.
+
 ### Inline artifact creation and rendering
 
 Choosing an action such as `Add Goal` should insert the new Product Artifact directly into its natural document location and enter editing immediately. The initial inline editing surface should present the artifact's essential fields, such as its title and content, while complex type-specific information, relationships, provenance and review history remain progressively available through the artifact's contextual actions.

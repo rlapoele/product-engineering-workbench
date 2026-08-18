@@ -949,6 +949,14 @@ It assesses the quality of specification knowledge. It does not alter the requir
 
 ---
 
+## Requirement Group
+
+A Requirement Group is a section-owned presentation heading in `Functional Requirements`. It has a required title and optional short purpose, and may contain zero or more Functional Requirements. A Functional Requirement may be ungrouped or belong to one Requirement Group.
+
+Requirement Groups are not Product Artifacts, technical modules or relationship types. They have no independent lifecycle, provenance, relationships or stable requirement reference. They provide one level of readable document organization only; nested Requirement Groups are not supported initially.
+
+---
+
 ## Readiness
 
 The degree to which a Product Artifact, feature, project area or export is mature enough to support implementation or downstream use.

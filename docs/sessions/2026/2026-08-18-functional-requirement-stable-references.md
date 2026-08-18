@@ -19,7 +19,7 @@ Longer BRDs and FSDs commonly rely on requirement references in reviews, decisio
 
 ## Consequences
 
-Authors and implementation consumers can cite a requirement confidently throughout the life of the Project. The document can still be reorganized into a readable specification without encoding a transient position into a durable reference. Requirement splits, grouping behavior and the detailed Functional Requirements authoring surface remain to be specified separately.
+Authors and implementation consumers can cite a requirement confidently throughout the life of the Project. The document can still be reorganized into a readable specification without encoding a transient position into a durable reference. Requirement splits and the detailed Functional Requirements authoring surface remain to be specified separately.
 
 ## Documents Updated
 

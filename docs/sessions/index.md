@@ -171,3 +171,4 @@
 | 2026-08-18-08 | 2026-08-18 | 8 | User Stories, Use Cases And Content-Locale Scaffolding | Crystallized | Structured story/use-case distinction and fully localized document-template versus interface-language boundary |
 | 2026-08-18-09 | 2026-08-18 | 9 | Acceptance Criteria Section Authoring | Crystallized | Independent direct or scenario validation artifacts with contextual projections and explicit targets |
 | 2026-08-18-10 | 2026-08-18 | 10 | Functional Requirement Stable References | Crystallized | Immutable readable references, derived outline numbering and handoff-time snapshots |
+| 2026-08-18-11 | 2026-08-18 | 11 | Functional Requirement Grouping | Crystallized | Optional one-level section-owned groups separate readable organization from durable requirements |
