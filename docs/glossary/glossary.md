@@ -515,6 +515,8 @@ Functional Requirements describe what the system must do in enough detail to sup
 
 Functional Requirements are distinct from Core Features: a Core Feature describes a user-visible capability, while a Functional Requirement describes specific expected system behavior.
 
+Each Functional Requirement also receives an immutable, project-scoped readable reference when it is created, for example `FR-001`. This reference is distinct from the artifact's internal stable identifier. It is never renumbered or reused, including after archival. Document outline numbers may change as requirements are organized or reordered; they are presentation only and are not requirement references.
+
 ---
 
 # G

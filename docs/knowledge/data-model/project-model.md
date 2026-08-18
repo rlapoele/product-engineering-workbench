@@ -849,6 +849,8 @@ For the MVP, each Product Artifact type has a deterministic canonical Specificat
 
 The document may offer `Move up` and `Move down` for an artifact within its current section. A saved reorder creates an ordinary Revision of document composition but does not change the artifact's identity, provenance, Artifact Relationships, lifecycle or Conversation Outcome Links. Drag-and-drop and moves between sections are outside the MVP.
 
+Each Functional Requirement receives an immutable, project-scoped readable reference at creation, such as `FR-001`, in addition to its internal stable artifact identifier. The reference is retained on archival and never reused. Any requirement-group or document-outline numbering is derived from the current composition and may change when authors insert, move or reorganize content; it is not a requirement reference. A successful Implementation Handoff records the included requirements' stable references and saved Revision snapshots in its immutable package representation, alongside the outline as rendered at preparation time. Later composition or requirement changes do not alter that historical handoff event.
+
 ## Deterministic next-step guidance
 
 The workbench may derive user-invoked next-step guidance from Project State. A Guidance Item is a derived view, not a persisted Product Artifact, task, workflow state or AI Contribution.
