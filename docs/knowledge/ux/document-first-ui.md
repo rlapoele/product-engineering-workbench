@@ -351,6 +351,14 @@ A saved Non-Functional Requirement may initially have no linked Acceptance Crite
 
 The section's `Actions` surface reveals `Add Non-Functional Requirement` and no grouping action initially. Its private inline draft collects the quality category, required **Primary scope target**, optional additional targets, **Title**, measurable **Requirement statement** and optional Measurement context. Whole Specification is eligible, but the author must select it explicitly when beginning from the NFR section. From any eligible target artifact, `Add Non-Functional Requirement` preselects that target as primary. A saved NFR exposes direct `Edit Non-Functional Requirement`, secondary locally confirmed `Archive Non-Functional Requirement`, and `Add Acceptance Criterion`.
 
+### Data or Domain Model authoring
+
+`Data or Domain Model` has three fixed document blocks: **Domain Concepts**, **Domain Relationships** and **Domain Rules**. They are presentation blocks inside one section, not separate documents or additional artifact types. The section's `Actions` surface reveals `Add Domain Concept`, `Add Domain Relationship` and `Add Domain Rule`, and authors may begin with any of them.
+
+A Domain Concept draft collects its required Title and Definition and optional **Key business attributes** list. A Domain Relationship draft collects its required source Domain Concept, readable relationship statement and target Domain Concept, plus optional cardinality at either end. A Domain Rule draft collects its required Title, Business Rule or Invariant kind, canonical statement and one or more items in its **Governs** list.
+
+The workbench enforces only the prerequisites needed to save the current item. If a Relationship draft needs a missing source or target Concept, or a Rule draft needs a governed Concept or Relationship, it preserves the private draft while the author explicitly creates that knowledge and resumes with it preselected. Starting `Add Domain Relationship` from a Domain Concept preselects that Concept as source. Starting `Add Domain Rule` from a Domain Concept or Domain Relationship preselects it in the Rule's **Governs** list. Saved Domain Concepts and Domain Rules expose ordinary direct edit and secondary locally confirmed archive actions. Saved Domain Relationships are first-class relationship records, so they expose explicit edit and remove actions rather than Artifact lifecycle actions.
+
 ### Inline artifact creation and rendering
 
 Choosing an action such as `Add Goal` should insert the new Product Artifact directly into its natural document location and enter editing immediately. The initial inline editing surface should present the artifact's essential fields, such as its title and content, while complex type-specific information, relationships, provenance and review history remain progressively available through the artifact's contextual actions.

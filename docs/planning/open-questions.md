@@ -590,9 +590,10 @@ A Functional Requirement may explicitly `enforce` a Domain Rule when it specifie
 
 A Domain Rule is an eligible Acceptance Criterion validation target. Missing acceptance coverage does not block the Domain Rule's initial save but is visible as a coverage cue. A shared criterion may validate a Domain Rule and related Functional Requirement only where its observable evidence covers both. Domain Concepts and Domain Relationships are structural context rather than Acceptance Criterion targets.
 
+The section has fixed Domain Concepts, Domain Relationships and Domain Rules blocks. It offers direct creation actions for each, supports contextual preselection from existing Concepts and Relationships, and preserves a private draft while the author explicitly creates a missing prerequisite. Domain Concepts and Domain Rules use ordinary edit/archive actions; Domain Relationships use edit/remove actions as relationship records.
+
 ## Open Decisions
 
-- How should the document-first authoring and contextual related-knowledge flows work?
 - Which additional explicit relationships and impact-propagation rules apply to Domain Concepts and Domain Rules?
 
 ## Boundary

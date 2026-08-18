@@ -446,6 +446,14 @@ If its linked record is Archived, the link remains valid and is labeled Archived
 
 # D
 
+## Data or Domain Model
+
+Data or Domain Model is a Specification Section that presents product-domain structure without becoming a database-design surface. It contains fixed **Domain Concepts**, **Domain Relationships** and **Domain Rules** blocks.
+
+The section exposes `Add Domain Concept`, `Add Domain Relationship` and `Add Domain Rule`. Authors may start with any of these; the workbench requires only the prerequisites needed to save the specific item. Contextual creation preserves an original private draft and resumes it with newly saved prerequisite knowledge selected. From a Domain Concept, `Add Domain Relationship` preselects that concept as the source. From a Domain Concept or Domain Relationship, `Add Domain Rule` preselects it in the Rule's **Governs** list.
+
+Domain Concepts and Domain Rules use ordinary edit and archive actions. Domain Relationships are first-class relationship records, so they use explicit edit and remove actions rather than artifact lifecycle actions.
+
 ## Decision
 
 A stable conclusion reached after exploration and conversation.
