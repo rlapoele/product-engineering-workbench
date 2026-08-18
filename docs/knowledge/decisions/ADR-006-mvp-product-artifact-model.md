@@ -34,6 +34,7 @@ The MVP minimum Product Artifact set is:
 
 - Vision
 - Goal
+- User Profile
 - User Need
 - Feature
 - User Story

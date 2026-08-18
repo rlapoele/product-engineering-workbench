@@ -213,7 +213,7 @@ Artifacts should be structured enough to support review, traceability, AI assist
 
 - Vision
 - Goal
-- Persona
+- User Profile
 - User Need
 - Business Rule
 - Epic
@@ -238,6 +238,7 @@ The initial minimum artifact set should probably include:
 
 - Vision
 - Goal
+- User Profile
 - User Need
 - Feature
 - User Story
@@ -254,6 +255,8 @@ The initial minimum artifact set should probably include:
 - Open Question
 
 This set is small enough to remain manageable, but broad enough to represent a product from initial intent to implementation-ready specification.
+
+A User Profile represents either a Target User or a Persona through a required profile-kind field. It has a required title and short description, with optional flexible relevant-context facts and lists of goals and motivations, frustrations or pain points, and needs from the product. These profile-local lists do not create independent Product Artifacts. In particular, needs from the product may inform later User Need artifacts but do not replace them; their relationships are explicit rather than inferred. The model must not require fabricated demographics, a fictional biography or research evidence before a User Profile can be saved.
 
 User Story and Use Case are distinct artifact types.
 
@@ -815,6 +818,8 @@ Some Specification Sections own concise canonical prose rather than a Product Ar
 `Problem or Opportunity` is a structured section with two optional section-owned prose blocks: Problem and Opportunity. A Problem describes a current pain, limitation or unmet need; an Opportunity describes the improvement or value that addressing it could unlock without selecting a solution. At least one block must contain saved content when the section is required. Each block has its own private draft, `Done editing` section-content Revision, `Edit` action and locally confirmed `Clear` action. The blocks are not Product Artifacts and do not independently own lifecycle, relationships, provenance, collaboration or inferred impact propagation. Clearing the final saved block restores the empty guided section and makes it eligible for ordinary required-section coverage guidance.
 
 `Non-Goals` is a structured section containing an unordered list of section-owned Non-Goal statements. Each saved item has one required plain-language statement defining an intentional boundary; its display order has no semantic meaning. A required Non-Goals section needs at least one saved item. New and edited items use private drafts; `Done editing` and a locally confirmed `Remove Non-Goal` action each create a section-content Revision. Non-Goals are not Product Artifacts and have no independent lifecycle, relationships, provenance, collaboration or inferred impact propagation. Removing the final saved item restores the empty guided section and makes it eligible for ordinary required-section coverage guidance.
+
+`Target Users or Personas` contains User Profile Product Artifacts. Each profile has a required `Target User` or `Persona` kind, title and short description; it may contain flexible relevant-context facts plus profile-local lists of goals and motivations, frustrations or pain points, and needs from the product. It follows ordinary Product Artifact drafts, Revisions, lifecycle and explicit relationship rules. Needs from the product remain profile context, not substitute User Need artifacts; their future links are explicit and use ordinary relationship-based impact rules only once saved. A required selected section needs at least one active User Profile and otherwise participates in ordinary required-section coverage guidance.
 
 When a saved Goal with existing Goal Success Criteria is edited, the Project Owner explicitly identifies the change as either a wording-only correction or a change to the Goal's intended outcome. A wording-only correction leaves its criteria unchanged. An outcome change creates a local per-criterion review state: the owner must confirm each criterion still fits, edit it or remove it. This is review evidence within the Goal, not an Artifact Lifecycle transition or automatic Stale propagation.
 

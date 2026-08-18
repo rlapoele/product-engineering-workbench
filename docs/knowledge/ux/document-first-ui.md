@@ -265,6 +265,16 @@ A saved item exposes `Edit Non-Goal` as its direct action and `Remove Non-Goal` 
 
 The initial item editor supports its single plain-language statement only. Rich-text formatting remains a later document-wide capability decision rather than a Non-Goal-specific toolbar.
 
+### Target Users or Personas authoring
+
+`Target Users or Personas` contains User Profile Product Artifacts. Its empty prepared state displays non-canonical guidance: `Identify the people or groups the product intends to serve. Use a Target User for a broad group, or a Persona for a more specific representative profile.` Hovering, keyboard focus or touch exposes its one direct action, `Add User Profile`.
+
+Selecting that action opens a private inline artifact draft. The required first fields are **Profile kind** (`Target User` or `Persona`), **Title** and **Short description**. The editor progressively offers optional **Relevant context** as flexible labelled facts, **Goals and motivations**, **Frustrations or pain points**, and **Needs from the product** as separate statement lists. It requests only context that is useful to the product; it neither requires demographic fields nor encourages fabricated personal detail. The embedded lists are profile fields, not child Product Artifacts, and only populated areas render in the saved mini-profile.
+
+Leaving preserves the private draft; `Discard` removes it; and `Done editing` creates a canonical User Profile Revision. A saved profile exposes `Edit User Profile` directly and `Archive User Profile` as a secondary action with local explicit confirmation. Its active contents render as a readable mini-profile in document flow. As with other Product Artifacts, explicit saved relationships—not similar wording—govern any later impact feedback. Needs from the product may later be linked to User Need artifacts but do not replace them.
+
+The section is required in every initial preset. An empty section therefore participates in ordinary low-priority required-section `What next?` coverage guidance. The initial profile editor supports plain-language text and statement lists only; rich-text formatting remains a later document-wide capability decision.
+
 ### Inline artifact creation and rendering
 
 Choosing an action such as `Add Goal` should insert the new Product Artifact directly into its natural document location and enter editing immediately. The initial inline editing surface should present the artifact's essential fields, such as its title and content, while complex type-specific information, relationships, provenance and review history remain progressively available through the artifact's contextual actions.

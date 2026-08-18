@@ -101,7 +101,7 @@ The workbench may support artifacts such as:
 
 - Product Vision;
 - Goals;
-- Personas;
+- User Profiles;
 - User Needs;
 - Epics;
 - Features;

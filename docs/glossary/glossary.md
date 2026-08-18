@@ -1163,6 +1163,18 @@ User Flows help specify how users move through the product.
 
 ---
 
+## User Profile
+
+A User Profile is a Product Artifact representing either an intended user group or an evidence-informed representative user profile. Its required **Profile kind** is either **Target User** or **Persona**.
+
+A Target User describes a broad group the product intends to serve. A Persona represents a more specific, evidence-informed recurring user type and context. Neither kind requires invented demographic details or a fictional biography.
+
+Each User Profile has a required title and short description. It may include relevant context as flexible labelled facts, plus separate optional lists for goals and motivations, frustrations or pain points, and needs from the product. These lists are fields of the User Profile, not independent artifacts. Needs from the product provide the profile's perspective but do not replace independently traceable User Need artifacts; explicit links may be added later.
+
+As a Product Artifact, a User Profile follows the ordinary draft, Revision, lifecycle, relationship and impact rules. Its relationships are explicit rather than inferred from similarly worded text. Rich-text formatting remains a later document-wide capability decision.
+
+---
+
 # W
 
 ## Working Memory

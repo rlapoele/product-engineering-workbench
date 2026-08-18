@@ -9,7 +9,7 @@ The Product Engineering Workbench considers these artifacts to be first-class pr
 Typical contents include:
 
 - Product Goals
-- Personas
+- User Profiles
 - User Needs
 - Business Rules
 - Epics
