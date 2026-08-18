@@ -126,6 +126,8 @@ Artifact Change Impact Propagation is the deterministic system process that iden
 
 The process uses semantically eligible Artifact Relationships in the Product Knowledge Graph to resolve either Stale status or coverage/readiness warnings and record the causal paths that explain why attention is needed. It does not propagate through `relates_to` or archived artifacts.
 
+For the Data or Domain Model, a changed or archived Domain Rule makes enforcing Functional Requirements and directly validating Acceptance Criteria Stale. A changed or archived Functional Requirement instead creates a coverage/readiness warning on the Domain Rule. A changed or archived Domain Concept makes its governing Domain Rules Stale and gives connected Domain Relationships a review cue; Domain Relationships are not Product Artifacts and therefore do not receive lifecycle states. A changed or removed Domain Relationship makes its governing Domain Rules Stale.
+
 AI assistance may help users understand or resolve Stale artifacts after propagation, but AI is not required to identify the initial impact set.
 
 ## Artifact Lifecycle

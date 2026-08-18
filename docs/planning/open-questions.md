@@ -466,7 +466,7 @@ Stale propagation means the downstream artifact may no longer be accurate.
 
 Coverage or readiness warning means an artifact may now be under-supported, unvalidated, unaddressed or blocked without necessarily being inaccurate.
 
-Strong automatic Stale propagation should apply when the changed artifact is the target of `depends_on`, `derived_from`, `validates`, `addresses` or child-to-parent `part_of` relationships, and when the changed artifact is the source of an `affects` relationship.
+Strong automatic Stale propagation should apply when the changed artifact is the target of `depends_on`, `derived_from`, `validates`, `enforces`, `addresses` or child-to-parent `part_of` relationships, and when the changed artifact is the source of an `affects` relationship.
 
 `relates_to` should not automatically propagate Stale.
 
@@ -477,6 +477,8 @@ The first-pass rules have been validated against concrete scenarios:
 - Goal changes may mark downstream User Needs, Features, User Stories, Requirements or Acceptance Criteria Stale when their purpose or success meaning depends on the changed Goal.
 - Requirement changes should mark validating, derived or dependent downstream artifacts Stale.
 - Acceptance Criteria archival should usually create a coverage/readiness warning on the Requirement rather than marking the Requirement Stale.
+- Domain Rule changes or archival should mark enforcing Functional Requirements and directly validating Acceptance Criteria Stale. Functional Requirement changes or archival should instead create a coverage/readiness warning on each enforced Domain Rule.
+- Domain Concept changes or archival should mark governing Domain Rules Stale and show review cues on connected Domain Relationships. Domain Relationship changes or removal should mark governing Domain Rules Stale. Domain Relationships are relationship records rather than Product Artifacts, so their review cues are not lifecycle states.
 - User Story changes should mark dependent downstream artifacts Stale and mark the parent Feature Stale only when the Feature content aggregates or depends on the changed story.
 - User Story archival should usually create coverage/readiness warnings for the parent Feature and possibly upstream User Need or Goal rather than automatically marking those upstream artifacts Stale.
 - Decision changes should mark explained or dependent artifacts Stale when their rationale, constraint or behavior may have changed.
@@ -592,9 +594,11 @@ A Domain Rule is an eligible Acceptance Criterion validation target. Missing acc
 
 The section has fixed Domain Concepts, Domain Relationships and Domain Rules blocks. It offers direct creation actions for each, supports contextual preselection from existing Concepts and Relationships, and preserves a private draft while the author explicitly creates a missing prerequisite. Domain Concepts and Domain Rules use ordinary edit/archive actions; Domain Relationships use edit/remove actions as relationship records.
 
+Domain-model propagation follows the ordinary Stale-versus-coverage distinction. A changed or archived Domain Rule makes enforcing Functional Requirements and directly validating Acceptance Criteria Stale; a changed or archived enforcing Functional Requirement instead creates a coverage/readiness warning on its Domain Rule. A changed or archived Domain Concept makes governing Domain Rules Stale and gives connected Domain Relationships review cues. A changed or removed Domain Relationship makes governing Domain Rules Stale.
+
 ## Open Decisions
 
-- Which additional explicit relationships and impact-propagation rules apply to Domain Concepts and Domain Rules?
+- Which additional explicit relationships apply to Domain Concepts and Domain Rules?
 
 ## Boundary
 
