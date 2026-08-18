@@ -580,9 +580,10 @@ A Domain Relationship has a required source Domain Concept, readable relationshi
 
 A Domain Rule has a required title, kind, canonical rule statement and `Governs` list containing one or more Domain Concepts and/or Domain Relationships. Its statement expresses the complete rule, including conditions and exceptions; no separate exceptions field is introduced initially.
 
+Each Domain Rule receives an immutable project-scoped readable reference at creation, such as `DR-001`. The reference does not encode the rule kind or current document placement, and is retained after archival and in saved Implementation Handoff snapshots.
+
 ## Open Decisions
 
-- Should a Domain Rule receive an immutable readable reference?
 - How should the document-first authoring and contextual related-knowledge flows work?
 - Which explicit relationships, validation targets and impact-propagation rules apply to Domain Concepts and Domain Rules?
 
