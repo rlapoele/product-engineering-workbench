@@ -1233,6 +1233,8 @@ A UI Requirement is an independent Product Artifact describing one specific, obs
 
 It applies to a Screen / View or User Flow and may trace to system behavior and Acceptance Criteria. It is distinct from Shared Design Guidance, which is reusable cross-cutting direction; Screen / View, which is an interface context; User Flow, which is a cross-view journey; and Functional Requirement, which is required system behavior. UI Requirements make UX/UI expectations implementation-ready without prescribing CSS, component-library, design-token or frontend implementation choices.
 
+Each UI Requirement has a required Title, one required primary applies-to target selected from Screen / View or User Flow, and a canonical Requirement statement. It may include optional additional applies-to targets, Interaction and state details, Accessibility expectations, Responsive expectations and Resource References. One UI Requirement expresses one independently testable interface obligation; distinct obligations are separate requirements even when they share a target.
+
 ---
 
 ## UX/UI Design Requirements and Interaction Notes

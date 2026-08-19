@@ -425,19 +425,16 @@ When a User Flow changes or is archived, Acceptance Criteria that directly `vali
 
 A UI Requirement is an independent Product Artifact describing one specific, observable interface obligation: interaction behavior, visible feedback, state transition, responsive behavior or accessibility expectation. It may apply to a Screen / View or User Flow and trace to related Functional Requirements and Acceptance Criteria. It is distinct from Shared Design Guidance, which provides reusable cross-cutting direction; Screen / View, which provides an interface context; User Flow, which provides a cross-view journey; and Functional Requirement, which defines required system behavior. It does not prescribe CSS, component-library, design-token or frontend implementation choices.
 
-A UI Requirement may include:
+A UI Requirement has a required Title, one required primary applies-to target selected from Screen / View or User Flow, and a canonical Requirement statement. Its primary target provides its main authoring and document context; optional additional targets avoid duplicated UI Requirements where the same obligation genuinely applies elsewhere.
 
-- related screen or flow;
-- interaction behavior;
-- visual expectation;
-- state behavior;
-- responsive behavior;
-- accessibility expectation;
-- keyboard and focus behavior;
-- assistive-technology expectations for names, roles, states or status changes when relevant;
-- accessible error, feedback or notification behavior;
-- accessibility verification guidance;
-- acceptance criteria.
+It may include:
+
+- **Interaction and state details**, a list of relevant user action, condition, state, feedback or continuation details that clarify the same obligation;
+- **Accessibility expectations**, a list of keyboard, focus, semantic or assistive-technology, error or status-feedback expectations when relevant;
+- **Responsive expectations**, a list of behavior that must adapt across viewports or input modes when relevant; and
+- Resource References, such as local mockups, prototypes, examples or design-source material.
+
+The Requirement statement remains canonical; optional detail sharpens it only when needed and is not a completion checklist. One UI Requirement expresses one independently testable interface obligation. When interaction, feedback, state, accessibility or responsive behavior can change or be tested independently, it becomes a separate UI Requirement even when it shares a target.
 
 Project-wide visual design guidance may be held as Shared Design Guidance in the containing `UX/UI Design Requirements and Interaction Notes` section rather than repeated in each UI Requirement.
 

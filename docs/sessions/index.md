@@ -214,3 +214,4 @@
 | 2026-08-19-21 | 2026-08-19 | 21 | User Flow Impact Propagation | Crystallized | Flow, upstream-context and evidence changes apply explicit Stale versus coverage-cue behavior |
 | 2026-08-19-22 | 2026-08-19 | 22 | User Flow Integrated Validation | Crystallized | Create-first-project scenario validates the complete journey, unhappy-path and propagation model |
 | 2026-08-19-23 | 2026-08-19 | 23 | UI Requirement Artifact Direction | Crystallized | Independent observable interface-obligation artifact distinct from design direction, contexts, journeys and system behavior |
+| 2026-08-19-24 | 2026-08-19 | 24 | UI Requirement Initial Shape | Crystallized | Primary context target, canonical obligation and optional local interaction, accessibility and responsive detail |
