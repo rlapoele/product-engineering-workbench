@@ -1277,7 +1277,7 @@ User Stories are distinct from Use Cases, though both may appear in the `User St
 
 A User Flow is a Product Artifact describing a sequence of user steps, interactions or screens needed to achieve an outcome.
 
-User Flows help specify how users move through the product.
+User Flows describe a user-experience journey across interface contexts: entry, decisions, feedback, recovery and outcome. They explicitly `include` Screen / Views, while retaining flow-specific sequence and context. They are distinct from Use Cases, which model a structured actor-and-system interaction for a Core Feature, and from Screen / Views, which model stable individual interface contexts.
 
 ---
 

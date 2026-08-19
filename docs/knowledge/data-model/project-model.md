@@ -395,6 +395,8 @@ The UX/UI section presents Screen / Views in their own block and exposes `Add Sc
 
 When a Screen / View changes or is archived, User Flows that `include` it and Acceptance Criteria that directly `validate` it become Stale. Its supported Core Features receive coverage/readiness cues rather than becoming Stale: a capability may remain valid when its known interface representation changes or disappears. A changed or archived Core Feature or Functional Requirement makes an affected Screen / View Stale. A changed or archived User Flow does not automatically make an included Screen / View Stale, because the Screen / View may remain meaningful independently or appear in another flow. A changed visual Resource Reference is a Revision of its attached Screen / View and follows this same downstream propagation. UI Requirement propagation remains deferred with that artifact's relationship model.
 
+A User Flow is an independent Product Artifact describing how a person reaches a meaningful outcome across one or more interface contexts. It holds the user-experience journey's entry, decisions, feedback, recovery and outcome, and explicitly `includes` Screen / Views. It is distinct from a Use Case, which describes a structured actor-and-system interaction for a Core Feature, and from a Screen / View, which describes a stable individual interface context.
+
 A User Flow may include:
 
 - entry point;

@@ -206,3 +206,4 @@
 | 2026-08-19-13 | 2026-08-19 | 13 | Screen / View Stable References | Crystallized | Immutable project-scoped `SV-001` references for durable UX/UI and handoff traceability |
 | 2026-08-19-14 | 2026-08-19 | 14 | Screen / View Impact Propagation | Crystallized | View, upstream and flow changes apply explicit Stale versus coverage-cue behavior |
 | 2026-08-19-15 | 2026-08-19 | 15 | Screen / View Integrated Validation | Crystallized | Project overview scenario validates a complete Screen / View knowledge and propagation chain |
+| 2026-08-19-16 | 2026-08-19 | 16 | User Flow Artifact Direction | Crystallized | Independent cross-view experience-journey artifact distinct from Use Cases and Screen / Views |

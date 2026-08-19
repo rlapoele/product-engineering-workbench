@@ -1080,11 +1080,14 @@ Changed or archived Screen / Views make including User Flows and directly valida
 
 A Project overview validation scenario confirms that a Screen / View can use purpose, key content/actions, an empty state and a visual reference; support a Feature; depend on a Functional Requirement; and be directly validated by observable Acceptance Criteria. The chain remains useful without requiring a route, component tree or prematurely defined User Flow.
 
+A User Flow is an independent Product Artifact for a person’s cross-view journey to a meaningful outcome. It owns entry, decisions, feedback, recovery and outcome, and explicitly `includes` Screen / Views. It is distinct from a Use Case's structured actor-and-system interaction for a Core Feature, and from the stable interface contexts represented by Screen / Views.
+
 An Implementation Handoff may render the available Shared Design Guidance, relevant UX/UI artifacts, visual Resource References, and applicable responsive or accessibility expectations as a derived top-level `design.md` companion. The file is portable context for human or AI implementation consumers. It is not canonical Product Knowledge, a design-system replacement, a substitute for behavioral requirements or Acceptance Criteria, or a basis for inventing missing visual decisions.
 
 ## Open Decisions
 
-- Which initial fields and relationships distinguish User Flow and UI Requirement artifacts?
+- What are the initial fields and relationships for User Flow?
+- Which initial fields and relationships distinguish UI Requirement artifacts?
 - When is a `design.md` companion included, and how should it represent unavailable or incomplete UX/UI context?
 
 ## Boundary
