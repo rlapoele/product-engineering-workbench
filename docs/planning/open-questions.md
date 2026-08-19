@@ -1062,11 +1062,13 @@ The Workbench needs to preserve enough explicit UX/UI knowledge to prepare a mea
 
 Shared Design Guidance is structured, section-owned Product Knowledge. It expresses reusable visual direction and, when known, named design values or conventions. It provides shared context for Screen / Views, User Flows and UI Requirements, while those artifacts preserve view-specific, journey-specific and interaction-specific knowledge.
 
+It has three blocks: required **Design direction** short prose; optional **Reusable design conventions**, whose entries each contain a name, precise value or rule, and intended use under fixed document-facing headings; and optional **Application guidance** for concise preferences, avoidances and genuinely cross-cutting responsive or accessibility principles. Authors may save Design direction without inventing values. Specific interface behavior remains a UI Requirement; measurable quality remains a Non-Functional Requirement.
+
 An Implementation Handoff may render the available Shared Design Guidance, relevant UX/UI artifacts, visual Resource References, and applicable responsive or accessibility expectations as a derived top-level `design.md` companion. The file is portable context for human or AI implementation consumers. It is not canonical Product Knowledge, a design-system replacement, a substitute for behavioral requirements or Acceptance Criteria, or a basis for inventing missing visual decisions.
 
 ## Open Decisions
 
-- What is the minimal structured shape and authoring flow for Shared Design Guidance?
+- What is the authoring flow for Shared Design Guidance?
 - Which initial fields and relationships distinguish Screen / View, User Flow and UI Requirement artifacts?
 - When is a `design.md` companion included, and how should it represent unavailable or incomplete UX/UI context?
 

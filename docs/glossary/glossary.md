@@ -1237,7 +1237,9 @@ It may include Shared Design Guidance, interaction patterns, component usage and
 
 ## Shared Design Guidance
 
-Shared Design Guidance is structured, section-owned UX/UI knowledge that expresses reusable visual direction and, when known, named design values or conventions. It provides common context for UI Requirements, Screen / Views and User Flows without duplicating it in each artifact or creating separate Design Token, Color, Typography or UI Component Product Artifacts.
+Shared Design Guidance is structured, section-owned UX/UI knowledge with three blocks: required Design direction, optional Reusable design conventions and optional Application guidance. It expresses reusable visual direction and, when known, named design values or conventions. It provides common context for UI Requirements, Screen / Views and User Flows without duplicating it in each artifact or creating separate Design Token, Color, Typography or UI Component Product Artifacts.
+
+Reusable design conventions record a name, a precise value or rule, and intended use under fixed document-facing headings. Application guidance records concise preferences and avoidances, plus shared responsive or accessibility principles only when they are genuinely cross-cutting.
 
 It may be rendered as a derived `design.md` handoff companion. That file is an implementation-facing representation, not canonical Product Knowledge or a replacement for a full design system.
 
