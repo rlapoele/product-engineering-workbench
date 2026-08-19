@@ -1189,6 +1189,8 @@ A Screen / View is a Product Artifact describing a user-facing screen, page, mod
 
 Screen / View artifacts provide stable interface boundaries for related User Flows, UI Requirements, visual Resource References and implementation handoff. They describe product-facing interface context, not implementation routes, component trees, wireframes or frontend page architecture.
 
+Each Screen / View has a required Title and Purpose. It may record Key content and actions, Key states, relevant User Profile context and visual Resource References. Detailed interaction, visual, responsive and accessibility obligations remain UI Requirements; journeys across views remain User Flows.
+
 ---
 
 ## Specification Document Template

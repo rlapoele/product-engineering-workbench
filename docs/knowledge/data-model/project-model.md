@@ -378,17 +378,14 @@ A Functional Requirement may include:
 
 A Screen / View is an independent Product Artifact. It provides a stable user-facing interface boundary for related User Flows, UI Requirements, visual Resource References and implementation handoff; it is not an implementation route, component tree, wireframe or frontend page architecture.
 
-A Screen / View may include:
+A Screen / View has a required Title and Purpose. Purpose explains what a person should understand, decide or accomplish in that interface context. It may include:
 
-- purpose;
-- primary users;
-- related features;
-- visible content or controls;
-- states;
-- related flows;
-- related requirements.
-- visual Resource References, such as screenshots, mockups, wireframes, prototypes or design-file references;
-- optional visual-reference context, such as represented state or viewport.
+- a Key content and actions list, identifying important information and actions without prescribing component structure or detailed UI behavior;
+- a Key states list, identifying meaningful user-facing states such as empty, loading, validation error, confirmation or permission-limited, each with a short explanation;
+- relevant User Profile context when that distinction matters;
+- visual Resource References, such as screenshots, mockups, wireframes, prototypes or design-file references, with optional visual-reference context such as represented state or viewport.
+
+Detailed interaction, visual, responsive and accessibility obligations remain UI Requirements; journeys across views remain User Flows. Explicit relationships to Features, Flows, UI Requirements, Functional Requirements and Acceptance Criteria are decided separately from this initial field shape.
 
 A User Flow may include:
 

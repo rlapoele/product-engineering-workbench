@@ -1068,11 +1068,13 @@ The section shows its three fixed blocks directly. Authors may start a private d
 
 A Screen / View is an independent Product Artifact. It describes a stable user-facing screen, page, modal, panel or major view, providing an interface boundary for related User Flows, UI Requirements, visual Resource References and handoff context. It is not an implementation route, component tree, wireframe or frontend page architecture.
 
+Each Screen / View has a required Title and Purpose. It may include Key content and actions, Key states with a short explanation, relevant User Profile context and visual Resource References. Detailed interaction, visual, responsive and accessibility obligations remain UI Requirements; cross-view journeys remain User Flows.
+
 An Implementation Handoff may render the available Shared Design Guidance, relevant UX/UI artifacts, visual Resource References, and applicable responsive or accessibility expectations as a derived top-level `design.md` companion. The file is portable context for human or AI implementation consumers. It is not canonical Product Knowledge, a design-system replacement, a substitute for behavioral requirements or Acceptance Criteria, or a basis for inventing missing visual decisions.
 
 ## Open Decisions
 
-- What are the initial fields and relationships for the Screen / View artifact?
+- Which explicit relationships should connect Screen / View to related product knowledge?
 - Which initial fields and relationships distinguish User Flow and UI Requirement artifacts?
 - When is a `design.md` companion included, and how should it represent unavailable or incomplete UX/UI context?
 
