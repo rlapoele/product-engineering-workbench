@@ -203,3 +203,4 @@
 | 2026-08-19-10 | 2026-08-19 | 10 | Screen / View Initial Fields | Crystallized | Required title and purpose with optional context, content/action, state and visual-reference information |
 | 2026-08-19-11 | 2026-08-19 | 11 | Screen / View Relationships | Crystallized | Small feature, requirement and validation links plus non-containment User Flow inclusion |
 | 2026-08-19-12 | 2026-08-19 | 12 | Screen / View Authoring Flow | Crystallized | Direct section block, contextual relationship creation and no forced related-artifact prerequisite |
+| 2026-08-19-13 | 2026-08-19 | 13 | Screen / View Stable References | Crystallized | Immutable project-scoped `SV-001` references for durable UX/UI and handoff traceability |

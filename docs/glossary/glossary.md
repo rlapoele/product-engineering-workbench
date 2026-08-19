@@ -1191,6 +1191,8 @@ Screen / View artifacts provide stable interface boundaries for related User Flo
 
 Each Screen / View has a required Title and Purpose. It may record Key content and actions, Key states, relevant User Profile context and visual Resource References. Detailed interaction, visual, responsive and accessibility obligations remain UI Requirements; journeys across views remain User Flows.
 
+Each Screen / View receives an immutable project-scoped readable reference when created, such as `SV-001`, in addition to its internal artifact identifier. The reference remains unchanged by title edits, document reordering, relationship changes or archival, and is retained in saved Implementation Handoff snapshots.
+
 A Screen / View may `support` a Core Feature and `depend_on` a Functional Requirement. A User Flow may `include` it; this is distinct from `part_of` because a Screen / View may appear in more than one flow. Acceptance Criteria may directly `validate` a Screen / View.
 
 ---

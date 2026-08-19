@@ -166,6 +166,8 @@ A Screen / View is an independent Product Artifact describing a stable user-faci
 
 Each Screen / View requires a **Title** and **Purpose**. Purpose states what a person should understand, decide or accomplish there. Optional **Key content and actions** identifies important information and actions without prescribing component structure or detailed UI behavior. Optional **Key states** identifies meaningful user-facing states with a short explanation. Relevant User Profiles and visual Resource References may be attached when useful. Specific interaction, visual, responsive and accessibility obligations remain UI Requirements; journeys across views remain User Flows.
 
+Each saved Screen / View renders its immutable project-scoped readable reference, such as `SV-001`. This reference is distinct from an implementation route or URL and does not change when its title, document position, relationships or lifecycle state changes. Prepared handoffs retain the included reference and saved view snapshot.
+
 A Screen / View may explicitly `support` a Core Feature and `depend_on` a Functional Requirement. An Acceptance Criterion may directly `validate` it. A User Flow may `include` it; `includes` is not `part_of`, because the same Screen / View may appear in more than one flow. Flow-specific details such as sequence position or a relevant view state belong to the `includes` relationship rather than to the Screen / View's general identity.
 
 ### Screen / View authoring

@@ -1074,6 +1074,8 @@ A Screen / View may `support` a Core Feature, `depend_on` a Functional Requireme
 
 The UX/UI section presents Screen / Views in their own block. `Add Screen / View` opens a private draft for the required and optional fields; no Feature, Functional Requirement, User Flow or visual reference is required to save. Contextual creation from a Feature or Functional Requirement preselects its established relationship. Saved views use ordinary edit/archive actions and provide direct visual-reference and Acceptance Criterion creation. User Flow inclusion is authored later from the User Flow model.
 
+Each Screen / View receives an immutable project-scoped readable reference at creation, such as `SV-001`. It remains stable through title, document-position, relationship and archival changes, and is retained in prepared handoff snapshots, including derived `design.md` output. It is not an implementation route or URL.
+
 An Implementation Handoff may render the available Shared Design Guidance, relevant UX/UI artifacts, visual Resource References, and applicable responsive or accessibility expectations as a derived top-level `design.md` companion. The file is portable context for human or AI implementation consumers. It is not canonical Product Knowledge, a design-system replacement, a substitute for behavioral requirements or Acceptance Criteria, or a basis for inventing missing visual decisions.
 
 ## Open Decisions
