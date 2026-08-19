@@ -1082,11 +1082,13 @@ A Project overview validation scenario confirms that a Screen / View can use pur
 
 A User Flow is an independent Product Artifact for a person’s cross-view journey to a meaningful outcome. It owns entry, decisions, feedback, recovery and outcome, and explicitly `includes` Screen / Views. It is distinct from a Use Case's structured actor-and-system interaction for a Core Feature, and from the stable interface contexts represented by Screen / Views.
 
+Each User Flow has required Title, primary User Profile, Entry context, Intended outcome and ordered Journey steps. Each step records required Action, Surface Screen / View and Feedback and continuation, plus optional Relevant state. Its `includes` relationship holds step position and any supplied state metadata. Optional Intentional exits record user-initiated cancellation, back navigation or abandonment; optional Error recovery paths record known system-initiated failures or constraints and their user-visible recovery. The model does not invent technical edge cases.
+
 An Implementation Handoff may render the available Shared Design Guidance, relevant UX/UI artifacts, visual Resource References, and applicable responsive or accessibility expectations as a derived top-level `design.md` companion. The file is portable context for human or AI implementation consumers. It is not canonical Product Knowledge, a design-system replacement, a substitute for behavioral requirements or Acceptance Criteria, or a basis for inventing missing visual decisions.
 
 ## Open Decisions
 
-- What are the initial fields and relationships for User Flow?
+- Which additional explicit relationships should connect User Flow to related product knowledge?
 - Which initial fields and relationships distinguish UI Requirement artifacts?
 - When is a `design.md` companion included, and how should it represent unavailable or incomplete UX/UI context?
 

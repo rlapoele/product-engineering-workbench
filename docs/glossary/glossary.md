@@ -1279,6 +1279,8 @@ A User Flow is a Product Artifact describing a sequence of user steps, interacti
 
 User Flows describe a user-experience journey across interface contexts: entry, decisions, feedback, recovery and outcome. They explicitly `include` Screen / Views, while retaining flow-specific sequence and context. They are distinct from Use Cases, which model a structured actor-and-system interaction for a Core Feature, and from Screen / Views, which model stable individual interface contexts.
 
+Each User Flow has a required Title, primary User Profile, Entry context, Intended outcome and one or more ordered Journey steps. Each Journey step has a required Action, Surface selected from Screen / Views, and Feedback and continuation; it may name a relevant user-facing state. Intentional exits and Error recovery paths are distinct optional structures so user-initiated cancellation is not confused with system-initiated failure recovery.
+
 ---
 
 ## User Profile

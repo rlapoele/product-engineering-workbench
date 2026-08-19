@@ -397,15 +397,23 @@ When a Screen / View changes or is archived, User Flows that `include` it and Ac
 
 A User Flow is an independent Product Artifact describing how a person reaches a meaningful outcome across one or more interface contexts. It holds the user-experience journey's entry, decisions, feedback, recovery and outcome, and explicitly `includes` Screen / Views. It is distinct from a Use Case, which describes a structured actor-and-system interaction for a Core Feature, and from a Screen / View, which describes a stable individual interface context.
 
-A User Flow may include:
+A User Flow has a required Title, primary User Profile, Entry context, Intended outcome and one or more ordered Journey steps. Entry context identifies the user-facing place or condition where the journey begins, rather than a technical trigger. Intended outcome states what the person should achieve or understand.
 
-- entry point;
-- steps;
-- alternate paths;
-- success outcome;
-- error or empty states;
-- related screens;
-- related requirements.
+Each Journey step has:
+
+- required **Action**, describing the user action or decision; an entry step may instead describe the person arriving at the flow;
+- required **Surface**, selected from Screen / Views;
+- optional **Relevant state**, naming a specific user-facing configuration such as empty, loading, validation error or confirmation; and
+- required **Feedback and continuation**, describing what the person observes and how the journey proceeds.
+
+Each step records the flow's explicit `includes` relationship to its selected Screen / View, with sequence position and, when supplied, relevant state as relationship metadata. Action and Feedback and continuation remain Journey Step content because they are unique to that flow.
+
+User Flow may additionally record two distinct optional unhappy-path structures:
+
+- **Intentional exits** for user-initiated cancellation, back navigation or abandonment, including the action, relevant preservation or discard behavior and resulting destination or outcome; and
+- **Error recovery paths** for system-initiated failures or constraints, including the known condition, user-visible feedback, recovery or retry option and resulting outcome.
+
+The model records only established user-visible failure behavior; it does not invent technical edge cases merely to complete the structure.
 
 A UI Requirement may include:
 
