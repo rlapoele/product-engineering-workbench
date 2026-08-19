@@ -1187,7 +1187,7 @@ Internally, a Specification may be a document-like composition or view over stru
 
 A Screen / View is a Product Artifact describing a user-facing screen, page, modal, panel or major interface view.
 
-Screen / View artifacts help specify what users see and interact with.
+Screen / View artifacts provide stable interface boundaries for related User Flows, UI Requirements, visual Resource References and implementation handoff. They describe product-facing interface context, not implementation routes, component trees, wireframes or frontend page architecture.
 
 ---
 

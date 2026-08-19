@@ -199,3 +199,4 @@
 | 2026-08-19-06 | 2026-08-19 | 6 | Shared Design Guidance and `design.md` Direction | Crystallized | Section-owned reusable UX/UI guidance supplies canonical inputs for a derived design-context handoff companion |
 | 2026-08-19-07 | 2026-08-19 | 7 | Shared Design Guidance Initial Shape | Crystallized | Three section-owned blocks: required direction, optional reusable conventions and optional application guidance |
 | 2026-08-19-08 | 2026-08-19 | 8 | Shared Design Guidance Authoring Flow | Crystallized | Fixed document blocks, direct actions and preserved prerequisite drafts without a management workspace |
+| 2026-08-19-09 | 2026-08-19 | 9 | Screen / View Artifact Direction | Crystallized | Independent interface-boundary artifact without implementation-route or frontend-architecture prescription |

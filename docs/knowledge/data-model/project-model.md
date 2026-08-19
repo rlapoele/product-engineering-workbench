@@ -376,6 +376,8 @@ A Functional Requirement may include:
 - business rule or system obligation;
 - acceptance criteria.
 
+A Screen / View is an independent Product Artifact. It provides a stable user-facing interface boundary for related User Flows, UI Requirements, visual Resource References and implementation handoff; it is not an implementation route, component tree, wireframe or frontend page architecture.
+
 A Screen / View may include:
 
 - purpose;

@@ -1066,11 +1066,14 @@ It has three blocks: required **Design direction** short prose; optional **Reusa
 
 The section shows its three fixed blocks directly. Authors may start a private draft from any block. Saving the first convention or Application guidance requires Design direction; the workbench preserves the initial draft while the author explicitly creates the missing direction, then resumes it. Conventions are edited or removed as structured section content. Design direction and Application guidance are edited in place; clearing Application guidance has local confirmation. No new artifacts, lifecycle states, relationship model or management workspace are introduced.
 
+A Screen / View is an independent Product Artifact. It describes a stable user-facing screen, page, modal, panel or major view, providing an interface boundary for related User Flows, UI Requirements, visual Resource References and handoff context. It is not an implementation route, component tree, wireframe or frontend page architecture.
+
 An Implementation Handoff may render the available Shared Design Guidance, relevant UX/UI artifacts, visual Resource References, and applicable responsive or accessibility expectations as a derived top-level `design.md` companion. The file is portable context for human or AI implementation consumers. It is not canonical Product Knowledge, a design-system replacement, a substitute for behavioral requirements or Acceptance Criteria, or a basis for inventing missing visual decisions.
 
 ## Open Decisions
 
-- Which initial fields and relationships distinguish Screen / View, User Flow and UI Requirement artifacts?
+- What are the initial fields and relationships for the Screen / View artifact?
+- Which initial fields and relationships distinguish User Flow and UI Requirement artifacts?
 - When is a `design.md` companion included, and how should it represent unavailable or incomplete UX/UI context?
 
 ## Boundary
