@@ -1072,6 +1072,8 @@ Each Screen / View has a required Title and Purpose. It may include Key content 
 
 A Screen / View may `support` a Core Feature, `depend_on` a Functional Requirement and be directly `validated` by Acceptance Criteria. A User Flow may `include` a Screen / View. This new `includes` relationship is not containment: one view may appear in more than one flow, and flow-specific position or state may be relationship metadata. UI Requirement-to-Screen / View relationships remain a later UI Requirement decision.
 
+The UX/UI section presents Screen / Views in their own block. `Add Screen / View` opens a private draft for the required and optional fields; no Feature, Functional Requirement, User Flow or visual reference is required to save. Contextual creation from a Feature or Functional Requirement preselects its established relationship. Saved views use ordinary edit/archive actions and provide direct visual-reference and Acceptance Criterion creation. User Flow inclusion is authored later from the User Flow model.
+
 An Implementation Handoff may render the available Shared Design Guidance, relevant UX/UI artifacts, visual Resource References, and applicable responsive or accessibility expectations as a derived top-level `design.md` companion. The file is portable context for human or AI implementation consumers. It is not canonical Product Knowledge, a design-system replacement, a substitute for behavioral requirements or Acceptance Criteria, or a basis for inventing missing visual decisions.
 
 ## Open Decisions

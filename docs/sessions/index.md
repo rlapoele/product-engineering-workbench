@@ -202,3 +202,4 @@
 | 2026-08-19-09 | 2026-08-19 | 9 | Screen / View Artifact Direction | Crystallized | Independent interface-boundary artifact without implementation-route or frontend-architecture prescription |
 | 2026-08-19-10 | 2026-08-19 | 10 | Screen / View Initial Fields | Crystallized | Required title and purpose with optional context, content/action, state and visual-reference information |
 | 2026-08-19-11 | 2026-08-19 | 11 | Screen / View Relationships | Crystallized | Small feature, requirement and validation links plus non-containment User Flow inclusion |
+| 2026-08-19-12 | 2026-08-19 | 12 | Screen / View Authoring Flow | Crystallized | Direct section block, contextual relationship creation and no forced related-artifact prerequisite |

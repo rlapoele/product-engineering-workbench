@@ -389,6 +389,8 @@ Detailed interaction, visual, responsive and accessibility obligations remain UI
 
 A Screen / View may `support` a Core Feature when it provides part of that capability's user-facing experience, and may `depend_on` a Functional Requirement when its meaning or availability relies on that required behavior. Acceptance Criteria may directly `validate` a Screen / View. A User Flow may explicitly `include` a Screen / View. `includes` is distinct from `part_of`: the same Screen / View may appear in more than one flow, so a flow is not its parent container. `includes` may later carry flow-specific metadata such as sequence position or relevant view state without making that metadata part of the Screen / View itself. UI Requirement-to-Screen / View relationships remain a decision within the UI Requirement model.
 
+The UX/UI section presents Screen / Views in their own block and exposes `Add Screen / View`. Its private draft collects the required Title and Purpose and the optional initial fields. No Feature, Functional Requirement, User Flow or visual reference is required to save. Starting from a Core Feature preselects a `supports` relationship; starting from a Functional Requirement preselects `depends_on`. A saved Screen / View exposes ordinary edit and archive actions, existing `Add reference`, and target-preselected `Add Acceptance Criterion`. User Flow inclusion is authored later from the User Flow model rather than requiring a not-yet-defined artifact.
+
 A User Flow may include:
 
 - entry point;

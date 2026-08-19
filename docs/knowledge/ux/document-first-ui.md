@@ -168,6 +168,12 @@ Each Screen / View requires a **Title** and **Purpose**. Purpose states what a p
 
 A Screen / View may explicitly `support` a Core Feature and `depend_on` a Functional Requirement. An Acceptance Criterion may directly `validate` it. A User Flow may `include` it; `includes` is not `part_of`, because the same Screen / View may appear in more than one flow. Flow-specific details such as sequence position or a relevant view state belong to the `includes` relationship rather than to the Screen / View's general identity.
 
+### Screen / View authoring
+
+The UX/UI section presents a fixed **Screen / Views** block. Its contextual actions reveal `Add Screen / View`, which opens a private draft collecting Title, Purpose and the optional initial fields. No related Feature, Functional Requirement, User Flow or visual reference is required before save. Starting from a Core Feature preselects a `supports` relationship; starting from a Functional Requirement preselects `depends_on`.
+
+A saved Screen / View exposes `Edit Screen / View`, secondary locally confirmed `Archive Screen / View`, existing `Add reference`, and `Add Acceptance Criterion`, which opens ordinary criterion authoring with the view preselected as primary validation target. User Flow inclusion is defined later from the User Flow model and is never a prerequisite for creating a Screen / View.
+
 Users may attach a managed file or external link directly while working on the whole Specification, a Specification Section or a Product Artifact. The resulting Resource Reference includes a user-authored purpose and description at that location; users do not need to maintain a separate external-links section before referring to it in the Specification. A Screen / View may use visual Resource References for screenshots, mockups, wireframes, prototypes or design-file references, with optional represented-state and viewport context.
 
 A Resource may be used at more than one location, but each Resource Reference is edited at its own attached target. Replacing the source creates a new Resource and updates only the explicitly chosen reference; it must not silently replace another artifact's or section's reference. Adding, removing or materially changing a reference follows the ordinary saved Revision and impact-feedback flow for its attached target. An unavailable external link is shown as an explainable caveat or preview failure without blocking ordinary editing; changing the URL creates a new Resource rather than implying that the original changed.
