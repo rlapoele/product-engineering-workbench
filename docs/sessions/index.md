@@ -204,3 +204,4 @@
 | 2026-08-19-11 | 2026-08-19 | 11 | Screen / View Relationships | Crystallized | Small feature, requirement and validation links plus non-containment User Flow inclusion |
 | 2026-08-19-12 | 2026-08-19 | 12 | Screen / View Authoring Flow | Crystallized | Direct section block, contextual relationship creation and no forced related-artifact prerequisite |
 | 2026-08-19-13 | 2026-08-19 | 13 | Screen / View Stable References | Crystallized | Immutable project-scoped `SV-001` references for durable UX/UI and handoff traceability |
+| 2026-08-19-14 | 2026-08-19 | 14 | Screen / View Impact Propagation | Crystallized | View, upstream and flow changes apply explicit Stale versus coverage-cue behavior |

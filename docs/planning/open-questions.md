@@ -1076,6 +1076,8 @@ The UX/UI section presents Screen / Views in their own block. `Add Screen / View
 
 Each Screen / View receives an immutable project-scoped readable reference at creation, such as `SV-001`. It remains stable through title, document-position, relationship and archival changes, and is retained in prepared handoff snapshots, including derived `design.md` output. It is not an implementation route or URL.
 
+Changed or archived Screen / Views make including User Flows and directly validating Acceptance Criteria Stale, while supported Core Features receive coverage/readiness cues. Changed or archived Core Features or Functional Requirements make affected Screen / Views Stale. Changed or archived User Flows do not automatically make their included Screen / Views Stale. Material visual Resource Reference changes are Screen / View revisions and follow the same propagation. UI Requirement propagation remains deferred with that artifact's relationship model.
+
 An Implementation Handoff may render the available Shared Design Guidance, relevant UX/UI artifacts, visual Resource References, and applicable responsive or accessibility expectations as a derived top-level `design.md` companion. The file is portable context for human or AI implementation consumers. It is not canonical Product Knowledge, a design-system replacement, a substitute for behavioral requirements or Acceptance Criteria, or a basis for inventing missing visual decisions.
 
 ## Open Decisions

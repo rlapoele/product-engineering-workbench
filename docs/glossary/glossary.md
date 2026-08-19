@@ -1195,6 +1195,8 @@ Each Screen / View receives an immutable project-scoped readable reference when 
 
 A Screen / View may `support` a Core Feature and `depend_on` a Functional Requirement. A User Flow may `include` it; this is distinct from `part_of` because a Screen / View may appear in more than one flow. Acceptance Criteria may directly `validate` a Screen / View.
 
+When a Screen / View changes or is archived, its including User Flows and directly validating Acceptance Criteria become Stale, while its supported Core Features receive coverage/readiness cues. A changed or archived Core Feature or Functional Requirement makes an affected Screen / View Stale. A changed or archived User Flow does not automatically make its included Screen / Views Stale. A changed visual Resource Reference is a revision of its attached Screen / View and follows the same propagation.
+
 ---
 
 ## Specification Document Template
