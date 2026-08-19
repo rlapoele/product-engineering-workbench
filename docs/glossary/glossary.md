@@ -1229,9 +1229,9 @@ For example, a User Story's parent Feature or related Acceptance Criteria may be
 
 ## UI Requirement
 
-A UI Requirement is a Product Artifact describing a specific visual, interaction, state, responsive or accessibility expectation.
+A UI Requirement is an independent Product Artifact describing one specific, observable interface obligation: interaction behavior, visible feedback, state transition, responsive behavior or accessibility expectation.
 
-UI Requirements help make UX/UI expectations implementation-ready without requiring low-level design-system artifact types in the MVP.
+It applies to a Screen / View or User Flow and may trace to system behavior and Acceptance Criteria. It is distinct from Shared Design Guidance, which is reusable cross-cutting direction; Screen / View, which is an interface context; User Flow, which is a cross-view journey; and Functional Requirement, which is required system behavior. UI Requirements make UX/UI expectations implementation-ready without prescribing CSS, component-library, design-token or frontend implementation choices.
 
 ---
 

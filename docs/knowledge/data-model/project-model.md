@@ -423,6 +423,8 @@ The UX/UI section presents User Flows in their own block and exposes `Add User F
 
 When a User Flow changes or is archived, Acceptance Criteria that directly `validate` it become Stale, while its supported Core Features receive coverage/readiness cues. A changed or archived primary User Profile, included Screen / View, supported Core Feature or depended-on Functional Requirement makes the User Flow Stale. Changing or archiving a User Flow does not automatically make included Screen / Views or depended-on Functional Requirements Stale, because they may remain valid independently or in other journeys. A `relates_to` link to a User Story or Use Case does not trigger automatic propagation. UI Requirement propagation remains deferred with that artifact's relationship model.
 
+A UI Requirement is an independent Product Artifact describing one specific, observable interface obligation: interaction behavior, visible feedback, state transition, responsive behavior or accessibility expectation. It may apply to a Screen / View or User Flow and trace to related Functional Requirements and Acceptance Criteria. It is distinct from Shared Design Guidance, which provides reusable cross-cutting direction; Screen / View, which provides an interface context; User Flow, which provides a cross-view journey; and Functional Requirement, which defines required system behavior. It does not prescribe CSS, component-library, design-token or frontend implementation choices.
+
 A UI Requirement may include:
 
 - related screen or flow;

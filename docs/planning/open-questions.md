@@ -1094,11 +1094,13 @@ Changed or archived User Flows make directly validating Acceptance Criteria Stal
 
 A Create first project scenario validates a User Flow with Screen / View-linked steps, user action, state and feedback, distinct Intentional exit and Error recovery paths, Capability and Requirement traceability, and observable Acceptance Criterion evidence. It confirms that a complete journey model need not become a route map, test script or technical failure model.
 
+A UI Requirement is an independent Product Artifact for one specific, observable interface obligation: interaction behavior, visible feedback, state transition, responsive behavior or accessibility expectation. It may apply to a Screen / View or User Flow and trace to Functional Requirements and Acceptance Criteria. It is distinct from Shared Design Guidance, Screen / Views, User Flows and Functional Requirements, and does not prescribe CSS, component libraries, design tokens or frontend implementation.
+
 An Implementation Handoff may render the available Shared Design Guidance, relevant UX/UI artifacts, visual Resource References, and applicable responsive or accessibility expectations as a derived top-level `design.md` companion. The file is portable context for human or AI implementation consumers. It is not canonical Product Knowledge, a design-system replacement, a substitute for behavioral requirements or Acceptance Criteria, or a basis for inventing missing visual decisions.
 
 ## Open Decisions
 
-- Which initial fields and relationships distinguish UI Requirement artifacts?
+- What are the initial fields and relationships for UI Requirement?
 - When is a `design.md` companion included, and how should it represent unavailable or incomplete UX/UI context?
 
 ## Boundary
