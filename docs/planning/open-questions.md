@@ -1086,6 +1086,8 @@ Each User Flow has required Title, primary User Profile, Entry context, Intended
 
 Each Journey step creates the required `includes` relationship to its selected Screen / View. A User Flow may `support` Core Features and `depend_on` Functional Requirements; Acceptance Criteria may directly `validate` it. Its primary User Profile remains structured context, while related User Stories or Use Cases use ordinary `relates_to` when useful. UI Requirement-to-Flow semantics remain deferred.
 
+The UX/UI section presents User Flows in their own block. `Add User Flow` opens a private draft for its required fields, ordered Journey steps, and optional unhappy paths. At least one step with a Screen / View is required to save. The draft is preserved while the author explicitly creates a missing primary User Profile or Screen / View, then resumes with it selected. Steps may be added, edited, removed and reordered; their order supplies `includes` sequence metadata. Contextual creation from a Screen / View, Core Feature or Functional Requirement preselects the relevant step Surface or relationship. Saved User Flows use ordinary edit/archive actions and direct Acceptance Criterion authoring.
+
 An Implementation Handoff may render the available Shared Design Guidance, relevant UX/UI artifacts, visual Resource References, and applicable responsive or accessibility expectations as a derived top-level `design.md` companion. The file is portable context for human or AI implementation consumers. It is not canonical Product Knowledge, a design-system replacement, a substitute for behavioral requirements or Acceptance Criteria, or a basis for inventing missing visual decisions.
 
 ## Open Decisions

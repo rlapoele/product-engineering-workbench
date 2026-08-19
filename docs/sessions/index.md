@@ -209,3 +209,4 @@
 | 2026-08-19-16 | 2026-08-19 | 16 | User Flow Artifact Direction | Crystallized | Independent cross-view experience-journey artifact distinct from Use Cases and Screen / Views |
 | 2026-08-19-17 | 2026-08-19 | 17 | User Flow Initial Shape | Crystallized | Structured view-linked journey steps and distinct intentional-exit versus error-recovery paths |
 | 2026-08-19-18 | 2026-08-19 | 18 | User Flow Relationships | Crystallized | Required step-owned view inclusion and lean Feature, Requirement and validation traceability |
+| 2026-08-19-19 | 2026-08-19 | 19 | User Flow Authoring Flow | Crystallized | Direct flow drafts, preserved Profile and View prerequisites, ordered step editing and contextual preselection |
