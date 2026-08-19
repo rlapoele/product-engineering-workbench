@@ -211,3 +211,4 @@
 | 2026-08-19-18 | 2026-08-19 | 18 | User Flow Relationships | Crystallized | Required step-owned view inclusion and lean Feature, Requirement and validation traceability |
 | 2026-08-19-19 | 2026-08-19 | 19 | User Flow Authoring Flow | Crystallized | Direct flow drafts, preserved Profile and View prerequisites, ordered step editing and contextual preselection |
 | 2026-08-19-20 | 2026-08-19 | 20 | User Flow Stable References | Crystallized | Immutable project-scoped `UF-001` references for durable UX/UI and handoff traceability |
+| 2026-08-19-21 | 2026-08-19 | 21 | User Flow Impact Propagation | Crystallized | Flow, upstream-context and evidence changes apply explicit Stale versus coverage-cue behavior |

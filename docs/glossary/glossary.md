@@ -1285,6 +1285,8 @@ Each Journey step creates a required `includes` relationship to its selected Scr
 
 Each User Flow receives an immutable project-scoped readable reference when created, such as `UF-001`, in addition to its internal artifact identifier. The reference remains unchanged by title, step-order, related-view or archival changes, and is retained in saved Implementation Handoff snapshots.
 
+When a User Flow changes or is archived, directly validating Acceptance Criteria become Stale and supported Core Features receive coverage/readiness cues. A changed or archived primary User Profile, included Screen / View, supported Core Feature or depended-on Functional Requirement makes the User Flow Stale. Changing or archiving a User Flow does not automatically make included Screen / Views or depended-on Functional Requirements Stale. `relates_to` links to User Stories or Use Cases do not trigger automatic propagation.
+
 ---
 
 ## User Profile

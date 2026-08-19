@@ -1090,6 +1090,8 @@ The UX/UI section presents User Flows in their own block. `Add User Flow` opens 
 
 Each User Flow receives an immutable project-scoped readable reference at creation, such as `UF-001`. It remains stable through title, step-order, included Screen / View, relationship and archival changes, and is retained in prepared handoff snapshots, including derived `design.md` output. It is not an implementation route, analytics event or test-case identifier.
 
+Changed or archived User Flows make directly validating Acceptance Criteria Stale and give supported Core Features coverage/readiness cues. Changed or archived primary User Profiles, included Screen / Views, supported Core Features or depended-on Functional Requirements make the Flow Stale. Changing or archiving a Flow does not automatically make included Screen / Views or depended-on Functional Requirements Stale. `relates_to` links to User Stories or Use Cases do not trigger automatic propagation. UI Requirement propagation remains deferred with that artifact's relationship model.
+
 An Implementation Handoff may render the available Shared Design Guidance, relevant UX/UI artifacts, visual Resource References, and applicable responsive or accessibility expectations as a derived top-level `design.md` companion. The file is portable context for human or AI implementation consumers. It is not canonical Product Knowledge, a design-system replacement, a substitute for behavioral requirements or Acceptance Criteria, or a basis for inventing missing visual decisions.
 
 ## Open Decisions
