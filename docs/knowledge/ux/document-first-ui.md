@@ -144,11 +144,13 @@ The `User Stories and Use Cases` section may contain multiple items. Each item s
 
 ## UX/UI Design Requirements And Interaction Notes
 
-This section captures the application-specific UX/UI guidance needed for faithful implementation. It may contain UI Requirements, Screen/View and User Flow references, as well as shared visual design guidance that should not be repeated in each artifact.
+This section captures the application-specific UX/UI guidance needed for faithful implementation. It may contain UI Requirements, Screen/View and User Flow references, as well as structured, section-owned **Shared Design Guidance** that should not be repeated in each artifact.
 
 Relevant content may include visual intent, layout and spacing conventions, color and typography use, shapes and elevation, component usage and states, responsive behavior, accessibility expectations and references to external design sources such as an existing design system or design files.
 
-The section is not a design-system authoring surface. In the MVP, this guidance remains structured section content, artifact fields or external references rather than separate Design Token, Color, Typography or UI Component Product Artifacts.
+Shared Design Guidance may express reusable visual direction and, when known, named design values or conventions. It may cover visual intent, layout and spacing conventions, color and typography use, shapes and elevation, reusable component conventions, responsive behavior, accessibility expectations and references to external design sources. It is canonical product knowledge in the section, rather than a separate Design Token or component-library model.
+
+The section is not a design-system authoring surface. In the MVP, this guidance remains structured section content, artifact fields or external references rather than separate Design Token, Color, Typography or UI Component Product Artifacts. A handoff may render the available shared guidance and relevant UX/UI knowledge as a derived `design.md` companion for human or AI implementation consumers; it must not invent missing values or replace a full design system.
 
 Users may attach a managed file or external link directly while working on the whole Specification, a Specification Section or a Product Artifact. The resulting Resource Reference includes a user-authored purpose and description at that location; users do not need to maintain a separate external-links section before referring to it in the Specification. A Screen / View may use visual Resource References for screenshots, mockups, wireframes, prototypes or design-file references, with optional represented-state and viewport context.
 
@@ -885,6 +887,7 @@ The intended target Implementation Handoff Package should include human-readable
 implementation-handoff/
   README.md
   IMPLEMENTATION_BRIEF.md
+  design.md (when UX/UI design context is included)
   READINESS_REPORT.md (when selected)
   manifest.json
   specification/
@@ -925,6 +928,7 @@ The MVP minimum package should include:
 implementation-handoff/
   README.md
   IMPLEMENTATION_BRIEF.md
+  design.md (when UX/UI design context is included)
   READINESS_REPORT.md (when selected)
   manifest.json
   specification/
@@ -940,6 +944,8 @@ implementation-handoff/
 `SPECIFICATION.md` should be a complete combined version of the specification.
 
 Each included section should also have its own Markdown file.
+
+When an included scope contains Shared Design Guidance or relevant UX/UI knowledge, the package may include a derived top-level `design.md`. It represents only available canonical knowledge: shared direction and named values or conventions, relevant Screen / Views and their Resource References, User Flows, UI Requirements, and applicable responsive or accessibility expectations. It is a portable design-context companion, not the canonical source, a full design system, or a substitute for behavioral requirements and Acceptance Criteria.
 
 Stable artifact IDs should be embedded in `SPECIFICATION.md` and in section Markdown files so humans can understand relationships without constantly navigating to metadata files.
 

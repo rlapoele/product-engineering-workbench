@@ -1231,7 +1231,15 @@ UI Requirements help make UX/UI expectations implementation-ready without requir
 
 UX/UI Design Requirements and Interaction Notes is a Specification Section for the application-specific UX/UI guidance needed for faithful implementation.
 
-It may include shared visual design guidance, interaction patterns, component usage and states, responsive and accessibility expectations, and references to external design sources. It is not a design-system authoring surface; lower-level values may remain section content, structured fields or external references rather than separate Product Artifacts in the MVP.
+It may include Shared Design Guidance, interaction patterns, component usage and states, responsive and accessibility expectations, and references to external design sources. It is not a design-system authoring surface; lower-level values may remain section content, structured fields or external references rather than separate Product Artifacts in the MVP.
+
+---
+
+## Shared Design Guidance
+
+Shared Design Guidance is structured, section-owned UX/UI knowledge that expresses reusable visual direction and, when known, named design values or conventions. It provides common context for UI Requirements, Screen / Views and User Flows without duplicating it in each artifact or creating separate Design Token, Color, Typography or UI Component Product Artifacts.
+
+It may be rendered as a derived `design.md` handoff companion. That file is an implementation-facing representation, not canonical Product Knowledge or a replacement for a full design system.
 
 ---
 

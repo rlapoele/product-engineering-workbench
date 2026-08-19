@@ -196,3 +196,4 @@
 | 2026-08-19-03 | 2026-08-19 | 3 | Domain Concept Stable References | Crystallized | Immutable project-scoped `DC-001` references independent of concept title and placement |
 | 2026-08-19-04 | 2026-08-19 | 4 | Data or Domain Model Integrated Validation | Crystallized | Subscription scenario validates the complete domain structure, behavior, evidence and propagation chain |
 | 2026-08-19-05 | 2026-08-19 | 5 | Data or Domain Model Closure | Crystallized | Current relationship vocabulary is sufficient; richer relationship and state structure is evidence-driven and deferred |
+| 2026-08-19-06 | 2026-08-19 | 6 | Shared Design Guidance and `design.md` Direction | Crystallized | Section-owned reusable UX/UI guidance supplies canonical inputs for a derived design-context handoff companion |

@@ -295,7 +295,9 @@ Screen / View, User Flow and UI Requirement should be included because implement
 
 The MVP should not introduce lower-level design-system artifact types such as Design Token, Color, Typography, UI Component, Wireframe or Prototype.
 
-Users may still record implementation-relevant UX/UI design guidance, such as visual intent, layout, color use, typography, spacing, shapes, elevation, component usage and states, within `UX/UI Design Requirements and Interaction Notes` or through external design-source references. These are section content or structured fields in the MVP, not separate Product Artifacts.
+Users may still record implementation-relevant UX/UI design guidance, such as visual intent, layout, color use, typography, spacing, shapes, elevation, component usage and states, within `UX/UI Design Requirements and Interaction Notes` or through external design-source references. Shared Design Guidance is structured, section-owned knowledge: it may capture reusable direction and, when known, named design values or conventions. These are section content or structured fields in the MVP, not separate Product Artifacts.
+
+An Implementation Handoff may render the available Shared Design Guidance together with relevant Screen / Views, User Flows, UI Requirements, Resource References and linked quality expectations as a derived `design.md` companion. The file makes implementation-facing design context portable for human or AI consumers; it is not canonical Product Knowledge, a design-system replacement, or a reason to invent unspecified visual values.
 
 ---
 
@@ -406,7 +408,7 @@ A UI Requirement may include:
 - accessibility verification guidance;
 - acceptance criteria.
 
-Project-wide visual design guidance may be held in the containing `UX/UI Design Requirements and Interaction Notes` section rather than repeated in each UI Requirement.
+Project-wide visual design guidance may be held as Shared Design Guidance in the containing `UX/UI Design Requirements and Interaction Notes` section rather than repeated in each UI Requirement.
 
 A Risk may include:
 
