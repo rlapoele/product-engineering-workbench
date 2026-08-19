@@ -1070,11 +1070,12 @@ A Screen / View is an independent Product Artifact. It describes a stable user-f
 
 Each Screen / View has a required Title and Purpose. It may include Key content and actions, Key states with a short explanation, relevant User Profile context and visual Resource References. Detailed interaction, visual, responsive and accessibility obligations remain UI Requirements; cross-view journeys remain User Flows.
 
+A Screen / View may `support` a Core Feature, `depend_on` a Functional Requirement and be directly `validated` by Acceptance Criteria. A User Flow may `include` a Screen / View. This new `includes` relationship is not containment: one view may appear in more than one flow, and flow-specific position or state may be relationship metadata. UI Requirement-to-Screen / View relationships remain a later UI Requirement decision.
+
 An Implementation Handoff may render the available Shared Design Guidance, relevant UX/UI artifacts, visual Resource References, and applicable responsive or accessibility expectations as a derived top-level `design.md` companion. The file is portable context for human or AI implementation consumers. It is not canonical Product Knowledge, a design-system replacement, a substitute for behavioral requirements or Acceptance Criteria, or a basis for inventing missing visual decisions.
 
 ## Open Decisions
 
-- Which explicit relationships should connect Screen / View to related product knowledge?
 - Which initial fields and relationships distinguish User Flow and UI Requirement artifacts?
 - When is a `design.md` companion included, and how should it represent unavailable or incomplete UX/UI context?
 

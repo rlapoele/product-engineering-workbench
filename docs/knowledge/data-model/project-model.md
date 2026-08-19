@@ -387,6 +387,8 @@ A Screen / View has a required Title and Purpose. Purpose explains what a person
 
 Detailed interaction, visual, responsive and accessibility obligations remain UI Requirements; journeys across views remain User Flows. Explicit relationships to Features, Flows, UI Requirements, Functional Requirements and Acceptance Criteria are decided separately from this initial field shape.
 
+A Screen / View may `support` a Core Feature when it provides part of that capability's user-facing experience, and may `depend_on` a Functional Requirement when its meaning or availability relies on that required behavior. Acceptance Criteria may directly `validate` a Screen / View. A User Flow may explicitly `include` a Screen / View. `includes` is distinct from `part_of`: the same Screen / View may appear in more than one flow, so a flow is not its parent container. `includes` may later carry flow-specific metadata such as sequence position or relevant view state without making that metadata part of the Screen / View itself. UI Requirement-to-Screen / View relationships remain a decision within the UI Requirement model.
+
 A User Flow may include:
 
 - entry point;
@@ -536,6 +538,7 @@ The initial relationship model should include:
 - validates
 - enforces
 - governs
+- includes
 - depends_on
 - affects
 - explains
@@ -570,6 +573,8 @@ Example: a Functional Requirement enforces a Domain Rule that a Customer may hol
 `governs` means a Domain Rule constrains valid meaning, state or behavior of a Domain Concept or Domain Relationship.
 
 Example: a Domain Rule governs the Customer–Subscription relationship.
+
+`includes` means a User Flow explicitly uses a Screen / View as part of its journey. It is not containment: one Screen / View may be included by multiple User Flows. The relationship may carry flow-specific metadata, such as sequence position or relevant view state.
 
 `depends_on` means an artifact depends on another artifact being true, available, resolved or decided.
 
