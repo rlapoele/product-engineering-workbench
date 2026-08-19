@@ -1281,6 +1281,8 @@ User Flows describe a user-experience journey across interface contexts: entry, 
 
 Each User Flow has a required Title, primary User Profile, Entry context, Intended outcome and one or more ordered Journey steps. Each Journey step has a required Action, Surface selected from Screen / Views, and Feedback and continuation; it may name a relevant user-facing state. Intentional exits and Error recovery paths are distinct optional structures so user-initiated cancellation is not confused with system-initiated failure recovery.
 
+Each Journey step creates a required `includes` relationship to its selected Screen / View. A User Flow may `support` one or more Core Features and `depend_on` Functional Requirements; Acceptance Criteria may directly `validate` it. A related User Story or Use Case may use the ordinary `relates_to` relationship when it provides genuine supporting context.
+
 ---
 
 ## User Profile

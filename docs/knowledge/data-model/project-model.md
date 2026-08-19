@@ -415,6 +415,8 @@ User Flow may additionally record two distinct optional unhappy-path structures:
 
 The model records only established user-visible failure behavior; it does not invent technical edge cases merely to complete the structure.
 
+Each Journey step necessarily creates an `includes` relationship from its User Flow to the selected Screen / View. A User Flow may `support` one or more Core Features when the journey realizes part of those capabilities, and may `depend_on` Functional Requirements when it relies on their required system behavior. Acceptance Criteria may directly `validate` a User Flow. Its primary User Profile remains a structured required field, rather than a generic relationship. A User Story or Use Case may use `relates_to` when it genuinely supplies supporting context; no specialized relationship is needed. UI Requirement-to-User Flow relationship semantics remain a decision within the UI Requirement model.
+
 A UI Requirement may include:
 
 - related screen or flow;
