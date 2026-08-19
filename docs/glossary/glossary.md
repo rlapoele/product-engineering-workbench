@@ -1283,6 +1283,8 @@ Each User Flow has a required Title, primary User Profile, Entry context, Intend
 
 Each Journey step creates a required `includes` relationship to its selected Screen / View. A User Flow may `support` one or more Core Features and `depend_on` Functional Requirements; Acceptance Criteria may directly `validate` it. A related User Story or Use Case may use the ordinary `relates_to` relationship when it provides genuine supporting context.
 
+Each User Flow receives an immutable project-scoped readable reference when created, such as `UF-001`, in addition to its internal artifact identifier. The reference remains unchanged by title, step-order, related-view or archival changes, and is retained in saved Implementation Handoff snapshots.
+
 ---
 
 ## User Profile

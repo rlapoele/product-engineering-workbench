@@ -1088,6 +1088,8 @@ Each Journey step creates the required `includes` relationship to its selected S
 
 The UX/UI section presents User Flows in their own block. `Add User Flow` opens a private draft for its required fields, ordered Journey steps, and optional unhappy paths. At least one step with a Screen / View is required to save. The draft is preserved while the author explicitly creates a missing primary User Profile or Screen / View, then resumes with it selected. Steps may be added, edited, removed and reordered; their order supplies `includes` sequence metadata. Contextual creation from a Screen / View, Core Feature or Functional Requirement preselects the relevant step Surface or relationship. Saved User Flows use ordinary edit/archive actions and direct Acceptance Criterion authoring.
 
+Each User Flow receives an immutable project-scoped readable reference at creation, such as `UF-001`. It remains stable through title, step-order, included Screen / View, relationship and archival changes, and is retained in prepared handoff snapshots, including derived `design.md` output. It is not an implementation route, analytics event or test-case identifier.
+
 An Implementation Handoff may render the available Shared Design Guidance, relevant UX/UI artifacts, visual Resource References, and applicable responsive or accessibility expectations as a derived top-level `design.md` companion. The file is portable context for human or AI implementation consumers. It is not canonical Product Knowledge, a design-system replacement, a substitute for behavioral requirements or Acceptance Criteria, or a basis for inventing missing visual decisions.
 
 ## Open Decisions

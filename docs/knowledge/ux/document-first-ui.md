@@ -186,6 +186,8 @@ Each User Flow requires a **Title**, primary **User Profile**, **Entry context**
 
 Each Journey step necessarily creates the Flow's `includes` relationship to its selected Screen / View. A User Flow may `support` one or more Core Features and `depend_on` Functional Requirements. Acceptance Criteria may directly `validate` it. The primary User Profile is its required structured field; related User Stories or Use Cases may use ordinary `relates_to` when genuinely useful. UI Requirement-to-Flow relationships remain deferred to the UI Requirement model.
 
+Each saved User Flow renders its immutable project-scoped readable reference, such as `UF-001`. It is distinct from an implementation route, analytics event or test-case identifier, and does not change when the Flow's title, step order, included Screen / Views, relationships or lifecycle state changes. Prepared handoffs retain the included reference and saved Flow snapshot.
+
 ### User Flow authoring
 
 The UX/UI section presents a fixed **User Flows** block. `Add User Flow` opens a private draft for Title, primary User Profile, Entry context, Intended outcome and ordered Journey steps, with optional Intentional exits and Error recovery paths. At least one Journey step with a selected Screen / View is required to save. When the needed User Profile or Screen / View does not exist, the workbench preserves the draft while the author explicitly creates it, then resumes with it selected.
