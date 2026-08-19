@@ -1235,6 +1235,8 @@ It applies to a Screen / View or User Flow and may trace to system behavior and 
 
 Each UI Requirement has a required Title, one required primary applies-to target selected from Screen / View or User Flow, and a canonical Requirement statement. It may include optional additional applies-to targets, Interaction and state details, Accessibility expectations, Responsive expectations and Resource References. One UI Requirement expresses one independently testable interface obligation; distinct obligations are separate requirements even when they share a target.
 
+Each applies-to target is an explicit `applies_to` relationship, with primary or additional target status as relationship metadata; the visible target fields are its document-facing projection. A UI Requirement may `depend_on` a Functional Requirement when its interface obligation relies on required system behavior. Acceptance Criteria may directly `validate` a UI Requirement.
+
 ---
 
 ## UX/UI Design Requirements and Interaction Notes

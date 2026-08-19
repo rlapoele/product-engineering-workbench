@@ -436,6 +436,8 @@ It may include:
 
 The Requirement statement remains canonical; optional detail sharpens it only when needed and is not a completion checklist. One UI Requirement expresses one independently testable interface obligation. When interaction, feedback, state, accessibility or responsive behavior can change or be tested independently, it becomes a separate UI Requirement even when it shares a target.
 
+Each primary or additional applies-to target is an explicit `applies_to` relationship to its Screen / View or User Flow; relationship metadata records whether it is primary or additional, while the target fields are its document-facing projection. A UI Requirement may `depend_on` a Functional Requirement when the interface obligation relies on that required system behavior. Acceptance Criteria may directly `validate` a UI Requirement. No direct Feature, User Story, Use Case, Non-Functional Requirement or Shared Design Guidance relationship is required initially: the UI Requirement's explicit scope and established graph provide the needed traceability.
+
 Project-wide visual design guidance may be held as Shared Design Guidance in the containing `UX/UI Design Requirements and Interaction Notes` section rather than repeated in each UI Requirement.
 
 A Risk may include:
@@ -561,6 +563,7 @@ The initial relationship model should include:
 - validates
 - enforces
 - governs
+- applies_to
 - includes
 - depends_on
 - affects
@@ -596,6 +599,8 @@ Example: a Functional Requirement enforces a Domain Rule that a Customer may hol
 `governs` means a Domain Rule constrains valid meaning, state or behavior of a Domain Concept or Domain Relationship.
 
 Example: a Domain Rule governs the Customer–Subscription relationship.
+
+`applies_to` means a UI Requirement explicitly scopes one interface obligation to a Screen / View or User Flow. The relationship carries whether that target is primary or additional.
 
 `includes` means a User Flow explicitly uses a Screen / View as part of its journey. It is not containment: one Screen / View may be included by multiple User Flows. The relationship may carry flow-specific metadata, such as sequence position or relevant view state.
 

@@ -1098,11 +1098,12 @@ A UI Requirement is an independent Product Artifact for one specific, observable
 
 Each UI Requirement has required Title, primary applies-to Screen / View or User Flow target and canonical Requirement statement. It may have additional explicit targets plus optional Interaction and state details, Accessibility expectations, Responsive expectations and Resource References. The statement remains canonical; the optional details clarify it only where relevant and do not form a checklist. One independently testable obligation remains one UI Requirement, even when several obligations share a target.
 
+Each applies-to target is an explicit `applies_to` relationship, with primary/additional target status as relationship metadata and the target fields as its document-facing projection. A UI Requirement may `depend_on` a Functional Requirement when it relies on required system behavior; Acceptance Criteria may directly `validate` it. No direct Feature, User Story, Use Case, Non-Functional Requirement or Shared Design Guidance relationship is required initially.
+
 An Implementation Handoff may render the available Shared Design Guidance, relevant UX/UI artifacts, visual Resource References, and applicable responsive or accessibility expectations as a derived top-level `design.md` companion. The file is portable context for human or AI implementation consumers. It is not canonical Product Knowledge, a design-system replacement, a substitute for behavioral requirements or Acceptance Criteria, or a basis for inventing missing visual decisions.
 
 ## Open Decisions
 
-- Which relationships should connect UI Requirement to system behavior and validation beyond its applies-to targets?
 - When is a `design.md` companion included, and how should it represent unavailable or incomplete UX/UI context?
 
 ## Boundary
