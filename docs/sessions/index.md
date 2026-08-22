@@ -217,3 +217,4 @@
 | 2026-08-19-24 | 2026-08-19 | 24 | UI Requirement Initial Shape | Crystallized | Primary context target, canonical obligation and optional local interaction, accessibility and responsive detail |
 | 2026-08-19-25 | 2026-08-19 | 25 | UI Requirement Relationships | Crystallized | Explicit applies-to scope plus lean Functional Requirement dependency and acceptance validation traceability |
 | 2026-08-22-01 | 2026-08-22 | 1 | UI Requirement Authoring Flow | Crystallized | Direct authoring, optional in-draft additional targets, preserved prerequisites and deliberate primary-target reassignment |
+| 2026-08-22-02 | 2026-08-22 | 2 | UI Requirement Stable References | Crystallized | Immutable project-scoped `UIR-001` references for durable UX/UI and handoff traceability |
