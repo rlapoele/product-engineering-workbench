@@ -192,6 +192,14 @@ Each UI Requirement requires a **Title**, one deliberately selected **Primary ap
 
 Each target is represented by an explicit `applies_to` relationship, whose metadata records whether the target is primary or additional; the visible target fields are its document-facing projection. A UI Requirement may `depend_on` a Functional Requirement where the interface obligation relies on required system behavior. An Acceptance Criterion may directly `validate` a UI Requirement. No direct Feature, User Story, Use Case, Non-Functional Requirement or Shared Design Guidance relationship is required initially.
 
+### UI Requirement authoring
+
+The UX/UI section presents a fixed **UI Requirements** block. `Add UI Requirement` opens a private draft for Title, a deliberately selected primary target type and target, and Requirement statement. The author may reveal `Also applies to` during that same draft to select optional additional Screen / View or User Flow targets; this is not required for initial save. Starting from a Screen / View or User Flow preselects it as the visible, changeable primary target.
+
+When no suitable primary target exists, the workbench preserves the UI Requirement draft while the author explicitly creates the needed Screen / View or User Flow, then resumes with it selected. A saved UI Requirement exposes `Edit UI Requirement`, secondary locally confirmed `Archive UI Requirement`, existing `Add reference`, and `Add Acceptance Criterion`, which opens ordinary criterion authoring with the UI Requirement preselected as the primary validation target.
+
+Changing primary target is deliberate. Promoting an already additional target to primary retains the former primary as an additional target because the applies-to scope is unchanged. Selecting a wholly new primary target requires the author to choose whether to retain the former primary as an additional target or remove it; the workbench never silently changes the established applies-to scope.
+
 Each Journey step necessarily creates the Flow's `includes` relationship to its selected Screen / View. A User Flow may `support` one or more Core Features and `depend_on` Functional Requirements. Acceptance Criteria may directly `validate` it. The primary User Profile is its required structured field; related User Stories or Use Cases may use ordinary `relates_to` when genuinely useful. UI Requirement-to-Flow relationships remain deferred to the UI Requirement model.
 
 Each saved User Flow renders its immutable project-scoped readable reference, such as `UF-001`. It is distinct from an implementation route, analytics event or test-case identifier, and does not change when the Flow's title, step order, included Screen / Views, relationships or lifecycle state changes. Prepared handoffs retain the included reference and saved Flow snapshot.
