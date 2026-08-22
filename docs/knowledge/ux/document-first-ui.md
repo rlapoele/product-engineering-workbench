@@ -150,21 +150,21 @@ Shared Design Guidance contains a bounded **Design System Definition**. It gives
 
 The Definition records a required **Name**, optional **Description**, a visible system-managed `design.md` target/version, and explicitly recorded intentionally omitted standard sections with an optional reason. Name is prefilled from the Project title but remains editable. Name and **Overview** are required to save the Definition. It has five typed token collections:
 
-- **Colors:** token name and CSS color value.
-- **Typography:** token name plus font family, size, weight, line height and optional letter spacing, feature or variation settings.
-- **Spacing:** token name and a dimension or numeric value.
-- **Rounded shapes:** token name and a dimension value.
+- **Colors:** token name and a CSS color literal or compatible token reference.
+- **Typography:** token name plus font family, size, weight, line height and optional letter spacing, feature or variation settings; applicable values may be literal or compatible token references.
+- **Spacing:** token name and a dimension, numeric value or compatible token reference.
+- **Rounded shapes:** token name and a dimension value or compatible token reference.
 - **Components:** component or variant name and named property values, each a literal or token reference.
 
 It also has ordered human-readable guidance sections: **Overview**, **Colors**, **Typography**, **Layout**, **Elevation & Depth**, **Shapes**, **Components**, and **Do's and Don'ts**. Overview is required; the remaining prose sections are optional. The token collections contain normative exported values; the prose records rationale, intended application and guardrails. Do's and Don'ts are structured concise guidance entries. Resource References may point to supporting external design systems, design files, wireframes, prototypes, screenshots or source material without treating those sources as canonical tokens.
 
-Each token or component/variant name is unique within its collection. A standard section is represented by relevant typed data or prose, or explicitly listed as intentionally omitted; an omission may state why. Component states use ordinary named variants such as `button-primary-hover`, not a separate UI-state model. Resource References remain source material, never token data.
+Each token or component/variant name is unique within its collection. Token identifiers are author-defined: a raw palette or scale such as `blue-600`, a semantic alias such as `action-primary`, and any other useful convention are equally valid. Values may refer to compatible tokens, allowing authors to build semantic aliases from raw values when useful. Optional labels or tags may help authors organize their work but are descriptive rather than required categories. References must resolve, be type-compatible with their use and be acyclic. The workbench does not require semantic naming, a foundation-versus-semantic split or another design-system methodology. A standard section is represented by relevant typed data or prose, or explicitly listed as intentionally omitted; an omission may state why. Component states use ordinary named variants such as `button-primary-hover`, not a separate UI-state model. Resource References remain source material, never token data.
 
 Specific observable interface behavior remains a UI Requirement, and measurable quality remains a Non-Functional Requirement. Cross-cutting responsive or accessibility principles may remain Shared Design Guidance; local observable expectations belong in UI Requirements. Screen / Views, User Flows and UI Requirements are not design-system tokens. A derived `design.md` may include them only in a clearly labelled Workbench extension, while their canonical data remains in the Specification.
 
 ### Design System Definition authoring
 
-The Definition's detailed authoring flow, typed-value and token-reference validation, component-property vocabulary, and generated `design.md` serialization remain to be decided. The MVP must not invent missing tokens or silently treat a prose rule as a typed value. Each prepared handoff retains its generated format version in the immutable handoff snapshot.
+The Definition's detailed authoring flow, target-specific value syntax, component-property vocabulary and generated `design.md` serialization remain to be decided. The MVP must not invent missing tokens or silently treat a prose rule as a typed value. Each prepared handoff retains its generated format version in the immutable handoff snapshot.
 
 ### Screen / View direction
 

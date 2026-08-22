@@ -222,3 +222,4 @@
 | 2026-08-22-04 | 2026-08-22 | 4 | UI Requirement Integrated Validation | Crystallized | Create-first-project scenario validates the complete UX/UI obligation and evidence chain |
 | 2026-08-22-05 | 2026-08-22 | 5 | Design System Definition Direction | Crystallized | Section-owned typed design tokens and guidance enable a spec-compatible `design.md` companion |
 | 2026-08-22-06 | 2026-08-22 | 6 | Design System Definition Initial Shape | Crystallized | Minimum fields, explicit omissions, typed collections and handoff format snapshots |
+| 2026-08-22-07 | 2026-08-22 | 7 | Design System Definition Token Flexibility | Crystallized | Author-defined token names, optional tags and safe token references without a prescribed methodology |
