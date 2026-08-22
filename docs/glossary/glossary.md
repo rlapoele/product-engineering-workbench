@@ -452,7 +452,9 @@ If its linked record is Archived, the link remains valid and is labeled Archived
 
 A Design System Definition is the structured, section-owned part of Shared Design Guidance that represents reusable visual-system knowledge for a derived `design.md` handoff companion. It is not a Product Artifact, a visual design editor, or a frontend implementation model.
 
-It records design-system metadata, intentionally omitted sections, typed token collections for colors, typography, spacing, rounded shapes and components, and ordered human-readable guidance for Overview, Colors, Typography, Layout, Elevation & Depth, Shapes, Components, and Do's and Don'ts. Token values are the normative exported values when present; prose provides their rationale and intended application. Each component may contain named variants and token-property values that are literals or token references.
+It records a required Name, optional Description, system-managed `design.md` format/version and intentionally omitted sections; typed token collections for colors, typography, spacing, rounded shapes and components; and ordered human-readable guidance for Overview, Colors, Typography, Layout, Elevation & Depth, Shapes, Components, and Do's and Don'ts. Name and Overview are required to save the Definition. Token values are the normative exported values when present; prose provides their rationale and intended application. Each component may contain named variants and token-property values that are literals or token references.
+
+Every token or component/variant name is unique within its collection. A standard section is represented by relevant typed data or prose, or is explicitly listed as intentionally omitted with an optional reason. Components states are named variants, not a separate UI state model. Resource References remain source material, not token data.
 
 Screen / Views, User Flows and UI Requirements remain independent Product Artifacts. They may be represented in a clearly labelled, non-normative Workbench extension to `design.md`, but they are not design-system tokens and do not replace the canonical specification.
 
