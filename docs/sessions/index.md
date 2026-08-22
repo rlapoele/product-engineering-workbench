@@ -218,3 +218,4 @@
 | 2026-08-19-25 | 2026-08-19 | 25 | UI Requirement Relationships | Crystallized | Explicit applies-to scope plus lean Functional Requirement dependency and acceptance validation traceability |
 | 2026-08-22-01 | 2026-08-22 | 1 | UI Requirement Authoring Flow | Crystallized | Direct authoring, optional in-draft additional targets, preserved prerequisites and deliberate primary-target reassignment |
 | 2026-08-22-02 | 2026-08-22 | 2 | UI Requirement Stable References | Crystallized | Immutable project-scoped `UIR-001` references for durable UX/UI and handoff traceability |
+| 2026-08-22-03 | 2026-08-22 | 3 | UI Requirement Impact Propagation | Crystallized | Stale direct evidence, coverage cues on targets and explicit upstream dependency behavior |

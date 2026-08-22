@@ -1239,6 +1239,8 @@ Each UI Requirement receives an immutable project-scoped readable reference at c
 
 Each applies-to target is an explicit `applies_to` relationship, with primary or additional target status as relationship metadata; the visible target fields are its document-facing projection. A UI Requirement may `depend_on` a Functional Requirement when its interface obligation relies on required system behavior. Acceptance Criteria may directly `validate` a UI Requirement.
 
+When a UI Requirement changes or is archived, its directly validating Acceptance Criteria become Stale and every Screen / View or User Flow it applies to receives a coverage/readiness cue. A changed or archived applies-to Screen / View or User Flow, or depended-on Functional Requirement, makes the UI Requirement Stale. Primary and additional applies-to targets have identical propagation behavior. A material Resource Reference change attached to a UI Requirement is its Revision and follows the same propagation.
+
 ---
 
 ## UX/UI Design Requirements and Interaction Notes
