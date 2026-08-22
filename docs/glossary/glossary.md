@@ -448,6 +448,14 @@ If its linked record is Archived, the link remains valid and is labeled Archived
 
 # D
 
+## Design System Definition
+
+A Design System Definition is the structured, section-owned part of Shared Design Guidance that represents reusable visual-system knowledge for a derived `design.md` handoff companion. It is not a Product Artifact, a visual design editor, or a frontend implementation model.
+
+It records design-system metadata, intentionally omitted sections, typed token collections for colors, typography, spacing, rounded shapes and components, and ordered human-readable guidance for Overview, Colors, Typography, Layout, Elevation & Depth, Shapes, Components, and Do's and Don'ts. Token values are the normative exported values when present; prose provides their rationale and intended application. Each component may contain named variants and token-property values that are literals or token references.
+
+Screen / Views, User Flows and UI Requirements remain independent Product Artifacts. They may be represented in a clearly labelled, non-normative Workbench extension to `design.md`, but they are not design-system tokens and do not replace the canonical specification.
+
 ## Data or Domain Model
 
 Data or Domain Model is a Specification Section that presents product-domain structure without becoming a database-design surface. It contains fixed **Domain Concepts**, **Domain Relationships** and **Domain Rules** blocks.
@@ -1247,17 +1255,17 @@ When a UI Requirement changes or is archived, its directly validating Acceptance
 
 UX/UI Design Requirements and Interaction Notes is a Specification Section for the application-specific UX/UI guidance needed for faithful implementation.
 
-It may include Shared Design Guidance, interaction patterns, component usage and states, responsive and accessibility expectations, and references to external design sources. It is not a design-system authoring surface; lower-level values may remain section content, structured fields or external references rather than separate Product Artifacts in the MVP.
+It may include Shared Design Guidance, interaction patterns, component usage and states, responsive and accessibility expectations, and references to external design sources. Its Shared Design Guidance includes a bounded, structured Design System Definition for reusable values and rationale, without creating a visual design workspace, separate design-token Product Artifacts or frontend implementation model.
 
 ---
 
 ## Shared Design Guidance
 
-Shared Design Guidance is structured, section-owned UX/UI knowledge with three blocks: required Design direction, optional Reusable design conventions and optional Application guidance. It expresses reusable visual direction and, when known, named design values or conventions. It provides common context for UI Requirements, Screen / Views and User Flows without duplicating it in each artifact or creating separate Design Token, Color, Typography or UI Component Product Artifacts.
+Shared Design Guidance is structured, section-owned UX/UI knowledge that provides common context for UI Requirements, Screen / Views and User Flows without duplicating their local obligations. Its Design System Definition preserves typed reusable design-system values and ordered prose guidance; Resource References retain supporting design sources such as Figma files, wireframes, prototypes and screenshots.
 
-Reusable design conventions record a name, a precise value or rule, and intended use under fixed document-facing headings. Application guidance records concise preferences and avoidances, plus shared responsive or accessibility principles only when they are genuinely cross-cutting.
+The Definition has metadata, explicit intentional omissions, typed colors, typography, spacing, rounded-shape and component token collections, and prose guidance in the fixed order Overview, Colors, Typography, Layout, Elevation & Depth, Shapes, Components, and Do's and Don'ts. Color, typography, spacing, rounded-shape and component values are stored as structured values rather than inferred from prose. Responsive and accessibility expectations remain Shared Design Guidance only when cross-cutting, UI Requirements when local and observable, and Non-Functional Requirements when measurable.
 
-It may be rendered as a derived `design.md` handoff companion. That file is an implementation-facing representation, not canonical Product Knowledge or a replacement for a full design system.
+It may be rendered as a derived `design.md` handoff companion with machine-readable tokens and human-readable guidance. That file is an implementation-facing representation, not canonical Product Knowledge or a frontend implementation model. Its optional Workbench extension may reference Screen / Views, User Flows and UI Requirements, but those artifacts remain canonical in the Specification.
 
 ---
 

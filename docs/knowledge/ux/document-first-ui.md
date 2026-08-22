@@ -144,21 +144,25 @@ The `User Stories and Use Cases` section may contain multiple items. Each item s
 
 ## UX/UI Design Requirements And Interaction Notes
 
-This section captures the application-specific UX/UI guidance needed for faithful implementation. It may contain UI Requirements, Screen/View and User Flow references, as well as structured, section-owned **Shared Design Guidance** that should not be repeated in each artifact.
+This section captures the application-specific UX/UI guidance needed for faithful implementation. It may contain UI Requirements, Screen/View and User Flow references, Resource References, and structured, section-owned **Shared Design Guidance** that should not be repeated in each artifact.
 
-Relevant content may include visual intent, layout and spacing conventions, color and typography use, shapes and elevation, component usage and states, responsive behavior, accessibility expectations and references to external design sources such as an existing design system or design files.
+Shared Design Guidance contains a bounded **Design System Definition**. It gives the workbench explicit, typed reusable visual data to generate a valid and valuable `design.md` companion, rather than requiring it to infer tokens from prose. It remains section-owned Product Knowledge: the workbench does not introduce separate Design Token, Color, Typography or UI Component Product Artifacts, a visual canvas, Figma-style workspace, or frontend implementation model.
 
-Shared Design Guidance has three section-owned blocks. **Design direction** is required short prose that describes the intended visual character, hierarchy and product experience. **Reusable design conventions** is optional structured content: each entry records a Name, precise Value or rule, and Intended use under one fixed document-facing heading—Color and surfaces, Typography, Layout and spacing, Shape and elevation, or Component conventions. **Application guidance** is optional concise prose recording preferences and avoidances, plus responsive or accessibility principles only when genuinely cross-cutting. Authors may save useful guidance with Design direction alone and are never required to invent colors, type scales, breakpoints or other values.
+The Definition records metadata—name, optional description and declared format version—and explicitly records intentionally omitted standard sections with an optional reason. It has five typed token collections:
 
-Specific observable interface behavior remains a UI Requirement, and measurable quality remains a Non-Functional Requirement. Shared Design Guidance provides their common context; it does not duplicate their local obligations.
+- **Colors:** token name and CSS color value.
+- **Typography:** token name plus font family, size, weight, line height and optional letter spacing, feature or variation settings.
+- **Spacing:** token name and a dimension or numeric value.
+- **Rounded shapes:** token name and a dimension value.
+- **Components:** component or variant name and named property values, each a literal or token reference.
 
-The section is not a design-system authoring surface. In the MVP, this guidance remains structured section content, artifact fields or external references rather than separate Design Token, Color, Typography or UI Component Product Artifacts. A handoff may render the available shared guidance and relevant UX/UI knowledge as a derived `design.md` companion for human or AI implementation consumers; it must not invent missing values or replace a full design system.
+It also has ordered human-readable guidance sections: **Overview**, **Colors**, **Typography**, **Layout**, **Elevation & Depth**, **Shapes**, **Components**, and **Do's and Don'ts**. The token collections contain normative exported values; the prose records rationale, intended application and guardrails. Do's and Don'ts are structured concise guidance entries. Resource References may point to supporting external design systems, design files, wireframes, prototypes, screenshots or source material without treating those sources as canonical tokens.
 
-### Shared Design Guidance authoring
+Specific observable interface behavior remains a UI Requirement, and measurable quality remains a Non-Functional Requirement. Cross-cutting responsive or accessibility principles may remain Shared Design Guidance; local observable expectations belong in UI Requirements. Screen / Views, User Flows and UI Requirements are not design-system tokens. A derived `design.md` may include them only in a clearly labelled Workbench extension, while their canonical data remains in the Specification.
 
-The UX/UI section displays fixed **Design direction**, **Reusable design conventions** and **Application guidance** blocks. Its contextual actions reveal `Define design direction`, `Add convention` and `Add application guidance`; authors may begin with any of them. A Design direction draft is private short prose. A convention draft selects a fixed heading and collects its Name, Value or rule, and Intended use. Application guidance is one private concise-prose draft.
+### Design System Definition authoring
 
-Design direction is required before the first convention or Application guidance can save. If it is missing, the workbench preserves that private draft while the author explicitly creates Design direction, then resumes the original draft. Saved conventions expose `Edit convention` and locally confirmed `Remove convention`. Saved Design direction and Application guidance expose ordinary edit actions; `Clear application guidance` has local confirmation. The flow creates neither Product Artifacts nor a separate Shared Design Guidance management surface.
+The Definition's detailed authoring flow, minimum save rule, typed-value and token-reference validation, component-property vocabulary, and generated `design.md` serialization remain to be decided. The MVP must not invent missing tokens or silently treat a prose rule as a typed value.
 
 ### Screen / View direction
 

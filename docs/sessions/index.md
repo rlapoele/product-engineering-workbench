@@ -220,3 +220,4 @@
 | 2026-08-22-02 | 2026-08-22 | 2 | UI Requirement Stable References | Crystallized | Immutable project-scoped `UIR-001` references for durable UX/UI and handoff traceability |
 | 2026-08-22-03 | 2026-08-22 | 3 | UI Requirement Impact Propagation | Crystallized | Stale direct evidence, coverage cues on targets and explicit upstream dependency behavior |
 | 2026-08-22-04 | 2026-08-22 | 4 | UI Requirement Integrated Validation | Crystallized | Create-first-project scenario validates the complete UX/UI obligation and evidence chain |
+| 2026-08-22-05 | 2026-08-22 | 5 | Design System Definition Direction | Crystallized | Section-owned typed design tokens and guidance enable a spec-compatible `design.md` companion |
