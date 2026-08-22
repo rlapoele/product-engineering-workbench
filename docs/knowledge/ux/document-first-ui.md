@@ -148,7 +148,7 @@ This section captures the application-specific UX/UI guidance needed for faithfu
 
 Shared Design Guidance contains a bounded **Design System Definition**. It gives the workbench explicit, typed reusable visual data to generate a valid and valuable `design.md` companion, rather than requiring it to infer tokens from prose. It remains section-owned Product Knowledge: the workbench does not introduce separate Design Token, Color, Typography or UI Component Product Artifacts, a visual canvas, Figma-style workspace, or frontend implementation model.
 
-The Definition records a required **Name**, optional **Description**, a visible system-managed `design.md` target/version, and explicitly recorded intentionally omitted standard sections with an optional reason. Name is prefilled from the Project title but remains editable. Name and **Overview** are required to save the Definition. It has five typed token collections:
+The Definition records a required **Name**, optional **Description**, and explicitly recorded intentionally omitted standard sections with an optional reason. Name is prefilled from the Project title but remains editable. Name and **Overview** are required to save the Definition. It has five typed token collections:
 
 - **Colors:** token name and a CSS color literal or compatible token reference.
 - **Typography:** token name plus font family, size, weight, line height and optional letter spacing, feature or variation settings; applicable values may be literal or compatible token references.
@@ -162,9 +162,13 @@ Each token and component name is unique within its collection; configuration nam
 
 Specific observable interface behavior remains a UI Requirement, and measurable quality remains a Non-Functional Requirement. Cross-cutting responsive or accessibility principles may remain Shared Design Guidance; local observable expectations belong in UI Requirements. Screen / Views, User Flows and UI Requirements are not design-system tokens. A derived `design.md` may include them only in a clearly labelled Workbench extension, while their canonical data remains in the Specification.
 
-### Design System Definition authoring
+### Design System Definition authoring and handoff export
 
-The Definition's detailed authoring flow, target-specific value syntax, component-property vocabulary and generated `design.md` serialization remain to be decided. It does not add a component-inheritance or separate UI-state model. The MVP must not invent missing tokens or silently treat a prose rule as a typed value. Each prepared handoff retains its generated format version in the immutable handoff snapshot.
+The Definition is target-independent. During **Prepare Handoff**, the author chooses whether to include a Design System Companion and selects or accepts a visible default **Design System Companion Export Profile**; neither decision is stored in the Definition. The first profile is Google `DESIGN.md` `alpha`. It maps the Definition's metadata, omissions and typed token collections to YAML frontmatter; renders its prose in the required standard order; preserves target-compatible token references; and adds any Workbench-specific Screen / View, User Flow and UI Requirement context only after the standard sections, under a clearly labelled non-normative extension.
+
+For that profile, each Component configuration becomes a flat target entry named `component--configuration`. A duplicate resulting key blocks export rather than renaming source knowledge. Configuration descriptions render in Components guidance; optional labels and tags remain authoring metadata and are not exported by default. Google requires a `primary` color when Colors are included: a source `primary` token fulfils this automatically, otherwise the author selects a per-handoff source-color binding and the export emits a derived `primary` alias. Target-incompatible values or references and duplicate component entries block this profile; unknown component property names are preserved with a warning. The prepared-handoff snapshot retains the companion-inclusion choice, profile/version, bindings and generated file.
+
+Detailed source authoring flow and component-property vocabulary remain to be decided. The model does not add a component-inheritance or separate UI-state system, and the MVP must not invent missing source tokens or silently treat prose as a typed value.
 
 ### Screen / View direction
 
