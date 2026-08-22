@@ -227,3 +227,4 @@
 | 2026-08-23-02 | 2026-08-23 | 2 | Design System Companion Export Profiles | Crystallized | Per-handoff Google `DESIGN.md` alpha mapping, optional inclusion and immutable profile snapshots |
 | 2026-08-23-03 | 2026-08-23 | 3 | Design System Definition Authoring and Validation | Crystallized | Direct incremental authoring, preserved token references and source-versus-profile validation boundary |
 | 2026-08-23-04 | 2026-08-23 | 4 | Design System Companion Integrated Validation | Crystallized | Project Workspace scenario validates authoring, export, snapshot and profile-collision recovery |
+| 2026-08-23-05 | 2026-08-23 | 5 | Design System Companion Handoff Controls | Crystallized | Default-off scope-panel control with conditional profile preflight and preview visibility |
