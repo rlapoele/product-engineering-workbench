@@ -228,3 +228,4 @@
 | 2026-08-23-03 | 2026-08-23 | 3 | Design System Definition Authoring and Validation | Crystallized | Direct incremental authoring, preserved token references and source-versus-profile validation boundary |
 | 2026-08-23-04 | 2026-08-23 | 4 | Design System Companion Integrated Validation | Crystallized | Project Workspace scenario validates authoring, export, snapshot and profile-collision recovery |
 | 2026-08-23-05 | 2026-08-23 | 5 | Design System Companion Handoff Controls | Crystallized | Default-off scope-panel control with conditional profile preflight and preview visibility |
+| 2026-08-23-06 | 2026-08-23 | 6 | Design System Definition Reference-Safe Edits | Crystallized | Preserved renames, blocked referenced removals, section revisions and immutable snapshots |
