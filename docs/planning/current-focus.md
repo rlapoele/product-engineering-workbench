@@ -2,7 +2,7 @@
 
 **Status:** Active
 
-**Last Updated:** 2026-08-23
+**Last Updated:** 2026-08-24
 
 ---
 
@@ -10,7 +10,7 @@
 
 Maintain the coherence of the crystallized Product Knowledge foundation while following the adaptive roadmap of bounded discovery, validation and implementation-planning topics.
 
-The authorized authenticated Project-to-first-Goal technical slice is complete, and every question in the current planning register is resolved. The next selected knowledge topic is the greenfield and brownfield Project-start journey; no additional implementation scope is implied.
+The authorized authenticated Project-to-first-Goal technical slice is complete. `UX-006` now explores greenfield and brownfield Project-start journeys as initial context for one continuously evolving Product Knowledge workspace; no additional implementation scope is implied.
 
 ---
 
@@ -22,7 +22,7 @@ The repository is being established as the project's long-term memory.
 
 Initial foundation work has defined the product vision, core principles, repository organization, product scope, Project Model and the bounded document-first UX/UI and handoff model.
 
-All currently tracked product, UX, AI, collaboration and architecture questions have reached stable decisions. Current work is to preserve that coherence while following an explicitly ordered but adaptable roadmap. Listed deferrals are not active work merely because they are recorded.
+All previously tracked product, UX, AI, collaboration and architecture questions reached stable decisions. Current work preserves that coherence while exploring the newly identified Project-start journey and following an explicitly ordered but adaptable roadmap. Listed deferrals are not active work merely because they are recorded.
 
 Recent clarification established the first target user as an AI-assisted developer and strengthened the MVP direction around a document-first, template-driven specification experience.
 
@@ -276,7 +276,7 @@ The roadmap supplies the expected discussion order; it is not a delivery schedul
 
 | Order | Topic | Status | Purpose and boundary |
 |---:|---|---|---|
-| 1 | Greenfield and brownfield Project-start journeys | **Selected for next exploration** | Define how a user begins with a new idea versus existing product evidence, documentation or codebase context. The Workbench may help convert explicit source material into proposed Product Knowledge, but must not silently infer facts or become a software-delivery environment. |
+| 1 | Greenfield and brownfield Project-start journeys | **Direction crystallized; entry flows exploring** | Greenfield and brownfield are initial contexts for one continuously evolving Project, not permanent Project types. Existing evidence stays non-canonical until reviewed and saved; detailed source-entry and authoring flows remain to be defined. |
 | 2 | Workbench UX/UI foundation and prototype direction | Candidate, paired with topic 1 | Establish the Workbench's own interaction and visual direction through decision-oriented HTML, CSS and TypeScript mockups. This is distinct from a user's Design System Definition and is not production implementation. |
 | 3 | Document editing and impact-feedback validation | Candidate | Validate inline edits, explicit revisions, Stale outcomes and non-modal impact cues against the established document-first model. |
 | 4 | Bring Your Own AI (BYO-AI) setup and operational UX | Candidate | Build on the settled personal-credential boundary to define setup, provider/model support, validation, privacy, failure and cost/usage-visible behavior before AI assistance is implemented. |
@@ -310,7 +310,7 @@ No candidate below is active merely because it is listed. They remain available 
 # Current Priorities
 
 1. Keep terminology and decisions coherent across glossary, knowledge, planning and sessions.
-2. Explore the selected greenfield and brownfield Project-start topic, including its paired Workbench UX/UI prototype direction, from a concrete product need.
+2. Define the greenfield and brownfield entry flows, including their paired Workbench UX/UI prototype direction, from a concrete product need.
 3. Use the established Project Model and completed first slice as evidence and constraints for every roadmap topic.
 4. Reassess roadmap order at each topic closure and crystallize resulting knowledge before authorizing a later implementation increment.
 
@@ -367,13 +367,13 @@ The completed foundation milestone was considered complete when:
 
 # Planning Register Status
 
-All entries in [the planning register](open-questions.md) are resolved as of 2026-08-23. A deferred detail does not reopen a question or select an increment. Add or reopen an entry only when a concrete product need reveals a gap in the established model.
+`UX-006` is actively exploring greenfield and brownfield Project-start entry flows. All earlier planning-register entries are resolved. A deferred detail does not itself reopen a question or select an increment.
 
 ---
 
 # Next Increment Selection
 
-The next knowledge increment is selected: greenfield and brownfield Project-start journeys, paired with decision-oriented Workbench UX/UI prototype direction. Before beginning any later roadmap topic, record the concrete product need, intended outcome, affected established boundaries and why existing knowledge is insufficient. No roadmap entry by itself authorizes implementation.
+The next knowledge increment is `UX-006`: define greenfield and brownfield Project-start entry flows, paired with decision-oriented Workbench UX/UI prototype direction. Its initial-context and continuous-evolution direction is crystallized; detailed flows remain to be decided. Before beginning any later roadmap topic, record the concrete product need, intended outcome, affected established boundaries and why existing knowledge is insufficient. No roadmap entry by itself authorizes implementation.
 
 ---
 

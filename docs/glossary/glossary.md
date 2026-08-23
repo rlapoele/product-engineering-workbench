@@ -926,6 +926,14 @@ Project Owner and Project Collaborator are mutually exclusive roles within one P
 
 ---
 
+## Project Starting Context
+
+Project Starting Context describes the evidence available when a new Workbench Project begins. It is either **Greenfield**, where the Project begins with no prior product evidence, or **Brownfield**, where its owner deliberately brings existing product evidence, documentation, codebase context or other sources into the Workbench.
+
+Starting Context is not a permanent Project type, lifecycle state, delivery workflow or import mechanism. A Workbench Project may be new even when it concerns an existing product or feature. Brownfield sources remain Resources, Resource References or provenance until the owner explicitly saves reviewed Product Knowledge; they do not silently create requirements, synchronize code or replace Project Archive import.
+
+---
+
 ## Project Command
 
 A Project Command is one explicit request to change canonical Project State through the client-facing Project data and command boundary. It carries a caller-generated Operation ID and command-specific input; the server derives identity and authority from the session, validates the untrusted request and returns an authoritative saved result or a safe, typed failure.

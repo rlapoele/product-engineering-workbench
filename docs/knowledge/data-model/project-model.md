@@ -152,6 +152,14 @@ It may describe:
 
 A Project contains the product knowledge needed to reason about that scope.
 
+## Project Starting Context And Continuous Evolution
+
+A new Workbench Project begins with a Project Starting Context, not a permanent Project type. A **Greenfield** Project starts with no prior product evidence and uses the prepared Specification as its initial shared knowledge boundary. A **Brownfield** Project concerns an existing product, feature or product area and begins by deliberately bringing in existing evidence such as documentation, codebase context, screenshots, prototypes or external links.
+
+Brownfield evidence remains Resource material, a Resource Reference or provenance until the Project Owner explicitly reviews and saves Product Knowledge through the ordinary authoring flow. It does not silently create artifacts or relationships, synchronize an external codebase, make the Workbench responsible for delivery execution, or turn an external product into a Workbench Project. Project Archive import remains a separate portability capability for an existing Workbench Project.
+
+After either start, the same Project evolves continuously as its owner adds or revises Product Knowledge, makes explicit relationships, considers impact outcomes, validates the relevant scope and prepares a new handoff when useful. A later Feature, Requirement or UX/UI change is ordinary product-knowledge evolution, not a new Project-start mode. Learning from external implementation or use may provide new source material, but software delivery, task execution, release tracking and code synchronization remain outside the Workbench's scope.
+
 ## A Project should include
 
 - a title;

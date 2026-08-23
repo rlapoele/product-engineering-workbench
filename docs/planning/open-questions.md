@@ -4,7 +4,7 @@ This document tracks important product, architectural, methodological, and desig
 
 The objective is not to answer these questions quickly, but to ensure they remain visible until sufficient exploration and evidence allow an informed decision.
 
-**Current register status (2026-08-23):** all existing entries are resolved. A future question should be added or reopened only when a concrete product need exposes a gap in the established model; recorded deferrals do not by themselves make work active.
+**Current register status (2026-08-24):** `UX-006` is actively exploring Project-start entry flows. Earlier entries are resolved. A future question should be added or reopened only when a concrete product need exposes a gap in the established model; recorded deferrals do not by themselves make work active.
 
 When a question is resolved:
 
@@ -1141,6 +1141,37 @@ Richer Markdown presentation controls, a visual design workspace, component inhe
 ## Boundary
 
 The Workbench captures implementation-facing product and interaction intent. It does not manage a design-token catalog, component library, Figma workspace, CSS system or frontend implementation.
+
+---
+
+# UX-006 — How should Project-start journeys support greenfield and brownfield context?
+
+**Category:** User Experience
+
+**Status:** 🟡 Exploring
+
+## Context
+
+The first slice validates a new-idea Project creation journey using a prepared empty Specification. The Workbench must also support users who begin product engineering for an existing product, feature or product area, while continuing to support a Project as knowledge evolves after its initial setup.
+
+## Current Direction
+
+Greenfield and brownfield are Project Starting Contexts, not permanent Project types, lifecycle states or separate workflows. A Greenfield Project starts with no prior product evidence. A Brownfield Project deliberately introduces existing product evidence, documentation, codebase context, screenshots, prototypes or external links as supporting source material. A new Workbench Project may therefore be Brownfield even when its scope is only a new feature within an existing product.
+
+Brownfield source material remains a Resource, Resource Reference or provenance until the Project Owner explicitly reviews and saves Product Knowledge. The Workbench does not silently infer requirements, create relationships, synchronize an external codebase, manage delivery execution or treat a Brownfield start as Project Archive import. Archive import remains the separate portability path for a pre-existing Workbench Project.
+
+After either starting context, the Project is a continuously evolving Product Knowledge workspace. The owner may add or revise Features, Requirements, UX/UI knowledge and other artifacts; consider established impact outcomes; validate relevant scope; and prepare later handoffs. Learning from external delivery or product use may provide new source material, but does not create sprints, task assignments, release management or code synchronization.
+
+## Open Decisions
+
+- What does the Greenfield entry flow show before the prepared document, and which initial authoring guidance is most useful?
+- Which Brownfield source types and entry points should the MVP support, and may they be added before and/or after Project creation?
+- How should the owner review source material and explicitly capture it as canonical Product Knowledge without treating AI extraction or external content as fact?
+- Which Workbench UX/UI mockups best validate the two starting contexts and their shared continuing evolution?
+
+## Boundary
+
+The Workbench supports continuous product engineering, not Product Delivery management. A Project-start journey must not become a codebase-import, code-synchronization, ticket-ingestion or release-management workflow.
 
 ---
 
