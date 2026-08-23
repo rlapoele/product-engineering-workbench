@@ -8,9 +8,9 @@
 
 # Current Objective
 
-Maintain the coherence of the crystallized Product Knowledge foundation while selecting the next explicit, bounded discovery, validation or implementation-planning increment.
+Maintain the coherence of the crystallized Product Knowledge foundation while following the adaptive roadmap of bounded discovery, validation and implementation-planning topics.
 
-The authorized authenticated Project-to-first-Goal technical slice is complete, and every question in the current planning register is resolved. No additional implementation scope is implied until a later increment is explicitly selected.
+The authorized authenticated Project-to-first-Goal technical slice is complete, and every question in the current planning register is resolved. The next selected knowledge topic is the greenfield and brownfield Project-start journey; no additional implementation scope is implied.
 
 ---
 
@@ -22,7 +22,7 @@ The repository is being established as the project's long-term memory.
 
 Initial foundation work has defined the product vision, core principles, repository organization, product scope, Project Model and the bounded document-first UX/UI and handoff model.
 
-All currently tracked product, UX, AI, collaboration and architecture questions have reached stable decisions. Current work is to preserve that coherence and deliberately select the next concrete question or increment; listed deferrals are not active work merely because they are recorded.
+All currently tracked product, UX, AI, collaboration and architecture questions have reached stable decisions. Current work is to preserve that coherence while following an explicitly ordered but adaptable roadmap. Listed deferrals are not active work merely because they are recorded.
 
 Recent clarification established the first target user as an AI-assisted developer and strengthened the MVP direction around a document-first, template-driven specification experience.
 
@@ -268,9 +268,25 @@ Recent clarification established the first target user as an AI-assisted develop
 
 ---
 
-# Available Next-Step Candidates
+# Roadmap and Next-Step Candidates
 
-No candidate below is active merely because it is listed. The next increment must be selected explicitly against a concrete product need and the established model boundaries.
+The roadmap supplies the expected discussion order; it is not a delivery schedule or implementation authorization. Each topic must still be scoped against a concrete product need and revisited at its closure. The first topic is selected for exploration; later topics remain candidates.
+
+## Ordered topic roadmap
+
+| Order | Topic | Status | Purpose and boundary |
+|---:|---|---|---|
+| 1 | Greenfield and brownfield Project-start journeys | **Selected for next exploration** | Define how a user begins with a new idea versus existing product evidence, documentation or codebase context. The Workbench may help convert explicit source material into proposed Product Knowledge, but must not silently infer facts or become a software-delivery environment. |
+| 2 | Workbench UX/UI foundation and prototype direction | Candidate, paired with topic 1 | Establish the Workbench's own interaction and visual direction through decision-oriented HTML, CSS and TypeScript mockups. This is distinct from a user's Design System Definition and is not production implementation. |
+| 3 | Document editing and impact-feedback validation | Candidate | Validate inline edits, explicit revisions, Stale outcomes and non-modal impact cues against the established document-first model. |
+| 4 | Bring Your Own AI (BYO-AI) setup and operational UX | Candidate | Build on the settled personal-credential boundary to define setup, provider/model support, validation, privacy, failure and cost/usage-visible behavior before AI assistance is implemented. |
+| 5 | Resource Reference interaction validation | Candidate | Validate attaching, previewing, replacing and accessing supporting resources, including visual references. |
+| 6 | Handoff/readiness and AI context-assembly edge cases | Candidate | Exercise remaining concrete handoff, readiness, export and grounded-AI context scenarios without broadening the established models. |
+| 7 | Project Archive format and import experience | Candidate, later | Specify the portable archive container, format evolution and import experience after broader artifact persistence and Resource handling are ready. It remains distinct from one-way Implementation Handoff. |
+
+## Additional validation candidates
+
+No candidate below is active merely because it is listed. They remain available after the ordered topics when a concrete need warrants them.
 
 - Validate the first-pass document editing and impact-feedback flow through prototypes and concrete specification exercises.
 - Validate accessibility, keyboard behavior and visual density of the Resource Reference attach, preview and replacement controls through a low-fidelity prototype.
@@ -294,9 +310,9 @@ No candidate below is active merely because it is listed. The next increment mus
 # Current Priorities
 
 1. Keep terminology and decisions coherent across glossary, knowledge, planning and sessions.
-2. Select one next bounded discovery, validation or implementation-planning increment from a concrete need rather than from a broad deferred area.
-3. Use the established Project Model and completed first slice as evidence and constraints for that selection.
-4. Crystallize any resulting knowledge before authorizing a later implementation increment.
+2. Explore the selected greenfield and brownfield Project-start topic, including its paired Workbench UX/UI prototype direction, from a concrete product need.
+3. Use the established Project Model and completed first slice as evidence and constraints for every roadmap topic.
+4. Reassess roadmap order at each topic closure and crystallize resulting knowledge before authorizing a later implementation increment.
 
 ---
 
@@ -357,7 +373,7 @@ All entries in [the planning register](open-questions.md) are resolved as of 202
 
 # Next Increment Selection
 
-No next knowledge area or implementation increment is selected. Before beginning one, record the concrete product need, intended outcome, affected established boundaries and why existing knowledge is insufficient. The selection may then be explored and crystallized without treating broad deferred areas as commitments.
+The next knowledge increment is selected: greenfield and brownfield Project-start journeys, paired with decision-oriented Workbench UX/UI prototype direction. Before beginning any later roadmap topic, record the concrete product need, intended outcome, affected established boundaries and why existing knowledge is insufficient. No roadmap entry by itself authorizes implementation.
 
 ---
 
