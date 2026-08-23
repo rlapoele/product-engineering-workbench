@@ -470,6 +470,8 @@ An Export Profile's mapping is not a live dependency on an external branch. The 
 
 The selected inclusion decision, profile/version and mapping revision, pinned source reference, any profile bindings, warnings and generated companion are retained in the immutable prepared-handoff snapshot. A profile transforms canonical knowledge for a target; it does not create a new Design System Definition, alter source identifiers or invent source values.
 
+The current Definition and initial Google profile are sufficient for the Workbench's initial design-context handoff scope. Richer presentation controls, source-model expansion, additional targets and mapping revisions remain evidence-driven future work, not implied by upstream changes or by the presence of linked visual resources.
+
 ## Data or Domain Model
 
 Data or Domain Model is a Specification Section that presents product-domain structure without becoming a database-design surface. It contains fixed **Domain Concepts**, **Domain Relationships** and **Domain Rules** blocks.
