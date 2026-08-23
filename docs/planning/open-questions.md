@@ -4,6 +4,8 @@ This document tracks important product, architectural, methodological, and desig
 
 The objective is not to answer these questions quickly, but to ensure they remain visible until sufficient exploration and evidence allow an informed decision.
 
+**Current register status (2026-08-23):** all existing entries are resolved. A future question should be added or reopened only when a concrete product need exposes a gap in the established model; recorded deferrals do not by themselves make work active.
+
 When a question is resolved:
 
 1. Its status should be changed to **Resolved**.

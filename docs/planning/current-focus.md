@@ -2,27 +2,27 @@
 
 **Status:** Active
 
-**Last Updated:** 2026-08-18
+**Last Updated:** 2026-08-23
 
 ---
 
 # Current Objective
 
-Maintain a solid and coherent knowledge foundation while validating the next document-first UX and product-specification decisions.
+Maintain the coherence of the crystallized Product Knowledge foundation while selecting the next explicit, bounded discovery, validation or implementation-planning increment.
 
-The authorized authenticated Project-to-first-Goal technical slice is complete. Current work returns to product discovery and specification; no additional implementation scope is implied.
+The authorized authenticated Project-to-first-Goal technical slice is complete, and every question in the current planning register is resolved. No additional implementation scope is implied until a later increment is explicitly selected.
 
 ---
 
 # Current Milestone
 
-**Repository Foundation and First-Slice Validation**
+**Knowledge Foundation Closure and Next Increment Selection**
 
 The repository is being established as the project's long-term memory.
 
-Initial foundation work has defined the product vision, core principles, repository organization, product scope and initial Project Model.
+Initial foundation work has defined the product vision, core principles, repository organization, product scope, Project Model and the bounded document-first UX/UI and handoff model.
 
-Current work focuses on resolving the remaining model questions and validating the interaction models needed for subsequent specification work.
+All currently tracked product, UX, AI, collaboration and architecture questions have reached stable decisions. Current work is to preserve that coherence and deliberately select the next concrete question or increment; listed deferrals are not active work merely because they are recorded.
 
 Recent clarification established the first target user as an AI-assisted developer and strengthened the MVP direction around a document-first, template-driven specification experience.
 
@@ -38,6 +38,7 @@ Recent clarification established the first target user as an AI-assisted develop
 - Product Artifact has been established as canonical terminology.
 - Initial concepts for relationships, workflow templates, contributors, decisions, reviews, revisions, provenance, context and readiness have been documented.
 - Open questions from the Project Model have been moved into the planning register.
+- Every currently tracked question in the planning register has reached a stable decision; explicit deferrals remain available future boundaries rather than active work.
 - The first target user has been clarified as an AI-assisted developer.
 - Specification Document Template has been introduced as the user-facing term for project-start templates.
 - The MVP has been clarified to start with one `Implementation-Ready Web App Specification` template backed by a reusable Section Catalog and multiple Project Presets.
@@ -267,7 +268,9 @@ Recent clarification established the first target user as an AI-assisted develop
 
 ---
 
-# Current Activities
+# Available Next-Step Candidates
+
+No candidate below is active merely because it is listed. The next increment must be selected explicitly against a concrete product need and the established model boundaries.
 
 - Validate the first-pass document editing and impact-feedback flow through prototypes and concrete specification exercises.
 - Validate accessibility, keyboard behavior and visual density of the Resource Reference attach, preview and replacement controls through a low-fidelity prototype.
@@ -290,11 +293,10 @@ Recent clarification established the first target user as an AI-assisted develop
 
 # Current Priorities
 
-1. Resolve the open Product Knowledge Model questions.
-2. Keep terminology coherent across glossary, knowledge and planning documents.
-3. Use the Project Model as the source for upcoming UX, AI and architecture knowledge.
-4. Use the completed first slice as evidence and a constraint while validating the next product and UX decisions.
-5. Select any later implementation increment only after its necessary knowledge and interaction model have been crystallized.
+1. Keep terminology and decisions coherent across glossary, knowledge, planning and sessions.
+2. Select one next bounded discovery, validation or implementation-planning increment from a concrete need rather than from a broad deferred area.
+3. Use the established Project Model and completed first slice as evidence and constraints for that selection.
+4. Crystallize any resulting knowledge before authorizing a later implementation increment.
 
 ---
 
@@ -331,9 +333,9 @@ The following activities remain intentionally deferred beyond the completed firs
 
 ---
 
-# Success Criteria
+# Completed Milestone Criteria
 
-The current milestone will be considered complete when:
+The completed foundation milestone was considered complete when:
 
 - The product vision is stable.
 - Core principles have been documented.
@@ -347,38 +349,15 @@ The current milestone will be considered complete when:
 
 ---
 
-# Open Questions Driving This Milestone
+# Planning Register Status
 
-See:
-
-- `docs/planning/open-questions.md`
-
-Current emphasis:
-
-- DATA — minimum artifact set, common fields, relationships and lifecycle states
-- UX — document-first experience over structured product knowledge
-- AI — context assembly for AI contributors
-- ARCH — canonical product state representation
-- PROC — crystallization of Conversations into stable knowledge
+All entries in [the planning register](open-questions.md) are resolved as of 2026-08-23. A deferred detail does not reopen a question or select an increment. Add or reopen an entry only when a concrete product need reveals a gap in the established model.
 
 ---
 
-# Next Expected Knowledge Areas
+# Next Increment Selection
 
-The following areas are expected to receive significant attention next:
-
-- Document-First UX
-- Workflow Templates
-- Specification Document Templates
-- AI Context Assembly
-- Capability-Based Collaboration
-- Assistance Request Types
-- Contribution Response Shapes
-- Implementation Handoff Package
-- Knowledge Provenance
-- Product Knowledge Graph
-- Readiness Evaluation
-- Conversation Crystallization
+No next knowledge area or implementation increment is selected. Before beginning one, record the concrete product need, intended outcome, affected established boundaries and why existing knowledge is insufficient. The selection may then be explored and crystallized without treating broad deferred areas as commitments.
 
 ---
 
