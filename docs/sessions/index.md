@@ -232,3 +232,4 @@
 | 2026-08-23-07 | 2026-08-23 | 7 | Design System Companion Component-Property Conformance | Crystallized | Google `DESIGN.md` alpha property types, pass-through warnings and profile-only blocks |
 | 2026-08-23-08 | 2026-08-23 | 8 | Design System Companion Profile-Version Governance | Crystallized | Pinned upstream source and explicit mapping-revision evolution without automatic updates |
 | 2026-08-23-09 | 2026-08-23 | 9 | Design System Companion Workbench-Extension Boundary | Crystallized | Included-only non-normative UX/UI projection with fixed order and no scope expansion |
+| 2026-08-23-10 | 2026-08-23 | 10 | Design System Companion Screen / View Projection | Crystallized | Concise view entries with linked visual references and no embedded assets or duplicated behavior |
