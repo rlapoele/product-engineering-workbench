@@ -276,7 +276,7 @@ The roadmap supplies the expected discussion order; it is not a delivery schedul
 
 | Order | Topic | Status | Purpose and boundary |
 |---:|---|---|---|
-| 1 | Greenfield and brownfield Project-start journeys | **Direction crystallized; entry flows exploring** | Greenfield and brownfield are initial contexts for one continuously evolving Project, not permanent Project types. Existing evidence stays non-canonical until reviewed and saved; detailed source-entry and authoring flows remain to be defined. |
+| 1 | Greenfield and brownfield Project-start journeys | **Direction crystallized; entry flows exploring** | Greenfield and brownfield are initial contexts for one continuously evolving Project, not permanent Project types. Sources remain non-canonical evidence until explicit Source Capture and ordinary save; detailed source-entry and authoring flows remain to be defined. |
 | 2 | Workbench UX/UI foundation and prototype direction | Candidate, paired with topic 1 | Establish the Workbench's own interaction and visual direction through decision-oriented HTML, CSS and TypeScript mockups. This is distinct from a user's Design System Definition and is not production implementation. |
 | 3 | Document editing and impact-feedback validation | Candidate | Validate inline edits, explicit revisions, Stale outcomes and non-modal impact cues against the established document-first model. |
 | 4 | Bring Your Own AI (BYO-AI) setup and operational UX | Candidate | Build on the settled personal-credential boundary to define setup, provider/model support, validation, privacy, failure and cost/usage-visible behavior before AI assistance is implemented. |

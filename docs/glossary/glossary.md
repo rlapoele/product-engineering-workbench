@@ -1113,6 +1113,22 @@ For an included handoff scope, a managed uploaded Resource is copied into the pa
 
 ---
 
+## Source
+
+A Source is non-canonical evidence used to understand, challenge or refine Product Knowledge. It may represent an observation, stakeholder input, documentation, source-code context, screenshot, prototype, repository, analytics or another external input.
+
+A Source is not itself a Goal, Feature, Requirement or other Product Artifact, and it does not change the specification by being added or interpreted. Files and links may use the existing Resource and Resource Reference model; the detailed representation of other source forms remains a Project-start entry-flow decision. A Source is distinct from Project Archive import, which transfers a pre-existing Workbench Project rather than supplying evidence about an external one.
+
+---
+
+## Source Capture
+
+Source Capture is the explicit, owner-controlled act of reviewing a Source and using it to begin an ordinary Product Knowledge draft or revision. The resulting knowledge remains subject to its normal required fields, review, save and Revision rules, and may retain provenance that identifies its source material.
+
+Source Capture never automatically promotes a Source, an AI interpretation or external content into canonical Product Knowledge. It is not a code-import, synchronization or delivery-management workflow.
+
+---
+
 ## Stale
 
 Stale is an artifact lifecycle state indicating that a Product Artifact may no longer be accurate because related upstream knowledge changed.

@@ -240,3 +240,4 @@
 | 2026-08-23-15 | 2026-08-23 | 15 | Knowledge Foundation Milestone Review and Planning Refresh | Crystallized | Planning register is complete; next increment requires explicit selection |
 | 2026-08-23-16 | 2026-08-23 | 16 | Adaptive Product Discovery Roadmap | Crystallized | Ordered topic roadmap selects Project-start journeys and paired Workbench UX/UI direction next |
 | 2026-08-24-01 | 2026-08-24 | 1 | Project Starting Context and Continuous Evolution Direction | Crystallized | Greenfield and brownfield are initial contexts for one evolving Project, with detailed entry flows open |
+| 2026-08-24-02 | 2026-08-24 | 2 | Source Capture and Product Knowledge Boundary | Crystallized | Sources are non-canonical evidence; explicit owner capture begins ordinary canonical authoring |
