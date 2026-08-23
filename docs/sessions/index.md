@@ -235,3 +235,4 @@
 | 2026-08-23-10 | 2026-08-23 | 10 | Design System Companion Screen / View Projection | Crystallized | Concise view entries with linked visual references and no embedded assets or duplicated behavior |
 | 2026-08-23-11 | 2026-08-23 | 11 | Design System Companion User Flow Projection | Crystallized | Ordered journey context with included or explicitly out-of-package Screen / View surfaces |
 | 2026-08-23-12 | 2026-08-23 | 12 | Design System Companion UI Requirement Projection | Crystallized | Requirement context, applies-to boundaries and linked supporting resources without scope expansion |
+| 2026-08-23-13 | 2026-08-23 | 13 | Design System Companion Partial-Package Extension Validation | Crystallized | Complete included/out-of-package and managed/external-resource extension boundary exercised |
