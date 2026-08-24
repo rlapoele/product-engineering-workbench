@@ -276,7 +276,7 @@ The roadmap supplies the expected discussion order; it is not a delivery schedul
 
 | Order | Topic | Status | Purpose and boundary |
 |---:|---|---|---|
-| 1 | Greenfield and brownfield Project-start journeys | **Initial Brownfield intake crystallized; entry flows exploring** | Greenfield and brownfield are initial contexts for one continuously evolving Project. A saved Brownfield Project offers non-blocking Source Note, upload and external-link intake at Specification scope; Sources require explicit capture and save to become knowledge. |
+| 1 | Greenfield and brownfield Project-start journeys | **Initial Brownfield intake and capture crystallized; entry flows exploring** | Greenfield and brownfield are initial contexts for one continuously evolving Project. A saved Brownfield Project offers non-blocking Source Note, upload and external-link intake; owner-led single-Source Capture opens an ordinary draft with saved source provenance. |
 | 2 | Workbench UX/UI foundation and prototype direction | Candidate, paired with topic 1 | Establish the Workbench's own interaction and visual direction through decision-oriented HTML, CSS and TypeScript mockups. This is distinct from a user's Design System Definition and is not production implementation. |
 | 3 | Document editing and impact-feedback validation | Candidate | Validate inline edits, explicit revisions, Stale outcomes and non-modal impact cues against the established document-first model. |
 | 4 | Bring Your Own AI (BYO-AI) setup and operational UX | Candidate | Build on the settled personal-credential boundary to define setup, provider/model support, validation, privacy, failure and cost/usage-visible behavior before AI assistance is implemented. |

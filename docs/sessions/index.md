@@ -242,3 +242,4 @@
 | 2026-08-24-01 | 2026-08-24 | 1 | Project Starting Context and Continuous Evolution Direction | Crystallized | Greenfield and brownfield are initial contexts for one evolving Project, with detailed entry flows open |
 | 2026-08-24-02 | 2026-08-24 | 2 | Source Capture and Product Knowledge Boundary | Crystallized | Sources are non-canonical evidence; explicit owner capture begins ordinary canonical authoring |
 | 2026-08-24-03 | 2026-08-24 | 3 | Brownfield Source Intake Direction | Crystallized | Non-blocking Source Note, upload and link intake after Project creation; external AI summaries remain reconfirmed evidence |
+| 2026-08-24-04 | 2026-08-24 | 4 | Source Capture Flow | Crystallized | Owner-led single-Source capture opens ordinary drafts and preserves saved source provenance |

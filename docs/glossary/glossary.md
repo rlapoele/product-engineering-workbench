@@ -974,6 +974,8 @@ Provenance is distinct from Contribution and Revision: Contribution records part
 
 Provenance records known origin and derivation. It should not imply that the workbench can prove a human contribution was not assisted by an external AI tool.
 
+When Source Capture produces a saved Product Knowledge record or Revision, its provenance retains a visible link to the one Source used for that capture. A later capture from another Source may produce another ordinary Revision with its own source provenance. These links provide evidence navigation; they are not Artifact Relationships, source synchronization or a claim that the Source is correct.
+
 An optional Response Source Link on a Revision may provide supporting known provenance for a Contribution Response considered in that saved change. It does not create a separate response-to-Provenance mechanism in the MVP.
 
 ---
@@ -1123,9 +1125,9 @@ A Source is not itself a Goal, Feature, Requirement or other Product Artifact, a
 
 ## Source Capture
 
-Source Capture is the explicit, owner-controlled act of reviewing a Source and using it to begin an ordinary Product Knowledge draft or revision. The resulting knowledge remains subject to its normal required fields, review, save and Revision rules, and may retain provenance that identifies its source material.
+Source Capture is the explicit, owner-controlled act of reviewing one Source and using it to begin an ordinary Product Knowledge draft or Revision. The owner chooses whether to create a Product Artifact, section-owned Product Knowledge, Decision or Open Question, or update existing knowledge. The Source remains visible as read-only context while the ordinary destination draft is reviewed and authored.
 
-Source Capture never automatically promotes a Source, an AI interpretation or external content into canonical Product Knowledge. An externally AI-assisted Source may retain its known owner-provided origin or voluntary external-AI disclosure, but remains evidence to be reinterpreted and reconfirmed by the owner. Source Capture is not a code-import, synchronization or delivery-management workflow.
+Only normal explicit save makes the resulting knowledge canonical. That save retains a visible source-provenance link to the Source; discarding the draft leaves the Source unchanged and creates neither knowledge nor provenance. An externally AI-assisted Source may retain its known owner-provided origin or voluntary external-AI disclosure, but remains evidence to be reinterpreted and reconfirmed by the owner. Source Capture never automatically promotes a Source, an AI interpretation or external content into Product Knowledge, and is not a code-import, synchronization or delivery-management workflow.
 
 ---
 
