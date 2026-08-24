@@ -926,11 +926,19 @@ Project Owner and Project Collaborator are mutually exclusive roles within one P
 
 ---
 
+## Project-start Note
+
+A Project-start Note is an optional, temporary answer provided during Greenfield Project creation to help the owner choose a preset or sections and begin authoring. It is not Project State, canonical Product Knowledge, a Source or a Project property.
+
+After the Project is created, the owner may explicitly use a Project-start Note as an editable, ordinary first draft for its one suggested destination. It is not saved as Product Knowledge until the owner saves that draft. Cancelling Project creation creates neither a Project nor a retained Project-start Note.
+
+---
+
 ## Project Starting Context
 
-Project Starting Context describes the evidence available when a new Workbench Project begins. It is either **Greenfield**, where the Project begins with no prior product evidence, or **Brownfield**, where its owner deliberately brings existing product evidence, documentation, codebase context or other sources into the Workbench.
+Project Starting Context describes the evidence available when a new Workbench Project begins. The owner selects it first during Project creation. It is either **Greenfield**, where the Project begins with no prior product evidence, or **Brownfield**, where its owner deliberately brings existing product evidence, documentation, codebase context or other sources into the Workbench.
 
-Starting Context is not a permanent Project type, lifecycle state, delivery workflow or import mechanism. A Workbench Project may be new even when it concerns an existing product or feature. Brownfield sources remain Resources, Resource References or provenance until the owner explicitly saves reviewed Product Knowledge; they do not silently create requirements, synchronize code or replace Project Archive import.
+Starting Context is not a permanent Project type, lifecycle state, delivery workflow or import mechanism. A Workbench Project may be new even when it concerns an existing product or feature. Brownfield Sources are created only after the Project exists and remain Resources, Resource References or provenance until the owner explicitly saves reviewed Product Knowledge; they do not silently create requirements, synchronize code or replace Project Archive import.
 
 ---
 

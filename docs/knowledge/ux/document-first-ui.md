@@ -49,20 +49,19 @@ For a new user with no Projects or accepted invitations, the page should present
 
 # 3. MVP Project Creation Flow
 
-The MVP should allow users to create a new project.
+The MVP should allow users to create a new Project through a short, ordered setup. It begins with the owner's explicit **Starting context** choice: **Greenfield** for a new idea with no prior product evidence, or **Brownfield** for an existing product, feature or product area with evidence to establish after creation. This selection provides entry guidance; it is not a permanent Project type or workflow state.
 
-When creating a project, users should provide a small number of project properties and select a Specification Document Template.
+The next step collects Content language, Project title and short Project description. It has no separate Intended Specification Purpose field. For Greenfield, it optionally offers no more than four plain-language guidance questions about the problem or opportunity, intended outcome, target users and known uncertainty. Each answer is skippable and is a temporary Project-start Note, not saved Project content. For Brownfield, this step previews that the owner can add Source Notes, uploaded files or external links immediately after the Project is created; it does not collect or upload Sources before a Project and its attachment scope exist.
 
-Project creation should include:
+The next step selects the **Specification Document Template**. The interface reserves space for a proposed preselection and concise rationale. In the MVP, because only `Implementation-Ready Web App Specification` is available, it is honestly presented as the currently available, preselected template rather than as a personalized recommendation. The Project-start Notes may nevertheless propose a preset and relevant sections. When later templates provide meaningfully different specification structures, the same interaction may recommend one or more templates and explain why, but the owner always makes the final template choice.
 
-- project title;
-- short project description;
-- intended specification purpose;
-- selected Specification Document Template;
+Project creation then includes:
+
 - selected preset;
-- selected or customized template sections.
+- selected or customized template sections; and
+- explicit **Create Project** confirmation.
 
-The user should be able to customize which template sections are included before beginning specification work.
+The owner can customize included sections before beginning specification work. Greenfield recommendations are optional and do not prevent any template, preset or section choice.
 
 User-authored specification content should use a Project or Specification-level `contentLocale`.
 
@@ -335,9 +334,11 @@ The document view should support:
 
 ## Initial Document Interaction And Editing Flow
 
-After project creation, the user should see the selected Specification Document Template as a prepared document: all selected section titles appear in document order, with concise template guidance or placeholders explaining each section's purpose. No substantive user-authored content or Product Artifacts exist yet. This should feel like opening a document template and filling it in, not discovering a blank application canvas.
+After project creation, the user should see the selected Specification Document Template as a prepared document: all selected section titles appear in document order, with concise template guidance or placeholders explaining each section's purpose. No substantive canonical content or Product Artifacts exist yet. This should feel like opening a document template and filling it in, not discovering a blank application canvas.
 
-Project creation has two starting contexts, not two permanent Project types. A Greenfield start opens this prepared document with no prior product evidence. A Brownfield start lets the owner deliberately establish existing product evidence, documentation, codebase context or other sources as supporting Resource material before or alongside ordinary authoring; it does not silently extract canonical facts, synchronize a codebase or replace Project Archive import. In either case, the Project remains an evolving product-knowledge workspace: its owner may later add or revise Features, Requirements, UX/UI knowledge and other artifacts, assess explicit impact, validate a relevant scope and prepare a later handoff without restarting the Project or entering a delivery-management workflow.
+A Greenfield start opens the prepared document with a small, dismissible **Begin with what you know** panel. It offers non-sequential shortcuts to describe the problem or opportunity, define a goal or success criterion, identify target users, or capture an Open Question. A matching Project-start Note is available from its one suggested shortcut as editable, unsaved first-draft material only when the owner explicitly chooses **Use as draft**; ordinary save makes that material canonical. The panel is never a progress tracker or workflow gate, can be dismissed, and remains available later through a lightweight **Getting started** action. Empty-section guidance continues to provide orientation after dismissal.
+
+A Brownfield start offers **Establish context** after the Project is saved, so the owner can deliberately add existing product evidence, documentation, codebase context or other Sources as supporting Resource material before or alongside ordinary authoring. It does not silently extract canonical facts, synchronize a codebase or replace Project Archive import. In either context, the Project remains an evolving product-knowledge workspace: its owner may later add or revise Features, Requirements, UX/UI knowledge and other artifacts, assess explicit impact, validate a relevant scope and prepare a later handoff without restarting the Project or entering a delivery-management workflow.
 
 The interface distinguishes **Sources** from canonical Product Knowledge. A Source is non-canonical evidence such as an observation, stakeholder input, document, source-code context, screenshot, prototype, repository or analytics. After the Project is saved, the Brownfield **Establish context** step offers three initial source actions: **Add Source Note**, **Upload file** and **Add external link**. **Add Source Note** asks only for a required concise Title and Evidence text. Every new Source may also expose an optional **Externally AI-assisted source** control, off by default, for the owner to declare that external AI materially helped create or summarize it. The control creates known source provenance and the corresponding voluntary external-AI declaration, not a provider, model, prompt or cost record; it does not assert correctness, verification, authorship or ownership. Every initial Source attaches at Specification scope; the owner may instead choose **Start authoring** at any time. Later Source actions use the same model at Specification, Section or Product-Artifact scope. A repository is linked or supplied as file context, never cloned or synchronized.
 

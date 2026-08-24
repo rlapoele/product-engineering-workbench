@@ -244,3 +244,4 @@
 | 2026-08-24-03 | 2026-08-24 | 3 | Brownfield Source Intake Direction | Crystallized | Non-blocking Source Note, upload and link intake after Project creation; external AI summaries remain reconfirmed evidence |
 | 2026-08-24-04 | 2026-08-24 | 4 | Source Capture Flow | Crystallized | Owner-led single-Source capture opens ordinary drafts and preserves saved source provenance |
 | 2026-08-24-05 | 2026-08-24 | 5 | Source Note and External-AI Indication | Crystallized | Source Notes use Title and Evidence text; an optional source-local AI indication supplies known provenance without provider tracking |
+| 2026-08-24-06 | 2026-08-24 | 6 | Greenfield Guided Project Creation Flow | Crystallized | Starting context precedes template choice; temporary Greenfield notes guide preset and owner-invoked drafts, while Brownfield Sources follow creation |

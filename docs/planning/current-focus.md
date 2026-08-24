@@ -276,7 +276,7 @@ The roadmap supplies the expected discussion order; it is not a delivery schedul
 
 | Order | Topic | Status | Purpose and boundary |
 |---:|---|---|---|
-| 1 | Greenfield and brownfield Project-start journeys | **Initial Brownfield intake, Source Note and capture crystallized; entry flows exploring** | Greenfield and brownfield are initial contexts for one continuously evolving Project. A saved Brownfield Project offers non-blocking Source Note, upload and external-link intake; a Source Note needs only Title and Evidence text, and every Source can carry an optional external-AI indication. Owner-led single-Source Capture opens an ordinary draft with saved source provenance. |
+| 1 | Greenfield and brownfield Project-start journeys | **Creation and initial intake flows crystallized; mockup validation exploring** | The owner selects a starting context before basic setup, then explicitly selects template, preset and sections. Greenfield optional Project-start Notes recommend a preset/sections and can become owner-invoked unsaved drafts after creation; Brownfield creates Sources only after its Project exists. Both paths preserve ordinary authoring and continuous evolution. |
 | 2 | Workbench UX/UI foundation and prototype direction | Candidate, paired with topic 1 | Establish the Workbench's own interaction and visual direction through decision-oriented HTML, CSS and TypeScript mockups. This is distinct from a user's Design System Definition and is not production implementation. |
 | 3 | Document editing and impact-feedback validation | Candidate | Validate inline edits, explicit revisions, Stale outcomes and non-modal impact cues against the established document-first model. |
 | 4 | Bring Your Own AI (BYO-AI) setup and operational UX | Candidate | Build on the settled personal-credential boundary to define setup, provider/model support, validation, privacy, failure and cost/usage-visible behavior before AI assistance is implemented. |
@@ -367,13 +367,13 @@ The completed foundation milestone was considered complete when:
 
 # Planning Register Status
 
-`UX-006` is actively exploring greenfield and brownfield Project-start entry flows. All earlier planning-register entries are resolved. A deferred detail does not itself reopen a question or select an increment.
+`UX-006` has crystallized Project-creation and initial-intake flows; it is actively exploring the decision-oriented UX/UI mockups that validate them. All earlier planning-register entries are resolved. A deferred detail does not itself reopen a question or select an increment.
 
 ---
 
 # Next Increment Selection
 
-The next knowledge increment is `UX-006`: define greenfield and brownfield Project-start entry flows, paired with decision-oriented Workbench UX/UI prototype direction. Its initial-context and continuous-evolution direction is crystallized; detailed flows remain to be decided. Before beginning any later roadmap topic, record the concrete product need, intended outcome, affected established boundaries and why existing knowledge is insufficient. No roadmap entry by itself authorizes implementation.
+The active knowledge increment is `UX-006`: validate the crystallized greenfield and brownfield Project-start flows through decision-oriented Workbench UX/UI prototype direction. Before beginning any later roadmap topic, record the concrete product need, intended outcome, affected established boundaries and why existing knowledge is insufficient. No roadmap entry by itself authorizes implementation.
 
 ---
 
