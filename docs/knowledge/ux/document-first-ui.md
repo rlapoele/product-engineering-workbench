@@ -47,6 +47,12 @@ An owner may see owner-relevant attention, such as a received response or a pers
 
 For a new user with no Projects or accepted invitations, the page should present a calm empty state: create a first Project, wait for or respond to an invitation, and optionally consult getting-started guidance. It should not show empty request-management panels. Any future cross-Project attention summary only routes the user into the relevant Project; it provides neither an unscoped composer nor a global request board.
 
+## Workbench Visual Direction
+
+The Workbench should feel calm, comfortable and trustworthy for sustained reading and writing. It favors restrained hues, generous whitespace, subtly differentiated surfaces and soft, sparingly used shadows over dashboard density or decorative visual noise. The document remains the visual center of gravity.
+
+Urbanist provides clear interface and structured-information typography; Lora provides an editorial, readable voice for longer specification prose. Both light and dark themes preserve equivalent hierarchy, legibility and accessible interactive states. The design must be responsive, keyboard-operable and readable at user-controlled text sizes. The frontend architecture defines the implementation-level token, theme and component rules; these Workbench foundations are distinct from a user's Product Knowledge and Design System Definition.
+
 # 3. MVP Project Creation Flow
 
 The MVP should allow users to create a new Project through a short, ordered setup. It begins with the owner's explicit **Starting context** choice: **Greenfield** for a new idea with no prior product evidence, or **Brownfield** for an existing product, feature or product area with evidence to establish after creation. This selection provides entry guidance; it is not a permanent Project type or workflow state.

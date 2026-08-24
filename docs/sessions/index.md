@@ -245,3 +245,6 @@
 | 2026-08-24-04 | 2026-08-24 | 4 | Source Capture Flow | Crystallized | Owner-led single-Source capture opens ordinary drafts and preserves saved source provenance |
 | 2026-08-24-05 | 2026-08-24 | 5 | Source Note and External-AI Indication | Crystallized | Source Notes use Title and Evidence text; an optional source-local AI indication supplies known provenance without provider tracking |
 | 2026-08-24-06 | 2026-08-24 | 6 | Greenfield Guided Project Creation Flow | Crystallized | Starting context precedes template choice; temporary Greenfield notes guide preset and owner-invoked drafts, while Brownfield Sources follow creation |
+| 2026-08-25-01 | 2026-08-25 | 1 | Workbench Interface Foundation | Crystallized | Astro/Tailwind/React visual foundation, token layers, themes, typography and calm document-centered direction |
+| 2026-08-25-02 | 2026-08-25 | 2 | Project-start Prototype Scope | Crystallized | One isolated high-fidelity state map validates context choice, guided Greenfield drafts and post-create Brownfield sources |
+| 2026-08-25-03 | 2026-08-25 | 3 | Project-start Prototype Build and Automated Validation | Completed — owner review pending | Isolated Astro/React prototype, visual review and passing static, unit and browser evidence |

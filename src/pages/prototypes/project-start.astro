@@ -1,0 +1,31 @@
+---
+import Icon from '../../components/Icon.astro';
+import { ProjectStartPrototypeIsland } from '@islands/project-start-prototype-island';
+import '@styles/global.css';
+---
+
+<!doctype html>
+<html lang="en" data-color-theme="light" data-color-theme-preference="system">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Project-start prototype — Product Engineering Workbench</title>
+  </head>
+  <body>
+    <main class="prototype-main">
+      <a class="prototype-skip-link prototype-primary-button" href="#prototype-content">Skip to prototype content</a>
+      <header class="prototype-header">
+        <a class="prototype-brand" href="/prototypes/project-start" aria-label="Product Engineering Workbench prototype home">
+          <span class="prototype-brand-mark"><Icon name="document-text" class="size-5" /></span>
+          <span class="prototype-brand-copy">Product Engineering Workbench<small>Project-start prototype</small></span>
+        </a>
+        <div class="prototype-header-actions" aria-label="Prototype utility actions">
+          <span class="prototype-tag">Prototype · local state only</span>
+        </div>
+      </header>
+      <h1 class="sr-only">Project-start prototype</h1>
+      <ProjectStartPrototypeIsland client:load />
+    </main>
+  </body>
+</html>

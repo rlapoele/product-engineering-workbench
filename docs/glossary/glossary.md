@@ -621,6 +621,12 @@ Implementation Authorization is the Project Owner's explicit permission to add p
 
 It is scoped to the named slice and does not authorize deferred product capabilities, deployment to Railway, use of real Product Knowledge, or production release. Staging and production remain subject to their separate release-readiness gates.
 
+## Interface Foundation
+
+The Interface Foundation is the Workbench-owned visual implementation standard: its token layering, color-theme behavior, typography, accessible responsive presentation, icon treatment and component boundary. It is distinct from a user's Design System Definition, which is Product Knowledge that may be handed off and does not prescribe the Workbench's frontend implementation.
+
+Its Interface Tokens are CSS custom properties in three layers. Primitive tokens contain raw visual values; Semantic tokens may reference primitive tokens only and express purpose; Component tokens may reference Semantic tokens only and express a reusable Workbench component's local treatment. This direction prevents a component from depending on raw visual values or a semantic token from skipping the primitive layer.
+
 ## Interface Locale
 
 Interface Locale identifies the locale used to present workbench-controlled interface text such as navigation, actions, form labels and validation messages. It is distinct from Content Locale, which identifies the language of user-authored specification content and document-facing template scaffolding.
