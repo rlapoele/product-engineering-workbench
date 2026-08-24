@@ -1160,15 +1160,17 @@ Greenfield and brownfield are Project Starting Contexts, not permanent Project t
 
 Brownfield source material remains a Resource, Resource Reference or provenance until the Project Owner explicitly reviews and saves Product Knowledge. The Workbench does not silently infer requirements, create relationships, synchronize an external codebase, manage delivery execution or treat a Brownfield start as Project Archive import. Archive import remains the separate portability path for a pre-existing Workbench Project.
 
-A Source is non-canonical evidence used to understand, challenge or refine Product Knowledge: an observation, stakeholder input, document, source-code context, screenshot, prototype, repository, analytics or another external input. Source Capture is the explicit owner-controlled act of reviewing source material and beginning an ordinary Product Knowledge draft or Revision. Files and links may use the Resource and Resource Reference model; the detailed representation of other source forms remains open. A Source, external content or AI interpretation never silently creates canonical Product Knowledge.
+A Source is non-canonical evidence used to understand, challenge or refine Product Knowledge: an observation, stakeholder input, document, source-code context, screenshot, prototype, repository, analytics or another external input. The initial Brownfield **Establish context** step appears only after the Project has been saved. It offers an owner-authored Source Note, a managed uploaded file or an external link; each initially attaches at Specification scope, while **Start authoring** stays available without adding a Source. Files and links use the Resource and Resource Reference model, and later Sources may attach at Specification, Section or Product-Artifact scope. A repository is linked or supplied as file context rather than cloned or synchronized.
+
+Source Capture is the explicit owner-controlled act of reviewing source material and beginning an ordinary Product Knowledge draft or Revision. An external AI-assisted codebase summary may be added as a Source with known origin when supplied, but it is evidence to reinterpret and reconfirm rather than reverse-engineered specification truth. A Source, external content or AI interpretation never silently creates canonical Product Knowledge.
 
 After either starting context, the Project is a continuously evolving Product Knowledge workspace. The owner may add or revise Features, Requirements, UX/UI knowledge and other artifacts; consider established impact outcomes; validate relevant scope; and prepare later handoffs. Learning from external delivery or product use may provide new source material, but does not create sprints, task assignments, release management or code synchronization.
 
 ## Open Decisions
 
 - What does the Greenfield entry flow show before the prepared document, and which initial authoring guidance is most useful?
-- Which Brownfield source types and entry points should the MVP support, and may they be added before and/or after Project creation?
 - How should the owner review source material and explicitly perform Source Capture into a draft or Revision without treating AI extraction or external content as fact?
+- What is the smallest useful Source Note shape and known-origin presentation?
 - Which Workbench UX/UI mockups best validate the two starting contexts and their shared continuing evolution?
 
 ## Boundary

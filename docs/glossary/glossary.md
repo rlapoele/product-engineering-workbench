@@ -1115,9 +1115,9 @@ For an included handoff scope, a managed uploaded Resource is copied into the pa
 
 ## Source
 
-A Source is non-canonical evidence used to understand, challenge or refine Product Knowledge. It may represent an observation, stakeholder input, documentation, source-code context, screenshot, prototype, repository, analytics or another external input.
+A Source is non-canonical evidence used to understand, challenge or refine Product Knowledge. It may represent an observation, stakeholder input, documentation, source-code context, screenshot, prototype, repository, analytics or another external input, including an externally AI-assisted summary of an existing codebase.
 
-A Source is not itself a Goal, Feature, Requirement or other Product Artifact, and it does not change the specification by being added or interpreted. Files and links may use the existing Resource and Resource Reference model; the detailed representation of other source forms remains a Project-start entry-flow decision. A Source is distinct from Project Archive import, which transfers a pre-existing Workbench Project rather than supplying evidence about an external one.
+A Source is not itself a Goal, Feature, Requirement or other Product Artifact, and it does not change the specification by being added or interpreted. Brownfield intake initially accepts an owner-authored Source Note, a managed uploaded file or an external link. Files and links use the existing Resource and Resource Reference model; every initial Brownfield Source attaches at Specification level after the Project exists, while later Sources may use the same model at Specification, Section or Product-Artifact scope. A Source is distinct from Project Archive import, which transfers a pre-existing Workbench Project rather than supplying evidence about an external one.
 
 ---
 
@@ -1125,7 +1125,7 @@ A Source is not itself a Goal, Feature, Requirement or other Product Artifact, a
 
 Source Capture is the explicit, owner-controlled act of reviewing a Source and using it to begin an ordinary Product Knowledge draft or revision. The resulting knowledge remains subject to its normal required fields, review, save and Revision rules, and may retain provenance that identifies its source material.
 
-Source Capture never automatically promotes a Source, an AI interpretation or external content into canonical Product Knowledge. It is not a code-import, synchronization or delivery-management workflow.
+Source Capture never automatically promotes a Source, an AI interpretation or external content into canonical Product Knowledge. An externally AI-assisted Source may retain its known owner-provided origin or voluntary external-AI disclosure, but remains evidence to be reinterpreted and reconfirmed by the owner. Source Capture is not a code-import, synchronization or delivery-management workflow.
 
 ---
 
