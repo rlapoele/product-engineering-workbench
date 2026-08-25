@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>UX-006 visual comparison</title>
+    <style>
+      body { margin: 0; background: #1f2421; color: #fff; font: 14px system-ui, sans-serif; }
+      main { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; padding: 16px; }
+      figure { margin: 0; min-width: 0; }
+      figcaption { margin-block-end: 8px; font-weight: 700; }
+      .frame { position: relative; overflow: hidden; aspect-ratio: 1440 / 1024; background: #fff; }
+      img, iframe { display: block; width: 100%; height: 100%; border: 0; }
+      iframe { width: 200%; height: 200%; transform: scale(.5); transform-origin: top left; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <figure><figcaption>Approved visual reference</figcaption><div class="frame"><img src="http://127.0.0.1:4323/exec-afdd33d9-6254-4d40-8c9a-b7fac8a549bd.png" alt="Approved workspace visual reference" /></div></figure>
+      <figure><figcaption>Static prototype</figcaption><div class="frame"><iframe src="./index.html" title="Static prototype for visual comparison"></iframe></div></figure>
+    </main>
+  </body>
+</html>
