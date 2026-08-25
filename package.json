@@ -7,7 +7,7 @@
     "node": ">=24.14.1 <25"
   },
   "scripts": {
-    "dev": "set -a; [ ! -f .env ] || . ./.env; set +a; NODE_ENV=development astro dev --host 127.0.0.1",
+    "dev": "set -a; [ ! -f .env ] || . ./.env; set +a; astro dev --host 127.0.0.1",
     "build": "astro build",
     "start": "node ./dist/server/entry.mjs",
     "check": "astro check",
@@ -38,7 +38,6 @@
     "@astrojs/check": "0.9.10",
     "@axe-core/playwright": "4.12.1",
     "@playwright/test": "1.62.1",
-    "@tailwindcss/vite": "4.3.3",
     "@testing-library/react": "16.3.2",
     "@testing-library/user-event": "14.6.3",
     "@types/node": "26.2.0",

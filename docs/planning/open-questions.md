@@ -4,7 +4,7 @@ This document tracks important product, architectural, methodological, and desig
 
 The objective is not to answer these questions quickly, but to ensure they remain visible until sufficient exploration and evidence allow an informed decision.
 
-**Current register status (2026-08-25):** `UX-006` has a completed high-fidelity prototype awaiting owner review. Earlier entries are resolved. A future question should be added or reopened only when a concrete product need exposes a gap in the established model; recorded deferrals do not by themselves make work active.
+**Current register status (2026-08-24):** `UX-006` is actively exploring Project-start entry flows. Earlier entries are resolved. A future question should be added or reopened only when a concrete product need exposes a gap in the established model; recorded deferrals do not by themselves make work active.
 
 When a question is resolved:
 
@@ -1166,8 +1166,6 @@ The owner then explicitly selects the Specification Document Template, followed 
 
 After creation, Greenfield opens the prepared document with a small, dismissible **Begin with what you know** panel. Its non-sequential shortcuts are: describe the problem or opportunity, define a goal or success criterion, identify target users, and capture an Open Question. It is not a progress tracker or a workflow gate; empty-section guidance remains available, and **Getting started** can reopen the panel. Brownfield instead offers **Establish context** after the Project is saved.
 
-The first validating prototype is one isolated, high-fidelity Project-start route with representative static data and local interaction state. It covers the empty Project overview; Starting Context; Greenfield guidance; template, preset and section selection; the Greenfield prepared document and owner-invoked first draft; and Brownfield Establish context and Source Note entry. It must visibly preserve the established boundaries: no false personalized recommendation with one template, no automatic canonical save from Project-start Notes, and no Brownfield Source before the Project exists. It uses the Workbench Interface Foundation but does not add production persistence, authentication, commands or APIs.
-
 A Source is non-canonical evidence used to understand, challenge or refine Product Knowledge: an observation, stakeholder input, document, source-code context, screenshot, prototype, repository, analytics or another external input. The initial Brownfield **Establish context** step appears only after the Project has been saved. It offers an owner-authored Source Note, a managed uploaded file or an external link; each initially attaches at Specification scope, while **Start authoring** stays available without adding a Source. A Source Note requires only a concise Title and Evidence text. Every new Source may carry the optional, owner-set **Externally AI-assisted source** indication, off by default, for material external AI assistance in creating or summarizing it. This is a voluntary external-AI declaration in the existing known AI activity trace and known source provenance; it does not require provider, model, prompt or cost information or establish correctness, verification, authorship or ownership. Files and links use the Resource and Resource Reference model, and later Sources may attach at Specification, Section or Product-Artifact scope. A repository is linked or supplied as file context rather than cloned or synchronized.
 
 Source Capture is the explicit owner-controlled act of reviewing one Source and choosing a destination: a new Product Artifact, section-owned Product Knowledge, Decision, Open Question or existing knowledge to revise. It opens the ordinary destination draft with the Source as read-only context and does not pre-fill or save canonical content. Explicit save produces the record or Revision and its visible source provenance, retaining the external-AI indication when selected; discard leaves the Source unchanged. A later capture from another Source creates its own ordinary Revision and source provenance rather than a batch reverse-engineering workflow. An external AI-assisted codebase summary may be added as a Source with that optional indication, but it is evidence to reinterpret and reconfirm rather than reverse-engineered specification truth. A Source, external content or AI interpretation never silently creates canonical Product Knowledge.
@@ -1176,7 +1174,7 @@ After either starting context, the Project is a continuously evolving Product Kn
 
 ## Open Decisions
 
-- Does owner review confirm that the high-fidelity Project-start prototype clearly validates both initial contexts, their shared document workspace and the stated non-canonical boundaries? If not, what focused revision is needed?
+- Which Workbench UX/UI mockups best validate the two starting contexts and their shared continuing evolution?
 
 ## Boundary
 
