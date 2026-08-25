@@ -82,19 +82,17 @@
 }
 
 @layer components {
-  .l-app { min-block-size: 100dvb; background: var(--semantic-color-canvas); }
-  .l-workspace { display: grid; grid-template-columns: minmax(14rem, 19rem) minmax(0, 1fr) 2.75rem; min-block-size: calc(100dvb - 4.25rem); }
+  .l-app { background: var(--semantic-color-canvas); }
+  .l-workspace { grid-template-columns: minmax(14rem, 19rem) minmax(0, 1fr) 2.75rem; min-block-size: calc(100dvb - 4.25rem); }
   .l-workspace:has(.c-contents-panel.is-collapsed) { grid-template-columns: 3.5rem minmax(0, 1fr) 2.75rem; }
   .l-app[data-right-panel-open="true"] .l-workspace { grid-template-columns: minmax(14rem, 19rem) minmax(0, 1fr) minmax(16.75rem, 20.75rem); }
   .l-app[data-right-panel-open="true"] .l-workspace:has(.c-contents-panel.is-collapsed) { grid-template-columns: 3.5rem minmax(0, 1fr) minmax(16.75rem, 20.75rem); }
-  .l-document-shell { container: document / inline-size; min-inline-size: 0; padding-inline: clamp(1.5rem, 5cqi, 4rem); }
-  .l-project-start-form { display: grid; gap: var(--primitive-space-5); }
+  .l-document-shell { container: document / inline-size; padding-inline: clamp(1.5rem, 5cqi, 4rem); }
 
-  .c-application-header { display: flex; align-items: safe center; justify-content: space-between; gap: var(--primitive-space-4); min-block-size: 4.25rem; padding-inline: var(--primitive-space-5); border-block-end: 0.0625rem solid var(--component-panel-border); background: var(--component-header-bg); }
-  .c-wordmark, .c-application-nav, .c-document-actions, .c-icon-label-button, .c-status, .c-panel-heading, .c-dialog-actions { display: flex; align-items: safe center; }
-  .c-wordmark { gap: var(--primitive-space-2); font-size: 1.1rem; font-weight: 560; text-decoration: none; }
+  .c-application-header { min-block-size: 4.25rem; padding-inline: var(--primitive-space-5); }
+  .c-icon-label-button, .c-status, .c-panel-heading, .c-dialog-actions { display: flex; align-items: safe center; }
+  .c-wordmark { font-size: 1.1rem; font-weight: 560; text-decoration: none; }
   .c-wordmark svg { inline-size: 1.45rem; color: var(--semantic-color-sage-5); }
-  .c-application-nav { gap: var(--primitive-space-2); }
   .c-text-button, .c-icon-button, .c-avatar-button, .c-icon-label-button, .c-context-toggle { border: 0; background: transparent; color: var(--component-text); }
   .c-text-button, .c-icon-label-button { gap: var(--primitive-space-2); padding: var(--primitive-space-2) var(--primitive-space-3); font-size: 0.94rem; }
   .c-icon-button { display: inline-grid; place-items: center; min-inline-size: 2.5rem; min-block-size: 2.5rem; border-radius: var(--primitive-radius-sm); }
@@ -102,9 +100,9 @@
   .c-icon-button svg, .c-text-button svg, .c-icon-label-button svg { inline-size: 1.25rem; block-size: 1.25rem; }
   .c-avatar-button { display: grid; place-items: center; inline-size: 2.25rem; block-size: 2.25rem; border-radius: 50%; background: var(--semantic-color-panel); font-size: 0.78rem; font-weight: 650; }
 
-  .c-contents-panel { display: flex; flex-direction: column; gap: var(--primitive-space-4); min-inline-size: 0; padding: var(--primitive-space-5) var(--primitive-space-3); border-inline-end: 0.0625rem solid var(--component-panel-border); background: var(--component-panel-bg); }
+  .c-contents-panel { min-inline-size: 0; padding: var(--primitive-space-5) var(--primitive-space-3); border-inline-end: 0.0625rem solid var(--component-panel-border); background: var(--component-panel-bg); }
   .c-panel-heading { justify-content: space-between; padding-inline: var(--primitive-space-2); color: var(--component-muted-text); font-size: 0.72rem; font-weight: 650; letter-spacing: 0.075em; text-transform: uppercase; }
-  .c-contents-nav { display: grid; gap: var(--primitive-space-1); overflow: auto; scrollbar-gutter: stable; }
+  .c-contents-nav { overflow: auto; scrollbar-gutter: stable; }
   .c-contents-nav a { padding: var(--primitive-space-2) var(--primitive-space-3); border-inline-start: 0.14rem solid transparent; border-radius: 0 var(--primitive-radius-sm) var(--primitive-radius-sm) 0; color: var(--component-muted-text); font-size: 0.9rem; text-decoration: none; }
   .c-contents-nav a:hover { color: var(--component-text); background: color-mix(in oklab, var(--semantic-color-panel) 60%, transparent); }
   .c-contents-nav a.is-current { border-inline-start-color: var(--semantic-color-sage-5); background: color-mix(in oklab, var(--semantic-color-panel) 70%, var(--semantic-color-surface)); color: var(--component-text); font-weight: 600; }
@@ -112,15 +110,14 @@
   .c-contents-group > span { padding-inline: var(--primitive-space-3); font-size: 0.8rem; font-weight: 620; }
   .c-new-project-button { margin-block-start: auto; border: 0; border-block-start: 0.0625rem solid var(--component-panel-border); background: transparent; color: var(--component-accent); padding: var(--primitive-space-4) var(--primitive-space-3) var(--primitive-space-1); text-align: start; font-weight: 620; }
 
-  .c-document-header { position: sticky; inset-block-start: 0; z-index: 1; display: flex; align-items: safe center; justify-content: space-between; gap: var(--primitive-space-5); min-block-size: 8rem; padding-block: var(--primitive-space-5); border-block-end: 0.0625rem solid var(--component-panel-border); background: color-mix(in oklab, var(--semantic-color-canvas) 94%, transparent); backdrop-filter: blur(0.75rem); }
+  .c-document-header { min-block-size: 8rem; padding-block: var(--primitive-space-5); border-block-end: 0.0625rem solid var(--component-panel-border); background: color-mix(in oklab, var(--semantic-color-canvas) 94%, transparent); backdrop-filter: blur(0.75rem); }
   .c-eyebrow { color: var(--component-muted-text); font-size: 0.7rem; font-weight: 650; letter-spacing: 0.08em; text-transform: uppercase; }
   .c-document-header h1 { margin-block-start: var(--primitive-space-1); font-size: clamp(1.75rem, 4cqi, 2.35rem); line-height: 1.14; }
   .c-template-subtitle { margin-block-start: var(--primitive-space-1); color: var(--component-muted-text); font-size: 0.92rem; }
-  .c-document-actions { flex-wrap: wrap; justify-content: flex-end; gap: var(--primitive-space-2); }
   .c-status { gap: var(--primitive-space-2); color: var(--component-muted-text); font-size: 0.9rem; white-space: nowrap; }
   .c-status span { inline-size: 0.6rem; block-size: 0.6rem; border-radius: 50%; background: var(--semantic-color-sage-5); }
 
-  .c-specification { max-inline-size: 46rem; padding-block: var(--semantic-space-section) 7rem; }
+  .c-specification { padding-block: var(--semantic-space-section) 7rem; }
   .c-specification section { padding-block-end: var(--semantic-space-section); }
   .c-specification section + section { padding-block-start: var(--semantic-space-section); border-block-start: 0.0625rem solid var(--component-panel-border); }
   .c-specification h2 { font-size: clamp(2rem, 5cqi, 3rem); line-height: 1.13; }
@@ -135,9 +132,9 @@
   .c-guidance-actions { display: flex; flex-wrap: wrap; gap: var(--primitive-space-2); }
   .c-guidance-actions button { border: 0.0625rem solid var(--component-panel-border); border-radius: var(--primitive-radius-sm); background: var(--semantic-color-canvas); color: var(--component-text); padding: var(--primitive-space-2) var(--primitive-space-3); }
 
-  .c-context-panel { display: grid; grid-template-columns: 2.75rem 0fr; min-inline-size: 0; border-inline-start: 0.0625rem solid var(--component-panel-border); background: var(--component-header-bg); transition: grid-template-columns 180ms ease; }
+  .c-context-panel { grid-template-columns: 2.75rem 0fr; min-inline-size: 0; border-inline-start: 0.0625rem solid var(--component-panel-border); background: var(--component-header-bg); transition: grid-template-columns 180ms ease; }
   .l-app[data-right-panel-open="true"] .c-context-panel { grid-template-columns: 2.75rem minmax(0, 1fr); }
-  .c-context-rail { display: flex; flex-direction: column; align-items: center; gap: var(--primitive-space-3); padding-block: var(--primitive-space-4); }
+  .c-context-rail { padding-block: var(--primitive-space-4); }
   .c-context-toggle, .c-context-rail-action { display: grid; place-items: center; min-inline-size: 2.75rem; min-block-size: 2.75rem; padding: var(--primitive-space-2); }
   .c-context-rail-action { border: 0; background: transparent; color: var(--component-muted-text); }
   .c-context-rail-action:hover { color: var(--component-text); background: var(--semantic-color-surface); }

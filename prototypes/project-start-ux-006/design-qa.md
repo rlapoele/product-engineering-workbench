@@ -13,6 +13,7 @@ This QA note deliberately lives with the temporary static prototype rather than 
 
 - The specification document remains the visual focus: Lora is reserved for the Project and section headings; Urbanist is used for document prose, navigation, and controls.
 - The approved reference's quiet warm canvas, sage navigation cue, light divider treatment, and low-density application header are retained.
+- Tailwind CSS v4 Play CDN compiles the prototype's inline `@theme`; the generated color, font, spacing, and layout utilities are used throughout the static HTML shell.
 - The requested workspace shell is present: a desktop-open table of contents, sticky Project/Specification header, and a right contextual rail collapsed by default.
 - The application header now exposes both Theme and Settings as readable controls. The contextual rail signals future conversations and source attachments without prematurely deciding the panel's information architecture.
 - When expanded, the contextual panel receives the workspace's third grid track and compresses the document column; it does not extend outside the viewport.

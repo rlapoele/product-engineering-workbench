@@ -6,19 +6,36 @@
     <meta name="description" content="Temporary UX-006 Project-start prototype." />
     <title>Project-start prototype — Product Engineering Workbench</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      @theme {
+        --color-canvas: var(--semantic-color-canvas);
+        --color-surface: var(--semantic-color-surface);
+        --color-panel: var(--semantic-color-panel);
+        --color-ink: var(--semantic-color-text);
+        --color-muted: var(--semantic-color-muted);
+        --color-line: var(--semantic-color-line);
+        --color-accent: var(--semantic-color-accent);
+        --font-display: var(--semantic-font-display);
+        --font-sans: var(--semantic-font-body);
+        --spacing-shell: var(--primitive-space-5);
+        --spacing-section: var(--semantic-space-section);
+      }
+
+      @custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+    </style>
     <link rel="stylesheet" href="./styles.css" />
   </head>
-  <body class="antialiased">
-    <div class="l-app" data-right-panel-open="false">
-      <header class="c-application-header">
-        <a class="c-wordmark" href="#document-title" aria-label="Product Engineering Workbench home">
+  <body class="bg-canvas font-sans text-ink antialiased">
+    <div class="l-app min-h-dvh" data-right-panel-open="false">
+      <header class="c-application-header flex items-center justify-between gap-4 border-b border-line bg-canvas">
+        <a class="c-wordmark inline-flex items-center gap-2" href="#document-title" aria-label="Product Engineering Workbench home">
           <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
             <path stroke-linecap="round" stroke-linejoin="round" d="M20.4 3.6C13.7 3.9 8.2 7 5.9 13.2c-1.2 3.2-.3 5.7-.3 5.7s2.5.9 5.7-.3C17.5 16.3 20.6 10.8 20.4 3.6Z" />
             <path stroke-linecap="round" d="M4 20c2.8-4 6.1-7 10-9" />
           </svg>
           <span>Workbench</span>
         </a>
-        <nav class="c-application-nav" aria-label="Application">
+        <nav class="c-application-nav flex items-center gap-2" aria-label="Application">
           <button class="c-text-button" type="button" id="theme-toggle" aria-live="polite">
             <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
               <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1.5m0 15V21m9-9h-1.5M4.5 12H3m15.36-6.36-1.06 1.06M6.7 17.3l-1.06 1.06m12.72 0-1.06-1.06M6.7 6.7 5.64 5.64M15.75 12A3.75 3.75 0 1 1 8.25 12a3.75 3.75 0 0 1 7.5 0Z" />
@@ -35,8 +52,8 @@
         </nav>
       </header>
 
-      <div class="l-workspace">
-        <aside class="c-contents-panel" aria-label="Specification table of contents">
+      <div class="l-workspace grid">
+        <aside class="c-contents-panel flex flex-col gap-4" aria-label="Specification table of contents">
           <div class="c-panel-heading">
             <span>Table of contents</span>
             <button class="c-icon-button" type="button" id="contents-toggle" aria-label="Collapse table of contents" aria-expanded="true">
@@ -45,7 +62,7 @@
               </svg>
             </button>
           </div>
-          <nav class="c-contents-nav" aria-label="Specification sections">
+          <nav class="c-contents-nav grid gap-1" aria-label="Specification sections">
             <a class="is-current" href="#overview">Product overview</a>
             <a href="#goals">Goals and success criteria</a>
             <a href="#users">Target users</a>
@@ -71,14 +88,14 @@
           </button>
         </aside>
 
-        <main class="l-document-shell" id="main-content">
-          <section class="c-document-header" aria-label="Project document header">
+        <main class="l-document-shell min-w-0" id="main-content">
+          <section class="c-document-header sticky top-0 z-10 flex items-center justify-between gap-6" aria-label="Project document header">
             <div>
               <p class="c-eyebrow">Project</p>
-              <h1 id="document-title">MealLoop</h1>
+              <h1 class="font-display" id="document-title">MealLoop</h1>
               <p class="c-template-subtitle" id="template-subtitle">Implementation-Ready Web App Specification · Standard Web App</p>
             </div>
-            <div class="c-document-actions">
+            <div class="c-document-actions flex flex-wrap justify-end gap-2">
               <span class="c-status"><span aria-hidden="true"></span> In progress</span>
               <button class="c-icon-label-button" type="button">
                 <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
@@ -120,7 +137,7 @@
             </div>
           </section>
 
-          <article class="c-specification" aria-label="Specification document">
+          <article class="c-specification max-w-[46rem] font-sans" aria-label="Specification document">
             <section id="overview">
               <h2>Product overview</h2>
               <p>MealLoop is a meal planning and discovery app that helps people eat well with less stress. It brings together meal ideas, planning, and grocery coordination so everyday food choices require less effort.</p>
@@ -170,8 +187,8 @@
           </article>
         </main>
 
-        <aside class="c-context-panel" aria-label="Project context">
-          <div class="c-context-rail">
+        <aside class="c-context-panel grid" aria-label="Project context">
+          <div class="c-context-rail flex flex-col items-center gap-3">
             <button class="c-context-toggle" type="button" id="context-toggle" aria-expanded="false" aria-controls="context-content">
               <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="m9 5 7 7-7 7" /></svg>
               <span>Open Project context</span>
@@ -193,7 +210,7 @@
     </div>
 
     <dialog class="c-project-start-dialog" id="project-start-dialog" aria-labelledby="project-start-title">
-      <form method="dialog" class="l-project-start-form" id="project-start-form">
+      <form method="dialog" class="l-project-start-form grid gap-6" id="project-start-form">
         <header>
           <div>
             <p class="c-eyebrow">Create Project</p>
