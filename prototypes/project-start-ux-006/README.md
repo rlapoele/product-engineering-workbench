@@ -21,3 +21,4 @@ Open `index.html` in a modern browser or serve this directory with a static-file
 - Primitive, semantic and component tokens are layered in `styles.css`; the Tailwind theme maps its generated utilities to those semantic tokens.
 - `l-` classes express layout and `c-` classes express visual components in `@layer components`; direct HTML styling is in `@layer base`.
 - The visual reference uses Lora for display headings and Urbanist for prose and interface text.
+- `<workbench-icon>` provides the local Heroicons glyph set. `name` selects a glyph, `size` accepts `sm`, `md` (default), or `lg`, and an optional `label` exposes an informative icon; otherwise the icon is decorative to assistive technology.

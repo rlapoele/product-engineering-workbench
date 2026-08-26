@@ -29,24 +29,16 @@
     <div class="l-app min-h-dvh" data-right-panel-open="false">
       <header class="c-application-header flex items-center justify-between gap-4 border-b border-line bg-canvas">
         <a class="c-wordmark inline-flex items-center gap-2" href="#document-title" aria-label="Product Engineering Workbench home">
-          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M20.4 3.6C13.7 3.9 8.2 7 5.9 13.2c-1.2 3.2-.3 5.7-.3 5.7s2.5.9 5.7-.3C17.5 16.3 20.6 10.8 20.4 3.6Z" />
-            <path stroke-linecap="round" d="M4 20c2.8-4 6.1-7 10-9" />
-          </svg>
+          <workbench-icon name="leaf"></workbench-icon>
           <span>Workbench</span>
         </a>
         <nav class="c-application-nav flex items-center gap-2" aria-label="Application">
           <button class="c-text-button inline-flex shrink-0 items-center whitespace-nowrap" type="button" id="theme-toggle" aria-live="polite">
-            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1.5m0 15V21m9-9h-1.5M4.5 12H3m15.36-6.36-1.06 1.06M6.7 17.3l-1.06 1.06m12.72 0-1.06-1.06M6.7 6.7 5.64 5.64M15.75 12A3.75 3.75 0 1 1 8.25 12a3.75 3.75 0 0 1 7.5 0Z" />
-            </svg>
+            <workbench-icon name="sun"></workbench-icon>
             <span>Theme: system</span>
           </button>
           <button class="c-text-button inline-flex shrink-0 items-center whitespace-nowrap" type="button" aria-label="Application settings">
-            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M10.343 3.94c.09-.542.56-.94 1.11-.94h1.094c.55 0 1.02.398 1.11.94l.149.894c.064.388.32.716.676.886.111.053.221.109.33.169.335.185.764.171 1.082-.076l.733-.57a1.125 1.125 0 0 1 1.498.093l.77.77c.39.39.426 1.012.093 1.498l-.57.733c-.247.318-.261.747-.076 1.082.06.109.116.22.17.33.169.356.497.612.885.676l.894.149c.542.09.94.56.94 1.11v1.094c0 .55-.398 1.02-.94 1.11l-.894.149c-.388.064-.716.32-.886.676-.053.111-.109.221-.169.33-.185.335-.171.764.076 1.082l.57.733c.333.486.297 1.108-.093 1.498l-.77.77a1.125 1.125 0 0 1-1.498.093l-.733-.57c-.318-.247-.747-.261-1.082-.076-.11.06-.22.116-.33.17-.356.169-.612.497-.676.885l-.149.894c-.09.542-.56.94-1.11.94h-1.094c-.55 0-1.02-.398-1.11-.94l-.149-.894c-.064-.388-.32-.716-.676-.886a6.52 6.52 0 0 1-.33-.169c-.335-.185-.764-.171-1.082.076l-.733.57a1.125 1.125 0 0 1-1.498-.093l-.77-.77a1.125 1.125 0 0 1-.093-1.498l.57-.733c.247-.318.261-.747.076-1.082a6.52 6.52 0 0 1-.17-.33c-.169-.356-.497-.612-.885-.676l-.894-.149a1.125 1.125 0 0 1-.94-1.11V11.44c0-.55.398-1.02.94-1.11l.894-.149c.388-.064.716-.32.886-.676.053-.111.109-.221.169-.33.185-.335.171-.764-.076-1.082l-.57-.733a1.125 1.125 0 0 1 .093-1.498l.77-.77a1.125 1.125 0 0 1 1.498-.093l.733.57c.318.247.747.261 1.082.076.11-.06.22-.116.33-.17.356-.169.612-.497.676-.885l.149-.894Z" />
-              <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
-            </svg>
+            <workbench-icon name="cog-6-tooth"></workbench-icon>
             <span>Settings</span>
           </button>
           <button class="c-avatar-button" type="button" aria-label="Open account menu">AM</button>
@@ -58,9 +50,7 @@
           <div class="c-panel-heading">
             <span>Table of contents</span>
             <button class="c-icon-button" type="button" id="contents-toggle" aria-label="Collapse table of contents" aria-expanded="true">
-              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M9 6.75h10.5M9 12h10.5M9 17.25h10.5M4.5 6.75h.01M4.5 12h.01M4.5 17.25h.01" />
-              </svg>
+              <workbench-icon name="list-bullet"></workbench-icon>
             </button>
           </div>
           <nav class="c-contents-nav grid gap-1" aria-label="Specification sections">
@@ -99,13 +89,11 @@
             <div class="c-document-actions flex flex-wrap justify-end gap-2">
               <span class="c-status"><span aria-hidden="true"></span> In progress</span>
               <button class="c-icon-label-button" type="button">
-                <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 3.75H6.75A1.5 1.5 0 0 0 5.25 5.25v15l6.75-3.75 6.75 3.75v-15a1.5 1.5 0 0 0-1.5-1.5Z" />
-                </svg>
+                <workbench-icon name="bookmark"></workbench-icon>
                 Save
               </button>
               <button class="c-icon-button" type="button" aria-label="More Project actions">
-                <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><circle cx="5" cy="12" r="1.35"/><circle cx="12" cy="12" r="1.35"/><circle cx="19" cy="12" r="1.35"/></svg>
+                <workbench-icon name="ellipsis-horizontal"></workbench-icon>
               </button>
             </div>
           </section>
@@ -191,14 +179,14 @@
         <aside class="c-context-panel grid" aria-label="Project context">
           <div class="c-context-rail flex flex-col items-center gap-3">
             <button class="c-context-toggle" type="button" id="context-toggle" aria-expanded="false" aria-controls="context-content">
-              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="m9 5 7 7-7 7" /></svg>
+              <workbench-icon name="chevron-right"></workbench-icon>
               <span>Open Project context</span>
             </button>
             <button class="c-context-rail-action" type="button" aria-label="Future conversations surface">
-              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12c0 1.85.89 3.49 2.27 4.52L4.5 21l4.1-2.28c.92.34 1.92.53 2.96.53 4.83 0 8.75-3.25 8.75-7.25s-3.92-7.25-8.75-7.25S2.25 8 2.25 12Z" /></svg>
+              <workbench-icon name="chat-bubble-left"></workbench-icon>
             </button>
             <button class="c-context-rail-action" type="button" aria-label="Future source attachments surface">
-              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="m18.38 12.74-5.66 5.66a4.5 4.5 0 0 1-6.36-6.36l6.37-6.37a3 3 0 0 1 4.24 4.24l-6.36 6.37a1.5 1.5 0 0 1-2.13-2.12l5.66-5.66" /></svg>
+              <workbench-icon name="paper-clip"></workbench-icon>
             </button>
           </div>
           <div class="c-context-content" id="context-content" hidden>
@@ -218,7 +206,7 @@
             <h2 id="project-start-title">Start with your context</h2>
           </div>
           <button class="c-icon-button" type="button" id="close-project-start" aria-label="Close Project creation">
-            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M6 6l12 12M18 6 6 18" /></svg>
+            <workbench-icon name="x-mark"></workbench-icon>
           </button>
         </header>
         <ol class="c-stepper" aria-label="Project creation steps">
@@ -255,6 +243,6 @@
       </form>
     </dialog>
     <div class="c-toast" id="toast" role="status" aria-live="polite" hidden></div>
-    <script type="module" src="./app.js"></script>
+    <script type="module" src="./app.js?revision=heroicons-component"></script>
   </body>
 </html>

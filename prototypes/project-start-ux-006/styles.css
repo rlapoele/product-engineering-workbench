@@ -103,14 +103,18 @@
   .l-document-shell { container: document / inline-size; padding-inline: clamp(1.5rem, 5cqi, 4rem); }
 
   .c-application-header { min-block-size: 4.25rem; padding-inline: var(--primitive-space-5); }
+  workbench-icon { display: inline-grid; flex: none; place-items: center; inline-size: 1.25rem; block-size: 1.25rem; line-height: 1; }
+  workbench-icon[size="sm"] { inline-size: 1rem; block-size: 1rem; }
+  workbench-icon[size="lg"] { inline-size: 1.5rem; block-size: 1.5rem; }
+  workbench-icon svg { inline-size: 100%; block-size: 100%; }
   .c-icon-label-button, .c-status, .c-panel-heading, .c-dialog-actions { display: flex; align-items: safe center; }
   .c-wordmark { font-size: 1.1rem; font-weight: 560; text-decoration: none; }
-  .c-wordmark svg { inline-size: 1.45rem; color: var(--component-brand); }
+  .c-wordmark workbench-icon { inline-size: 1.45rem; block-size: 1.45rem; color: var(--component-brand); }
   .c-text-button, .c-icon-button, .c-avatar-button, .c-icon-label-button, .c-context-toggle { border: 0; background: transparent; color: var(--component-text); }
   .c-text-button, .c-icon-label-button { gap: var(--primitive-space-2); padding: var(--primitive-space-2) var(--primitive-space-3); font-size: 0.94rem; }
   .c-icon-button { display: inline-grid; place-items: center; min-inline-size: 2.5rem; min-block-size: 2.5rem; border-radius: var(--primitive-radius-sm); }
   .c-icon-button:hover, .c-text-button:hover, .c-icon-label-button:hover { background: var(--semantic-color-surface); }
-  .c-icon-button svg, .c-text-button svg, .c-icon-label-button svg { inline-size: 1.25rem; block-size: 1.25rem; }
+  .c-icon-button workbench-icon, .c-text-button workbench-icon, .c-icon-label-button workbench-icon { inline-size: 1.25rem; block-size: 1.25rem; }
   .c-avatar-button { display: grid; place-items: center; inline-size: 2.25rem; block-size: 2.25rem; border-radius: 50%; background: var(--semantic-color-panel); font-size: 0.78rem; font-weight: 650; }
 
   .c-contents-panel { min-inline-size: 0; padding: var(--primitive-space-5) var(--primitive-space-3); border-inline-end: 0.0625rem solid var(--component-panel-border); background: var(--component-panel-bg); }
@@ -153,9 +157,9 @@
   .c-context-toggle, .c-context-rail-action { display: grid; place-items: center; min-inline-size: 2.75rem; min-block-size: 2.75rem; padding: var(--primitive-space-2); }
   .c-context-rail-action { border: 0; background: transparent; color: var(--component-muted-text); }
   .c-context-rail-action:hover { color: var(--component-text); background: var(--semantic-color-surface); }
-  .c-context-toggle svg { inline-size: 1.35rem; transition: transform 180ms ease; }
-  .c-context-rail-action svg { inline-size: 1.3rem; }
-  .l-app[data-right-panel-open="true"] .c-context-toggle svg { transform: rotate(180deg); }
+  .c-context-toggle workbench-icon { inline-size: 1.35rem; block-size: 1.35rem; transition: transform 180ms ease; }
+  .c-context-rail-action workbench-icon { inline-size: 1.3rem; block-size: 1.3rem; }
+  .l-app[data-right-panel-open="true"] .c-context-toggle workbench-icon { transform: rotate(180deg); }
   .c-context-toggle span { position: absolute; inline-size: 1px; block-size: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
   .c-context-content { min-inline-size: 14rem; padding: var(--primitive-space-5) var(--primitive-space-4); }
   .c-context-content h2 { margin-block: var(--primitive-space-2); font-size: 1.3rem; }
@@ -225,6 +229,6 @@
 
 @layer components {
   @media (prefers-reduced-motion: reduce) {
-    .c-context-panel, .c-context-toggle svg { transition-duration: 0.01ms; }
+    .c-context-panel, .c-context-toggle workbench-icon { transition-duration: 0.01ms; }
   }
 }
