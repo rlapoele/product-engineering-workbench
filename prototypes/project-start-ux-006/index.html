@@ -23,7 +23,7 @@
 
       @custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
     </style>
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./styles.css?revision=context-rail-containment" />
   </head>
   <body class="bg-canvas font-sans text-ink antialiased">
     <div class="l-app min-h-dvh" data-right-panel-open="false">
@@ -243,6 +243,6 @@
       </form>
     </dialog>
     <div class="c-toast" id="toast" role="status" aria-live="polite" hidden></div>
-    <script type="module" src="./app.js?revision=heroicons-component"></script>
+    <script defer src="./app.js?revision=heroicons-component"></script>
   </body>
 </html>
