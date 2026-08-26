@@ -12,6 +12,7 @@
     --primitive-color-sage-5: oklch(0.48 0.045 132);
     --primitive-color-ink-9: oklch(0.255 0.014 72);
     --primitive-color-ink-6: oklch(0.43 0.018 72);
+    --primitive-color-ink-5: oklch(0.54 0.018 72);
     --primitive-color-ink-4: oklch(0.59 0.013 72);
     --primitive-color-line: oklch(0.87 0.01 83);
     --primitive-color-accent: oklch(0.56 0.105 46);
@@ -31,8 +32,13 @@
     --semantic-color-canvas: var(--primitive-color-stone-0);
     --semantic-color-surface: var(--primitive-color-stone-1);
     --semantic-color-panel: var(--primitive-color-sage-1);
+    --semantic-color-brand: var(--primitive-color-sage-5);
+    --semantic-color-selected: var(--primitive-color-sage-5);
+    --semantic-color-status-progress: var(--primitive-color-sage-5);
+    --semantic-color-guidance: var(--primitive-color-sage-5);
     --semantic-color-text: var(--primitive-color-ink-9);
     --semantic-color-muted: var(--primitive-color-ink-6);
+    --semantic-color-form-label: var(--primitive-color-ink-5);
     --semantic-color-subtle: var(--primitive-color-ink-4);
     --semantic-color-line: var(--primitive-color-line);
     --semantic-color-accent: var(--primitive-color-accent);
@@ -45,8 +51,14 @@
     --component-header-bg: var(--semantic-color-canvas);
     --component-panel-bg: var(--semantic-color-surface);
     --component-panel-border: var(--semantic-color-line);
+    --component-brand: var(--semantic-color-brand);
+    --component-selection: var(--semantic-color-selected);
+    --component-status-progress: var(--semantic-color-status-progress);
+    --component-document-marker: var(--semantic-color-brand);
+    --component-guidance: var(--semantic-color-guidance);
     --component-text: var(--semantic-color-text);
     --component-muted-text: var(--semantic-color-muted);
+    --component-field-label: var(--semantic-color-form-label);
     --component-accent: var(--semantic-color-accent);
     --component-focus: var(--semantic-color-focus);
     --component-heading-font: var(--semantic-font-display);
@@ -61,6 +73,7 @@
     --primitive-color-sage-5: oklch(0.71 0.044 132);
     --primitive-color-ink-9: oklch(0.94 0.01 86);
     --primitive-color-ink-6: oklch(0.77 0.016 86);
+    --primitive-color-ink-5: oklch(0.7 0.016 86);
     --primitive-color-ink-4: oklch(0.61 0.014 86);
     --primitive-color-line: oklch(0.35 0.014 76);
     --primitive-color-accent: oklch(0.72 0.105 54);
@@ -92,7 +105,7 @@
   .c-application-header { min-block-size: 4.25rem; padding-inline: var(--primitive-space-5); }
   .c-icon-label-button, .c-status, .c-panel-heading, .c-dialog-actions { display: flex; align-items: safe center; }
   .c-wordmark { font-size: 1.1rem; font-weight: 560; text-decoration: none; }
-  .c-wordmark svg { inline-size: 1.45rem; color: var(--semantic-color-sage-5); }
+  .c-wordmark svg { inline-size: 1.45rem; color: var(--component-brand); }
   .c-text-button, .c-icon-button, .c-avatar-button, .c-icon-label-button, .c-context-toggle { border: 0; background: transparent; color: var(--component-text); }
   .c-text-button, .c-icon-label-button { gap: var(--primitive-space-2); padding: var(--primitive-space-2) var(--primitive-space-3); font-size: 0.94rem; }
   .c-icon-button { display: inline-grid; place-items: center; min-inline-size: 2.5rem; min-block-size: 2.5rem; border-radius: var(--primitive-radius-sm); }
@@ -103,19 +116,21 @@
   .c-contents-panel { min-inline-size: 0; padding: var(--primitive-space-5) var(--primitive-space-3); border-inline-end: 0.0625rem solid var(--component-panel-border); background: var(--component-panel-bg); }
   .c-panel-heading { justify-content: space-between; padding-inline: var(--primitive-space-2); color: var(--component-muted-text); font-size: 0.72rem; font-weight: 650; letter-spacing: 0.075em; text-transform: uppercase; }
   .c-contents-nav { overflow: auto; scrollbar-gutter: stable; }
-  .c-contents-nav a { padding: var(--primitive-space-2) var(--primitive-space-3); border-inline-start: 0.14rem solid transparent; border-radius: 0 var(--primitive-radius-sm) var(--primitive-radius-sm) 0; color: var(--component-muted-text); font-size: 0.9rem; text-decoration: none; }
+  .c-contents-nav a { display: flex; gap: var(--primitive-space-2); padding: var(--primitive-space-2) var(--primitive-space-3); border-inline-start: 0.14rem solid transparent; border-radius: 0 var(--primitive-radius-sm) var(--primitive-radius-sm) 0; color: var(--component-muted-text); font-size: 0.9rem; text-decoration: none; }
+  .c-contents-item-number { flex: 0 0 1.25rem; color: var(--component-muted-text); font-variant-numeric: tabular-nums; text-align: end; }
+  .c-contents-nav > a:has(+ .c-contents-group) { margin-block-end: var(--primitive-space-3); }
   .c-contents-nav a:hover { color: var(--component-text); background: color-mix(in oklab, var(--semantic-color-panel) 60%, transparent); }
-  .c-contents-nav a.is-current { border-inline-start-color: var(--semantic-color-sage-5); background: color-mix(in oklab, var(--semantic-color-panel) 70%, var(--semantic-color-surface)); color: var(--component-text); font-weight: 600; }
+  .c-contents-nav a.is-current { border-inline-start-color: var(--component-selection); background: color-mix(in oklab, var(--semantic-color-panel) 70%, var(--semantic-color-surface)); color: var(--component-text); font-weight: 600; }
   .c-contents-group { display: grid; gap: var(--primitive-space-1); margin-block: 0; padding-block: var(--primitive-space-3); border-block-start: 0.0625rem solid var(--component-panel-border); }
   .c-contents-group > span { padding-inline: var(--primitive-space-3); font-size: 0.8rem; font-weight: 620; }
-  .c-new-project-button { margin-block-start: auto; border: 0; border-block-start: 0.0625rem solid var(--component-panel-border); background: transparent; color: var(--component-accent); padding: var(--primitive-space-4) var(--primitive-space-3) var(--primitive-space-1); text-align: start; font-weight: 620; }
+  .c-new-project-button { margin-block-start: 0; border: 0; border-block-start: 0.0625rem solid var(--component-panel-border); background: transparent; color: var(--component-accent); padding: var(--primitive-space-4) var(--primitive-space-3) var(--primitive-space-1); text-align: start; font-weight: 620; }
 
   .c-document-header { min-block-size: 8rem; padding-block: var(--primitive-space-5); border-block-end: 0.0625rem solid var(--component-panel-border); background: color-mix(in oklab, var(--semantic-color-canvas) 94%, transparent); backdrop-filter: blur(0.75rem); }
   .c-eyebrow { color: var(--component-muted-text); font-size: 0.7rem; font-weight: 650; letter-spacing: 0.08em; text-transform: uppercase; }
   .c-document-header h1 { margin-block-start: var(--primitive-space-1); font-size: clamp(1.75rem, 4cqi, 2.35rem); line-height: 1.14; }
   .c-template-subtitle { margin-block-start: var(--primitive-space-1); color: var(--component-muted-text); font-size: 0.92rem; }
   .c-status { gap: var(--primitive-space-2); color: var(--component-muted-text); font-size: 0.9rem; white-space: nowrap; }
-  .c-status span { inline-size: 0.6rem; block-size: 0.6rem; border-radius: 50%; background: var(--semantic-color-sage-5); }
+  .c-status span { inline-size: 0.6rem; block-size: 0.6rem; border-radius: 50%; background: var(--component-status-progress); }
 
   .c-specification { padding-block: var(--semantic-space-section) 7rem; }
   .c-specification section { padding-block-end: var(--semantic-space-section); }
@@ -124,7 +139,7 @@
   .c-specification p, .c-specification li { color: var(--component-text); font-size: 1rem; line-height: 1.75; }
   .c-specification p { margin-block-start: var(--primitive-space-5); }
   .c-specification ul { display: grid; gap: var(--primitive-space-2); margin: var(--primitive-space-5) 0 0; padding-inline-start: 1.4rem; }
-  .c-specification li::marker { color: var(--semantic-color-sage-5); }
+  .c-specification li::marker { color: var(--component-document-marker); }
 
   .c-start-guidance, .c-establish-context { display: flex; align-items: safe center; justify-content: space-between; gap: var(--primitive-space-5); max-inline-size: 57rem; margin-block-start: var(--primitive-space-5); padding: var(--primitive-space-5); border: 0.0625rem solid var(--component-panel-border); border-radius: var(--primitive-radius-md); background: color-mix(in oklab, var(--semantic-color-panel) 48%, var(--semantic-color-canvas)); }
   .c-start-guidance h2, .c-establish-context h2 { margin-block: var(--primitive-space-2); font-size: 1.45rem; }
@@ -132,7 +147,7 @@
   .c-guidance-actions { display: flex; flex-wrap: wrap; gap: var(--primitive-space-2); }
   .c-guidance-actions button { border: 0.0625rem solid var(--component-panel-border); border-radius: var(--primitive-radius-sm); background: var(--semantic-color-canvas); color: var(--component-text); padding: var(--primitive-space-2) var(--primitive-space-3); }
 
-  .c-context-panel { grid-template-columns: 2.75rem 0fr; min-inline-size: 0; border-inline-start: 0.0625rem solid var(--component-panel-border); background: var(--component-header-bg); transition: grid-template-columns 180ms ease; }
+  .c-context-panel { grid-template-columns: 2.75rem 0fr; min-inline-size: 0; border-inline-start: 0.0625rem solid var(--component-panel-border); background: var(--component-panel-bg); transition: grid-template-columns 180ms ease; }
   .l-app[data-right-panel-open="true"] .c-context-panel { grid-template-columns: 2.75rem minmax(0, 1fr); }
   .c-context-rail { padding-block: var(--primitive-space-4); }
   .c-context-toggle, .c-context-rail-action { display: grid; place-items: center; min-inline-size: 2.75rem; min-block-size: 2.75rem; padding: var(--primitive-space-2); }
@@ -146,26 +161,30 @@
   .c-context-content h2 { margin-block: var(--primitive-space-2); font-size: 1.3rem; }
   .c-context-content p:last-child { color: var(--component-muted-text); line-height: 1.6; }
 
-  .c-project-start-dialog { inline-size: min(42rem, calc(100% - 2rem)); max-block-size: min(46rem, calc(100dvb - 2rem)); overflow: auto; border: 0.0625rem solid var(--component-panel-border); border-radius: var(--primitive-radius-md); background: var(--semantic-color-canvas); color: var(--component-text); padding: var(--primitive-space-6); box-shadow: 0 1.5rem 4rem oklch(0.2 0.02 78 / 0.18); }
-  .c-project-start-dialog header { display: flex; justify-content: space-between; gap: var(--primitive-space-4); }
+  .c-project-start-dialog { position: fixed; inset: 0; inline-size: min(42rem, calc(100% - 2rem)); max-block-size: min(46rem, calc(100dvb - 2rem)); margin: auto; overflow: auto; border: 0.0625rem solid var(--component-panel-border); border-radius: var(--primitive-radius-md); background: var(--semantic-color-canvas); color: var(--component-text); padding: var(--primitive-space-6); box-shadow: 0 1.5rem 4rem oklch(0.2 0.02 78 / 0.18); }
+  .c-project-start-dialog header { display: flex; align-items: flex-start; justify-content: space-between; gap: var(--primitive-space-4); }
+  .c-project-start-dialog header .c-icon-button { inline-size: 2.5rem; block-size: 2.5rem; aspect-ratio: 1; }
   .c-project-start-dialog h2 { margin-block-start: var(--primitive-space-2); font-size: 2rem; }
-  .c-stepper { display: flex; justify-content: space-between; gap: var(--primitive-space-2); margin: 0; padding: 0; color: var(--component-muted-text); font-size: 0.75rem; list-style: none; }
+  .c-stepper { display: flex; justify-content: space-between; gap: var(--primitive-space-2); margin: 0; padding: 0; color: var(--component-muted-text); font-size: 0.8125rem; list-style: none; }
   .c-stepper li { display: flex; align-items: center; gap: var(--primitive-space-1); }
   .c-stepper span { display: grid; place-items: center; inline-size: 1.35rem; block-size: 1.35rem; border-radius: 50%; background: var(--semantic-color-surface); }
   .c-stepper .is-current { color: var(--component-text); font-weight: 650; }
-  .c-stepper .is-current span { background: var(--semantic-color-sage-5); color: var(--semantic-color-canvas); }
+  .c-stepper .is-current span { background: var(--component-selection); color: var(--semantic-color-canvas); }
   .c-setup-step { display: none; }
   .c-setup-step.is-active { display: grid; gap: var(--primitive-space-4); }
   .c-setup-step fieldset { display: grid; gap: var(--primitive-space-3); margin: 0; padding: 0; border: 0; }
   .c-setup-step legend, .c-setup-step label { display: grid; gap: var(--primitive-space-2); font-weight: 600; }
+  .c-setup-step label:has(> input:not([type="radio"]):not([type="checkbox"]), > select, > textarea) { color: var(--component-field-label); }
   .c-setup-step legend { font-family: var(--semantic-font-display); font-size: 1.35rem; font-weight: 500; }
+  .c-setup-step fieldset:has(.c-section-choice) legend { margin-block-end: var(--primitive-space-2); }
+  .c-setup-step .c-section-choice { display: inline-flex; align-items: center; gap: var(--primitive-space-2); font-weight: 500; }
   .c-setup-step input:not([type="radio"]):not([type="checkbox"]), .c-setup-step select, .c-setup-step textarea { border: 0.0625rem solid var(--component-panel-border); border-radius: var(--primitive-radius-sm); background: var(--semantic-color-canvas); color: var(--component-text); padding: var(--primitive-space-3); }
   .c-setup-step textarea { resize: vertical; }
   .c-choice-card, .c-template-choice { grid-template-columns: auto 1fr; align-items: start; padding: var(--primitive-space-4); border: 0.0625rem solid var(--component-panel-border); border-radius: var(--primitive-radius-md); background: var(--semantic-color-surface); }
-  .c-choice-card:has(:checked), .c-template-choice:has(:checked) { border-color: var(--semantic-color-sage-5); background: color-mix(in oklab, var(--semantic-color-panel) 55%, var(--semantic-color-canvas)); }
+  .c-choice-card:has(:checked), .c-template-choice:has(:checked) { border-color: var(--component-selection); background: color-mix(in oklab, var(--semantic-color-panel) 55%, var(--semantic-color-canvas)); }
   .c-choice-card span, .c-template-choice span { display: grid; gap: var(--primitive-space-1); }
   .c-choice-card small, .c-template-choice small, .c-brownfield-preview { color: var(--component-muted-text); font-weight: 450; line-height: 1.5; }
-  .c-greenfield-questions { display: grid; gap: var(--primitive-space-3); padding: var(--primitive-space-4); border-inline-start: 0.18rem solid var(--semantic-color-sage-5); background: color-mix(in oklab, var(--semantic-color-panel) 34%, transparent); }
+  .c-greenfield-questions { display: grid; gap: var(--primitive-space-3); padding: var(--primitive-space-4); border-inline-start: 0.18rem solid var(--component-guidance); background: color-mix(in oklab, var(--semantic-color-panel) 34%, transparent); }
   .c-brownfield-preview { padding: var(--primitive-space-4); border-inline-start: 0.18rem solid var(--semantic-color-accent); background: color-mix(in oklab, var(--semantic-color-surface) 65%, transparent); }
   .c-dialog-actions { justify-content: space-between; gap: var(--primitive-space-3); padding-block-start: var(--primitive-space-4); border-block-start: 0.0625rem solid var(--component-panel-border); }
   .c-dialog-actions span { flex: 1; }

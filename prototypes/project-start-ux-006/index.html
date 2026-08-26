@@ -36,15 +36,16 @@
           <span>Workbench</span>
         </a>
         <nav class="c-application-nav flex items-center gap-2" aria-label="Application">
-          <button class="c-text-button" type="button" id="theme-toggle" aria-live="polite">
+          <button class="c-text-button inline-flex shrink-0 items-center whitespace-nowrap" type="button" id="theme-toggle" aria-live="polite">
             <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
               <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1.5m0 15V21m9-9h-1.5M4.5 12H3m15.36-6.36-1.06 1.06M6.7 17.3l-1.06 1.06m12.72 0-1.06-1.06M6.7 6.7 5.64 5.64M15.75 12A3.75 3.75 0 1 1 8.25 12a3.75 3.75 0 0 1 7.5 0Z" />
             </svg>
             <span>Theme: system</span>
           </button>
-          <button class="c-text-button" type="button" aria-label="Application settings">
+          <button class="c-text-button inline-flex shrink-0 items-center whitespace-nowrap" type="button" aria-label="Application settings">
             <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6h3m-6.5 6h10m-6.5 6h3M5 6h.01M5 12h.01M5 18h.01" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M10.343 3.94c.09-.542.56-.94 1.11-.94h1.094c.55 0 1.02.398 1.11.94l.149.894c.064.388.32.716.676.886.111.053.221.109.33.169.335.185.764.171 1.082-.076l.733-.57a1.125 1.125 0 0 1 1.498.093l.77.77c.39.39.426 1.012.093 1.498l-.57.733c-.247.318-.261.747-.076 1.082.06.109.116.22.17.33.169.356.497.612.885.676l.894.149c.542.09.94.56.94 1.11v1.094c0 .55-.398 1.02-.94 1.11l-.894.149c-.388.064-.716.32-.886.676-.053.111-.109.221-.169.33-.185.335-.171.764.076 1.082l.57.733c.333.486.297 1.108-.093 1.498l-.77.77a1.125 1.125 0 0 1-1.498.093l-.733-.57c-.318-.247-.747-.261-1.082-.076-.11.06-.22.116-.33.17-.356.169-.612.497-.676.885l-.149.894c-.09.542-.56.94-1.11.94h-1.094c-.55 0-1.02-.398-1.11-.94l-.149-.894c-.064-.388-.32-.716-.676-.886a6.52 6.52 0 0 1-.33-.169c-.335-.185-.764-.171-1.082.076l-.733.57a1.125 1.125 0 0 1-1.498-.093l-.77-.77a1.125 1.125 0 0 1-.093-1.498l.57-.733c.247-.318.261-.747.076-1.082a6.52 6.52 0 0 1-.17-.33c-.169-.356-.497-.612-.885-.676l-.894-.149a1.125 1.125 0 0 1-.94-1.11V11.44c0-.55.398-1.02.94-1.11l.894-.149c.388-.064.716-.32.886-.676.053-.111.109-.221.169-.33.185-.335.171-.764-.076-1.082l-.57-.733a1.125 1.125 0 0 1 .093-1.498l.77-.77a1.125 1.125 0 0 1 1.498-.093l.733.57c.318.247.747.261 1.082.076.11-.06.22-.116.33-.17.356-.169.612-.497.676-.885l.149-.894Z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
             </svg>
             <span>Settings</span>
           </button>
@@ -63,24 +64,24 @@
             </button>
           </div>
           <nav class="c-contents-nav grid gap-1" aria-label="Specification sections">
-            <a class="is-current" href="#overview">Product overview</a>
-            <a href="#goals">Goals and success criteria</a>
-            <a href="#users">Target users</a>
+            <a class="is-current" href="#overview"><span class="c-contents-item-number">1.</span>Product overview</a>
+            <a href="#goals"><span class="c-contents-item-number">2.</span>Goals and success criteria</a>
+            <a href="#users"><span class="c-contents-item-number">3.</span>Target users</a>
             <div class="c-contents-group">
               <span>Product</span>
-              <a href="#problem">Problem or opportunity</a>
-              <a href="#solution">Solution summary</a>
-              <a href="#features">Core features</a>
+              <a href="#problem"><span class="c-contents-item-number">4.</span>Problem or opportunity</a>
+              <a href="#solution"><span class="c-contents-item-number">5.</span>Solution summary</a>
+              <a href="#features"><span class="c-contents-item-number">6.</span>Core features</a>
             </div>
             <div class="c-contents-group">
               <span>Experience</span>
-              <a href="#flows">User flows</a>
-              <a href="#design">UX/UI guidance</a>
+              <a href="#flows"><span class="c-contents-item-number">7.</span>User flows</a>
+              <a href="#design"><span class="c-contents-item-number">8.</span>UX/UI guidance</a>
             </div>
             <div class="c-contents-group">
               <span>Specify</span>
-              <a href="#requirements">Requirements</a>
-              <a href="#questions">Open questions</a>
+              <a href="#requirements"><span class="c-contents-item-number">9.</span>Requirements</a>
+              <a href="#questions"><span class="c-contents-item-number">10.</span>Open questions</a>
             </div>
           </nav>
           <button class="c-new-project-button" type="button" id="open-project-start">
@@ -243,7 +244,7 @@
         </section>
         <section class="c-setup-step" data-step="4">
           <label>Preset <select name="preset"><option>Standard Web App</option><option>Lean Web App</option><option>Expanded Web App</option></select></label>
-          <fieldset><legend>Selected sections</legend><label><input type="checkbox" checked /> Product overview</label><label><input type="checkbox" checked /> Goals and success criteria</label><label><input type="checkbox" checked /> Target users</label><label><input type="checkbox" checked /> Open questions</label></fieldset>
+          <fieldset><legend>Selected sections</legend><label class="c-section-choice"><input type="checkbox" checked /> Product overview</label><label class="c-section-choice"><input type="checkbox" checked /> Goals and success criteria</label><label class="c-section-choice"><input type="checkbox" checked /> Target users</label><label class="c-section-choice"><input type="checkbox" checked /> Open questions</label></fieldset>
         </section>
         <section class="c-setup-step" data-step="5">
           <p class="c-eyebrow">Ready to create</p>
