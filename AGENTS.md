@@ -177,41 +177,166 @@ is explicitly requested.
 
 ---
 
-# Tailwind CSS v4.3+ Contract
+# Styling and Tailwind CSS v4.3+ Contract
 
-For authorized frontend work, use Tailwind CSS v4.3+ as a utility-first CSS
-system. This contract does not authorize production UI work that has not
-otherwise been approved.
+Use this contract for authorized frontend work. It does not authorize
+production UI work that has not otherwise been approved.
 
-- Use static Tailwind utility classes in markup for one-off layout, spacing,
-  typography, responsive behavior and interaction states.
-- Use top-level `@theme` only to expose deliberate design tokens as Tailwind
-  utilities. Preserve the project's primitive → semantic → component token
-  layering in CSS; export only semantic tokens that need a utility API.
-- Use `@layer base` for element defaults and `@layer components` only for
-  reusable semantic component or layout contracts. For UX-006, these classes
-  use the existing `c-` and `l-` prefixes.
-- Do not use `@apply`.
-- Do not introduce legacy Tailwind v3 directives (`@tailwind base`,
-  `@tailwind components` or `@tailwind utilities`) or a `tailwind.config.*`
-  file without explicit approval.
-- Prefer existing token-backed utilities over arbitrary values. An arbitrary
-  value is acceptable only for a documented, one-off constraint; do not repeat
-  it when a token or ordinary utility is appropriate.
-- Keep Tailwind class names statically discoverable. Never construct classes
-  dynamically (for example, `bg-${color}-500`); map state or props to complete
-  class strings instead.
-- For the disposable `prototypes/project-start-ux-006/` study, retain the
-  Tailwind v4 Play CDN and inline `@theme`. Do not move prototype code into
-  `src/`.
-- For future production UI, use the approved Vite integration
-  (`@tailwindcss/vite` and `@import "tailwindcss"`) only after implementation
-  is authorized.
+## 1. Core principle
 
-For every frontend change, report:
+Use Tailwind utilities for contextual composition and custom classes for
+reusable visual or layout contracts.
 
-1. Which existing or new `@theme` tokens were used.
-2. Each new `c-` or `l-` class and why ordinary utilities were insufficient.
+A component's base styling must remain stable wherever it appears. Callers
+control placement within their surrounding composition. A caller may override
+an intrinsic component property only through a documented variant or explicit
+escape hatch.
+
+## 2. Tokens
+
+1. Tokens define raw values and semantic meaning.
+
+   - Raw tokens include palette values, font files and spacing scales.
+   - Semantic tokens include values such as `ink-primary`, `paint-card`,
+     `line-subtle` and `focus-ring`.
+   - Components and markup use semantic tokens; raw values remain inside token
+     definitions.
+   - Where this project defines custom values, colors use `oklch` and
+     dimensions use `rem`.
+
+2. Use top-level `@theme` only to expose semantic tokens that need a Tailwind
+   utility API.
+
+   - Raw tokens remain ordinary CSS custom properties within token definitions.
+   - Preserve the project's primitive → semantic → component token layering.
+   - Do not mirror every CSS variable into `@theme`; export only
+     utility-facing tokens.
+
+## 3. Styling layers
+
+1. Use `@layer base` for element defaults and direct element styling.
+
+2. Use `l-*` for reusable structural layout objects only.
+
+   - Examples: `l-container`, `l-section`, `l-auto-grid`.
+   - Layout objects own structure, not component appearance.
+
+3. Use `c-*` for reusable visual or interactive component contracts.
+
+   - Examples: `c-button`, `c-card`, `c-form-field`.
+   - Components own their visual identity, internal layout, states,
+     accessibility affordances and component-specific responsive behavior.
+   - Do not create a `c-*` class merely because a framework component exists;
+     utility-only components are valid when there is no stable visual contract.
+
+4. Use Tailwind utilities for page and contextual composition.
+
+   - Use utilities for local spacing, parent layout, placement, sizing,
+     contextual alignment and page-specific responsive behavior.
+   - Do not create a custom class for one-off composition.
+
+## 4. Naming
+
+- `l-*`: reusable layout object.
+- `c-*`: reusable component.
+- `__`: component element, for example `c-form-field__input`.
+- `--`: explicit variant or state, for example `c-card--interactive`.
+- Named variants must have a real visible or behavioral effect.
+
+## 5. Ownership
+
+A component class owns:
+
+- Colors, typography, borders, radius, shadows, transitions and internal
+  padding.
+- Internal child layout.
+- Component-specific responsive behavior.
+- Interactive, selected, disabled, loading, error and focus states.
+
+The caller owns:
+
+- External margin and placement.
+- Grid or flex position within its parent.
+- Page- or section-specific width constraints.
+- Contextual alignment and page-specific responsive composition.
+
+Do not duplicate styling owned by a component class unless intentionally using
+a documented override.
+
+If the same component-plus-utility combination appears in two or more distinct
+places and expresses a stable semantic role, promote it to a named variant or
+typed component prop.
+
+## 6. State and accessibility
+
+Never conflate state meanings.
+
+- `disabled` / `aria-disabled`: unavailable.
+- `aria-pressed="true"`: selected or toggled.
+- `aria-current`: current navigation target.
+- `data-state="loading"`: processing.
+
+Selected controls must not automatically receive disabled styling or
+`pointer-events: none`.
+
+Every interactive component must retain:
+
+- A visible keyboard focus style.
+- Appropriate cursor and pointer behavior.
+- Reduced-motion-safe transitions where motion is meaningful.
+- A usable touch hit area.
+
+## 7. Tailwind rules
+
+- Use static Tailwind class names only. Never construct classes dynamically;
+  map state or props to complete class strings.
+- Prefer token-backed semantic utilities over raw palette utilities and
+  arbitrary values.
+- An arbitrary value is allowed only for a documented one-off constraint; do
+  not repeat it when a token or ordinary utility is appropriate.
+- Keep breakpoint names and responsive intent consistent between component CSS
+  and markup.
+- Prefer logical spacing utilities such as `mbs-*`, `mbe-*` and `pbs-*` for
+  reusable patterns; do not mix logical and physical directional utilities
+  without a reason.
+- Use custom CSS for component and layout contracts; do not use `@apply`.
+- Do not introduce legacy v3 directives (`@tailwind base`,
+  `@tailwind components`, `@tailwind utilities`) or `tailwind.config.*`
+  without explicit approval.
+- Avoid positional selectors that depend on incidental markup order. They
+  remain valid where they express stable semantic document structure.
+- Prefer explicit component element classes and data or ARIA state when
+  selectors must survive reasonable internal markup changes.
+
+## 8. Delivery boundaries
+
+- For a disposable static prototype, use the Tailwind v4 Play CDN and inline
+  `@theme` only when a local, no-build study is intentional. Keep prototype
+  code isolated from production source directories.
+- For authorized production UI, use the project's approved Tailwind build
+  integration. In this repository, use `@tailwindcss/vite` and
+  `@import "tailwindcss"`.
+
+## 9. Completion checklist
+
+Before handing off frontend work, confirm:
+
+- Is this a token, layout object, component contract or page composition?
+- Does the component own all intrinsic visual properties?
+- Is external spacing and placement left to the caller?
+- Does every named variant have a real effect?
+- Are semantic tokens used consistently?
+- Are active, selected, loading and disabled states distinct?
+- Is each selector resilient to reasonable internal markup changes?
+- Is repeated utility composition a stable role that deserves a variant or
+  prop?
+- Are responsive behavior, focus states and reduced-motion behavior
+  intentional?
+
+Report:
+
+1. Existing or new `@theme` tokens used.
+2. Each new `c-*` or `l-*` class and why utilities were insufficient.
 3. Any arbitrary value and its one-off constraint.
 4. The relevant build/check and visual or interaction verification performed.
 
