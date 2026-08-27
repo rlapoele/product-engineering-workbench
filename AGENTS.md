@@ -168,6 +168,46 @@ Prefer updating an existing document over creating a new one.
 
 ---
 
+# Tailwind CSS v4.3+ Contract
+
+For authorized frontend work, use Tailwind CSS v4.3+ as a utility-first CSS
+system. This contract does not authorize production UI work that has not
+otherwise been approved.
+
+- Use static Tailwind utility classes in markup for one-off layout, spacing,
+  typography, responsive behavior and interaction states.
+- Use top-level `@theme` only to expose deliberate design tokens as Tailwind
+  utilities. Preserve the project's primitive → semantic → component token
+  layering in CSS; export only semantic tokens that need a utility API.
+- Use `@layer base` for element defaults and `@layer components` only for
+  reusable semantic component or layout contracts. For UX-006, these classes
+  use the existing `c-` and `l-` prefixes.
+- Do not use `@apply`.
+- Do not introduce legacy Tailwind v3 directives (`@tailwind base`,
+  `@tailwind components` or `@tailwind utilities`) or a `tailwind.config.*`
+  file without explicit approval.
+- Prefer existing token-backed utilities over arbitrary values. An arbitrary
+  value is acceptable only for a documented, one-off constraint; do not repeat
+  it when a token or ordinary utility is appropriate.
+- Keep Tailwind class names statically discoverable. Never construct classes
+  dynamically (for example, `bg-${color}-500`); map state or props to complete
+  class strings instead.
+- For the disposable `prototypes/project-start-ux-006/` study, retain the
+  Tailwind v4 Play CDN and inline `@theme`. Do not move prototype code into
+  `src/`.
+- For future production UI, use the approved Vite integration
+  (`@tailwindcss/vite` and `@import "tailwindcss"`) only after implementation
+  is authorized.
+
+For every frontend change, report:
+
+1. Which existing or new `@theme` tokens were used.
+2. Each new `c-` or `l-` class and why ordinary utilities were insufficient.
+3. Any arbitrary value and its one-off constraint.
+4. The relevant build/check and visual or interaction verification performed.
+
+---
+
 # AI Contributions
 
 Artificial intelligence is treated as a contributor to the project.
@@ -230,4 +270,3 @@ Before contributing to this repository, contributors should become familiar with
 7. docs/planning/open-questions.md
 
 These documents provide the minimum context required before proposing significant changes.
-
