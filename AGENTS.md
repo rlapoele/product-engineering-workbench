@@ -168,6 +168,15 @@ Prefer updating an existing document over creating a new one.
 
 ---
 
+# Change Handoffs
+
+Whenever a contributor creates, updates, moves or deletes a project file, the
+final handoff must suggest one concise commit message that accurately covers
+the project-scoped changes. This does not authorize creating a commit unless it
+is explicitly requested.
+
+---
+
 # Tailwind CSS v4.3+ Contract
 
 For authorized frontend work, use Tailwind CSS v4.3+ as a utility-first CSS
