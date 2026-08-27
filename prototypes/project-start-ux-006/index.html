@@ -9,16 +9,11 @@
     <style type="text/tailwindcss">
       @theme {
         --color-canvas: var(--semantic-color-canvas);
-        --color-surface: var(--semantic-color-surface);
-        --color-panel: var(--semantic-color-panel);
         --color-ink: var(--semantic-color-text);
-        --color-muted: var(--semantic-color-muted);
         --color-line: var(--semantic-color-line);
-        --color-accent: var(--semantic-color-accent);
         --font-display: var(--semantic-font-display);
         --font-sans: var(--semantic-font-body);
-        --spacing-shell: var(--primitive-space-5);
-        --spacing-section: var(--semantic-space-section);
+        --container-document: 46rem;
       }
 
       @custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
@@ -32,7 +27,7 @@
           <workbench-icon name="leaf"></workbench-icon>
           <span>Workbench</span>
         </a>
-        <nav class="c-application-nav flex items-center gap-2" aria-label="Application">
+        <nav class="flex items-center gap-2" aria-label="Application">
           <button class="c-text-button inline-flex shrink-0 items-center whitespace-nowrap" type="button" id="theme-toggle" aria-live="polite">
             <workbench-icon name="sun"></workbench-icon>
             <span>Theme: system</span>
@@ -126,7 +121,7 @@
             </div>
           </section>
 
-          <article class="c-specification max-w-[46rem] font-sans" aria-label="Specification document">
+          <article class="c-specification max-w-document font-sans" aria-label="Specification document">
             <section id="overview">
               <h2>Product overview</h2>
               <p>MealLoop is a meal planning and discovery app that helps people eat well with less stress. It brings together meal ideas, planning, and grocery coordination so everyday food choices require less effort.</p>
@@ -199,7 +194,7 @@
     </div>
 
     <dialog class="c-project-start-dialog" id="project-start-dialog" aria-labelledby="project-start-title">
-      <form method="dialog" class="l-project-start-form grid gap-6" id="project-start-form">
+      <form method="dialog" class="grid gap-6" id="project-start-form">
         <header>
           <div>
             <p class="c-eyebrow">Create Project</p>

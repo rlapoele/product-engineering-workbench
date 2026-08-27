@@ -13,12 +13,20 @@ This QA note deliberately lives with the temporary static prototype rather than 
 
 - The specification document remains the visual focus: Lora is reserved for the Project and section headings; Urbanist is used for document prose, navigation, and controls.
 - The approved reference's quiet warm canvas, sage navigation cue, light divider treatment, and low-density application header are retained.
-- Tailwind CSS v4 Play CDN compiles the prototype's inline `@theme`; the generated color, font, spacing, and layout utilities are used throughout the static HTML shell.
+- Tailwind CSS v4 Play CDN compiles the prototype's inline `@theme`; the generated color, font, and document-container utilities are used throughout the static HTML shell.
 - The requested workspace shell is present: a desktop-open table of contents, sticky Project/Specification header, and a right contextual rail collapsed by default.
 - The application header now exposes both Theme and Settings as readable controls. The contextual rail signals future conversations and source attachments without prematurely deciding the panel's information architecture.
 - When expanded, the contextual panel receives the workspace's third grid track and compresses the document column; it does not extend outside the viewport.
 - Each table-of-contents group has one leading separator, avoiding doubled horizontal rules between adjacent groups.
 - The source reference has a slightly wider open left panel and denser document content. The prototype keeps the same hierarchy while providing more reading space for the working document and deliberately lower-contrast grouping.
+
+## Tailwind CSS v4.3+ contract check
+
+- The utility API exposes only the markup-consumed semantic colors (`canvas`, `ink`, `line`), fonts (`display`, `sans`) and the named `document` reading-width container. Component-only semantic values remain ordinary CSS custom properties in `styles.css`.
+- The document's stable `46rem` reading measure is now `--container-document` / `max-w-document`; no arbitrary utility values remain.
+- This update adds no `c-` or `l-` classes. It removes the unused `c-application-nav` and `l-project-start-form` hooks because Tailwind layout utilities already express those elements.
+- The prototype retains no `@apply`, legacy Tailwind v3 directives, configuration file or dynamically constructed Tailwind class names.
+- `node --check`, source checks and `git diff --check` pass. Browser verification confirmed that `max-w-document` computes to `736px`, the initial workspace has no horizontal overflow, icons render, and the Project-start dialog still reaches the Brownfield Source guidance without console warnings or errors.
 
 ## Interaction checks
 

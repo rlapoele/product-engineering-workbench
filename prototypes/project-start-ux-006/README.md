@@ -17,7 +17,7 @@ Open `index.html` in a modern browser or serve this directory with a static-file
 
 ## Style conventions
 
-- Tailwind CSS v4's browser package compiles the inline `@theme` into color, font, and spacing utilities used directly in `index.html`.
+- Tailwind CSS v4's browser package compiles the inline `@theme` into the color, font, and document-container utilities used directly in `index.html`.
 - Primitive, semantic and component tokens are layered in `styles.css`; the Tailwind theme maps its generated utilities to those semantic tokens.
 - `l-` classes express layout and `c-` classes express visual components in `@layer components`; direct HTML styling is in `@layer base`.
 - The visual reference uses Lora for display headings and Urbanist for prose and interface text.
