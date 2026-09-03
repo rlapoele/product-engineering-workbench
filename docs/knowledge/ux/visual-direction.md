@@ -154,6 +154,7 @@ progressive-disclosure and accessibility principles.
 
 ## Related knowledge
 
+- [Workbench Visual References](visual-references/README.md)
 - [UX Principles](../principles/ux-principles.md)
 - [Document-First User Experience](document-first-ui.md)
 - [Current Focus](../../planning/current-focus.md)
