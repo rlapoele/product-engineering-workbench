@@ -1229,6 +1229,11 @@ Future Handoff Profiles may control:
 
 The MVP should be document-first, template-driven and implementation-handoff oriented.
 
+The Workbench's project-wide visual direction is defined in
+[Workbench Visual Direction](visual-direction.md). It establishes the
+application shell, theme character and visual hierarchy without changing this
+document's interaction, information-model or implementation boundaries.
+
 Users should create projects from Specification Document Templates, work in a coherent specification document, optionally request assistance from capable human or AI contributors and export the result as an implementation-ready package.
 
 The canonical product knowledge does not need to be a literal document internally. It only needs to support a document-like experience that users can understand and trust.

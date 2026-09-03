@@ -5,6 +5,7 @@ This directory describes the user experience of the Product Engineering Workbenc
 Topics include:
 
 - Document-first interface
+- Workbench visual direction
 - Navigation
 - Interaction patterns
 - Collaboration
