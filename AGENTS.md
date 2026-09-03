@@ -184,8 +184,10 @@ production UI work that has not otherwise been approved.
 
 ## 1. Core principle
 
-Use Tailwind utilities for contextual composition and custom classes for
-reusable visual or layout contracts.
+Start utility-first: use Tailwind utilities to prototype and compose pages,
+features and framework components. Introduce custom classes only after a
+layout or visual contract has become stable and demonstrably benefits from a
+named CSS abstraction.
 
 A component's base styling must remain stable wherever it appears. Callers
 control placement within their surrounding composition. A caller may override
@@ -194,23 +196,29 @@ escape hatch.
 
 ## 2. Tokens
 
-1. Tokens define raw values and semantic meaning.
+1. Define tokens at `:root` in at least two groups: raw primitives and
+   semantic tokens.
 
    - Raw tokens include palette values, font files and spacing scales.
    - Semantic tokens include values such as `ink-primary`, `paint-card`,
      `line-subtle` and `focus-ring`.
-   - Components and markup use semantic tokens; raw values remain inside token
-     definitions.
+   - Components and markup use semantic tokens; raw values remain inside
+     semantic-token definitions.
    - Where this project defines custom values, colors use `oklch` and
      dimensions use `rem`.
 
 2. Use top-level `@theme` only to expose semantic tokens that need a Tailwind
-   utility API.
+   utility API. Name these variables with the appropriate Tailwind theme
+   namespace so their generated utility is explicit, for example
+   `--color-ink-primary` for `text-ink-primary`.
 
-   - Raw tokens remain ordinary CSS custom properties within token definitions.
+   - Raw and semantic source tokens remain ordinary CSS custom properties at
+     `:root`.
    - Preserve the project's primitive → semantic → component token layering.
    - Do not mirror every CSS variable into `@theme`; export only
      utility-facing tokens.
+   - When a theme variable references a root token, use `@theme inline` so the
+     generated utility resolves the referenced value at the point of use.
 
 ## 3. Styling layers
 
@@ -220,6 +228,9 @@ escape hatch.
 
    - Examples: `l-container`, `l-section`, `l-auto-grid`.
    - Layout objects own structure, not component appearance.
+   - Start with layout utilities. Promote a layout to `l-*` only after it
+     recurs as a settled structural pattern or its utility composition obscures
+     the layout's role.
 
 3. Use `c-*` for reusable visual or interactive component contracts.
 
@@ -227,7 +238,12 @@ escape hatch.
    - Components own their visual identity, internal layout, states,
      accessibility affordances and component-specific responsive behavior.
    - Do not create a `c-*` class merely because a framework component exists;
-     utility-only components are valid when there is no stable visual contract.
+     an Astro, React, Vue or similar component may encapsulate its utility
+     composition without a `c-*` class.
+   - Introduce a `c-*` class when its styling becomes difficult to understand
+     or maintain as utilities, when it has several intrinsic variants or
+     states, or when it needs component-specific design tokens. Otherwise,
+     utility-only components are valid.
 
 4. Use Tailwind utilities for page and contextual composition.
 
@@ -263,9 +279,10 @@ The caller owns:
 Do not duplicate styling owned by a component class unless intentionally using
 a documented override.
 
-If the same component-plus-utility combination appears in two or more distinct
-places and expresses a stable semantic role, promote it to a named variant or
-typed component prop.
+When the same component-plus-utility combination appears in two or more
+distinct places and has settled into a stable semantic role, promote it to a
+named variant, typed component prop, `l-*` object or `c-*` contract as
+appropriate.
 
 ## 6. State and accessibility
 
@@ -292,6 +309,9 @@ Every interactive component must retain:
   map state or props to complete class strings.
 - Prefer token-backed semantic utilities over raw palette utilities and
   arbitrary values.
+- Begin implementation with complete utility classes in markup. Do not extract
+  a named class simply to reduce class-count; extract only a settled reusable
+  layout or visual contract under the rules above.
 - An arbitrary value is allowed only for a documented one-off constraint; do
   not repeat it when a token or ordinary utility is appropriate.
 - Keep breakpoint names and responsive intent consistent between component CSS
@@ -329,14 +349,15 @@ Before handing off frontend work, confirm:
 - Are active, selected, loading and disabled states distinct?
 - Is each selector resilient to reasonable internal markup changes?
 - Is repeated utility composition a stable role that deserves a variant or
-  prop?
+  prop, `l-*` object or `c-*` contract?
 - Are responsive behavior, focus states and reduced-motion behavior
   intentional?
 
 Report:
 
 1. Existing or new `@theme` tokens used.
-2. Each new `c-*` or `l-*` class and why utilities were insufficient.
+2. Each new `c-*` or `l-*` class and why utilities were insufficient; if none
+   were added, state why utility composition remains the clearer choice.
 3. Any arbitrary value and its one-off constraint.
 4. The relevant build/check and visual or interaction verification performed.
 
