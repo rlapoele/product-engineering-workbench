@@ -15,6 +15,7 @@ production UI specifications or implementation assets.
 | [Project-start Greenfield context, light](project-start-greenfield-context_step-1.png) | Project creation: Greenfield context | Greenfield is selected; temporary Project-start Notes are optional and appear in Basics, not as a workflow step. |
 | [Project-start Brownfield context, light](project-start-brownfield-context_step-1.png) | Project creation: Brownfield context | Brownfield is selected; Sources are deliberately added only after the Project exists. |
 | [Project-start Basics, light](project-start-basics-light-v1_step-2.png) | Project creation: Basics | Content language, a Project title and a short description are the only basic inputs. |
+| [Project-start Template, light](project-start-template_step-3.png) | Project creation: Specification Template | The one available Template is visibly preselected for availability, not as a personalized recommendation. |
 | [Project-start Preset and sections, light](project-start-preset-sections-light_step-4.png) | Project creation: Preset and sections | Presets and sections remain owner-selectable rather than creating a fixed workflow. |
 | [Project-start Create, light](project-start-create-light_step-5.png) | Project creation: Create | The final review keeps setup choices visible and affirms that they can be refined after creation. |
 
