@@ -18,6 +18,9 @@ production UI specifications or implementation assets.
 | [Project-start Template, light](project-start-template_step-3.png) | Project creation: Specification Template | The one available Template is visibly preselected for availability, not as a personalized recommendation. |
 | [Project-start Preset and sections, light](project-start-preset-sections-light_step-4.png) | Project creation: Preset and sections | Presets and sections remain owner-selectable rather than creating a fixed workflow. |
 | [Project-start Create, light](project-start-create-light_step-5.png) | Project creation: Create | The final review keeps setup choices visible and affirms that they can be refined after creation. |
+| [Project opened — panels expanded, light](project-opened-panels-expanded-light.png) | Newly opened Project | A detached full-width header, elevated prepared document, and transparent expanded contextual controls keep the document primary. |
+| [Project opened — left panel collapsed, light](project-opened-left-panel-collapsed-light.png) | Newly opened Project: left context collapsed | Left contextual controls become compact and label-free; right context remains expanded. |
+| [Project opened — right panel collapsed, light](project-opened-right-panel-collapsed-light.png) | Newly opened Project: right context collapsed | Right contextual controls become compact and label-free; left context remains expanded. |
 
 Future screens should preserve the shared warm light-mode surface model,
 restrained clay-orange accent, quiet global controls and document-first
