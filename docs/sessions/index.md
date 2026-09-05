@@ -246,3 +246,4 @@
 | 2026-08-24-05 | 2026-08-24 | 5 | Source Note and External-AI Indication | Crystallized | Source Notes use Title and Evidence text; an optional source-local AI indication supplies known provenance without provider tracking |
 | 2026-08-24-06 | 2026-08-24 | 6 | Greenfield Guided Project Creation Flow | Crystallized | Starting context precedes template choice; temporary Greenfield notes guide preset and owner-invoked drafts, while Brownfield Sources follow creation |
 | 2026-09-03-01 | 2026-09-03 | 1 | Workbench Visual Direction | Crystallized | Warm light and dark themes, centered primary surfaces, contextual edge regions and restrained control language |
+| 2026-09-05-01 | 2026-09-05 | 1 | Workbench Specification Visual Exploration | Active exploration | Craft-led document workspace, text-first template outline and unresolved default accent palette |

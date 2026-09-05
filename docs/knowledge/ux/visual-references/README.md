@@ -26,3 +26,14 @@ Future screens should preserve the shared warm light-mode surface model,
 restrained clay-orange accent, quiet global controls and document-first
 hierarchy. They must still validate dark mode, interaction and accessibility
 requirements independently.
+
+## Exploratory studies
+
+These studies preserve current exploration rather than established interface
+requirements. They must not be treated as production specifications or as a
+final palette choice.
+
+| Reference | Applies to | Notes |
+| --- | --- | --- |
+| [Specification document, ochre — reading study](specification-document-ochre-reading-study-2026-09-05.png) | Specification reading | Craft-led document hierarchy, text-first outline and warm ochre candidate palette. |
+| [Specification document, ochre — review study](specification-document-ochre-review-study-2026-09-05.png) | Specification review | Selected saved requirement beside non-canonical review evidence; no automatic knowledge change. |
