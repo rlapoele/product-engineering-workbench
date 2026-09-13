@@ -61,3 +61,9 @@ implementation.
 Build a bounded interactive study of the same requirement journey in the warm
 ochre and blue treatments, then assess reading comfort, editing confidence,
 review clarity and return-to-context behavior.
+
+## Interactive Follow-up — 2026-09-13
+
+The owner approved a bounded prototype of reading → selected → editing on desktop and handheld. Selection reveals local actions without beginning an edit; Edit opens structured fields in the document, keeping the requirement reference visible. Pointer hover and keyboard focus reveal Edit; narrow/touch layouts retain a visible action. Existing private-draft and explicit `Done editing` semantics remain authoritative.
+
+The [Specification editing study](../../../prototypes/specification-editing/README.md) implements that journey with the appointment-booking example and controlled ochre/blue palette switching. Browser checks validate the basic interaction mechanics; real handheld keyboard use and the owner's assessment of reading/editing comfort remain outstanding. The study is isolated from production and does not settle the default palette or supersede stable visual-direction knowledge.
