@@ -33,6 +33,7 @@
  .l-workspace {display:grid;grid-template-columns:minmax(0,1fr)}
  .c-desktop-context {display:none}
  @media (hover:hover) and (pointer:fine) and (min-width:64rem){.c-requirement[data-state='reading'] .c-requirement__edit{opacity:0}.c-requirement:hover .c-requirement__edit,.c-requirement:focus-within .c-requirement__edit{opacity:1}}
+ @media (pointer:coarse){.c-button,.c-link,.c-outline-link{min-block-size:3rem}}
  @media (min-width:64rem){.c-topbar__identity{flex-basis:calc(26% - 1.5rem);max-inline-size:23.5rem;flex-shrink:0}}
  @media (min-width:80rem){.l-workspace--context{--text-xl:1.25rem}.l-workspace--context{grid-template-columns:minmax(0,1fr) 22rem}.c-desktop-context{display:block;min-width:0;border-inline-start:.0625rem solid var(--line-subtle)}.c-context{position:sticky;inset-block-start:4.25rem;border:0;border-radius:0}.c-mobile-context{display:none}}
  @media (max-width:63.999rem){.c-sidebar{display:none}.c-sidebar--open{display:block;position:fixed;inline-size:min(22rem,100%);max-inline-size:100%;z-index:15;box-shadow:.5rem 0 1rem var(--line-subtle)}.c-topbar{padding-inline:.75rem}.c-requirement{margin-inline:-.5rem;padding-inline:.375rem}.c-field--title{font-size:1.5rem}}
