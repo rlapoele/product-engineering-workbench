@@ -32,7 +32,7 @@ Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts
 - Compare Urbanist and Poppins against identical content, hierarchy, palette and interaction; use Urbanist as the initial candidate without treating it as a selected default.
 - Urbanist is comfortable at the current size but needs slightly more tracking for readability; evaluate it with `0.035em` letter spacing throughout while leaving Poppins spacing unchanged.
 - Owner comparison prefers the blue palette on screen despite an emotional preference for ochre; blue is now the stronger default-palette candidate, but its accent needs clearer chromatic separation from blue-tinted primary ink.
-- Evaluate blue accent chroma `0.15` at the existing `46%` lightness and `255` hue before changing other blue semantic roles. Treat this as a comparison candidate, not a selected token.
+- The prototype now tests blue accent chroma `0.15` at the existing `46%` lightness and `255` hue while leaving other blue semantic roles unchanged. Treat this as a comparison candidate, not a selected token.
 - Treat these as refinement candidates pending an updated prototype comparison, not as production UI decisions.
 
 ## Bounded hierarchy refinement — 2026-09-18

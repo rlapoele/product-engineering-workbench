@@ -27,7 +27,7 @@ No actionable P0, P1 or P2 findings remain.
 
 - **Fonts and typography:** The study now compares Urbanist and Poppins over identical content and hierarchy. Urbanist is the initial candidate because its humanist texture remains closer to the Craft-led reading reference; Poppins supplies a deliberately more geometric comparison. Both use the study's existing heading weights, prose scale and line-height contracts, so switching typeface does not alter document semantics or interaction.
 - **Spacing and layout rhythm:** The desktop keeps the reference's quiet left outline, broad document surface and contextual right region. Opening review context narrows the document while retaining FR-012 in view. In the original Source Sans pass at 390 and 320 pixels, the outline became an overlay and review context entered the document flow without horizontal overflow; the new typeface comparison still requires those exact narrow checks.
-- **Colors and tokens:** Ochre maps the same semantic roles as the source: warm canvas, warmer sidebar, restrained selection and strong ochre actions. Blue remaps the same roles without changing layout or content. Calculated contrast from the OKLCH primitives is approximately 7.08:1 for ochre accent/canvas, 14.02:1 for primary ink/canvas and 6.03:1 for muted ink/canvas; the blue equivalents are approximately 6.88:1, 13.97:1 and 5.99:1.
+- **Colors and tokens:** Ochre maps the same semantic roles as the source: warm canvas, warmer sidebar, restrained selection and strong ochre actions. Blue remaps the same roles without changing layout or content. Calculated contrast from the OKLCH primitives is approximately 7.08:1 for ochre accent/canvas, 14.02:1 for primary ink/canvas and 6.03:1 for muted ink/canvas; with the active `0.15` chroma trial, the blue equivalents are approximately 6.92:1, 13.97:1 and 5.99:1.
 - **Image and asset fidelity:** The source contains no photographic or illustrative imagery. Tabler supplies the visible application and action icons as one consistent outline family. Template-section and Product-Artifact icons remain intentionally absent from the outline.
 - **Copy and content:** FR-012, its conditions, acceptance criteria, source and review finding match the selected studies. Study-only labels such as `Private draft`, `Done editing` and the palette selector make the interaction states explicit without entering canonical content.
 - **States and interactions:** Pointer hover and keyboard focus reveal Edit on desktop; the action stays visible at narrow widths. Selection does not start editing. Edit focuses the statement, Return to reading keeps a private draft, Keep editing draft restores it after navigation or reload, Done editing alone updates the saved requirement, and discard is locally confirmed. Review feedback and related evidence never apply changes automatically.
@@ -64,6 +64,12 @@ Post-fix evidence: `evidence/reading-comparison.png`, `evidence/reading-detail.p
 - Owner evaluation found both headings and body copy comfortable to read with Urbanist at `0.035em`.
 - This is an exploratory readability adjustment, not a selected production typography rule.
 
+### Blue accent chroma trial — pending experiential comparison
+
+- The active blue accent now uses `oklch(46% 0.15 255)`, changing only chroma from the earlier `0.13`; blue ink, surfaces, selection, rules and hover color remain unchanged.
+- Calculated accent/canvas contrast is approximately 6.92:1 and white/accent contrast approximately 7.22:1. The token remains within sRGB at the current lightness and hue.
+- Live verification at 1280 pixels confirmed the updated token in navigation and document actions without horizontal overflow or browser warnings.
+
 ## Interaction verification
 
 Browser checks covered:
@@ -89,7 +95,7 @@ Browser checks covered:
 - Hover discoverability should be assessed during the owner's desktop walkthrough; keyboard and touch have explicit, persistent routes.
 - Urbanist's current heading and body treatment is comfortable in the present sample; longer-document use and the final Urbanist/Poppins preference remain open.
 - The new two-control header and both typeface treatments still require updated 390-pixel and 320-pixel browser or device verification.
-- Owner evaluation currently favors blue over ochre, but the blue accent can read too similarly to blue-tinted primary ink. A bounded `0.13` versus `0.15` accent-chroma comparison remains open; `0.16` begins leaving the sRGB gamut at the current lightness and hue.
+- Owner evaluation currently favors blue over ochre, but the original blue accent could read too similarly to blue-tinted primary ink. The prototype now tests `0.15` accent chroma against the earlier `0.13`; `0.16` begins leaving the sRGB gamut at the current lightness and hue.
 
 ## Follow-up polish
 
