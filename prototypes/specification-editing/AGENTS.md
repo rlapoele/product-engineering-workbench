@@ -17,3 +17,13 @@ Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts
 - Only `Done editing` updates the simulated saved Specification; discard remains explicit and locally confirmed.
 - Keep ochre and blue as controlled palette treatments with identical content, layout and interaction.
 - Treat this prototype as exploratory evidence, not production UI or a replacement for crystallized visual direction.
+
+## Open experiential feedback — 2026-09-18
+
+- The main Specification document loses hierarchy and location context during sustained scrolling.
+- Requirement groups need clearer visual separation from their requirement items; `Rescheduling` currently reads too similarly to `Reschedule an appointment`.
+- Peer requirement items such as FR-012 and FR-013 should use the same title hierarchy and treatment.
+- Place a requirement reference such as `FR-012` or `FR-013` on the same line as its requirement title so identity and title read as one unit.
+- Evaluate Urbanist and Poppins variable fonts as alternatives to Source Sans 3; no replacement typeface is selected yet.
+- Remove the duplicated project name from the desktop application header while preserving enough project and destination context.
+- Treat these as refinement candidates pending an updated prototype comparison, not as production UI decisions.
