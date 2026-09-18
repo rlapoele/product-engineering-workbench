@@ -20,7 +20,7 @@ Drafts and simulated saved content use sessionStorage for this tab only. This mo
 
 ## Styling contract
 
-Primitive colors use OKLCH. Raw font tokens identify Urbanist and Poppins; the semantic `font-body` token switches between them, while `font-tracking` gives Urbanist `0.025em` spacing and leaves Poppins at its native spacing. Root semantic color tokens map primitives to canvas, sidebar, primary ink, muted ink, accent, accent-hover, selection, subtle line, on-accent ink and focus ring. Blue remaps the same semantic roles. Utility-facing `@theme inline` exports `canvas`, `sidebar`, `ink`, `muted`, `accent`, `selection`, `line`, `font-sans`; `text-xl` is the study's large prose size. Other raw values are not exported.
+Primitive colors use OKLCH. Raw font tokens identify Urbanist and Poppins; the semantic `font-body` token switches between them, while `font-tracking` gives Urbanist `0.035em` spacing and leaves Poppins at its native spacing. Root semantic color tokens map primitives to canvas, sidebar, primary ink, muted ink, accent, accent-hover, selection, subtle line, on-accent ink and focus ring. Blue remaps the same semantic roles. Utility-facing `@theme inline` exports `canvas`, `sidebar`, `ink`, `muted`, `accent`, `selection`, `line`, `font-sans`; `text-xl` is the study's large prose size. Other raw values are not exported.
 
 Named local contracts:
 

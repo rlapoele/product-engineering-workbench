@@ -59,8 +59,8 @@ Post-fix evidence: `evidence/reading-comparison.png`, `evidence/reading-detail.p
 ### Urbanist tracking refinement — pending experiential comparison
 
 - Owner feedback found Poppins readable but visually large, while Urbanist had the preferable scale but needed slightly more separation between characters.
-- Urbanist now uses `0.025em` letter spacing throughout the application, including the main heading and inline editor. Poppins retains its native spacing so the comparison does not conflate the two treatments.
-- Live computed-style checks confirmed that the spacing remains proportional to local text size: 1.2 pixels on the 48-pixel document title, 0.55 pixels on 22-pixel prose and proportional values in the editor. Poppins continued to resolve to `normal`; neither treatment introduced horizontal overflow at the available 1065-pixel viewport.
+- Urbanist now uses `0.035em` letter spacing throughout the application, including the main heading and inline editor. Poppins retains its native spacing so the comparison does not conflate the two treatments.
+- Live computed-style checks confirmed that the spacing remains proportional to local text size: 1.68 pixels on the 48-pixel document title, 0.77 pixels on 22-pixel prose, 0.98 pixels in the 28-pixel title field and 0.7 pixels in the 20-pixel statement field. Poppins continued to resolve to `normal`; neither treatment introduced horizontal overflow at the available 1065-pixel viewport.
 - This is an exploratory readability adjustment, not a selected production typography rule.
 
 ## Interaction verification
