@@ -2,14 +2,15 @@
 :root {
  --raw-paper:oklch(98.5% .006 80); --raw-sand:oklch(96.3% .012 80); --raw-charcoal:oklch(28% .019 70); --raw-taupe:oklch(49% .022 70); --raw-ochre:oklch(46% .12 58); --raw-ochre-dark:oklch(39% .10 58); --raw-pale:oklch(94% .03 80); --raw-rule:oklch(88% .016 80); --raw-white:oklch(100% 0 0); --raw-blue:oklch(46% .13 255); --raw-blue-dark:oklch(39% .11 255); --raw-blue-paper:oklch(98.5% .004 255); --raw-blue-sand:oklch(96.3% .009 255); --raw-blue-pale:oklch(94% .024 255); --raw-blue-rule:oklch(88% .012 255); --raw-blue-ink:oklch(28% .019 255); --raw-blue-muted:oklch(49% .022 255);
  --raw-font-urbanist:'Urbanist Variable',sans-serif; --raw-font-poppins:'Poppins',sans-serif;
- --paint-canvas:var(--raw-paper); --paint-sidebar:var(--raw-sand); --ink-primary:var(--raw-charcoal); --ink-muted:var(--raw-taupe); --paint-accent:var(--raw-ochre); --paint-accent-hover:var(--raw-ochre-dark); --paint-selection:var(--raw-pale); --line-subtle:var(--raw-rule); --ink-on-accent:var(--raw-white); --focus-ring:var(--paint-accent); --font-body:var(--raw-font-urbanist);
+ --paint-canvas:var(--raw-paper); --paint-sidebar:var(--raw-sand); --ink-primary:var(--raw-charcoal); --ink-muted:var(--raw-taupe); --paint-accent:var(--raw-ochre); --paint-accent-hover:var(--raw-ochre-dark); --paint-selection:var(--raw-pale); --line-subtle:var(--raw-rule); --ink-on-accent:var(--raw-white); --focus-ring:var(--paint-accent); --font-body:var(--raw-font-urbanist); --font-tracking:.025em;
 }
 [data-theme='blue'] {--paint-canvas:var(--raw-blue-paper);--paint-sidebar:var(--raw-blue-sand);--paint-accent:var(--raw-blue);--paint-accent-hover:var(--raw-blue-dark);--paint-selection:var(--raw-blue-pale);--line-subtle:var(--raw-blue-rule);--ink-primary:var(--raw-blue-ink);--ink-muted:var(--raw-blue-muted)}
-[data-font='poppins'] {--font-body:var(--raw-font-poppins)}
+[data-font='poppins'] {--font-body:var(--raw-font-poppins);--font-tracking:normal}
 @theme inline {--color-canvas:var(--paint-canvas);--color-sidebar:var(--paint-sidebar);--color-ink:var(--ink-primary);--color-muted:var(--ink-muted);--color-accent:var(--paint-accent);--color-selection:var(--paint-selection);--color-line:var(--line-subtle);--font-sans:var(--font-body);--text-xl:1.375rem}
 @layer base {
  html {font-family:var(--font-body);font-size:1rem;scroll-behavior:auto}
  [data-font] {font-family:var(--font-body);font-size-adjust:from-font}
+ [data-font],[data-font] * {letter-spacing:var(--font-tracking)}
  body {margin:0} button,select {cursor:pointer} button,input,textarea,select {font:inherit} button:disabled{cursor:default}
  :focus-visible {outline:.125rem solid var(--focus-ring);outline-offset:.25rem}
  section,article,main {scroll-margin-block-start:6rem}

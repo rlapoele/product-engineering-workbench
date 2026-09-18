@@ -39,7 +39,7 @@ export function App(){
  <div className="border-b border-line px-6 py-4 text-muted lg:hidden">Appointment booking <span className="mx-3">/</span> Specification</div>
  <div className={`l-workspace ${panel?'l-workspace--context':''}`}>
  <div className="min-w-0 px-6 pbs-9 pbe-20 lg:px-16 lg:pbs-12">
- <h1 className="text-4xl font-semibold tracking-tight lg:text-5xl">Specification</h1>
+ <h1 className="text-4xl font-semibold lg:text-5xl">Specification</h1>
  <section className="mbs-12" id="overview"><h2 className="text-3xl font-semibold">Product overview</h2><p className="mbs-4 text-xl leading-relaxed">Appointment booking helps customers find a suitable time, confirm their booking and manage changes with confidence.</p></section>
  <section className="mbs-12" id="goals"><h2 className="text-3xl font-semibold">Goals and success criteria</h2><p className="mbs-4 text-xl leading-relaxed">Help customers manage appointments independently, with clear confirmation of every change.</p></section>
  <section className="mbs-12" id="features"><h2 className="text-3xl font-semibold">Core features</h2><h3 className="mbs-4 text-2xl font-semibold">Appointment changes</h3><p className="mbs-3 text-xl leading-relaxed">Reschedule a confirmed booking within the permitted window.</p></section>

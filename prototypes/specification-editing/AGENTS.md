@@ -30,6 +30,7 @@ Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts
 - Render Specification sections in their intended document order and give peer section titles one consistent treatment.
 - Keep each requirement reference the same size as its title, with muted color and a visible separator.
 - Compare Urbanist and Poppins against identical content, hierarchy, palette and interaction; use Urbanist as the initial candidate without treating it as a selected default.
+- Urbanist is comfortable at the current size but needs slightly more tracking for readability; evaluate it with `0.025em` letter spacing throughout while leaving Poppins spacing unchanged.
 - Treat these as refinement candidates pending an updated prototype comparison, not as production UI decisions.
 
 ## Bounded hierarchy refinement — 2026-09-18
@@ -53,3 +54,4 @@ Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts
 - Start with Urbanist because its humanist construction is the closer Craft-led reading candidate; retain Poppins as the more geometric comparison.
 - Bundle the fonts locally. Urbanist uses its variable font; Google Fonts currently distributes Poppins as static faces, so bundle only the regular and semibold weights used by this study.
 - Do not interpret the initial Urbanist setting or the comparison control as production authorization or a final typography decision.
+- Apply Urbanist's `0.025em` tracking through one semantic font-tracking token, including headings and editing controls; Poppins retains its native spacing.
