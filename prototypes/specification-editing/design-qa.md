@@ -64,11 +64,12 @@ Post-fix evidence: `evidence/reading-comparison.png`, `evidence/reading-detail.p
 - Owner evaluation found both headings and body copy comfortable to read with Urbanist at `0.035em`.
 - This is an exploratory readability adjustment, not a selected production typography rule.
 
-### Blue accent chroma trial — pending experiential comparison
+### Blue accent chroma trial — passed for current palette sample
 
 - The active blue accent now uses `oklch(46% 0.15 255)`, changing only chroma from the earlier `0.13`; blue ink, surfaces, selection, rules and hover color remain unchanged.
 - Calculated accent/canvas contrast is approximately 6.92:1 and white/accent contrast approximately 7.22:1. The token remains within sRGB at the current lightness and hue.
 - Live verification at 1280 pixels confirmed the updated token in navigation and document actions without horizontal overflow or browser warnings.
+- Owner evaluation found `0.15` better than `0.13`, making it the preferred blue accent for the current prototype sample without selecting a production token or final palette.
 
 ## Interaction verification
 
@@ -95,7 +96,7 @@ Browser checks covered:
 - Hover discoverability should be assessed during the owner's desktop walkthrough; keyboard and touch have explicit, persistent routes.
 - Urbanist's current heading and body treatment is comfortable in the present sample; longer-document use and the final Urbanist/Poppins preference remain open.
 - The new two-control header and both typeface treatments still require updated 390-pixel and 320-pixel browser or device verification.
-- Owner evaluation currently favors blue over ochre, but the original blue accent could read too similarly to blue-tinted primary ink. The prototype now tests `0.15` accent chroma against the earlier `0.13`; `0.16` begins leaving the sRGB gamut at the current lightness and hue.
+- Owner evaluation favors blue over ochre and found `0.15` accent chroma better than the earlier `0.13`; `0.16` begins leaving the sRGB gamut at the current lightness and hue. Sustained-use comfort and the final palette decision remain open.
 
 ## Follow-up polish
 

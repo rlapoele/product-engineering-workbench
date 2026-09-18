@@ -85,3 +85,5 @@ Initial comparison feedback found Poppins highly readable but visually too large
 The owner subsequently found both Urbanist headings and body copy comfortable to read at `0.035em`. This establishes the preferred Urbanist treatment for the current prototype sample, while longer sustained use and any final production typeface choice remain open.
 
 With typography held constant, the owner found the blue palette visually stronger on screen than ochre despite personally liking ochre. The original blue accent still read too close to the blue-tinted primary ink. The prototype now tests accent chroma `0.15` at the existing `46%` lightness and `255` hue: it remains within sRGB and preserves strong contrast, whereas `0.16` begins leaving the gamut. This is a comparison candidate, not a selected production token or final palette decision.
+
+The owner subsequently found `0.15` better than the earlier `0.13`. It is therefore the preferred blue accent for the current prototype sample, while sustained-use evaluation and any production palette decision remain open.
