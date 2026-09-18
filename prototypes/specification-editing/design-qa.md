@@ -89,6 +89,7 @@ Browser checks covered:
 - Hover discoverability should be assessed during the owner's desktop walkthrough; keyboard and touch have explicit, persistent routes.
 - Urbanist's current heading and body treatment is comfortable in the present sample; longer-document use and the final Urbanist/Poppins preference remain open.
 - The new two-control header and both typeface treatments still require updated 390-pixel and 320-pixel browser or device verification.
+- Owner evaluation currently favors blue over ochre, but the blue accent can read too similarly to blue-tinted primary ink. A bounded `0.13` versus `0.15` accent-chroma comparison remains open; `0.16` begins leaving the sRGB gamut at the current lightness and hue.
 
 ## Follow-up polish
 
