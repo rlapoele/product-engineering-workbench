@@ -27,3 +27,11 @@ Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts
 - Evaluate Urbanist and Poppins variable fonts as alternatives to Source Sans 3; no replacement typeface is selected yet.
 - Remove the duplicated project name from the desktop application header while preserving enough project and destination context.
 - Treat these as refinement candidates pending an updated prototype comparison, not as production UI decisions.
+
+## Bounded hierarchy refinement — 2026-09-18
+
+- Retain Source Sans 3 so hierarchy can be assessed independently from typeface choice.
+- Keep the semantic `h1` → `h2` → `h3` outline while making the group heading visibly larger than requirement titles.
+- Render FR-012 and FR-013 with one shared title treatment and place each reference on its title line.
+- Show the project name once in the desktop header, within the project/destination context.
+- Defer sticky scroll context and Urbanist/Poppins comparison until this hierarchy pass has been evaluated.

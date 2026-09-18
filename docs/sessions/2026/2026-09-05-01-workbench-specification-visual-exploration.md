@@ -69,3 +69,9 @@ The owner approved a bounded prototype of reading → selected → editing on de
 The [Specification editing study](../../../prototypes/specification-editing/README.md) implements that journey with the appointment-booking example and controlled ochre/blue palette switching. Browser checks validate the basic interaction mechanics; real handheld keyboard use and the owner's assessment of reading/editing comfort remain outstanding. The study is isolated from production and does not settle the default palette or supersede stable visual-direction knowledge.
 
 On 2026-09-14, the prototype's design QA passed after correcting document text scale, desktop breadcrumb placement, skip-link focus and coarse-pointer target sizing. The pass covers desktop, 390-pixel and 320-pixel browser layouts, private-draft recovery, explicit save, discard confirmation, local review context and palette switching. Real handheld keyboards, screen readers and the owner's experiential comparison remain the next evidence to gather.
+
+## Hierarchy Refinement — 2026-09-18
+
+Experiential review found that the main document's group and requirement hierarchy became difficult to read, especially after scrolling. `Rescheduling` and FR-012's title used the same desktop text size, while peer requirement FR-013 used a smaller title. Requirement references were also separated vertically from their titles, and the desktop header repeated the project name.
+
+A bounded prototype refinement now retains Source Sans 3 while separating the page, group and requirement levels; giving FR-012 and FR-013 one shared title treatment; placing each requirement reference on its title line; and showing the project name once in the desktop header. Sticky scroll context and Urbanist/Poppins comparison remain deferred so the hierarchy change can be evaluated independently.
