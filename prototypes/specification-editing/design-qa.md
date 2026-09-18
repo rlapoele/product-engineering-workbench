@@ -56,11 +56,12 @@ Post-fix evidence: `evidence/reading-comparison.png`, `evidence/reading-detail.p
 - The header retains explicit `Typeface` and `Palette` names for assistive technology while hiding their visible labels when space is limited.
 - The existing 390-pixel and 320-pixel evidence predates this selector and typeface change; those exact viewport checks remain to be repeated before treating the responsive typography pass as closed.
 
-### Urbanist tracking refinement — pending experiential comparison
+### Urbanist tracking refinement — passed for current reading sample
 
 - Owner feedback found Poppins readable but visually large, while Urbanist had the preferable scale but needed slightly more separation between characters.
 - Urbanist now uses `0.035em` letter spacing throughout the application, including the main heading and inline editor. Poppins retains its native spacing so the comparison does not conflate the two treatments.
 - Live computed-style checks confirmed that the spacing remains proportional to local text size: 1.68 pixels on the 48-pixel document title, 0.77 pixels on 22-pixel prose, 0.98 pixels in the 28-pixel title field and 0.7 pixels in the 20-pixel statement field. Poppins continued to resolve to `normal`; neither treatment introduced horizontal overflow at the available 1065-pixel viewport.
+- Owner evaluation found both headings and body copy comfortable to read with Urbanist at `0.035em`.
 - This is an exploratory readability adjustment, not a selected production typography rule.
 
 ## Interaction verification
@@ -86,7 +87,7 @@ Browser checks covered:
 - Screen-reader reading order and announcements need a manual VoiceOver/TalkBack walkthrough.
 - The intended comfort of sustained reading and editing, and the comparative emotional quality of ochre and blue, require human evaluation rather than automated evidence.
 - Hover discoverability should be assessed during the owner's desktop walkthrough; keyboard and touch have explicit, persistent routes.
-- Urbanist and Poppins need sustained human reading and editing comparison; the initial Urbanist selection is a study default, not a conclusion.
+- Urbanist's current heading and body treatment is comfortable in the present sample; longer-document use and the final Urbanist/Poppins preference remain open.
 - The new two-control header and both typeface treatments still require updated 390-pixel and 320-pixel browser or device verification.
 
 ## Follow-up polish

@@ -55,3 +55,4 @@ Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts
 - Bundle the fonts locally. Urbanist uses its variable font; Google Fonts currently distributes Poppins as static faces, so bundle only the regular and semibold weights used by this study.
 - Do not interpret the initial Urbanist setting or the comparison control as production authorization or a final typography decision.
 - Apply Urbanist's `0.035em` tracking through one semantic font-tracking token, including headings and editing controls; Poppins retains its native spacing.
+- Owner evaluation found both Urbanist headings and body copy comfortable to read at `0.035em`; retain this as the preferred prototype setting while broader sustained-use and production typography decisions remain open.
