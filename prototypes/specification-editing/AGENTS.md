@@ -26,12 +26,22 @@ Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts
 - Place a requirement reference such as `FR-012` or `FR-013` on the same line as its requirement title so identity and title read as one unit.
 - Evaluate Urbanist and Poppins variable fonts as alternatives to Source Sans 3; no replacement typeface is selected yet.
 - Remove the duplicated project name from the desktop application header while preserving enough project and destination context.
+- Nest the Specification outline beneath a single Specification disclosure instead of separating destinations and document sections into two visual groups.
+- Render Specification sections in their intended document order and give peer section titles one consistent treatment.
+- Keep each requirement reference the same size as its title, with muted color and a visible separator.
 - Treat these as refinement candidates pending an updated prototype comparison, not as production UI decisions.
 
 ## Bounded hierarchy refinement — 2026-09-18
 
 - Retain Source Sans 3 so hierarchy can be assessed independently from typeface choice.
-- Keep the semantic `h1` → `h2` → `h3` outline while making the group heading visibly larger than requirement titles.
+- Keep a sequential semantic hierarchy from the document title through section, group and requirement headings.
 - Render FR-012 and FR-013 with one shared title treatment and place each reference on its title line.
 - Show the project name once in the desktop header, within the project/destination context.
 - Defer sticky scroll context and Urbanist/Poppins comparison until this hierarchy pass has been evaluated.
+
+## Outline and document structure refinement — 2026-09-18
+
+- Use one text-first navigation sequence: the Specification destination is an ARIA disclosure whose expanded content is the ordered Specification outline; Sources, Conversations and Collaboration requests remain sibling application destinations.
+- Render the document as Specification → Product overview → Goals and success criteria → Core features → Functional requirements → Acceptance criteria → Risks and open questions.
+- Give all peer Specification sections the same `h2` treatment, with requirement groups at `h3` and requirement items at `h4`.
+- Render requirement headings as `FR-012 · Reschedule an appointment`: reference and title share size and weight while the reference and separator remain muted.
