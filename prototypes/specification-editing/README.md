@@ -14,13 +14,13 @@ From this folder, run `npm install` and `npm run dev -- --host 127.0.0.1 --port 
 4. Navigate the outline or reload this tab, then Keep editing draft.
 5. Done editing commits the study Revision; Discard changes offers a local confirmation.
 6. Open Review feedback and related evidence; the finding never applies an edit automatically.
-7. Compare Ochre and Blue using the palette selector with unchanged content and layout.
+7. Compare Urbanist and Poppins, then Ochre and Blue, using the header selectors with unchanged content, hierarchy and interaction.
 
 Drafts and simulated saved content use sessionStorage for this tab only. This models the distinction between a private draft and committed knowledge, not the production persistence implementation. Revisions are simulated with a counter, without a revision-history store. The artifact title, statement and one illustrative condition are editable. Acceptance criteria, sources and the neighboring requirement provide reading context; their authoring is outside this study. Global application destinations are reference chrome. No backend, AI invocation, authentication, impact propagation or production integration is included.
 
 ## Styling contract
 
-Primitive colors use OKLCH. Root semantic tokens map those primitives to canvas, sidebar, primary ink, muted ink, accent, accent-hover, selection, subtle line, on-accent ink and focus ring. Blue remaps the same semantic roles. Utility-facing `@theme inline` exports `canvas`, `sidebar`, `ink`, `muted`, `accent`, `selection`, `line`, `font-sans`; `text-xl` is the study's large prose size. Other raw values are not exported.
+Primitive colors use OKLCH. Raw font tokens identify Urbanist and Poppins; the semantic `font-body` token switches between them. Root semantic color tokens map primitives to canvas, sidebar, primary ink, muted ink, accent, accent-hover, selection, subtle line, on-accent ink and focus ring. Blue remaps the same semantic roles. Utility-facing `@theme inline` exports `canvas`, `sidebar`, `ink`, `muted`, `accent`, `selection`, `line`, `font-sans`; `text-xl` is the study's large prose size. Other raw values are not exported.
 
 Named local contracts:
 
@@ -40,4 +40,4 @@ See [design-qa.md](design-qa.md) for captured comparisons, interaction evidence 
 
 Real iOS/Android software-keyboard behavior, screen-reader use and extended writing comfort remain user/device validation work. Browser viewport checks do not establish physical-device usability or accessibility conformance.
 
-Reference font: [Source Sans 3](https://fontsource.org/fonts/source-sans-3/install). Icons: [Tabler](https://tabler.io/icons). Assets are bundled locally.
+Typeface candidates: [Urbanist](https://fontsource.org/fonts/urbanist/install) variable and [Poppins](https://fontsource.org/fonts/poppins/install) regular/semibold. Icons: [Tabler](https://tabler.io/icons). Assets are bundled locally.

@@ -24,11 +24,12 @@ Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts
 - Requirement groups need clearer visual separation from their requirement items; `Rescheduling` currently reads too similarly to `Reschedule an appointment`.
 - Peer requirement items such as FR-012 and FR-013 should use the same title hierarchy and treatment.
 - Place a requirement reference such as `FR-012` or `FR-013` on the same line as its requirement title so identity and title read as one unit.
-- Evaluate Urbanist and Poppins variable fonts as alternatives to Source Sans 3; no replacement typeface is selected yet.
+- Evaluate Urbanist and Poppins as alternatives to Source Sans 3; Urbanist is available as a variable font, while the current Google Fonts Poppins distribution uses static weights. No replacement typeface is selected yet.
 - Remove the duplicated project name from the desktop application header while preserving enough project and destination context.
 - Nest the Specification outline beneath a single Specification disclosure instead of separating destinations and document sections into two visual groups.
 - Render Specification sections in their intended document order and give peer section titles one consistent treatment.
 - Keep each requirement reference the same size as its title, with muted color and a visible separator.
+- Compare Urbanist and Poppins against identical content, hierarchy, palette and interaction; use Urbanist as the initial candidate without treating it as a selected default.
 - Treat these as refinement candidates pending an updated prototype comparison, not as production UI decisions.
 
 ## Bounded hierarchy refinement — 2026-09-18
@@ -45,3 +46,10 @@ Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts
 - Render the document as Specification → Product overview → Goals and success criteria → Core features → Functional requirements → Acceptance criteria → Risks and open questions.
 - Give all peer Specification sections the same `h2` treatment, with requirement groups at `h3` and requirement items at `h4`.
 - Render requirement headings as `FR-012 · Reschedule an appointment`: reference and title share size and weight while the reference and separator remain muted.
+
+## Typeface comparison — 2026-09-18
+
+- Replace the deferred Source Sans 3 treatment with an in-prototype Urbanist/Poppins comparison so reading and editing can be assessed with otherwise identical states.
+- Start with Urbanist because its humanist construction is the closer Craft-led reading candidate; retain Poppins as the more geometric comparison.
+- Bundle the fonts locally. Urbanist uses its variable font; Google Fonts currently distributes Poppins as static faces, so bundle only the regular and semibold weights used by this study.
+- Do not interpret the initial Urbanist setting or the comparison control as production authorization or a final typography decision.
