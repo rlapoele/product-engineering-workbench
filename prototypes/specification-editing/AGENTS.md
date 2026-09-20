@@ -80,4 +80,5 @@ Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts
 
 - Use Urbanist with `0.035em` tracking and the blue palette with `0.15` accent chroma as the current prototype baseline. Retain the comparison controls for now; this preference does not authorize production defaults.
 - Structure the sidebar navigation as nested `ul` and `li` lists. Use anchors for destinations and in-document navigation, and reserve buttons for the Specification and requirement-group disclosure actions.
-- Use `gap-2` between icons and labels in top-level sidebar links.
+- Use `gap-3` between icons and labels in top-level sidebar links.
+- Keep navigation-item surfaces square; reserve rounded corners for interactive controls such as buttons rather than links or selected navigation rows.

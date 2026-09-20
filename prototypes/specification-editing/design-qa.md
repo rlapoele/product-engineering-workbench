@@ -95,9 +95,10 @@ Post-fix evidence: `evidence/reading-comparison.png`, `evidence/reading-detail.p
 
 - Urbanist and the blue palette now load as the current prototype defaults; the comparison controls remain available and this does not authorize a production default.
 - The navigation is exposed as three nested lists containing eleven list items and eleven links. Buttons are reserved for the Specification and Rescheduling disclosure actions, with `aria-expanded` and `aria-controls` reflecting their state.
-- Top-level destination links use `gap-2`; the computed icon-to-label gap was `0.5rem` at the 1070-pixel desktop viewport and remained proportional under the fluid root size at 390 pixels.
+- Top-level destination links use `gap-3` (`0.75rem`); the computed icon-to-label gap was 11.9531 pixels at the 1070-pixel desktop viewport and 11.25 pixels at the 320-pixel narrow viewport, scaling with the fluid root size.
+- Navigation links, outline links and the selected Specification row resolve to a zero-pixel corner radius. Disclosure buttons retain the button component's rounded shape.
 - Both disclosures collapsed and restored their controlled lists, and the in-document links updated the URL fragment and current-location state.
-- Live checks at 1070, 390 and 320 pixels confirmed Urbanist and blue as the initial values and found no horizontal overflow.
+- Live checks at 1070, 390 and 320 pixels confirmed Urbanist and blue as the initial values and found no horizontal overflow; the final spacing and square-link treatment were rechecked at 1070 and 320 pixels.
 
 ## Interaction verification
 

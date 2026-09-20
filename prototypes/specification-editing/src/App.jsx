@@ -35,8 +35,8 @@ export function App(){
  <nav id="specification-outline" aria-label="Specification outline" className={`c-sidebar ${outline?'c-sidebar--open':''}`}>
  <ul className="space-y-1">
   <li>
-   <div className="flex min-h-11 w-full items-center rounded bg-selection text-accent">
-    <a href="#specification" aria-current="page" className="flex min-h-11 min-w-0 flex-1 items-center gap-2 px-4 py-3 font-semibold" onClick={()=>jump('specification','overview')}><Icon as={IconFileText}/><span>Specification</span></a>
+   <div className="flex min-h-11 w-full items-center bg-selection text-accent">
+    <a href="#specification" aria-current="page" className="flex min-h-11 min-w-0 flex-1 items-center gap-3 px-4 py-3 font-semibold" onClick={()=>jump('specification','overview')}><Icon as={IconFileText}/><span>Specification</span></a>
     <Button aria-label={`${specificationExpanded?'Collapse':'Expand'} specification outline`} aria-controls="specification-sections" aria-expanded={specificationExpanded} onClick={()=>setSpecificationExpanded(!specificationExpanded)}><Icon as={IconChevronDown} className={specificationExpanded?'':'-rotate-90'}/></Button>
    </div>
    {specificationExpanded&&<ul id="specification-sections" className="ms-5 space-y-1 border-s border-line pbe-2 ps-3">
@@ -49,7 +49,7 @@ export function App(){
     <li><a href="#questions" className="c-outline-link" aria-current={currentSection==='questions'?'location':undefined} onClick={()=>jump('questions')}>Risks and open questions</a></li>
    </ul>}
   </li>
-  {[[IconStack2,'Sources','/sources'],[IconMessageCircle,'Conversations','/conversations'],[IconUsers,'Collaboration requests','/collaboration-requests']].map(([DestinationIcon,label,href])=><li key={label}><a href={href} className="flex min-h-11 w-full items-center gap-2 rounded px-4 py-3 hover:bg-selection"><Icon as={DestinationIcon}/><span>{label}</span></a></li>)}
+  {[[IconStack2,'Sources','/sources'],[IconMessageCircle,'Conversations','/conversations'],[IconUsers,'Collaboration requests','/collaboration-requests']].map(([DestinationIcon,label,href])=><li key={label}><a href={href} className="flex min-h-11 w-full items-center gap-3 px-4 py-3 hover:bg-selection"><Icon as={DestinationIcon}/><span>{label}</span></a></li>)}
  </ul>
  </nav>
  <main id="specification" tabIndex={-1} className="min-w-0 flex-1" onClick={e=>{if(!e.target.closest('article,button,a,input,textarea,select,aside'))leave()}}>
