@@ -58,3 +58,12 @@ Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts
 - Do not interpret the initial Urbanist setting or the comparison control as production authorization or a final typography decision.
 - Apply Urbanist's `0.035em` tracking through one semantic font-tracking token, including headings and editing controls; Poppins retains its native spacing.
 - Owner evaluation found both Urbanist headings and body copy comfortable to read at `0.035em`; retain this as the preferred prototype setting while broader sustained-use and production typography decisions remain open.
+
+## Fluid typography refinement — 2026-09-20
+
+- Owner feedback found the prototype's typography generally too large and requested an overall scale closer to 80% of the previous treatment.
+- Use a stable inline viewport axis for the root-size interpolation so a mobile virtual keyboard cannot switch the scale from viewport width to viewport height.
+- Keep the prototype root between 15 and 17 pixels across a 320–1920-pixel inline viewport, then reduce document typography by semantic role rather than shrinking every control indiscriminately.
+- Expose the study's `text-*`, `leading-*` and `tracking-*` values through Tailwind theme variables. Urbanist's preferred `0.035em` treatment is `tracking-relaxed`; Poppins retains native tracking.
+- Defer the proposed radius scale so the evaluation changes typography without also changing component shape.
+- Treat this as a bounded prototype setting pending sustained reading and editing evaluation, not as production typography authorization.

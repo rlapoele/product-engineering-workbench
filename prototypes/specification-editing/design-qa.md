@@ -71,6 +71,15 @@ Post-fix evidence: `evidence/reading-comparison.png`, `evidence/reading-detail.p
 - Live verification at 1280 pixels confirmed the updated token in navigation and document actions without horizontal overflow or browser warnings.
 - Owner evaluation found `0.15` better than `0.13`, making it the preferred blue accent for the current prototype sample without selecting a production token or final palette.
 
+### Fluid typography refinement — passed for current responsive sample
+
+- The root now interpolates from 15 to 17 pixels over a 320–1920-pixel inline viewport. The stable `vi` axis avoids coupling the type scale to viewport height or orientation changes.
+- Document roles moved down approximately one scale step while preserving the established semantic order: page title, peer sections, requirement group, requirement title and body copy.
+- At 1485 pixels, computed sizes were 16.46 pixels for the root, 37.03 pixels for the document title, 24.68 pixels for peer section titles and 18.51 pixels for requirement titles and body copy. This is approximately 77–84% of the preceding desktop treatment.
+- At 390 pixels, the root was 15.09 pixels, body and requirement titles were 16.97 pixels and the page title was 28.29 pixels. At 320 pixels, the root was 15 pixels, the inline title field was 18.75 pixels and statement fields were 15 pixels.
+- The 1485-, 390- and 320-pixel checks showed no horizontal document overflow. The 320-pixel editing state retained visible local actions and readable field wrapping, and the browser console reported no warnings or errors.
+- Radius tokens were intentionally excluded so this pass does not conflate typography with component shape.
+
 ## Interaction verification
 
 Browser checks covered:
@@ -95,7 +104,7 @@ Browser checks covered:
 - The intended comfort of sustained reading and editing, and the comparative emotional quality of ochre and blue, require human evaluation rather than automated evidence.
 - Hover discoverability should be assessed during the owner's desktop walkthrough; keyboard and touch have explicit, persistent routes.
 - Urbanist's current heading and body treatment is comfortable in the present sample; longer-document use and the final Urbanist/Poppins preference remain open.
-- The new two-control header and both typeface treatments still require updated 390-pixel and 320-pixel browser or device verification.
+- The updated responsive typography has browser evidence at 390 and 320 pixels; real-device font rendering and virtual-keyboard behavior remain unverified.
 - Owner evaluation favors blue over ochre and found `0.15` accent chroma better than the earlier `0.13`; `0.16` begins leaving the sRGB gamut at the current lightness and hue. Sustained-use comfort and the final palette decision remain open.
 
 ## Follow-up polish
