@@ -80,6 +80,12 @@ Post-fix evidence: `evidence/reading-comparison.png`, `evidence/reading-detail.p
 - The 1485-, 390- and 320-pixel checks showed no horizontal document overflow. The 320-pixel editing state retained visible local actions and readable field wrapping, and the browser console reported no warnings or errors.
 - Radius tokens were intentionally excluded so this pass does not conflate typography with component shape.
 
+### Requirement action alignment — passed
+
+- Owner annotation found that the Edit action shared the heading's top edge but sat visually below `FR-012 · Reschedule an appointment` because its larger touch target had a lower center.
+- The requirement header row now aligns the heading and Edit action by their first-line baseline while preserving the button's minimum block size and keeping the action associated with `FR-012` when the title wraps.
+- Live checks at 1070 pixels and 320 pixels confirmed the action remains on the first heading line, including the three-line narrow title, without horizontal overflow.
+
 ## Interaction verification
 
 Browser checks covered:

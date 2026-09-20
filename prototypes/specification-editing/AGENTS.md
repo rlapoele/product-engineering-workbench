@@ -67,3 +67,7 @@ Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts
 - Expose the study's `text-*`, `leading-*` and `tracking-*` values through Tailwind theme variables. Urbanist's preferred `0.035em` treatment is `tracking-relaxed`; Poppins retains native tracking.
 - Defer the proposed radius scale so the evaluation changes typography without also changing component shape.
 - Treat this as a bounded prototype setting pending sustained reading and editing evaluation, not as production typography authorization.
+
+## Requirement action alignment — 2026-09-20
+
+- Align the local Edit action to the first-line baseline of the requirement reference and title. Preserve the button's full touch target and keep the alignment stable when the title wraps rather than compensating with a reduced height or positional offset.
