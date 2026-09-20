@@ -91,6 +91,14 @@ Post-fix evidence: `evidence/reading-comparison.png`, `evidence/reading-detail.p
 - The left panel retains its vertical padding but has no inline padding; navigation rows now reach the panel edges while preserving their own internal text and icon spacing.
 - Live verification at 1070 pixels confirmed zero computed inline padding and no document or sidebar overflow.
 
+### Sidebar navigation semantics and current defaults — passed
+
+- Urbanist and the blue palette now load as the current prototype defaults; the comparison controls remain available and this does not authorize a production default.
+- The navigation is exposed as three nested lists containing eleven list items and eleven links. Buttons are reserved for the Specification and Rescheduling disclosure actions, with `aria-expanded` and `aria-controls` reflecting their state.
+- Top-level destination links use `gap-2`; the computed icon-to-label gap was `0.5rem` at the 1070-pixel desktop viewport and remained proportional under the fluid root size at 390 pixels.
+- Both disclosures collapsed and restored their controlled lists, and the in-document links updated the URL fragment and current-location state.
+- Live checks at 1070, 390 and 320 pixels confirmed Urbanist and blue as the initial values and found no horizontal overflow.
+
 ## Interaction verification
 
 Browser checks covered:

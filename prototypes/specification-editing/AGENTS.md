@@ -75,3 +75,9 @@ Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts
 ## Sidebar edge treatment — 2026-09-20
 
 - Keep the left panel itself flush to its inline edges. Navigation rows retain their own internal padding and indentation, but the panel does not add horizontal padding around them.
+
+## Current visual baseline and navigation semantics — 2026-09-21
+
+- Use Urbanist with `0.035em` tracking and the blue palette with `0.15` accent chroma as the current prototype baseline. Retain the comparison controls for now; this preference does not authorize production defaults.
+- Structure the sidebar navigation as nested `ul` and `li` lists. Use anchors for destinations and in-document navigation, and reserve buttons for the Specification and requirement-group disclosure actions.
+- Use `gap-2` between icons and labels in top-level sidebar links.
