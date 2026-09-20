@@ -59,7 +59,7 @@
 }
 @layer components {
  .c-topbar {display:flex;align-items:center;justify-content:space-between;gap:1rem;min-block-size:4.25rem;padding:.5rem 1.5rem;border-block-end:.0625rem solid var(--line-subtle);background:var(--paint-canvas);font-size:1rem;position:sticky;inset-block-start:0;z-index:20}
- .c-sidebar {inline-size:26%;max-inline-size:25rem;flex-shrink:0;position:sticky;inset-block-start:4.25rem;block-size:calc(100dvh - 4.25rem);overflow:auto;border-inline-end:.0625rem solid var(--line-subtle);padding:1rem .875rem;background:var(--paint-sidebar);font-size:1rem}
+ .c-sidebar {inline-size:26%;max-inline-size:25rem;flex-shrink:0;position:sticky;inset-block-start:4.25rem;block-size:calc(100dvh - 4.25rem);overflow:auto;border-inline-end:.0625rem solid var(--line-subtle);padding-block:1rem;background:var(--paint-sidebar);font-size:1rem}
  .c-outline-link {display:block;inline-size:100%;text-align:start;min-block-size:2.75rem;padding:.65rem 1.25rem;border-radius:.25rem}
  .c-outline-link[aria-current] {box-shadow:inset .125rem 0 var(--paint-accent);color:var(--paint-accent)}
  .c-outline-link:hover {background:var(--paint-selection)}

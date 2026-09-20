@@ -86,6 +86,11 @@ Post-fix evidence: `evidence/reading-comparison.png`, `evidence/reading-detail.p
 - The requirement header row now aligns the heading and Edit action by their first-line baseline while preserving the button's minimum block size and keeping the action associated with `FR-012` when the title wraps.
 - Live checks at 1070 pixels and 320 pixels confirmed the action remains on the first heading line, including the three-line narrow title, without horizontal overflow.
 
+### Sidebar edge treatment — passed
+
+- The left panel retains its vertical padding but has no inline padding; navigation rows now reach the panel edges while preserving their own internal text and icon spacing.
+- Live verification at 1070 pixels confirmed zero computed inline padding and no document or sidebar overflow.
+
 ## Interaction verification
 
 Browser checks covered:

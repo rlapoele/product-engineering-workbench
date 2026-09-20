@@ -71,3 +71,7 @@ Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts
 ## Requirement action alignment — 2026-09-20
 
 - Align the local Edit action to the first-line baseline of the requirement reference and title. Preserve the button's full touch target and keep the alignment stable when the title wraps rather than compensating with a reduced height or positional offset.
+
+## Sidebar edge treatment — 2026-09-20
+
+- Keep the left panel itself flush to its inline edges. Navigation rows retain their own internal padding and indentation, but the panel does not add horizontal padding around them.
