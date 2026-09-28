@@ -247,3 +247,4 @@
 | 2026-08-24-06 | 2026-08-24 | 6 | Greenfield Guided Project Creation Flow | Crystallized | Starting context precedes template choice; temporary Greenfield notes guide preset and owner-invoked drafts, while Brownfield Sources follow creation |
 | 2026-09-03-01 | 2026-09-03 | 1 | Workbench Visual Direction | Crystallized | Warm light and dark themes, centered primary surfaces, contextual edge regions and restrained control language |
 | 2026-09-05-01 | 2026-09-05 | 1 | Workbench Specification Visual Exploration | Active exploration | Craft-led document workspace, text-first template outline and unresolved default accent palette |
+| 2026-09-28-01 | 2026-09-28 | 1 | Repository Companion Direction and Decision-Impact Inventory | Active exploration | Repository-companion thesis, three-layer model, Observation feedback loop and preliminary impact inventory; no stable Product Knowledge changed |
