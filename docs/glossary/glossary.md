@@ -276,6 +276,18 @@ Within a Project, requests appear in one role-aware, paginated list: **Requests 
 
 ---
 
+## Connected Collaboration
+
+An optional coordination layer that may provide identity, comments, presence,
+notifications, sharing, permissions and review coordination around a
+repository-resident Specification.
+
+Connected Collaboration uses the same Knowledge Engine semantics as local
+surfaces. It must not silently become a competing canonical store for Product
+Knowledge or make repository access dependent on an online service.
+
+---
+
 ## Collaboration Request Recipient
 
 A Collaboration Request Recipient is the person or Personal AI Assistant selected to provide the bounded response to one Collaboration Request. It is a temporary request responsibility, not a Project membership role.
@@ -1136,6 +1148,18 @@ This process is independent of the workflow templates supported by the Product E
 
 ---
 
+## Repository Working Copy
+
+One locally available checkout or folder through which a participant works on
+a Workspace. In Git-based collaboration, participants normally use separate
+working copies, branches or worktrees and reconcile their changes through Git
+rather than concurrently editing one shared mutable directory.
+
+A Repository Working Copy is an operational location, not a separate Project
+or source of Product Knowledge authority.
+
+---
+
 ## Review
 
 A contribution whose objective is to evaluate, improve or validate existing product knowledge.
@@ -1356,6 +1380,20 @@ evidence, validation results and expected impact. Applying one is atomic:
 either every valid semantic operation produces one new Revision boundary or no
 operation is applied. A proposed change set may instead be rejected or become
 obsolete or conflicted.
+
+---
+
+## Semantic Conflict
+
+An incompatibility between Product Knowledge changes that cannot be determined
+from textual merge status alone or cannot be safely resolved without changing
+intent.
+
+A Semantic Conflict may involve stable identity, containment, relationships,
+removal versus revision, incompatible schema versions or an incomplete
+multi-file operation. It may exist after a textually clean Git merge. The
+Knowledge Engine surfaces it for human resolution and must not silently choose
+which product intent wins.
 
 ---
 

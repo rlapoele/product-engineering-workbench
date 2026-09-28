@@ -13,6 +13,11 @@ Specification storage contract established by ADR-028. Current exploration is
 tracked in `docs/planning/open-questions.md` under `ARCH-002` through
 `ARCH-005`, `DATA-008`, `UX-007` and `AI-002`.
 
+ADR-029 now fixes the initial multi-person posture as separate Repository
+Working Copies with Git-based asynchronous collaboration and Knowledge Engine
+semantic reconciliation. ARCH-004 retains the unresolved base-state,
+lost-update, merge and Semantic Conflict details.
+
 The accumulated notes below record earlier exploration and first-slice work.
 They remain useful history but do not override ADR-028 or the current planning
 register. In particular, online-first persistence, terminal handoff and the

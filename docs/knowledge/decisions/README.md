@@ -48,3 +48,4 @@ When in doubt, prefer updating an existing document rather than creating a new o
 | ADR-026 | First-Slice Executable Specification Boundary | Accepted | 2026-08-06 |
 | ADR-027 | First-Slice Implementation Authorization And Dependency Verification | Accepted | 2026-08-06 |
 | ADR-028 | Repository Companion And Living Specification | Accepted | 2026-09-28 |
+| ADR-029 | Repository Collaboration And Semantic Concurrency | Accepted | 2026-09-28 |

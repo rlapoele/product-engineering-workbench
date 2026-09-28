@@ -178,6 +178,12 @@ default topology. Git is optional for core operation. A Git submodule or
 separate Specification repository may be supported later through the same
 Specification Root abstraction.
 
+For asynchronous multi-person work, each participant normally uses a separate
+Repository Working Copy, branch or worktree. Git distributes and reviews file
+changes but does not determine semantic validity. A shared mutable folder is
+not a reliable concurrency or attribution model even when the Workbench can
+observe its file events.
+
 ## 3.5 Observations And Semantic Change Sets
 
 An Observation is non-canonical, traceable evidence that Product Knowledge may
@@ -202,6 +208,12 @@ moves and relationship changes against a base Revision. It records rationale,
 origin, informing Observations or Sources, validation results and expected
 impact. Applying one is atomic and produces a coherent Revision boundary. A
 proposal may instead be rejected or become obsolete or conflicted.
+
+Application verifies that the known base Product Knowledge state still
+supports the change set's assumptions. An intervening change may therefore
+make a proposal obsolete or produce a Semantic Conflict. Git textual merge
+status does not replace this validation, and ambiguous intent requires human
+resolution.
 
 ---
 

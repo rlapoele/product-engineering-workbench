@@ -87,6 +87,13 @@ directory inside the product repository is the default topology. Future
 adapters may support a Git submodule or separate Specification repository
 without changing the semantic model.
 
+The initial multi-person collaboration model is asynchronous. Participants
+normally work in separate Repository Working Copies, branches or worktrees and
+exchange changes through Git synchronization and review. A shared mutable
+folder may be monitored, but filesystem or cloud-sync events do not establish
+reliable authorship, ordering, atomicity or lost-update protection and are not
+the assumed collaboration mechanism.
+
 The engine monitors declared content for creation, modification, movement and
 deletion. File events are stabilized and compared semantically because editors
 and Git operations may emit several physical events for one logical change.
@@ -107,6 +114,16 @@ discard or overwrite them.
 Git branch changes, checkouts, merges and rebases require a fresh semantic
 comparison. Git conflicts remain explicit. The Workbench must not auto-resolve
 an ambiguous semantic conflict.
+
+Textual success is not semantic success. After repository synchronization, the
+engine validates stable identity, composition, relationships and other selected
+invariants. It may therefore surface a Semantic Conflict after Git reports a
+clean merge.
+
+A Semantic Change Set applies against a known base Product Knowledge state and
+must verify that its assumptions still hold before atomic application. The
+exact base-state identifier, locking policy, semantic merge rules and mapping
+between Workbench Revisions and Git commits remain open under ARCH-004.
 
 ---
 
@@ -135,6 +152,10 @@ Local review, Git collaboration and optional connected collaboration are
 complementary. A future connected service may add identity, discussion,
 presence, sharing or permissions, but must not silently become canonical
 Product Knowledge storage.
+
+Real-time co-editing, CRDTs and operational transformation are not selected as
+the initial collaboration foundation. They require a separately validated need
+and an explicit synchronization, authority, offline and recovery model.
 
 ---
 

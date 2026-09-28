@@ -1475,7 +1475,7 @@ and shutdown without becoming separate product-rule implementations?
 
 ---
 
-# ARCH-004 — How should External Changes and conflicts be reconciled?
+# ARCH-004 — How should External Changes, concurrent edits and semantic conflicts be reconciled?
 
 **Category:** Architecture
 
@@ -1487,11 +1487,21 @@ Supported direct file edits are legitimate. The engine monitors declared
 content, stabilizes noisy filesystem events, compares semantic state and never
 silently repairs or overwrites invalid or ambiguous changes.
 
+ADR-029 establishes separate Repository Working Copies, branches or worktrees
+plus Git synchronization as the initial asynchronous multi-person model. Git
+line merging is evidence, not semantic validation. Shared mutable folders are
+observable but are not the assumed safe concurrency mechanism. Semantic Change
+Sets apply atomically against a known base Product Knowledge state.
+
 ## Question
 
 How should the Workbench identify its own writes, correlate moves and renames,
 represent unconfirmed valid changes, recover from invalid syntax, handle Git
-checkouts and merges, and protect concurrent operations from lost updates?
+checkouts and merges, identify a base state, distinguish automatically
+reconcilable changes from Semantic Conflicts, recover from invalid or partial
+state, and protect concurrent operations from lost updates? How should
+Workbench Revisions relate to Git commits without requiring a one-to-one
+mapping?
 
 ---
 

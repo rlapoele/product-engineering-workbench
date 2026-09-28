@@ -14,7 +14,8 @@ visual-prototype increment.
 
 The immediate work is to define the repository representation, Workspace
 contract, Knowledge Engine boundary, Observation and External Change behavior,
-semantic authority and one bounded repository-companion validation journey.
+semantic authority, asynchronous repository collaboration and one bounded
+repository-companion validation journey.
 No additional implementation scope is authorized.
 
 ---
@@ -28,6 +29,11 @@ with repository-resident Product Knowledge, a shared Knowledge Engine and
 desktop, CLI and MCP surfaces. Humans retain authority over intent;
 implementation evidence may inform Observations and alignment assessments but
 does not become product truth automatically.
+
+ADR-029 establishes the initial multi-person posture: separate Repository
+Working Copies and Git-based asynchronous collaboration, followed by Knowledge
+Engine semantic reconciliation. Connected Collaboration remains optional and
+real-time co-editing is not the initial foundation.
 
 The current web prototype and its first-slice decisions remain preserved as
 bounded historical evidence. They no longer determine the target architecture.
@@ -294,7 +300,7 @@ The roadmap supplies the expected discussion order; it is not a delivery schedul
 | Order | Topic | Status | Purpose and boundary |
 |---:|---|---|---|
 | 1 | Workspace and Specification storage contract | **Active knowledge definition** | Define discovery, `.workbench/workspace.*`, Specification Root invariants, stable identity, deterministic serialization and folder/Git boundaries without yet selecting JSON or YAML. |
-| 2 | Knowledge Engine and External Change contract | Next | Define the logical engine API, file monitoring, semantic comparison, conflict handling and coordination across desktop, CLI and MCP without choosing a runtime topology prematurely. |
+| 2 | Knowledge Engine, External Change and concurrency contract | Next | Define the logical engine API, file monitoring, base-state protection, semantic comparison, conflict handling and coordination across desktop, CLI and MCP without choosing a runtime topology prematurely. |
 | 3 | Observation and Semantic Change Set contract | Next | Specify minimum durable fields, dispositions, provenance, review and atomic application while preserving human authority. |
 | 4 | Readiness, alignment and Context Snapshot model | Candidate | Replace remaining terminal-handoff assumptions with purpose-specific assessments, immutable snapshots and Export or Share behavior. |
 | 5 | Repository Companion validation journey | Candidate | Validate opening or initializing a Workspace, composing the Specification, detecting an External Change and reviewing an Observation or proposed change. |
@@ -334,9 +340,11 @@ No candidate below is active merely because it is listed. They remain available 
    MCP.
 3. Specify External Change, Observation and Semantic Change Set behavior before
    prototyping repository mutation.
-4. Preserve the completed first slice as evidence without treating it as the
+4. Define semantic reconciliation and lost-update protection for asynchronous
+   Git collaboration without assuming real-time co-editing.
+5. Preserve the completed first slice as evidence without treating it as the
    target architecture.
-5. Select a bounded repository-companion validation journey only after the
+6. Select a bounded repository-companion validation journey only after the
    foundational contracts are coherent.
 
 ---

@@ -249,3 +249,4 @@
 | 2026-09-05-01 | 2026-09-05 | 1 | Workbench Specification Visual Exploration | Paused | Craft-led document evidence retained; further visual work waits for Repository Companion journey and engine boundaries |
 | 2026-09-28-01 | 2026-09-28 | 1 | Repository Companion Direction and Decision-Impact Inventory | Crystallized | Repository-companion thesis, three-layer engine model, Observation loop, continuous alignment and Context Snapshot direction accepted in ADR-028 |
 | 2026-09-28-02 | 2026-09-28 | 2 | Documentation Consistency Review | Crystallized | Target-versus-history boundaries, planning states, terminology, structural corrections and documentation validation reconciled after ADR-028 |
+| 2026-09-28-03 | 2026-09-28 | 3 | Repository Collaboration And Semantic Concurrency | Crystallized | Separate working copies, Git-based asynchronous collaboration, engine reconciliation and optional connected coordination accepted in ADR-029 |
