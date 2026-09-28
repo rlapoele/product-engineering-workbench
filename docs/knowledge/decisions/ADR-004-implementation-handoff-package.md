@@ -1,6 +1,6 @@
 # ADR-004 — Implementation Handoff Package
 
-**Status:** Accepted
+**Status:** Superseded by ADR-028
 
 **Date:** 2026-07-17
 

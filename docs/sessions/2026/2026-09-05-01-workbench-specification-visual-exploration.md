@@ -4,7 +4,11 @@
 
 **Date:** 2026-09-05
 
-**Status:** Active exploration
+**Status:** Paused
+
+ADR-028 pauses this visual exploration until the Repository Companion journeys
+and Knowledge Engine boundaries identify the correct surfaces to validate. Its
+document-reading and visual evidence remains available; it is not discarded.
 
 ## Context
 

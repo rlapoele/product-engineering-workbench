@@ -1,6 +1,6 @@
 # ADR-009 — Online-First, Offline-Evolvable Posture
 
-**Status:** Accepted
+**Status:** Superseded by ADR-028 for the target product; retained as first-slice history
 
 **Date:** 2026-08-01
 

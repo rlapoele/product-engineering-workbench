@@ -1,6 +1,6 @@
 # ADR-024 — Project Archive And Import Contract
 
-**Status:** Accepted
+**Status:** Reopened by ADR-028
 
 **Date:** 2026-08-06
 

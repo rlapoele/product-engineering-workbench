@@ -405,15 +405,46 @@ The workbench should distinguish AI Contributors from AI Implementation Environm
 
 An AI Contributor participates inside the workbench to help create, review or refine product knowledge.
 
-An AI Implementation Environment consumes exported product knowledge outside the workbench in order to implement the specified software product.
+An AI Implementation Environment consumes a Context View, Context Snapshot or
+exported Product Knowledge outside the Workbench in order to implement the
+specified software product.
 
 Examples of AI Implementation Environments may include coding-agent environments, AI-assisted IDEs or autonomous implementation tools.
 
-The workbench does not initially implement software delivery itself. Instead, it should prepare implementation-ready knowledge that external environments can consume.
+The Workbench does not implement software delivery itself. It prepares
+purpose-specific context that external environments can consume and may later
+inspect resulting implementation evidence for alignment.
 
 ---
 
-# 9. Implementation Handoff
+# 9. External Agents, Context Snapshots And Export
+
+ADR-028 replaces Implementation Handoff as the central AI-integration model.
+The Workbench exposes two complementary participation paths:
+
+- MCP is the interactive semantic path for a connected agent to Inspect,
+  Observe, Propose or, when explicitly authorized, Apply Product Knowledge
+  operations through the Knowledge Engine.
+- repository-resident Observation files are the asynchronous path for an agent
+  or tool without a live Workbench connection to report ambiguity, drift,
+  evidence or a possible change without receiving canonical authority.
+
+External agents default to Inspect, Observe or Propose. Apply authority must be
+explicit, bounded and attributable. An MCP client operates on Workbench domain
+concepts rather than receiving general permission to edit arbitrary Workspace
+files.
+
+A Context View is a live, purpose-specific projection. A Context Snapshot is
+an immutable capture anchored to a scope, purpose, Product Knowledge Revision
+and evidence boundary. It may be exported or shared with a human developer, AI
+implementation environment, reviewer or other tool.
+
+## Historical implementation handoff model
+
+The package detail below remains candidate input to an
+implementation-oriented Context Snapshot export profile. It no longer defines
+a terminal product phase, and the term `handoff` may disappear from future
+product language.
 
 The exported specification should be usable as an implementation handoff package.
 
@@ -479,15 +510,21 @@ Unknown external AI use should be treated as a governance and trust policy issue
 
 # 11. Current Direction
 
-AI should be optional, capability-based and context-aware.
+AI should be optional, capability-based, context-aware and governed through the
+same Knowledge Engine as human-facing surfaces.
 
-The MVP should support AI assistance as contributions to the specification process while also producing exports that can be consumed by external AI implementation environments.
+The Workbench should support AI assistance as reviewable participation in the
+Specification process, semantic MCP operations for external agents and
+Context Snapshots or exports consumable by AI implementation environments.
 
-For the MVP, the default `Implementation Handoff` profile should be human-readable and AI-useful. It should support human developers, AI-assisted developers and AI implementation environments through the same generated package.
+An implementation-oriented export profile should remain human-readable and
+AI-useful. It should support human developers, AI-assisted developers and AI
+implementation environments through the same Context Snapshot.
 
 `IMPLEMENTATION_BRIEF.md` should include a suggested implementation sequence to help human and AI consumers choose an implementation order from the specification.
 
-Future Handoff Profiles may include AI-oriented consumers such as Codex, Claude Code, Gemini or Cursor, but the Handoff Profile concept itself is not AI-specific. It should also support human, agency, client and QA handoff needs.
+Future export profiles may specialize representation for particular consumers,
+but Context Snapshots and the Export or Share model are not AI-specific.
 
 Known AI assistance should remain traceable through Contributions, Revisions and Provenance. Its automatic disclosure within the workbench or an export follows the project-owner disclosure setting.
 

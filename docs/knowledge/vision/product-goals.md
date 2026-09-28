@@ -8,7 +8,9 @@ These goals guide product decisions, prioritization and long-term evolution.
 
 # Primary Goal
 
-Help individuals and teams produce high-quality, implementation-ready product knowledge.
+Help individuals and teams create and continuously maintain high-quality,
+human-owned Product Knowledge alongside the software and evidence that inform
+it.
 
 ---
 
@@ -32,7 +34,8 @@ Help users produce product knowledge that is:
 - traceable;
 - implementation-ready.
 
-The workbench should continuously encourage improvements to product knowledge.
+The workbench should continuously encourage improvements to Product Knowledge
+and make relevant changes or possible misalignment visible.
 
 ---
 
@@ -46,7 +49,8 @@ Help users identify:
 - unanswered questions;
 - hidden assumptions.
 
-The workbench should increase confidence before implementation begins.
+The workbench should increase confidence before implementation begins and as
+the Specification and implementation continue to evolve.
 
 ---
 
@@ -89,9 +93,32 @@ The workbench should not require users to follow a single methodology.
 
 ## G-008 — Integrate with Existing Ecosystems
 
-Allow product knowledge to be exported or integrated with external tools used during Product Delivery.
+Allow Product Knowledge to remain repository-resident and to be inspected,
+exported or shared with external tools and agents.
 
 The workbench complements existing delivery platforms rather than replacing them.
+
+---
+
+## G-009 — Maintain Specification And Implementation Alignment
+
+Help users understand when implementation evidence may no longer align with a
+named Product Knowledge scope and Revision.
+
+The workbench should distinguish deterministic evidence, declared evidence and
+inferred observations. It must not silently treat implementation behavior or AI
+interpretation as product intent.
+
+---
+
+## G-010 — Provide Open, Multi-Surface Access
+
+Keep canonical Product Knowledge in an open repository-resident representation
+and expose the same semantic operations through the desktop document, CLI, MCP
+and future integrations.
+
+The desktop experience should remain the primary sustained human surface while
+other surfaces reuse the same knowledge engine and authority rules.
 
 ---
 
@@ -103,8 +130,9 @@ The Product Engineering Workbench succeeds when users can:
 - produce better product knowledge;
 - reduce unnecessary ambiguity;
 - collaborate more effectively;
-- confidently begin implementation;
-- reuse and evolve product knowledge over time.
+- confidently act on a purpose-specific Specification scope;
+- reuse and evolve product knowledge over time;
+- detect when changes require renewed review or alignment assessment.
 
 ---
 
@@ -116,7 +144,7 @@ The Product Engineering Workbench does not aim to become:
 - a sprint planning tool;
 - a task management system;
 - a source code management platform;
+- a software implementation environment;
 - a software delivery platform.
 
 These activities belong to Product Delivery and are intentionally outside the primary scope of the workbench.
-

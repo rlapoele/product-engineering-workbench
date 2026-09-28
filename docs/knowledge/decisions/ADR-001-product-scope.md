@@ -1,6 +1,6 @@
 # ADR-001 — Product Scope
 
-**Status:** Accepted
+**Status:** Superseded by ADR-028
 
 **Date:** 2026-07-15
 

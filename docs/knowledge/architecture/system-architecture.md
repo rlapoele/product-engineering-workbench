@@ -6,9 +6,148 @@ The architecture remains conceptual during the current knowledge-foundation phas
 
 ---
 
-# 1. Canonical Project State
+# 1. Target Product Architecture
 
-The canonical product state should be a structured Project State object.
+ADR-028 establishes the target product as a desktop-first Repository Companion.
+The architecture has three logical layers:
+
+```text
+Desktop document UI · CLI · MCP · future integrations
+                         ↓
+Workbench Knowledge Engine
+                         ↓
+Repository-resident Specification, Observations and metadata
+```
+
+The layers describe responsibility, not an implementation process topology.
+The Knowledge Engine may later be deployed as an embedded library, background
+process or local service. That choice remains open.
+
+## Interaction surfaces
+
+The desktop document is the primary sustained human surface. It composes
+distributed Product Knowledge into one readable and editable Specification.
+
+The CLI supports terminal-oriented humans, agents, scripts and deterministic
+repository validation with both human-readable and stable machine-readable
+results. MCP gives external agents semantic operations over Workbench concepts.
+
+Every surface delegates to the same engine. No surface independently defines
+Product Knowledge rules, authority, validation or repository writes.
+
+## Knowledge Engine
+
+The Knowledge Engine owns:
+
+- Workspace discovery and validation;
+- file monitoring and semantic comparison;
+- parsing, composition and deterministic serialization;
+- Product Artifact identity, relationships and graph interpretation;
+- semantic operations, Semantic Change Sets, Revisions and provenance;
+- Observation intake and disposition links;
+- validation, impact propagation, Specification Readiness and Implementation
+  Alignment;
+- Context Assembly, Context Views and Context Snapshots; and
+- authority enforcement for Inspect, Observe, Propose and Apply operations.
+
+Artifact change impact propagation remains deterministic before optional AI
+assistance. It follows only semantically eligible relationship paths, retains
+causal paths, ignores archived artifacts as active traversal intermediaries and
+does not use `relates_to` as an automatic propagation bridge.
+
+## Repository storage adapter
+
+Repository-resident files are the durable open representation of canonical
+Product Knowledge. The storage adapter reads and writes the declared
+Specification Root, preserves stable identities, produces deterministic diffs
+and protects against unnoticed overwrite.
+
+A normalized Project State remains the semantic aggregate containing document
+composition, Product Artifacts, Artifact Relationships, Revisions, provenance
+and related knowledge. It is interpreted from and persisted to the repository
+representation rather than being confined to an application database.
+
+The Product Knowledge Graph remains a derived interpretation of Product
+Artifacts and Artifact Relationships, not a required separate graph store.
+Indexes, caches or local databases may accelerate the experience but are
+disposable and cannot become competing canonical state.
+
+---
+
+# 2. Workspace And Change Boundaries
+
+A Workspace is a local folder anchored by `.workbench/workspace.*`. The
+Workspace Declaration identifies a supported Specification Root, Observation
+locations and other relevant roots or capabilities. Its exact serialization
+and multi-Specification behavior remain open.
+
+Git is optional for core Workspace operation. When present, it provides
+history, distribution and collaboration evidence. A dedicated Specification
+directory inside the product repository is the default topology. Future
+adapters may support a Git submodule or separate Specification repository
+without changing the semantic model.
+
+The engine monitors declared content for creation, modification, movement and
+deletion. File events are stabilized and compared semantically because editors
+and Git operations may emit several physical events for one logical change.
+Stable Product Knowledge identity, not filename alone, supports rename and move
+interpretation.
+
+A filesystem event proves that content changed, not who changed it. Durable
+attribution must come from a Workbench operation, supplied agent or Observation
+metadata, or later Git history; the engine must not invent an actor from an
+unattributed event.
+
+The engine distinguishes its own writes from External Changes when possible.
+A valid External Change affects stored repository state and is surfaced for
+confirmation and provenance. Invalid syntax, conflicts or ambiguous change
+must remain visible diagnostics; the Workbench must not silently repair,
+discard or overwrite them.
+
+Git branch changes, checkouts, merges and rebases require a fresh semantic
+comparison. Git conflicts remain explicit. The Workbench must not auto-resolve
+an ambiguous semantic conflict.
+
+---
+
+# 3. Authority, Evidence And Trust
+
+Humans retain authority over product intent. The engine distinguishes Inspect,
+Observe, Propose and Apply authority. External agents default to Inspect,
+Observe or Propose; Apply requires explicit, bounded permission.
+
+Workspace content is untrusted data. Opening a repository does not turn its
+text into instructions, authorize execution of its scripts or grant an MCP
+client access beyond declared roots and permissions. Tests, builds and other
+commands require explicit action or a trusted Workspace policy.
+
+Implementation evidence is deterministic, declared or inferred. Deterministic
+facts may affect validation or make an assessment stale. Declared evidence
+retains its origin. AI-inferred discrepancies become Observations and cannot
+change Product Knowledge automatically.
+
+Specification Readiness and Implementation Alignment are derived separately.
+Delivery and release readiness remain outside the product's responsibility.
+Context Snapshots may be exported or shared for implementation and other
+purposes without representing a terminal handoff.
+
+Local review, Git collaboration and optional connected collaboration are
+complementary. A future connected service may add identity, discussion,
+presence, sharing or permissions, but must not silently become canonical
+Product Knowledge storage.
+
+---
+
+# 4. Project State And Historical First-Slice Posture
+
+The Project State model remains a semantic foundation. The persistence and
+online-authority details in subsections 4.2 and 4.3 record the completed
+Project-to-first-Goal slice and do not describe the target architecture.
+
+## 4.1 Canonical Project State
+
+The normalized semantic state should be represented as a structured Project
+State object. Repository files remain its durable canonical representation.
 
 Project State should contain both:
 
@@ -38,7 +177,7 @@ Specification Sections should organize artifact references and section content r
 
 ---
 
-# 2. Architectural Implications
+## 4.2 Historical Architectural Implications
 
 The document-first editing experience should read and write through the structured Project State.
 
@@ -82,7 +221,7 @@ The first slice uses Railway-hosted PostgreSQL as canonical persistence. It is a
 
 ---
 
-# 3. Online-First, Offline-Evolvable Posture
+## 4.3 Historical Online-First, Offline-Evolvable Posture
 
 The selected first implementation slice is online-only. While online, the server-side application boundary remains authoritative for identity, Project ownership, canonical Project State, commands and persistence.
 
@@ -102,7 +241,7 @@ The first slice deliberately does not implement local Project persistence, synch
 
 ---
 
-# 4. First-Slice System Boundaries
+# 5. First-Slice System Boundaries
 
 The selected first slice uses one deployable, online **modular monolith**. The term describes logical responsibilities inside one running application deployment; it does not require microservices or a distributed product runtime. A separate terminating migration job is an operational release control, not a second product application or system boundary.
 
@@ -137,7 +276,7 @@ The selected persistence layout has four schemas: `app` for canonical first-slic
 
 ---
 
-# 5. Application Modules And Dependency Direction
+# 6. Application Modules And Dependency Direction
 
 The modular monolith is organized around capability-oriented Application Modules, not generic technical layers. The Project module owns owner-scoped Project views, explicit commands, retry policy and canonical Project/Specification/Artifact rules. The Fixed Starter module owns immutable selected-starter versions and their materialization. Future Implementation Handoff and Project Archive modules are separate capabilities: Handoff produces one-way downstream representations, while Archive produces and validates portable Project interchange state, remaps identifiers and invokes a Project import use case.
 
@@ -151,7 +290,7 @@ The executable first-slice specification fixes a minimal `src/modules`, `src/ada
 
 ---
 
-# 6. First-Slice Quality And Operational Boundaries
+# 7. First-Slice Quality And Operational Boundaries
 
 The first slice may not rely on a successful happy path alone. `astro check` and the production build provide static and build verification. Vitest provides unit, React-Island component and server-integration tests; React Testing Library and `user-event` test Island interactions in JSDOM. Integration tests use a disposable Testcontainers PostgreSQL instance, run the committed forward migrations and exercise actual `pg` transactions, database authority predicates and Better Auth test-only sessions. The Better Auth test helper exists only in a separate test auth factory and is never a production route or authentication bypass.
 

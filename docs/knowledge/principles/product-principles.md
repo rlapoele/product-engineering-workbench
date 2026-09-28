@@ -26,9 +26,12 @@ The objective is not to think for users, but to help them think better.
 
 # P-002 — Knowledge Before Implementation
 
-High-quality implementation begins with high-quality product knowledge.
+High-quality implementation begins with high-quality Product Knowledge and
+depends on that knowledge remaining understandable as implementation evolves.
 
-The workbench should encourage exploration, clarification and validation before implementation begins.
+The workbench should encourage exploration, clarification and validation before
+implementation begins, then continue to surface relevant learning and possible
+misalignment afterward.
 
 Reducing ambiguity early is generally preferable to correcting misunderstandings later.
 
@@ -36,9 +39,11 @@ Reducing ambiguity early is generally preferable to correcting misunderstandings
 
 # P-003 — Knowledge Before Documents
 
-The workbench manages structured product knowledge rather than collections of documents.
+The workbench manages structured Product Knowledge rather than an unrelated
+collection of documents or files.
 
-Traditional documents are generated representations of the underlying knowledge.
+Repository-resident files are its durable open representation. A coherent
+Specification document is its primary human representation.
 
 Knowledge should remain reusable, interconnected and independent of any particular document format.
 
@@ -81,9 +86,11 @@ The product should adapt to different ways of working.
 
 The Product Engineering Workbench focuses on Product Engineering.
 
-Its responsibility is to help users transform ideas into implementation-ready product knowledge.
+Its responsibility is to help users form, maintain, validate and share Product
+Knowledge and assess its alignment with available implementation evidence.
 
-Software delivery activities remain intentionally outside the primary scope of the workbench.
+Software implementation and delivery management remain intentionally outside
+the responsibility of the workbench.
 
 ---
 
@@ -119,6 +126,9 @@ The workbench should support refinement, revision and learning without losing th
 
 Knowledge should evolve deliberately rather than being repeatedly recreated.
 
+The Workbench should remain useful throughout that evolution. A Specification
+does not become finished merely because implementation has begun.
+
 ---
 
 # P-012 — Integrate Rather Than Replace
@@ -143,6 +153,32 @@ The product should not claim to detect or prevent all external AI use. Instead, 
 
 ---
 
+# P-014 — Repository Content Is Open But Not Automatically Trusted
+
+Product Knowledge should use a portable repository-resident representation and
+remain editable through supported external tools.
+
+Opening a Workspace permits inspection of declared content. It does not make
+repository text trusted instruction, authorize command execution or grant an
+external agent permission to change canonical Product Knowledge.
+
+External changes should be detected, validated and made understandable without
+being silently overwritten.
+
+---
+
+# P-015 — Implementation Is Evidence, Not Intent
+
+Code, tests, commits and runtime behavior may provide important evidence about
+the product and its alignment with the Specification.
+
+They must not silently redefine human-owned product intent. Deterministic facts
+may affect validation, while interpretations and inferred discrepancies remain
+reviewable Observations until humans decide whether Product Knowledge should
+change.
+
+---
+
 # Summary
 
 The Product Engineering Workbench exists to help individuals and teams produce better products by improving the quality of their product knowledge.
@@ -158,3 +194,5 @@ Every significant product decision should reinforce one or more of the following
 - Prefer clarity over complexity.
 - Focus on Product Engineering.
 - Make AI assistance visible and governable.
+- Keep repository content open, explicitly bounded and untrusted by default.
+- Treat implementation as evidence rather than product authority.

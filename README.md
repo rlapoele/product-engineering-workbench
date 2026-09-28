@@ -2,9 +2,14 @@
 
 > **Help me think.**
 
-The Product Engineering Workbench is an exploratory project whose goal is to help individuals and teams transform ideas into implementation-ready product specifications.
+The Product Engineering Workbench is an exploratory desktop-first repository
+companion whose goal is to help individuals and teams create and continuously
+maintain high-quality, human-owned product specifications.
 
-Rather than focusing primarily on AI-assisted generation, the workbench aims to improve the quality of product engineering by helping users think, structure, validate and evolve product knowledge.
+Rather than focusing primarily on AI-assisted generation, the workbench aims to
+improve the quality of product engineering by helping users think, structure,
+validate and evolve Product Knowledge alongside the software and evidence that
+inform it.
 
 Artificial intelligence is an important capability of the workbench, but it is not its foundation. The product is designed to remain valuable even when AI is unavailable.
 
@@ -12,7 +17,9 @@ Artificial intelligence is an important capability of the workbench, but it is n
 
 ## Vision
 
-The Product Engineering Workbench seeks to become a collaborative environment where humans and AI contributors work together to produce high-quality, implementation-ready specifications.
+The Product Engineering Workbench seeks to become the repository companion
+through which humans and AI contributors inspect, evolve and share living
+Product Knowledge while humans retain authority over product intent.
 
 The guiding philosophy is simple:
 
@@ -105,9 +112,22 @@ Use `docker compose -f compose.local.yml down` to stop the stack. Add `--volumes
 
 This repository remains in **knowledge discovery and specification**, alongside a deliberately bounded working implementation.
 
-The authenticated Project-to-first-Goal technical slice is complete: it provides an Astro SSR application with bounded React Islands, Better Auth Google and GitHub OAuth, PostgreSQL persistence and local Docker support. Its automated correctness and accessibility evidence is in the repository. Railway migration/release gating, staging OAuth verification, restoration exercises and manual VoiceOver/Safari validation remain later MVP release-readiness work.
+The repository-companion direction is now accepted. The target product is a
+desktop-first experience over repository-resident Product Knowledge, supported
+by one shared knowledge engine and accessible through desktop, CLI and MCP
+surfaces. Detailed storage, runtime and migration choices remain open.
 
-Further implementation begins only after the relevant product knowledge and interaction model have been explored, validated and specified. The completed slice is a constrained reference implementation, not authorization to broaden product scope.
+The authenticated Project-to-first-Goal technical slice is complete: it
+provides an Astro SSR application with bounded React Islands, Better Auth
+Google and GitHub OAuth, PostgreSQL persistence and local Docker support. It is
+preserved as a bounded reference implementation and source of evidence, not as
+the presumed target architecture.
+
+Further implementation and visual-prototype work begins only after the
+repository representation, knowledge-engine boundary and repository-companion
+journey have been explored, validated and specified. The completed slice is a
+constrained reference implementation, not authorization to broaden product
+scope.
 
 ---
 

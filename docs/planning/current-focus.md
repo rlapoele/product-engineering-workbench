@@ -2,29 +2,36 @@
 
 **Status:** Active
 
-**Last Updated:** 2026-08-24
+**Last Updated:** 2026-09-28
 
 ---
 
 # Current Objective
 
-Maintain the coherence of the crystallized Product Knowledge foundation while following the adaptive roadmap of bounded discovery, validation and implementation-planning topics.
+Crystallize and validate the accepted Repository Companion direction before
+selecting another implementation or visual-prototype increment.
 
-The authorized authenticated Project-to-first-Goal technical slice is complete. `UX-006` now explores greenfield and brownfield Project-start journeys as initial context for one continuously evolving Product Knowledge workspace; no additional implementation scope is implied.
+The immediate work is to define the repository representation, Workspace
+contract, Knowledge Engine boundary, Observation and External Change behavior,
+semantic authority and one bounded repository-companion validation journey.
+No additional implementation scope is authorized.
 
 ---
 
 # Current Milestone
 
-**Knowledge Foundation Closure and Next Increment Selection**
+**Repository Companion Foundation and Contract Definition**
 
-The repository is being established as the project's long-term memory.
+ADR-028 establishes the target product as a desktop-first Repository Companion
+with repository-resident Product Knowledge, a shared Knowledge Engine and
+desktop, CLI and MCP surfaces. Humans retain authority over intent;
+implementation evidence may inform Observations and alignment assessments but
+does not become product truth automatically.
 
-Initial foundation work has defined the product vision, core principles, repository organization, product scope, Project Model and the bounded document-first UX/UI and handoff model.
-
-All previously tracked product, UX, AI, collaboration and architecture questions reached stable decisions. Current work preserves that coherence while exploring the newly identified Project-start journey and following an explicitly ordered but adaptable roadmap. Listed deferrals are not active work merely because they are recorded.
-
-Recent clarification established the first target user as an AI-assisted developer and strengthened the MVP direction around a document-first, template-driven specification experience.
+The current web prototype and its first-slice decisions remain preserved as
+bounded historical evidence. They no longer determine the target architecture.
+The previous visual-prototype programme is paused until the new foundational
+contracts identify the correct journeys and surfaces.
 
 ---
 
@@ -38,7 +45,9 @@ Recent clarification established the first target user as an AI-assisted develop
 - Product Artifact has been established as canonical terminology.
 - Initial concepts for relationships, workflow templates, contributors, decisions, reviews, revisions, provenance, context and readiness have been documented.
 - Open questions from the Project Model have been moved into the planning register.
-- Every currently tracked question in the planning register has reached a stable decision; explicit deferrals remain available future boundaries rather than active work.
+- At the prior foundation closure, every then-tracked question in the planning
+  register had reached a stable decision; ADR-028 has since opened a new set of
+  repository-companion contract questions.
 - The first target user has been clarified as an AI-assisted developer.
 - Specification Document Template has been introduced as the user-facing term for project-start templates.
 - The MVP has been clarified to start with one `Implementation-Ready Web App Specification` template backed by a reusable Section Catalog and multiple Project Presets.
@@ -47,7 +56,9 @@ Recent clarification established the first target user as an AI-assisted develop
 - The MVP minimum Product Artifact set and common artifact fields have been accepted.
 - The initial artifact relationship types and artifact lifecycle states have been accepted.
 - The MVP default Handoff Profile has been clarified as `Implementation Handoff`, a human-readable and AI-useful export profile.
-- The MVP direction has been clarified as document-first, template-driven and implementation-handoff oriented.
+- The prior MVP direction was clarified as document-first, template-driven and
+  implementation-handoff oriented; ADR-028 retains its document-first evidence
+  while superseding terminal handoff as the product endpoint.
 - Capability-based collaboration with human and AI contributors has been clarified as a core product concept.
 - Contributor availability has been clarified for the MVP: human collaborators are invitation-gated, while AI assistance is personally enabled through each human user's valid Bring Your Own AI credentials and is not shared with other collaborators.
 - The initial MVP Assistance Request Type set has been clarified as a compact user-facing set, including Request Feedback and Review as distinct interaction intents.
@@ -276,13 +287,13 @@ The roadmap supplies the expected discussion order; it is not a delivery schedul
 
 | Order | Topic | Status | Purpose and boundary |
 |---:|---|---|---|
-| 1 | Greenfield and brownfield Project-start journeys | **Creation and initial intake flows crystallized; mockup validation exploring** | The owner selects a starting context before basic setup, then explicitly selects template, preset and sections. Greenfield optional Project-start Notes recommend a preset/sections and can become owner-invoked unsaved drafts after creation; Brownfield creates Sources only after its Project exists. Both paths preserve ordinary authoring and continuous evolution. |
-| 2 | Workbench UX/UI foundation and prototype direction | Visual direction crystallized; prototype validation candidate | The Workbench's project-wide visual direction is recorded in `docs/knowledge/ux/visual-direction.md`. Validate it and the established interaction direction through decision-oriented HTML, CSS and TypeScript mockups. This is distinct from a user's Design System Definition and is not production implementation. |
-| 3 | Document editing and impact-feedback validation | Candidate | Validate inline edits, explicit revisions, Stale outcomes and non-modal impact cues against the established document-first model. |
-| 4 | Bring Your Own AI (BYO-AI) setup and operational UX | Candidate | Build on the settled personal-credential boundary to define setup, provider/model support, validation, privacy, failure and cost/usage-visible behavior before AI assistance is implemented. |
-| 5 | Resource Reference interaction validation | Candidate | Validate attaching, previewing, replacing and accessing supporting resources, including visual references. |
-| 6 | Handoff/readiness and AI context-assembly edge cases | Candidate | Exercise remaining concrete handoff, readiness, export and grounded-AI context scenarios without broadening the established models. |
-| 7 | Project Archive format and import experience | Candidate, later | Specify the portable archive container, format evolution and import experience after broader artifact persistence and Resource handling are ready. It remains distinct from one-way Implementation Handoff. |
+| 1 | Workspace and Specification storage contract | **Active knowledge definition** | Define discovery, `.workbench/workspace.*`, Specification Root invariants, stable identity, deterministic serialization and folder/Git boundaries without yet selecting JSON or YAML. |
+| 2 | Knowledge Engine and External Change contract | Next | Define the logical engine API, file monitoring, semantic comparison, conflict handling and coordination across desktop, CLI and MCP without choosing a runtime topology prematurely. |
+| 3 | Observation and Semantic Change Set contract | Next | Specify minimum durable fields, dispositions, provenance, review and atomic application while preserving human authority. |
+| 4 | Readiness, alignment and Context Snapshot model | Candidate | Replace remaining terminal-handoff assumptions with purpose-specific assessments, immutable snapshots and Export or Share behavior. |
+| 5 | Repository Companion validation journey | Candidate | Validate opening or initializing a Workspace, composing the Specification, detecting an External Change and reviewing an Observation or proposed change. |
+| 6 | Desktop, CLI and MCP product boundaries | Candidate | Define surface-specific interaction needs over one semantic engine, including permissions and safe machine-readable behavior. |
+| 7 | Connected collaboration and migration | Candidate, later | Reassess optional services, Project Archive needs and any transition from the completed web slice only after local repository behavior is coherent. |
 
 ## Additional validation candidates
 
@@ -291,10 +302,12 @@ No candidate below is active merely because it is listed. They remain available 
 - Validate the first-pass document editing and impact-feedback flow through prototypes and concrete specification exercises.
 - Validate accessibility, keyboard behavior and visual density of the Resource Reference attach, preview and replacement controls through a low-fidelity prototype.
 - Validate deterministic next-step guidance through prototypes and concrete specification exercises.
-- Validate additional readiness-aware handoff edge cases through concrete specification exercises.
+- Validate additional Specification Readiness, Implementation Alignment and
+  Context Snapshot edge cases through concrete specification exercises.
 - Validate detailed context assembly rules for remaining generation and feedback examples.
 - Validate the first Section Catalog, Project Preset classification and Product Engineering Stage attribution through concrete specification exercises.
-- Validate remaining export-format details and package-generation constraints beyond the resolved README, readiness, report and AI-disclosure representations.
+- Reassess useful historical export-package details when defining future
+  Context Snapshot export profiles.
 - The Project Collaboration Requests list defaults have been clarified: no lifecycle or response-handling filter; **Last updated — newest first** based on meaningful events visible to the viewer; a compact filter and sort set; compact request-oriented rows; parent-contained response handling; and an explicit Previous response label after Reopen.
 - Owner, collaborator, AI On Hold and reopened-request scenarios validate the Collaboration Requests list: the collaborator keeps a frozen read-only prior view after Reopen, viewer-visible events determine list ordering, and restored AI eligibility does not reorder an On Hold request before explicit Resume.
 - The complete role-aware list journey is validated: search, filters, sorting, 25-item pagination and retained response history preserve role visibility and current-cycle boundaries.
@@ -309,10 +322,16 @@ No candidate below is active merely because it is listed. They remain available 
 
 # Current Priorities
 
-1. Keep terminology and decisions coherent across glossary, knowledge, planning and sessions.
-2. Define the greenfield and brownfield entry flows, including their paired Workbench UX/UI prototype direction, from a concrete product need.
-3. Use the established Project Model and completed first slice as evidence and constraints for every roadmap topic.
-4. Reassess roadmap order at each topic closure and crystallize resulting knowledge before authorizing a later implementation increment.
+1. Define the Workspace and Specification storage contract without prematurely
+   choosing a serialization format.
+2. Preserve one semantic model and authority boundary across desktop, CLI and
+   MCP.
+3. Specify External Change, Observation and Semantic Change Set behavior before
+   prototyping repository mutation.
+4. Preserve the completed first slice as evidence without treating it as the
+   target architecture.
+5. Select a bounded repository-companion validation journey only after the
+   foundational contracts are coherent.
 
 ---
 
@@ -367,13 +386,20 @@ The completed foundation milestone was considered complete when:
 
 # Planning Register Status
 
-`UX-006` has crystallized Project-creation and initial-intake flows; it is actively exploring the decision-oriented UX/UI mockups that validate them. All earlier planning-register entries are resolved. A deferred detail does not itself reopen a question or select an increment.
+The prior register remains the historical record of its resolved model.
+`ARCH-002` through `ARCH-005`, `DATA-008`, `UX-007` and `AI-002` now track the
+open contracts introduced by ADR-028. A deferred detail does not itself select
+an implementation increment.
 
 ---
 
 # Next Increment Selection
 
-The active knowledge increment is `UX-006`: validate the crystallized greenfield and brownfield Project-start flows through decision-oriented Workbench UX/UI prototype direction. Before beginning any later roadmap topic, record the concrete product need, intended outcome, affected established boundaries and why existing knowledge is insufficient. No roadmap entry by itself authorizes implementation.
+The active knowledge increment is the Workspace and Specification storage
+contract. Before beginning prototype or implementation work, record the
+concrete product need, intended outcome, affected boundaries and why the
+selected validation is sufficient. No roadmap entry by itself authorizes
+implementation.
 
 ---
 

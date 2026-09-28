@@ -4,7 +4,7 @@
 
 **Date:** 2026-09-28
 
-**Status:** Active exploration
+**Status:** Crystallized
 
 ## Purpose and Boundary
 
@@ -13,15 +13,23 @@ Engineering Workbench from a primarily online specification-authoring and
 implementation-handoff application into a possible desktop-first repository
 companion for continuously evolving Product Knowledge.
 
-It also records a preliminary decision-impact inventory. The inventory
-identifies established knowledge that may be preserved, extended, reopened or
-superseded if the direction is later accepted. It does not itself change the
-status of an ADR, replace stable Product Knowledge, select a storage format,
-authorize a migration or authorize additional implementation.
+It also records the preliminary decision-impact inventory used during
+crystallization. At the time of recording, the inventory did not itself change
+the status of an ADR, replace stable Product Knowledge, select a storage
+format, authorize a migration or authorize additional implementation.
 
 Prototype and visual-direction work is paused while this product direction is
 examined. The existing prototype evidence remains valid for the questions it
 tested, but no further prototype increment is selected by this session.
+
+The subsequent discussion accepted the product identity, responsibility-based
+scope, Workspace and `.workbench/workspace.*` convention, repository-resident
+durable representation, Observation and Semantic Change Set boundaries,
+continuous readiness and alignment distinction, Context Snapshot export/share
+model, shared Knowledge Engine architecture, implementation-evidence boundary,
+and layered collaboration model. ADR-028 and the related stable-knowledge
+updates crystallize those decisions. File formats, engine deployment, desktop
+technology and migration remain open.
 
 ## Context
 
@@ -419,7 +427,15 @@ After review and correction of this session:
 8. select a new bounded validation or prototype journey after the foundation
    is coherent.
 
-## Documents Updated
+## Documents Updated During Initial Capture
 
 - `docs/sessions/2026/2026-09-28-01-repository-companion-direction-and-decision-impact-inventory.md`
 - `docs/sessions/index.md`
+
+## Crystallization Outputs
+
+The later accepted discussion produced ADR-028 and coordinated updates to the
+project vision, goals, principles, glossary, Project Model, system architecture,
+AI orchestration, document-first UX direction and planning register. Earlier
+ADRs remain visible with their superseded, reopened or historical scope
+recorded explicitly.

@@ -4,15 +4,27 @@ This document describes the emerging document-first user experience for the Prod
 
 The objective is to explain how users should experience specification work, regardless of how product knowledge is represented internally.
 
+ADR-028 changes the target application from an online Project-creation flow to
+a desktop-first Repository Companion. Detailed first-slice creation,
+collaboration and handoff passages remain historical evidence until their
+journeys are reassessed against the current direction. Sections 1, 5 and 8
+contain the governing document-experience direction.
+
 ---
 
 # 1. Purpose
 
-The Product Engineering Workbench should allow users to create, refine and export implementation-ready product specifications.
+The Product Engineering Workbench should allow users to open a local
+Workspace, read and refine its living Specification, understand relevant
+changes and create or share purpose-specific Context Snapshots.
 
-The primary experience should feel familiar to users who are accustomed to working with product documents, while preserving structured product knowledge behind the scenes.
+The primary desktop experience should feel familiar to users who are
+accustomed to working with product documents, while preserving structured,
+repository-resident Product Knowledge behind the scenes.
 
-Users should feel that they are working on one coherent specification document, not manually maintaining a disconnected collection of records.
+Users should feel that they are working on one coherent Specification document,
+not manually maintaining a disconnected collection of repository files or
+records.
 
 ---
 
@@ -330,17 +342,35 @@ The document view should support:
 - requesting review or assistance on a section, artifact or full specification;
 - tracking artifact status and review state;
 - preserving relationships, provenance and context;
-- exporting the specification as an implementation handoff package.
+- creating purpose-specific Context Views and exporting or sharing immutable
+  Context Snapshots.
 
-## Initial Document Interaction And Editing Flow
+## Initial Workspace And Document Interaction
 
-After project creation, the user should see the selected Specification Document Template as a prepared document: all selected section titles appear in document order, with concise template guidance or placeholders explaining each section's purpose. No substantive canonical content or Product Artifacts exist yet. This should feel like opening a document template and filling it in, not discovering a blank application canvas.
+The user opens a local folder. The Workbench looks for a valid
+`.workbench/workspace.*` declaration and validates its declared boundaries
+before composing Product Knowledge. If no declaration exists, the Workbench may
+inspect for candidate structures but must ask the human whether to associate or
+initialize the Workspace. It never silently classifies arbitrary repository
+files as Product Knowledge.
 
-A Greenfield start opens the prepared document with a small, dismissible **Begin with what you know** panel. It offers non-sequential shortcuts to describe the problem or opportunity, define a goal or success criterion, identify target users, or capture an Open Question. A matching Project-start Note is available from its one suggested shortcut as editable, unsaved first-draft material only when the owner explicitly chooses **Use as draft**; ordinary save makes that material canonical. The panel is never a progress tracker or workflow gate, can be dismissed, and remains available later through a lightweight **Getting started** action. Empty-section guidance continues to provide orientation after dismissal.
+Once loaded, the user sees the Specification as one coherent document. Its
+outline, section ordering, relationships and contextual actions are composed
+from the repository-resident representation. Ordinary reading and editing do
+not require the user to understand its file layout, although traceability and
+file diffs remain available when useful.
 
-A Brownfield start offers **Establish context** after the Project is saved, so the owner can deliberately add existing product evidence, documentation, codebase context or other Sources as supporting Resource material before or alongside ordinary authoring. It does not silently extract canonical facts, synchronize a codebase or replace Project Archive import. In either context, the Project remains an evolving product-knowledge workspace: its owner may later add or revise Features, Requirements, UX/UI knowledge and other artifacts, assess explicit impact, validate a relevant scope and prepare a later handoff without restarting the Project or entering a delivery-management workflow.
+A new Specification may still use a template, preset and optional starting
+notes. An existing Specification is loaded through the same document surface.
+Greenfield and Brownfield describe available starting evidence, not permanent
+Project types or separate long-term workflows.
 
-The interface distinguishes **Sources** from canonical Product Knowledge. A Source is non-canonical evidence such as an observation, stakeholder input, document, source-code context, screenshot, prototype, repository or analytics. After the Project is saved, the Brownfield **Establish context** step offers three initial source actions: **Add Source Note**, **Upload file** and **Add external link**. **Add Source Note** asks only for a required concise Title and Evidence text. Every new Source may also expose an optional **Externally AI-assisted source** control, off by default, for the owner to declare that external AI materially helped create or summarize it. The control creates known source provenance and the corresponding voluntary external-AI declaration, not a provider, model, prompt or cost record; it does not assert correctness, verification, authorship or ownership. Every initial Source attaches at Specification scope; the owner may instead choose **Start authoring** at any time. Later Source actions use the same model at Specification, Section or Product-Artifact scope. A repository is linked or supplied as file context, never cloned or synchronized.
+The interface distinguishes Sources, Observations and canonical Product
+Knowledge. A Source supplies evidence. An Observation states that Product
+Knowledge may require attention. Neither changes the Specification by being
+added or detected. External file changes are presented as semantic differences
+with their validation and confirmation state, not as unexplained document
+replacement.
 
 **Capture into…** is the explicit owner action on one reviewed Source. Its local destination list offers a new Product Artifact, section-owned Product Knowledge, Decision, Open Question or existing knowledge to update. The selected ordinary draft keeps the Source visible as read-only context; it neither pre-fills nor saves canonical content. Explicit save creates the record or Revision and its visible source-provenance link, retaining the external-AI indication when selected, while discard leaves the Source unchanged. An owner may obtain an external AI-assisted codebase summary outside the Workbench and add it as a Source with that optional indication. It is still evidence to reinterpret and reconfirm rather than a reverse-engineered specification. No source, external content or AI interpretation silently creates specification content.
 
@@ -975,7 +1005,13 @@ The workbench should not claim to prevent all external AI use by human collabora
 
 ---
 
-# 7. Export Experience
+# 7. Historical Implementation Handoff Export Experience
+
+ADR-028 replaces the terminal handoff model with Context Views, immutable
+Context Snapshots and Export or Share actions. The detailed package design in
+this section is retained as historical product knowledge and candidate input to
+future implementation-oriented export profiles. It is not the current product
+endpoint.
 
 The MVP should allow users to export a completed or partially completed specification.
 
@@ -1227,13 +1263,24 @@ Future Handoff Profiles may control:
 
 # 8. Current UX Direction
 
-The MVP should be document-first, template-driven and implementation-handoff oriented.
+The Workbench should be desktop-first, repository-companion and document-first.
+Repository-resident files are the durable Product Knowledge representation;
+the coherent Specification document is the primary human representation.
 
 The Workbench's project-wide visual direction is defined in
 [Workbench Visual Direction](visual-direction.md). It establishes the
 application shell, theme character and visual hierarchy without changing this
 document's interaction, information-model or implementation boundaries.
 
-Users should create projects from Specification Document Templates, work in a coherent specification document, optionally request assistance from capable human or AI contributors and export the result as an implementation-ready package.
+Users should open or initialize a declared Workspace, work in a coherent
+Specification document, understand External Changes and Observations, request
+assistance from capable human or AI contributors and create purpose-specific
+Context Snapshots that may be exported or shared.
 
-The canonical product knowledge does not need to be a literal document internally. It only needs to support a document-like experience that users can understand and trust.
+Canonical Product Knowledge does not need to be stored as one literal document.
+The Knowledge Engine composes its repository-resident representation into a
+document experience that users can understand and trust.
+
+The existing visual direction and web prototype remain useful bounded evidence.
+Further prototype work is paused until the repository-companion journeys and
+engine contracts are sufficiently specified.

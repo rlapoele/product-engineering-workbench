@@ -20,15 +20,15 @@ When in doubt, prefer updating an existing document rather than creating a new o
 
 | ADR | Title | Status | Date |
 |---|---|---|---|
-| ADR-001 | Product Scope | Accepted | 2026-07-15 |
+| ADR-001 | Product Scope | Superseded by ADR-028 | 2026-07-15 |
 | ADR-002 | Document-First Template Model | Accepted | 2026-07-17 |
 | ADR-003 | Asynchronous Transactional Collaboration | Accepted | 2026-07-17 |
-| ADR-004 | Implementation Handoff Package | Accepted | 2026-07-17 |
+| ADR-004 | Implementation Handoff Package | Superseded by ADR-028 | 2026-07-17 |
 | ADR-005 | Product Knowledge Model | Accepted | 2026-07-15 |
 | ADR-006 | MVP Product Artifact Model | Accepted | 2026-07-18 |
 | ADR-007 | Canonical Project State | Accepted | 2026-07-18 |
 | ADR-008 | AI Assistance Visibility And Governance | Accepted | 2026-07-20 |
-| ADR-009 | Online-First, Offline-Evolvable Posture | Accepted | 2026-08-01 |
+| ADR-009 | Online-First, Offline-Evolvable Posture | Superseded by ADR-028 for target product | 2026-08-01 |
 | ADR-010 | First-Slice System Boundaries | Accepted | 2026-08-01 |
 | ADR-011 | First-Slice Data And Lifecycle Contracts | Accepted | 2026-08-01 |
 | ADR-012 | First-Slice UX Prototype Validation | Accepted | 2026-08-01 |
@@ -43,7 +43,8 @@ When in doubt, prefer updating an existing document rather than creating a new o
 | ADR-021 | First-Slice Project Command Transport And CSRF Posture | Accepted | 2026-08-04 |
 | ADR-022 | First-Slice Verification Stack And Evidence Plan | Accepted | 2026-08-05 |
 | ADR-023 | First-Slice PostgreSQL Schema And Persistence Invariants | Accepted | 2026-08-05 |
-| ADR-024 | Project Archive And Import Contract | Accepted | 2026-08-06 |
+| ADR-024 | Project Archive And Import Contract | Reopened by ADR-028 | 2026-08-06 |
 | ADR-025 | Modular Monolith Application Modules And Dependency Boundaries | Accepted | 2026-08-06 |
 | ADR-026 | First-Slice Executable Specification Boundary | Accepted | 2026-08-06 |
 | ADR-027 | First-Slice Implementation Authorization And Dependency Verification | Accepted | 2026-08-06 |
+| ADR-028 | Repository Companion And Living Specification | Accepted | 2026-09-28 |

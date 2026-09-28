@@ -313,6 +313,30 @@ Context Explanations help users understand and trust human or AI contributions.
 
 ---
 
+## Context Snapshot
+
+An immutable, purpose-specific capture of a Context View at a named Product
+Knowledge Revision and evidence boundary.
+
+A Context Snapshot records its scope, purpose, included knowledge, relevant
+relationships, Decisions, constraints, unresolved questions, assessment state,
+provenance and format version. It may be exported or shared with a human, agent
+or external tool. Creating one does not end Product Engineering or change
+canonical Product Knowledge.
+
+---
+
+## Context View
+
+A live, purpose-specific projection assembled from current Product Knowledge
+and explicitly relevant evidence.
+
+A Context View may support reading, review, AI assistance, implementation,
+alignment assessment or another bounded purpose. It becomes durable only when
+captured as a Context Snapshot.
+
+---
+
 ## Context Relevance
 
 Context Relevance describes whether a candidate context item should be included for a specific request. It is a request-specific inclusion judgment, not a relevance score, document-proximity rule or instruction to include every related item.
@@ -539,6 +563,19 @@ It is not a task list, workflow gate, Product Artifact or AI request. The initia
 
 # E
 
+## External Change
+
+A semantic change detected after declared Workspace files are created,
+modified, moved or deleted outside the Workbench operation that last loaded or
+wrote them.
+
+A valid External Change affects the repository's stored state and remains
+visible for human confirmation and provenance. An invalid or conflicting
+External Change produces diagnostics and must not be silently repaired or
+overwritten.
+
+---
+
 ## Executable Specification
 
 An Executable Specification is an implementation-facing knowledge document that fixes the smallest source layout, public contracts, configuration boundary, dependency-review rules and implementation sequence needed to build an accepted product slice.
@@ -562,6 +599,17 @@ Explicit Context represents project-specific knowledge links that contributors h
 ---
 
 # F
+
+## Finding
+
+An Observation produced by a structured Review, validation or deterministic
+check.
+
+A Finding describes a bounded gap, inconsistency, ambiguity, risk, blocker,
+dependency, recommendation or readiness warning. Like every Observation, it is
+non-canonical and does not change Product Knowledge automatically.
+
+---
 
 ## Finding Type
 
@@ -631,9 +679,26 @@ For the first slice, the application resolves the current Interface Locale at en
 
 Product knowledge that provides sufficient clarity, completeness and consistency for implementation by either humans or AI implementation agents.
 
+## Implementation Alignment
+
+A derived assessment of whether available implementation evidence agrees with
+a named Product Knowledge scope and Revision.
+
+An assessment is anchored to its evidence snapshot and may be `Aligned within
+assessed evidence`, `Partially aligned`, `Diverged` or `Unknown or not
+assessed`. Alignment never proves implementation correctness and never makes
+implementation behavior authoritative over product intent.
+
 ## Implementation Handoff Package
 
-An Implementation Handoff Package is an exported representation of product knowledge intended to be consumed by humans, AI-assisted developers, AI implementation environments or delivery tools.
+An Implementation Handoff Package is the historical name for an
+implementation-oriented export of a Context Snapshot intended for humans,
+AI-assisted developers, AI implementation environments or delivery tools.
+
+ADR-028 supersedes it as the product's central endpoint. Future product
+language should prefer Context View, Context Snapshot, Export and Share. An
+implementation package may remain as one export profile or compatibility
+format without implying that Product Engineering has ended.
 
 It may contain structured files, document sections, implementation guidance, acceptance criteria, risks, open questions and other context required to implement the specified product.
 
@@ -723,6 +788,19 @@ Inferred Context may help identify useful context, but it should not be treated 
 
 # K
 
+## Knowledge Engine
+
+The shared semantic core used by the Workbench's desktop, CLI, MCP and future
+integration surfaces.
+
+The Knowledge Engine discovers and monitors declared Workspace content;
+parses, composes and validates Product Knowledge; applies semantic operations;
+tracks identity, Revisions and provenance; calculates impact, Specification
+Readiness and Implementation Alignment; and persists deterministic repository
+changes. No interaction surface should independently redefine these rules.
+
+---
+
 ## Knowledge
 
 Stable information describing the product.
@@ -791,6 +869,23 @@ Non-Goals are section-owned list items, not Product Artifacts. They are rendered
 ---
 
 # O
+
+## Observation
+
+A traceable, non-canonical claim that Product Knowledge may require attention.
+
+An Observation may be created by a human, agent, tool or structured review and
+may cite Sources or implementation evidence. Human review may use it to inform
+one or more Semantic Change Sets, Open Questions or Decisions, retain it as
+reference, dismiss it with rationale or confirm that existing Product
+Knowledge remains valid. Creating an Observation never changes the
+Specification.
+
+A Finding is a specialized Observation produced by a structured review or
+validation. A Source supplies evidence; an Observation states what that
+evidence may mean for Product Knowledge.
+
+---
 
 ## Operation ID
 
@@ -896,7 +991,11 @@ When a Workflow Template uses stages, each Section Catalog entry has one primary
 
 The complete body of knowledge describing a product.
 
-Product knowledge is composed of interconnected Product Artifacts.
+Product Knowledge is composed of interconnected Product Artifacts, document
+composition, relationships, Decisions, Revisions, provenance and other
+canonical specification knowledge. In a declared Workspace, repository files
+are its durable representation and Project State is its normalized semantic
+interpretation.
 
 ---
 
@@ -915,6 +1014,11 @@ A Project Archive is a versioned, machine-oriented portable package containing o
 A Project Archive is distinct from an Implementation Handoff Package. A handoff is a potentially partial representation for implementation consumers and is never an import source. An archive carries structured canonical Project knowledge, its transferable history and managed Resource files, but not Conversations, Conversation Outcome Links, authentication or session data, credentials, live collaborator authority, personal drafts or preferences, operational records, or deployment configuration.
 
 Import always creates a new locally owned Project after validation. It does not overwrite or merge with an existing Project, restore live collaborators, or treat source identifiers as destination identifiers. The importing authenticated user becomes the Project Owner; source identities may remain only as historical attribution without access or authority. Managed Resources are copied into the archive; external Resources remain external links and metadata.
+
+ADR-028 reopens the archive's future role because repository-resident canonical
+Product Knowledge may already provide portability, branching and recovery. An
+archive may remain useful for packaging, migration or non-repository Resources,
+but the earlier contract is not currently authorized for implementation.
 
 ---
 
@@ -936,9 +1040,17 @@ After the Project is created, the owner may explicitly use a Project-start Note 
 
 ## Project Starting Context
 
-Project Starting Context describes the evidence available when a new Workbench Project begins. The owner selects it first during Project creation. It is either **Greenfield**, where the Project begins with no prior product evidence, or **Brownfield**, where its owner deliberately brings existing product evidence, documentation, codebase context or other sources into the Workbench.
+Project Starting Context describes the evidence and Product Knowledge available
+when a Workspace is first initialized or associated with the Workbench. It is
+either **Greenfield**, where no prior product or implementation evidence is
+available, or **Brownfield**, where an existing product, implementation,
+Specification or other evidence already exists.
 
-Starting Context is not a permanent Project type, lifecycle state, delivery workflow or import mechanism. A Workbench Project may be new even when it concerns an existing product or feature. Brownfield Sources are created only after the Project exists and remain Resources, Resource References or provenance until the owner explicitly saves reviewed Product Knowledge; they do not silently create requirements, synchronize code or replace Project Archive import.
+Starting Context is not a permanent Project type, lifecycle state, delivery
+workflow or import mechanism. The Workbench recognizes only a declared or
+human-confirmed Specification boundary. Brownfield implementation content and
+external evidence do not silently create Product Knowledge; they may supply
+Sources, Observations and alignment evidence.
 
 ---
 
@@ -989,6 +1101,19 @@ An optional Response Source Link on a Revision may provide supporting known prov
 ---
 
 # R
+
+## Repository Companion
+
+A product that works with a local Workspace and its repositories while keeping
+its own semantic responsibility distinct from source-code management and
+software delivery.
+
+The Product Engineering Workbench is a desktop-first Repository Companion. It
+composes repository-resident Product Knowledge into a coherent document,
+monitors relevant changes and exposes common semantic operations through its
+desktop, CLI and MCP surfaces.
+
+---
 
 ## Repository Engineering Process
 
@@ -1057,13 +1182,22 @@ Requirement Groups are not Product Artifacts, technical modules or relationship 
 
 ## Readiness
 
-The degree to which a Product Artifact, feature, project area or export is mature enough to support implementation or downstream use.
+The degree to which a named Product Knowledge scope is sufficiently coherent
+and precise for a stated purpose.
+
+Every deterministic Specification Readiness assessment is anchored to a scope,
+purpose, Product Knowledge Revision and evidence snapshot. It is not a
+permanent Project state and may become stale when relevant knowledge or
+evidence changes. Its outcomes are `Ready`, `Ready with caveats`, `Not ready`
+and `Not assessed`.
 
 Readiness may depend on required Product Artifacts, required relationships, resolved open questions, identified risks, testable acceptance criteria, completed reviews and stale knowledge being updated.
 
 `Validate Readiness` is a scoped Assistance Request Type that returns a non-canonical contributor assessment of the selected Product Knowledge. It may assess an active Product Artifact, an eligible Specification Section or the whole Specification, and must identify its local purpose, evidence, context limits, gaps, risks, dependencies and suggested follow-up. It does not certify implementation, delivery workflow or a handoff, and cannot change Product Knowledge automatically.
 
-For deterministic Implementation Handoff Readiness, a selected handoff scope is `Ready`, `Ready with Caveats` or `Not Ready` according to explicit Project State. It runs only through `Prepare Handoff` for the Handoff Profile's eligible scope and direct external dependencies. This outcome is distinct from both a contributor's Readiness Result and the `Prepared` or `Prepared with Caveats` result of a handoff package.
+Readiness is distinct from Implementation Alignment and from delivery or
+release readiness. Delivery and release readiness remain outside the
+Workbench's scope.
 
 ---
 
@@ -1125,7 +1259,15 @@ For an included handoff scope, a managed uploaded Resource is copied into the pa
 
 ## Source
 
-A Source is non-canonical evidence used to understand, challenge or refine Product Knowledge. It may represent an observation, stakeholder input, documentation, source-code context, screenshot, prototype, repository, analytics or another external input, including an externally AI-assisted summary of an existing codebase.
+A Source is non-canonical evidence used to understand, challenge or refine
+Product Knowledge. It may represent stakeholder input, documentation,
+source-code context, a screenshot, prototype, repository, analytics or another
+external input, including an externally AI-assisted summary of an existing
+codebase.
+
+A Source supplies evidence. An Observation is a traceable claim about what
+evidence or experience may mean for Product Knowledge. Either may reference
+the other without becoming canonical.
 
 A Source is not itself a Goal, Feature, Requirement or other Product Artifact, and it does not change the specification by being added or interpreted. Brownfield intake initially accepts an owner-authored Source Note, a managed uploaded file or an external link. Files and links use the existing Resource and Resource Reference model; every initial Brownfield Source attaches at Specification level after the Project exists, while later Sources may use the same model at Specification, Section or Product-Artifact scope. A Source is distinct from Project Archive import, which transfers a pre-existing Workbench Project rather than supplying evidence about an external one.
 
@@ -1191,6 +1333,19 @@ For the selected first slice, a Goal Revision preserves a complete immutable sna
 
 # S
 
+## Semantic Change Set
+
+A reviewable group of Product Knowledge additions, revisions, removals, moves
+and relationship changes based on a named Revision.
+
+A Semantic Change Set records its rationale, origin, informing Observations or
+evidence, validation results and expected impact. Applying one is atomic:
+either every valid semantic operation produces one new Revision boundary or no
+operation is applied. A proposed change set may instead be rejected or become
+obsolete or conflicted.
+
+---
+
 ## Starter Version
 
 A Starter Version is an immutable, ordered definition of the starter-controlled document a new Project receives. It identifies the selected template/preset pair, included section identifiers, their order, and language-neutral semantic label and guidance references used to render that initial structure.
@@ -1245,7 +1400,20 @@ Specifications describe what should be built rather than how implementation work
 
 From the user experience standpoint, the Specification is the complete project documentation the user works on.
 
-Internally, a Specification may be a document-like composition or view over structured Product Artifacts and related product knowledge.
+Internally, a Specification is interpreted from structured, repository-resident
+Product Knowledge and composed into document, graph, context and export views.
+
+---
+
+## Specification Root
+
+The explicitly declared Workspace location containing the repository-resident
+files that constitute one Specification boundary.
+
+The Workbench must not assume that every file in a Workspace belongs to the
+Specification. A Specification Root may be an ordinary directory in the
+product repository and may later support a Git submodule or separately checked
+out repository through the same abstraction.
 
 ---
 
@@ -1386,6 +1554,29 @@ Needs from the product recorded within a User Profile are profile-local context.
 ---
 
 # W
+
+## Workspace
+
+A local folder opened by the Workbench and bounded by a Workspace Declaration.
+
+A Workspace may contain a Specification Root, Observation locations,
+implementation roots and supporting repositories. Git adds history,
+distribution and collaboration capabilities but is not required for core
+Workspace inspection and editing.
+
+---
+
+## Workspace Declaration
+
+The small, versioned file under `.workbench/workspace.*` that anchors a
+Workspace and declares its supported boundaries.
+
+It identifies the Specification Root and other relevant roots or capabilities.
+It does not contain Product Knowledge, secrets, machine-specific absolute
+paths, disposable indexes, caches or personal interface state. Its exact JSON
+or YAML serialization remains undecided.
+
+---
 
 ## Working Memory
 

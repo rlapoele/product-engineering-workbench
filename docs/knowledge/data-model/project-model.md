@@ -65,7 +65,12 @@ This model should remain small enough to be understandable, but complete enough 
 
 # 3.1 Project State
 
-Project State is the canonical structured state of a Project.
+Project State is the normalized semantic aggregate through which the Workbench
+interprets a Project.
+
+Repository-resident files are the durable canonical representation. Project
+State is composed from and persisted to those files by the Knowledge Engine;
+it is not required to be one stored object or database record.
 
 It should contain both document/specification composition and artifact relationship records.
 
@@ -81,7 +86,9 @@ Conceptually, Project State may include:
 - Conversations;
 - Reviews;
 - Revisions;
-- Handoff History;
+- Observations;
+- Semantic Change Sets;
+- Context Snapshots;
 - Provenance;
 - Context References;
 - Resources;
@@ -134,11 +141,66 @@ An archive import validates its declared format version and complete structure, 
 
 An Implementation Handoff Package is a different, one-way generated representation for implementation consumers. It may be partial and is never a Project Archive or an import source.
 
+ADR-028 reopens this archive boundary. Repository-resident canonical Product
+Knowledge may already provide portability, branching and recovery. A future
+Project Archive may still serve packaging, migration or non-repository
+Resources, but its necessity and exact role must be reassessed before
+implementation.
+
+## 3.4 Workspace And Repository Representation
+
+A Workspace is a local folder anchored by a Workspace Declaration under
+`.workbench/workspace.*`. The declaration identifies a supported Specification
+Root, Observation locations and other relevant roots or capabilities. Its
+serialization format and whether one Workspace may contain several
+Specifications remain open.
+
+The declared Specification Root contains the repository-resident files that
+constitute canonical Product Knowledge. The Workbench must not infer that every
+document, source file or test in the Workspace belongs to the Specification.
+Stable knowledge identity remains independent of filename and document
+position.
+
+A dedicated Specification directory inside the product repository is the
+default topology. Git is optional for core operation. A Git submodule or
+separate Specification repository may be supported later through the same
+Specification Root abstraction.
+
+## 3.5 Observations And Semantic Change Sets
+
+An Observation is non-canonical, traceable evidence that Product Knowledge may
+require attention. It records stable identity, concise statement, origin,
+creation time, relevant scope when known, evidence references and relevant
+repository or implementation context. Its later disposition and rationale are
+retained.
+
+An Observation may inform several changes, and several Observations may inform
+one change. Human review may instead create an Open Question or Decision,
+retain the Observation as reference, dismiss it with rationale or confirm that
+the current Specification remains valid. Creating an Observation never changes
+canonical Product Knowledge.
+
+A Finding is an Observation produced by a structured Review or validation. A
+Source supplies evidence; an Observation states what evidence or experience
+may mean for Product Knowledge. A Contribution records participation. None of
+these concepts is a Revision by itself.
+
+A Semantic Change Set groups Product Knowledge additions, revisions, removals,
+moves and relationship changes against a base Revision. It records rationale,
+origin, informing Observations or Sources, validation results and expected
+impact. Applying one is atomic and produces a coherent Revision boundary. A
+proposal may instead be rejected or become obsolete or conflicted.
+
 ---
 
 # 4. Project
 
-A Project represents a product engineering workspace.
+A Project represents a semantic product-engineering scope within a Workspace.
+
+`Workspace` names the local folder and declared repository boundary; `Project`
+names the product or initiative whose Product Knowledge is being maintained.
+Whether one Workspace may contain several Projects or Specifications remains
+open.
 
 It may describe:
 
@@ -156,17 +218,32 @@ A Project contains the product knowledge needed to reason about that scope.
 
 A new Workbench Project begins with a Project Starting Context, not a permanent Project type. A **Greenfield** Project starts with no prior product evidence and uses the prepared Specification as its initial shared knowledge boundary. A **Brownfield** Project concerns an existing product, feature or product area and begins by deliberately bringing in existing evidence such as documentation, codebase context, screenshots, prototypes or external links.
 
-Brownfield evidence remains Resource material, a Resource Reference or provenance until the Project Owner explicitly reviews and saves Product Knowledge through the ordinary authoring flow. It does not silently create artifacts or relationships, synchronize an external codebase, make the Workbench responsible for delivery execution, or turn an external product into a Workbench Project. Project Archive import remains a separate portability capability for an existing Workbench Project.
+Brownfield work normally begins by opening or associating a local Workspace.
+The Workbench recognizes only declared or human-confirmed Specification
+boundaries. Existing documentation, code, tests and other material outside that
+boundary remain evidence and do not silently create Product Artifacts,
+relationships or product intent.
 
 Project creation first records the owner's explicit Starting Context, then Content language, Project title and short Project description. Greenfield creation may collect up to four optional Project-start Notes about the problem or opportunity, intended outcome, target users and known uncertainty. These temporary setup answers may recommend a preset or sections and, after Project creation, the owner may explicitly use each one as an editable ordinary first draft for one suggested destination. They are not Project State, Sources or canonical Product Knowledge, and are not retained when creation is cancelled. Brownfield Source Notes, uploaded files and external links are instead created only after the Project exists, so they can attach at an explicit Project scope.
 
 The selected Specification Document Template remains an explicit owner choice before Project creation. The MVP's sole available template is preselected with an honest availability explanation; a future multiple-template interface may present a recommendation and rationale without overriding owner selection. A selected preset and its section customization follow the template choice.
 
-A **Source** is the non-canonical evidence that informs this understanding: an observation, stakeholder input, document, source-code context, screenshot, prototype, repository, analytics or another external input. Brownfield intake initially accepts three forms: an owner-authored Source Note, a managed uploaded file and an external link. A Source Note requires a concise Title and Evidence text. A repository is an external link or supplied file context, not a cloned or synchronized codebase. Sources are added only after the Project exists and initially attach at Specification scope; later Sources may be attached at Specification, Section or Product-Artifact scope through the same model. Every new Source may also carry an optional, owner-set **Externally AI-assisted source** indication, off by default, when external AI materially helped create or summarize it. This voluntary external-AI declaration remains known source provenance and enters the existing known AI activity trace; it does not require provider, model, prompt or cost data or establish correctness, verification, authorship or ownership. A Project-start Note is not a Source.
+A **Source** is non-canonical evidence that informs understanding: stakeholder
+input, a document, source-code context, screenshot, prototype, analytics or
+another external input. A Source may be attached to Specification, Section or
+Product-Artifact scope and may carry an optional, owner-set **Externally
+AI-assisted source** indication. A Source supplies evidence; an Observation
+records a traceable claim that the evidence may require Product Knowledge
+attention. Neither changes the Specification automatically.
 
 **Source Capture** is the Project Owner's explicit act of reviewing one Source and choosing a destination: a new Product Artifact, section-owned Product Knowledge, Decision, Open Question or existing knowledge to revise. It opens the ordinary destination draft with the Source as read-only context. The owner authors and reviews that draft normally; only explicit save makes its record or Revision canonical and retains visible source provenance, including the external-AI indication when selected. Discarding the draft leaves the Source unchanged and creates no knowledge or provenance. A later capture from another Source creates its own ordinary Revision and source provenance rather than a batch reverse-engineering workflow. An external AI may produce a useful summary of an existing codebase outside the Workbench; the owner may add that output as a Source with the optional indication, but it remains evidence to reinterpret and reconfirm, not reverse-engineered specification truth. Neither a Source nor an AI interpretation automatically creates Product Knowledge.
 
-After either start, the same Project evolves continuously as its owner adds or revises Product Knowledge, makes explicit relationships, considers impact outcomes, validates the relevant scope and prepares a new handoff when useful. A later Feature, Requirement or UX/UI change is ordinary product-knowledge evolution, not a new Project-start mode. Learning from external implementation or use may provide new source material, but software delivery, task execution, release tracking and code synchronization remain outside the Workbench's scope.
+After either start, the same Project evolves continuously as its owner adds or
+revises Product Knowledge, makes explicit relationships, considers impact
+outcomes, validates a relevant scope and creates or shares Context Snapshots
+when useful. Learning from implementation or use may create Sources,
+Observations and new assessments. Software implementation, task execution and
+release management remain outside the Workbench's responsibility.
 
 ## A Project should include
 
@@ -986,7 +1063,25 @@ For the first pass, the derivation uses only explicit information: the current u
 
 Guidance must identify its underlying basis, remain optional and never create, assign or apply work automatically. The priority order is draft, blocker, impact review, Goal Success Criterion coverage, then empty required-section coverage. A Goal with several affected criteria appears as one parent-level Guidance Item that navigates to its local review state. It should not infer other semantic gaps or missing relationships without an explicit template or validation rule.
 
-## Handoff preparation and readiness
+## Context views, snapshots and readiness
+
+A Context View is a live, purpose-specific projection of current Product
+Knowledge and explicitly relevant evidence. Capturing it creates an immutable
+Context Snapshot anchored to a scope, purpose, Product Knowledge Revision and
+evidence boundary. A snapshot may be exported or shared; creating one neither
+ends Product Engineering nor changes canonical knowledge.
+
+Specification Readiness assesses whether a named scope is sufficiently
+coherent and precise for a stated purpose. Implementation Alignment separately
+assesses whether available implementation evidence agrees with a named Product
+Knowledge Revision. Neither is a permanent Project state. Delivery and release
+readiness remain outside this model.
+
+### Historical handoff preparation model
+
+The detailed handoff model below records the previously accepted package
+design. ADR-028 supersedes it as the product foundation. Its scope, readiness
+and export lessons remain input to future Context Snapshot export profiles.
 
 A Handoff Preparation Preference is user-specific application state remembered per user, Project/Specification and Handoff Profile. It may include the last selected handoff scope, the Handoff Package Role designation of selected knowledge, whether to validate readiness before preparation, and whether to include the resulting readiness report in the package. It is not shared Project Knowledge and does not alter canonical Project State.
 
@@ -1708,7 +1803,13 @@ A Resource becomes a Product Artifact only when it needs independent lifecycle, 
 
 # 23. Readiness
 
-Readiness describes whether a product knowledge area is mature enough to support implementation or downstream use.
+Specification Readiness describes whether a named Product Knowledge scope is
+sufficiently coherent and precise for a stated purpose.
+
+Every assessment is anchored to a scope, purpose, Product Knowledge Revision
+and evidence snapshot. Its outcomes are `Ready`, `Ready with caveats`, `Not
+ready` and `Not assessed`. An assessment may become stale when relevant
+knowledge, relationships, Observations or evidence changes.
 
 Readiness may depend on:
 
@@ -1720,12 +1821,17 @@ Readiness may depend on:
 - reviews being completed;
 - stale artifacts being updated.
 
-Readiness should be evaluated at different levels:
+Specification Readiness may be evaluated at different scopes:
 
 - artifact readiness;
 - feature readiness;
-- project readiness;
-- export readiness.
+- whole-Specification readiness;
+- Context Snapshot readiness.
+
+Implementation Alignment is a separate assessment with outcomes `Aligned
+within assessed evidence`, `Partially aligned`, `Diverged` and `Unknown or not
+assessed`. It never proves implementation correctness. Delivery and release
+readiness remain outside the Workbench's scope.
 
 ---
 
@@ -1785,7 +1891,17 @@ Functional requirements should therefore be derived from the conceptual model ra
 
 # 26. Export Representation
 
-The Implementation Handoff Package is an exported representation of Product Knowledge.
+A Context Snapshot is the foundation for exporting or sharing Product
+Knowledge. It records a purpose, scope, Product Knowledge Revision, included
+knowledge and relationships, relevant Decisions and constraints, unresolved
+questions, assessment state, provenance, evidence boundary and format version.
+
+An implementation-oriented package is one export profile. It is not the end of
+Product Engineering and need not retain `handoff` as its long-term name.
+
+The following package details record the historical Implementation Handoff
+design and remain candidate input to future export profiles rather than current
+product foundation.
 
 The MVP export should preserve stable artifact identifiers in human-readable Markdown files.
 

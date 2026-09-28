@@ -4,7 +4,11 @@ This document tracks important product, architectural, methodological, and desig
 
 The objective is not to answer these questions quickly, but to ensure they remain visible until sufficient exploration and evidence allow an informed decision.
 
-**Current register status (2026-08-24):** `UX-006` is actively exploring Project-start entry flows. Earlier entries are resolved. A future question should be added or reopened only when a concrete product need exposes a gap in the established model; recorded deferrals do not by themselves make work active.
+**Current register status (2026-09-28):** ADR-028 establishes the Repository
+Companion direction. `ARCH-002` through `ARCH-005`, `DATA-008`, `UX-007` and
+`AI-002` track the detailed contracts that remain open before a new prototype
+or implementation increment is selected. Earlier entries remain the historical
+record of the model under which they were resolved.
 
 When a question is resolved:
 
@@ -1372,6 +1376,152 @@ Artifact Relationships should be first-class records with their own metadata, in
 The MVP can support document-first editing, artifact identity, graph reasoning, export generation and AI context assembly from one structured state model.
 
 Storage technology remains undecided. This decision does not require a relational database, document database or graph database.
+
+---
+
+# ARCH-002 — What must the Workspace Declaration establish?
+
+**Category:** Architecture
+
+**Status:** 🟡 Exploring
+
+## Established Direction
+
+A local Workspace is anchored by `.workbench/workspace.*`. The declaration is
+small, versioned and normally tracked when Git is present. It identifies the
+supported Specification boundary and does not contain Product Knowledge,
+secrets, machine-specific absolute paths, caches or personal interface state.
+
+## Question
+
+What identifiers, roots, version information and optional capabilities are
+required, and how should discovery and initialization behave when the
+declaration is missing, invalid or found above the opened folder?
+
+The JSON-versus-YAML choice remains deliberately downstream of this contract.
+
+---
+
+# ARCH-003 — How should the Knowledge Engine be deployed and coordinated?
+
+**Category:** Architecture
+
+**Status:** 🟡 Exploring
+
+## Established Direction
+
+Desktop, CLI and MCP use one semantic Knowledge Engine. The engine owns
+discovery, monitoring, parsing, semantic operations, validation, Revisions,
+provenance, impact, readiness, alignment and deterministic persistence.
+
+## Question
+
+Should the engine be embedded, run as a local service or use another topology,
+and how should several surfaces coordinate file watching, locking, transactions
+and shutdown without becoming separate product-rule implementations?
+
+---
+
+# ARCH-004 — How should External Changes and conflicts be reconciled?
+
+**Category:** Architecture
+
+**Status:** 🟡 Exploring
+
+## Established Direction
+
+Supported direct file edits are legitimate. The engine monitors declared
+content, stabilizes noisy filesystem events, compares semantic state and never
+silently repairs or overwrites invalid or ambiguous changes.
+
+## Question
+
+How should the Workbench identify its own writes, correlate moves and renames,
+represent unconfirmed valid changes, recover from invalid syntax, handle Git
+checkouts and merges, and protect concurrent operations from lost updates?
+
+---
+
+# ARCH-005 — Which repository topologies should the Workspace support?
+
+**Category:** Architecture
+
+**Status:** 🟡 Exploring
+
+## Established Direction
+
+A dedicated Specification directory in the product repository is the default.
+Git is optional for core Workspace operation. Raw accidental nested repositories
+are not a target model.
+
+## Question
+
+Which capabilities should additionally support a Git submodule or separately
+checked-out Specification repository, how should the Workspace declare those
+relationships and what limitations follow from non-atomic cross-repository
+history and review?
+
+---
+
+# DATA-008 — What is the repository-resident Product Knowledge contract?
+
+**Category:** Data Model
+
+**Status:** 🟡 Exploring
+
+## Established Direction
+
+Repository files are the durable canonical representation. Project State is
+the normalized semantic aggregate composed from them. Stable identity is
+independent of filename and document position, and serialization should produce
+understandable deterministic diffs.
+
+## Question
+
+What invariants must the representation provide for identity, composition,
+relationships, Revisions, provenance, Observations, Semantic Change Sets and
+format evolution before individual file formats and folder names are selected?
+
+---
+
+# UX-007 — What journey should validate the Repository Companion thesis?
+
+**Category:** User Experience
+
+**Status:** 🟡 Exploring
+
+## Established Direction
+
+The desktop document is the primary sustained human surface. The previous
+visual prototype is paused but retained as evidence.
+
+## Question
+
+What smallest journey can validate opening or initializing a Workspace,
+composing repository files into a coherent Specification, detecting an External
+Change and reviewing an Observation or proposed semantic change without
+prematurely selecting the final storage format or desktop technology?
+
+---
+
+# AI-002 — What MCP authority and trust contract should external agents use?
+
+**Category:** Artificial Intelligence
+
+**Status:** 🟡 Exploring
+
+## Established Direction
+
+MCP is an interactive semantic path to the Knowledge Engine. External agents
+default to Inspect, Observe or Propose; Apply authority must be explicit and
+bounded. Workspace content is untrusted data, not instruction.
+
+## Question
+
+Which operations belong to each authority level, how are permissions scoped and
+revoked, which changes require confirmation, how are results attributed and
+reversed, and how are repository prompt injection, symlink escape, secret
+exposure and command execution prevented?
 
 ---
 
