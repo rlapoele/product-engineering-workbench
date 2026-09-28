@@ -8,8 +8,9 @@
 
 # Current Objective
 
-Crystallize and validate the accepted Repository Companion direction before
-selecting another implementation or visual-prototype increment.
+Define and validate the foundational contracts implied by the accepted
+Repository Companion direction before selecting another implementation or
+visual-prototype increment.
 
 The immediate work is to define the repository representation, Workspace
 contract, Knowledge Engine boundary, Observation and External Change behavior,
@@ -35,7 +36,12 @@ contracts identify the correct journeys and surfaces.
 
 ---
 
-# Completed Foundation Work
+# Completed Foundation and Historical Work
+
+The inventory below includes both knowledge that remains active and
+first-slice decisions retained as historical evidence. ADR-028 and the active
+open-question register govern where the two differ; a completed item does not
+by itself make its earlier architecture or Handoff terminology current.
 
 - Product vision and goals have been documented.
 - Core product and UX principles have been documented.

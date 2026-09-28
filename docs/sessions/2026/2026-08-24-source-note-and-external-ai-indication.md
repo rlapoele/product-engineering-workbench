@@ -1,7 +1,11 @@
 # Source Note and External-AI Indication
 
+**Session ID:** 2026-08-24-05
+
 **Date:** 2026-08-24
+
 **Status:** Crystallized
+
 **Topic:** UX-006 — Greenfield and brownfield Project-start journeys
 
 ## Context

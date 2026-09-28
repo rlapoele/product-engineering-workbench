@@ -10,6 +10,12 @@ Companion direction. `ARCH-002` through `ARCH-005`, `DATA-008`, `UX-007` and
 or implementation increment is selected. Earlier entries remain the historical
 record of the model under which they were resolved.
 
+Resolved entries that use `Handoff`, `Prepare Handoff`, `Implementation
+Handoff Package` or `Handoff Profile` terminology describe the first-slice
+model. They do not re-establish terminal handoff as the target workflow after
+ADR-028. Where the underlying knowledge remains useful, it is a candidate for
+future Context View, Context Snapshot, export or sharing design.
+
 When a question is resolved:
 
 1. Its status should be changed to **Resolved**.
@@ -54,6 +60,14 @@ Decision records may reference the originating open-question identifiers as prov
 **Category:** Product Domains and Concepts
 
 **Status:** 🟢 Resolved
+
+## Later Refinement (2026-09-28)
+
+ADR-028 preserves the Product Engineering versus Product Delivery distinction
+but supersedes the temporal boundary implied below. Product Engineering may
+continue during and after implementation through Product Knowledge maintenance
+and Implementation Alignment assessment. Coding and delivery execution remain
+outside the Workbench.
 
 ## Context
 
@@ -556,7 +570,16 @@ Storage limits, malware scanning, fine-grained permissions, link checking and pr
 
 **Category:** Data Model
 
-**Status:** 🟢 Resolved
+**Status:** 🔵 Deferred
+
+## Reopening Note (2026-09-28)
+
+ADR-028 selected repository-resident files as the durable canonical
+representation of Product Knowledge and reopened the need for a separate
+Project Archive. The archive model below is retained as historical design
+input, but it is not an active target decision. Portability, recovery and
+migration requirements will be reconsidered after the Workspace and
+Specification Root contracts are defined.
 
 ## Context
 
@@ -853,7 +876,14 @@ The preset classification is a first pass and may be revised after future specif
 
 **Category:** User Experience
 
-**Status:** 🟢 Resolved
+**Status:** ⚪ Archived
+
+## Archival Note (2026-09-28)
+
+ADR-028 superseded terminal implementation handoff as the target workflow.
+The package structure and scope rules below are retained as first-slice
+history and as possible input to future Context Snapshot export profiles; they
+are not the current product contract.
 
 ## Context
 
@@ -985,7 +1015,14 @@ Including a standalone `READINESS_REPORT.md` in the handoff is enabled by defaul
 
 **Category:** User Experience
 
-**Status:** 🟢 Resolved
+**Status:** ⚪ Archived
+
+## Archival Note (2026-09-28)
+
+ADR-028 replaced Handoff Profiles with the broader, still-unresolved concept
+of purpose-specific Context Views and Context Snapshot export profiles. The
+default profile below remains historical design input rather than an active
+MVP requirement.
 
 ## Context
 
@@ -1059,6 +1096,14 @@ Future Handoff Profiles may control:
 **Category:** User Experience
 
 **Status:** 🟢 Resolved
+
+## Later Refinement (2026-09-28)
+
+The canonical UX/UI knowledge and Design System Definition model remain
+useful. References below to `Prepare Handoff`, an `Implementation Handoff` and
+its companion export describe first-slice behavior. Any future projection of
+this knowledge must be re-evaluated as a Context View or Context Snapshot
+export under ADR-028.
 
 ## Context
 
@@ -1376,6 +1421,14 @@ Artifact Relationships should be first-class records with their own metadata, in
 The MVP can support document-first editing, artifact identity, graph reasoning, export generation and AI context assembly from one structured state model.
 
 Storage technology remains undecided. This decision does not require a relational database, document database or graph database.
+
+## Later Refinement (2026-09-28)
+
+ADR-028 retains structured Project State as the semantic aggregate while
+selecting repository-resident files as the durable canonical representation.
+The exact file schema, serialization format and relationship between Project
+State and those files remain open under DATA-008 and the active architecture
+questions.
 
 ---
 

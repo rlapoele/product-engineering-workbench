@@ -1,6 +1,7 @@
 # UX Principles
 
-The Product Engineering Workbench is designed to help users transform ideas into implementation-ready product knowledge.
+The Product Engineering Workbench is designed to help users form and
+continuously maintain living, human-owned Product Knowledge.
 
 The following principles guide the user experience of the workbench.
 
@@ -10,7 +11,9 @@ The following principles guide the user experience of the workbench.
 
 The primary focus of the interface is the product itself.
 
-Users should primarily interact with a coherent product document composed of interconnected artifacts rather than navigating numerous disconnected screens or forms.
+Users should primarily interact with a coherent Specification document
+composed of interconnected Product Knowledge rather than navigating numerous
+disconnected screens, forms or repository files.
 
 ---
 
@@ -54,9 +57,12 @@ The workbench should encourage important conclusions to be crystallized into sta
 
 # 6. Knowledge Before Documents
 
-The workbench manages structured product knowledge rather than isolated documents.
+The workbench manages structured Product Knowledge rather than isolated
+documents.
 
-Traditional documents such as PRDs, BRDs and FRDs are generated representations of that knowledge.
+Repository-resident files are the durable open representation. The coherent
+Specification document is the primary human representation; other Context
+Views and exports are purpose-specific projections.
 
 ---
 
@@ -80,7 +86,8 @@ Users should be able to work individually or collaborate with human and AI contr
 
 Every interaction should be contextual.
 
-Reviews, discussions, suggestions and AI assistance should be anchored to specific product artifacts whenever possible.
+Reviews, Conversations, Observations, suggestions and AI assistance should be
+anchored to specific Product Knowledge whenever possible.
 
 The workbench should minimize context switching.
 
@@ -126,4 +133,3 @@ Every UX decision should support one or more of the following goals:
 - Encourage knowledge crystallization.
 - Keep humans in control.
 - Make complexity manageable.
-- 

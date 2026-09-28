@@ -6,6 +6,12 @@ The objective is to ensure that humans and AI contributors share the same unders
 
 Unless explicitly stated otherwise, the definitions contained in this glossary take precedence over common industry interpretations.
 
+ADR-028 supersedes terminal handoff as the product foundation. Terms prefixed
+with `Handoff`, and older passages that refer to `Prepare Handoff`, are retained
+as historical definitions for the previously accepted export model. They are
+candidate input to future Context Snapshot export profiles, not current
+authorization to preserve the old terminology or workflow.
+
 ---
 
 # A
@@ -14,7 +20,14 @@ Unless explicitly stated otherwise, the definitions contained in this glossary t
 
 An Application Module is a capability-oriented boundary that owns one coherent set of product use cases, policies and public application contracts. It is not a framework layer or a generic folder of technical classes.
 
-For the modular monolith, modules may depend on their own product rules and application-owned Ports, but not on concrete HTTP, UI, Better Auth, PostgreSQL, file/archive, logging, Railway or environment-configuration implementations. The initial modules are Project and Fixed Starter; Implementation Handoff and Project Archive are future modules with the same rule.
+For the completed first-slice modular monolith, modules depend on their own
+product rules and application-owned Ports, not on concrete HTTP, UI, Better
+Auth, PostgreSQL, file/archive, logging, Railway or environment-configuration
+implementations. That slice used Project and Fixed Starter modules and proposed
+Implementation Handoff and Project Archive modules. ADR-028 retains the inward
+dependency rule as evidence but reopens the target module boundaries around the
+Knowledge Engine, repository storage, Context Snapshots and optional connected
+services.
 
 ## Application Port
 

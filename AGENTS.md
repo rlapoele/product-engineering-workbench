@@ -121,11 +121,19 @@ When introducing new concepts, update the glossary before introducing inconsiste
 
 The Product Engineering Workbench focuses exclusively on **Product Engineering**.
 
-The product intentionally stops where software implementation begins.
+Its boundary is defined by responsibility rather than by the moment software
+implementation begins. The workbench helps humans and AI contributors form,
+maintain, validate and share living Product Knowledge before, during and after
+implementation.
 
-The workbench produces implementation-ready knowledge.
+The workbench may inspect implementation evidence, detect relevant change and
+assess alignment with a named Product Knowledge scope and Revision.
+Implementation is evidence about Product Knowledge, not authority over Product
+Knowledge.
 
-Software delivery remains the responsibility of external delivery tools and implementation environments.
+The workbench does not implement software or manage its delivery. Coding,
+delivery execution and delivery management remain the responsibility of
+external tools, agents and implementation environments.
 
 Do not introduce delivery-management functionality unless explicitly requested.
 
@@ -138,7 +146,9 @@ Examples of out-of-scope functionality include:
 - Velocity Tracking
 - Release Management
 
-When appropriate, prefer integration or export capabilities over implementing delivery functionality.
+When appropriate, prefer repository-aware inspection, semantic integration,
+Context Views and export or sharing capabilities over implementing delivery
+functionality.
 
 ---
 

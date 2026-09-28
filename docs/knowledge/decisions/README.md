@@ -28,7 +28,7 @@ When in doubt, prefer updating an existing document rather than creating a new o
 | ADR-006 | MVP Product Artifact Model | Accepted | 2026-07-18 |
 | ADR-007 | Canonical Project State | Accepted | 2026-07-18 |
 | ADR-008 | AI Assistance Visibility And Governance | Accepted | 2026-07-20 |
-| ADR-009 | Online-First, Offline-Evolvable Posture | Superseded by ADR-028 for target product | 2026-08-01 |
+| ADR-009 | Online-First, Offline-Evolvable Posture | Superseded by ADR-028 for the target product; retained as first-slice history | 2026-08-01 |
 | ADR-010 | First-Slice System Boundaries | Accepted | 2026-08-01 |
 | ADR-011 | First-Slice Data And Lifecycle Contracts | Accepted | 2026-08-01 |
 | ADR-012 | First-Slice UX Prototype Validation | Accepted | 2026-08-01 |

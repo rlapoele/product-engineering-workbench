@@ -1,7 +1,11 @@
 # Greenfield Guided Project Creation Flow
 
+**Session ID:** 2026-08-24-06
+
 **Date:** 2026-08-24
+
 **Status:** Crystallized
+
 **Topic:** UX-006 — Greenfield and brownfield Project-start journeys
 
 ## Context

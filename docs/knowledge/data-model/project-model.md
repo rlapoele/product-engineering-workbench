@@ -1,16 +1,25 @@
 # Project Model
 
-This document defines the initial conceptual model for the Product Engineering Workbench.
+This document defines the evolving conceptual model for the Product Engineering Workbench.
 
 The objective is not to define a database schema or implementation structure yet.
 
-The objective is to define the minimum product knowledge concepts required to represent, structure, review and evolve a product from an initial idea to implementation-ready product knowledge.
+The objective is to define the minimum Product Knowledge concepts required to
+represent, structure, review and evolve a product from an initial idea through
+implementation learning and continued change.
+
+ADR-028 supersedes terminal handoff as the product endpoint and establishes
+repository-resident Product Knowledge as the durable representation. Detailed
+handoff-prefixed clauses in this document remain historical input to future
+Context Snapshot export profiles unless a current section explicitly restates
+them.
 
 ---
 
 # 1. Purpose
 
-The Product Engineering Workbench helps users transform ideas into structured product knowledge.
+The Product Engineering Workbench helps users form and continuously maintain
+structured Product Knowledge.
 
 To support this, the workbench needs a clear model for:
 
@@ -21,13 +30,16 @@ To support this, the workbench needs a clear model for:
 - how product knowledge evolves over time;
 - how human and AI contributors participate in the process.
 
-This model provides the conceptual foundation for future UX, data model, AI orchestration and export decisions.
+This model provides the conceptual foundation for UX, repository
+representation, AI orchestration, Context Snapshot and export decisions.
 
 ---
 
 # 2. Core Concept
 
-A project is the container for all product knowledge related to a product, feature, initiative or product area.
+A Project is the semantic container for Product Knowledge related to a product,
+feature, initiative or product area. It exists within a local Workspace but is
+not synonymous with that folder.
 
 A project contains a structured body of product knowledge composed of artifacts, relationships, conversations, decisions, reviews and revisions.
 
@@ -63,7 +75,7 @@ This model should remain small enough to be understandable, but complete enough 
 
 ---
 
-# 3.1 Project State
+## 3.1 Project State
 
 Project State is the normalized semantic aggregate through which the Workbench
 interprets a Project.
@@ -1978,7 +1990,7 @@ Relevant question categories include:
 
 ---
 
-# 28. Non-Goals for This Document
+# 29. Non-Goals for This Document
 
 This document does not define:
 
@@ -1995,7 +2007,7 @@ Those should be defined later, once the conceptual model is stable.
 
 ---
 
-# 29. Next Steps
+# 30. Next Steps
 
 After reviewing this document, the next expected steps are:
 

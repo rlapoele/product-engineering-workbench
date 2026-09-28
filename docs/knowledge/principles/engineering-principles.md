@@ -2,6 +2,13 @@
 
 The Product Engineering Workbench should protect the product knowledge users entrust to it. Engineering quality is therefore part of preserving human control and trust, not a later implementation concern.
 
+This document currently records the accepted engineering-quality baseline for
+the completed online Project-to-first-Goal slice. ADR-028 preserves that work
+as historical evidence but no longer treats its browser/server/PostgreSQL
+architecture as the target product. Engineering principles for the Repository
+Companion, Knowledge Engine and repository storage adapter remain to be
+specified before another implementation increment is authorized.
+
 ## First-Slice Engineering-Quality Baseline
 
 Before the selected first slice is used for real user content, it must satisfy five quality gates:

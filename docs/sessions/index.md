@@ -156,10 +156,10 @@
 | 2026-08-06-03 | 2026-08-06 | 3 | First-Slice Executable Specification Boundary | Crystallized | Source layout, public contracts, configuration split, review checklist and build order |
 | 2026-08-06-04 | 2026-08-06 | 4 | First-Slice Implementation Authorization And Dependency Verification | Crystallized | Local platform lock before code; release gates remain later and separate |
 | 2026-08-09-01 | 2026-08-09 | 1 | First-Slice Dependency Verification | Crystallized | Accepted Node/package platform lock, reviewed Better Auth DDL and passing local PostgreSQL/browser evidence; code remains separately unauthorized |
-| 2026-08-09-02 | 2026-08-09 | 2 | First-slice implementation authorization | Active implementation | ADR-026 implementation explicitly authorized; first bounded increment recorded |
+| 2026-08-09-02 | 2026-08-09 | 2 | First-slice implementation authorization | Crystallized | ADR-026 implementation explicitly authorized; first bounded increment subsequently completed |
 | 2026-08-10-01 | 2026-08-10 | 1 | Automated accessibility evidence and manual evidence deferral | Crystallized | Versioned automated evidence; manual VoiceOver/Safari template deferred until the MVP is built or reaches that stage |
-| 2026-08-10-02 | 2026-08-10 | 2 | First-slice recovery and observability implementation | Active implementation | Content-free Pino and PostgreSQL operational recording; failed diagnostics preserve canonical command outcomes |
-| 2026-08-10-03 | 2026-08-10 | 3 | First-slice release verification command | Active implementation | One local aggregate command for static, build, Vitest and built-app Playwright evidence |
+| 2026-08-10-02 | 2026-08-10 | 2 | First-slice recovery and observability implementation | Crystallized | Content-free Pino and PostgreSQL operational recording; failed diagnostics preserve canonical command outcomes |
+| 2026-08-10-03 | 2026-08-10 | 3 | First-slice release verification command | Crystallized | One local aggregate command for static, build, Vitest and built-app Playwright evidence |
 | 2026-08-17-01 | 2026-08-17 | 1 | Goal Success Criteria Document Authoring | Crystallized | Prepared-document actions, Goal-owned measurable Success Criteria, owner-declared Goal-change review and next-step guidance |
 | 2026-08-18-01 | 2026-08-18 | 1 | Product Overview Section Authoring | Crystallized | Section-owned overview prose, explicit draft and Revision, no inferred impact, formatting deferred |
 | 2026-08-18-02 | 2026-08-18 | 2 | Problem Or Opportunity Section Authoring | Crystallized | Optional structured prose blocks, explicit drafts and coverage without choosing a solution |
@@ -248,3 +248,4 @@
 | 2026-09-03-01 | 2026-09-03 | 1 | Workbench Visual Direction | Crystallized | Warm light and dark themes, centered primary surfaces, contextual edge regions and restrained control language |
 | 2026-09-05-01 | 2026-09-05 | 1 | Workbench Specification Visual Exploration | Paused | Craft-led document evidence retained; further visual work waits for Repository Companion journey and engine boundaries |
 | 2026-09-28-01 | 2026-09-28 | 1 | Repository Companion Direction and Decision-Impact Inventory | Crystallized | Repository-companion thesis, three-layer engine model, Observation loop, continuous alignment and Context Snapshot direction accepted in ADR-028 |
+| 2026-09-28-02 | 2026-09-28 | 2 | Documentation Consistency Review | Crystallized | Target-versus-history boundaries, planning states, terminology, structural corrections and documentation validation reconciled after ADR-028 |

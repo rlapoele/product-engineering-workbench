@@ -4,6 +4,20 @@
 
 **Purpose:** Capture questions and draft answers during an active specification session before crystallizing stable conclusions into project knowledge.
 
+**Last Updated:** 2026-09-28
+
+## Current Active Direction
+
+The active knowledge topic is the Workspace and repository-resident
+Specification storage contract established by ADR-028. Current exploration is
+tracked in `docs/planning/open-questions.md` under `ARCH-002` through
+`ARCH-005`, `DATA-008`, `UX-007` and `AI-002`.
+
+The accumulated notes below record earlier exploration and first-slice work.
+They remain useful history but do not override ADR-028 or the current planning
+register. In particular, online-first persistence, terminal handoff and the
+earlier Project-start prototype are no longer the target-product direction.
+
 ## First-Slice Reconciliation — 2026-08-17
 
 - The authorized ADR-026 authenticated Project-to-first-Goal technical slice is complete and remains intentionally bounded. It includes Astro SSR with bounded React Islands, Better Auth Google and GitHub OAuth, PostgreSQL persistence, local Docker support, automated accessibility checks and the documented command/recovery hardening. It does not implement later Product Artifact behavior, collaboration, AI, Resources, handoff, archive or offline work.
